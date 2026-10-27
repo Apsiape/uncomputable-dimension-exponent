@@ -1,6 +1,6 @@
 # A nonlocal game whose dimension exponent is uncomputable
 
-Seth Douglas and Nidhal Mghirbi. Version 1.0.0, October 2026.
+Seth Douglas and Nidhal Mghirbi. Version 1.0.0, October 2026. DOI: [10.5281/zenodo.23701734](https://doi.org/10.5281/zenodo.23701734).
 
 ## Abstract
 
