@@ -1,0 +1,54 @@
+\section{The game and its exponent}\label{sec:game}
+\begin{corollary}[Matched source profiles]\label{cor:matched}
+The presentation $\mathcal P_K$ satisfies
+\begin{equation}\label{eq:matched}
+ \log W(4^{-N})=(3+\thetaK)N+o(N)=\log H(4^{-N}).
+\end{equation}
+One computable comparison sequence is $A_N=3N+\lfloor N\theta_N\rfloor$, and both logarithmic profiles equal $A_N+o(N)$.
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:lower} is the lower bound for $W$, and $W\le H$. Theorem~\ref{thm:finite} is the matching upper bound for $H$ at a fixed multiple of the requested precision. Replacing $N$ by an even integer at a fixed greater distance absorbs that multiple. Such a change costs $O(1)$ depth, and the upper and lower limiting slopes are both $3+\thetaK$ since $\theta_N\to\thetaK$. Monotonicity interpolates intermediate depths. Finally $N\theta_N=N\thetaK+o(N)$, giving the comparison sequence.
+\end{proof}
+
+The Boolean correspondence theorem~\cite[Theorem~4.9]{DM-precision} supplies both game directions with the actual marginal state kept. We do not reprove that general correspondence or its return theorem. To make the precision accounting for this construction transparent, we give the elementary matrix estimate responsible for its square-root extraction and explain how it applies here.
+
+\begin{lemma}[Consistency and the square root of the state]\label{lem:sqrt-state}
+Let $A,B$ be reflections and $\Xi$ a rectangular amplitude matrix with $\rho_B=\Xi\Xi^*$. If $\hs{B\Xi-\Xi A}\le\eta$, then
+\begin{equation}\label{eq:sqrt-state}
+ \hs{[B,\sqrt{\rho_B}]}\le\sqrt2\,\eta.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Set $Y=(\Xi+B\Xi A)/2$. Then $BY=YA$, so $B$ commutes with $YY^*$ and its square root. Also $\hs{\Xi-Y}\le\eta/2$. For any rectangular matrices $M,N$,
+\begin{equation}\label{eq:modulus}
+ \hs{\sqrt{MM^*}-\sqrt{NN^*}}\le\sqrt2\,\hs{M-N}.
+\end{equation}
+Indeed apply the eigenbasis proof of~\eqref{eq:doi} to $f(t)=|t|$ and the self-adjoint block matrices $\left(\begin{smallmatrix}0&M\\M^*&0\end{smallmatrix}\right)$ and its $N$ analogue, with $Z=I$. Their absolute values are block diagonal with square-root blocks. The right-hand squared norm is $2\hs{M-N}^2$. Discard the second left-hand block to obtain~\eqref{eq:modulus}. Since $B$ commutes with $\sqrt{YY^*}$, its commutator with $\sqrt{\rho_B}$ is bounded by twice their difference, proving~\eqref{eq:sqrt-state}.
+\end{proof}
+
+\begin{proposition}[The two transfers needed here]\label{prop:game-transfer}
+Let $G$ be the fixed context-variable game supplied by Theorem~\ref{thm:compiler} for $\mathcal P_K$. There are constants $c,C>0$ such that a loss-$\eps$ strategy with local dimensions at most $d$ gives a weighted source model of precision $C\sqrt\eps$ in dimension at most $cd$. A flat source model of precision $\delta$ in dimension $d$ gives a strategy of dimension at most $cd$ and loss at most $C\delta^2$.
+\end{proposition}
+\begin{proof}
+The upper direction is precisely the explicit flat strategy in Theorem~\ref{thm:compiler}. For the lower direction apply the established Boolean correspondence, followed by that theorem's weighted soundness. The correspondence is applicable because every compiled context is an ordinary Boolean predicate with a nonempty set of valid answers and every tested incidence has fixed positive probability.
+
+Here is also a direct check of the precision ingredients in its extraction, without invoking its more general return theorem. A mixed strategy may first be replaced by a pure component of at least the same winning probability. Compressing to Schmidt supports gives local dimension at most $d$. Alice's context POVMs have simultaneous fixed-size ancilla dilations, and Bob's binary contractions have reflection dilations on a common extra qubit. The dimensions grow by a fixed factor; the initial ancilla state is included in the marginal. Invalid Alice answers can be reassigned to a fixed valid answer, since an invalid answer was already a certain loss. After these reductions, consistency at a tested incidence gives
+\[
+ \|(A\otimes I-I\otimes B)\psi\|\le2\sqrt{\eps/\pi_{\min}}.
+\]
+Pull a fixed Bob context word across to Alice in reverse order. Every replacement costs this bound, and Alice's context observables commute and satisfy their truth table exactly. Thus each Bob context commutator and forbidden assignment polynomial has error $C\sqrt\eps$ on the marginal. Lemma~\ref{lem:sqrt-state} gives the same order for its state commutators, with no additional square root. These are exactly the Boolean-model conditions used by the compiler. Hence the composed source precision is $C\sqrt\eps$ on that state.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Apply Proposition~\ref{prop:game-transfer} and Corollary~\ref{cor:matched}. For $\eps=2^{-n}$, precision $C\sqrt\eps$ has
+\[
+ \log_4\bigl(1/(C\sqrt\eps)\bigr)=n/4+O(1).
+\]
+The weighted lower profile therefore gives
+\[
+ \log D_G(2^{-n})\ge\tfrac{3+\thetaK}{4}n-o(n).
+\]
+The flat models at precision $4^{-N}$ give loss at most $C16^{-N}$ and logarithmic dimension $(3+\thetaK)N+o(N)$. Choosing an even $N=n/4+O(1)$ at or above the required precision gives the matching upper bound. Fixed dimension multipliers add only $O(1)$ to the logarithm. Monotonicity also gives~\eqref{eq:main} for arbitrary $\eps\downarrow0$. These strategies have losses tending to zero, so $\omega_q(G)=1$. A finite-dimensional perfect strategy would extract a source model at every positive precision in one fixed dimension, contradicting Theorem~\ref{thm:lower}.
+
+An oracle for $K$ computes $\thetaK$ by finite summation and a geometric tail bound. Conversely, suppose membership below $e$ is known and subtract those contributions. With $w_e=4^{-(e+1)}$, the residual is at most $w_e/3$ when $e\notin K$, and at least $w_e$ when $e\in K$. An approximation of error less than $w_e/6$, compared with threshold $2w_e/3$, distinguishes these cases. Induction computes $K$ from a real oracle for $\thetaK$. Thus $\thetaK\equiv_TK$, and the same holds for $\beta=(3+\thetaK)/4$. Lemma~\ref{lem:computability} now excludes a computable certified convergence rate.
+\end{proof}

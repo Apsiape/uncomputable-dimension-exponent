@@ -1,0 +1,110 @@
+\section{From bounded polynomials to Boolean constraints}\label{sec:compiler}
+A BCS specifies finitely many Boolean variables and finitely many contexts. A context lists variables and its allowed sign assignments. In an operator model the context variables are commuting reflections and their joint spectrum is restricted to those assignments. Its game asks Alice for a valid context assignment and Bob for one sign, testing consistency on an incidence. We use the uniform distribution on the finite incidence set, hence rational probabilities. The algebraic interpretation is standard~\cite{CM14,CLS17}.
+
+\begin{theorem}[Polynomial compiler]\label{thm:compiler}
+For each finite bounded polynomial presentation $\mathcal P$, there are a finite ordinary BCS $\mathcal B$ and constants $c,C>0$ with the following properties.
+\begin{enumerate}[label=(\alph*),leftmargin=*]
+\item Every weighted precision-$\eta$ model of $\mathcal B$ reconstructs a precision-$C\eta$ model of $\mathcal P$ on the same space and with the same state.
+\item Every flat precision-$\delta$ model of $\mathcal P$ on $\C^d$ gives a strategy for its context-variable game in local dimension at most $cd$, with loss at most $C\delta^2$.
+\end{enumerate}
+All constants depend only on the presentation. In particular, guarded equations such as $(V-W)(I-A)=0$ are compiled with their guard intact.
+\end{theorem}
+
+\subsection{Domains and selectors}
+Every positive contraction is
+\begin{equation}\label{eq:contract-encode}
+ r=\frac{2I+u+u^*}{4},\qquad
+ u=2r-I+2i\sqrt{r(I-r)}.
+\end{equation}
+The real and imaginary parts in this expression commute and their squared sum is $I$, so $u$ is unitary. Conversely the first formula is a positive contraction for any unitary. For upper models realify the whole assignment by
+\[
+ \mathcal R(M)=\begin{pmatrix}\Re M&-\Im M\\\Im M&\Re M\end{pmatrix}.
+\]
+This doubles dimension, preserves real-coefficient equations and flat norms, and takes unitaries to real orthogonal matrices. A real orthogonal matrix is a product of two symmetric orthogonal involutions: on a rotation plane use
+\[
+ \begin{pmatrix}\cos t&-\sin t\\\sin t&\cos t\end{pmatrix}
+ =\begin{pmatrix}1&0\\0&-1\end{pmatrix}
+  \begin{pmatrix}\cos t&-\sin t\\-\sin t&-\cos t\end{pmatrix},
+\]
+and use scalar blocks on the remaining eigenspaces. Orthogonal conjugation and direct sums finish the factorization. Replace each unitary by a product of two reflections. Lower reconstructions are automatically unitary, and~\eqref{eq:contract-encode} is automatically positive. Their state commutators cost a fixed factor. No commutation between the two factors is imposed. The upper models are flat, so no state estimate for the square root in~\eqref{eq:contract-encode} is needed.
+
+A source equation is now $p=\sum_j a_jW_j=0$, with rational $a_j$ and reflection words $W_j$. Clear denominators with an integer $c$, duplicate signed terms, and add cancelling pairs until
+\[
+ \sum_{j=1}^L\widetilde W_j=2cp,\qquad L=2^q.
+\]
+Introduce $q$ Pauli pairs $X_i,Z_i$, commuting across pairs and with every source reflection. Let $e_j$ be the joint $Z$ spectral projections and $E$ the joint $+1$ projection of the $X_i$. Then
+\begin{equation}\label{eq:selector}
+ Ee_jE=L^{-1}E,\qquad \sum_{v\in\{0,1\}^q}Z^vEZ^v=I.
+\end{equation}
+For the first identity, expand $e_j$ in $Z$ monomials. Every nonconstant monomial anticommutes with some $X_i$ and hence has zero compression by $E$. The second identity sums the joint $X$ spectral projections.
+
+The controlled reflection $(I-e_j)+e_js$ is a Boolean truth table in commuting variables. Products of these controls and controlled signs form a reflection word whose value is the unitary
+\[
+ S=\sum_j e_j\widetilde W_j.
+\]
+The projection $E$ receives its own Boolean variable $x_E$. Its defining context is $\{X_1,\ldots,X_q,x_E\}$, whose allowed assignments are those with $x_E=+1$ exactly when $X_1=\cdots=X_q=+1$. In an operator model this truth table says $(I+x_E)/2=\prod_i(I+X_i)/2=E$. Introduce $x_F=Sx_ES^*$ by successive reflection conjugacies and put $F=(I+x_F)/2=SES^*$. Orthogonality is imposed on this pair alone: the context $\{x_E,x_F\}$ forbids exactly the assignment $(+1,+1)$, which in an operator model is the condition $EF=0$. The exact identities are
+\begin{equation}\label{eq:selector-split}
+ EFS=ESE=\frac{2c}{L}pE,\qquad
+ p=\frac{L}{2c}\sum_v Z^vEFSZ^v.
+\end{equation}
+They show why a low-weight selector corner cannot conceal an equation. All of its translates are used.
+
+\subsection{The conjugacy gadgets}
+We use the gadgets of~\cite[Lemma~5.8]{FKMPRSZ25}. Their formulas are included to establish the precise finite-dimensional extension needed here. For a general relation $x_1x_2x_1=x_3$, introduce commuting parity contexts
+\[
+ x_i y_i z_i=I,\qquad x_i f w_i=I,\qquad gy_2z_3=I,
+\]
+and the conjugacies $fy_if=z_i$ and $w_1y_2w_1=z_3$. The targets of these remaining conjugacies commute by the parity contexts. If the original reflections are $X_i$, an exact doubled extension is
+\begin{gather*}
+ x_i=\operatorname{diag}(X_i,X_i),\quad
+ y_i=\operatorname{diag}(X_i,I),\quad z_i=\operatorname{diag}(I,X_i),\\
+ f=\begin{pmatrix}0&I\\I&0\end{pmatrix},\quad
+ w_i=\begin{pmatrix}0&X_i\\X_i&0\end{pmatrix},\quad
+ g=\operatorname{diag}(X_2,X_3).
+\end{gather*}
+Conversely $w_1=x_1f$, $[f,x_1]=0$, and $fy_2f=z_2$ give $x_1z_2x_1=z_3$. Conjugation by $f$ gives $x_1y_2x_1=y_3$. Multiplying gives the required conjugacy.
+
+For $aba=c$ with commuting targets $b,c$, use six commuting parity contexts:
+\begin{equation}\label{eq:six-contexts}
+ ad_1d_2=bd_2d_3=d_3d_4d_5=ad_5d_6=cd_6d_7=d_1d_4d_7=I.
+\end{equation}
+They imply
+\[
+ aba=d_1d_2d_2d_3d_5d_6=d_1d_4d_6=d_7d_6=c.
+\]
+Writing $M(a)=\left(\begin{smallmatrix}0&a\\a&0\end{smallmatrix}\right)$, an exact extension, with old variables repeated diagonally, is
+\begin{gather*}
+ d_1=M(a),\quad d_2=M(I),\quad d_3=M(b),\quad
+ d_4=\begin{pmatrix}0&ba\\ab&0\end{pmatrix},\\
+ d_5=\operatorname{diag}(bab,a),\quad d_6=\operatorname{diag}(bc,I),\quad
+ d_7=\operatorname{diag}(b,c).
+\end{gather*}
+For clarity, $d_4^*=d_4$ and $d_4^2=I$. The equality $aba=c$ implies that $a$ commutes with $bc$, while $bc$ is a reflection. These facts verify the fourth context; the other five follow by direct multiplication. Each listed triple consists of commuting reflections with product $I$. Sequentially applying the two gadgets has constant dimension cost for a fixed presentation. Pauli anticommutation is $XZX=-Z$, with a Boolean variable for the negation of $Z$.
+
+\subsection{Weighted soundness and flat completeness}
+\begin{proof}[Proof of Theorem~\ref{thm:compiler}]
+All identities above are finite algebraic calculations in the defining relations. A Boolean truth table gives finite algebraic relations: expand in its assignment projections, and any polynomial vanishing on allowed assignments is the finite sum of its values on forbidden assignments times their projections. Thus the controlled-variable definitions, both gadget converses and~\eqref{eq:selector-split} are finite ideal derivations. In an approximate model put $E_{\mathrm{pol}}=\prod_i(I+X_i)/2$, $E_0=(I+x_E)/2$ and $F_0=(I+x_F)/2$. The defining AND context of $x_E$ and the conjugacy gadgets give $|E_{\mathrm{pol}}-E_0|_\rho=O(\eta)$ and $|SE_{\mathrm{pol}}S^*-F_0|_\rho=O(\eta)$, while the orthogonality context gives $|E_0F_0|_\rho=O(\eta)$. Interpret~\eqref{eq:selector-split} as a polynomial identity modulo the Pauli and controlled-variable relations. Substitution of these estimates, using Lemma~\ref{lem:transport}, gives $|p|_\rho=O(\eta)$. Only $E_0$ and $F_0$ are automatically projections here; the selector polynomial need not be a projection in an approximate model. Lemma~\ref{lem:transport} proves linear weighted soundness. This statement is stronger than mere exact implication; the explicit finite derivations are what justify the linear error.
+
+For upper models choose the selectors on an exact tensor factor and define every controlled variable and successive conjugate projection canonically. Put $x_E=2E-I$ with $E=\prod_i(I+X_i)/2$. It commutes with every $X_i$, and the joint spectrum of $(X_1,\ldots,X_q,x_E)$ lies in the allowed assignments, so the defining context of $x_E$ is exact. The conjugacies defining $x_F$ are exact even when $p$ is nonzero. All gadget contexts extend exactly. The only inexact constraint is the final orthogonality, where
+\begin{equation}\label{eq:orth-size}
+ \fn{EF}=\fn{ESE}=\frac{2c}{L\sqrt L}\fn p.
+\end{equation}
+Let $F'$ be the projection onto $(I-E)\ran F$. Then
+\begin{equation}\label{eq:orth-repair}
+ EF'=0,\qquad \fn{F-F'}^2\le2\fn{EF}^2.
+\end{equation}
+To prove this, diagonalize $FEF$ on $\ran F$ with eigenvalues $\lambda_i$ and orthonormal eigenvectors $v_i$. For $\lambda_i<1$, the vectors $(I-E)v_i/\sqrt{1-\lambda_i}$ are orthonormal and span the new range. Those with $\lambda_i=1$ disappear. Hence
+\[
+ \hs{F-F'}^2=\#\{i:\lambda_i=1\}+2\sum_{\lambda_i<1}\lambda_i
+ \le2\sum_i\lambda_i=2\hs{EF}^2.
+\]
+On the orthogonality context $\{x_E,x_F\}$, Alice answers with the PVM
+\[
+ E\mapsto(+1,-1),\qquad F'\mapsto(-1,+1),\qquad I-E-F'\mapsto(-1,-1).
+\]
+These are orthogonal projections summing to $I$, because $F'\le I-E$, and every outcome is an allowed assignment. Her operator for $x_E$ is therefore $2E-I$ and her operator for $x_F$ is $2F'-I$. Bob uses $2E-I$ and $2F-I$. On a maximally entangled state there is no disagreement for $x_E$, and the disagreement probability for $x_F$ is $\fn{F-F'}^2$. This is why $E$ carries its own variable: if the context listed $X_1,\ldots,X_q$ together with $x_F$, the PVM above would not be a legal answer, since $F'$ commutes with $E$ but in general not with each $X_i$, and so does not fix their values. All other contexts, including the defining context of $x_E$, are exact. With incidence probability $\pi$, summing over the finitely many source equations and using~\eqref{eq:orth-repair} and~\eqref{eq:orth-size} bounds the loss by
+\[
+ 2\pi\sum\fn{EF}^2=8\pi\sum\frac{c^2}{L^3}\fn p^2\le C\delta^2.
+\]
+Here $c$ and $L$ are the integers of each source equation. The new variable adds no tensor factor. Realification, selectors and gadget extensions multiply the dimension by the fixed factor $2^{1+q_{\mathrm{tot}}+g}$, where $q_{\mathrm{tot}}$ is the total number of selector qubits and $g$ the number of gadget doublings; this is the dimension constant in (b). This proves both assertions.
+\end{proof}

@@ -1,0 +1,295 @@
+[
+  {
+    "N": 4,
+    "program": "halts iff input is even; one counter",
+    "K_N": [
+      0
+    ],
+    "theta_N": 0.25,
+    "k_N": 2,
+    "dimension": 16384,
+    "2^(3N+k_N)": 16384,
+    "4^-N": 0.00390625,
+    "relations_checked": 390,
+    "max_flat_defect": 0.01171875,
+    "max_ratio": 3.0,
+    "nonzero_relations": [
+      {
+        "relation": "(3) a affine",
+        "flat_defect": 0.008286407592029853,
+        "delta_4^-N": 0.00390625,
+        "ratio": 2.1213203435596424,
+        "max_column_norm": 0.01171875,
+        "basis_columns_evaluated": 64
+      },
+      {
+        "relation": "(3) a tail flip",
+        "flat_defect": 0.01171875,
+        "delta_4^-N": 0.00390625,
+        "ratio": 3.0,
+        "max_column_norm": 0.01171875,
+        "basis_columns_evaluated": 64
+      },
+      {
+        "relation": "(3) f affine",
+        "flat_defect": 0.008286407592029853,
+        "delta_4^-N": 0.00390625,
+        "ratio": 2.1213203435596424,
+        "max_column_norm": 0.01171875,
+        "basis_columns_evaluated": 16
+      },
+      {
+        "relation": "(3) f tail flip",
+        "flat_defect": 0.01171875,
+        "delta_4^-N": 0.00390625,
+        "ratio": 3.0,
+        "max_column_norm": 0.01171875,
+        "basis_columns_evaluated": 16
+      },
+      {
+        "relation": "(3) t affine",
+        "flat_defect": 0.008286407592029853,
+        "delta_4^-N": 0.00390625,
+        "ratio": 2.1213203435596424,
+        "max_column_norm": 0.01171875,
+        "basis_columns_evaluated": 16
+      },
+      {
+        "relation": "(3) t tail flip",
+        "flat_defect": 0.01171875,
+        "delta_4^-N": 0.00390625,
+        "ratio": 3.0,
+        "max_column_norm": 0.01171875,
+        "basis_columns_evaluated": 16
+      },
+      {
+        "relation": "(4) a guarded increment",
+        "flat_defect": 0.0013810679320049757,
+        "delta_4^-N": 0.00390625,
+        "ratio": 0.3535533905932738,
+        "max_column_norm": 0.005524271728019903,
+        "basis_columns_evaluated": 64
+      },
+      {
+        "relation": "(4) t guarded increment",
+        "flat_defect": 0.0013810679320049757,
+        "delta_4^-N": 0.00390625,
+        "ratio": 0.3535533905932738,
+        "max_column_norm": 0.005524271728019903,
+        "basis_columns_evaluated": 16
+      },
+      {
+        "relation": "(6) carry increment",
+        "flat_defect": 0.0009765625,
+        "delta_4^-N": 0.00390625,
+        "ratio": 0.25,
+        "max_column_norm": 0.00390625,
+        "basis_columns_evaluated": 64
+      },
+      {
+        "relation": "(24) data tail flip",
+        "flat_defect": 2.2888532845044592e-05,
+        "delta_4^-N": 0.00390625,
+        "ratio": 0.0058594644083314155,
+        "max_column_norm": 4.5777065690089265e-05,
+        "basis_columns_evaluated": 64
+      }
+    ]
+  },
+  {
+    "N": 6,
+    "program": "halts iff input is even; one counter",
+    "K_N": [
+      0,
+      2
+    ],
+    "theta_N": 0.265625,
+    "k_N": 4,
+    "dimension": 4194304,
+    "2^(3N+k_N)": 4194304,
+    "4^-N": 0.000244140625,
+    "relations_checked": 394,
+    "max_flat_defect": 0.000732421875,
+    "max_ratio": 3.0,
+    "nonzero_relations": [
+      {
+        "relation": "(3) a affine",
+        "flat_defect": 0.0005179004745018658,
+        "delta_4^-N": 0.000244140625,
+        "ratio": 2.1213203435596424,
+        "max_column_norm": 0.000732421875,
+        "basis_columns_evaluated": 1024
+      },
+      {
+        "relation": "(3) a tail flip",
+        "flat_defect": 0.000732421875,
+        "delta_4^-N": 0.000244140625,
+        "ratio": 3.0,
+        "max_column_norm": 0.000732421875,
+        "basis_columns_evaluated": 1024
+      },
+      {
+        "relation": "(3) f affine",
+        "flat_defect": 0.0005179004745018658,
+        "delta_4^-N": 0.000244140625,
+        "ratio": 2.1213203435596424,
+        "max_column_norm": 0.000732421875,
+        "basis_columns_evaluated": 64
+      },
+      {
+        "relation": "(3) f tail flip",
+        "flat_defect": 0.000732421875,
+        "delta_4^-N": 0.000244140625,
+        "ratio": 3.0,
+        "max_column_norm": 0.000732421875,
+        "basis_columns_evaluated": 64
+      },
+      {
+        "relation": "(3) t affine",
+        "flat_defect": 0.0005179004745018658,
+        "delta_4^-N": 0.000244140625,
+        "ratio": 2.1213203435596424,
+        "max_column_norm": 0.000732421875,
+        "basis_columns_evaluated": 64
+      },
+      {
+        "relation": "(3) t tail flip",
+        "flat_defect": 0.000732421875,
+        "delta_4^-N": 0.000244140625,
+        "ratio": 3.0,
+        "max_column_norm": 0.000732421875,
+        "basis_columns_evaluated": 64
+      },
+      {
+        "relation": "(4) a guarded increment",
+        "flat_defect": 4.315837287515549e-05,
+        "delta_4^-N": 0.000244140625,
+        "ratio": 0.1767766952966369,
+        "max_column_norm": 0.00034526698300124393,
+        "basis_columns_evaluated": 1024
+      },
+      {
+        "relation": "(4) t guarded increment",
+        "flat_defect": 4.315837287515549e-05,
+        "delta_4^-N": 0.000244140625,
+        "ratio": 0.1767766952966369,
+        "max_column_norm": 0.00034526698300124393,
+        "basis_columns_evaluated": 64
+      },
+      {
+        "relation": "(6) carry increment",
+        "flat_defect": 3.0517578125e-05,
+        "delta_4^-N": 0.000244140625,
+        "ratio": 0.125,
+        "max_column_norm": 0.000244140625,
+        "basis_columns_evaluated": 1024
+      },
+      {
+        "relation": "(24) data tail flip",
+        "flat_defect": 3.911827653101579e-08,
+        "delta_4^-N": 0.000244140625,
+        "ratio": 0.00016022846067104067,
+        "max_column_norm": 1.7881393436780524e-07,
+        "basis_columns_evaluated": 1024
+      }
+    ]
+  },
+  {
+    "N": 8,
+    "program": "halts iff input is even; one counter",
+    "K_N": [
+      0,
+      2
+    ],
+    "theta_N": 0.265625,
+    "k_N": 4,
+    "dimension": 268435456,
+    "2^(3N+k_N)": 268435456,
+    "4^-N": 1.52587890625e-05,
+    "relations_checked": 398,
+    "max_flat_defect": 4.57763671875e-05,
+    "max_ratio": 3.0,
+    "nonzero_relations": [
+      {
+        "relation": "(3) a affine",
+        "flat_defect": 3.2368779656366614e-05,
+        "delta_4^-N": 1.52587890625e-05,
+        "ratio": 2.1213203435596424,
+        "max_column_norm": 4.57763671875e-05,
+        "basis_columns_evaluated": 4096
+      },
+      {
+        "relation": "(3) a tail flip",
+        "flat_defect": 4.57763671875e-05,
+        "delta_4^-N": 1.52587890625e-05,
+        "ratio": 3.0,
+        "max_column_norm": 4.57763671875e-05,
+        "basis_columns_evaluated": 4096
+      },
+      {
+        "relation": "(3) f affine",
+        "flat_defect": 3.2368779656366614e-05,
+        "delta_4^-N": 1.52587890625e-05,
+        "ratio": 2.1213203435596424,
+        "max_column_norm": 4.57763671875e-05,
+        "basis_columns_evaluated": 256
+      },
+      {
+        "relation": "(3) f tail flip",
+        "flat_defect": 4.57763671875e-05,
+        "delta_4^-N": 1.52587890625e-05,
+        "ratio": 3.0,
+        "max_column_norm": 4.57763671875e-05,
+        "basis_columns_evaluated": 256
+      },
+      {
+        "relation": "(3) t affine",
+        "flat_defect": 3.2368779656366614e-05,
+        "delta_4^-N": 1.52587890625e-05,
+        "ratio": 2.1213203435596424,
+        "max_column_norm": 4.57763671875e-05,
+        "basis_columns_evaluated": 256
+      },
+      {
+        "relation": "(3) t tail flip",
+        "flat_defect": 4.57763671875e-05,
+        "delta_4^-N": 1.52587890625e-05,
+        "ratio": 3.0,
+        "max_column_norm": 4.57763671875e-05,
+        "basis_columns_evaluated": 256
+      },
+      {
+        "relation": "(4) a guarded increment",
+        "flat_defect": 1.3486991523486091e-06,
+        "delta_4^-N": 1.52587890625e-05,
+        "ratio": 0.08838834764831845,
+        "max_column_norm": 2.1579186437577746e-05,
+        "basis_columns_evaluated": 4096
+      },
+      {
+        "relation": "(4) t guarded increment",
+        "flat_defect": 1.3486991523486091e-06,
+        "delta_4^-N": 1.52587890625e-05,
+        "ratio": 0.08838834764831845,
+        "max_column_norm": 2.1579186437577746e-05,
+        "basis_columns_evaluated": 256
+      },
+      {
+        "relation": "(6) carry increment",
+        "flat_defect": 9.5367431640625e-07,
+        "delta_4^-N": 1.52587890625e-05,
+        "ratio": 0.0625,
+        "max_column_norm": 1.52587890625e-05,
+        "basis_columns_evaluated": 4096
+      },
+      {
+        "relation": "(24) data tail flip",
+        "flat_defect": 3.911827653101579e-08,
+        "delta_4^-N": 1.52587890625e-05,
+        "ratio": 0.0025636553707366508,
+        "max_column_norm": 1.7881393436780524e-07,
+        "basis_columns_evaluated": 4096
+      }
+    ]
+  }
+]

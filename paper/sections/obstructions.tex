@@ -1,0 +1,66 @@
+\section{Why exact periodic verification is insufficient}\label{sec:obstructions}
+This appendix records two obstructions that explain the use of approximate clocks and vanishing guard amplitudes. Neither is a general impossibility theorem for finite presentations. For the distinction between locally invariant finite marginals and globally extendible measures, see Chazottes, Gambaudo, Hochman and Ugalde~\cite{CGHU12}; the compactness argument below uses all box sizes, not extension of one finite marginal.
+
+\begin{proposition}[Periodic extrema]\label{prop:periodic}
+Let $X$ be a nonempty shift of finite type on $\Z^r$ and $f$ a rational local observable. Put $\alpha=\min_\mu\int f\,d\mu$, where $\mu$ ranges over invariant probability measures. If averages of periodic configurations approach $\alpha$, then $\alpha$ is computable.
+\end{proposition}
+\begin{proof}
+On each finite box, consider probability distributions on locally admissible patterns and impose every translation-invariance equation whose two supports stay in the box. This is a finite rational polytope. Minimize the expected value of $f$ at the origin, obtaining a computable rational lower bound $\ell_N$. Restriction from larger boxes makes these bounds monotone. A convergent subsequence of minimizers has consistent marginals on every finite support, gives an invariant measure on $X$, and has expectation $\lim\ell_N$. Thus $\ell_N\uparrow\alpha$. Periodic configurations and their finite fundamental domains are enumerable; local validity and their rational averages are decidable. Their successive minimum averages give upper bounds converging to their infimum. By hypothesis that infimum is $\alpha$. Search until the upper and lower bounds differ by the desired error.
+\end{proof}
+
+Hochman--Meyerovitch's noncomputable extremal frequencies~\cite{HM10} therefore cannot be combined with arbitrarily good exact periodic models of those minima. In the present upper construction the workspace histories close as labels, but the complete clocks remain approximate. Proposition~\ref{prop:periodic} does not apply to those clocks.
+
+\begin{theorem}[Extraction under a fixed rejection gap]\label{thm:reset-obstruction}
+Suppose $\C^d=\bigoplus_{v\in\mathcal V}\mathcal H_v$, with $M=|\mathcal V|$ nonzero sector projections $P_v$. Unitaries $U_1,\ldots,U_s$ permute the sectors exactly and satisfy $\hs{[U_i,\xi]}\le\delta$. For forbidden sets $B_j\subseteq\mathcal V$, $1\le j\le r$, suppose
+\[
+ D_j^*D_j\ge\kappa P_{B_j},\qquad |D_j|_\rho\le\delta,
+ \qquad P_{B_j}=\sum_{v\in B_j}P_v,
+\]
+where $\kappa>0$. Let $F=\sum_vc_vP_v$, $0\le c_v\le1$, and $a=M\delta$. If $2(s+r/\kappa)a^2<1$, a transition orbit avoiding all forbidden sets has average cost at most
+\begin{equation}\label{eq:orbit-cost}
+ \Tr(\rho F)+\sqrt{2s}\,a+2(s+r/\kappa)a^2.
+\end{equation}
+\end{theorem}
+\begin{proof}
+Let $p_v=\Tr(\rho P_v)$ and $q_v=\sqrt{p_v}$. If $\pi_i$ is the sector permutation of $U_i$, the reverse triangle inequality applied to the row blocks $P_v\xi$ and $P_vU_i\xi U_i^*$ gives
+\[
+ \sum_v(q_v-q_{\pi_i(v)})^2\le\delta^2.
+\]
+The union $B$ of forbidden sets has $p(B)\le(r/\kappa)\delta^2$. For an orbit $O$, let
+$E_O=\sum_i\sum_{v\in O}(q_v-q_{\pi_i(v)})^2$, so $\sum_OE_O\le s\delta^2$. A simple path in the connected orbit graph has at most $|O|-1$ edges; Cauchy--Schwarz gives
+\[
+ (q_v-q_w)^2\le(|O|-1)E_O.
+\]
+Choose a bad vertex $w_O$ in each invalid orbit. Then
+\[
+ \sum_{v\in O}q_v^2\le2M q_{w_O}^2+2M^2E_O.
+\]
+Summing shows that the mass $b$ of invalid orbits is at most $2(s+r/\kappa)a^2$.
+
+Average $p$ uniformly within each orbit, obtaining $\bar p$, and put $u_v=\sqrt{\bar p_v}$. The variance identity and the path bound give
+\[
+ \sum_{v\in O}(q_v-\bar q_O)^2\le M^2E_O,
+\]
+where $\bar q_O$ is the ordinary average of $q$ on $O$. If the orbit has mass $p_O>0$, set $t_O=(\sum_{v\in O}q_v)/\sqrt{|O|p_O}$. Then
+\[
+ \sum_{v\in O}(q_v-u_v)^2=2p_O(1-t_O)
+ \le2p_O(1-t_O^2)=2\sum_{v\in O}(q_v-\bar q_O)^2.
+\]
+Consequently $\|q-u\|_2\le\sqrt{2s}\,M\delta$. Since
+$\TV(p,\bar p)\le\frac12\|q-u\|_2\|q+u\|_2\le\|q-u\|_2$, orbit averaging changes expected cost by at most this amount. Conditioning $\bar p$ on valid orbits changes total variation by $b<1$. The result is a mixture of uniform valid-orbit laws, one of which has cost at most~\eqref{eq:orbit-cost}.
+\end{proof}
+
+\begin{corollary}\label{cor:reset-computability}
+Assume valid finite orbits are effectively enumerable, have computable rational costs, and every such cost is at least a left-c.e. real $\theta$. If near-minimizing models have flag cost tending to $\theta$ and $M\delta\to0$, then $\theta$ is computable. If $\theta$ is uncomputable and flat models have flag cost tending to $\theta$, their dimensions eventually satisfy $d\ge\kappa\delta^{-2}$.
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:reset-obstruction} makes the infimum of valid finite-orbit costs equal to $\theta$ under the first hypothesis. Enumerating those costs gives computable upper bounds tending to $\theta$; left semicomputability gives lower bounds. This computes $\theta$.
+
+More generally, for uncomputable $\theta$ the infimum $\theta_{\mathrm{fin}}$ of valid finite-orbit costs must be strictly greater than $\theta$, or there are no valid finite orbits: equality would already make $\theta$ computable by the same enumeration. If a flat model had no nonzero forbidden projection, every orbit would be valid. Exact sector permutation makes ranks constant on an orbit, so its flat cost would be a mixture of uniform orbit costs, at least $\theta_{\mathrm{fin}}$. Thus near-minimizing flat models eventually have a nonzero $P_{B_j}$. The rejection gap gives
+\[
+ \delta^2\ge d^{-1}\Tr(D_j^*D_j)\ge\kappa/d.
+\]
+This proves the claimed dimension bound.
+\end{proof}
+
+The semantic assumption about all valid finite-orbit costs is essential. A program orbit may fail to extend to the full clock system, or may have a cheap flag cost that the extra clock relations exclude. The corollary does not apply automatically to every operator presentation. Its flat bound explains the amplitude issue: the target dimensions here are below order $\delta^{-2}$, so a construction satisfying these hypotheses could not use fixed-gap bad sectors. Our increment defect instead has amplitude $4^{-N}$ at overflow, as Proposition~\ref{prop:increment} proves. The initialization proof uses exact tracial cancellation and compactness, not a fixed-gap finite-sector extraction.

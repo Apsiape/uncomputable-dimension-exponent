@@ -1,0 +1,11 @@
+paper/build/
+paper/build-*.txt
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+__pycache__/
+verify/out/*.npy

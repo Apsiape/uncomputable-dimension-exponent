@@ -1,0 +1,63 @@
+gadget aba=c, trial 0:
+  a d1 d2: ok
+  b d2 d3: ok
+  d3 d4 d5: ok
+  a d5 d6: ok
+  c d6 d7: ok
+  d1 d4 d7: ok
+  all contexts: True
+gadget aba=c, trial 1:
+  a d1 d2: ok
+  b d2 d3: ok
+  d3 d4 d5: ok
+  a d5 d6: ok
+  c d6 d7: ok
+  d1 d4 d7: ok
+  all contexts: True
+gadget aba=c, trial 2:
+  a d1 d2: ok
+  b d2 d3: ok
+  d3 d4 d5: ok
+  a d5 d6: ok
+  c d6 d7: ok
+  d1 d4 d7: ok
+  all contexts: True
+gadget x1x2x1=x3, trial 0:
+  x1 y1 z1: ok
+  x1 f w1: ok
+  x2 y2 z2: ok
+  x2 f w2: ok
+  x3 y3 z3: ok
+  x3 f w3: ok
+  g y2 z3: ok
+  f y1 f = z1: ok
+  f y2 f = z2: ok
+  f y3 f = z3: ok
+  w1 y2 w1 = z3: ok
+  all: True
+gadget x1x2x1=x3, trial 1:
+  x1 y1 z1: ok
+  x1 f w1: ok
+  x2 y2 z2: ok
+  x2 f w2: ok
+  x3 y3 z3: ok
+  x3 f w3: ok
+  g y2 z3: ok
+  f y1 f = z1: ok
+  f y2 f = z2: ok
+  f y3 f = z3: ok
+  w1 y2 w1 = z3: ok
+  all: True
+gadget x1x2x1=x3, trial 2:
+  x1 y1 z1: ok
+  x1 f w1: ok
+  x2 y2 z2: ok
+  x2 f w2: ok
+  x3 y3 z3: ok
+  x3 f w3: ok
+  g y2 z3: ok
+  f y1 f = z1: ok
+  f y2 f = z2: ok
+  f y3 f = z3: ok
+  w1 y2 w1 = z3: ok
+  all: True

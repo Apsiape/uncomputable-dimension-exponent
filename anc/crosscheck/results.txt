@@ -1,0 +1,11 @@
+$ python anc/crosscheck/gadgets.py
+gadget2 max defect (only instances with [b,c]=0): 7.028640284740132e-15
+gadget2 diag/perm instances 200 max defect 0
+gadget1 max defect: 7.621189495163235e-15
+S unitary: 3.3778445217534536e-15
+EFS-ESE: 7.425751256286265e-16  ESE-(1/L)sumW E: 0.0
+identity (1) defect: 5.940601005029012e-15
+max ||F-F'||^2/(2||EF||^2) over random: 1.000000000000001
+
+$ python anc/crosscheck/r1.py
+max ||[F',X_i]|| (should be O(1) if R1 is real): 1.9989363391090018  last ||EF||: 0.0014735938271143083

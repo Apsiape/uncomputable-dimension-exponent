@@ -1,0 +1,18 @@
+=== N = 8 ===
+  K_N=[0, 2] theta_N=0.265625 k_N=4 dim=2^28 V order=256 qhalt states=262936 viol=0
+    support x       11 relations      0.0s
+    support q       11 relations      0.0s
+    support t       14 relations      0.0s
+    support xy      47 relations      0.2s
+    support qt      32 relations      3.5s
+    support qx      24 relations      0.1s
+    support tx      30 relations      0.1s
+    support qtx    687 relations    131.8s
+    support qxy     28 relations      2.0s
+    support txy     35 relations      2.5s
+  919 relations, 0 not passing, 140.5s
+peak working set: 655.7265625 MB
+
+real	2m21.096s
+user	0m0.000s
+sys	0m0.015s

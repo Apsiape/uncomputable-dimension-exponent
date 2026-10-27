@@ -1,0 +1,25 @@
+{
+  "title": "A nonlocal game whose dimension exponent is uncomputable",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "version": "1.0.0",
+  "creators": [
+    {
+      "name": "Douglas, Seth"
+    },
+    {
+      "name": "Mghirbi, Nidhal"
+    }
+  ],
+  "description": "<p>Can uncomputability occur in the resource law of one fixed finite nonlocal game, rather than in a problem whose input is a game? We construct a finite two-player Boolean constraint-system game with rational question probabilities, quantum value one, and no finite-dimensional perfect strategy. If $D(\\varepsilon)$ is the least local dimension needed to win with probability at least $1-\\varepsilon$, then $\\lim_{n\\to\\infty}\\log_2 D(2^{-n})/n=(3+\\theta_K)/4$, where $\\theta_K=\\sum_{e\\in K}4^{-(e+1)}$ and $K$ is the halting set. This exponent has the Turing degree of $K$. The construction combines finite operator relations for three Cantor clocks, a counter program with forced initialization, and a conditional clock that charges dimension for halting inputs. A Boolean compiler preserves weighted precision linearly and converts flat models to strategies with quadratic loss. The lower bound holds in every density matrix. Explicit finite models attain the same rate. The flag-density lower bound uses compactness without an effective modulus; convergence to the dimension exponent has no computable certified rate.</p>",
+  "keywords": [
+    "nonlocal games",
+    "dimension exponent",
+    "Boolean constraint systems",
+    "computability"
+  ],
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "language": "eng",
+  "notes": "Preprint. It has not been peer reviewed. Text and documentation: CC BY 4.0. Scripts: MIT or Apache 2.0. No Lean formalization yet; one is planned."
+}

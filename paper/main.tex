@@ -1,0 +1,74 @@
+% Build: pdflatex main; bibtex main; pdflatex main; pdflatex main.
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage{microtype}
+\usepackage{xcolor,aliascnt}
+\setlength{\emergencystretch}{3em}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalise,nameinlink]{cleveref}
+\hypersetup{pdftitle={A nonlocal game whose dimension exponent is uncomputable},pdfauthor={Seth Douglas and Nidhal Mghirbi},pdfkeywords={nonlocal games, dimension, Boolean constraint systems, computability, approximate representations}}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newcommand{\sharedtheorem}[2]{\newaliascnt{#1}{theorem}\newtheorem{#1}[#1]{#2}\aliascntresetthe{#1}}
+\sharedtheorem{lemma}{Lemma}
+\sharedtheorem{proposition}{Proposition}
+\sharedtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\sharedtheorem{definition}{Definition}
+\theoremstyle{remark}
+\sharedtheorem{remark}{Remark}
+\numberwithin{equation}{section}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\K}{\mathcal K}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\id}{I}
+\newcommand{\hs}[1]{\lVert#1\rVert_2}
+\newcommand{\wn}[1]{\lVert#1\xi\rVert_2}
+\newcommand{\fn}[1]{\lVert#1\rVert_f}
+\newcommand{\opn}[1]{\lVert#1\rVert}
+\newcommand{\trn}[1]{\lVert#1\rVert_1}
+\newcommand{\comm}[2]{[#1,#2]}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\Step}{Step}
+\DeclareMathOperator{\Init}{Init}
+\DeclareMathOperator{\TV}{TV}
+\newcommand{\thetaK}{\theta_K}
+\newcommand{\DD}{D_G}
+\newcommand{\bigO}{O}
+\title{A nonlocal game whose dimension exponent is uncomputable}
+\author{Seth Douglas \and Nidhal Mghirbi}
+\date{Version 1.0.0, October 2026}
+\begin{document}
+\maketitle
+\input{sections/abstract}
+\clearpage
+{\small\setcounter{tocdepth}{1}\tableofcontents}
+\clearpage
+\input{sections/intro}
+\input{sections/prelim}
+\input{sections/compiler}
+\input{sections/clock}
+\input{sections/source}
+\input{sections/forcing}
+\input{sections/finite}
+\input{sections/count}
+\input{sections/lower}
+\input{sections/game}
+\input{sections/methods}
+\appendix
+\input{sections/obstructions}
+\input{sections/checks}
+\bibliographystyle{plainurl}
+\bibliography{refs}
+\end{document}

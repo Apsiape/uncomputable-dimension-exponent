@@ -1,0 +1,19 @@
+=== ablations, N = 4 ===
+  conj=D*TD   : 0 of 911 relations fail
+  conj=none   : 1 of 911 relations fail
+  r0=-1       : 0 of 911 relations fail
+  rot=down    : 16 of 911 relations fail
+  addr=msb    : 9 of 911 relations fail
+  time=msb    : 12 of 911 relations fail
+  fuel=top    : 5 of 911 relations fail
+  k=k_N-1     : 1 of 911 relations fail
+=== ablations, N = 6 ===
+  conj=D*TD   : 1 of 915 relations fail
+  conj=none   : 1 of 915 relations fail
+  r0=-1       : 0 of 915 relations fail
+  rot=down    : 21 of 915 relations fail
+  addr=msb    : 11 of 915 relations fail
+  time=msb    : 26 of 915 relations fail
+  fuel=top    : 7 of 915 relations fail
+  k=k_N-1     : 0 of 915 relations fail
+peak working set: 433.33984375 MB

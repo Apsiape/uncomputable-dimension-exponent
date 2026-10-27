@@ -1,0 +1,45 @@
+\section{Weighted models and elementary estimates}\label{sec:prelim}
+\begin{definition}\label{def:model}
+A bounded polynomial presentation consists of finitely many variables, each declared to be a positive contraction, a projection, a self-adjoint unitary, or a unitary, and finitely many rational real-coefficient noncommutative $*$-polynomial equations $r=0$. Its weighted precision-$\delta$ model on $\C^d$ is an assignment in the declared domains and a density matrix $\rho$ such that, with $\xi=\sqrt\rho$,
+\begin{equation}\label{eq:model}
+ \hs{r\xi}\le\delta,\qquad \hs{[s,\xi]}\le\delta
+\end{equation}
+for each defining relation $r$ and each variable $s$. The norm is the unnormalized Hilbert--Schmidt norm. A flat model has $\rho=I/d$ and $\fn{r}=d^{-1/2}\hs{r}$. Write $W(\delta)$ and $H(\delta)$ for the least weighted and flat model dimensions, with value $\infty$ if no model exists.
+\end{definition}
+
+We write $|D|_\rho=\hs{D\xi}$. Constants for a fixed presentation may depend on its finite polynomials, but never on $d,\rho,\delta$ or a growing digit depth.
+\begin{lemma}[Right multiplication]\label{lem:transport}
+For bounded $A,B$,
+\[
+ |AB|_\rho\le\opn A|B|_\rho,\qquad
+ |BA|_\rho\le\opn A|B|_\rho+\opn B\hs{[A,\xi]}.
+\]
+A word $w$ of length $l$ in contraction variables and unitary adjoints satisfies $\hs{[w,\xi]}\le l\delta$. A fixed finite algebraic derivation from the defining relations has error at most $C\delta$ on the same state.
+\end{lemma}
+\begin{proof}
+Use $BA\xi=B\xi A+B[A,\xi]$. Expand the commutator of a product one factor at a time. Adjoint unitaries have the same state-commutator norm as the unitary. For adjoint relations,
+\[
+ |r^*|_\rho=\hs{\xi r}\le |r|_\rho+\hs{[r,\xi]}.
+\]
+All variables are bounded, so a fixed polynomial has a fixed operator-norm bound and a commutator bound $C\delta$. Expand a finite ideal identity as a finite sum $a_jr_jb_j$ and apply the first two inequalities. This proves the last assertion.
+\end{proof}
+
+\begin{lemma}[Hilbert--Schmidt functional calculus]\label{lem:fc}
+Let $A,B$ be self-adjoint, $Z$ an arbitrary rectangular Hilbert--Schmidt matrix, and $g$ an $L$-Lipschitz function on their spectra. Then
+\begin{align}
+ \hs{g(A)Z-Zg(B)}&\le L\hs{AZ-ZB},\label{eq:doi}\\
+ |g(A)-g(B)|_\rho&\le L\bigl(|A-B|_\rho+2\hs{[B,\xi]}\bigr),\label{eq:fc-diff}\\
+ |[Y,g(A)]|_\rho&\le L\bigl(|[Y,A]|_\rho+2\hs{[A,\xi]}\bigr)\label{eq:fc-comm}
+\end{align}
+in the last line for a contraction $Y$. Also $\hs{[g(A),\xi]}\le L\hs{[A,\xi]}$.
+\end{lemma}
+\begin{proof}
+Diagonalize $A$ on the left and $B$ on the right. Corresponding entries in the first inequality are $(g(a)-g(b))Z_{ab}$ and $(a-b)Z_{ab}$. Square the scalar Lipschitz inequality and sum. The state-commutator estimate is its case $A=B,Z=\xi$. Insert and subtract $\xi g(B)$ to obtain~\eqref{eq:fc-diff}. For~\eqref{eq:fc-comm}, apply~\eqref{eq:doi} with $A=B,Z=Y\xi$; then insert and subtract $Y\xi g(A)$. The two resulting state-commutator terms are each bounded by $L\hs{[A,\xi]}$. These are Schatten-two estimates, not operator-norm Lipschitz statements.
+\end{proof}
+
+\begin{lemma}[Finite-precision computability]\label{lem:computability}
+For a rational-data game promised to have quantum value one, $D_G(\eps)$ is computable at every positive rational $\eps$. If $a_n=\log D_G(2^{-n})/n$ converges to $\beta$ and $|a_n-\beta|\le r(n)$ eventually for a computable $r(n)\to0$, then $\beta$ is computable.
+\end{lemma}
+\begin{proof}
+In a fixed local dimension $d$, introduce real variables for the real and imaginary matrix entries of the state and both families of POVMs. Positivity is a finite list of principal-minor inequalities. Normalization and winning probability at least $1-\eps$ are polynomial conditions with rational coefficients. Real quantifier elimination decides feasibility. Test $d=1,2,\ldots$; the value-one promise ensures termination. For the second assertion, hardcode a threshold beyond which the error bound holds. Given $k$, search above it for $n$ with $r(n)<2^{-k-1}$ and compute $a_n$ within $2^{-k-1}$. This gives a $2^{-k}$ approximation to $\beta$.
+\end{proof}

@@ -1,0 +1,53 @@
+=== N = 4 ===
+  K_N=[0] theta_N=0.25 k_N=2 dim=2^14 V order=16 qhalt states=56 viol=0
+    support x       11 relations      0.0s
+    support q       11 relations      0.0s
+    support t       14 relations      0.0s
+    support xy      43 relations      0.0s
+    support qt      28 relations      0.0s
+    support qx      24 relations      0.0s
+    support tx      30 relations      0.0s
+    support qtx    687 relations      0.0s
+    support qxy     28 relations      0.0s
+    support txy     35 relations      0.0s
+  911 relations, 0 not passing, 0.1s
+  full-space cross-check on xqty (dim 2^14) ...
+    support qtxy   911 relations      0.7s
+  full-space: 0 mismatches vs support evaluation, 0.8s
+=== N = 6 ===
+  K_N=[0] theta_N=0.25 k_N=3 dim=2^21 V order=192 qhalt states=4064 viol=0
+    support x       11 relations      0.0s
+    support q       11 relations      0.0s
+    support t       14 relations      0.0s
+    support xy      45 relations      0.0s
+    support qt      30 relations      0.1s
+    support qx      24 relations      0.0s
+    support tx      30 relations      0.0s
+    support qtx    687 relations      2.0s
+    support qxy     28 relations      0.1s
+    support txy     35 relations      0.1s
+  915 relations, 0 not passing, 2.3s
+  full-space cross-check on xqty (dim 2^21) ...
+    support qtxy   915 relations    103.3s
+  full-space: 0 mismatches vs support evaluation, 103.3s
+=== ablations, N = 4 ===
+  conj=D*TD   : 0 of 911 relations fail
+  conj=none   : 1 of 911 relations fail
+  r0=-1       : 0 of 911 relations fail
+  rot=down    : 16 of 911 relations fail
+  addr=msb    : 9 of 911 relations fail
+  time=msb    : 12 of 911 relations fail
+  fuel=top    : 5 of 911 relations fail
+=== ablations, N = 6 ===
+  conj=D*TD   : 1 of 915 relations fail
+  conj=none   : 1 of 915 relations fail
+  r0=-1       : 0 of 915 relations fail
+  rot=down    : 21 of 915 relations fail
+  addr=msb    : 11 of 915 relations fail
+  time=msb    : 26 of 915 relations fail
+  fuel=top    : 7 of 915 relations fail
+peak working set: 0.0 MB
+
+real	2m5.807s
+user	0m0.015s
+sys	0m0.015s

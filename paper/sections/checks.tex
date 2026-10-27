@@ -1,0 +1,32 @@
+\section{Finite computations and reproducibility}\label{app:checks}
+The code in \texttt{anc/audit/check\_models.py} represents an operator as a finite sum of weighted basis permutations. For each defining relation it enumerates all basis columns of the tensor factors that occur in that relation. The absent factors are identities, so averaging squared column norms computes exactly the full-space normalized Hilbert--Schmidt expression, before floating-point rounding. Equal output rows are combined before squaring, avoiding cancellation of large squared terms. The periodic coordinates in~\eqref{eq:series} are summed with integer numerators and denominator $4^\ell-1$ for the permutation period $\ell$, then rounded once to floating point.
+
+The test program has one counter and five controls. From the starting control, zero halts, while nonzero decrements and moves to an odd-parity control. There zero enters an absorbing nonhalting control, while nonzero decrements and returns to start. Idle and halt are absorbing. Hence input $e$ halts exactly when it is even, at step $e+1$. This is a test of the finite-model mechanism, not a computation of the universal halting set.
+
+\begin{table}[ht]
+\centering
+\caption{Finite-model checks for the disclosed test program. Each ratio is a flat Hilbert--Schmidt defect divided by $4^{-N}$. The first two rows apply separately to all three compulsory clocks.}\label{tab:checks}
+\small
+\begin{tabular}{lrrr}
+\toprule
+Quantity & $N=4$ & $N=6$ & $N=8$\\
+\midrule
+Clock affine ratio & $3/\sqrt2$ & $3/\sqrt2$ & $3/\sqrt2$\\
+Clock tail-flip ratio & $3$ & $3$ & $3$\\
+Guarded increment ratio & $0.353553$ & $0.176777$ & $0.088388$\\
+Carry-step ratio & $0.25$ & $0.125$ & $0.0625$\\
+Conditional tail ratio & $0.00585946$ & $0.000160228$ & $0.00256366$\\
+\midrule
+$K_N$ & $\{0\}$ & $\{0,2\}$ & $\{0,2\}$\\
+$k_N$ & $2$ & $4$ & $4$\\
+Dimension & $16\,384$ & $4\,194\,304$ & $268\,435\,456$\\
+Recorded checks & $390$ & $394$ & $398$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The remaining defining defects are zero to within $10^{-14}$ in these tests. Complete per-relation values and their reference scales are archived, not just the maxima in Table~\ref{tab:checks}. The two guarded increments have identical ratios in this example. The theorem's operator-norm bounds are proved in Section~\ref{sec:finite}; a script's maximum column norm is not generally an operator norm. The displayed dimensions are represented without dense matrices. The original $N=8$ run had an observed peak working set about $1.16$ GB.
+
+The gadget script \texttt{anc/gadgets/gadget\_check.py} tests self-adjointness, squares, all pairwise commutations within each context, context products, and the auxiliary conjugacies on random finite instances. It is a numerical check of the explicit extension, not a proof of the converse; that converse is proved in Section~\ref{sec:compiler}.
+
+The ancillary README gives commands, dependencies, recorded outputs and limitations. All computations are run with one numerical-library thread. The finite-model script caps its exhaustive workspace implementation at $N=8$ to stay within the stated memory budget. The independent engine described in the methods section is in the repository directory \texttt{verify/}, with its recorded output, and the two scripts of the independent proof check are in \texttt{anc/crosscheck/}.

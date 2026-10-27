@@ -1,0 +1,1191 @@
+{
+ "conj=D*TD": {
+  "opts": {
+   "conj": "D*TD"
+  },
+  "KN": [
+   0
+  ],
+  "k": 3,
+  "n_relations": 915,
+  "n_fail": 1,
+  "failing": [
+   {
+    "name": "(4) guarded increment V",
+    "claim": 1.4142135623730951,
+    "op_x4N": 1773.620026950531,
+    "hs_x4N": 560.9310897962423,
+    "status": "FAIL(>claim)",
+    "top": [
+     [
+      0.3535533905932738,
+      {
+       "x": 1,
+       "y": 6
+      }
+     ]
+    ]
+   }
+  ]
+ },
+ "conj=none": {
+  "opts": {
+   "conj": "none"
+  },
+  "KN": [
+   0
+  ],
+  "k": 3,
+  "n_relations": 915,
+  "n_fail": 1,
+  "failing": [
+   {
+    "name": "(4) guarded increment V",
+    "claim": 1.4142135623730951,
+    "op_x4N": 1773.6200269505305,
+    "hs_x4N": 560.9310897962423,
+    "status": "FAIL(>claim)",
+    "top": [
+     [
+      0.3535533905932738,
+      {
+       "x": 1,
+       "y": 6
+      }
+     ]
+    ]
+   }
+  ]
+ },
+ "r0=-1": {
+  "opts": {
+   "r0": -1
+  },
+  "KN": [
+   0
+  ],
+  "k": 3,
+  "n_relations": 915,
+  "n_fail": 0,
+  "failing": []
+ },
+ "rot=down": {
+  "opts": {
+   "rot": "down"
+  },
+  "KN": [
+   0
+  ],
+  "k": 3,
+  "n_relations": 915,
+  "n_fail": 21,
+  "failing": [
+   {
+    "name": "(3) T_aA_aT_a*-4A_a+3P_a",
+    "claim": 3.0,
+    "op_x4N": 3828.0,
+    "hs_x4N": 2167.9862776318487,
+    "status": "FAIL(>claim)",
+    "top": [
+     [
+      0.9345703125,
+      {
+       "x": 33,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(3) [X_a,T_aA_aT_a*]",
+    "claim": 3.0,
+    "op_x4N": 768.0,
+    "hs_x4N": 768.0,
+    "status": "FAIL(>claim)",
+    "top": [
+     [
+      0.1875,
+      {
+       "x": 0,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(3) T_fA_fT_f*-4A_f+3P_f",
+    "claim": 3.0,
+    "op_x4N": 3828.0,
+    "hs_x4N": 2167.9862776318487,
+    "status": "FAIL(>claim)",
+    "top": [
+     [
+      0.9345703125,
+      {
+       "q": 33
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(3) [X_f,T_fA_fT_f*]",
+    "claim": 3.0,
+    "op_x4N": 768.0,
+    "hs_x4N": 768.0,
+    "status": "FAIL(>claim)",
+    "top": [
+     [
+      0.1875,
+      {
+       "q": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(3) T_tA_tT_t*-4A_t+3P_t",
+    "claim": 3.0,
+    "op_x4N": 3828.0,
+    "hs_x4N": 2167.9862776318487,
+    "status": "FAIL(>claim)",
+    "top": [
+     [
+      0.9345703125,
+      {
+       "t": 33
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(3) [X_t,T_tA_tT_t*]",
+    "claim": 3.0,
+    "op_x4N": 768.0,
+    "hs_x4N": 768.0,
+    "status": "FAIL(>claim)",
+    "top": [
+     [
+      0.1875,
+      {
+       "t": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(4) guarded increment V",
+    "claim": 1.4142135623730951,
+    "op_x4N": 1455.7623172783742,
+    "hs_x4N": 648.0297061092184,
+    "status": "FAIL(>claim)",
+    "top": [
+     [
+      0.3535533905932738,
+      {
+       "x": 1,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(4) guarded increment U",
+    "claim": 1.4142135623730951,
+    "op_x4N": 1455.7623172783726,
+    "hs_x4N": 648.0297061092184,
+    "status": "FAIL(>claim)",
+    "top": [
+     [
+      0.3535533905932738,
+      {
+       "t": 1
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(5) H-(I-P_a)-1/4 P_a T_aHT_a*",
+    "claim": "EXACT",
+    "op_x4N": 1020.0,
+    "hs_x4N": 465.52364668725477,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      0.2490234375,
+      {
+       "x": 31,
+       "y": 7
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(7) L-E1-E00 T^2LT^-2",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 2508.277496609974,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 3,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(8) R-(I-E00)-1/2 E00 T^2RT^-2",
+    "claim": "EXACT",
+    "op_x4N": 3072.0,
+    "hs_x4N": 1291.151424117249,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      0.75,
+      {
+       "x": 2,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(10) B_0L-B_0",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 1448.1546878700494,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 3,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(10) B_1L-B_1",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 724.0773439350247,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 18,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(10) B_1R-2^-1B_1",
+    "claim": "EXACT",
+    "op_x4N": 2048.0,
+    "hs_x4N": 384.0,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      0.5,
+      {
+       "x": 18,
+       "y": 7
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(10) B_2R-2^-2B_2",
+    "claim": "EXACT",
+    "op_x4N": 1024.0,
+    "hs_x4N": 128.0,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      0.25,
+      {
+       "x": 4,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(11) Z-(I-P_f)-P_f(I-P_t)SZS*",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 1180.1016905334895,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 3,
+       "t": 18
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_1Z-C_1D_1",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 834.4579078659391,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 3,
+       "t": 18
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_2Z-C_2D_2",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 724.0773439350247,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 33,
+       "t": 40
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_3Z-C_3D_3",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 557.9390647732063,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 49,
+       "t": 24
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_4Z-C_4D_4",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 424.5279731654912,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 57,
+       "t": 16
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_5Z-C_5D_5",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 350.5424368033063,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 61,
+       "t": 12
+      }
+     ]
+    ]
+   }
+  ]
+ },
+ "addr=msb": {
+  "opts": {
+   "addr": "msb"
+  },
+  "KN": [
+   0
+  ],
+  "k": 3,
+  "n_relations": 915,
+  "n_fail": 11,
+  "failing": [
+   {
+    "name": "(4) guarded increment V",
+    "claim": 1.4142135623730951,
+    "op_x4N": 6386.569705100966,
+    "hs_x4N": 3606.3730438281063,
+    "status": "FAIL(>claim)",
+    "top": [
+     [
+      1.4142135623730951,
+      {
+       "x": 0,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(5) H-(I-P_a)-1/4 P_a T_aHT_a*",
+    "claim": "EXACT",
+    "op_x4N": 4092.0,
+    "hs_x4N": 2633.6909966100807,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      0.9990234375,
+      {
+       "x": 31,
+       "y": 7
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(6) V*A_aV-A_a+I-7/4H",
+    "claim": 1.0,
+    "op_x4N": 6138.0,
+    "hs_x4N": 3168.9686487680815,
+    "status": "FAIL(>claim)",
+    "top": [
+     [
+      1.49853515625,
+      {
+       "x": 31,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(7) L-E1-E00 T^2LT^-2",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 2401.492869029596,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 16,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(8) R-(I-E00)-1/2 E00 T^2RT^-2",
+    "claim": "EXACT",
+    "op_x4N": 3072.0,
+    "hs_x4N": 1706.533328124593,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      0.75,
+      {
+       "x": 1,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(10) B_0L-B_0",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 1698.1118926619647,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 32,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(10) B_0R-2^-0B_0",
+    "claim": "EXACT",
+    "op_x4N": 3072.0,
+    "hs_x4N": 586.5696889543475,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      0.75,
+      {
+       "x": 32,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(10) B_1L-B_1",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 886.8100134752651,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 8,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(10) B_1R-2^-1B_1",
+    "claim": "EXACT",
+    "op_x4N": 2048.0,
+    "hs_x4N": 443.40500673763256,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      0.5,
+      {
+       "x": 9,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(10) B_2L-B_2",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 512.0,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 2,
+       "y": 4
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(10) B_2R-2^-2B_2",
+    "claim": "EXACT",
+    "op_x4N": 3072.0,
+    "hs_x4N": 384.0,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      0.75,
+      {
+       "x": 2,
+       "y": 4
+      }
+     ]
+    ]
+   }
+  ]
+ },
+ "time=msb": {
+  "opts": {
+   "time": "msb"
+  },
+  "KN": [
+   0
+  ],
+  "k": 3,
+  "n_relations": 915,
+  "n_fail": 26,
+  "failing": [
+   {
+    "name": "(11) Z-(I-P_f)-P_f(I-P_t)SZS*",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 1868.0984984737822,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 1,
+       "t": 9
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_1Z-C_1D_1",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 1448.1546878700494,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 1,
+       "t": 9
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_2Z-C_2D_2",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 886.8100134752651,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 3,
+       "t": 6
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_3Z-C_3D_3",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 478.9321455070645,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 7,
+       "t": 5
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_4Z-C_4D_4",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 221.70250336881628,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 15,
+       "t": 32
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_5Z-C_5D_5",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 90.50966799187809,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 31,
+       "t": 32
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_z0",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 836.2965981038067,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 1,
+       "q": 1,
+       "t": 36
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_z1",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 926.3433488723282,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 1,
+       "q": 1,
+       "t": 36
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_z2",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 509.9960784162953,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 1,
+       "q": 3,
+       "t": 20
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_d1",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 467.5040106779834,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 4,
+       "q": 1,
+       "t": 36
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_loop",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 418.14829905190334,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 4,
+       "q": 1,
+       "t": 36
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_g0",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 231.58583721808205,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 16,
+       "q": 1,
+       "t": 36
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_g1",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 147.94593607125543,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 16,
+       "q": 3,
+       "t": 20
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_g2",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 114.82160075525859,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 16,
+       "q": 3,
+       "t": 52
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_mc",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 76.7333043730035,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 16,
+       "q": 7,
+       "t": 12
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_ma",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 86.53323061113575,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 16,
+       "q": 7,
+       "t": 27
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_mb1",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 79.19595949289332,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 16,
+       "q": 7,
+       "t": 28
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_mb2",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 64.0,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 16,
+       "q": 7,
+       "t": 60
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_mb3",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 48.0,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 16,
+       "q": 15,
+       "t": 35
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_mb4",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 48.0,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 16,
+       "q": 15,
+       "t": 36
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_bk",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 69.74238309665078,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 16,
+       "q": 15,
+       "t": 27
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_bi",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 64.0,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 16,
+       "q": 15,
+       "t": 28
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=q_halt",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 305.2605444534226,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 1,
+       "q": 7,
+       "t": 42
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=r1",
+    "claim": "EXACT",
+    "op_x4N": 3072.0,
+    "hs_x4N": 124.22560122615627,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      0.75,
+      {
+       "x": 16,
+       "q": 63,
+       "t": 48
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=r2",
+    "claim": "EXACT",
+    "op_x4N": 4092.0,
+    "hs_x4N": 473.3910137295413,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      0.9990234375,
+      {
+       "x": 16,
+       "q": 63,
+       "t": 31
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(15) U*WU-Z+Init-(I-Z+)Step, W=r3",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 162.13931065919323,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "x": 52,
+       "q": 63,
+       "t": 31
+      }
+     ]
+    ]
+   }
+  ]
+ },
+ "fuel=top": {
+  "opts": {
+   "fuel": "top"
+  },
+  "KN": [
+   0
+  ],
+  "k": 3,
+  "n_relations": 915,
+  "n_fail": 7,
+  "failing": [
+   {
+    "name": "(11) Z-(I-P_f)-P_f(I-P_t)SZS*",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 2642.66532122401,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 1,
+       "t": 6
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_0Z-C_0D_0",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 1671.3683017216763,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 32,
+       "t": 9
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_1Z-C_1D_1",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 1180.1016905334895,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 1,
+       "t": 9
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_2Z-C_2D_2",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 974.8189575505803,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 3,
+       "t": 6
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_3Z-C_3D_3",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 768.0,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 7,
+       "t": 5
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_4Z-C_4D_4",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 600.373217257399,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 15,
+       "t": 5
+      }
+     ]
+    ]
+   },
+   {
+    "name": "(12) C_5Z-C_5D_5",
+    "claim": "EXACT",
+    "op_x4N": 4096.0,
+    "hs_x4N": 503.9365039367559,
+    "status": "FAIL(nonzero)",
+    "top": [
+     [
+      1.0,
+      {
+       "q": 31,
+       "t": 5
+      }
+     ]
+    ]
+   }
+  ]
+ },
+ "k=k_N-1": {
+  "opts": {
+   "kdelta": -1
+  },
+  "KN": [
+   0
+  ],
+  "k": 2,
+  "n_relations": 915,
+  "n_fail": 0,
+  "failing": []
+ }
+}
