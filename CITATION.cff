@@ -3,7 +3,7 @@ message: "Please cite the paper; this repository supplies its source and ancilla
 type: software
 title: "The uncomputable price of precision"
 version: 3.0.0
-doi: 10.5281/zenodo.23701733
+doi: "10.5281/zenodo.23736188"
 repository-code: "https://github.com/Apsiape/uncomputable-dimension-exponent"
 abstract: "Which numbers can be the entanglement price of perfection for one fixed finite game? The positive dimension exponents of finite rational Boolean constraint-system games of quantum value one are exactly the positive $\\Delta^0_2$ reals. For every such $\\alpha$ we construct one game, with no finite-dimensional perfect strategy, whose least local dimension satisfies $\\log_2D_G(\\varepsilon)=\\alpha\\log_2(1/\\varepsilon)+o(\\log(1/\\varepsilon))$. The infimum one-way distillable entanglement of the original mixed strategy state has the same coefficient. This is a realization theorem for usable entanglement; its full spectrum remains open. A finite stop-or-continue program combines finite perfect witnesses from MIP*=RE with a scalar tail verifier for an arbitrary computable convergent rational sequence. Per-gate data are loaded once and held fixed while checked. Matrix-approximable traces give the lower bound; finite threshold histories with sublinear logarithmic witness overhead give matching models. The left-c.e. construction, exact-trace obstruction and non-left-c.e. example of version 2.0.0 become steps toward the classification. In the reset model of the companion heat paper, local-reset heat has coefficient $2\\alpha$, while joint-reset heat stays bounded: the order of communication and reset changes the asymptotic cost of one device. With recovery before reset, the critical quantum return rate is $\\alpha$ in the companion block model. Every positive $\\Delta^0_2$ local-heat coefficient is thus realized; the full heat spectrum and the computability of the finite-precision heat function remain open. The version-1.0.0 halting-degree game and its proofs are retained. Meyerovitch's classification of entropy dimensions is the precedent in form; here the classified exponent is a nonlocal-game dimension cost."
 license:
@@ -30,5 +30,5 @@ preferred-citation:
       given-names: Nidhal
   year: 2026
   version: 3.0.0
-  doi: 10.5281/zenodo.23701733
-  notes: "Preprint. Lean formalization of the version 1.0.0 core is in progress and not complete; the newer sections are not yet formalized. Concept DOI (latest version): 10.5281/zenodo.23701733. Version 1.0.0 DOI: 10.5281/zenodo.23701734. Version 2.0.0 DOI: 10.5281/zenodo.23717986. Text CC BY 4.0; scripts MIT or Apache 2.0; see RIGHTS.md."
+  doi: "10.5281/zenodo.23736188"
+  notes: "Preprint. Lean formalization of the version 1.0.0 core is in progress and not complete; the newer sections are not yet formalized. Version 3.0.0 DOI: 10.5281/zenodo.23736188. Concept DOI (latest version): 10.5281/zenodo.23701733. Version 1.0.0 DOI: 10.5281/zenodo.23701734. Version 2.0.0 DOI: 10.5281/zenodo.23717986. Text CC BY 4.0; scripts MIT or Apache 2.0; see RIGHTS.md."

@@ -1,6 +1,6 @@
 # The uncomputable price of precision
 
-Seth Douglas and Nidhal Mghirbi. Version 3.0.0, October 2026.
+Seth Douglas and Nidhal Mghirbi. Version 3.0.0, October 2026. DOI: [10.5281/zenodo.23736188](https://doi.org/10.5281/zenodo.23736188).
 
 Concept DOI (latest version): [10.5281/zenodo.23701733](https://doi.org/10.5281/zenodo.23701733). Released versions: [v2.0.0](https://doi.org/10.5281/zenodo.23717986), [v1.0.0, A nonlocal game whose dimension exponent is uncomputable](https://doi.org/10.5281/zenodo.23701734).
 
