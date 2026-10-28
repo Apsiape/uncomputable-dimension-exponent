@@ -1,0 +1,337 @@
+sequence 1 first terms: ['3/4', '3/10', '11/20', '3/8', '51/100', '2/5', '69/140', '33/80']
+sequence 2 first terms: ['17/20', '1/4', '11/20', '2/5', '19/40', '7/16', '73/160', '143/320']
+
+[cfg1] b=3/8 m=4 stopping certificate: {'dyadic': True, 'forall': (True, ('tail bound', 4004))}
+{
+ "config": "cfg1",
+ "label": "positive",
+ "alpha": "9/20",
+ "b": "3/8",
+ "m": 4,
+ "Rstar": "1/16",
+ "Ntime": 12,
+ "classes": 16,
+ "unflagged_classes": 6,
+ "stop_reached_unflagged": 6,
+ "verifier_steps_unflagged": 10356,
+ "gates_on_unflagged": [
+  "(0, 0)",
+  "(1, 0)",
+  "(2, 0)",
+  "(2, 1)",
+  "(3, 0)",
+  "(3, 1)",
+  "(3, 2)"
+ ],
+ "false_gate_on_unflagged": 0,
+ "ell_b": 16384,
+ "residuals": {
+  "zt": 0.0,
+  "ctrans": 0.0,
+  "ctrl": 0.0,
+  "data7": 0.0,
+  "regM": 0.0,
+  "regS": 0.0,
+  "check": 0.0,
+  "reject": 0,
+  "contraction": 0.0,
+  "init": 0.0,
+  "two_unitary": 2.4775112455132937e-16,
+  "n_ordinary": 65520,
+  "n_reset": 208,
+  "n_load": 64,
+  "n_check": 646,
+  "n_check_nonzero_formula": 0
+ },
+ "stopping_certificate": "{'dyadic': True, 'forall': (True, ('tail bound', 4004))}"
+}
+
+[cfg2] b=7/16 m=6 stopping certificate: {'dyadic': True, 'forall': (True, ('tail bound', 4006))}
+{
+ "config": "cfg2",
+ "label": "positive",
+ "alpha": "9/20",
+ "b": "7/16",
+ "m": 6,
+ "Rstar": "1/64",
+ "Ntime": 12,
+ "classes": 64,
+ "unflagged_classes": 28,
+ "stop_reached_unflagged": 28,
+ "verifier_steps_unflagged": 43764,
+ "gates_on_unflagged": [
+  "(0, 0)",
+  "(1, 0)",
+  "(2, 0)",
+  "(2, 1)",
+  "(3, 0)",
+  "(3, 1)",
+  "(3, 2)",
+  "(3, 3)",
+  "(4, 0)",
+  "(4, 1)",
+  "(4, 2)",
+  "(4, 3)",
+  "(4, 4)",
+  "(4, 5)",
+  "(4, 6)",
+  "(5, 0)",
+  "(5, 1)",
+  "(5, 2)",
+  "(5, 3)",
+  "(5, 4)",
+  "(5, 5)",
+  "(5, 6)",
+  "(5, 7)",
+  "(5, 8)",
+  "(5, 9)",
+  "(5, 10)",
+  "(5, 11)",
+  "(5, 12)",
+  "(5, 13)"
+ ],
+ "false_gate_on_unflagged": 0,
+ "ell_b": 288230376151711744,
+ "residuals": {
+  "zt": 0.0,
+  "ctrans": 0.0,
+  "ctrl": 0.0,
+  "data7": 0.0,
+  "regM": 0.0,
+  "regS": 0.0,
+  "check": 0.0,
+  "reject": 0,
+  "contraction": 0.0,
+  "init": 0.0,
+  "two_unitary": 5.596749176042519e-16,
+  "n_ordinary": 262080,
+  "n_reset": 832,
+  "n_load": 384,
+  "n_check": 4614,
+  "n_check_nonzero_formula": 0
+ },
+ "stopping_certificate": "{'dyadic': True, 'forall': (True, ('tail bound', 4006))}"
+}
+
+NEGATIVE CONTROLS
+{
+ "NC1a_no_LOAD_exemption_data7": 2.0000000000000004,
+ "NC1b_global_tuple_check_residual_per_choice": [
+  [
+   "(0, 0)",
+   1.0,
+   0.0
+  ],
+  [
+   "(1, 0)",
+   0.25,
+   0.0
+  ],
+  [
+   "(2, 1)",
+   1.0,
+   0.0
+  ],
+  [
+   "(3, 2)",
+   0.25,
+   0.0
+  ]
+ ],
+ "NC2_cfg1_m=3_reject_on_unflagged": 3658,
+ "NC2_cfg1_certificate": "(False, ('counterexample s', 3))",
+ "NC2_cfg2_m=5_reject_on_unflagged": 3333,
+ "NC2_cfg2_certificate": "(False, ('counterexample s', 5))",
+ "NC3_b_above_alpha_reject_on_unflagged": 6898,
+ "NC4_false_gate": {
+  "gate": "(7, 63)",
+  "min_over_candidates": 0.625,
+  "per_candidate": {
+   "default": 0.625,
+   "(0, 0)": 1.0,
+   "(1, 0)": 1.0,
+   "(2, 1)": 1.0,
+   "(3, 3)": 1.0,
+   "(4, 7)": 1.0,
+   "(5, 15)": 1.0,
+   "(6, 31)": 1.0,
+   "random0": 1.0000000000000009,
+   "random1": 1.000000000000013,
+   "random2": 0.9999999999999952,
+   "random3": 1.0000000000000182,
+   "random4": 1.0000000000000029
+  }
+ },
+ "NC5_Rstar=3/10_first_zero_test_violation(t,c,residual)": [
+  114,
+  "3/5",
+  0.1
+ ],
+ "NC5_Rstar=5/7_first_zero_test_violation(t,c,residual)": [
+  0,
+  "5/7",
+  0.21428571428571427
+ ],
+ "NC5_Rstar=3/4_first_zero_test_violation(t,c,residual)": [
+  0,
+  "3/4",
+  0.25
+ ],
+ "NC6_fake_data_plan_found": true,
+ "NC6_fake_data_check_residual": 0.0,
+ "NC6_fake_data_holding_residual": 1.0,
+ "NC7_perturbed_tuple_Sigma_minus_formula": 0.0,
+ "NC7_perturbed_tuple_nonzero_checks": 2
+}
+
+WINDOW BUDGET
+{
+ "cfg1": [
+  {
+   "N": 8,
+   "mean_F": 0.625,
+   "exact_mean": 0.625,
+   "max_window": 5,
+   "min_window": 5,
+   "k_N": 6,
+   "max_dev": 0.0,
+   "dev_over_log2N": 0.0
+  },
+  {
+   "N": 10,
+   "mean_F": 0.625,
+   "exact_mean": 0.625,
+   "max_window": 7,
+   "min_window": 6,
+   "k_N": 8,
+   "max_dev": 0.75,
+   "dev_over_log2N": 0.2257724967479859
+  },
+  {
+   "N": 12,
+   "mean_F": 0.625,
+   "exact_mean": 0.625,
+   "max_window": 8,
+   "min_window": 7,
+   "k_N": 9,
+   "max_dev": 0.5,
+   "dev_over_log2N": 0.13947147282556493
+  },
+  {
+   "N": 14,
+   "mean_F": 0.625,
+   "exact_mean": 0.625,
+   "max_window": 9,
+   "min_window": 8,
+   "k_N": 10,
+   "max_dev": 0.75,
+   "dev_over_log2N": 0.19698715127789515
+  },
+  {
+   "N": 16,
+   "mean_F": 0.625,
+   "exact_mean": 0.625,
+   "max_window": 10,
+   "min_window": 10,
+   "k_N": 11,
+   "max_dev": 0.0,
+   "dev_over_log2N": 0.0
+  },
+  {
+   "N": 18,
+   "mean_F": 0.625,
+   "exact_mean": 0.625,
+   "max_window": 12,
+   "min_window": 11,
+   "k_N": 13,
+   "max_dev": 0.75,
+   "dev_over_log2N": 0.1798593499260986
+  },
+  {
+   "N": 20,
+   "mean_F": 0.625,
+   "exact_mean": 0.625,
+   "max_window": 13,
+   "min_window": 12,
+   "k_N": 14,
+   "max_dev": 0.5,
+   "dev_over_log2N": 0.11568910657987957
+  }
+ ],
+ "cfg2": [
+  {
+   "N": 8,
+   "mean_F": 0.5625,
+   "exact_mean": 0.5625,
+   "max_window": 5,
+   "min_window": 4,
+   "k_N": 6,
+   "max_dev": 0.5,
+   "dev_over_log2N": 0.16666666666666666
+  },
+  {
+   "N": 10,
+   "mean_F": 0.5625,
+   "exact_mean": 0.5625,
+   "max_window": 6,
+   "min_window": 5,
+   "k_N": 7,
+   "max_dev": 0.625,
+   "dev_over_log2N": 0.18814374728998826
+  },
+  {
+   "N": 12,
+   "mean_F": 0.5625,
+   "exact_mean": 0.5625,
+   "max_window": 7,
+   "min_window": 6,
+   "k_N": 8,
+   "max_dev": 0.75,
+   "dev_over_log2N": 0.20920720923834737
+  },
+  {
+   "N": 14,
+   "mean_F": 0.5625,
+   "exact_mean": 0.5625,
+   "max_window": 8,
+   "min_window": 7,
+   "k_N": 9,
+   "max_dev": 0.875,
+   "dev_over_log2N": 0.22981834315754435
+  },
+  {
+   "N": 16,
+   "mean_F": 0.5625,
+   "exact_mean": 0.5625,
+   "max_window": 9,
+   "min_window": 9,
+   "k_N": 10,
+   "max_dev": 0.0,
+   "dev_over_log2N": 0.0
+  },
+  {
+   "N": 18,
+   "mean_F": 0.5625,
+   "exact_mean": 0.5625,
+   "max_window": 11,
+   "min_window": 10,
+   "k_N": 12,
+   "max_dev": 0.875,
+   "dev_over_log2N": 0.20983590824711504
+  },
+  {
+   "N": 20,
+   "mean_F": 0.5625,
+   "exact_mean": 0.5625,
+   "max_window": 12,
+   "min_window": 11,
+   "k_N": 13,
+   "max_dev": 0.75,
+   "dev_over_log2N": 0.17353365986981936
+  }
+ ]
+}
+cfg1 log2 d_N - (4-b)N = log2(ell_b) + window excess (constant in N): [(8, 15.0), (10, 15.75), (12, 15.5), (14, 15.25), (16, 15.0), (18, 15.75), (20, 15.5)] log2 ell_b = 14.0
+cfg2 log2 d_N - (4-b)N = log2(ell_b) + window excess (constant in N): [(8, 59.5), (10, 59.375), (12, 59.25), (14, 59.125), (16, 59.0), (18, 59.875), (20, 59.75)] log2 ell_b = 58.0
+
+wrote toy_results.json elapsed 78.6 s

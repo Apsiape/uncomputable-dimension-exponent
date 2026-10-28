@@ -1,5 +1,5 @@
 \section{Every positive left-c.e. exponent}\label{sec:realization}
-The halting game uses separated address cylinders so that its coefficient has an explicit Turing degree. To realize an arbitrary left-c.e. real, the program must instead read the whole address. The clocks, reset, carry and conditional measurement estimates stay the same.
+The halting game uses separated address cylinders so that its coefficient has an explicit Turing degree. This first realization step, retained from version 2.0.0, treats arbitrary left-c.e. reals by reading the whole address. The clocks, reset, carry and conditional measurement estimates stay the same. Section~\ref{sec:classification} will replace monotone acceptance by stop-or-continue verification to reach all positive $\Delta^0_2$ exponents.
 
 \subsection{A finite reader}
 Fix a computable increasing sequence of rationals $0\le q_s\le1$ tending to $\theta\in[0,1]$. For a binary address $x=(b_0,b_1,\ldots)$ put
@@ -121,7 +121,7 @@ No commutation between $\rho$ and $p^*p$ is needed. A powered precision-$\eta$ m
 and the flat state commutators vanish. All powered equations are fixed rational $*$-polynomials. Theorem~\ref{thm:compiler} and the game transfer give original precision $(C\sqrt\eps)^{1/q}$ for the lower bound, and upper loss $C16^{-qN}$. Taking an even $N=\log(1/\eps)/(4q)+O(1)$ above the required precision proves~\eqref{eq:parameter-exponent}. All compiler dimension multipliers are constant for each fixed presentation. The upper losses tend to zero; the lower bound diverges, excluding a finite-dimensional perfect strategy.
 \end{proof}
 
-\begin{proof}[Dimension part of Theorem~\ref{thm:realization}]
+\begin{proof}[The left-c.e. dimension case of Theorem~\ref{thm:realization}]
 Given a positive left-c.e. $\alpha$, choose integers $q\ge1$ and $m\ge3$ with $m\le4q\alpha<m+1$. Put $r=m-3$ and $\theta=4q\alpha-m\in[0,1)$. This is left-c.e.; an increasing rational name is $\max(0,4q\alpha_s-m)$. Proposition~\ref{prop:realization-parameters} gives exponent $\alpha$. The integers $q,m$ are chosen once for the given $\alpha$. The usable-entanglement assertion is proved in Section~\ref{sec:usable}.
 \end{proof}
 

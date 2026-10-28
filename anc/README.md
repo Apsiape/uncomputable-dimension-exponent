@@ -167,7 +167,7 @@ All computations in this release were run sequentially, with numerical-library t
 
 ### Two-family checks of the repaired construction
 
-The script `gate/toy_gate.py` uses an earlier presentation with a single projection family for both players. Its history, reset and window tests are independent of that choice. The presentation of Section 15.1, with separate Alice and Bob families, is tested by the independently written scripts in `gate/crosscheck/`; all five source files and four recorded logs are archived there, with the logs in `recorded/`. Requirements: Python 3, NumPy and SciPy. Run each command separately from the repository root, with the thread settings above:
+The script `gate/toy_gate.py` uses an earlier presentation with a single projection family for both players. Its history, reset and window tests are independent of that choice. The presentation of Section 15.1, with separate Alice and Bob families, is tested by the independently written scripts in `gate/crosscheck/`; all five source files and four recorded logs are archived there, with the logs in `recorded/`. The recorded `check_address_structure.log` differs from a rerun only in the column padding of its renumbered equation labels. Requirements: Python 3, NumPy and SciPy. Run each command separately from the repository root, with the thread settings above:
 
 ```powershell
 python -B anc/gate/crosscheck/check_packing_transducer.py
@@ -186,3 +186,27 @@ The packing check includes separate Alice and Bob families: K3 colouring has 18 
 The programs cite the paper's own sections and equations. `M` and `T` in the numerical implementation are the monomial and accumulator registers `M` and Sigma of (15.3)–(15.5). The `L_N` data-dimension label in older numerical variables denotes ell_N in Lemma 15.6. Output keys for bounded searches are numerical diagnostics, not additional theorem hypotheses. The archival numeric values and tested inequalities are unchanged.
 
 The files `spectrum/numerical_results.json` and `gate/toy-results.json` are generated only by reruns and are not included in this release or its manifest; the archived results in `recorded/` are included and hashed. The spectrum runner also shortens newly reported library paths, so rerunning it does not expose machine-specific directories.
+
+## Version 3: stop-or-continue classification (`classification/`)
+
+Four independently developed finite checks accompany Section 16. They test finite histories and the new matrix algebra on known-answer toy games, **not the MIP* games themselves**. Scalar arithmetic is interpreted at instruction level; a universal counter compiler and the final BCS compiler are not executed. None of these tests proves a limiting trace statement or an arbitrary-state lower bound.
+
+| Script | Scope and recorded output |
+|---|---|
+| `toy_attack.py` | Oscillating rational sequence tending to 11/20; two-family packed edge/odd-cycle colouring toys; finite initialized address/fuel/time blocks; dyadic STOP counters, REJECT and CHECK, one LOAD per gate, constant flagged data, register transitions and two-unitary representations; complementary windows and negative controls. Outputs `toy-results.json` and `upper-checkpoint.json`. |
+| `matrix_interface.py` | An 80-dimensional direct matrix model with data that do not commute with time increment; shifted variables reduce the initialized corner and loaded tuples remain fixed; the stop-sector identity is displayed on the survivors of this hand-built instance, where it holds by construction. Dropping coordinate commutation is a negative control. Output `matrix-interface-results.json`. |
+| `toy_classification.py` | Two nonmonotone convergent rational sequences, fixed dyadic thresholds and tail certificates; packed mutually unbiased projections and edge-colouring witnesses, an impossible odd-cycle control, initialized block histories, STOP/continue, LOAD initialization of M to I and Sigma to zero on its outgoing edge, register and zero-test relations; window budgets and negative controls. Output `toy_results.json`. These projection toys do not all require the general two-family input reduction. |
+| `operator_level.py` | Imports the preceding engine and builds genuine sparse cyclic-time operators for three time/fuel configurations. Tests the holding equation, register transitions including LOAD initialization of M to I and Sigma to zero, counter update, zero test, CHECK and declared commutations, with negative controls for omitting the LOAD factor and imposing time invariance. A synthetic LOAD with incoming M = 0 and Sigma = I checks both the instruction history and polynomial selectors against outgoing M = I and Sigma = 0; holding either incoming register instead gives residual 1. Output `operator_level_results.json`. |
+
+Run these commands separately from the repository root, with every numerical-library thread variable above set to one and `PYTHONDONTWRITEBYTECODE=1`:
+
+```powershell
+python -B anc/classification/toy_attack.py
+python -B anc/classification/matrix_interface.py
+python -B anc/classification/toy_classification.py
+python -B anc/classification/operator_level.py
+```
+
+Recorded outputs are in `classification/recorded/`: the five JSON files named above, plus `toy.log`, `matrix-interface.log`, `toy_run.log` and `operator_level.log`. Header/comment references and diagnostic key names were changed to the manuscript's notation, and two log output paths were shortened to basenames. The LOAD register update in `toy_classification.py` and `operator_level.py` now agrees with Section 16, and the operator-level script includes the nonvacuous LOAD regression described above. Their recorded JSON and logs were refreshed after full reruns; the other two scripts and their records are unchanged. In particular `holding`, `counter_on_survivors` and `stop_sector` identify the corresponding Section-16 identities; negative-control values are expected to be nonzero. Reruns write only beside the scripts and their five generated JSON files are excluded from SHA256SUMS. The archived records and sources remain covered, so documented reruns leave every manifest entry valid. All four were rerun in the preceding revision; after the LOAD correction, both corrected scripts were rerun in full, sequentially under a monitored 1.4 GB process cap and one numerical thread.
+
+The nonuniform selection of safe thresholds and the slow diagonal witness budget are existence arguments in the proof. Toy tail certificates use known convergent sequences and do not compute a convergence modulus for a general limit name. Floating-point polar decompositions check the contraction representation numerically; its exact existence is proved in the text.

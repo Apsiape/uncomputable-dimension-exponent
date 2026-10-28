@@ -2,6 +2,7 @@
 import os
 os.environ['OMP_NUM_THREADS']='1'
 import argparse
+import ast
 import hashlib
 import json
 from pathlib import Path
@@ -44,12 +45,15 @@ assert abstract in (P/'sections/abstract.tex').read_text(encoding='utf-8')
 assert abstract in (R/'README.md').read_text(encoding='utf-8')
 cff=yaml.safe_load((R/'CITATION.cff').read_text(encoding='utf-8'))
 zen=json.loads((R/'.zenodo.json').read_text(encoding='utf-8'))
+asset_tree=ast.parse((P/'prepare_assets.py').read_text(encoding='utf-8'))
+asset_abstract=next(ast.literal_eval(n.value) for n in asset_tree.body if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='ABSTRACT' for t in n.targets))
+assert asset_abstract==abstract
 assert cff['abstract']==abstract
 assert zen['description']=='<p>'+abstract+'</p>'
 assert cff['doi']==cff['preferred-citation']['doi']=='10.5281/zenodo.23701733'
 assert 'doi' not in zen
 assert cff['title']==zen['title']=='The uncomputable price of precision'
-assert cff['version']==cff['preferred-citation']['version']==zen['version']=='2.0.0'
+assert cff['version']==cff['preferred-citation']['version']==zen['version']=='3.0.0'
 assert [a['family-names'] for a in cff['authors']]==['Douglas','Mghirbi']
 assert [a['name'] for a in zen['creators']]==['Douglas, Seth','Mghirbi, Nidhal']
 assert 'in progress and not complete' in zen['notes']
@@ -81,7 +85,7 @@ with pdfplumber.open(args.pdf) as pdf:
         chars=[c for c in page.chars if c.get('text','').strip()]
         assert all(-.1<=c['x0'] and c['x1']<=page.width+.1 and -.1<=c['top'] and c['bottom']<=page.height+.1 for c in chars),number
         extents.append(dict(page=number,left=min(c['x0'] for c in chars),right=max(c['x1'] for c in chars),top=min(c['top'] for c in chars),bottom=max(c['bottom'] for c in chars)))
-result=dict(pages=len(reader.pages),abstract_characters=len(abstract),abstract_identical_on_all_five_surfaces=True,
+result=dict(pages=len(reader.pages),abstract_characters=len(abstract),abstract_identical_on_all_six_surfaces=True,
             latex_warnings=0,bibtex_warnings=0,archived_hashes=len(archived),
             preserved_proof_files=len(baseline['proof_files']),preserved_original_check_files=len(baseline['check_files']),
             concept_doi=cff['doi'],deposition_metadata_has_doi=False,page_extents=extents)

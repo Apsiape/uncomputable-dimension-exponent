@@ -9,6 +9,7 @@
 \usepackage{microtype}
 \usepackage{xcolor,aliascnt}
 \setlength{\emergencystretch}{3em}
+\frenchspacing
 \usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
 \usepackage[capitalise,nameinlink]{cleveref}
 \hypersetup{pdftitle={The uncomputable price of precision},pdfauthor={Seth Douglas and Nidhal Mghirbi},pdfkeywords={nonlocal games, dimension, Boolean constraint systems, computability, approximate representations}}
@@ -20,6 +21,8 @@
 \sharedtheorem{corollary}{Corollary}
 \theoremstyle{definition}
 \sharedtheorem{definition}{Definition}
+\sharedtheorem{problem}{Problem}
+\sharedtheorem{conjecture}{Conjecture}
 \theoremstyle{remark}
 \sharedtheorem{remark}{Remark}
 \numberwithin{equation}{section}
@@ -48,7 +51,7 @@
 \newcommand{\bigO}{O}
 \title{The uncomputable price of precision}
 \author{Seth Douglas \and Nidhal Mghirbi}
-\date{Version 2.0.0, October 2026}
+\date{Version 3.0.0, October 2026}
 \begin{document}
 \maketitle
 \input{sections/abstract}
@@ -70,6 +73,9 @@
 \input{sections/heat}
 \input{sections/limits}
 \input{sections/gate}
+\clearpage
+\input{sections/classification}
+\input{sections/problems}
 \input{sections/methods}
 \appendix
 \input{sections/obstructions}

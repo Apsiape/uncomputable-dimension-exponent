@@ -95,10 +95,19 @@ Seth Douglas and Nidhal Mghirbi.
 \newblock \href {https://doi.org/10.5281/zenodo.23697346}
   {\path{doi:10.5281/zenodo.23697346}}.
 
+\bibitem{DM-v2}
+Seth Douglas and Nidhal Mghirbi.
+\newblock The uncomputable price of precision, 2026.
+\newblock Version 2.0.0. Concept DOI: 10.5281/zenodo.23701733. Unrefereed
+  preprint.
+\newblock \href {https://doi.org/10.5281/zenodo.23717986}
+  {\path{doi:10.5281/zenodo.23717986}}.
+
 \bibitem{DJS13}
 Rodney~G. Downey, Carl~G. Jockusch, Jr., and Paul~E. Schupp.
 \newblock Asymptotic density and computably enumerable sets.
 \newblock {\em Journal of Mathematical Logic}, 13(2):1350005, 2013.
+\newblock Theorem 5.1 refers to the arXiv version.
 \newblock \href {https://arxiv.org/abs/1307.0040} {\path{arXiv:1307.0040}},
   \href {https://doi.org/10.1142/S0219061313500050}
   {\path{doi:10.1142/S0219061313500050}}.
@@ -156,6 +165,7 @@ Carl~G. Jockusch, Jr. and Paul~E. Schupp.
 \newblock Generic computability, {T}uring degrees, and asymptotic density.
 \newblock {\em Journal of the London Mathematical Society}, 85(2):472--490,
   2012.
+\newblock Theorem 2.21 refers to the arXiv version.
 \newblock \href {https://arxiv.org/abs/1010.5212} {\path{arXiv:1010.5212}},
   \href {https://doi.org/10.1112/jlms/jdr051} {\path{doi:10.1112/jlms/jdr051}}.
 
@@ -189,6 +199,22 @@ Junqiao Lin.
 \newblock URL: \url{https://arxiv.org/abs/2510.07162}, \href
   {https://arxiv.org/abs/2510.07162} {\path{arXiv:2510.07162}}.
 
+\bibitem{MV15}
+Laura Man\v{c}inska and Thomas Vidick.
+\newblock Unbounded entanglement in nonlocal games.
+\newblock {\em Quantum Inf. Comput.}, 15(15--16):1317--1332, 2015.
+\newblock \href {https://arxiv.org/abs/1402.4145} {\path{arXiv:1402.4145}},
+  \href {https://doi.org/10.26421/QIC15.15-16-4}
+  {\path{doi:10.26421/QIC15.15-16-4}}.
+
+\bibitem{MMG09}
+Matthew McKague, Michele Mosca, and Nicolas Gisin.
+\newblock Simulating quantum systems using real {H}ilbert spaces.
+\newblock {\em Physical Review Letters}, 102(2):020505, 2009.
+\newblock \href {https://arxiv.org/abs/0810.1923} {\path{arXiv:0810.1923}},
+  \href {https://doi.org/10.1103/PhysRevLett.102.020505}
+  {\path{doi:10.1103/PhysRevLett.102.020505}}.
+
 \bibitem{MSZ23}
 Arthur Mehta, William Slofstra, and Yuming Zhao.
 \newblock Positivity is undecidable in tensor products of free algebras.
@@ -196,6 +222,16 @@ Arthur Mehta, William Slofstra, and Yuming Zhao.
 \newblock Published online. Result numbers refer to arXiv version~2.
 \newblock \href {https://arxiv.org/abs/2312.05617} {\path{arXiv:2312.05617}},
   \href {https://doi.org/10.4171/JEMS/1786} {\path{doi:10.4171/JEMS/1786}}.
+
+\bibitem{Mey11}
+Tom Meyerovitch.
+\newblock Growth-type invariants for {$\mathbb Z^d$} subshifts of finite type
+  and arithmetical classes of real numbers.
+\newblock {\em Inventiones Mathematicae}, 184(3):567--589, 2011.
+\newblock Theorem 5.1 refers to the arXiv version.
+\newblock \href {https://arxiv.org/abs/0902.0223} {\path{arXiv:0902.0223}},
+  \href {https://doi.org/10.1007/s00222-010-0296-1}
+  {\path{doi:10.1007/s00222-010-0296-1}}.
 
 \bibitem{DM-game}
 Nidhal Mghirbi and Seth Douglas.
@@ -269,6 +305,12 @@ J.~C. Shepherdson and H.~E. Sturgis.
 \newblock \href {https://doi.org/10.1145/321160.321170}
   {\path{doi:10.1145/321160.321170}}.
 
+\bibitem{Sho59}
+Joseph~R. Shoenfield.
+\newblock On degrees of unsolvability.
+\newblock {\em Annals of Mathematics}, 69(3):644--653, 1959.
+\newblock \href {https://doi.org/10.2307/1970028} {\path{doi:10.2307/1970028}}.
+
 \bibitem{Slo18}
 William Slofstra.
 \newblock A group with at least subexponential hyperlinear profile, 2018.
@@ -320,5 +362,13 @@ Thomas Vidick.
 \newblock {\em Journal of Mathematical Physics}, 63(2):022201, 2022.
 \newblock \href {https://arxiv.org/abs/2103.02468} {\path{arXiv:2103.02468}},
   \href {https://doi.org/10.1063/5.0056512} {\path{doi:10.1063/5.0056512}}.
+
+\bibitem{ZW01}
+Xizhong Zheng and Klaus Weihrauch.
+\newblock The arithmetical hierarchy of real numbers.
+\newblock {\em Mathematical Logic Quarterly}, 47(1):51--65, 2001.
+\newblock \href
+  {https://doi.org/10.1002/1521-3870(200101)47:1<51::AID-MALQ51>3.0.CO;2-W}
+  {\path{doi:10.1002/1521-3870(200101)47:1<51::AID-MALQ51>3.0.CO;2-W}}.
 
 \end{thebibliography}

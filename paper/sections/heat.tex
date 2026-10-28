@@ -10,7 +10,7 @@ The local schedule allows no communication until both working devices are blank.
 where $C_G$ is the infimum mutual information of a successful state. The same theorem gives $0\le w_{{\rm joint},G}(\eps)\le2\log K_{\rm ans}$. These are cited results, not new erasure claims. The matching-sandwich argument of its Corollary~2.2 applies here with $o(\log(1/\eps))$ remainders rather than its sharper hypothesis for the earlier coefficient family.
 
 \begin{corollary}[Order of operations]\label{cor:heat}
-For every $\alpha>0$ left-c.e., the same game $G_\alpha$ of Theorem~\ref{thm:realization} satisfies, with $L=\log_2(1/\eps)$,
+For every positive $\Delta^0_2$ real $\alpha$, the same game $G_\alpha$ of Theorem~\ref{thm:realization} satisfies, with $L=\log_2(1/\eps)$,
 \begin{equation}\label{eq:heat-law}
  w_{{\rm local},G_\alpha}(\eps)=2\alpha L+o(L),\qquad
  0\le w_{{\rm joint},G_\alpha}(\eps)\le2\log_2K_{\rm ans}.
@@ -21,4 +21,85 @@ For the original halting game the local coefficient is $(3+\thetaK)/2$, Turing-e
 Substitute $d^\to_{G_\alpha}(\eps)=\alpha L+o(L)$ and $\log D_{G_\alpha}(\eps)=\alpha L+o(L)$ into~\eqref{eq:heat-sandwich}. The fixed answer term is $O(1)$. The joint bound is the cited theorem. The halting coefficient is $2c_K$, an invertible rational affine image of $\thetaK$.
 \end{proof}
 
-Thus the same fixed finite game and accuracy have a local-reset heat law with an uncomputable logarithmic coefficient and a bounded joint-reset cost. The two schedules differ in whether quantum reunion is allowed before reset.
+Thus one fixed device realizes any prescribed positive $\Delta^0_2$ local-heat coefficient (replace $\alpha$ by half that coefficient), while its joint-reset cost stays bounded. The order of communication and reset alone selects between these regimes. These are limiting coefficients; whether the finite-precision heat function is computable is not decided here.
+
+\subsection{Recovery before the blank deadline}\label{sec:recovery-threshold}
+Use exactly the block model of~\cite[Section~4, Theorem~4.1 and Lemma~4.2]{DM-heat}. Fix a finite strategy and loss first, then process independent copies after answer release, allowing coherent local compression. Per play, recovery transfers at most $q$ qubits and $c$ physically moved fully dephased bits, up to sublinear block corrections, with an Alice-to-Bob route available. The blank deadline follows recovery. Degenerate endpoints, independent local baths, thermal answer ports and reversible preparation/erasure are retained; private workspace, communication hardware, copied messages and failed branches all enter reset. There is no uncharged catalyst. Here $q$ is a communication budget, unrelated to a residual power.
+
+Let $E_G(\eps)$ be the infimum of entanglement entropy of successful \emph{pure} strategies, not entanglement cost, and set $B_G=\log_2(|\mathcal X||\mathcal Y|K_{\rm ans})$. Write $x_+=\max\{x,0\}$ and
+\[
+ \mathcal F(e;q,c)=(e-q)_++(e-q-c)_+.
+\]
+The cited theorem gives the general bound
+\begin{equation}\label{eq:recovery-import}
+ \mathcal F(d^\to_G(\eps);q,c)\le w_{q,c,G}(\eps)
+ \le\mathcal F(E_G(\eps);q,c)+4B_G.
+\end{equation}
+Its proof supplies an arbitrary-original-state lower bound; no new recovery inequality is assumed here.
+
+\begin{corollary}[Programmable quantum-recovery threshold]\label{cor:recovery-threshold}
+For each matched game of Theorem~\ref{thm:realization}, in the stated block model,
+\begin{equation}\label{eq:recovery-uniform}
+ w_{q,c,G_\alpha}(\eps)=\mathcal F(\alpha L;q,c)+o(L),
+ \qquad L=\log_2(1/\eps),
+\end{equation}
+uniformly over $q,c\ge0$. In particular, for $q/L\to\kappa$ and $c/L\to\chi$ with $\kappa,\chi\ge0$, the heat coefficient is
+\begin{equation}\label{eq:recovery-surface}
+ (\alpha-\kappa)_++(\alpha-\kappa-\chi)_+.
+\end{equation}
+The critical quantum-recovery rate that removes the leading heat term is $\alpha$, even with unlimited classical recovery. It can be any positive $\Delta^0_2$ real.
+\end{corollary}
+\begin{proof}
+For fixed measurements the score is affine in the state, so a successful mixed strategy has a successful pure component in the same local spaces. Pure-state distillable entanglement equals its marginal entropy. Consequently
+\[
+ d^\to_G(\eps)\le E_G(\eps)\le\log_2D_G(\eps).
+\]
+Theorem~\ref{thm:realization} squeezes both endpoints to $\alpha L+o(L)$. The function $\mathcal F$ is nondecreasing and $2$-Lipschitz in its first argument, with constant independent of $q,c$. Apply~\eqref{eq:recovery-import} to obtain~\eqref{eq:recovery-uniform}; homogeneity and continuity give~\eqref{eq:recovery-surface}. Since $\mathcal F(e;q,c)\ge(e-q)_+$, a rate $\kappa<\alpha$ cannot remove the leading cost for any classical budget, whereas $\kappa\ge\alpha$ does so even with $c=0$.
+\end{proof}
+The imported inequality applies to these games; with the present $o(L)$ demand laws it gives $o(L)$ heat at the critical rate, which need not be bounded.
+
+\begin{proposition}[Undecidable critical rates under a two-value promise]\label{prop:recovery-undecidable}
+There is a computably generated family of finite rational matched games whose critical recovery rates lie in $\{15/16,1\}$, on which no uniform estimator has a guaranteed fixed error less than $1/32$. On this promised family neither strict side of $31/32$ has a uniform semidecision procedure.
+\end{proposition}
+\begin{proof}
+Given a machine index $e$, the left-c.e. reader of Section~\ref{sec:realization}, with no extra clock or residual power, uniformly realizes
+\[
+ \theta_e=\tfrac34+\tfrac14 1_{\{e\in K\}},\qquad
+ \alpha_e=\frac{3+\theta_e}{4}
+          =\tfrac{15}{16}+\tfrac1{16}1_{\{e\in K\}}.
+\]
+Its increasing rational approximation simply simulates machine $e$ for longer finite times. An estimate within any fixed error less than $1/32$, compared with $31/32$, decides halting.
+
+Include also a tagged complementary family from Section~\ref{sec:gate}: let $A_e=\{0\}$ if $e\in K$ and $A_e=\varnothing$ otherwise. Its uniform c.e. program enumerates zero exactly on halting. Theorem~\ref{thm:gate-resources} gives the matched rate
+\[
+ \alpha'_e=\frac{4-\theta_{A_e}}4
+           =1-\tfrac1{16}1_{\{e\in K\}}.
+\]
+Corollary~\ref{cor:recovery-threshold}'s proof uses only matched demands, so these are the respective critical rates. A semidecision for the low side on the union, restricted to the reader family, would enumerate nonhalting indices. A semidecision for the high side, restricted to the complementary family, would do the same. Both are impossible. Each individual rate is a rational; the obstruction is choosing it uniformly from a finite game description.
+\end{proof}
+
+\subsection{An arithmetic upper bound for heat coefficients}\label{sec:heat-arithmetic}
+\begin{proposition}\label{prop:heat-upper-class}
+For finite rational games of quantum value one, $C_G(\eps)$ is uniformly right-c.e. at positive rational $\eps$. Every existing finite local-reset heat coefficient in the stated thermodynamic model is left-c.e. relative to $0'$.
+\end{proposition}
+\begin{proof}
+At a fixed local dimension $d$, density matrices and POVMs with loss at most $\eps$ form a rational semialgebraic feasible set, after splitting complex entries into real and imaginary parts as in Lemma~\ref{lem:computability}. Its algebraic points are dense even when it has empty interior. Indeed, intersect it with any rational open ball meeting it. This is a nonempty rational semialgebraic set, so real-closed-field transfer gives a point with real algebraic coordinates. Quantifier elimination decides nonemptiness and can supply such a point. Enumerating dimensions and rational balls therefore enumerates a dense algebraic feasible family in each dimension.
+
+Spectra of algebraic density matrices, and hence their entropies and mutual informations, are computable. Continuity at fixed dimension, including $-t\log_2t=0$ at zero, shows that the infimum over this family is exactly $C_G(\eps)$. Running minima of certified rational upper approximations to the enumerated mutual informations decrease to that infimum. A first feasible algebraic strategy can be found by dimension search under the value-one promise. Thus the approximation is uniform and total on that promise; no bound on the required dimension is assumed.
+
+Choose total computable rationals $c_{n,s}\downarrow C_G(2^{-n})$ for $n\ge1$. If the finite local-heat coefficient is $h$, the sandwich $C_G\le w_{{\rm local},G}\le C_G+2\log K_{\rm ans}$ implies $C_G(2^{-n})/n\to h$. For rational $a$,
+\begin{equation}\label{eq:heat-lower-cut}
+ a<h\quad\Longleftrightarrow\quad
+ \exists r\in\mathbb Q\ \exists N\quad
+ r>a\ \text{ and }\ \forall n\ge N\ \forall s\quad c_{n,s}\ge rn.
+\end{equation}
+If $a<h$, choose $a<r<h$ and use convergence. Conversely the right side gives $C_G(2^{-n})\ge rn$ on that tail, hence $h\ge r>a$. The rational comparisons are decidable, so the lower cut is $\Sigma^0_2$, equivalently c.e. in $0'$.
+\end{proof}
+
+If $\mathcal H^+_{\rm local}$ denotes the positive finite local-heat coefficients of rational value-one games in this model, then
+\begin{equation}\label{eq:heat-spectrum-inclusions}
+ \{\alpha>0:\alpha\in\Delta^0_2\}
+ \ \subseteq\ \mathcal H^+_{\rm local}
+ \ \subseteq\ \{h>0:h\text{ is left-c.e. in }0'\}.
+\end{equation}
+For the first inclusion choose the matched dimension coefficient to be half the desired heat coefficient and use Corollary~\ref{cor:heat}. The second is Proposition~\ref{prop:heat-upper-class}. Equality for the full heat spectrum remains open. The right-c.e. assertion concerns finite-precision mutual information, not distillable entanglement.

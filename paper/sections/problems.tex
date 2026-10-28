@@ -1,0 +1,39 @@
+\section{Open spectra and sharper resource laws}\label{sec:problems}
+The dimension classification concerns a positive finite limit and a fixed rational finite game. It leaves the following questions, including the distinction between dimension and operational entanglement.
+
+\begin{problem}[Zero without perfection]\label{prob:zero}
+Can a finite rational value-one BCS game with no finite-dimensional perfect strategy have dimension exponent zero? Can its logarithmic usable coefficient be zero with diverging sublogarithmic usable demand?
+\end{problem}
+Finite-dimensional perfection forces a zero dimension exponent, but this does not settle the converse. The positive lower bounds in our constructions exclude that case without addressing subpolynomial dimension growth in other games. The present architecture forces coefficient at least $3/(4q)$ for every fixed residual power $q$, from its three compulsory clocks alone. A zero example needs a verifier cheaper than those clocks or a different mechanism; changing flags or taking one larger fixed power cannot produce zero.
+
+\begin{problem}[The full usable spectrum]\label{prob:usable-spectrum}
+Which positive numbers occur as limits $d^\to_G(\eps)/\log_2(1/\eps)$ over finite rational games of value one?
+\end{problem}
+Theorem~\ref{thm:realization} includes every positive $\Delta^0_2$ real. It does not give the opposite inclusion. One-way distillable entanglement is a regularized operational quantity; the dimension feasibility algorithm in Lemma~\ref{lem:computability} does not compute it. The full usable spectrum could be wider than $\Delta^0_2$; compare~\cite[Theorem~11.14]{DM-precision}.
+
+\begin{problem}[Linear systems and groups]\label{prob:linear}
+Does the positive $\Delta^0_2$ classification hold for linear-system games, with matched usable-entanglement laws? What is the corresponding classification of finite hyperlinear-profile exponents for finitely presented groups?
+\end{problem}
+The present compiler gives Boolean contexts. Converting them to linear systems or solution groups must preserve simultaneous finite upper models and the original-state lower bound, in addition to an algebraic embedding.
+
+\begin{problem}[Power-law usable demand]\label{prob:power-usable}
+Which positive exponents $\gamma$ occur in $d^\to_G(\eps)=\eps^{-\gamma+o(1)}$ for one fixed finite rational game?
+\end{problem}
+This is an exponent of usable entanglement itself. It is different from the logarithmic coefficients classified for our matched family, and from a power law for local dimension.
+
+\begin{conjecture}[Upper and lower dimension exponents]\label{conj:limsup-liminf}
+Over finite rational value-one BCS games, the positive finite upper dimension exponents are exactly the positive $\Pi^0_2$ reals, and the positive finite lower dimension exponents are exactly the positive $\Sigma^0_2$ reals, where
+\[
+ \overline\alpha_G=\limsup_{n\to\infty}\frac{\log_2D_G(2^{-n})}{n},\qquad
+ \underline\alpha_G=\liminf_{n\to\infty}\frac{\log_2D_G(2^{-n})}{n}.
+\]
+\end{conjecture}
+Here the real-number hierarchy uses the Zheng--Weihrauch convention~\cite{ZW01}: a finite limsup of computable rationals is $\Pi^0_2$, and a finite liminf is $\Sigma^0_2$.  Lemma~\ref{lem:computability} makes $D_G(2^{-n})$ computable; approximate its logarithm with rational error at most $1/n$ to obtain the sequence giving the automatic outer bounds. The realization directions are conjectural. Running Section~\ref{sec:classification} on a nonconvergent approximation only gives potentially different upper and lower flag bounds and does not prove these equalities.
+
+The conjectured upper class differs from Meyerovitch's $\Pi_3$ class for upper entropy dimensions of multidimensional SFTs~\cite[Theorem~5.1(1)]{Mey11}. The distinction is the computability of each finite-precision dimension here; the SFT entropy-dimension input has a different effective approximation. The common limit case is $\Delta^0_2$ (Meyerovitch's $\Delta_2$), as in Theorem~\ref{thm:realization} and Meyerovitch's Theorem~5.1(3).
+
+
+\begin{problem}[The full local-heat spectrum]\label{prob:heat-spectrum}
+Which positive finite local-reset heat coefficients occur in the block thermodynamic model of Section~\ref{sec:heat}?
+\end{problem}
+Equation~\eqref{eq:heat-spectrum-inclusions} places this spectrum between the positive $\Delta^0_2$ reals and the positive reals left-c.e. in $0'$. Neither the dimension classification nor the arithmetic upper bound proves equality for heat.

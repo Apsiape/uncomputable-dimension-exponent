@@ -1,0 +1,105 @@
+UPPER PASS 1/4 2
+UPPER PASS 3/8 3
+UPPER PASS 1/2 4
+{
+  "sequence": "a_s=11/20+(-1)^s/(5(s+1))",
+  "alpha": "11/20",
+  "nonmonotone": true,
+  "counts": {
+    "blocks": 637971,
+    "physical_time_points": 4358160,
+    "matrix_transition_checks": 636648,
+    "checks": 4572,
+    "stops": 39,
+    "loads": 258,
+    "reader_checks": 319056,
+    "domain_checks": 319056,
+    "cyclic_resets": 1323
+  },
+  "gate_sizes": {
+    "False": {
+      "generators": 12,
+      "polynomials": 43,
+      "microinstructions": 1546
+    },
+    "True": {
+      "generators": 8,
+      "polynomials": 25,
+      "microinstructions": 680
+    }
+  },
+  "negative_controls": [
+    {
+      "name": "infinite",
+      "R": "0",
+      "time": 1544,
+      "violation": [
+        [
+          "CHECK",
+          "pack",
+          0.6875
+        ]
+      ],
+      "depth": 2
+    },
+    {
+      "name": "STOP1",
+      "R": "1/2",
+      "time": 688,
+      "violation": [
+        [
+          "REJECT",
+          1
+        ]
+      ],
+      "depth": 1
+    },
+    {
+      "name": "STOP0",
+      "R": "1",
+      "time": 3,
+      "violation": [
+        [
+          "REJECT",
+          0
+        ]
+      ],
+      "depth": 0
+    },
+    {
+      "name": "nondyadic",
+      "R": "3/10",
+      "time": 685,
+      "violation": [
+        [
+          "counter-domain",
+          "3/5"
+        ]
+      ],
+      "depth": 1
+    },
+    {
+      "name": "LOAD off-by-one",
+      "holding_residual": 1.0
+    },
+    {
+      "name": "removed LOAD guard",
+      "unguarded_residual": 1.0,
+      "correct_guarded_residual": 0
+    }
+  ],
+  "unitary_extensions_checked": 446,
+  "max_residuals": {
+    "unitary_error": 1.4076977660034752e-15,
+    "reconstruction_error": 1.3637707092083895e-15,
+    "contraction_norm": 1.0,
+    "holding_residual": 0.0,
+    "register_residual": 0.0
+  },
+  "dyadic_history_equalities": "exact bitwise equality; no nonzero residuals",
+  "two_unitary_extensions": "floating-point check, tolerance 1e-12; exact existence given by polar formula",
+  "memory_peak_bytes": 65605632,
+  "seconds": 22.363586199935526,
+  "scope": "semantic scalar arithmetic and finite block histories; no universal-counter compilation, actual MIP* game, infinite trace or asymptotic lower bound executed",
+  "passed": true
+}

@@ -1,0 +1,27 @@
+{
+  "dimension": 80,
+  "data_do_not_commute_with_U": [
+    0.707106781186548,
+    0.7071067811865482,
+    1.414213562373096
+  ],
+  "data_guard_residuals": [
+    1.811149681518459e-15,
+    1.2473937923076178e-15,
+    1.7477959952732025e-15
+  ],
+  "selector_eigenvalues": [
+    1.0,
+    0.5,
+    0.25,
+    0.125,
+    0.0
+  ],
+  "counter_on_survivors": 0.0,
+  "stop_sector": 0.0,
+  "dropped_coordinate_commutation": 1.0,
+  "max_guard_residual": 1.811149681518459e-15,
+  "max_shifted_commutator": 0.0,
+  "max_fixed_tuple_residual": 2.176957203660811e-15,
+  "passed": true
+}
