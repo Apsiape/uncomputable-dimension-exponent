@@ -1,3 +1,5 @@
 # Keep the ancillary programs, data and engine byte-exact on every platform: anc/SHA256SUMS compares SHA-256 digests.
 anc/** -text
 verify/** -text
+# Keep the protected version-1 proof sources byte-exact too: paper/check_artifacts.py compares their SHA-256 digests.
+paper/sections/** -text

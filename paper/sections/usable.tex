@@ -1,0 +1,177 @@
+\section{Usable entanglement of the original state}\label{sec:usable}
+Dimension alone does not give a distillation protocol. The separable state $d^{-1}\sum_x|xx\rangle\langle xx|$ has marginal $I/d$ and no distillable entanglement. The measurement count of Section~\ref{sec:count} must therefore be supplemented by agreement between the players' actual operators. This section extends the binary triangular extraction of~\cite[Theorem~6.2]{DM-precision} to measurements with an inactive outcome. Keeping the random targets preserves the mean number of active Bell pairs.
+
+\subsection{Triangular extraction with an inactive outcome}
+For operators $D_\ell$ and a vector $\psi$, write
+\[
+ \mathcal R_\psi((D_\ell)_\ell)
+ =\left(\sum_\ell\|D_\ell\psi\|^2\right)^{1/2}.
+\]
+Opposite-party tensor factors are suppressed below.
+\begin{lemma}[Extraction on a mixed state]\label{lem:inactive-extraction}
+Let $\psi_{ABE}$ purify a finite-dimensional state $\rho_{AB}$. For $1\le j\le m$, each party $D=A,B$ has an exact three-outcome PVM $(P^D_{j,\perp},P^D_{j,0},P^D_{j,1})$. Bob has a reflection $U_j^B$ and Alice a unitary $U_j^A$. Put $F_j^D=P^D_{j,0}+P^D_{j,1}$. Suppose each of the following quantities is at most $\eta$:
+\begin{enumerate}[label=(\roman*),leftmargin=*]
+\item For every $j$, $\mathcal R_\psi((P^A_{j,a}-P^B_{j,a})_a)$ and $\|(U_j^A-U_j^B)\psi\|$.
+\item For each $s<j$, with $a,b\in\{\perp,0,1\}$, the two separate quantities $\mathcal R_\psi(([P^B_{j,a},P^B_{s,b}])_{a,b})$ and $\mathcal R_\psi(([U_j^B,P^B_{s,b}])_b)$.
+\item For every $j$, with $b\in\{0,1\}$, $\mathcal R_\psi((U_j^BP^B_{j,b}U_j^B-P^B_{j,1-b})_b)$.
+\end{enumerate}
+Set $\kappa=7m^3\eta$ and $g(t)=(1+t)h_2(t/(1+t))$. If $\kappa\le1/2$, then
+\begin{equation}\label{eq:inactive-extraction}
+ E_D^{A\to B}(\rho_{AB})\ge
+ \sum_{j=1}^m\Tr(\rho_BF_j^B)
+ -\tfrac12m(m-1)\eta-6m\kappa-2g(\kappa).
+\end{equation}
+A compulsory binary stage is included by $P^D_{j,\perp}=0$. Different controls need not commute.
+\end{lemma}
+\begin{proof}
+\emph{One stage.} Alice samples a uniform bit $a$ and sends it to Bob. Each party applies the local isometry
+\begin{equation}\label{eq:stage-isometry}
+ W_D^a=|0,0\rangle P_\perp^D
+ +\sum_{b=0,1}|1,b\rangle(U_D)^{a\oplus b}P_b^D.
+\end{equation}
+The first recorded bit is activity and the second is a coherent output qubit. Orthogonality of the three labels gives $(W_D^a)^*W_D^a=I$. A purification of the actual random operation is
+\[
+ \mathcal A\zeta=2^{-1/2}\sum_a|a,a,a\rangle
+ (W_A^a\otimes W_B^a)\zeta.
+\]
+The third target copy records classical randomness in a new environment. It does not act on $E$. Compare this with the isometry
+\begin{equation}\label{eq:ideal-stage}
+ \mathcal I\zeta=\sum_a|a,a,a\rangle
+ \left[2^{-1/2}|00\rangle_{\rm flags}|00\rangle_{\rm qubits}P_\perp^B\zeta
+ +|11\rangle_{\rm flags}|\Phi_2\rangle P_a^B\zeta\right].
+\end{equation}
+Its squared branch norms sum to $\|\zeta\|^2$.
+
+For an arbitrary input $\zeta$, let $p,u,c$ be its projection-mirror aggregate, control-mirror norm and active-swap aggregate. Then
+\begin{equation}\label{eq:stage-error}
+ \|(\mathcal A-\mathcal I)\zeta\|\le p+(u+c)/\sqrt2.
+\end{equation}
+To check this, put $V_{a,\perp}=I$, $V_{a,b}=U^{a\oplus b}$ and use the exact identity
+\[
+ V^A_{a,r}P_r^A
+ =P_r^BV^B_{a,r}+V^A_{a,r}(P_r^A-P_r^B)
+ +P_r^B(V^A_{a,r}-V^B_{a,r}).
+\]
+Multiplication by Bob's $V^B_{a,o}P_o^B$ kills the first term unless $o=r$. Equal inactive outcomes give $P_\perp^B$; equal active outcomes give $P_a^B$, apart from one swap defect when $r=1-a$. Summing squares over all records bounds the three error families by $p$, $u/\sqrt2$, and $c/\sqrt2$. For example $\sum_o\|V^B_{a,o}P_o^Bz\|^2=\|z\|^2$, and the control error survives only at $r=1-a$. Minkowski proves~\eqref{eq:stage-error}. No swap condition on Alice is used.
+
+\emph{All histories.} The ideal residual Kraus operators on either party are
+\[
+ R_{j,a,0}=P_{j,\perp}/\sqrt2,\qquad R_{j,a,1}=P_{j,a}.
+\]
+They are self-adjoint and $\sum_{a,f}R_{j,a,f}^2=I$. For a history of $j$ stages let $K_h^B$ be the chronological product on Bob and $Q_h^A$ the reversed product on Alice. Summing the innermost outcome repeatedly, without interchanging measurements, gives
+\begin{equation}\label{eq:history-completeness}
+ \sum_hK_h^{B*}K_h^B=\sum_hK_h^BK_h^{B*}=I,
+\end{equation}
+and both analogous identities for $Q_h^A$. The recursion
+\[
+ R^BK_h^B-Q_h^AR^A
+ =R^B(K_h^B-Q_h^A)+Q_h^A(R^B-R^A)
+\]
+therefore implies
+\[
+ \Delta_j:=\mathcal R_\psi((K_h^B-Q_h^A)_{|h|=j})\le j\eta.
+\]
+For any family of Bob operators $D_\ell$, opposite-party commutation and completeness give the useful estimate
+\begin{equation}\label{eq:history-defects}
+ \left(\sum_{h,\ell}\|D_\ell K_h^B\psi\|^2\right)^{1/2}
+ \le\mathcal R_\psi((D_\ell)_\ell)
+ +\left(\sum_\ell\opn{D_\ell}^2\right)^{1/2}\Delta_j.
+\end{equation}
+Indeed write $D_\ell K_h^B\psi=Q_h^AD_\ell\psi+D_\ell(K_h^B-Q_h^A)\psi$ and sum squares.
+
+Expand a current operator's commutator with a history one factor at a time. Later outcomes disappear by completeness. At a prefix of length $s$, equation~\eqref{eq:history-defects} bounds each commutator column by $(1+Ls)\eta$. For the three current projections one can take $L=3/2$, since commutators of two projections have norm at most $1/2$. For the current control take $L=\sqrt3$, since a unitary's commutator with a projection has norm at most one. The two scaled inactive copies count as one in the squared sum. Thus, at a stage preceded by $j$ stages ($0\le j<m$), their history commutator aggregates are at most
+\[
+ (j+\tfrac34j(j-1))\eta\le3j^2\eta,\qquad
+ (j+\tfrac{\sqrt3}2j(j-1))\eta\le2j^2\eta.
+\]
+For a mirror use $(G_A-G_B)K_h^B=K_h^B(G_A-G_B)-[G_B,K_h^B]$, rather than inserting a bipartite defect into~\eqref{eq:history-defects}. Its two aggregates obey
+\[
+ p_j\le(3j^2+1)\eta,\qquad u_j\le(2j^2+1)\eta.
+\]
+The two Bob swap defects have operator root norm at most $2\sqrt2$, so~\eqref{eq:history-defects} gives $c_j\le(1+2\sqrt2j)\eta$.
+
+The ideal prefix is an orthogonal sum of histories, with normalized Bell or inactive output factors. Apply~\eqref{eq:stage-error} to these histories together. The error of the stage preceded by $j$ stages is at most
+\[
+ [(3+\sqrt2)j^2+2j+1+\sqrt2]\eta\le7(j+1)^2\eta.
+\]
+Telescoping the compositions, with actual isometries on the left and ideal prefixes on the right, bounds the final vector difference by $\sum_{j=0}^{m-1}7(j+1)^2\eta\le7m^3\eta=\kappa$. Completeness, rather than the number of histories, controls every sum.
+
+\emph{Mean activation.} Discarding the ideal stage's records gives Bob the channel $\Lambda_j(X)=\sum_rP^B_{j,r}XP^B_{j,r}$. The two recording vectors $(P^B_{j,r}\psi)_r$ and $(P^A_{j,r}\psi)_r$ are unit vectors at distance at most $\eta$. Their Bob marginals are $\Lambda_j(\rho_B)$ and $\rho_B$, respectively. Hence $\|\Lambda_j(\rho_B)-\rho_B\|_1\le2\eta$. Contractivity and telescoping bound a prefix disturbance by $2(j-1)\eta$. For a traceless self-adjoint $X$ and $0\le F\le I$, $|\Tr(FX)|\le\|X\|_1/2$. The ideal number $N_{\rm act}$ of active outputs therefore has
+\begin{equation}\label{eq:ideal-mean}
+ \mathbb E N_{\rm act}\ge\sum_j\Tr(\rho_BF_j^B)-\tfrac12m(m-1)\eta.
+\end{equation}
+The targets remain random throughout this argument. Selecting one fixed target could select a different activation density.
+
+\emph{Hashing the actual output.} Discard the original systems and targets and locally dephase the activity flags. Keep the output qubits coherent. The ideal output is
+\[
+ \sigma=\sum_f p_f|f,f\rangle\langle f,f|\otimes
+ \bigotimes_{j=1}^m\begin{cases}\Phi_2,&f_j=1,\\|00\rangle\langle00|,&f_j=0.\end{cases}
+\]
+Its coherent information is $I(A\rangle B)_\sigma=\mathbb E N_{\rm act}$: $S(B)=H(p)+\mathbb E N_{\rm act}$ and $S(AB)=H(p)$. The actual output $\omega$ has half trace distance at most $\kappa$ from $\sigma$. Each local output space has dimension $4^m$.
+
+For states on dimension $D$ at half trace distance $t$,
+\begin{equation}\label{eq:entropy-continuity}
+ |S(\alpha)-S(\beta)|\le t\log D+g(t).
+\end{equation}
+For a direct proof write $\alpha-\beta=\Delta_+-\Delta_-$ with $\Tr\Delta_\pm=t$ and compare the two binary-mixture decompositions of $(\alpha+\Delta_-)/(1+t)=(\beta+\Delta_+)/(1+t)$. Concavity and the binary-mixture upper bound give~\eqref{eq:entropy-continuity} in both directions. Also $g$ is increasing. Apply the bound to $B$ and $AB$, of dimensions $4^m$ and $16^m$. Then
+\[
+ I(A\rangle B)_\omega\ge\mathbb E N_{\rm act}-6m\kappa-2g(\kappa).
+\]
+The hashing inequality~\cite[Theorem~10]{DW05} makes this an achievable Alice-to-Bob rate. All preprocessing was one-way LOCC on $\rho_{AB}$, so composing it with hashing lower-bounds $E_D^{A\to B}(\rho_{AB})$. Together with~\eqref{eq:ideal-mean} this proves the lemma.
+\end{proof}
+
+\subsection{The bridge from an actual mixed strategy}
+\begin{proposition}\label{prop:actual-state-bridge}
+For a loss-$\eps$ strategy of the compiled game of any presentation containing the clock, carry and conditional-clock relations of Section~\ref{sec:source} and $r$ extra compulsory clocks, powered by $q$ (in particular $G_K$, the games of Proposition~\ref{prop:realization-parameters} and those of Theorem~\ref{thm:gate-resources}), the hypotheses of Lemma~\ref{lem:inactive-extraction} hold on its original mixed state, after adjoining pure local ancillas, with $m=(4+r)M$ and
+\begin{equation}\label{eq:actual-eta}
+ \eta=C_{\mathcal P,r,q}(M+1)^64^M\delta,\qquad
+ \delta=(C_{\mathcal P,r,q}\sqrt\eps)^{1/q}.
+\end{equation}
+The active expectations are $(3+r)M+\sum_{i<M}\Tr(\rho_BF_i)$ for the reconstructed source model on the actual Bob marginal.
+\end{proposition}
+\begin{proof}
+The actual-state interface is~\cite[Proposition~6.1]{DM-precision}; the relevant precision ingredients are also visible in the compiler and Lemma~\ref{lem:sqrt-state}. Here they must be applied before any pure-component selection. Relabel illegal Alice answers to a valid answer and dilate the finitely many POVMs with pure local ancillas. On a purification $\psi_{ABE}$ of the original state, fix for each variable one incident Alice context. Its reflection $A_v$ and Bob's reflection $B_v$ satisfy
+\[
+ \|(A_v-B_v)\psi\|\le2\sqrt{\eps/\pi_{\min}}=:\mu.
+\]
+This statement is valid with the inaccessible $E$ retained. Moving a Bob word to Alice reverses its order and costs at most its length times $\mu$. For a fixed polynomial certificate, transfer its right factors, then its context relation, which vanishes exactly on Alice. This gives all Boolean residuals $O(\mu)$. Lemma~\ref{lem:sqrt-state}, with the rectangular amplitude matrix for $AE$ against $B$, gives the square-root-state commutators at the same scale. Theorem~\ref{thm:compiler}(a) reconstructs the powered source on this actual marginal. Equation~\eqref{eq:power-jensen} gives the unpowered precision $\delta$ in~\eqref{eq:actual-eta}. Pure local ancillas do not change distillable entanglement.
+
+The raw measurements and controls in Lemma~\ref{lem:joint} are word polynomials of length $O(M)$ in Bob's reflections. Alice uses their opposite word polynomials. These are exact projections and reflections for the raw translated observables: for example, the opposite of $T_B^jP_BT_B^{-j}$ is $T_A^{-j}P_AT_A^j$, with $T_A$ the opposite word for $T_B$. Their mirrors cost $O(M\mu)\le O(M\delta)$. Applying Lemma~\ref{lem:sqrt-state} with parties exchanged gives their Alice square-root-state commutators as well.
+
+Repair each raw pair $F_i,Q_i$ locally on both sides by $Q_i'=1_{[1/2,1]}(F_iQ_iF_i)$. Bob's error is $O(\eta)$ by Lemma~\ref{lem:joint}. On Alice, transferring $(I-F_i)Q_i$ reverses its order, giving the adjoint of her inclusion defect. For any operator $R$,
+\[
+ \hs{R^*\sqrt\rho}\le\hs{R\sqrt\rho}+\hs{[R,\sqrt\rho]}.
+\]
+The raw mirrors and state commutators therefore give Alice's inclusion defect $O(\eta)$. The repair proof in Lemma~\ref{lem:joint}, using $FQF-(FQF)^2=((I-F)QF)^*((I-F)QF)$, gives $\hs{(Q_i'-Q_i)\sqrt\rho}=O(\eta)$ on each party. The triangle inequality now yields $\|(Q_i^{\prime A}-Q_i^{\prime B})\psi\|=O(\eta)$. Thus the ternary PVMs have actual mirrors at the same scale.
+
+Use the reverse of the count order: the last compulsory family first, each digit family reversed, then the optional indices reversed. A flip's preservation of later count measurements is exactly preservation of earlier extraction measurements. Bob's reflection converts the conjugation-form estimates into commutators at cost $O(\eta)$ by right multiplication and its state commutator. Lemma~\ref{lem:joint}, with the extra clocks as in Proposition~\ref{prop:realization-parameters}, supplies every swap and triangular relation. A fixed enlargement of $C_{\mathcal P,r,q}$ changes individual errors into the finite root aggregates. Only $Q_i$ was repaired, so the activation flags are the original $F_i$. This proves every assertion.
+\end{proof}
+
+\begin{theorem}\label{thm:usable-parameters}
+The games $G_{\theta,r,q}$ satisfy
+\begin{equation}\label{eq:usable-parameters}
+ d^\to_{G_{\theta,r,q}}(\eps)
+ =\frac{3+r+\theta}{4q}\log(1/\eps)+o(\log(1/\eps)).
+\end{equation}
+The original halting game satisfies the same formula with coefficient $c_K=(3+\thetaK)/4$.
+\end{theorem}
+\begin{proof}
+Put $t=\log_4(1/\delta)$ and choose $M$ by~\eqref{eq:depth}. Then $\eta=O(t^{-24})$, $\kappa=O(t^{-21})$, $m\kappa=O(t^{-20})$, and every extraction error in~\eqref{eq:inactive-extraction} tends to zero. On every original strategy state,
+\[
+ E_D^{A\to B}(\rho_{AB})\ge(3+r)M+\sum_{i<M}\Tr(\rho_BF_i)-o(1).
+\]
+Lemma~\ref{lem:reader-forcing} and $|\Tr(\rho_BF_i)-\Tr(\rho_BF)|\le2i\delta$ bound this below by $(3+r+\theta-\omega_\theta(\delta))M-O(M^2\delta)-o(1)$. Since
+\[
+ M=\frac1{4q}\log(1/\eps)-O(\log\log(1/\eps)),
+\]
+taking the infimum proves the lower bound. For the upper bound, $E_D^{A\to B}(\rho)\le\log d_B$ for any state on Bob dimension $d_B$, so $d^\to_G(\eps)\le\log D_G(\eps)$. Proposition~\ref{prop:realization-parameters} matches the lower coefficient. The explicit upper strategies are in fact maximally entangled, with only constant compiler overhead. For $G_K$, use Theorems~\ref{thm:flag} and~\ref{thm:finite} in the same argument; its retained raw measurements are identical. This also proves the left-c.e. usable-entanglement assertion of Theorem~\ref{thm:realization}.
+\end{proof}
+
+These are equalities for the infimum demand. A particular successful strategy may carry arbitrary unused extra entanglement. The non-effective remainder comes from flag-density convergence; the extraction error above tends to zero absolutely.
+
+\begin{corollary}\label{cor:coefficient-inclusion}
+Every positive left-c.e. real belongs to both coefficient sets $\mathcal A_{\log}$ and $\mathcal A_{\dim}$ of~\cite[Section~11.6]{DM-precision}.
+\end{corollary}
+\begin{proof}
+In that notation $\mathcal A_{\log}$ consists of the finite limits $d^\to_G(\eps)/\log_2(1/\eps)$ for finite value-one games, and $\mathcal A_{\dim}$ uses $\log_2D_G(\eps)$ instead. Theorem~\ref{thm:realization} uses these exact conventions. In particular it proves the positive-computable-real inclusion conjectured in the discussion of~\cite[Problem~18.3(i)]{DM-precision}, and strengthens it to positive left-c.e. reals. It is consistent with that paper's Theorem~11.14, which bounds $\mathcal A_{\log}$ by the reals left-c.e. relative to $0''$.
+\end{proof}

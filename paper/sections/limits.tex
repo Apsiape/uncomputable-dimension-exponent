@@ -1,0 +1,95 @@
+\section{The exact-trace barrier and matrix approximation}\label{sec:limits}
+Let $\mathcal T(\mathcal P)$ be the exact tracial states of a finite bounded rational presentation, and let $\mathcal T_{\rm mat}(\mathcal P)$ be those obtained as moment limits of flat finite-dimensional models with defects tending to zero. Both spaces are viewed in the compact space of bounded word moments. A diagonal choice of approximants shows that $\mathcal T_{\rm mat}$ is closed. In this section the relevant space is assumed nonempty and $F$ is a fixed rational self-adjoint polynomial. These results explain why the construction of Sections 11--12 reaches only left-c.e. targets; they do not classify all games.
+
+\subsection{The exact-trace barrier}
+\begin{proposition}\label{prop:exact-barrier}
+Suppose every exact trace has $\tau(F)\ge\theta$, and some sequence of flat approximate models with defects tending to zero has $F$ expectations tending to $\theta$. Then
+\begin{equation}\label{eq:exact-minimum}
+ \theta=\min_{\tau\in\mathcal T(\mathcal P)}\tau(F)
+\end{equation}
+is left-c.e. The matched fixed-observable mechanism used here realizes exactly the left-c.e. targets in $[0,1]$.
+\end{proposition}
+\begin{proof}
+A moment limit of the flat models is tracial and has $\tau(p^*p)=0$ for every defining relation $p$. The GNS argument in Theorem~\ref{thm:flag} makes it an exact model. Its $F$ expectation is $\theta$, proving~\eqref{eq:exact-minimum}.
+
+Here is an effective lower hierarchy for that minimum. At degree $2j$ use complex word moments, impose normalization, adjoints, cyclic invariance, a positive moment matrix, the domain localizing constraints, and every relation insertion visible at that degree. Add $|y_w|\le1$ for contraction words. These bounded constraints express all declared domains. Alternatively use~\eqref{eq:contract-encode} for positive contractions and $P=(I+x)/2$, $x=x^*=x^{-1}$, for projections. The exact encodings are finite and rational and preserve tracial models and the substituted observable's trace. The finite feasible sets are compact rational semialgebraic sets in real and imaginary coordinates. Their lower minima $\ell_j$ increase. A diagonal limit of minimizers is a positive tracial functional with all relations and bounded domains, so its GNS tuple is an exact model. Consequently $\ell_j\uparrow\theta$.
+
+Real quantifier elimination decides whether $\ell_j>r$ for a rational $r$. Enumerate these certified lower rationals and take running maxima, starting with a rational norm lower bound for $F$. They converge to $\theta$. This proves left semicomputability without an assumption about numerical SDP duality. This is the bounded tracial moment method~\cite{BK12,KMV22}; it optimizes over all exact traces. It does not identify matrix-approximable traces, just as general NPA convergence concerns commuting models~\cite{NPA08}.
+
+Lemma~\ref{lem:reader-forcing} and Lemma~\ref{lem:reader-finite} give the converse realization for every left-c.e. $\theta\in[0,1]$. Fixed positive rational affine changes, extra clocks and residual powering preserve this class.
+\end{proof}
+
+Complementing $F$ changes a minimum to one minus a maximum. It therefore does not reverse this one-sided forcing argument. If all exact traces gave one common value, the lower hierarchy for $F$ and for $-F$ would make that value computable. Similarly, an irreversible acceptance program presented with a nonmonotone approximation keeps earlier accepted cylinders: their union is effectively open and its measure remains left-c.e.
+
+\subsection{Weighted limits are matrix-approximable}
+The next compression uses Connes' spectral-cut inequality~\cite{Con76}, in the form Vidick uses for almost synchronous correlations~\cite{Vid22}. Its role here is to identify possible limiting traces. Its dimension cost is never charged to the actual-state measurement bound.
+\begin{lemma}[Moment compression]\label{lem:compression}
+Let contraction generators $X_i\in M_d(\C)$ lie in the declared domains of Definition~\ref{def:model}, and suppose $\max_i\hs{[X_i,\sqrt\rho]}\le\eta$. For each integer $l\ge1$ and $\zeta>0$ there is a finite-dimensional tuple $Y$ in the same domains such that every $*$-word $w$ of length at most $l$ satisfies
+\begin{equation}\label{eq:compression}
+ \left|\operatorname{tr}_D(w(Y))-\Tr(\rho w(X))\right|
+ \le2l\sqrt{2\eta}+\zeta.
+\end{equation}
+No bound on $D$ is asserted.
+\end{lemma}
+\begin{proof}
+Put $P_t=1_{(t,\infty)}(\rho)$, $0\le t\le1$. Spectral integration gives $\rho=\int_0^1P_t\,dt$ and $\int_0^1\rank P_t\,dt=1$. In an eigenbasis of $\rho$,
+\begin{align*}
+ \int_0^1\hs{[X_i,P_t]}^2\,dt
+ &=\sum_{a,b}|(X_i)_{ab}|^2|\lambda_a-\lambda_b|\\
+ &\le\hs{[X_i,\sqrt\rho]}
+ \left(2\Tr(\rho X_iX_i^*)+2\Tr(\rho X_i^*X_i)\right)^{1/2}
+ \le2\eta.
+\end{align*}
+The middle inequality factors $|\lambda_a-\lambda_b|$ into the difference and sum of their square roots and applies Cauchy--Schwarz.
+
+On $\ran P_t$ compress to $B_i=P_tX_iP_t$. Insert $P_t$ between consecutive letters of a word of length $k$. Each of the $k-1$ trace errors is at most $\sqrt{\rank P_t}\hs{[X_i,P_t]}$. Integrating and applying Cauchy--Schwarz bounds the total by $(k-1)\sqrt{2\eta}$.
+
+Restore the domains inside each compressed space. Positive contractions need no repair. Round a projection at $1/2$, a reflection by spectral sign, and a unitary by polar decomposition, completing the partial isometry on its kernel. Each resulting $Z_i$ satisfies
+\[
+ \hs{Z_i-B_i}^2\le\hs{[X_i,P_t]}^2.
+\]
+For projections use $\min(s^2,(1-s)^2)\le s(1-s)$ and $\Tr(B_i-B_i^2)=\hs{(I-P_t)X_iP_t}^2$. For unitaries use $(1-s)^2\le1-s^2$ and $\Tr(I-B_i^*B_i)=\hs{(I-P_t)X_iP_t}^2$; spectral sign is the self-adjoint case. Telescoping the $k$ repaired letters adds at most $k\sqrt{2\eta}$ after integration.
+
+There are finitely many spectral cuts. The integrated repaired moments form a convex combination of normalized traces of the compressed tuples, with weights $a_h=(\rank P_h)\,\Delta t_h$ summing to one. If their dimensions are $r_h$, choose integer multiplicities $n_h$ with $n_hr_h/\sum_in_ir_i$ approximating $a_h$ in $\ell^1$ within $\zeta$. The direct sum realizes those weights and changes every contraction-word moment by at most $\zeta$. Combining both errors proves~\eqref{eq:compression}.
+\end{proof}
+
+\begin{corollary}\label{cor:weighted-limits}
+Moment limits of weighted approximate models are exactly $\mathcal T_{\rm mat}(\mathcal P)$. In particular, if $\lambda=\min_{\mathcal T_{\rm mat}}\tau(F)$, then uniformly over weighted precision-$\delta$ models,
+\begin{equation}\label{eq:approximable-forcing}
+ \Tr(\rho F)\ge\lambda-\omega(\delta),\qquad \omega(\delta)\to0.
+\end{equation}
+\end{corollary}
+\begin{proof}
+In a convergent weighted sequence pass to a subsequence with commutator errors $\eta_j\le j^{-4}$. Apply Lemma~\ref{lem:compression} to length $j$ with $\zeta_j\to0$. The resulting flat tuples have the same limiting moments. Each defining $p^*p$ moment tends to zero, so their flat relation defects tend to zero. The reverse inclusion takes $\rho=I/d$. Compactness and the closedness of $\mathcal T_{\rm mat}$ give attainment of $\lambda$. A sequence violating~\eqref{eq:approximable-forcing} would have a weighted moment limit below $\lambda$, a contradiction.
+\end{proof}
+
+\subsection{Arithmetic and the necessary trace gap}
+\begin{proposition}\label{prop:approximable-arithmetic}
+Set
+\[
+ m_n=\inf\{\operatorname{tr}_d F(X):d\ge1,\ X\text{ a flat precision-}2^{-n}\text{ model}\}.
+\]
+Then $\lambda=\sup_n m_n$ is left-c.e. relative to $0'$. If $a=\min_{\mathcal T}\tau(F)$ and $\lambda$ is not left-c.e., then $a<\lambda$.
+\end{proposition}
+\begin{proof}
+The feasible sets shrink, so $m_n$ increases. Approximants to any trace in $\mathcal T_{\rm mat}$ show $m_n\le\lambda$. Conversely choose models with costs at most $m_n+1/n$. A moment subsequence gives a trace in $\mathcal T_{\rm mat}$ of cost $\lim_nm_n$, proving equality.
+
+For fixed $n,d$, all domains, squared flat residuals and the cost are rational semialgebraic data; real quantifier elimination decides whether there is a feasible tuple of cost below a rational $r$. Enumerating $d$ makes $m_n$ uniformly right-c.e. More explicitly,
+\begin{equation}\label{eq:minimum-lower-cut}
+ \begin{split}
+ s<\lambda\ \Longleftrightarrow\ &\exists n\ \exists r\in\mathbb Q\quad s<r\ \text{and}\\
+ &\text{every dimension lacks a precision-}2^{-n}\text{ model of cost }<r.
+ \end{split}
+\end{equation}
+The last finite-dimensional predicate is decidable. The displayed lower cut is therefore $\Sigma^0_2$, or c.e. in $0'$. Proposition~\ref{prop:exact-barrier}'s hierarchy proves that $a$ is left-c.e., and $a\le\lambda$. A non-left-c.e. $\lambda$ must consequently satisfy $a<\lambda$.
+
+For any rational $r$ between them there is an exact trace of cost below $r$, but some fixed positive precision admits no flat finite-dimensional model of cost at most $r$. Otherwise a sequence of such models would limit to an approximable trace below $\lambda$. This is the necessary trace gap.
+\end{proof}
+
+If all approximable traces have one common value, apply the same arithmetic argument to $-F$. Both cuts are then c.e. in $0'$, so the value is $\Delta^0_2$. An arbitrary minimum above is only asserted to be left-c.e. in $0'$; that statement alone does not make it $\Delta^0_2$.
+
+\paragraph{Context: why a uniform lower hierarchy is different.}
+Use the finite-dimensional \emph{synchronous} value in Mousavi--Nezhadi--Yuen's hardness reduction~\cite[Lemma~6.7]{MNY22}, which directly makes synchronous value one $\Pi^0_2$-hard. Place the game projection relations under a central projection $p$ and set $F=I-p$. The scalar branch $p=0$ always exists. The synchronous/tracial correspondence~\cite{PSSSTW16,KPS18} shows that synchronous value one gives approximable traces with $p=I$, hence minimum zero. Otherwise a positive-trace $p$ corner would give finite synchronous strategies approaching one: compress to the representing projections, normalize by their positive limiting trace, and repair each finite PVM. For that last step, successively compress and round its first outcomes into the complement of earlier repaired projections, then use the remaining complement as the last outcome. All errors tend to zero for a fixed finite family. Thus a uniform ordinary lower hierarchy would enumerate the $\Sigma^0_2$-complete complement of synchronous value one. This contextual reduction produces only the individual minima zero and one. It uses the synchronous-value hardness itself, without a conversion from unrestricted strategies that would require extra assumptions on diagonal question weights.
+
+\paragraph{Towards the next construction.}
+The exact-trace barrier leaves open a different matched mechanism: a non-left-c.e. minimum over matrix-approximable traces, together with precision-$4^{-N}$ flat models of dimension $2^{(3+\lambda)N+o(N)}$. The trace gap alone supplies no such upper models. Section~\ref{sec:gate} constructs them using finite perfect witnesses and an elementary slow-admission schedule. It thereby proves that the dimension spectrum strictly extends beyond the left-c.e. reals. The remaining classification questions are collected there.

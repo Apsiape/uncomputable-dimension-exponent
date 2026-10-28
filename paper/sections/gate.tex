@@ -1,0 +1,276 @@
+\section{Escaping the barrier: a complementary halting flag}\label{sec:gate}
+The barrier in Section~\ref{sec:limits} concerns the minimum over \emph{all} exact traces. We now construct a presentation whose minimum over matrix-approximable traces is
+\[
+ \lambda_A=1-\theta_A,\qquad \theta_A=\sum_{e\in A}4^{-(e+1)},
+\]
+for any c.e. set $A$. For $A=K$ this minimum is not left-c.e. The clocks retain their matched dimension budget. Every statement in this section is proved here, except the $\mathrm{MIP}^*=\mathrm{RE}$ input of Section~\ref{sec:gate-input}.
+
+\subsection{Finite perfect witnesses as an external input}\label{sec:gate-input}
+We use Ji--Natarajan--Vidick--Wright--Yuen's $\mathrm{MIP}^*=\mathrm{RE}$ theorem (arXiv version~4, accepted to Annals of Mathematics) in its finite perfect-completeness form~\cite[Theorem~12.6, pp.~193--194]{JNVWY}. The theorem gives a computable map from machines to finite rational games: a halting machine yields a finite-dimensional perfect PCC strategy, and a nonhalting machine yields quantum value at most $1/2$. Its proof starts with the trivial perfect PCC strategy of Lemma~12.3 and applies Claim~12.7 in finitely many downward steps, using the compression completeness of Theorem~12.1(1), p.~184. Only the finite-dimensional perfect PCC strategy of Theorem~12.6(1) is used: a state $\psi$ on $H\otimes H$ and projective measurements, each player's measurements consistent on $\psi$ in the sense of~\cite[Definition~5.10]{JNVWY}. PCC means projective, consistent and commuting in that paper's sense; no symmetry between the players is assumed. The informal synchronous wording of Section~1.2 of~\cite{JNVWY} is not needed; mere quantum value one would not suffice.
+
+Apply the map to the machine which halts precisely when $e\in A$, and denote the resulting game by $H_{A,e}$, with question sets $X_{\rm A},X_{\rm B}$. Introduce projections $p_{xa}$ $(x\in X_{\rm A})$ and $q_{yb}$ $(y\in X_{\rm B})$, impose the PVM equations of both families, and impose $p_{xa}q_{yb}=0$ for each tested losing pair. Untested pairs impose no zero-product condition. Call this finite rational projection presentation $\mathcal A_{A,e}$.
+
+\begin{lemma}\label{lem:gate-witnesses}
+If $e\in A$, then $\mathcal A_{A,e}$ has an exact unital matrix model. If $e\notin A$, it has no sequence of flat matrix models whose defining defects tend to zero. Exact matrix certificates, without repeated indices, can be enumerated effectively, and their indices are exactly $A$.
+\end{lemma}
+\begin{proof}
+Let $(A,B,\psi)$ be a finite-dimensional perfect PCC strategy and write $\psi=\operatorname{vec}(S)$. Consistency of each player's measurements reads $A^x_aS=S(A^x_a)^{\mathsf T}$ and $S(B^y_b)^{\mathsf T}=B^y_bS$; taking adjoints shows that every $A^x_a$ and $B^y_b$ commutes with Alice's reduced state $\rho=SS^*$. Write $\rho=\sum_c cP_c$. Its eigenspaces reduce both projection families. For a tested losing pair, consistency of Bob's measurement and perfect play give
+\[
+ 0=\langle\psi,A^x_a\otimes B^y_b\,\psi\rangle
+ =\operatorname{Tr}(\rho A^x_aB^y_b)
+ =\sum_{c>0}c\,\|(P_cB^y_bP_c)(P_cA^x_aP_c)\|_2^2.
+\]
+Every summand is nonnegative. On each nonzero positive-eigenvalue eigenspace the two compressed families are PVMs and every tested losing product vanishes, including its adjoint. Restrict to any such eigenspace to obtain the unital matrix model. The commuting clause of PCC is not needed for this argument.
+
+Conversely, approximate projection partitions can be repaired to PVMs in the same dimension. For projections $P_1,\ldots,P_k$ with $S_0=\sum_iP_i$ and $\|S_0-I\|_{2,d}\to0$, where $\|X\|_{2,d}^2=\operatorname{tr}_d(X^*X)$,
+\[
+ \sum_{i\ne j}\operatorname{tr}_d(P_iP_j)
+ =\operatorname{tr}_d(S_0^2)-\operatorname{tr}_d(S_0)\longrightarrow0.
+\]
+Each term is nonnegative and equals $\|P_iP_j\|_{2,d}^2$. Keep $P_1$, successively compress $P_i$ to the complement $R$ of the previously repaired outcomes and round at $1/2$, and use the last complement as the final outcome. If $\alpha=\|(I-R)P_i\|_{2,d}$, then
+\[
+ \|P_i-RP_iR\|_{2,d}\le2\alpha,\qquad
+ \|1_{[1/2,1]}(RP_iR)-RP_iR\|_{2,d}^2
+ \le\operatorname{tr}_d(RP_iR-(RP_iR)^2)\le\alpha^2.
+\]
+Finite induction and the approximate sum equation give corrections tending to zero. Bounded-product telescoping preserves every tested losing-product defect. Using the repaired PVMs on a maximally entangled state, with Alice using the transposed $p_{xa}^{\mathsf T}$ and Bob $q_{yb}$, gives losing probabilities $\operatorname{tr}_d(p_{xa}q_{yb})=\|q_{yb}p_{xa}\|_{2,d}^2\to0$. This contradicts the soundness bound when $e\notin A$.
+
+For fixed $e,d$, real quantifier elimination decides the rational semialgebraic matrix equations, after splitting complex entries into real and imaginary parts. A nonempty set has an effectively obtainable algebraic point. Dovetail over $e,d$ and suppress repeated indices. The first two assertions make its output exactly $A$. No dimension bound computable from $e$ is asserted.
+\end{proof}
+
+\subsection{Packing and a fixed polynomial-testing program}
+For a projection presentation $\mathcal A$ with $m\ge1$ generators, use two projections $D,E$ and a unitary $W$. Set $G_j=W^{-j}DW^j$, $0\le j<m$, and impose
+\begin{equation}\label{eq:gate-pack}
+ \sum_{j<m}W^jEW^{-j}=I,\qquad [E,G_j]=0.
+\end{equation}
+Substitute $EG_jE$ for its generators in every equation of $\mathcal A$, replacing the constant identity by $E$. Clear denominators, and call the finite integer-coefficient list consisting of~\eqref{eq:gate-pack} and the substituted equations $\mathcal R(\mathcal A)$. In $\widehat{\mathcal P}_A$ these are not defining relations; the program tests them.
+
+\begin{lemma}[Three data generators]\label{lem:gate-packing}
+A $d$-dimensional model of $\mathcal A$ extends to an $md$-dimensional model of $\mathcal R(\mathcal A)$. Conversely the $E$ corner of every tracial model of the latter carries $\mathcal A$, and $\tau(E)=1/m$.
+\end{lemma}
+\begin{proof}
+List the projection generators as $g_0,\ldots,g_{m-1}$, including both players' families for $\mathcal A_{A,e}$. Take $D=\operatorname{diag}(g_0,\ldots,g_{m-1})$, $E=|0\rangle\langle0|\otimes I_d$, and let $W$ cyclically shift the $m$ blocks forward. Then $W^{-j}DW^j$ restricts to $g_j$ on block zero, proving the extension, also when $m=1$. Conversely $EG_jE$ is a projection in the unital $E$ corner and satisfies every substituted relation. Tracing~\eqref{eq:gate-pack} gives $m\tau(E)=1$. Arbitrary models need not satisfy $W^m=I$.
+\end{proof}
+
+Write $m_e=\#\{p_{xa}\}+\#\{q_{yb}\}$ for the total number of projections in both families of $\mathcal A_{A,e}$, adding an unused projection if needed, and $\mathcal R_e=\mathcal R(\mathcal A_{A,e})$. The map $e\mapsto\mathcal R_e$ is total computable. Retain the decoder $L,R$, reset $Z$, clocks, carry and conditional-clock relations of Section~\ref{sec:source}. Replace the halting recognizer by the following fixed counter transducer, delete~\eqref{eq:halt-flag}, and add
+\begin{equation}\label{eq:gate-region}
+ (I-L)(I-F)=0.
+\end{equation}
+Thus an unflagged address must be in the decoded region. Keep the scalar counter domains, zero tests, controls, initialization and transition rules; their start and input are still determined by $L,R$.
+
+Add the data generators $D,E,W$. Require them to commute with $A_a,L,R,F,Z$, every fuel and time generator including $U$, and every instantaneous scalar workspace variable. Do not require them to commute with the address shift or flip, or with one another.
+
+The transducer has two operator registers, a monomial $M$ and an accumulator $\Sigma$. Represent each $S\in\{M,\Sigma\}$ by two unitary generators:
+\begin{equation}\label{eq:gate-register}
+ S=(u_S+v_S)/2.
+\end{equation}
+Every such $S$ is a contraction, and every finite square contraction has this form. Indeed extend its polar partial isometry to a unitary $V_0$, put $J=|S|+i(I-|S|^2)^{1/2}$, and take $u_S=V_0J$, $v_S=V_0J^*$. This model assignment does not add irrational coefficients to~\eqref{eq:gate-register}.
+
+On input $e$, compute the finite list $\mathcal R_e$. For each polynomial $r$, express its integer coefficients as repeated signed monomials, and compute an integer $b\ge0$ with $2^b$ at least their total number. Clear $\Sigma$, set $M=I$ for each monomial, build it by successive right multiplications, and add its signed value times $2^{-b}$ to $\Sigma$. Enter CHECK, then process the next polynomial and finally idle. The extra instruction alphabet is
+\[
+ \Sigma:=0,\quad M:=I,\quad M:=Md\ (d\in\{D,E,W,W^*\}),\quad
+ \Sigma:=\Sigma\pm r_bM,
+\]
+and holding a register fixed. The ordinary counter encoding supplies $r_b=2^{-b}$. The final idle branch clears the registers to their initialized values. Every partial monomial and accumulator is a contraction, including on flagged addresses with arbitrary data.
+
+Counter-machine universality compiles this algorithm into one fixed finite instruction table. Its finite branch selectors $q_\alpha$ and updates define rational polynomials $\Phi_S$. The polynomial lists and word lengths are program outputs, rather than additional defining equations. Put $\Init(M)=I$, $\Init(\Sigma)=0$, and impose
+\begin{align}
+ ZS&=Z\Init(S),&
+ U^*SU&=Z_+\Init(S)+(I-Z_+)\Phi_S,\quad Z_+=U^*ZU,\label{eq:gate-transition}\\
+ q_{\rm CHECK}\Sigma(I-F)&=0.&&\label{eq:gate-check}
+\end{align}
+For each of the four representing unitaries in~\eqref{eq:gate-register}, impose commutation with the instantaneous scalar workspace and with $A_a,A_f,A_t,L,R,F,Z$. Impose no commutation with other operator registers, data, time shifts, or fuel/time flips. Scalar workspace here excludes $M,\Sigma$. This completes a finite bounded rational presentation, denoted $\widehat{\mathcal P}_A$.
+
+\begin{lemma}[Programmed testing]\label{lem:gate-testing}
+Every faithful exact tracial model satisfies, for every $e$ and $r\in\mathcal R_e$,
+\begin{equation}\label{eq:gate-forced}
+ B_e(I-F)r(D,E,W)=0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Fix the finite CHECK time $h$ for this relation and choose $2^k>h$. Put $Q_0=B_eC_kD_k(I-F)$, using~\eqref{eq:fuel-cyl}. The scalar initialization lemma gives $ZQ_0=Q_0$, with no reset before $h$, and forces the scalar controls and counters throughout this finite history. Non-self-adjoint registers require an extra justification: $[S,Z]=0$ gives
+\[
+ SQ_0=SZQ_0=ZS Q_0=Z\Init(S)Q_0.
+\]
+Consequently $MQ_0=Q_0$ and $\Sigma Q_0=0$ initially.
+
+Every data word commutes with $Q_0$; the address digits are spectral functions of $A_a$ in an exact clock. The data also commute with $U$. If $S_l=U^{-l}SU^l$ has right action $S_lQ_0=wQ_0$, then $S_ldQ_0=wdQ_0$ for a data letter $d$. A conjugated scalar selector commutes with every data word, since the data commute with that selector and with $U$. Its forced scalar right action therefore holds on $wQ_0$ as well. Induction in~\eqref{eq:gate-transition} proves the initialized operator history. Products do not require commuting computed registers: if $AQ_0=aQ_0$, $BQ_0=bQ_0$, and $[b,Q_0]=0$, then $ABQ_0=AQ_0bQ_0=abQ_0$. Before $h$ the next-reset factor vanishes on $Q_0$, whose range also contains every computed right action. At CHECK,
+\[
+ \Sigma_hQ_0=2^{-b}r(D,E,W)Q_0,\qquad (q_{\rm CHECK})_hQ_0=Q_0.
+\]
+Conjugate~\eqref{eq:gate-check} by $U^{-h}$ and apply it to $Q_0$. The flag is time invariant, and the conjugated selector commutes with data words, so $r(D,E,W)Q_0=0$.
+
+The operator $r(D,E,W)B_e(I-F)$ commutes with all fuel/time flips. Conjugate its zero product with $C_kD_k$ by the earliest specified fuel flip and add: that flip exchanges the two outcomes of its digit and preserves later digits. Repeat through the final zero of $C_k$, then through $D_k$. This removes both cylinders and proves~\eqref{eq:gate-forced}. No conditional trace independence is needed. Since $\mathcal R_e$ includes the packed relations for both families, the $E$ corner of every nonzero unflagged cylinder therefore carries both the $p_{xa}$ and $q_{yb}$ PVMs and all tested losing products.
+\end{proof}
+
+\subsection{The approximable flag minimum}
+\begin{proposition}\label{prop:gate-flag}
+Every $\tau\in\mathcal T_{\rm mat}(\widehat{\mathcal P}_A)$ satisfies $\tau(F)\ge\lambda_A$.
+\end{proposition}
+\begin{proof}
+Let $Q_e=B_e(I-F)$. It commutes with the data and, by Lemma~\ref{lem:gate-testing}, its corner satisfies $\mathcal R_e$. Tracing the first packed equation gives $\tau(Q_eE)=\tau(Q_e)/m_e$. If $\tau(Q_e)>0$, the $Q_eE$ corner carries $\mathcal A_{A,e}$, with generators given by fixed bounded polynomials $Q_eEW^{-j}DW^jE$.
+
+This positive-trace corner inherits flat approximation. In the flat approximants, self-adjointize the polynomial for $Q_eE$ and round at $1/2$. Its projection defect tends to zero, and for every real $t$,
+\[
+ |1_{[1/2,\infty)}(t)-t|\le2|t^2-t|.
+\]
+The correction tends to zero in normalized Hilbert--Schmidt norm, and the rounded projection's rank fraction tends to $\tau(Q_eE)>0$. Compress and self-adjointize the finitely many corner generators, and round them by the same estimate. Fixed polynomial relations survive by bounded-product telescoping. Normalizing the corner trace multiplies norms by a bounded factor tending to $\tau(Q_eE)^{-1/2}$. These are flat approximate models of $\mathcal A_{A,e}$. Lemma~\ref{lem:gate-witnesses} therefore gives $\tau(B_e(I-F))=0$ for $e\notin A$.
+
+The decoder exhausts $L$ in trace. Iterating~\eqref{eq:decode-L} yields
+\[
+ L=\sum_{e<s}B_e+R_s,\qquad
+ 0\le R_s\le\prod_{j<s}T_a^{2j}E_{00}T_a^{-2j},\qquad \tau(R_s)\le4^{-s}.
+\]
+Indeed $L-\sum_{e<s}B_e$ is a projection whose range lies in the all-00 prefix; no commutation between rotated $L$ and all earlier digits is assumed. Since $I-F\le L$, the disjoint cylinders of trace $4^{-(e+1)}$ give
+\[
+ \tau(I-F)=\sum_e\tau(B_e(I-F))
+ \le\sum_{e\in A}4^{-(e+1)}=\theta_A.
+\]
+Only the passage excluding nonmember corners uses matrix approximability. The testing identity holds for every exact trace.
+\end{proof}
+
+\subsection{Slow admission and simultaneous finite models}
+\begin{lemma}[Elementary witness scheduling]\label{lem:gate-schedule}
+Suppose finite witnesses with positive integer costs $a_j$ arrive in a computable stream without repeated indices. At even depth $N$ admit its longest prefix arrived by stage $N$, with every index $e_j<N/2$ and total cost at most $\lfloor\sqrt N\rfloor$. These prefixes are nested and eventually contain every fixed witness. Their total cost is $o(N)$.
+\end{lemma}
+\begin{proof}
+For a fixed prefix its arrival time, largest index and total cost are finite constants. All three cutoffs eventually exceed them, and none decreases with $N$. The cost bound is $\sqrt N=o(N)$. An enormous early witness may cause an enormous finite delay; no convergence rate is claimed. More generally any nondecreasing computable unbounded budget $o(N)$ has the same property.
+\end{proof}
+
+Apply this lemma to the certificates $(e_j,d_j,\text{model}_j)$ of Lemma~\ref{lem:gate-witnesses}, with $a_j=\lceil\log_2\max(2,m_{e_j}d_j)\rceil$. Use a dovetailing with finitely many outputs per stage. Let $S_N$ be the admitted indices. Then $S_N\uparrow A$, and the common data factor
+\[
+ \mathcal H_{{\rm data},N}=\bigotimes_{e_j\in S_N}(\C^{m_{e_j}}\otimes\C^{d_j}),
+ \qquad \ell_N=\dim\mathcal H_{{\rm data},N}
+\]
+has $\log \ell_N\le\sqrt N$; the empty product has dimension one.
+
+\begin{lemma}[Complementary finite models]\label{lem:gate-finite}
+For even $N\ge2$, $\widehat{\mathcal P}_A$ has flat models with all defining residuals at most $3\cdot4^{-N}$ in operator norm and
+\begin{equation}\label{eq:gate-dimension}
+ d_N=2^{3N+k_N}\ell_N,\qquad
+ k_N=\lambda_NN+O(\log(N+2)),\qquad
+ \lambda_N=1-\sum_{e\in S_N}4^{-(e+1)}\downarrow\lambda_A.
+\end{equation}
+Every new defining equation is exact, and $\operatorname{tr}_{d_N}(F)=\lambda_N$.
+\end{lemma}
+\begin{proof}
+On the $N$-bit address cycle set
+\begin{equation}\label{eq:gate-mask}
+ f_N(x)=1-\sum_{e\in S_N}1_{\{x\equiv4^e\!\!\pmod{4^{e+1}}\}},\qquad
+ k_N=1+\max_x\sum_{j=1}^Nf_N(x-j).
+\end{equation}
+The classes are disjoint, and their periods divide $2^N$. Bit zero is least significant for increment, so these are precisely the cylinders $B_e$. The mask is Boolean, has mean $\lambda_N$, and satisfies~\eqref{eq:gate-region}. For $s=\lfloor\log_4N\rfloor$, each selected class with $e\le s$ has interval-count error at most one. The disjoint union of the remaining classes lies in the multiples of $4^{s+1}$ and has at most one point in an interval of length $N<4^{s+1}$; its expected count is at most $N/(3\cdot4^{s+1})$. Hence, uniformly in the subset and starting point,
+\begin{equation}\label{eq:gate-window}
+ \left|\sum_{j=1}^Nf_N(x-j)-N\lambda_N\right|
+ \le s+2+\frac{N}{3\cdot4^{s+1}}.
+\end{equation}
+Cyclic intervals lift to integer intervals because all periods divide the cycle.
+
+Use the three compulsory $N$-qubit registers, the $k_N$ optional qubits, and the common data factor. Theorem~\ref{thm:finite}'s conditional permutation, series and dressing require only a Boolean mask and that $k_N$ exceed every $N$-window count. They therefore apply to~\eqref{eq:gate-mask}. On address $x\in B_{e_j}$ for an admitted index, assign the packed witness to factor $j$ and tensor identities on the others. On other addresses take $(D,E,W)=(0,I,I)$. These address-block data are independent of fuel, time and optional slots. They commute with $A_a,L,R,F,Z$ and all scalar workspace, and with the complete fuel/time sets. Address dressing acts on address and optional slots and leaves these commutations intact. The data need not commute with the dressed address shift or flip.
+
+For fuel with $k$ initial ones, use the actual initialized scalar and operator history at time $t\bmod2^k$; all-ones fuel uses $k=N$. On each $(x,q,t)$ block the scalar workspace is a scalar multiple of the data identity. Every $M,\Sigma$ is a contraction by the signed-term bound. Choose their two representing unitaries within each block and take direct sums. All required representing-unitary commutators hold; naming these matrices adds no tensor factor.
+
+When the next time residue is zero, the transition prescribes initialization; otherwise it prescribes the next instruction. Since $2^k\mid2^N$, the cyclic transition from $2^N-1$ to zero is also a reset. Thus~\eqref{eq:gate-transition} holds exactly at every ordinary and reset boundary. On an unflagged block every completed CHECK tests the packed witness belonging to that address, so it is zero. An unfinished CHECK imposes no test there; on flagged blocks $I-F=0$. Therefore~\eqref{eq:gate-check} is exact regardless of program speed.
+
+The address wraparound is handled as in Theorem~\ref{thm:finite}. In the gauge of the dressing~\eqref{eq:dressing}, $V$ is ordinary increment except at the all-ones address, where it also applies the fixed optional permutation $R_0^{\sum_xf_N(x)}$. There its output address differs from that of the recursive increment, so the guarded defect is $\sqrt2\,4^{-N}$ in operator norm, as before.
+
+All new equations are exact simultaneously. The remaining clock, guarded-increment, carry and conditional-tail residuals have their old bounds, at most $3\cdot4^{-N}$. Counting the registers gives~\eqref{eq:gate-dimension}, and
+\[
+ \log d_N=(3+\lambda_N)N+O(\log(N+2))+O(\sqrt N)
+          =(3+\lambda_A)N+o(N).
+\]
+A fixed increase of even depth absorbs the constant three. Bounded gaps between even depths suffice for every small precision. Computing a certificate or its admission stage is classical model-description work; it consumes neither simulated fuel nor an extra quantum register.
+\end{proof}
+
+\subsection{Dimension, usable entanglement and heat}
+\begin{theorem}\label{thm:gate-resources}
+For every c.e. set $A$, integer $r\ge0$ and integer $q\ge1$, there is a fixed finite rational BCS game $\widehat G_{A,r,q}$ of quantum value one and with no finite-dimensional perfect strategy. With
+\[
+ \beta_{A,r,q}=\frac{4+r-\theta_A}{4q},\qquad L_\eps=\log_2(1/\eps),
+\]
+its resource laws are
+\begin{align}
+ \log_2D_{\widehat G_{A,r,q}}(\eps)&=\beta_{A,r,q}L_\eps+o(L_\eps),\label{eq:gate-game-law}\\
+ d^\to_{\widehat G_{A,r,q}}(\eps)&=\beta_{A,r,q}L_\eps+o(L_\eps),\label{eq:gate-usable-law}\\
+ w_{{\rm local},\widehat G_{A,r,q}}(\eps)&=2\beta_{A,r,q}L_\eps+o(L_\eps),\qquad
+ 0\le w_{{\rm joint},\widehat G_{A,r,q}}(\eps)\le2\log_2K_{\rm ans}.\label{eq:gate-heat-law}
+\end{align}
+The heat statement uses exactly the model and units of Section~\ref{sec:heat}.
+\end{theorem}
+\begin{proof}
+\emph{The actual-state flag bound.} Moment compactness of Lemma~\ref{lem:gate-finite}'s flat models supplies a matrix-approximable trace of flag expectation $\lambda_A$. Proposition~\ref{prop:gate-flag} gives the reverse inequality, so
+\begin{equation}\label{eq:gate-minimum}
+ \min_{\mathcal T_{\rm mat}(\widehat{\mathcal P}_A)}\tau(F)=\lambda_A.
+\end{equation}
+Corollary~\ref{cor:weighted-limits} now proves, uniformly on every original weighted precision-$\delta$ model,
+\begin{equation}\label{eq:gate-weighted}
+ \Tr(\rho F)\ge\lambda_A-\omega_A(\delta),\qquad \omega_A(\delta)\longrightarrow0.
+\end{equation}
+Indeed a fixed positive shortfall along $\delta\to0$ would have a weighted moment limit in $\mathcal T_{\rm mat}$ below~\eqref{eq:gate-minimum}. The bound holds on the original state $\rho$; compression only identifies the limit class.
+
+\emph{Dimension.} Every relation used by Lemma~\ref{lem:joint} remains in the presentation. For $t=\log_4(1/\delta)$ and $M=\lfloor t-30\log_4(2+t)\rfloor$, its joint errors are at most $C(M+1)^64^M\delta$. Theorem~\ref{thm:count} and state transport give
+\[
+ \log d\ge3M+\sum_{i<M}\Tr(\rho F_i)-o(M)
+ \ge(3+\lambda_A-\omega_A(\delta))M-O(M^2\delta)-o(M),
+\]
+since $|\Tr(\rho F_i)-\Tr(\rho F)|\le2i\delta$. This is $(3+\lambda_A)\log_4(1/\delta)-o(\log(1/\delta))$. The compiler sends game loss $\eps$ to source precision $C\sqrt\eps$, with constant dimension overhead. Lemma~\ref{lem:gate-finite} gives the converse upper loss $C'16^{-N}$. Choose an even depth $N\ge\log_{16}(C'/\eps)$ within a fixed additive constant to match the bound through all small losses. This proves~\eqref{eq:gate-game-law} for $r=0,q=1$.
+
+Append $r$ compulsory clocks with the cross-commutations of Proposition~\ref{prop:realization-parameters}. Their upper cost is exactly $rN$, and their digit families add $rM$ to the lower count. Power \emph{every} defining residual, including the new tests and cross-commutators, by~\eqref{eq:power-polynomial}; keep domains and state-commutator requirements. Equation~\eqref{eq:power-jensen} turns powered precision $\eta$ into unpowered precision $\eta^{1/q}$, whereas the explicit operator-norm residuals become at most $3^q4^{-qN}$. Thus the game lower precision is $\delta=(C\sqrt\eps)^{1/q}$, upper loss is $C'16^{-qN}$, and the coefficient is $(3+r+\lambda_A)/(4q)$. The upper losses tend to zero and this positive lower bound diverges, excluding a finite-dimensional perfect strategy.
+
+\emph{Usable entanglement on the original mixed state.} Proposition~\ref{prop:actual-state-bridge} applies. On a purification of an arbitrary mixed loss-$\eps$ strategy, keep the original environment, relabel illegal answers, and dilate locally with pure ancillas. The finite Boolean certificates reconstruct this presentation on the actual Bob marginal with powered precision $C\sqrt\eps$; their constants depend on the fixed transducer but not on $M$ or $\eps$. Jensen then gives the same unpowered $\delta$. New data/register variables enlarge a fixed certificate list only. None occurs in the raw translated clock measurements or their controls.
+
+Consequently the same opposite-word construction on Alice, independent local inclusion repairs on both sides, and reverse count order supply the hypotheses of Lemma~\ref{lem:inactive-extraction}, with
+\[
+ m=(4+r)M,\qquad \eta=C_{A,r,q}(M+1)^64^M\delta.
+\]
+As in Proposition~\ref{prop:actual-state-bridge}, only $Q_i$ is repaired, so the activation flags are the raw $F_i$ on the actual marginal.
+
+At the chosen depth $\eta=O(t^{-24})$, and the vector, activation and entropy-continuity errors of Lemma~\ref{lem:inactive-extraction} tend to zero. Its one-way protocol and hashing therefore give on \emph{every original strategy state}
+\begin{align*}
+ E_D^{A\to B}(\rho_{AB})
+ &\ge(3+r)M+\sum_{i<M}\Tr(\rho_BF_i)-o(1)\\
+ &\ge(3+r+\lambda_A-\omega_A(\delta))M-O(M^2\delta)-o(1).
+\end{align*}
+Here~\eqref{eq:gate-weighted}, rather than an all-exact-trace bound, supplies the activation estimate. Since $M=L_\eps/(4q)-O(\log L_\eps)$, the infimum gives the lower side of~\eqref{eq:gate-usable-law}. The general inequality $d^\to_G(\eps)\le\log D_G(\eps)$ and the proved dimension upper bound give the other side.
+
+\emph{Heat.} Substitute the two matching laws into~\eqref{eq:heat-sandwich}. Its fixed answer term is $O(1)$, so both endpoints have coefficient $2\beta_{A,r,q}$. The joint bound is the same cited heat theorem. This proves~\eqref{eq:gate-heat-law}.
+\end{proof}
+
+\begin{corollary}[Beyond the left-c.e. reals]\label{cor:gate-strict}
+The game $\widehat G_K:=\widehat G_{K,0,1}$ has dimension and usable-entanglement coefficient $(4-\theta_K)/4$, and local-heat coefficient $(4-\theta_K)/2$. These are noncomputable right-c.e. reals, not left-c.e., and have the Turing degree of $K$. Write $\mathcal B_{\rm BCS}$ for the set of positive dimension exponents of finite BCS games with rational question probabilities and quantum value one. In particular,
+\begin{equation}\label{eq:strict-spectrum}
+ \{\text{positive left-c.e. reals}\}\ \subsetneq\ \mathcal B_{\rm BCS}
+ \ \subseteq\ \{\text{positive }\Delta^0_2\text{ reals}\}.
+\end{equation}
+Both $\mathcal A_{\log}$ and $\mathcal A_{\dim}$ also strictly contain the positive left-c.e. reals. The new non-left-c.e. examples accumulate at zero by taking $q\to\infty$.
+\end{corollary}
+\begin{proof}
+The weights $w_e=4^{-(e+1)}$ have tail at most $w_e/3$ after position $e$. Given earlier membership bits, absence leaves residual at most $w_e/3$, whereas presence leaves at least $w_e$. Approximating $\theta_K$ within $w_e/6$ distinguishes them at threshold $2w_e/3$. Thus $K\le_\Sigma\theta_K$. Conversely $K$ computes the summable series, so $\theta_K\equiv_TK$. Its complement and the displayed positive rational affine images are noncomputable right-c.e.; if also left-c.e., the two rational approximations would compute them. Theorem~\ref{thm:gate-resources} supplies these coefficients, proving the complementary assertion of Theorem~\ref{thm:realization}. Its left-c.e. assertion gives the first inclusion, and Lemma~\ref{lem:computability} the dimension outer class. No $\Delta^0_2$ upper bound for the entire usable-entanglement class is inferred here.
+\end{proof}
+
+\subsection{Why the trace gap is consistent}
+\begin{proposition}\label{prop:gate-gap}
+For $\widehat{\mathcal P}_K$ the exact and approximable minima differ strictly:
+\[
+ \min_{\mathcal T}\tau(F)<\min_{\mathcal T_{\rm mat}}\tau(F)=1-\theta_K.
+\]
+An exact minimizing trace has a positive-trace nonhalting unflagged corner carrying $\mathcal A_{K,e}$. Such a trace is not matrix approximable.
+\end{proposition}
+\begin{proof}
+The bounded exact-trace hierarchy of Proposition~\ref{prop:exact-barrier} makes the exact minimum left-c.e.; compactness supplies a minimizer. It is at most the approximable minimum and cannot equal its non-left-c.e. value. At the minimizer, $\tau(I-F)>\theta_K$. Decoder exhaustion and the total capacity of halting cylinders force $\tau(B_e(I-F))>0$ for some $e\notin K$. Testing and packing give its unital tracial model. Left and right multiplication in the tracial GNS representation yield a perfect commuting-operator strategy for $H_{K,e}$, using its two projection families; this is the usual tracial representation construction~\cite{PSSSTW16,KPS18}. Soundness concerns finite-dimensional value, so there is no contradiction.
+\end{proof}
+
+This is the matrix-versus-commuting distinction behind the negative solution of Connes' embedding problem in~\cite{JNVWY}, made quantitative in the resource coefficient. Slofstra's nonclosure and undecidability results~\cite{Slo19} are essential context for distinguishing finite exact perfection from limiting perfection; the finite exact witnesses used above are the stronger specified input, not a consequence of nonclosure.
+
+There is also an independent consistency argument. The index set $C_{\rm tr}=\{e:\mathcal A_{K,e}\text{ has a unital tracial model}\}$ is $\Pi^0_1$. Each bounded tracial moment level, including domain localizers and all visible relation insertions, is a rational semialgebraic feasibility problem decidable by real quantifier elimination. Infeasibility of some level enumerates the complement; feasibility at every level gives a tracial state by bounded-moment compactness and GNS. Since $K\subseteq C_{\rm tr}$, equality would make $K$ co-c.e. Hence some nonhalting indices, in fact infinitely many, already admit perfect tracial strategies independently of the clock construction. This argument uses the tracial presentation, rather than assuming arbitrary perfect commuting strategies are tracial. Lin's $\mathrm{MIP}^{\rm co}=\mathrm{coRE}$~\cite{Lin25} supplies the commuting-complexity context; no equality of commuting and finite-dimensional values is used.
+
+\subsection{Remaining classification questions and finite checks}
+Is every positive right-c.e. real an exponent? The construction realizes geometric complements $1-\theta_A$, rather than arbitrary complementary flag densities. An arbitrary effectively open address set would require an unflagged address to carry one successful finite membership certificate, with simultaneous upper models and the same logarithmic budget. Testing every candidate imposes a conjunction rather than the required disjunction; waiting forever for success imposes no completed test on a rejected address. A naive integer witness can escape to infinity in the compact counter encoding. These are missing lemmas for this route, not general impossibility results.
+
+Is every positive d.c.e. real, a difference of two left-c.e. reals, an exponent? Independent conditional registers would need simultaneous original-state lower bounds and matched budgets for both masks and their witnesses. Subtracting two coefficient formulas does not implement subtraction on games, and arbitrary complementary flag-density realization is still missing.
+
+Is every positive $\Delta^0_2$ real an exponent? This precise finite-exact-witness mechanism cannot accept an arbitrary non-c.e. index set: exact finite matrix feasibility is c.e. by quantifier elimination, so finite exact witnesses for members and no flat approximating sequence for nonmembers force the set to be c.e. General limit decisions can change indefinitely. Value-one-only witnesses may grow with precision even for a fixed accepted index, need not fit an $o(N)$ logarithmic budget at precision $4^{-N}$, and do not make completed CHECKs exact. A revocable or quantitatively different witness mechanism would be needed. This limitation does not strengthen the general $\Delta^0_2$ upper bound to a spectrum classification.
+
+The full sets $\mathcal A_{\log}$ and $\mathcal A_{\dim}$ remain undetermined; the former has the different arithmetic upper bound in~\cite[Theorem~11.14]{DM-precision}. Whether a value-one game without a finite-dimensional perfect strategy can have zero logarithmic usable-entanglement coefficient, or a diverging sublogarithmic demand, remains open. A linear-system realization of these matched laws is also open.
+
+Appendix~\ref{app:checks} describes finite checks of this algebra on known-answer toy games.

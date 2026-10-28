@@ -1,6 +1,6 @@
 # Ancillary checks
 
-These files support the written proofs. **The arbitrary-state lower bound rests on the written proof, not on computation.** No Lean formalization is included; one is planned.
+These files support the written proofs. **The arbitrary-state lower bound rests on the written proof, not on computation.** A Lean formalization of the v1 core is in progress and not complete; no completed formal verification is included.
 
 Two independent checks were made of the construction. A refutation-first proof check by a model of another developer found no false step and no counterexample, and identified three repairs, each with a proof; the paper now applies all three. They are the Boolean variable for the projection `E` in the compiler's orthogonality context (Section 3), the explicit list of joint relations in Lemma 9.3, with commutators between different compulsory clocks and between conditional and fuel or time measurements bounded through the raw conjugated digits, and the linear translation bound (9.4) with the compulsory measurements fixed explicitly. Its two structural observations are Remark 9.4. Its two scripts are in `crosscheck/`. An independently written program, in the repository directory `verify/`, evaluates every relation on the finite models at N = 4, 6, 8; it is described below.
 
@@ -97,6 +97,92 @@ python anc/crosscheck/r1.py
 
 ## Licenses
 
-SHA256SUMS records the archived code and data in this directory.
+SHA256SUMS records the archived code and the original outputs under each `recorded/` directory. Reruns write new outputs beside the scripts; those are not covered by the manifest.
 
 Paper, documentation and recorded outputs: CC BY 4.0. Scripts: MIT or Apache 2.0, at the user's option. See the root RIGHTS.md and license files.
+
+## Version 2: reader, window, compression and Jensen (`spectrum/`)
+
+`spectrum/numerical_attack.py` tests the finite reader models and weighted moments of Sections 11 and 14. Recorded results and the run log are in `spectrum/recorded/`. Running it writes new results beside the script. Library file paths in the recorded `threadpool_info` have been shortened to their site-packages-relative form; no other byte of the recorded output was changed.
+
+It establishes the following **finite numerical observations**, with fixed seeds, rather than universal theorems:
+
+- 24 honest reader models at N=2,4,6 and eight rational thresholds (including 0 and 1): reset, initialization, transitions, zero-tail reads, halt inclusion, optional slot noncollision, dressing and operator residuals on their nontrivial kernels. The largest residual is `3*4^-N`; the logical full dimension reaches `2^25` without a dense allocation. The test programs implement constant rational thresholds, not an arbitrary universal counter computation.
+- Dyadic-grid counts and arbitrary moving/cyclic window counts for the radical-inverse mask, including adversarial bit-order choices. This tests the finite count; the uniform discrepancy estimate is proved in the paper.
+- Compression and domain repair for weighted tuples, finite word moments and direct-sum trace weights. These numerical moment comparisons do not establish the limiting trace-space identity or an effective bound on the compressed dimension.
+- 3,000 noncommuting-state Jensen tests of the residual-power inequality for both parities. The proof uses scalar spectral-measure Jensen; numerics are not its justification.
+
+Run from the repository root after setting all the thread variables above and `PYTHONDONTWRITEBYTECODE=1`:
+
+```powershell
+python -u anc/spectrum/numerical_attack.py
+```
+
+The source audit recorded 32,400 finite word tests. Inspect the structured output for the exact enumeration, tolerances, resource usage and domain repairs. These checks do not test the complete compiled game or prove a lower bound for arbitrary states.
+
+## Version 2: extraction protocol (`extraction/`)
+
+The six Python files test Lemma 12.1 and Proposition 12.2. Script comments refer to the paper's own numbering. The continuity parameter in `protocol_check.py` is a purification-vector upper bound on output half trace distance. Recorded logs are in `extraction/recorded/`. They compute coherent information of the **actual output**, with inaccessible environment and original systems traced, random targets averaged, flags dephased and active qubits kept coherent. They do not compute distillable entanglement itself.
+
+| Script | Exact scope |
+|---|---|
+| `stage_inequality.py` | Arbitrary and near-structured one-stage matrix instances, plus bounded search, of the stage isometry inequality. |
+| `protocol_check.py` | Exact and perturbed binary/ternary protocols through four stages, with mixed states and noncommuting triangular controls; checks history aggregates, vector error `7*m^3*eta`, mean activation, continuity and the stated extraction bound. |
+| `tiny_perturbation.py` | Uses the protocol engine at perturbations where the lower bound is positive, avoiding a vacuous numerical test. |
+| `adversarial_search.py` | Bounded hill-climb of normalized error ratios using the protocol engine. It does not certify a global maximum. The recorded run covers m=2 completely and stops during m=3; `adversarial_m3.py` is the lighter replacement for m=3. |
+| `adversarial_m3.py` | Lighter three-ternary-stage adversarial search, using the preceding engine. |
+| `repair_check.py` | One-sided projection-inclusion repair, containment and adjoint-transfer inequality on 4,000 finite random instances. |
+
+There are six Python files (the full engine and five runners/checks). The protocol script accepts a seed; the recorded full run uses 7, the adversarial run 11 and the lighter three-stage run 13. For example:
+
+```powershell
+python -u anc/extraction/protocol_check.py 7
+python -u anc/extraction/tiny_perturbation.py
+python -u anc/extraction/repair_check.py
+```
+
+Run each script as a separate process. The scripts inherit single-thread settings. The paper uses the proved sharper mean error `m*(m-1)*eta/2` and vector error `7*m^3*eta`; the original protocol tests retain the looser mean bound and final `20*m^3*eta` allowance while separately testing the sharper vector bound. No numerical observation replaces the extraction proof, actual-state bridge, hashing theorem, or heat theorem.
+
+
+## Version 2: complementary gate (`gate/`)
+
+`gate/toy_gate.py` tests packing, programmed histories and complementary finite models. Its recorded `toy-results.json` is in `gate/recorded/`; a rerun writes `gate/toy-results.json`, which is excluded from SHA256SUMS. These tests check **the new matrix algebra and finite histories on known-answer toy games, not the MIP* games themselves**.
+
+- Packed projection presentations and signed right-multiplication/accumulator instructions for 3-colouring of K3 (dimension 9, 49 CHECKs), two noncommuting binary bases with only diagonal question pairs tested (dimension 8, 11 CHECKs), and a flagged bad K4 colouring (dimension 12, 77 CHECKs). Unflagging the bad colouring gives two nonzero CHECKs, maximum residual 1.
+- The mean-of-two-unitaries contraction representation, all distinct fuel reset periods and cyclic time boundaries: 16,893 transitions and 35 cyclic boundaries; all required initialized-history residuals vanish within the stated tolerances. The common data factor has dimension 72 and satisfies all packed equations.
+- Decoder and reset recursions, 69,904 fuel/time basis points, and 384 address/optional-slot basis points at N=6. The boundary residual is sqrt(2)*4^-6. Physical and dressing-gauge slot outputs are checked separately.
+- All complementary masks at even N=2 through 14: 254 masks and 2,396,744 mask/start cases. The proved window bound passes. Reversing the address-bit convention is a negative control.
+- A cost-only slow-admission example, without allocating its hypothetical large witness.
+
+The script does not compile a universal counter machine, run the MIP*=RE reduction, enumerate actual halting-game perfect certificates, prove an infinite limit, or construct the full BCS game. Floating-point polar decompositions are numerical checks, not exact certificates. Its internal 2 GB assertion is inherited unchanged; the revision runner additionally enforces a 1.4 GB process limit.
+
+Run with Python 3 and NumPy, after setting all thread variables shown above to one:
+
+```powershell
+python -B anc/gate/toy_gate.py
+```
+
+All computations in this release were run sequentially, with numerical-library thread counts set to one and peak memory below 1.5 GB.
+
+
+### Two-family checks of the repaired construction
+
+The script `gate/toy_gate.py` uses an earlier presentation with a single projection family for both players. Its history, reset and window tests are independent of that choice. The presentation of Section 15.1, with separate Alice and Bob families, is tested by the independently written scripts in `gate/crosscheck/`; all five source files and four recorded logs are archived there, with the logs in `recorded/`. Requirements: Python 3, NumPy and SciPy. Run each command separately from the repository root, with the thread settings above:
+
+```powershell
+python -B anc/gate/crosscheck/check_packing_transducer.py
+python -B anc/gate/crosscheck/check_histories.py
+python -B anc/gate/crosscheck/check_address_structure.py
+python -B anc/gate/crosscheck/check_window_count.py
+```
+
+The packing check includes separate Alice and Bob families: K3 colouring has 18 generators and packed dimension 18; the magic-square witness has 42 generators and packed dimension 168. It checks the reduced-state eigenspace argument on a nonuniform Schmidt state and an anti-synchronous PCC example that has no single-family model. Negative controls detect nonzero losing products. The history check covers 53,248 points, including reset and cyclic boundaries. The sparse address check tests dimensions 4,096, 16,384 and 8,192, and the window check exhausts even depths through 22. These checks concern known-answer toys, not the actual MIP* games, the universal machine compilation, the asymptotic lower bounds or the full BCS game.
+
+`extraction/recorded/stage_inequality.log` records an independent rerun (3,000 arbitrary instances, 1,000 structured instances and the bounded hill-climb). The original larger adversarial log has no final maximum report; only its completed m=2 sweep is claimed.
+
+
+### Notation in the version-2 programs
+
+The programs cite the paper's own sections and equations. `M` and `T` in the numerical implementation are the monomial and accumulator registers `M` and Sigma of (15.3)–(15.5). The `L_N` data-dimension label in older numerical variables denotes ell_N in Lemma 15.6. Output keys for bounded searches are numerical diagnostics, not additional theorem hypotheses. The archival numeric values and tested inequalities are unchanged.
+
+The files `spectrum/numerical_results.json` and `gate/toy-results.json` are generated only by reruns and are not included in this release or its manifest; the archived results in `recorded/` are included and hashed. The spectrum runner also shortens newly reported library paths, so rerunning it does not expose machine-specific directories.

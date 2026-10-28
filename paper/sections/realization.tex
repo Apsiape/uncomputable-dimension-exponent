@@ -1,0 +1,133 @@
+\section{Every positive left-c.e. exponent}\label{sec:realization}
+The halting game uses separated address cylinders so that its coefficient has an explicit Turing degree. To realize an arbitrary left-c.e. real, the program must instead read the whole address. The clocks, reset, carry and conditional measurement estimates stay the same.
+
+\subsection{A finite reader}
+Fix a computable increasing sequence of rationals $0\le q_s\le1$ tending to $\theta\in[0,1]$. For a binary address $x=(b_0,b_1,\ldots)$ put
+\[
+ v(x)=\sum_{j\ge0}b_j2^{-j-1},\qquad
+ p_s=\sum_{j<s}b_j2^{s-1-j}.
+\]
+At stage $s\ge1$, a fixed program computes $q_s$, reads the next bit, updates $p_s$, and halts if
+\begin{equation}\label{eq:reader-accept}
+ (p_s+1)/2^s<q_s.
+\end{equation}
+Counter instructions implement the integer arithmetic and strict rational comparison. Each stage takes at least one instruction. Acceptance implies $v(x)\le(p_s+1)/2^s<\theta$; conversely, if $v(x)<\theta$, the two sequences $(p_s+1)/2^s\to v(x)$ and $q_s\to\theta$ eventually satisfy~\eqref{eq:reader-accept}. Thus the program halts exactly on $\{v<\theta\}$. Only the finite program for $(q_s)$ occurs in the presentation; $\theta$ is not an operator coefficient.
+
+Here is the full change to Section~\ref{sec:source}. Delete $L,R$, equations~\eqref{eq:decode-L}--\eqref{eq:decode-R}, and their occurrences in initialization and commutation lists. Retain all other clock, reset, carry and conditional relations. Add positive contractions $A_{\rm r},C_{\rm r}$ and a projection $P_{\rm r}$ to the instantaneous commuting workspace, with
+\begin{equation}\label{eq:reader-domain}
+ 4A_{\rm r}=3P_{\rm r}+C_{\rm r},\qquad [P_{\rm r},C_{\rm r}]=0.
+\end{equation}
+The workspace commutes with $Z,A_a,A_f,A_t,F$ as before. The flag still commutes with $A_a$ and the complete fuel and time sets, including $U$; all the conditional-clock commutations are retained. Initialize every ordinary counter to $I$, the start control to $I$, the other controls to zero, and $A_{\rm r}$ to $A_a$. A READ control $q_\sigma$ has selectors $q_\sigma P_{\rm r}$ and $q_\sigma(I-P_{\rm r})$. If $Q_{\rm r}$ is the sum of READ controls, set
+\begin{equation}\label{eq:reader-step}
+ \Step(A_{\rm r})=Q_{\rm r}C_{\rm r}+(I-Q_{\rm r})A_{\rm r}.
+\end{equation}
+Include $A_{\rm r}$, together with every ordinary counter and control, in~\eqref{eq:initialize}--\eqref{eq:transition}. In particular,
+\[
+ ZA_{\rm r}=ZA_a,\qquad
+ U^*A_{\rm r}U=Z_+A_a+(I-Z_+)\Step(A_{\rm r}).
+\]
+The bit and tail are witnesses, like the zero-test witnesses; they need no separate update equations. Call this finite rational presentation $\mathcal P_\theta$.
+
+\begin{lemma}[Reader forcing]\label{lem:reader-forcing}
+Every exact tracial model of $\mathcal P_\theta$ has $\tau(F)\ge\theta$. Uniformly over its weighted precision-$\delta$ models,
+\begin{equation}\label{eq:reader-flag}
+ \Tr(\rho F)\ge\theta-\omega_\theta(\delta),\qquad
+ \omega_\theta(\delta)\longrightarrow0.
+\end{equation}
+\end{lemma}
+\begin{proof}
+On the kernel and range of $P_{\rm r}$, equation~\eqref{eq:reader-domain} places the spectrum of $A_{\rm r}$ in $[0,1/4]$ and $[3/4,1]$, respectively. Therefore
+\[
+ P_{\rm r}=p(A_{\rm r}),\qquad C_{\rm r}=s(A_{\rm r}).
+\]
+This conclusion does not require Cantor spectrum in advance.
+
+Let $B_w$ specify an $s$-bit address word $w$ satisfying~\eqref{eq:reader-accept}. Every extension follows the same computation to a halt, at some time $h$. It may halt at an earlier stage; in either case it halts by stage $s$ after at most $s$ reads. Choose $2^k>h$ and put $Q_0=B_wC_kD_k(I-F)$. These factors commute. The reset part of Lemma~\ref{lem:initialization} is independent of the deleted decoder and initializes this subspace.
+
+The reader requires an operator induction in addition to the scalar counter induction of Theorem~\ref{thm:flag}. After $j$ reads, track
+\begin{equation}\label{eq:reader-induction}
+ (A_{\rm r})_\ell Q_0=s^j(A_a)Q_0.
+\end{equation}
+The right side commutes with $Q_0$. Taking adjoints shows that $Q_0$ reduces the self-adjoint left side. Functional calculus on that reducing subspace gives
+\[
+ (P_{\rm r})_\ell Q_0=b_jQ_0,\qquad
+ (C_{\rm r})_\ell Q_0=s^{j+1}(A_a)Q_0
+\]
+whenever the next bit is read. All bits read before the halt belong to $w$. On other instructions the reader remains fixed. The ordinary counters and controls have their prescribed scalar right actions, with zero tests forced by Lemma~\ref{lem:initialization}. There is no reset before $h$. Thus~\eqref{eq:transition} proves the initialized history through its halt. As in Theorem~\ref{thm:flag}, $q_{\rm halt}\le F$ and $[F,U]=0$ force $Q_0=0$. Conjugating by successive fuel and time flips and adding removes $C_k,D_k$, giving $B_w\le F$.
+
+The length-$s$ address cylinders have trace $2^{-s}$. The number accepted at stage $s$ is
+\[
+ a_s=\max\{0,\lceil2^sq_s\rceil-1\},\qquad
+ 2^{-s}a_s\ge q_s-2^{-s}.
+\]
+Summing accepted cylinders gives $\tau(F)\ge q_s-2^{-s}$, hence $\tau(F)\ge\theta$. This includes $\theta=0$ and $\theta=1$: the possibly unaccepted all-ones address has trace zero. Finally the bounded moment-limit and tracial GNS argument in Theorem~\ref{thm:flag} applies to all the added bounded variables and proves~\eqref{eq:reader-flag}.
+\end{proof}
+
+\begin{lemma}[Finite reader models]\label{lem:reader-finite}
+For even $N\ge2$, $\mathcal P_\theta$ has flat models of dimension
+\begin{equation}\label{eq:reader-dimension}
+ d_N=2^{3N+k_N},\qquad k_N=\theta N+o(N),
+\end{equation}
+with every defining residual at most $3\cdot4^{-N}$ in operator norm. Every new program and reader equation is exact.
+\end{lemma}
+\begin{proof}
+Use the three $N$-bit registers of Theorem~\ref{thm:finite}, with bit zero least significant for increment. Write
+\[
+ v_N(x)=\sum_{j<N}b_j(x)2^{-j-1},\quad
+ \vartheta_N=q_{2^N},\quad f_N(x)=1_{\{v_N(x)<\vartheta_N\}}.
+\]
+Read the $N$ bits followed by zeros. The Cantor reader and its witnesses remain exact after any number of reads. Assign all workspace entries the history~\eqref{eq:history}, with this initialization. The next history point is reset precisely when its time residue is zero, including the cyclic boundary and all-ones fuel. Thus all transitions are exact. A displayed halt has accepting stage $s\le2^N$, so $v_N(x)<q_s\le q_{2^N}$; hence $q_{\rm halt}\le F$ is exact. Specifying $q_{2^N}$ may take arbitrarily long classical computation. It does not lengthen a displayed history or add a tensor factor.
+
+The moving-window estimate holds for this new mask. On an aligned block of $2^r$ consecutive address integers, the radical-inverse values $v_N$ are $(j+u)/2^r$, $0\le j<2^r$, for a fixed $u\in[0,1)$. Their count below $\vartheta_N$ differs from $2^r\vartheta_N$ by at most one. Decompose an ordinary interval of length $L$ into at most two aligned dyadic blocks of each size, and a cyclic interval into at most two ordinary intervals. Uniformly in the starting point,
+\begin{equation}\label{eq:reader-window}
+ \sum_{j=1}^Nf_N(x-j)=N\vartheta_N+O(\log(N+2)).
+\end{equation}
+This is the elementary radical-inverse discrepancy argument associated with van der Corput~\cite{vdC35}. It is proved here for the moving windows used by the construction.
+
+Use this $f_N$ and $k_N=1+\max_x\sum_{j=1}^Nf_N(x-j)$ in~\eqref{eq:finite-V}--\eqref{eq:dressing}. The slot noncollision, geometric series and dressing arguments in Theorem~\ref{thm:finite} use only a Boolean mask and this slot bound. Their residual estimates therefore still hold. Since $\vartheta_N\to\theta$, equation~\eqref{eq:reader-window} gives~\eqref{eq:reader-dimension}. The full address mean differs from $\vartheta_N$ by at most $2^{-N}$, so these flat models also have $\Tr(\rho F)\to\theta$.
+\end{proof}
+
+\subsection{Adding clocks and powering equations}
+\begin{proposition}\label{prop:realization-parameters}
+For every $r\in\N$, integer $q\ge1$ and left-c.e. $\theta\in[0,1]$, there is a fixed finite rational BCS game $G_{\theta,r,q}$ of quantum value one, with no finite-dimensional perfect strategy, and
+\begin{equation}\label{eq:parameter-exponent}
+ \log D_{G_{\theta,r,q}}(\eps)
+ =\frac{3+r+\theta}{4q}\log(1/\eps)+o(\log(1/\eps)).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Append $r$ copies of the compulsory clock, requiring each complete new generator set to commute with all generators outside that clock. Tensoring the upper models adds $rN$ to logarithmic dimension. For the lower bound, append the new compulsory digit families to the order in Lemma~\ref{lem:joint}. Its word-interchange argument bounds all new cross terms by a polynomial in $M$ times $\delta$. The same error form $C_r(M+1)^64^M\delta$ holds, with $m=(4+r)M$ and $b=(3+r)M$. Neither the carry argument nor any other quantitative step uses the removed decoder. Applying Theorem~\ref{thm:count} and Lemma~\ref{lem:reader-forcing}, at depth~\eqref{eq:depth}, gives
+\begin{equation}\label{eq:reader-source-profile}
+ \log W(\delta)\ge(3+r+\theta)\log_4(1/\delta)
+ -o(\log(1/\delta)).
+\end{equation}
+Indeed the intermediate count is $(3+r)M+\sum_{i<M}\Tr(\rho F_i)-o(1)$, and state transport bounds the sum below by $M(\theta-\omega_\theta(\delta))-O(M^2\delta)$.
+
+Replace every defining polynomial equation $p=0$, including specified cross-commutators, by $h_q(p)=0$, where
+\begin{equation}\label{eq:power-polynomial}
+ h_q(p)=\begin{cases}
+ (p^*p)^{q/2},&q\text{ even},\\
+ p(p^*p)^{(q-1)/2},&q\text{ odd}.
+ \end{cases}
+\end{equation}
+Keep the exact variable domains and the weighted state-commutator conditions. Since $h_q(p)^*h_q(p)=(p^*p)^q$, scalar Jensen applied to the probability measure $B\mapsto\Tr(\rho1_B(p^*p))$ gives
+\begin{equation}\label{eq:power-jensen}
+ \hs{p\sqrt\rho}\le\hs{h_q(p)\sqrt\rho}^{1/q}.
+\end{equation}
+No commutation between $\rho$ and $p^*p$ is needed. A powered precision-$\eta$ model is consequently an original precision-$\eta^{1/q}$ model, also for its state commutators when $\eta\le1$. Conversely the operator-norm bounds of Lemma~\ref{lem:reader-finite} give
+\[
+ \opn{h_q(p)}=\opn p^q\le3^q4^{-qN},
+\]
+and the flat state commutators vanish. All powered equations are fixed rational $*$-polynomials. Theorem~\ref{thm:compiler} and the game transfer give original precision $(C\sqrt\eps)^{1/q}$ for the lower bound, and upper loss $C16^{-qN}$. Taking an even $N=\log(1/\eps)/(4q)+O(1)$ above the required precision proves~\eqref{eq:parameter-exponent}. All compiler dimension multipliers are constant for each fixed presentation. The upper losses tend to zero; the lower bound diverges, excluding a finite-dimensional perfect strategy.
+\end{proof}
+
+\begin{proof}[Dimension part of Theorem~\ref{thm:realization}]
+Given a positive left-c.e. $\alpha$, choose integers $q\ge1$ and $m\ge3$ with $m\le4q\alpha<m+1$. Put $r=m-3$ and $\theta=4q\alpha-m\in[0,1)$. This is left-c.e.; an increasing rational name is $\max(0,4q\alpha_s-m)$. Proposition~\ref{prop:realization-parameters} gives exponent $\alpha$. The integers $q,m$ are chosen once for the given $\alpha$. The usable-entanglement assertion is proved in Section~\ref{sec:usable}.
+\end{proof}
+
+\begin{corollary}\label{cor:accumulation}
+Uncomputable dimension exponents of fixed finite BCS games accumulate at zero. In fact powering the original halting presentation gives exponents $(3+\thetaK)/(4q)$, each Turing-equivalent to $K$.
+\end{corollary}
+\begin{proof}
+Apply~\eqref{eq:power-jensen} and the operator upper estimate of Theorem~\ref{thm:finite} to $\mathcal P_K$. The invertible rational affine map preserves Turing degree, and these positive exponents tend to zero.
+\end{proof}

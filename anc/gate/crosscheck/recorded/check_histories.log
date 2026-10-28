@@ -1,0 +1,12 @@
+--- unflagged witnessed address (K3): packed dim 18, stream length 3665, time/fuel bits N=12, 53248 (k,t) points
+    (15.4a) Z S = Z Init exact: True;  (15.4b) transition exact incl. cyclic boundary: True
+    CHECK states reached per fuel depth k (k: count) = {10: 44, 11: 54, 12: 61}
+    (15.5) exact with F=0 (unflagged): True;  (15.5) would fail if unflagged: False
+--- unitary decompositions S=(u+v)/2 on 1366 sampled register values: worst residual 1.11e-16, max ||S|| = 1.000000; sampled M values not commuting with D: 183
+--- flagged address with non-witness data (bad K3 colouring): packed dim 18, stream length 3665, time/fuel bits N=12, 53248 (k,t) points
+    (15.4a) Z S = Z Init exact: True;  (15.4b) transition exact incl. cyclic boundary: True
+    CHECK states reached per fuel depth k (k: count) = {10: 44, 11: 54, 12: 61}
+    (15.5) exact with F=1 (flagged): True;  (15.5) would fail if unflagged: True
+--- reset recursion Z=(I-P_f)+P_f(I-P_t) S Z S^* on the full 10+10-bit grid: exact = True
+
+ALL PASS

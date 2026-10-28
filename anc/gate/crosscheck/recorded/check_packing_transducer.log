@@ -1,0 +1,55 @@
+--- witness e=0 (K3 3-colouring, classical witness): game=colouring(n=3,|E|=3,c=3)  m=18  d=1  packed dim=18
+    #relations in R(A) = 61   #operator instructions = 3166
+    packed-domain residual (D,E projections, W unitary) = 0.0
+    CHECK output equals 2^-b r(D,E,W) exactly: True (max |diff| = 0.0)
+    max operator norm of accumulator T (every step) = 0.500000
+    #CHECKs with nonzero output = 0 of 61
+    RESULT: PASS (expected all-zero CHECKs: True)
+--- witness e=1 (Mermin-Peres magic square, Pauli witness d=4): game=magic-square  m=42  d=4  packed dim=168
+    #relations in R(A) = 130   #operator instructions = 14779
+    packed-domain residual (D,E projections, W unitary) = 0.0
+    CHECK output equals 2^-b r(D,E,W) exactly: True (max |diff| = 0.0)
+    max operator norm of accumulator T (at CHECKs) = 0.000000
+    #CHECKs with nonzero output = 0 of 130
+    RESULT: PASS (expected all-zero CHECKs: True)
+--- control e=2 (K4 3-colouring, classical attempt): game=colouring(n=4,|E|=6,c=3)  m=24  d=1  packed dim=24
+    #relations in R(A) = 93   #operator instructions = 6044
+    packed-domain residual (D,E projections, W unitary) = 0.0
+    CHECK output equals 2^-b r(D,E,W) exactly: True (max |diff| = 0.0)
+    max operator norm of accumulator T (every step) = 1.000000
+    #CHECKs with nonzero output = 2 of 93
+    first nonzero CHECKs: [('losing P_0 P_21', 1.0), ('losing P_9 P_12', 1.0)]
+    RESULT: PASS (expected all-zero CHECKs: False)
+--- control e=2' (K4 3-colouring, random d=3 PVMs): game=colouring(n=4,|E|=6,c=3)  m=24  d=3  packed dim=72
+    #relations in R(A) = 93   #operator instructions = 6044
+    packed-domain residual (D,E projections, W unitary) = 4.440892098500626e-16
+    CHECK output equals 2^-b r(D,E,W) to 1e-12 (non-dyadic data): True (max |diff| = 0.0)
+    max operator norm of accumulator T (at CHECKs) = 0.993192
+    #CHECKs with nonzero output = 60 of 93
+    first nonzero CHECKs: [('losing P_0 P_13', 0.11303421275330719), ('losing P_0 P_14', 0.9804405172321243), ('losing P_1 P_12', 0.9492308685386716)]
+    RESULT: PASS (expected all-zero CHECKs: False)
+--- control e=3 (magic square, classical attempt): game=magic-square  m=42  d=1  packed dim=42
+    #relations in R(A) = 130   #operator instructions = 14779
+    packed-domain residual (D,E projections, W unitary) = 0.0
+    CHECK output equals 2^-b r(D,E,W) exactly: True (max |diff| = 0.0)
+    max operator norm of accumulator T (at CHECKs) = 1.000000
+    #CHECKs with nonzero output = 1 of 130
+    first nonzero CHECKs: [('losing P_8 P_40', 1.0)]
+    RESULT: PASS (expected all-zero CHECKs: False)
+--- control e=4 (inconsistent BCS, classical attempt): game=inconsistent-BCS  m=4  d=1  packed dim=4
+    #relations in R(A) = 10   #operator instructions = 171
+    packed-domain residual (D,E projections, W unitary) = 0.0
+    CHECK output equals 2^-b r(D,E,W) exactly: True (max |diff| = 0.0)
+    max operator norm of accumulator T (every step) = 1.000000
+    #CHECKs with nonzero output = 1 of 10
+    first nonzero CHECKs: [('losing P_1 P_2', 1.0)]
+    RESULT: PASS (expected all-zero CHECKs: False)
+--- Separate-family PCC example (Section 15.1) (single-family vs two-family presentation)
+    two-family exact model in d=1: True;  winning probability of the PCC strategy = 1.0
+    single-family: p_a p_a = 0 implies p_a = 0 (projection), contradicting p_0+p_1=I in every dimension
+--- Lemma 15.1 completeness: PCC perfect strategy with non-maximally-entangled state -> exact flat models
+    consistency residual = 0.00e+00, [ops, rho_A] residual = 0.00e+00, losing prob = 0.00e+00
+    eigenvalues of rho_A = [np.float64(0.075), np.float64(0.175)]; worst exact-model residual on eigenspaces = 0.00e+00
+    RESULT: PASS
+
+ALL PASS

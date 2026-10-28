@@ -1,4 +1,4 @@
-% Build: pdflatex main; bibtex main; pdflatex main; pdflatex main.
+% Build: pdflatex main; bibtex main; pdflatex main; pdflatex main; pdflatex main; repeat until no label warnings remain.
 \documentclass[11pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -11,7 +11,7 @@
 \setlength{\emergencystretch}{3em}
 \usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
 \usepackage[capitalise,nameinlink]{cleveref}
-\hypersetup{pdftitle={A nonlocal game whose dimension exponent is uncomputable},pdfauthor={Seth Douglas and Nidhal Mghirbi},pdfkeywords={nonlocal games, dimension, Boolean constraint systems, computability, approximate representations}}
+\hypersetup{pdftitle={The uncomputable price of precision},pdfauthor={Seth Douglas and Nidhal Mghirbi},pdfkeywords={nonlocal games, dimension, Boolean constraint systems, computability, approximate representations}}
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
 \newcommand{\sharedtheorem}[2]{\newaliascnt{#1}{theorem}\newtheorem{#1}[#1]{#2}\aliascntresetthe{#1}}
@@ -46,9 +46,9 @@
 \newcommand{\thetaK}{\theta_K}
 \newcommand{\DD}{D_G}
 \newcommand{\bigO}{O}
-\title{A nonlocal game whose dimension exponent is uncomputable}
+\title{The uncomputable price of precision}
 \author{Seth Douglas \and Nidhal Mghirbi}
-\date{Version 1.0.0, October 2026}
+\date{Version 2.0.0, October 2026}
 \begin{document}
 \maketitle
 \input{sections/abstract}
@@ -65,6 +65,11 @@
 \input{sections/count}
 \input{sections/lower}
 \input{sections/game}
+\input{sections/realization}
+\input{sections/usable}
+\input{sections/heat}
+\input{sections/limits}
+\input{sections/gate}
 \input{sections/methods}
 \appendix
 \input{sections/obstructions}

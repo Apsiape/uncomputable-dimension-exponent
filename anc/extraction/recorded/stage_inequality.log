@@ -1,0 +1,7 @@
+random instances: 3000, max LHS/RHS = 1.0000
+structured lam=1e-04: max LHS/RHS = 0.7312
+structured lam=1e-03: max LHS/RHS = 0.7147
+structured lam=1e-02: max LHS/RHS = 0.6956
+structured lam=1e-01: max LHS/RHS = 0.7017
+structured lam=3e-01: max LHS/RHS = 0.6627
+hill-climb (30 starts x 400 steps, dims 3,3,2): max LHS/RHS = 0.8969

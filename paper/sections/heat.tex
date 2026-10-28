@@ -1,0 +1,24 @@
+\section{Heat depends on the order of reset and communication}\label{sec:heat}
+Use the thermodynamic model of \emph{The heat price of precision}~\cite{DM-heat}: degenerate energy endpoints, asymptotic reversible preparation and erasure, and all working systems included in the reset. Work and bath heat coincide in its dimensionless units, with one unit equal to $k_BT\ln2$. Write $K_{\rm ans}=|\mathcal A||\mathcal B|$ for the product of the two answer-alphabet sizes; it is unrelated to the halting set $K$.
+
+The local schedule allows no communication until both working devices are blank. The joint schedule permits quantum reunion after answer release and before reset. Theorem~2.1 of~\cite{DM-heat} gives, for every attainable loss,
+\begin{equation}\label{eq:heat-sandwich}
+ 2d^\to_G(\eps)\le C_G(\eps)\le w_{{\rm local},G}(\eps)
+ \le C_G(\eps)+2\log K_{\rm ans}
+ \le2\log D_G(\eps)+2\log K_{\rm ans},
+\end{equation}
+where $C_G$ is the infimum mutual information of a successful state. The same theorem gives $0\le w_{{\rm joint},G}(\eps)\le2\log K_{\rm ans}$. These are cited results, not new erasure claims. The matching-sandwich argument of its Corollary~2.2 applies here with $o(\log(1/\eps))$ remainders rather than its sharper hypothesis for the earlier coefficient family.
+
+\begin{corollary}[Order of operations]\label{cor:heat}
+For every $\alpha>0$ left-c.e., the same game $G_\alpha$ of Theorem~\ref{thm:realization} satisfies, with $L=\log_2(1/\eps)$,
+\begin{equation}\label{eq:heat-law}
+ w_{{\rm local},G_\alpha}(\eps)=2\alpha L+o(L),\qquad
+ 0\le w_{{\rm joint},G_\alpha}(\eps)\le2\log_2K_{\rm ans}.
+\end{equation}
+For the original halting game the local coefficient is $(3+\thetaK)/2$, Turing-equivalent to $K$, while joint-reset heat stays bounded.
+\end{corollary}
+\begin{proof}
+Substitute $d^\to_{G_\alpha}(\eps)=\alpha L+o(L)$ and $\log D_{G_\alpha}(\eps)=\alpha L+o(L)$ into~\eqref{eq:heat-sandwich}. The fixed answer term is $O(1)$. The joint bound is the cited theorem. The halting coefficient is $2c_K$, an invertible rational affine image of $\thetaK$.
+\end{proof}
+
+Thus the same fixed finite game and accuracy have a local-reset heat law with an uncomputable logarithmic coefficient and a bounded joint-reset cost. The two schedules differ in whether quantum reunion is allowed before reset.

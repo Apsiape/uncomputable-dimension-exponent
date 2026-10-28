@@ -1,0 +1,121 @@
+=== tiny perturbations: RHS(1) positive, so (1) is tested non-trivially ===
+types=t lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.524e-06 Dvec=1.347e-06 (hist 2.317e-06, 7m^3eta 1.067e-05) sumF=0.12386 EN=0.12386 I=0.12386 RHS1=0.1227 deficit(sumF-I)=3.725e-11
+   all checks pass
+types=t lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=4.810e-06 Dvec=5.079e-06 (hist 9.610e-06, 7m^3eta 3.367e-05) sumF=0.24302 EN=0.24302 I=0.24302 RHS1=0.2396 deficit(sumF-I)=4.853e-10
+   all checks pass
+types=t lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=8.509e-07 Dvec=7.688e-07 (hist 1.555e-06, 7m^3eta 5.956e-06) sumF=0.14624 EN=0.14624 I=0.14624 RHS1=0.1456 deficit(sumF-I)=9.800e-12
+   all checks pass
+types=t lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.384e-06 Dvec=1.227e-06 (hist 2.055e-06, 7m^3eta 9.690e-06) sumF=0.33962 EN=0.33962 I=0.33962 RHS1=0.3385 deficit(sumF-I)=3.200e-11
+   all checks pass
+types=tt lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.580e-06 Dvec=1.576e-06 (hist 5.419e-06, 7m^3eta 8.846e-05) sumF=0.68369 EN=0.68369 I=0.68369 RHS1=0.6739 deficit(sumF-I)=5.704e-11
+   all checks pass
+types=tt lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=7.770e-06 Dvec=1.004e-05 (hist 3.274e-05, 7m^3eta 4.351e-04) sumF=0.91599 EN=0.91599 I=0.91599 RHS1=0.8735 deficit(sumF-I)=2.156e-09
+   all checks pass
+types=tt lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=2.431e-06 Dvec=2.813e-06 (hist 8.887e-06, 7m^3eta 1.361e-04) sumF=1.16642 EN=1.16642 I=1.16642 RHS1=1.1518 deficit(sumF-I)=1.889e-10
+   all checks pass
+types=tt lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.393e-06 Dvec=1.372e-06 (hist 4.206e-06, 7m^3eta 7.799e-05) sumF=0.29719 EN=0.29719 I=0.29719 RHS1=0.2885 deficit(sumF-I)=3.904e-11
+   all checks pass
+types=bt lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.516e-06 Dvec=1.500e-06 (hist 4.853e-06, 7m^3eta 8.487e-05) sumF=1.00556 EN=1.00556 I=1.00556 RHS1=0.9961 deficit(sumF-I)=4.657e-11
+   all checks pass
+types=bt lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=6.864e-06 Dvec=7.678e-06 (hist 2.472e-05, 7m^3eta 3.844e-04) sumF=1.21663 EN=1.21663 I=1.21663 RHS1=1.1787 deficit(sumF-I)=1.328e-09
+   all checks pass
+types=bt lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=1.248e-06 Dvec=1.999e-06 (hist 5.819e-06, 7m^3eta 6.987e-05) sumF=1.07627 EN=1.07627 I=1.07627 RHS1=1.0684 deficit(sumF-I)=8.042e-11
+   all checks pass
+types=bt lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.399e-06 Dvec=1.362e-06 (hist 3.985e-06, 7m^3eta 7.833e-05) sumF=1.34007 EN=1.34007 I=1.34007 RHS1=1.3313 deficit(sumF-I)=4.098e-11
+   all checks pass
+types=ttt lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.747e-06 Dvec=2.401e-06 (hist 1.095e-05, 7m^3eta 3.302e-04) sumF=1.51210 EN=1.51210 I=1.51210 RHS1=1.4734 deficit(sumF-I)=1.482e-10
+   all checks pass
+types=ttt lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=1.171e-05 Dvec=1.997e-05 (hist 8.393e-05, 7m^3eta 2.213e-03) sumF=1.56628 EN=1.56628 I=1.56628 RHS1=1.3417 deficit(sumF-I)=9.689e-09
+   all checks pass
+types=ttt lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=3.667e-06 Dvec=6.001e-06 (hist 2.458e-05, 7m^3eta 6.931e-04) sumF=1.84695 EN=1.84695 I=1.84695 RHS1=1.7700 deficit(sumF-I)=9.803e-10
+   all checks pass
+types=ttt lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.425e-06 Dvec=1.408e-06 (hist 6.424e-06, 7m^3eta 2.692e-04) sumF=1.66201 EN=1.66201 I=1.66201 RHS1=1.6300 deficit(sumF-I)=4.256e-11
+   all checks pass
+types=btt lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.629e-06 Dvec=2.118e-06 (hist 9.480e-06, 7m^3eta 3.079e-04) sumF=1.80880 EN=1.80880 I=1.80880 RHS1=1.7726 deficit(sumF-I)=1.166e-10
+   all checks pass
+types=btt lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=1.043e-05 Dvec=1.693e-05 (hist 6.913e-05, 7m^3eta 1.971e-03) sumF=2.05739 EN=2.05739 I=2.05739 RHS1=1.8555 deficit(sumF-I)=7.245e-09
+   all checks pass
+types=btt lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=2.902e-06 Dvec=4.789e-06 (hist 1.933e-05, 7m^3eta 5.485e-04) sumF=1.92894 EN=1.92894 I=1.92894 RHS1=1.8670 deficit(sumF-I)=6.316e-10
+   all checks pass
+types=btt lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.445e-06 Dvec=1.408e-06 (hist 6.230e-06, 7m^3eta 2.731e-04) sumF=1.96318 EN=1.96318 I=1.96318 RHS1=1.9308 deficit(sumF-I)=4.267e-11
+   all checks pass
+types=t lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.511e-06 Dvec=1.397e-06 (hist 2.481e-06, 7m^3eta 1.058e-05) sumF=0.86605 EN=0.86605 I=0.86605 RHS1=0.8649 deficit(sumF-I)=3.986e-11
+   all checks pass
+types=t lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=5.679e-06 Dvec=5.772e-06 (hist 1.026e-05, 7m^3eta 3.975e-05) sumF=0.80044 EN=0.80044 I=0.80044 RHS1=0.7965 deficit(sumF-I)=6.124e-10
+   all checks pass
+types=t lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=1.321e-06 Dvec=1.131e-06 (hist 2.257e-06, 7m^3eta 9.246e-06) sumF=0.54706 EN=0.54706 I=0.54706 RHS1=0.5460 deficit(sumF-I)=2.429e-11
+   all checks pass
+types=t lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.295e-06 Dvec=1.336e-06 (hist 2.168e-06, 7m^3eta 9.065e-06) sumF=0.07536 EN=0.07536 I=0.07536 RHS1=0.0743 deficit(sumF-I)=3.718e-11
+   all checks pass
+types=tt lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.470e-06 Dvec=1.588e-06 (hist 5.277e-06, 7m^3eta 8.231e-05) sumF=0.50056 EN=0.50056 I=0.50056 RHS1=0.4914 deficit(sumF-I)=5.642e-11
+   all checks pass
+types=tt lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=6.932e-06 Dvec=1.033e-05 (hist 3.308e-05, 7m^3eta 3.882e-04) sumF=1.25127 EN=1.25127 I=1.25127 RHS1=1.2130 deficit(sumF-I)=2.276e-09
+   all checks pass
+types=tt lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=1.858e-06 Dvec=2.690e-06 (hist 8.057e-06, 7m^3eta 1.040e-04) sumF=0.95907 EN=0.95907 I=0.95907 RHS1=0.9477 deficit(sumF-I)=1.821e-10
+   all checks pass
+types=tt lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.356e-06 Dvec=1.383e-06 (hist 4.203e-06, 7m^3eta 7.595e-05) sumF=0.86462 EN=0.86462 I=0.86462 RHS1=0.8561 deficit(sumF-I)=4.179e-11
+   all checks pass
+types=bt lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.490e-06 Dvec=1.568e-06 (hist 5.195e-06, 7m^3eta 8.346e-05) sumF=1.33768 EN=1.33768 I=1.33768 RHS1=1.3284 deficit(sumF-I)=5.637e-11
+   all checks pass
+types=bt lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=6.219e-06 Dvec=8.627e-06 (hist 2.716e-05, 7m^3eta 3.482e-04) sumF=1.37423 EN=1.37423 I=1.37423 RHS1=1.3396 deficit(sumF-I)=1.517e-09
+   all checks pass
+types=bt lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=2.002e-06 Dvec=2.557e-06 (hist 7.868e-06, 7m^3eta 1.121e-04) sumF=1.86516 EN=1.86516 I=1.86516 RHS1=1.8530 deficit(sumF-I)=1.718e-10
+   all checks pass
+types=bt lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.426e-06 Dvec=1.378e-06 (hist 3.991e-06, 7m^3eta 7.986e-05) sumF=1.56414 EN=1.56414 I=1.56414 RHS1=1.5552 deficit(sumF-I)=4.213e-11
+   all checks pass
+types=ttt lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.771e-06 Dvec=2.376e-06 (hist 1.081e-05, 7m^3eta 3.348e-04) sumF=1.70289 EN=1.70289 I=1.70289 RHS1=1.6637 deficit(sumF-I)=1.438e-10
+   all checks pass
+types=ttt lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=1.348e-05 Dvec=1.866e-05 (hist 8.188e-05, 7m^3eta 2.548e-03) sumF=1.26174 EN=1.26174 I=1.26174 RHS1=1.0061 deficit(sumF-I)=8.131e-09
+   all checks pass
+types=ttt lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=3.779e-06 Dvec=6.040e-06 (hist 2.413e-05, 7m^3eta 7.142e-04) sumF=1.98832 EN=1.98832 I=1.98832 RHS1=1.9092 deficit(sumF-I)=9.865e-10
+   all checks pass
+types=ttt lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.416e-06 Dvec=1.407e-06 (hist 6.403e-06, 7m^3eta 2.676e-04) sumF=1.54196 EN=1.54196 I=1.54196 RHS1=1.5101 deficit(sumF-I)=4.254e-11
+   all checks pass
+types=btt lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.662e-06 Dvec=2.190e-06 (hist 9.713e-06, 7m^3eta 3.141e-04) sumF=2.79040 EN=2.79040 I=2.79040 RHS1=2.7535 deficit(sumF-I)=1.276e-10
+   all checks pass
+types=btt lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=9.583e-06 Dvec=1.637e-05 (hist 6.739e-05, 7m^3eta 1.811e-03) sumF=1.73669 EN=1.73669 I=1.73669 RHS1=1.5499 deficit(sumF-I)=6.538e-09
+   all checks pass
+types=btt lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=2.571e-06 Dvec=4.568e-06 (hist 1.819e-05, 7m^3eta 4.859e-04) sumF=2.12249 EN=2.12249 I=2.12249 RHS1=2.0671 deficit(sumF-I)=5.723e-10
+   all checks pass
+types=btt lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.448e-06 Dvec=1.403e-06 (hist 6.249e-06, 7m^3eta 2.737e-04) sumF=1.63216 EN=1.63216 I=1.63216 RHS1=1.5997 deficit(sumF-I)=4.433e-11
+   all checks pass
+types=t lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.359e-06 Dvec=1.281e-06 (hist 2.216e-06, 7m^3eta 9.511e-06) sumF=0.76697 EN=0.76697 I=0.76697 RHS1=0.7659 deficit(sumF-I)=3.387e-11
+   all checks pass
+types=t lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=5.611e-06 Dvec=5.115e-06 (hist 9.982e-06, 7m^3eta 3.928e-05) sumF=0.44065 EN=0.44065 I=0.44065 RHS1=0.4367 deficit(sumF-I)=5.113e-10
+   all checks pass
+types=t lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=1.687e-06 Dvec=1.425e-06 (hist 2.802e-06, 7m^3eta 1.181e-05) sumF=0.82497 EN=0.82497 I=0.82497 RHS1=0.8237 deficit(sumF-I)=3.537e-11
+   all checks pass
+types=t lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.486e-06 Dvec=1.311e-06 (hist 2.234e-06, 7m^3eta 1.040e-05) sumF=0.82754 EN=0.82754 I=0.82754 RHS1=0.8264 deficit(sumF-I)=3.681e-11
+   all checks pass
+types=tt lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.540e-06 Dvec=1.559e-06 (hist 5.244e-06, 7m^3eta 8.622e-05) sumF=0.95767 EN=0.95767 I=0.95767 RHS1=0.9481 deficit(sumF-I)=5.686e-11
+   all checks pass
+types=tt lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=7.310e-06 Dvec=9.473e-06 (hist 2.987e-05, 7m^3eta 4.094e-04) sumF=1.07982 EN=1.07982 I=1.07982 RHS1=1.0396 deficit(sumF-I)=1.882e-09
+   all checks pass
+types=tt lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=1.896e-06 Dvec=2.462e-06 (hist 8.181e-06, 7m^3eta 1.062e-04) sumF=0.71997 EN=0.71997 I=0.71997 RHS1=0.7084 deficit(sumF-I)=1.506e-10
+   all checks pass
+types=tt lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.432e-06 Dvec=1.373e-06 (hist 4.286e-06, 7m^3eta 8.017e-05) sumF=1.00069 EN=1.00069 I=1.00069 RHS1=0.9917 deficit(sumF-I)=4.207e-11
+   all checks pass
+types=bt lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.568e-06 Dvec=1.564e-06 (hist 5.038e-06, 7m^3eta 8.779e-05) sumF=1.79177 EN=1.79177 I=1.79177 RHS1=1.7820 deficit(sumF-I)=5.676e-11
+   all checks pass
+types=bt lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=6.407e-06 Dvec=9.033e-06 (hist 2.680e-05, 7m^3eta 3.588e-04) sumF=1.66658 EN=1.66658 I=1.66658 RHS1=1.6309 deficit(sumF-I)=1.671e-09
+   all checks pass
+types=bt lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=1.251e-06 Dvec=1.902e-06 (hist 5.547e-06, 7m^3eta 7.007e-05) sumF=1.02729 EN=1.02729 I=1.02729 RHS1=1.0194 deficit(sumF-I)=8.724e-11
+   all checks pass
+types=bt lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.404e-06 Dvec=1.389e-06 (hist 4.180e-06, 7m^3eta 7.861e-05) sumF=1.17355 EN=1.17355 I=1.17355 RHS1=1.1648 deficit(sumF-I)=4.168e-11
+   all checks pass
+types=ttt lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.779e-06 Dvec=2.427e-06 (hist 1.087e-05, 7m^3eta 3.362e-04) sumF=1.71695 EN=1.71695 I=1.71695 RHS1=1.6776 deficit(sumF-I)=1.537e-10
+   all checks pass
+types=ttt lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=1.138e-05 Dvec=2.004e-05 (hist 8.302e-05, 7m^3eta 2.150e-03) sumF=1.44014 EN=1.44014 I=1.44014 RHS1=1.2214 deficit(sumF-I)=9.689e-09
+   all checks pass
+types=ttt lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=3.588e-06 Dvec=5.959e-06 (hist 2.491e-05, 7m^3eta 6.782e-04) sumF=1.34428 EN=1.34428 I=1.34428 RHS1=1.2689 deficit(sumF-I)=8.909e-10
+   all checks pass
+types=ttt lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.413e-06 Dvec=1.408e-06 (hist 6.398e-06, 7m^3eta 2.671e-04) sumF=1.38851 EN=1.38851 I=1.38851 RHS1=1.3568 deficit(sumF-I)=4.235e-11
+   all checks pass
+types=btt lamB=1e-07 lamA=1e-07 lamS=1e-12 | eta=1.660e-06 Dvec=2.092e-06 (hist 9.261e-06, 7m^3eta 3.137e-04) sumF=1.62779 EN=1.62779 I=1.62779 RHS1=1.5909 deficit(sumF-I)=1.139e-10
+   all checks pass
+types=btt lamB=1e-06 lamA=1e-06 lamS=1e-11 | eta=1.033e-05 Dvec=1.636e-05 (hist 6.932e-05, 7m^3eta 1.953e-03) sumF=2.01580 EN=2.01580 I=2.01580 RHS1=1.8156 deficit(sumF-I)=6.494e-09
+   all checks pass
+types=btt lamB=3e-07 lamA=3e-07 lamS=0e+00 | eta=2.874e-06 Dvec=4.925e-06 (hist 1.931e-05, 7m^3eta 5.432e-04) sumF=2.43826 EN=2.43826 I=2.43826 RHS1=2.3769 deficit(sumF-I)=6.931e-10
+   all checks pass
+types=btt lamB=0e+00 lamA=0e+00 lamS=1e-12 | eta=1.406e-06 Dvec=1.406e-06 (hist 6.219e-06, 7m^3eta 2.657e-04) sumF=2.11812 EN=2.11812 I=2.11812 RHS1=2.0865 deficit(sumF-I)=4.374e-11
+   all checks pass

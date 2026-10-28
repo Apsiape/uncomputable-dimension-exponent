@@ -1,0 +1,182 @@
+{
+  "proof_files": [
+    {
+      "path": "paper/sections/clock.tex",
+      "sha256": "40203a6ff444f96d9a46e19896b4c21d6cd807560168863611ec307156ef5e20"
+    },
+    {
+      "path": "paper/sections/compiler.tex",
+      "sha256": "2299044bf6ebc3db7b343a99b899c533adc3bf0c6d37c915d3d3acd442672454"
+    },
+    {
+      "path": "paper/sections/count.tex",
+      "sha256": "889e7b62589a3f0fa74577cd48d524ea12bc8e3b598f80a75abea921973625ca"
+    },
+    {
+      "path": "paper/sections/finite.tex",
+      "sha256": "0de2cbde49d49fa482c2801a5afdf5cb4017785164ddd0b2ee224101a4a9cce3"
+    },
+    {
+      "path": "paper/sections/forcing.tex",
+      "sha256": "0fc5252ab04ffd479e312f1a833b2c9c212045b327562bba5df468101fd03916"
+    },
+    {
+      "path": "paper/sections/game.tex",
+      "sha256": "2020c69d624ee6e0ffcd8af53b522cf1f90c61cc9da4b2d3a0264be7d33e4ba3"
+    },
+    {
+      "path": "paper/sections/lower.tex",
+      "sha256": "e298861410f0bb6ff7e5d1931c8917a7aeca79eae620dcdd04b4e90fde1225eb"
+    },
+    {
+      "path": "paper/sections/obstructions.tex",
+      "sha256": "c4ba6d4bc01938dd3e959b13a499445e33f99212e66afd647c130b0db552d2f5"
+    },
+    {
+      "path": "paper/sections/prelim.tex",
+      "sha256": "97e772b7d9f03aca24e020fa850c582dc400b691a9537d51c5b6701b945918f9"
+    },
+    {
+      "path": "paper/sections/source.tex",
+      "sha256": "8841ee2a20af8932085214695aa00d0c0605677570ca5afb73ddf814996bc2ae"
+    }
+  ],
+  "check_files": [
+    {
+      "path": "anc/audit/check_models.py",
+      "sha256": "89c736c5cbafa684352bc3388a94f633bd0f03545f05960b1300cda2b7530725"
+    },
+    {
+      "path": "anc/audit/recorded/defects_N4.csv",
+      "sha256": "9d4dba84cd2cefeb4f9f91598e74865f1422087acb66750bfa9558f1c2ce0933"
+    },
+    {
+      "path": "anc/audit/recorded/defects_N6.csv",
+      "sha256": "36f4ca3d6b8e57b8eca7e1dd5d9b4e75c501e511bbf443c6ad9fb96005ea1983"
+    },
+    {
+      "path": "anc/audit/recorded/defects_N8.csv",
+      "sha256": "5863cdaaea36d1d1ede9c8a3680648aa784a968d97b23415c3f03c238f5a8e8a"
+    },
+    {
+      "path": "anc/audit/recorded/model_results.json",
+      "sha256": "21585c2ed23bc06e1265b723f78b47aec08a4b90a6ca66130add36efb5435749"
+    },
+    {
+      "path": "anc/audit/recorded/model_run.txt",
+      "sha256": "037bca32f857c870e432de8c2116f3c2582f359b50846198b6d894fe61c58056"
+    },
+    {
+      "path": "anc/crosscheck/gadgets.py",
+      "sha256": "5bfc85710c4722d7efea4ff6b6c0df93246f2f38582589b187175b67afb8278f"
+    },
+    {
+      "path": "anc/crosscheck/r1.py",
+      "sha256": "3f4df1e91e3e3d1a5d5b2285a747940e6cc07e8066a2b86bd750c9c73c3910d6"
+    },
+    {
+      "path": "anc/crosscheck/results.txt",
+      "sha256": "fe9779992e91ec7dfdf989b602269cc8edcc2a8dbe8d56f064b7dc847b1abf32"
+    },
+    {
+      "path": "anc/gadgets/gadget_check.py",
+      "sha256": "caf448bccbb294eb6798e984282c6edecdc439ce046a88597cb77f30b542ca77"
+    },
+    {
+      "path": "anc/gadgets/results.txt",
+      "sha256": "e08f2e89509c0287cab0a76086be85f8e87315e85ddc32445a37dc3aca4067a7"
+    },
+    {
+      "path": "verify/.gitignore",
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "path": "verify/compiler_checks.py",
+      "sha256": "554c55b9114cc04f2fd6c119af99a854a136e1c0b8af2b2506eb5bc537e5a081"
+    },
+    {
+      "path": "verify/dims_study.py",
+      "sha256": "60da4b99cb91464404ee8f9b6d793664b4102f9e1897959e9a29b863ed929373"
+    },
+    {
+      "path": "verify/e2_engine.py",
+      "sha256": "7f552e68cf79f445edf3c42879bca45312543354b6914e34723a2f45f5ccc533"
+    },
+    {
+      "path": "verify/e2_model.py",
+      "sha256": "791faae2f12275c531891726ad545335a0e73dcd696f7253aa445ded8e6cc24d"
+    },
+    {
+      "path": "verify/report_tables.py",
+      "sha256": "5475041f980d8b230a9df40c25c05f46977d8a54dc440c70696f81db397eebb4"
+    },
+    {
+      "path": "verify/run_e2.py",
+      "sha256": "eb00e97b1053826a88340902d700fb958c9752daba99444bd7ae6deb3e537d0f"
+    },
+    {
+      "path": "verify/out/ablation_k_N8.json",
+      "sha256": "926c60ae74ecc29eb20c755358fc9494de1a5ae8a82a9e4043b3458904465f69"
+    },
+    {
+      "path": "verify/out/ablations_N4.json",
+      "sha256": "a302711557144efbdbdba76528dfac134cb37ca19a0ee26c3578d9fe156f383d"
+    },
+    {
+      "path": "verify/out/ablations_N6.json",
+      "sha256": "b27196d4ec3fdd3ea2fe9839f0aa4429612909f5fa7c00c8bf8f6940e6373b57"
+    },
+    {
+      "path": "verify/out/compiler_checks.json",
+      "sha256": "1d527e255a8f02df9754cd311d7eaf5a5bf0c613b05c3e4d26ce7e0f15fb72b5"
+    },
+    {
+      "path": "verify/out/dims_study.json",
+      "sha256": "2ca3332296ad0608fea6bea9651028081a1959989cfd3e1c190ed974dcdf097e"
+    },
+    {
+      "path": "verify/out/log_ablation_k_N8.txt",
+      "sha256": "68107686be24608cc43d6d9708371992de9aebf64156bde52a78a0608e31a031"
+    },
+    {
+      "path": "verify/out/log_ablations.txt",
+      "sha256": "b1a32a8b7f35065850869e0339b072e3967edf211226b0cd6a4e1c83ececc5d1"
+    },
+    {
+      "path": "verify/out/log_N4_N6_full_ablate.txt",
+      "sha256": "6ae9c5010b122a9acec50b70d1d65a3dbee13ab6377c95365069a515744cb032"
+    },
+    {
+      "path": "verify/out/log_N8.txt",
+      "sha256": "d3c60606d9f9169231796e99738948ff49cc2ef5c1e592094ed69d8eb24cea65"
+    },
+    {
+      "path": "verify/out/report_tables.md",
+      "sha256": "fcd66b7d079308c113398788702f65eed32f21a8c6441c22afa289fc880b1cfc"
+    },
+    {
+      "path": "verify/out/results_N4.json",
+      "sha256": "8b0785c1ff2aa3187c5bff4469b58cc0cdd90fa188efffd73fb51e42f5f9a4c1"
+    },
+    {
+      "path": "verify/out/results_N6.json",
+      "sha256": "3c71a2bd00c57eafac302d786babb003d2c72e8d628b9739b43c2e1000506e75"
+    },
+    {
+      "path": "verify/out/results_N8.json",
+      "sha256": "5be16380e4992f361dde6fbd525942cf8ef6b5a00c1559b935206fdec2711df0"
+    },
+    {
+      "path": "verify/out/table_N4.md",
+      "sha256": "2919da3c4f72765d574de7990d6922bab09fb6f7c257f05228899b40677e68df"
+    },
+    {
+      "path": "verify/out/table_N6.md",
+      "sha256": "3099a297d7fc4b368b735f3d48ef18fc3312dd234c0bbdf47122a925b1d5e4fa"
+    },
+    {
+      "path": "verify/out/table_N8.md",
+      "sha256": "ca05c95a5bab8ef33e2cbd250ab6dc2e7a27d2d6ab3900a581deb5e4c80b1f6d"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+max ||(I-F)Q'||_op = 4.79e-15 (must be ~0: Q' <= F)
+max |Q'-Q|_rho / e = 3.7050 (claimed <= 6)
+max ||R* xi|| / (||R xi|| + ||[R,xi]||) = 1.0000 (must be <= 1)
