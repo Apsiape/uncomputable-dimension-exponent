@@ -2,7 +2,7 @@
 
 Seth Douglas and Nidhal Mghirbi. Version 2.0.0, October 2026.
 
-**Concept DOI (latest version): [10.5281/zenodo.23701733](https://doi.org/10.5281/zenodo.23701733).** The released v1.0.0 is [A nonlocal game whose dimension exponent is uncomputable](https://doi.org/10.5281/zenodo.23701734).
+**Version 2.0.0 DOI: [10.5281/zenodo.23717986](https://doi.org/10.5281/zenodo.23717986).** Concept DOI (latest version): [10.5281/zenodo.23701733](https://doi.org/10.5281/zenodo.23701733). The released v1.0.0 is [A nonlocal game whose dimension exponent is uncomputable](https://doi.org/10.5281/zenodo.23701734).
 
 ## Abstract
 

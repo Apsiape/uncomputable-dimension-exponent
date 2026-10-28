@@ -3,7 +3,7 @@ message: "Please cite the paper; this repository supplies its source and ancilla
 type: software
 title: "The uncomputable price of precision"
 version: 2.0.0
-doi: 10.5281/zenodo.23701733
+doi: "10.5281/zenodo.23717986"
 repository-code: "https://github.com/Apsiape/uncomputable-dimension-exponent"
 abstract: "Which numbers can be the entanglement price of perfection for one fixed finite game? Every positive left-computably-enumerable real occurs, and the exponents go strictly beyond this class. For each such $\\alpha$ we construct a finite Boolean constraint-system game of quantum value one, with no finite-dimensional perfect strategy, whose least local dimension obeys $\\log_2D_G(\\varepsilon)=\\alpha\\log_2(1/\\varepsilon)+o(\\log(1/\\varepsilon))$. The infimum one-way distillable entanglement of the original mixed strategy state has the same coefficient. A second construction realizes $\\alpha=(4-\\theta_K)/4$, a noncomputable right-c.e. real that is not left-c.e., where $\\theta_K=\\sum_{e\\in K}4^{-(e+1)}$ and $K$ is the halting set. As in our earlier work, every dimension exponent is $\\Delta^0_2$ whenever its limit exists. In the reset model of our companion paper on the heat price of precision, local-reset heat has coefficient $2\\alpha$, while joint-reset heat stays bounded. The halting-degree game of version 1.0.0 and its proofs are retained. A finite address reader, extra clocks and polynomial residual powers give the left-c.e. realization; triangular extraction gives the mixed-state bound. To escape the exact-trace barrier, a fixed polynomial-testing program uses finite perfect witnesses from MIP*=RE, admitted with sublinear logarithmic dimension overhead. Exact and matrix-approximable trace minima then differ. Both left-c.e. and non-left-c.e. uncomputable examples accumulate at zero. The full spectra remain open."
 license:
@@ -30,5 +30,5 @@ preferred-citation:
       given-names: Nidhal
   year: 2026
   version: 2.0.0
-  doi: 10.5281/zenodo.23701733
-  notes: "Preprint. Lean formalization of the version 1.0.0 core is in progress and not complete. Concept DOI (latest version): 10.5281/zenodo.23701733. Version 1.0.0 DOI: 10.5281/zenodo.23701734. Text CC BY 4.0; scripts MIT or Apache 2.0; see RIGHTS.md."
+  doi: "10.5281/zenodo.23717986"
+  notes: "Preprint. Lean formalization of the version 1.0.0 core is in progress and not complete. Version 2.0.0 DOI: 10.5281/zenodo.23717986. Concept DOI (latest version): 10.5281/zenodo.23701733. Version 1.0.0 DOI: 10.5281/zenodo.23701734. Text CC BY 4.0; scripts MIT or Apache 2.0; see RIGHTS.md."
