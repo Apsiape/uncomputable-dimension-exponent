@@ -1,6 +1,6 @@
 # The uncomputable price of precision
 
-Seth Douglas and Nidhal Mghirbi. Version 4.0.0, October 2026. Concept DOI: [10.5281/zenodo.23701733](https://doi.org/10.5281/zenodo.23701733).
+Seth Douglas and Nidhal Mghirbi. Version 4.0.0, October 2026. DOI: [10.5281/zenodo.23753741](https://doi.org/10.5281/zenodo.23753741). Concept DOI (all versions): [10.5281/zenodo.23701733](https://doi.org/10.5281/zenodo.23701733).
 
 ## Abstract
 
