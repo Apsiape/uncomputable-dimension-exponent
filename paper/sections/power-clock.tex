@@ -1,0 +1,91 @@
+\section{Polynomial localization and stopped products}\label{sec:power-clock}
+Throughout the power part $\xi=\sqrt\rho$, $|R|_\rho=\|R\xi\|_2$. A weighted precision-$\delta$ model has exact bounded generator domains, defining residuals at most $\delta$, and $\|[Y,\xi]\|_2\le\delta$ for every generator. Constants depend on the fixed finite presentation, not dimension, state or horizon. For a contraction word $v$ of length $l$, \cref{lem:transport} gives
+\begin{equation}\label{eq:power-transport}
+ |Rv|_\rho\le|R|_\rho+\|R\|\|[v,\xi]\|_2,\qquad \|[v,\xi]\|_2\le l\delta.
+\end{equation}
+Adjoint and translated fixed-polynomial residuals obey the same rule with fixed constants.
+
+\subsection{The complete clock interface}
+Use two commuting complete Cantor-clock copies, fuel and time, each with positive contraction $A$, projection $P$, unitary $T$ and reflection $X$ satisfying
+\[
+ [A,P]=0,\qquad TAT^*=4A-3P,\qquad XPX=I-P,\qquad [X,TAT^*]=0.
+\]
+Require $U$ unitary, commuting with the entire fuel copy, with the \emph{unguarded} increment
+\[
+ U=X_t\bigl[(I-P_t)+(T_tUT_t^*)P_t\bigr].
+\]
+The reset projection $Z$ commutes with $A_f,A_t$ and, for $W=T_fT_t$, obeys
+\begin{equation}\label{eq:power-reset}
+ Z=(I-P_f)+P_f(I-P_t)WZW^*.
+\end{equation}
+This is the reset relation \eqref{eq:reset}; the increment used here is the unguarded one of \cref{prop:increment}, not cancellation of a small guard. Write $Y_h=U^{-h}YU^h$ and $Y_+=U^*YU$. Every instantaneous working contraction commutes with $A_f,A_t$. Static inputs $T_0,S_0$ also commute with the full clock copies and $U$; they need not commute with $\rho$.
+
+\begin{proposition}[Polynomial clock localization]\label{prop:power-localization}
+For $H\ge2$, choose $H<2^k\le2(H+1)$, put $P_{f,i}=T_f^iP_fT_f^{-i}$ and similarly for time, and take the ordered contraction
+\[
+ Q=\left(\prod_{i<k}P_{f,i}\right)(I-P_{f,k})\left(\prod_{i<k}(I-P_{t,i})\right).
+\]
+There are fixed $C,a$ such that, for $r=C(H+1)^a\delta$,
+\begin{align*}
+ |(I-Z)Q|_\rho&\le r,& |Z_hQ|_\rho&\le r\quad(1\le h\le H),\\
+ |[Y_h,Q]|_\rho&\le r\quad(0\le h\le H),&
+ |T_0|_\rho&\le2^{k+1/2}\|T_0Q\xi\|_2+r,\\
+ \|S_0Q\xi\|_2&\le|S_0|_\rho+r.
+\end{align*}
+Here $Y$ ranges over any fixed finite list of instantaneous working contractions. No inter-time commutation is imposed, and $Q$ need not be a projection.
+\end{proposition}
+\begin{proof}
+Linear spectral repair in \cref{lem:clock-repair}, with \eqref{eq:linear-repair}--\eqref{eq:digit-repair}, gives raw digit, digit commutator and triangular flip errors to depth $k$ at most $C(k+1)^34^{k+1}\delta$. Replacing a raw digit by $p(s^i(\widehat A))$, using the Hilbert--Schmidt Lipschitz estimate of \cref{lem:fc} with constant at most $2\cdot4^i$, and replacing it back gives the same bound for $[Y,P_i]$. Indeed $[Y,\widehat A]$ and $[\widehat A,\xi]$ are $O(\delta)$ by linear repair and \eqref{eq:power-transport}. No commutation of $Y$ with a clock shift or flip is used.
+
+Set $V=T_tUT_t^*$, $B=(I-P_t)+VP_t$, $W_0=X_tU$. The increment says that $B-W_0$ and its adjoint have weighted norm $O(\delta)$; $W_0$ is unitary and $\|B\|\le2$. The literal identities
+\[
+ BB^*=I-P_t+VP_tV^*,\qquad
+ BB^*-I=(B-W_0)B^*+W_0(B^*-W_0^*)
+\]
+and right transport give $|VP_tV^*-P_t|_\rho=O(\delta)$ and then $|[V,P_t]|_\rho=O(\delta)$. This is a linear vector estimate, not a square root of an expectation.
+Expanding $B^*P_jB$ and using triangular flips yields, to the preceding weighted error,
+\[
+ U^*P_0U=I-P_0,\quad
+ U^*P_jU=(I-P_0)P_j+P_0T_t(U^*P_{j-1}U)T_t^*\quad(j\ge1).
+\]
+The canonical output bit is $F_j=P_j+(I-2P_j)\prod_{i<j}P_i$. Substituting the preceding canonical expression and reducing digit squares and commutators gives
+$E_j\le cE_{j-1}+c(j+1)^b4^j\delta$, hence $E_j\le C_0^j(j+1)^{b+1}\delta$ for a fixed $C_0>\max(c,4)$.
+Each $F_j$ has bounded coefficient mass, and a prefix or complementary prefix has mass at most $5^k$ and word length polynomial in $k$. Reduction in the commuting Boolean algebra gives a single translated raw binary prefix with error $C_*^k\operatorname{poly}(k)\delta$.
+
+At the next physical translation use this raw prefix again. Induction through $h\le H$ adds $hC_*^k\operatorname{poly}(k)\delta+\operatorname{poly}(h,k)\delta$ by \eqref{eq:power-transport}; it does not multiply $C_*^k$ at every time. Since $2^k\le2(H+1)$, every cost is a fixed polynomial in $H$.
+Unwind \eqref{eq:power-reset} through the first $k$ fuel ones and the next fuel zero. On $Q$, the terms before depth $k$ vanish, the depth-$k$ term equals $Q$, and its remainder is killed by that zero. On a translated time residue $1\le h\le H<2^k$, one of the first $k$ time bits is one, so the reset term vanishes. The expansion has depth $k+1$ and coefficient mass only exponential in $k$. This proves the first two estimates.
+The conjugate $U^hQU^{-h}$ is the unchanged fuel prefix times a translated time prefix, up to this polynomial error. It commutes with instantaneous $Y$ by the digit estimate. Conjugate back and pay $O(H\delta)$ to obtain $[Y_h,Q]$. Moving $\xi$ across $Q$ proves the $S_0$ estimate.
+
+For the input charge, read the $2k+1$ specified raw bits in order as successive projective measurements, with outcome columns $Q_b$. Eliminating the leftmost projection gives exactly $\sum_bQ_b^*Q_b=I$, irrespective of digit commutation. Thus $\sum_b\|Q_bT_0\xi\|_2^2=|T_0|_\rho^2$.
+A triangular flip exchanges its own bit and preserves later specified bits to the digit error. For a fixed later suffix, move this flip from left to right; its commutators with that suffix and $T_0$, its own-bit error and its commutator with $\xi$ bound the difference of the two outcome \emph{amplitudes} by $e=\operatorname{poly}(H)\delta$. For $|u-v|\le e$,
+$\sqrt{u^2+v^2}\le\sqrt2u+e$. Eliminate bits successively, using digit commutators when reordering. The main factor is $2^{(2k+1)/2}$; a crude error factor $2^{2k+1}\le8(H+1)^2$ remains polynomial. Finally commute static $T_0$ through the selected column. This proves the input charge and every assertion.
+\end{proof}
+
+For $\phi=Q\xi$, any fixed local residual translated to a time at most $H$ and inserted in an ordered history has bound
+\begin{equation}\label{eq:power-ledger}
+ \eta_H=C(H+1)^a\delta.
+\end{equation}
+Increase $a$ once to cover the finite list. A shifted history has expanded word length $O(H^2)$; use \eqref{eq:power-transport}. Reset terms are removed by commuting $Q$ across the current polynomial and history, applying $Z_hQ$, and paying for the right suffix. We never normalize a retained branch or sum over an exponential tree of machine histories.
+
+\subsection{The norm estimate behind stopping}
+\begin{lemma}[Stopped products]\label{lem:power-stopped}
+Suppose exact columns $L_h,K_H,B_j$ satisfy $\sum_hL_h^*L_h+K_H^*K_H+\sum_jB_j^*B_j=I$, with $\|\phi\|\le1$. Let $C_h$ be contractions and positive numbers $M_h,N_h$ satisfy
+\[
+ \|L_hT_0\phi-M_h^{-1}C_hL_h\phi\|\le r,\quad
+ \|L_hS_0\phi-(2N_h)^{-1}L_h\phi\|\le r,
+\]
+\[
+ \|K_HT_0\phi-M_H^{-1}C_HK_H\phi\|\le r,\qquad
+ \left(\sum_j\|B_jT_0\phi\|^2\right)^{1/2}\le r.
+\]
+If $M_h\ge1$, then with $R_H=\max_{h<H}2N_h/M_h$,
+\[
+ \|T_0\phi\|\le M_H^{-1}+R_H(\|S_0\phi\|+\sqrt H r)+C\sqrt{H+1}\,r.
+\]
+\end{lemma}
+\begin{proof}
+Put $a_h=\|L_h\phi\|$, $b_h=\|L_hS_0\phi\|$. The stop estimate gives $a_h\le2N_h(b_h+r)$, and the other gives $\|L_hT_0\phi\|\le M_h^{-1}a_h+r$. Euclidean summation and $\sum_hb_h^2\le\|S_0\phi\|^2$ bound all stopped columns by $R_H(\|S_0\phi\|+\sqrt H r)+\sqrt H r$. The terminal column is at most $M_H^{-1}+r$, and the bad columns have aggregate at most $r$. Apply exact completeness to $T_0\phi$ and the Euclidean triangle inequality.
+\end{proof}
+
+For constant products $M_h=m^h$, $N_h=n^h$, the same proof with stop coefficient $n^{-h-1}$ gives
+$\|T_0\phi\|\le C_{m,n}[m^{-H}+(n/m)^H(\|S_0\phi\|+\sqrt H r)+\sqrt H r]$ when $m\le n$. Dividing each update by its actual product makes errors additive. With $H=\log_n(1/\delta)-O(\log\log(1/\delta))$, the resulting calibrated exponent is $\log m/\log n$, including $m=n$. This is the constant-multiplier specialization of the stopped estimate; the variable products below use the same complete-column argument.

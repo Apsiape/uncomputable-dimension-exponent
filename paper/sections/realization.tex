@@ -1,91 +1,9 @@
 \section{Every positive left-c.e. exponent}\label{sec:realization}
-The halting game uses separated address cylinders so that its coefficient has an explicit Turing degree. This first realization step, retained from version 2.0.0, treats arbitrary left-c.e. reals by reading the whole address. The clocks, reset, carry and conditional measurement estimates stay the same. Section~\ref{sec:classification} will replace monotone acceptance by stop-or-continue verification to reach all positive $\Delta^0_2$ exponents.
+The halting game uses separated address cylinders so that its coefficient has an explicit Turing degree. This realization step treats arbitrary left-c.e. reals by reading the whole address. The clocks, reset, carry and conditional measurement estimates stay the same. Section~\ref{sec:classification} will replace monotone acceptance by stop-or-continue verification to reach all positive $\Delta^0_2$ exponents.
 
-\subsection{A finite reader}
-Fix a computable increasing sequence of rationals $0\le q_s\le1$ tending to $\theta\in[0,1]$. For a binary address $x=(b_0,b_1,\ldots)$ put
-\[
- v(x)=\sum_{j\ge0}b_j2^{-j-1},\qquad
- p_s=\sum_{j<s}b_j2^{s-1-j}.
-\]
-At stage $s\ge1$, a fixed program computes $q_s$, reads the next bit, updates $p_s$, and halts if
-\begin{equation}\label{eq:reader-accept}
- (p_s+1)/2^s<q_s.
-\end{equation}
-Counter instructions implement the integer arithmetic and strict rational comparison. Each stage takes at least one instruction. Acceptance implies $v(x)\le(p_s+1)/2^s<\theta$; conversely, if $v(x)<\theta$, the two sequences $(p_s+1)/2^s\to v(x)$ and $q_s\to\theta$ eventually satisfy~\eqref{eq:reader-accept}. Thus the program halts exactly on $\{v<\theta\}$. Only the finite program for $(q_s)$ occurs in the presentation; $\theta$ is not an operator coefficient.
-
-Here is the full change to Section~\ref{sec:source}. Delete $L,R$, equations~\eqref{eq:decode-L}--\eqref{eq:decode-R}, and their occurrences in initialization and commutation lists. Retain all other clock, reset, carry and conditional relations. Add positive contractions $A_{\rm r},C_{\rm r}$ and a projection $P_{\rm r}$ to the instantaneous commuting workspace, with
-\begin{equation}\label{eq:reader-domain}
- 4A_{\rm r}=3P_{\rm r}+C_{\rm r},\qquad [P_{\rm r},C_{\rm r}]=0.
-\end{equation}
-The workspace commutes with $Z,A_a,A_f,A_t,F$ as before. The flag still commutes with $A_a$ and the complete fuel and time sets, including $U$; all the conditional-clock commutations are retained. Initialize every ordinary counter to $I$, the start control to $I$, the other controls to zero, and $A_{\rm r}$ to $A_a$. A READ control $q_\sigma$ has selectors $q_\sigma P_{\rm r}$ and $q_\sigma(I-P_{\rm r})$. If $Q_{\rm r}$ is the sum of READ controls, set
-\begin{equation}\label{eq:reader-step}
- \Step(A_{\rm r})=Q_{\rm r}C_{\rm r}+(I-Q_{\rm r})A_{\rm r}.
-\end{equation}
-Include $A_{\rm r}$, together with every ordinary counter and control, in~\eqref{eq:initialize}--\eqref{eq:transition}. In particular,
-\[
- ZA_{\rm r}=ZA_a,\qquad
- U^*A_{\rm r}U=Z_+A_a+(I-Z_+)\Step(A_{\rm r}).
-\]
-The bit and tail are witnesses, like the zero-test witnesses; they need no separate update equations. Call this finite rational presentation $\mathcal P_\theta$.
-
-\begin{lemma}[Reader forcing]\label{lem:reader-forcing}
-Every exact tracial model of $\mathcal P_\theta$ has $\tau(F)\ge\theta$. Uniformly over its weighted precision-$\delta$ models,
-\begin{equation}\label{eq:reader-flag}
- \Tr(\rho F)\ge\theta-\omega_\theta(\delta),\qquad
- \omega_\theta(\delta)\longrightarrow0.
-\end{equation}
-\end{lemma}
-\begin{proof}
-On the kernel and range of $P_{\rm r}$, equation~\eqref{eq:reader-domain} places the spectrum of $A_{\rm r}$ in $[0,1/4]$ and $[3/4,1]$, respectively. Therefore
-\[
- P_{\rm r}=p(A_{\rm r}),\qquad C_{\rm r}=s(A_{\rm r}).
-\]
-This conclusion does not require Cantor spectrum in advance.
-
-Let $B_w$ specify an $s$-bit address word $w$ satisfying~\eqref{eq:reader-accept}. Every extension follows the same computation to a halt, at some time $h$. It may halt at an earlier stage; in either case it halts by stage $s$ after at most $s$ reads. Choose $2^k>h$ and put $Q_0=B_wC_kD_k(I-F)$. These factors commute. The reset part of Lemma~\ref{lem:initialization} is independent of the deleted decoder and initializes this subspace.
-
-The reader requires an operator induction in addition to the scalar counter induction of Theorem~\ref{thm:flag}. After $j$ reads, track
-\begin{equation}\label{eq:reader-induction}
- (A_{\rm r})_\ell Q_0=s^j(A_a)Q_0.
-\end{equation}
-The right side commutes with $Q_0$. Taking adjoints shows that $Q_0$ reduces the self-adjoint left side. Functional calculus on that reducing subspace gives
-\[
- (P_{\rm r})_\ell Q_0=b_jQ_0,\qquad
- (C_{\rm r})_\ell Q_0=s^{j+1}(A_a)Q_0
-\]
-whenever the next bit is read. All bits read before the halt belong to $w$. On other instructions the reader remains fixed. The ordinary counters and controls have their prescribed scalar right actions, with zero tests forced by Lemma~\ref{lem:initialization}. There is no reset before $h$. Thus~\eqref{eq:transition} proves the initialized history through its halt. As in Theorem~\ref{thm:flag}, $q_{\rm halt}\le F$ and $[F,U]=0$ force $Q_0=0$. Conjugating by successive fuel and time flips and adding removes $C_k,D_k$, giving $B_w\le F$.
-
-The length-$s$ address cylinders have trace $2^{-s}$. The number accepted at stage $s$ is
-\[
- a_s=\max\{0,\lceil2^sq_s\rceil-1\},\qquad
- 2^{-s}a_s\ge q_s-2^{-s}.
-\]
-Summing accepted cylinders gives $\tau(F)\ge q_s-2^{-s}$, hence $\tau(F)\ge\theta$. This includes $\theta=0$ and $\theta=1$: the possibly unaccepted all-ones address has trace zero. Finally the bounded moment-limit and tracial GNS argument in Theorem~\ref{thm:flag} applies to all the added bounded variables and proves~\eqref{eq:reader-flag}.
-\end{proof}
-
-\begin{lemma}[Finite reader models]\label{lem:reader-finite}
-For even $N\ge2$, $\mathcal P_\theta$ has flat models of dimension
-\begin{equation}\label{eq:reader-dimension}
- d_N=2^{3N+k_N},\qquad k_N=\theta N+o(N),
-\end{equation}
-with every defining residual at most $3\cdot4^{-N}$ in operator norm. Every new program and reader equation is exact.
-\end{lemma}
-\begin{proof}
-Use the three $N$-bit registers of Theorem~\ref{thm:finite}, with bit zero least significant for increment. Write
-\[
- v_N(x)=\sum_{j<N}b_j(x)2^{-j-1},\quad
- \vartheta_N=q_{2^N},\quad f_N(x)=1_{\{v_N(x)<\vartheta_N\}}.
-\]
-Read the $N$ bits followed by zeros. The Cantor reader and its witnesses remain exact after any number of reads. Assign all workspace entries the history~\eqref{eq:history}, with this initialization. The next history point is reset precisely when its time residue is zero, including the cyclic boundary and all-ones fuel. Thus all transitions are exact. A displayed halt has accepting stage $s\le2^N$, so $v_N(x)<q_s\le q_{2^N}$; hence $q_{\rm halt}\le F$ is exact. Specifying $q_{2^N}$ may take arbitrarily long classical computation. It does not lengthen a displayed history or add a tensor factor.
-
-The moving-window estimate holds for this new mask. On an aligned block of $2^r$ consecutive address integers, the radical-inverse values $v_N$ are $(j+u)/2^r$, $0\le j<2^r$, for a fixed $u\in[0,1)$. Their count below $\vartheta_N$ differs from $2^r\vartheta_N$ by at most one. Decompose an ordinary interval of length $L$ into at most two aligned dyadic blocks of each size, and a cyclic interval into at most two ordinary intervals. Uniformly in the starting point,
-\begin{equation}\label{eq:reader-window}
- \sum_{j=1}^Nf_N(x-j)=N\vartheta_N+O(\log(N+2)).
-\end{equation}
-This is the elementary radical-inverse discrepancy argument associated with van der Corput~\cite{vdC35}. It is proved here for the moving windows used by the construction.
-
-Use this $f_N$ and $k_N=1+\max_x\sum_{j=1}^Nf_N(x-j)$ in~\eqref{eq:finite-V}--\eqref{eq:dressing}. The slot noncollision, geometric series and dressing arguments in Theorem~\ref{thm:finite} use only a Boolean mask and this slot bound. Their residual estimates therefore still hold. Since $\vartheta_N\to\theta$, equation~\eqref{eq:reader-window} gives~\eqref{eq:reader-dimension}. The full address mean differs from $\vartheta_N$ by at most $2^{-N}$, so these flat models also have $\Tr(\rho F)\to\theta$.
-\end{proof}
+The finite reader, its forcing lemma and its simultaneous finite models are given in Appendix~\ref{app:reader}. We apply Lemmas~\ref{lem:reader-forcing} and~\ref{lem:reader-finite} below.
+\setcounter{theorem}{2}
+\setcounter{equation}{7}
 
 \subsection{Adding clocks and powering equations}
 \begin{proposition}\label{prop:realization-parameters}

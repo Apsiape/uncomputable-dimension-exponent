@@ -1,0 +1,51 @@
+\section{Every positive left-c.e. exponent}\label{sec:realization}
+The halting game uses separated address cylinders so that its coefficient has an explicit Turing degree. This realization step treats arbitrary left-c.e. reals by reading the whole address. The clocks, reset, carry and conditional measurement estimates stay the same. Section~\ref{sec:classification} will replace monotone acceptance by stop-or-continue verification to reach all positive $\Delta^0_2$ exponents.
+
+The finite reader, its forcing lemma and its simultaneous finite models are given in Appendix~\ref{app:reader}. We apply Lemmas~\ref{lem:reader-forcing} and~\ref{lem:reader-finite} below.
+\setcounter{theorem}{2}
+\setcounter{equation}{7}
+
+\subsection{Adding clocks and powering equations}
+\begin{proposition}\label{prop:realization-parameters}
+For every $r\in\N$, integer $q\ge1$ and left-c.e. $\theta\in[0,1]$, there is a fixed finite rational BCS game $G_{\theta,r,q}$ of quantum value one, with no finite-dimensional perfect strategy, and
+\begin{equation}\label{eq:parameter-exponent}
+ \log D_{G_{\theta,r,q}}(\eps)
+ =\frac{3+r+\theta}{4q}\log(1/\eps)+o(\log(1/\eps)).
+\end{equation}
+\end{proposition}
+\begin{proof}
+Append $r$ copies of the compulsory clock, requiring each complete new generator set to commute with all generators outside that clock. Tensoring the upper models adds $rN$ to logarithmic dimension. For the lower bound, append the new compulsory digit families to the order in Lemma~\ref{lem:joint}. Its word-interchange argument bounds all new cross terms by a polynomial in $M$ times $\delta$. The same error form $C_r(M+1)^64^M\delta$ holds, with $m=(4+r)M$ and $b=(3+r)M$. Neither the carry argument nor any other quantitative step uses the removed decoder. Applying Theorem~\ref{thm:count} and Lemma~\ref{lem:reader-forcing}, at depth~\eqref{eq:depth}, gives
+\begin{equation}\label{eq:reader-source-profile}
+ \log W(\delta)\ge(3+r+\theta)\log_4(1/\delta)
+ -o(\log(1/\delta)).
+\end{equation}
+Indeed the intermediate count is $(3+r)M+\sum_{i<M}\Tr(\rho F_i)-o(1)$, and state transport bounds the sum below by $M(\theta-\omega_\theta(\delta))-O(M^2\delta)$.
+
+Replace every defining polynomial equation $p=0$, including specified cross-commutators, by $h_q(p)=0$, where
+\begin{equation}\label{eq:power-polynomial}
+ h_q(p)=\begin{cases}
+ (p^*p)^{q/2},&q\text{ even},\\
+ p(p^*p)^{(q-1)/2},&q\text{ odd}.
+ \end{cases}
+\end{equation}
+Keep the exact variable domains and the weighted state-commutator conditions. Since $h_q(p)^*h_q(p)=(p^*p)^q$, scalar Jensen applied to the probability measure $B\mapsto\Tr(\rho1_B(p^*p))$ gives
+\begin{equation}\label{eq:power-jensen}
+ \hs{p\sqrt\rho}\le\hs{h_q(p)\sqrt\rho}^{1/q}.
+\end{equation}
+No commutation between $\rho$ and $p^*p$ is needed. A powered precision-$\eta$ model is consequently an original precision-$\eta^{1/q}$ model, also for its state commutators when $\eta\le1$. Conversely the operator-norm bounds of Lemma~\ref{lem:reader-finite} give
+\[
+ \opn{h_q(p)}=\opn p^q\le3^q4^{-qN},
+\]
+and the flat state commutators vanish. All powered equations are fixed rational $*$-polynomials. Theorem~\ref{thm:compiler} and the game transfer give original precision $(C\sqrt\eps)^{1/q}$ for the lower bound, and upper loss $C16^{-qN}$. Taking an even $N=\log(1/\eps)/(4q)+O(1)$ above the required precision proves~\eqref{eq:parameter-exponent}. All compiler dimension multipliers are constant for each fixed presentation. The upper losses tend to zero; the lower bound diverges, excluding a finite-dimensional perfect strategy.
+\end{proof}
+
+\begin{proof}[The left-c.e. dimension case of Theorem~\ref{thm:realization}]
+Given a positive left-c.e. $\alpha$, choose integers $q\ge1$ and $m\ge3$ with $m\le4q\alpha<m+1$. Put $r=m-3$ and $\theta=4q\alpha-m\in[0,1)$. This is left-c.e.; an increasing rational name is $\max(0,4q\alpha_s-m)$. Proposition~\ref{prop:realization-parameters} gives exponent $\alpha$. The integers $q,m$ are chosen once for the given $\alpha$. The usable-entanglement assertion is proved in Section~\ref{sec:usable}.
+\end{proof}
+
+\begin{corollary}\label{cor:accumulation}
+Uncomputable dimension exponents of fixed finite BCS games accumulate at zero. In fact powering the original halting presentation gives exponents $(3+\thetaK)/(4q)$, each Turing-equivalent to $K$.
+\end{corollary}
+\begin{proof}
+Apply~\eqref{eq:power-jensen} and the operator upper estimate of Theorem~\ref{thm:finite} to $\mathcal P_K$. The invertible rational affine map preserves Turing degree, and these positive exponents tend to zero.
+\end{proof}

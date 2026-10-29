@@ -1,0 +1,113 @@
+\section{Scaled counters and a stream with polynomial delay}\label{sec:power-machine}
+\subsection{A finite rational presentation for a counter program}
+Take a finite deterministic register program with nonnegative counters $n_1,\ldots,n_r$, initially zero, and finite controls $\Sigma$, initially $\sigma_0$. Instructions are $\mathrm{INC}(i,\tau)$, $\mathrm{DECJZ}(i,\tau_0,\tau_1)$ and $\mathrm{NOP}(\tau)$. A zero test decrements only on its nonzero branch. Two designated output NOP controls emit zero and one; all other instructions emit no pulse. Each instruction changes at most one counter by one, so $n_i(h)\le h$ at physical time $h$.
+
+Introduce positive contractions $A,Y_i,W_i$ and projections $E_i,Q_\sigma,F$. They represent reciprocal age, scaled counters, nonzero witnesses, zero tests, controls and pulse occurrence. Abbreviate $G=Q_{\mathrm{one}}$. Impose
+\begin{equation}\label{eq:power-counter-domains}
+ \begin{gathered}
+ Q_\sigma Q_\tau=0\quad(\sigma\ne\tau),\qquad\sum_\sigma Q_\sigma=I,\qquad F=Q_{\mathrm{zero}}+Q_{\mathrm{one}},\\
+ Y_iE_i=0,\qquad (Y_i-A)(I-E_i)=W_i(I-E_i).
+ \end{gathered}
+\end{equation}
+The instantaneous list is exactly
+\[
+ Z,A,Y_i,W_i,E_i,Q_\sigma,F,T_0,S_0,C,D,H_{\rm run},P_{\rm stop}.
+\]
+Impose pairwise commutation in this list and commutation of every listed variable with $A_f,A_t$. Only static $T_0,S_0$ additionally commute with the full fuel/time copies and $U$. The unitary polar variable and the six original source unitaries are excluded; there are no other inter-time or cross-checker commutations.
+
+For each instruction use its selector $Q_\sigma$, or $Q_\sigma E_i,Q_\sigma(I-E_i)$ for a test. Let $B_\tau(Q,E)$ be the sum of selectors entering $\tau$, and $\Delta_i(Q,E)$ the sum incrementing $i$ minus the sum decrementing it. These are fixed rational polynomials. Impose
+\begin{equation}\label{eq:power-counter-update}
+ \begin{gathered}
+ Z(A-I)=0,\quad ZY_i=0,\quad Z(Q_\sigma-1_{\sigma=\sigma_0}I)=0,\\
+ A_+(I+A)=A+Z_+,\\
+ (Y_i)_+(I+A)=(I-Z_+)(Y_i+A\Delta_i),\\
+ (Q_\sigma)_+=Z_+1_{\sigma=\sigma_0}I+(I-Z_+)B_\sigma.
+ \end{gathered}
+\end{equation}
+All coefficients are rational and all domains are accepted by \cref{thm:compiler}. The order ``next variable times $(I+A)$'' is part of the relation. Zero tests, witnesses and $F$ need no independent updates.
+
+\begin{proposition}[Exact scalar counter histories]\label{prop:power-counter-models}
+These relations have the prescribed histories on every finite fuel/time block, including a reset interrupting a computation, with no additional tensor factor for counter size or running time.
+\end{proposition}
+\begin{proof}
+At age $h$ since reset assign
+\[
+ A_h=\frac1{h+1},\quad Y_{i,h}=\frac{n_i(h)}{h+1},\quad
+ E_{i,h}=1_{n_i(h)=0},\quad W_{i,h}=\frac{\max(n_i(h)-1,0)}{h+1},
+\]
+and $Q_{\sigma,h}=1_{\sigma(h)=\sigma}$, with $F_h,G_h$ their indicated outputs. All domains hold because $0\le n_i(h)\le h$. Both zero-test relations are exact. Off reset, multiplying $n_i(h+1)/(h+2)$ by $1+1/(h+1)$ gives $(n_i(h)+\Delta_i)/(h+1)$; the age equation is the same identity. At a next reset the values are $A_+=1$, $Y_+=0$ and initial control, exactly as \eqref{eq:power-counter-update} requires even for large current counters.
+On an $N_c$-bit clock block use age modulo its fuel-dependent period: $2^k$ for $k$ initial fuel ones followed by zero, and $2^{N_c}$ for all-ones fuel, reset only at all-zero time. These periods divide the full time cycle. The reset recursion \eqref{eq:power-reset} holds by stripping the first fuel/time bits until a fuel zero or a time one is met. Every transition remains exact across the cyclic boundary. All workspaces are diagonal scalar functions on the existing clock/source blocks, so their commutations are exact and they add no matrix factor.
+\end{proof}
+
+\subsection{Noncommuting same-state stability}
+\begin{proposition}[Polynomial counter stability]\label{prop:power-counter-stability}
+Fix a weighted precision-$\delta$ model and horizon $H$. Put $\phi=Q\xi$ as in \cref{prop:power-localization} and $\eta_H=C(H+1)^a\delta$ as in \eqref{eq:power-ledger}. Let $\sigma(h),n_i(h)$ be the unique classical run. The prescribed good history has reciprocal-age error $O((h+1)\eta_H)$ and scaled-counter error $O((h+1)^2\eta_H)$. Wrong control and zero-test columns have total amplitude on $T_0\phi$ bounded by a fixed polynomial in $H$ times $\delta$, even with an arbitrary current-time stopping projection. No inter-time commutation or positive lower bound on a retained branch's norm is required.
+\end{proposition}
+\begin{proof}
+Write $q_h=(Q_{\sigma(h)})_h$, start $K_0=I$, and split successively
+\[
+ B_h^c=(I-q_h)K_h,\quad V_h=q_hK_h,\quad
+ B_h^z=(I-e_h)V_h,\quad V'_h=e_hV_h,
+\]
+where $e_h=(E_i)_h$ for a truly zero test and $I-(E_i)_h$ for a truly nonzero test. Without a test take $V'_h=V_h$, $B_h^z=0$. Finally set
+\begin{equation}\label{eq:power-columns}
+ L_h=(P_{\rm stop})_hV'_h,\qquad K_{h+1}=(I-(P_{\rm stop})_h)V'_h.
+\end{equation}
+Every factor is an exact projection. The two-outcome identity $(pK)^*pK+((I-p)K)^*(I-p)K=K^*K$ telescopes to
+\begin{equation}\label{eq:power-complete-columns}
+ \sum_{h<H}\bigl((B_h^c)^*B_h^c+(B_h^z)^*B_h^z+L_h^*L_h\bigr)+K_H^*K_H=I.
+\end{equation}
+There is one retained path and at most three discarded columns per time, irrespective of commutation.
+
+Put $a_h=1/(h+1)$, $b_{i,h}=n_i(h)/(h+1)$. We prove
+\begin{align*}
+ \|(A_h-a_hI)K_h\phi\|&\le C(h+1)\eta_H,\\
+ \|((Y_i)_h-b_{i,h}I)K_h\phi\|&\le C(h+1)^2\eta_H,\\
+ \|(I-q_h)K_h\phi\|&\le C\eta_H.
+\end{align*}
+Initialization follows from \eqref{eq:power-counter-update}, the current $[Z,Y]$ relations and localization. The reason errors do not amplify is the pair of literal ordered identities, for positive contractions $A,A',Y,Y'$, scalars $a,b$, $s\in\{-1,0,1\}$ and $a'=a/(1+a)$, $b'=(b+sa)/(1+a)$:
+\begin{align}
+ (1+a)(A'-a'I)&=[A'(I+A)-A]+(I-A')(A-aI),\label{eq:power-age-identity}\\
+ (1+a)(Y'-b'I)&=[Y'(I+A)-Y-sA]+(Y-bI)+(sI-Y')(A-aI).\label{eq:power-counter-identity}
+\end{align}
+Expansion in the displayed order verifies them; no operators at different times have been interchanged. Their multiplier norms are at most one and two respectively, and $1+a\ge1$.
+
+Restrict the current invariants to $K_{h+1}\phi$ by the current $q_h,e_h,P_{\rm stop}$ commutations, paying $O(\eta_H)$. Selection fixes the current control, kills the other controls by orthogonality, and fixes the selected zero test. Thus $\Delta_i$ acts as its classical increment $s_i(h)$ to $O(\eta_H)$. Eliminate resets by \eqref{eq:power-ledger}; the age and counter update brackets in \eqref{eq:power-age-identity}--\eqref{eq:power-counter-identity} are then $O(\eta_H)$ on that vector. If $e_h,d_h$ are their errors, these identities give
+\[
+ e_{h+1}\le e_h+C\eta_H,\qquad d_{h+1}\le d_h+2e_h+C\eta_H.
+\]
+Hence $e_h=O((h+1)\eta_H)$, $d_h=O((h+1)^2\eta_H)$. The factor two multiplies the separately additive age error, not the old counter error. Selection has already fixed the current control, so the successor polynomial gives the next prescribed control with $O(\eta_H)$ error, independently of the preceding control bound. This closes the induction.
+
+The bad control column has norm $O(\eta_H)$. For a bad zero-test vector $v=B_h^z\phi$, restrict the current invariants again using only current commutators. If $n_i(h)>0$, the wrong branch has $(E_i)_hv=v$ and its zero relation gives $\|(Y_i)_hv\|\le C\eta_H$. Since $b_{i,h}\ge1/(h+1)$, the counter invariant yields $\|v\|\le C(h+1)^3\eta_H$. If $n_i(h)=0$, the wrong branch has $(I-E_i)_hv=v$; its nonzero-witness relation gives
+\[
+ \|((W_i)_h+a_hI)v\|\le C(h+1)^2\eta_H.
+\]
+Exact positivity of $W_i$ makes the left side at least $a_h\|v\|$, giving the same bound. This is linear vector coercivity. Its inverse gap is charged only to the discarded branch and never inserted into a later good recurrence.
+Static $T_0$ commutes with $U$ and the instantaneous control, test and stop projections. Expand its commutator through the bad-column word, whose shifted letters have total expanded length $O(H^2)$, and use \eqref{eq:power-transport}. The same polynomial bound holds for $B_h^cT_0\phi,B_h^zT_0\phi$. Euclidean summation over $O(H)$ columns gives the asserted aggregate. The vectors have never been renormalized. Every constant is uniform in dimension and $\rho$.
+\end{proof}
+
+\subsection{A pulse stream for any computable limit}
+\begin{lemma}[Polynomial physical delay]\label{lem:power-stream}
+From a total computable rational sequence $a_s\to\beta\in[0,1]$ one can effectively construct a finite counter program as above emitting infinitely many bits $w_1,w_2,\ldots$ with
+\[
+ k(j):=\sum_{l\le j}w_l=\beta j+o(j),\qquad t_j\le C(j+1)^2,
+\]
+where $t_j$ is physical time just after the $j$th pulse. Neither a convergence modulus nor a computation-time bound for $a_s$ is needed.
+\end{lemma}
+\begin{proof}
+Clamp each rational to $[0,1]$. Use foreground and background coroutines with disjoint finite counter sets. The active rational starts at $1/2$. For active $p/q$, $q\ge1$, the foreground emits repeated periods of $p$ ones followed by $q-p$ zeros. Stored $p,q$ are preserved by scratch-counter copy/countdown loops. Copying or restoring unary counters of size at most $q$ uses $O(q+1)$ elementary INC/DECJZ instructions, so each gap between adjacent pulses costs that order, apart from a stage switch.
+
+After every pulse give the background exactly one elementary instruction, with fixed dispatch overhead. It computes the next $a_s=p_s/q_s$, then performs padding with at least $q_s^2$ elementary instructions before signalling READY. Nested loops building and clearing $q_s^2$ in scratch suffice. Only at a completed foreground period boundary is a READY rational installed. Clearing/copying the old and new foreground registers costs $O(q_{\rm old}+q_{\rm new}+1)$; all arbitrary background scratch cleanup occurs through pulse-triggered background instructions. The next stage begins only after installation.
+
+This is one finite program: take the product of the coroutine control sets and fixed mode flags. If there are several emitting locations, a bounded return-address counter routes them through the two designated output NOP controls and back with fixed overhead. It changes by elementary instructions and has a fixed maximum. Each step of a long background computation is an actual INC/DECJZ/NOP, not a unit-cost unbounded call.
+For completeness, finite counters compute any total computable rational name: encode the two tape halves as integer stacks in a fixed base. Push multiplies by the base and adds a digit; pop takes quotient and remainder. Elementary increment and zero-test/decrement loops with finitely many scratch counters implement both; machine state and current symbol are finite control. Empty stacks supply blanks. Integer input and rational numerator/denominator output use the same loops. This is the classical register-machine universality of Shepherdson--Sturgis and Minsky~\cite{SS63,Min61}; no time efficiency is assumed.
+
+If a stage were never installed, the current finite $q$ would generate infinitely many pulses, so the background would receive infinitely many instructions. Its total computation and finite padding would finish, and a period boundary would follow. Thus every stage is eventually installed.
+Before installing denominator $q$, at least $q^2$ pulse-triggered instructions have occurred; at least $q^2$ pulses have already been emitted. Hence the current denominator at pulse count $j$ is at most $\max(2,\sqrt j)$. There is at most one installation between consecutive pulses: after an installation another READY requires a new pulse-triggered background step. Each gap therefore costs $O(\sqrt{j+1}+1)$ actual instructions, including copying, clearing and dispatch, and $t_j=O((j+1)^{3/2})$, in particular the claimed quadratic bound.
+
+Every complete period has exactly its prescribed rational average; switches occur only between completed periods. At pulse prefix $j$ the unfinished-period discrepancy is at most the current $q=O(\sqrt j+1)$. Given $\zeta>0$, all sufficiently late installed rationals lie within $\zeta$ of $\beta$; earlier stages contribute finitely many pulses. Therefore
+\[
+ |k(j)-\beta j|\le C_\zeta+\zeta j+O(\sqrt j+1).
+\]
+Divide by $j$ and let $\zeta\downarrow0$. This uses convergence alone, with no variation or monotonicity hypothesis.
+\end{proof}

@@ -1,0 +1,104 @@
+\section{Programmed calibration and matched game laws}\label{sec:power-calibration}
+Take the program of \cref{lem:power-stream} for $\beta\in(0,1]$. For each normalized source residual $R$ use a fresh fuel/time clock pair and program workspace from \cref{sec:power-machine}. Add positive contractions $T_0,S_0,C,D$, projections $H_{\rm run},P_{\rm stop}$, and a unitary $V$. Use exactly the instantaneous and static commutation lists stated there, and impose
+\begin{equation}\label{eq:power-calibrator}
+ \begin{gathered}
+ R=VT_0,\qquad (I-H_{\rm run})P_{\rm stop}=0,\\
+ Z(C-T_0)=0,\quad Z(D-S_0)=0,\quad Z(H_{\rm run}-I)=0,\\
+ (H_{\rm run})_+=Z_++(I-Z_+)(H_{\rm run}-P_{\rm stop}),\\
+ C_+=Z_+T_0+(I-Z_+)C[I+G(H_{\rm run}-P_{\rm stop})],\\
+ D_+=Z_+S_0+(I-Z_+)D[I+F(H_{\rm run}-P_{\rm stop})],\\
+ (D-I/2)P_{\rm stop}=0,\qquad S_0=0.
+ \end{gathered}
+\end{equation}
+This list, the two complete clock lists, \eqref{eq:power-reset}, \eqref{eq:power-counter-domains}--\eqref{eq:power-counter-update}, exact domains and the declared commutations are the complete finite rational presentation. The old equations $R=0$ are \emph{replaced}, not also tested. Different residual checkers have no additional mutual workspace or input commutations. The program does not depend on running or stopping and keeps computing after calibration stops. For an inhomogeneous estimate omit only the last test $S_0=0$.
+
+\begin{proposition}[Programmed retained-state calibration]\label{prop:power-calibration}
+Put $\eta=\delta+|S_0|_\rho$. In every weighted precision-$\delta$ model of the inhomogeneous presentation,
+\[
+ |T_0|_\rho\le\eta^{\beta-o(1)}.
+\]
+Precisely, for each $0<\gamma<\beta$ there are constants $C_\gamma,\eta_\gamma>0$, depending only on the fixed program, such that $|T_0|_\rho\le C_\gamma\eta^{\beta-\gamma}$ for $\eta<\eta_\gamma$. No effective modulus for these thresholds is asserted.
+\end{proposition}
+\begin{proof}
+Let $f_h,g_h$ be the classical pulse and one indicators, $g_h\le f_h$, and set
+\[
+ j(h)=\sum_{u<h}f_u,\quad k(h)=\sum_{u<h}g_u,\quad N_h=2^{j(h)},\quad M_h=2^{k(h)}.
+\]
+Use the columns \eqref{eq:power-columns}--\eqref{eq:power-complete-columns}. Selection of the prescribed control makes $F_h=f_h$ and $G_h=g_h$ on current selected histories to $O(\eta_H)$. The program invariants and bad columns are bounded by \cref{prop:power-counter-stability}.
+Initialization and the running transition give $(H_{\rm run})_hK_h\phi=K_h\phi+O(\operatorname{poly}(H)\delta)$. To restrict it use current commutations and $P_hK_{h+1}=0$ exactly. The multiplier $H_h-P_h$ is a difference of projections and has norm at most one even before repairing approximate order. Thus running errors add.
+
+The normalized counter inductions give, uniformly through $H$,
+\begin{equation}\label{eq:power-normalized}
+ K_hT_0\phi=M_h^{-1}C_hK_h\phi+O(r_H),\qquad
+ K_hS_0\phi=N_h^{-1}D_hK_h\phi+O(r_H),\quad r_H=C(H+1)^b\delta.
+\end{equation}
+For the $C$ step, left-restrict the old identity by the next current control, test and continuation projections. Commute only current $C_h$ past these current projections. On this retained continuation, $G_h=g_h$ and $H_h-P_h=1$ to the polynomial error. The update therefore says $C_{h+1}=2^{g_h}C_h$ there. Divide by $M_{h+1}=2^{g_h}M_h$. Every new residual has coefficient at most $M_h^{-1}\le1$; the old error is merely left-restricted by a contraction. The $D$ proof is identical with $f_h,N_h$. Idle instructions have factor one and add only a local error. The running, program, static-input and history-transport costs are fixed polynomials and there are $H$ steps; enlarging $b$ covers all of them. In particular no factor $2^H$ or product of zero-test denominators appears.
+
+Multiply these identities by the current stop projection. Its current commutations and $(D_h-I/2)P_h=0$ give
+\[
+ \|L_hT_0\phi-M_h^{-1}C_hL_h\phi\|\le r_H,\qquad
+ \|L_hS_0\phi-2^{-j(h)-1}L_h\phi\|\le r_H.
+\]
+The terminal estimate follows from \eqref{eq:power-normalized}; enlarge $r_H$ to bound the bad-column aggregate as well. \Cref{lem:power-stopped} now gives
+\begin{equation}\label{eq:power-variable-stop}
+ \|T_0\phi\|\le M_H^{-1}+R_H(\|S_0\phi\|+\sqrt H r_H)+C\sqrt{H+1}r_H,
+ \qquad R_H=\max_{h<H}2^{j(h)+1-k(h)}.
+\end{equation}
+This invocation is just Euclidean summation of exact measurement columns, so it introduces no inter-time or inter-column commutation.
+The integer $j(h)-k(h)$ is nondecreasing: a zero pulse increases it, a one pulse and idle work leave it unchanged. Consequently $R_H\le2^{j(H)-k(H)+1}$ even for arbitrarily oscillating rational approximations.
+
+For $J$ pulses choose $H=t_J$. Then $H\le C(J+1)^2$, $j(H)=J$ and $k(H)=\beta J+o(J)$. Every error and initialized-branch factor is therefore a fixed polynomial in $J$. With $L=1+\log(1/\eta)$ take
+\[
+ J=\left\lfloor\log(1/\eta)-K\log L\right\rfloor,
+\]
+where fixed $K$ exceeds all required polynomial degrees by at least five. Localization gives $\|S_0\phi\|\le|S_0|_\rho+\operatorname{poly}(H)\delta$ and the input charge $|T_0|_\rho\le C(H+1)\|T_0\phi\|+\operatorname{poly}(H)\delta$.
+In \eqref{eq:power-variable-stop}, $2^J\eta$ times every required polynomial is bounded. The result is at most a polynomial in $J$ times $2^{-k(H)}$, plus $\eta\operatorname{poly}(J)$. Since $J=\log(1/\eta)-O(\log L)$ and $\beta\le1$, both have the asserted power bound. The density limit yields its precise fixed-margin formulation, uniformly over every original state. Its convergence threshold need not be computable.
+\end{proof}
+
+\begin{proposition}[Exact upper histories and their envelope]\label{prop:power-upper-histories}
+There is one fixed scalar function $s:[0,1]\to[0,1/2]$, with $s(0)=0$, such that on each $T_0=t$ eigenspace the non-penalty calibrator and program relations have simultaneous exact histories on every finite clock block, and
+\[
+ s(t)=t^{1/\beta+o(1)}\quad(t\downarrow0),\qquad
+ s(t)\le C_vt^v\quad\text{for every fixed }0<v<1/\beta.
+\]
+No continuity or endpoint bound with $v=1/\beta$ is required.
+\end{proposition}
+\begin{proof}
+For $t>0$ set $\ell(t)=\lfloor\log(1/t)\rfloor$. Since $\beta>0$, there are infinitely many ones and their cumulative count assumes every nonnegative integer. Choose the first physical age $h(t)$ with $k(h(t))=\ell(t)$, let $J(t)=j(h(t))$ and put $s(t)=2^{-J(t)-1}$. For $\ell(t)=0$ use age zero. At age $h$ since reset assign the program as in \cref{prop:power-counter-models}, and
+\[
+ C_h=2^{k(\min(h,h(t)))}t,\quad D_h=2^{j(\min(h,h(t)))}s(t),\quad
+ H_h=1_{h\le h(t)},\quad P_h=1_{h=h(t)}.
+\]
+Before and at the stop, $C_h\le2^{\ell(t)}t\le1$, $D_h\le1/2$. A continuing one pulse doubles both counters, a zero pulse only $D$, and an idle instruction neither. At the stop $D=1/2$ exactly; afterward counters freeze and running turns off, while the program continues. At each reset they initialize. For $t=0$, take $C=D=0$, $H=1,P=0$ forever.
+On every finite block use age modulo its reset period. If that period ends before $h(t)$, no stop is asserted; all transitions still hold through the reinitialization. This covers arbitrarily delayed stops, interrupted runs, zero, one and exact dyadic boundaries.
+For large $\ell$, $\ell=\beta J(t)+o(J(t))$ and $\ell=\log(1/t)+O(1)$, proving the asymptotic envelope. It gives the $v$-bound below some threshold; on the rest of $[0,1]$, enlarge $C_v$ using $s\le1/2$. Thresholds may be ineffective, but no such constant is a game coefficient.
+For a matrix residual take a square-matrix unitary polar extension $R=V|R|$, $T_0=|R|$ and $S_0=s(T_0)$. Use these scalar histories on each spectral/clock block. All current-time and static commutations hold, with no cross-residual commutations. The program workspace depends only on age; calibrator variables depend on age and this one $T_0$. They are operators on existing source/clock spaces, not additional tensor registers for values or time. Spectral calculus on a finite spectrum requires no continuity of $s$.
+\end{proof}
+
+\begin{proof}[Realization clause of \cref{thm:power-realization}]
+Combine the full checker for each of the $28$ normalized source residuals, replacing their old zero tests, and apply \cref{thm:compiler}. This is a single finite rational presentation and game, determined by the finite program for the promised rational name.
+Fix $0<v<1/\beta$ and take the source assignments of \cref{thm:power-moments} at this fixed order. On each residual use \cref{prop:power-upper-histories}. The only nonzero new errors are the penalties $S_0=0$ and inherited clock baselines, since
+\[
+ \|S_0\|_{2,D_N}^2\le C_v^2\tau(|R|^{2v})\le C'_vN^{-v}.
+\]
+On an $N_c$-bit clock the Cantor defects are $O(4^{-N_c})$ and the deliberately unguarded increment has rank-one defect
+\[
+ (|0^{N_c}\rangle-|10^{N_c-1}\rangle)\langle1^{N_c}|,
+\]
+of flat norm $\sqrt2\,2^{-N_c/2}$. Choose $N_c=\lceil v\log N\rceil+O_v(1)$. There are only finitely many clock pairs, adding $O_v(\log N)$ to logarithmic dimension. All assignments are flat, hence all state commutators vanish. Thus
+\[
+ \text{flat precision}\le C_vN^{-v/2},\qquad
+ \log D_{\rm total}\le3N+O_v(\sqrt N)+O_v(\log N).
+\]
+Compiler completeness gives a maximally entangled original strategy, a fixed dimension multiplier and loss at most $C_vN^{-v}$. The models exist for every sufficiently large integer $N$, so choosing an integer $N$ at least a suitable constant times $\eps^{-1/v}$ covers every small loss. Hence the limsup exponent of $\log D_G$, and of each entanglement resource, is at most $1/v$. The game is unchanged as $v$ increases to $1/\beta$; take that limit only after the small-loss limsup to obtain at most $\beta$. The $v<1$ concavity clause of \cref{thm:power-moments} covers $\beta=1$.
+
+Conversely, start from any original finite mixed strategy of loss $\eps$. Same-state soundness gives exact domains and precision $\delta=C\sqrt\eps$ on its original marginal. The tested penalties and \cref{prop:power-calibration} give
+\[
+ |R|_\rho\le\delta+|T_0|_\rho\le\eps^{\beta/2-o(1)}.
+\]
+The original six source unitaries are fixed decoded words, with actual opposite-party mirrors, inverse mirrors and square-root marginal commutators $O(\sqrt\eps)$. Since $\beta\le1$, these fit in the source error $e=\eps^{\beta/2-o(1)}$. The marker residual gives fixed visibility for small loss. The explicitly probability-charged extraction \eqref{eq:power-extraction} therefore yields
+\[
+ E_D^{A\to B}(\rho_{\rm original})\ge e^{-2+o(1)}=\eps^{-\beta+o(1)}.
+\]
+This holds for every original state, without pure-component selection. Take infima; $E_D\le\log D$ also gives the dimension lower bound. The maximally entangled upper models match it. Their losses tend to zero, so the value is one; a finite-dimensional perfect strategy would contradict the divergent all-state lower bound. Every positive $\Delta^0_2$ real has a total computable rational name, completing realization.
+\end{proof}

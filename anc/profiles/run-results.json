@@ -1,0 +1,17 @@
+[
+  {
+    "script": "check_carry_checker.py",
+    "exit_code": 0,
+    "seconds": 19.473
+  },
+  {
+    "script": "check_hold_stream.py",
+    "exit_code": 0,
+    "seconds": 9.725
+  },
+  {
+    "script": "independent_checks.py",
+    "exit_code": 0,
+    "seconds": 0.595
+  }
+]

@@ -1,0 +1,84 @@
+\section{The finite programmed presentation}\label{sec:source}
+Fix a finite deterministic counter program recognizing $K$. Counters take nonnegative integer values and instructions increment, decrement on a nonzero branch, or test zero. Such a recognizer follows from the classical universality of counter machines~\cite{SS63}. One direct construction stores the two halves of a Turing tape as integer-coded stacks. Pushing multiplies a stack code by a fixed base and adds a digit; popping computes quotient and remainder by that base. Increment, decrement and zero-test loops perform these operations using finitely many scratch counters. A unary input loop writes the integer input on the simulated tape. This gives one fixed finite instruction table. Add absorbing idle and halt controls.
+
+The variables introduced below have the domains stated explicitly. Projection inclusions $Q\le F$ mean the polynomial equation $(I-F)Q=0$. A precision model satisfies every listed commutator and every displayed defining equation to precision $\delta$ in Definition~\ref{def:model}.
+
+\subsection{Three compulsory clocks and a carry coordinate}
+Use three copies of~\eqref{eq:clock}, with indices $a,f,t$ for address, fuel and time. Complete variable sets of different clocks commute. Add an address increment $V$ and a time increment $U$, satisfying~\eqref{eq:guard} for their own clocks. The address and fuel sets commute with $U$, and the time and fuel sets commute with $V$. Add a positive contraction $H$ with
+\begin{align}
+ H&=(I-P_a)+\tfrac14P_aT_aHT_a^*,\label{eq:carry-rec}\\
+ [P_a,T_aHT_a^*]&=[H,A_a]=0,\qquad
+ V^*A_aV=A_a-I+\tfrac74H.\label{eq:carry-step}
+\end{align}
+Include $H$ in the address set, commuting with all fuel and time variables. The last equality will control many address translations without an exponential precision cost.
+
+\subsection{Address decoding and reset}
+Put $P_{a,1}=T_aP_aT_a^*$, $E_{00}=(I-P_a)(I-P_{a,1})$ and $E_1=P_a(I-P_{a,1})$. Add a projection $L$ and a positive contraction $R$ with
+\begin{align}
+ L&=E_1+E_{00}T_a^2LT_a^{-2},\label{eq:decode-L}\\
+ R&=(I-E_{00})+\tfrac12E_{00}T_a^2RT_a^{-2}.\label{eq:decode-R}
+\end{align}
+The products are polynomials even before the approximate digits commute. In exact models the cylinder
+\begin{equation}\label{eq:address-cyl}
+ B_e=\left(\prod_{j<e}T_a^{2j}E_{00}T_a^{-2j}\right)
+       T_a^{2e}E_1T_a^{-2e}
+\end{equation}
+selects first nonzero base-four address digit one in position $e$.
+Here each base-four address digit groups two successive binary clock bits, with the first bit least significant.
+
+Add a reset projection $Z$, set $S=T_fT_t$, and impose
+\begin{equation}\label{eq:reset}
+ Z=(I-P_f)+P_f(I-P_t)SZS^*.
+\end{equation}
+In exact models write $Q_j^{f}=T_f^jP_fT_f^{-j}$, $P_{t,j}=T_t^jP_tT_t^{-j}$ and
+\begin{equation}\label{eq:fuel-cyl}
+ C_k=\left(\prod_{j<k}Q_j^{f}\right)(I-Q_k^{f}),\qquad
+ D_k=\prod_{j<k}(I-P_{t,j}).
+\end{equation}
+The product defining $C_k$ means $(\prod_{j<k}Q_j^f)(I-Q_k^f)$, with empty product $I$.
+
+\subsection{Counters and transitions}
+Encode counter value $n$ by $r=2^{-n}$. For each counter add a positive contraction $r_i$, a zero-test projection $z_i$ and a positive contraction $s_i$ with
+\begin{equation}\label{eq:zero-test}
+ r_i=z_i+\tfrac12(I-z_i)s_i.
+\end{equation}
+All instantaneous workspace variables commute. For each control state $\sigma$, add a projection $q_\sigma$, with $q_\sigma q_\tau=0$ for $\sigma\ne\tau$ and $\sum_\sigma q_\sigma=I$. Each program branch selector is $q_\sigma$, $q_\sigma z_i$ or $q_\sigma(I-z_i)$; these selectors partition $I$. The next control is the sum of selectors entering that state. The next counter is the sum, over selectors, of that selector times $r_i/2$, $r_i$ or $2r_i$ as its instruction dictates. The factor two is used only on a nonzero decrement branch. These prescriptions define a fixed rational polynomial map $\Step$ on counters and controls.
+
+Initialization is
+\[
+ \Init(q_{\mathrm{start}})=L,\quad \Init(q_{\mathrm{idle}})=I-L,\quad
+ \Init(r_1)=R,\quad \Init(r_i)=I\ (i>1),
+\]
+with other controls zero. For each counter or control $W$, impose
+\begin{align}
+ ZW&=Z\Init(W),\label{eq:initialize}\\
+ U^*WU&=Z_+\Init(W)+(I-Z_+)\Step(W),\qquad Z_+=U^*ZU.\label{eq:transition}
+\end{align}
+The witnesses and zero-tests satisfy~\eqref{eq:zero-test} at every time; separate update equations for them are unnecessary. Add a flag projection $F$ and require
+\begin{equation}\label{eq:halt-flag}
+ q_{\mathrm{halt}}\le F.
+\end{equation}
+
+\subsection{Commutations and the conditional clock}
+The following is the complete additional commutation list.
+\begin{itemize}[leftmargin=*,itemsep=2pt]
+\item $L,R,F$ commute with each other, with $A_a$, and with every fuel and time clock variable, including $U$.
+\item $Z$ and all instantaneous workspace variables commute with one another and with $A_a,A_f,A_t,L,R,F$.
+\item The address set, including $V,H$, commutes with the complete fuel and time sets.
+\end{itemize}
+Workspace is not required to commute with $U$ or the address shifts and flips.
+
+For the conditional clock add positive contractions $B,C$, a projection $Q$ and a self-adjoint unitary $Y$. Impose
+\begin{align}
+ Q&\le F,\qquad [B,Q]=[B,F]=[C,Q]=[C,F]=[B,C]=0,\label{eq:conditional-comm}\\
+ VBV^*&=4B-3Q,\qquad VCV^*=4C-3F,\label{eq:conditional-affine}\\
+ YFY&=F,\qquad YQY=F-Q,\label{eq:conditional-flip}\\
+ [Y,VBV^*]&=0,\qquad [Y,C]=0.\label{eq:conditional-tail}
+\end{align}
+Each of $B,C,Q,Y$ commutes with $A_a$ and every fuel and time clock variable, including $U$. Define
+\begin{equation}\label{eq:optional-translates}
+ F_i=V^iFV^{-i},\qquad Q_i=V^iQV^{-i},\qquad Y_i=V^iYV^{-i}.
+\end{equation}
+The intended ternary measurement is $(I-F_i,F_i-Q_i,Q_i)$. Its inactive outcome contributes no required bit; its two active outcomes are exchanged by $Y_i$. The coordinate $C$ records the flags. It is needed to control commutation of their translates, which commutation with $A_a$ alone would not imply.
+
+This finishes the finite presentation, denoted $\mathcal P_K$. Every branch and every variable used above occurs in a finite list; $e,k,i$ in later arguments index consequences, not additional defining relations.

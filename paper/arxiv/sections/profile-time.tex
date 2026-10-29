@@ -1,0 +1,68 @@
+\section{A time bound for whole profiles}\label{sec:profile-time}
+Write $A_G(n)=\log_2D_G(2^{-n})$. Finite-dimensional feasibility imposes a restriction on the entire function, stronger than the endpoint hierarchy alone.
+
+\begin{proposition}[Doubly exponential computation]\label{prop:profile-time}
+For every fixed finite rational value-one game with finite upper logarithmic dimension exponent, there is a constant $c_G$ such that $D_G(2^{-n})$ is computable exactly in time $2^{2^{c_Gn}}$. A rational approximation to $A_G(n)$ with error at most $2^{-n}$ is computable within the same form of time bound. More generally a requested logarithm precision has the additional standard numerical overhead; no uniform procedure finding $c_G$ from a game description is asserted.
+\end{proposition}
+\begin{proof}
+For fixed local dimension $d$, pure states suffice for feasibility: with measurements fixed, a mixed state's winning score is an average of pure-state scores in the same spaces. This reduction concerns dimension feasibility only. Represent a pure state by a complex vector in $\C^{d^2}$ and each POVM effect by $YY^*$. Separate real and imaginary coordinates. Normalization, positivity-by-factorization, completeness and the winning inequality give an existential real sentence with $O_G(d^2)$ variables and constraints, degree at most six, and coefficient bit lengths $O_G(n)$. Its dense description has polynomial size in $d,n$.
+
+Singly exponential existential-real algorithms, rather than unrestricted iterated quantifier elimination, give bit complexity $2^{O_G(d^2\log(d+2))}\operatorname{poly}_G(n)$; see~\cite[Sections~2.2 and~2.5]{Basu14}. Search $d=1,2,\ldots$ for the first feasible dimension. The value-one promise ensures termination. A finite upper exponent gives $D_G(2^{-n})\le2^{C_Gn}$ eventually, so the total search cost is at most $2^{2^{c_Gn}}$ after enlarging the constant. Finitely many early indices are absorbed by a finite table. The integer answer is exact. Its logarithm is computed to the stated rational accuracy by standard arithmetic with $O_G(n)$ integer/output bits and precision $n$, negligible in this bound. A bounded-error logarithm, or its integer part, is enough for the diagonal arguments below.
+\end{proof}
+
+\begin{theorem}[Computable profiles outside every game]\label{thm:profile-nonrealizable}
+There is a total computable $A:\N\to\N$, with $A(0)=0$ and $A(n+1)-A(n)\in\{0,1\}$, such that
+\[
+ \tfrac14\le\liminf A(n)/n\le\limsup A(n)/n\le\tfrac34,
+\]
+and no finite rational value-one game satisfies $A_G(n)=A(n)+o(n)$. More generally, for every $0<L<U<\infty$ with $L\in\Sigma^0_2$, $U\in\Pi^0_2$, there is such an unrealizable computable profile with these exact endpoints, $A(0)=0$, and integer increments between zero and a fixed integer $C$. The unit-increment condition in the first example is not asserted for arbitrary endpoints above one.
+\end{theorem}
+\begin{proof}
+\par\smallskip\noindent\textit{A direct repeated-index diagonal.}\quad
+Let $e(i)$ be a computable enumeration in which every machine index occurs infinitely often, and set $T(i)=2^{2^{8^i}}$. Simulate machine $e(i)$ on input $i$ for $T(i)$ of its own steps. If it halts with a bit, define $b_i$ to be the opposite bit; otherwise define $b_i=1$. This is a total computable sequence. Any machine eventually computing it within time $T(i)$ disagrees at arbitrarily large indices assigned to that machine. The computation defining $b$ itself has no claimed bound $T$.
+
+Let a continuous piecewise-linear function have slope $1/4+b_i/2$ on $[4^i,4^{i+1})$, and take its integer part, with a harmless nondecreasing finite prefix from $A(0)=0$. Its integer increments are zero or one and its normalized asymptotic values lie in $[1/4,3/4]$. Across block $i$,
+\[
+ A(4^{i+1})-A(4^i)=\tfrac34\,4^i+\tfrac32b_i4^i+O(1).
+\]
+An $o(n)$ approximation at both endpoints recovers $b_i$ eventually by comparing this difference with $(3/2)4^i$. If that approximation were $A_G$, \cref{prop:profile-time} would compute it in time $2^{2^{O_G(4^i)}}<T(i)$ eventually. Bounded numerical error in the two logarithms is harmless. This contradicts the repeated-index diagonal without requiring an effective modulus of the assumed $o(n)$ error.
+
+\par\smallskip\noindent\textit{Every prescribed off-diagonal pair.}\quad
+Fix rationals
+\[
+ 0<a<L<c_1<c_2<U<b<C,
+\]
+with $C$ an integer. By \cref{lem:profile-names}, take a total computable rational sequence $q_r\in[a,b]$ with endpoints $L,U$. Put $i_r=2^{2^r}$ and $N_r=4^{i_r}$. Define hard bits $b_r$ by the same repeated-index diagonal, now using time $T(r)=2^{2^{8^{i_r}}}$ on input $r$.
+On the bit interval $[N_r,2N_r]$ set
+\begin{equation}\label{eq:profile-hard-block}
+ A(n)=A(N_r)+\lfloor c_{1+b_r}(n-N_r)\rfloor.
+\end{equation}
+On the gap from $2N_r$ to $N_{r+1}$ use the fixed next target $q_{r+1}$ and the greedy update
+\begin{equation}\label{eq:profile-gap-track}
+ A(n+1)=\min\bigl(A(n)+C,\ \max(A(n),\lfloor q_{r+1}(n+1)\rfloor)\bigr).
+\end{equation}
+Before $N_0$ choose any nonnegative prefix starting at zero with increments at most $C$. This defines a total computable integer function. Computing a target or a hard bit may take arbitrarily long; no target-runtime bound is imposed in this theorem. Both rules have increments in $[0,C]$, and $0\le A(n)\le Cn$.
+
+To prove that a gap catches its target, suppose it starts at $m$. If above the line, the constant value is caught by time at most $(C/a)m+O(1)$. If below, increasing by $C$ catches a line of slope at most $b<C$ by time at most $(C/(C-b))m+O(1)$. Once caught, \eqref{eq:profile-gap-track} tracks its integer part. There is therefore one fixed $R$ such that every gap tracks by $Rm+O(1)$, independently of $r$ and $q_r$. Since $N_{r+1}/(2N_r)\to\infty$, every sufficiently late gap ends on its target:
+\[
+ A(N_r)/N_r=q_r+O(1/N_r).
+\]
+During a gap the normalized ratio remains in the hull of its starting ratio and the target, up to $O(1/n)$: above it waits, below it increases until caught, then tracks. During a bit interval the ratio is in the hull of $A(N_r)/N_r$ and $c_1$ or $c_2$, with the same floor error. As both slopes are strictly inside $(L,U)$, all late ratios lie in $[L-o(1),U+o(1)]$; the values at $N_r$ attain both endpoint limits. Thus the exact endpoints are $L,U$.
+
+If $A_G=A+o(n)$, compare its values at $2N_r$ and $N_r$ with threshold $((c_1+c_2)/2)N_r$. The two possible increments in \eqref{eq:profile-hard-block} differ by $(c_2-c_1)N_r+O(1)$, so this decodes $b_r$ eventually. By \cref{prop:profile-time}, the decoder costs $2^{2^{O_G(4^{i_r})}}<T(r)$ for all sufficiently large $r$, again contradicting the diagonal. This proves the complete prescribed-endpoint assertion.
+\end{proof}
+
+When $L=U=\alpha$, every profile with those endpoints is $\alpha n+o(n)$ and \cref{cor:profile-no-witness} realizes that class. The whole-profile obstruction is therefore off the diagonal, even though every admissible endpoint pair is realized by some other profile.
+
+\subsection{The remaining frontiers}
+\begin{problem}[The space/time profile gap]\label{prob:profile-frontier}
+Which classes of logarithmic dimension profiles modulo $o(n)$ are realized by finite rational value-one games? Under \eqref{eq:profile-slope}, \cref{cor:profile-space} realizes small-space representatives, while \cref{prop:profile-time,thm:profile-nonrealizable} impose a doubly exponential time restriction and exclude some computable bounded-increment targets.
+\end{problem}
+The counter architecture has counters bounded by elapsed physical time, and polynomial-horizon stability permits only subexponential physical delay at logarithmic precision. It therefore supplies space-$o(n)$ representatives. Extending the realized range would require a different effective precision-to-computation charge, or a stronger general feasibility algorithm narrowing the excluded range. The witness forcing of \cref{sec:classification}, which uses compactness, does not supply such a scale-pinned modulus.
+
+\begin{conjecture}[The full usable endpoint ceiling]\label{conj:profile-usable-ceiling}
+For a finite rational value-one game, positive finite lower and upper logarithmic usable exponents belong respectively to $\Sigma^0_2$ and $\Pi^0_2$. The analogous endpoint ceiling holds at the power scale.
+\end{conjecture}
+The matched games prove the realization inclusion, not this ceiling. Finite-dimensional feasibility computes dimension but does not compute the regularized directional rate. A counterexample may have operational endpoints outside these classes without contradicting the dimension results.
+
+Sapir--Birget--Rips~\cite{SBR02} provide the resource-function template for the time restriction: their stated Dehn-law digit conditions have double-exponential sufficiency and triple-exponential necessity, and their broader time-function characterization has additional hypotheses. No Dehn-to-game reduction is used here. Meyerovitch~\cite[Theorem~5.1]{Mey11} classifies lower, upper and existing entropy dimensions with classes $\Sigma_2,\Pi_3,\Delta_2$; the upper class differs because global pattern extension is not the computable finite-dimensional feasibility problem here. Hochman--Meyerovitch~\cite{HM10} give the finite-local-rule arithmetic-spectrum precedent, Zheng--Weihrauch~\cite{ZW01} the liminf/limsup normal forms, and Brady--Bridson~\cite{BB00} the dense algebraic-scaling predecessor. These are comparisons of constructions and invariants, not priority or reduction claims.

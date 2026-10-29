@@ -1,0 +1,150 @@
+{
+ "single_clock": [
+  {
+   "N": 2,
+   "affine_defect_op": 0.1875,
+   "affine_defect_flat": 0.13258252147247765,
+   "carry_step_defect_op": 0.0625,
+   "carry_step_defect_flat": 0.03125,
+   "unguarded_increment_defect_flat": 0.7071067811865476
+  },
+  {
+   "N": 3,
+   "affine_defect_op": 0.046875,
+   "affine_defect_flat": 0.03314563036811941,
+   "carry_step_defect_op": 0.015625,
+   "carry_step_defect_flat": 0.005524271728019903,
+   "unguarded_increment_defect_flat": 0.5
+  },
+  {
+   "N": 4,
+   "affine_defect_op": 0.01171875,
+   "affine_defect_flat": 0.008286407592029853,
+   "carry_step_defect_op": 0.00390625,
+   "carry_step_defect_flat": 0.0009765625,
+   "unguarded_increment_defect_flat": 0.3535533905932738
+  },
+  {
+   "N": 5,
+   "affine_defect_op": 0.0029296875,
+   "affine_defect_flat": 0.0020716018980074633,
+   "carry_step_defect_op": 0.0009765625,
+   "carry_step_defect_flat": 0.00017263349150062197,
+   "unguarded_increment_defect_flat": 0.25
+  },
+  {
+   "N": 6,
+   "affine_defect_op": 0.000732421875,
+   "affine_defect_flat": 0.0005179004745018658,
+   "carry_step_defect_op": 0.000244140625,
+   "carry_step_defect_flat": 3.0517578125e-05,
+   "unguarded_increment_defect_flat": 0.1767766952966369
+  },
+  {
+   "N": 7,
+   "affine_defect_op": 0.00018310546875,
+   "affine_defect_flat": 0.00012947511862546645,
+   "carry_step_defect_op": 6.103515625e-05,
+   "carry_step_defect_flat": 5.3947966093944364e-06,
+   "unguarded_increment_defect_flat": 0.125
+  },
+  {
+   "N": 8,
+   "affine_defect_op": 4.57763671875e-05,
+   "affine_defect_flat": 3.2368779656366614e-05,
+   "carry_step_defect_op": 1.52587890625e-05,
+   "carry_step_defect_flat": 9.5367431640625e-07,
+   "unguarded_increment_defect_flat": 0.08838834764831845
+  },
+  {
+   "N": 9,
+   "affine_defect_op": 1.1444091796875e-05,
+   "affine_defect_flat": 8.092194914091653e-06,
+   "carry_step_defect_op": 3.814697265625e-06,
+   "carry_step_defect_flat": 1.6858739404357614e-07,
+   "unguarded_increment_defect_flat": 0.0625
+  },
+  {
+   "N": 10,
+   "affine_defect_op": 2.86102294921875e-06,
+   "affine_defect_flat": 2.0230487285229133e-06,
+   "carry_step_defect_op": 9.5367431640625e-07,
+   "carry_step_defect_flat": 2.9802322387695312e-08,
+   "unguarded_increment_defect_flat": 0.04419417382415922
+  }
+ ],
+ "reset_interface": [
+  {
+   "N": 2,
+   "reset_recursion_exact": true,
+   "interface_points_checked": 2
+  },
+  {
+   "N": 3,
+   "reset_recursion_exact": true,
+   "interface_points_checked": 14
+  },
+  {
+   "N": 4,
+   "reset_recursion_exact": true,
+   "interface_points_checked": 70
+  },
+  {
+   "N": 5,
+   "reset_recursion_exact": true,
+   "interface_points_checked": 310
+  },
+  {
+   "N": 6,
+   "reset_recursion_exact": true,
+   "interface_points_checked": 1302
+  },
+  {
+   "N": 7,
+   "reset_recursion_exact": true,
+   "interface_points_checked": 5334
+  },
+  {
+   "N": 8,
+   "reset_recursion_exact": true,
+   "interface_points_checked": 21590
+  }
+ ],
+ "two_adic_lipschitz_worst_ratios_normalized": {
+  "g_h": 1.8749856949943924,
+  "f_i": 1.999984741327352,
+  "f_i_g_minus_h": 0.499996185331838
+ },
+ "cost_table": [
+  {
+   "n": 16,
+   "forced_count_bits_log4(1/delta)": 4.0,
+   "carry_checker_bits": 5,
+   "unguarded_checker_bits": 17
+  },
+  {
+   "n": 32,
+   "forced_count_bits_log4(1/delta)": 8.0,
+   "carry_checker_bits": 9,
+   "unguarded_checker_bits": 33
+  },
+  {
+   "n": 64,
+   "forced_count_bits_log4(1/delta)": 16.0,
+   "carry_checker_bits": 17,
+   "unguarded_checker_bits": 65
+  },
+  {
+   "n": 128,
+   "forced_count_bits_log4(1/delta)": 32.0,
+   "carry_checker_bits": 33,
+   "unguarded_checker_bits": 129
+  },
+  {
+   "n": 256,
+   "forced_count_bits_log4(1/delta)": 64.0,
+   "carry_checker_bits": 65,
+   "unguarded_checker_bits": 257
+  }
+ ]
+}

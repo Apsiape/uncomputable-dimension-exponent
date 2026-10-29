@@ -1,0 +1,6 @@
+PASS (finite and local checks; uniform proofs are in RESULT.md)
+Largest new finite residual: 2.7755575615628914e-17
+Noncommuting identity error: 4.440892098500626e-16
+Bad-branch slopes: [1.0000043647304686, 1.0000043647304688, 1.0000043647304688]
+Mixed and product exponents: 0.3000557336572602 0.43701602444882115
+Scheduler stages loaded: 8

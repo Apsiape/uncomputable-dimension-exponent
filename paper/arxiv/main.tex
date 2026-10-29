@@ -1,0 +1,127 @@
+% Build: pdflatex main; bibtex main; pdflatex main; pdflatex main; pdflatex main; repeat until no label warnings remain.
+\documentclass[11pt,a4paper]{article}
+\newcommand{\DoNotLoadEpstopdf}{}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage{microtype}
+\usepackage{xcolor,aliascnt}
+\setlength{\emergencystretch}{3em}
+\frenchspacing
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalise,nameinlink]{cleveref}
+\hypersetup{pdftitle={The uncomputable price of precision},pdfauthor={Seth Douglas and Nidhal Mghirbi},pdfkeywords={nonlocal games, dimension, Boolean constraint systems, computability, approximate representations}}
+\makeatletter
+\renewcommand{\@pnumwidth}{2.4em}
+\renewcommand{\@tocrmarg}{3.4em}
+\renewcommand*\l@section[2]{\@dottedtocline{1}{0pt}{2.4em}{\bfseries #1}{\bfseries #2}}
+\makeatother
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem*{fronttheorem}{Theorem}
+\newcommand{\sharedtheorem}[2]{\newaliascnt{#1}{theorem}\newtheorem{#1}[#1]{#2}\aliascntresetthe{#1}}
+\sharedtheorem{lemma}{Lemma}
+\sharedtheorem{proposition}{Proposition}
+\sharedtheorem{corollary}{Corollary}
+\theoremstyle{definition}
+\sharedtheorem{definition}{Definition}
+\sharedtheorem{problem}{Problem}
+\sharedtheorem{conjecture}{Conjecture}
+\theoremstyle{remark}
+\sharedtheorem{remark}{Remark}
+\numberwithin{equation}{section}
+\newcommand{\C}{\mathbb C}
+\newcommand{\R}{\mathbb R}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\K}{\mathcal K}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\id}{I}
+\newcommand{\hs}[1]{\lVert#1\rVert_2}
+\newcommand{\wn}[1]{\lVert#1\xi\rVert_2}
+\newcommand{\fn}[1]{\lVert#1\rVert_f}
+\newcommand{\opn}[1]{\lVert#1\rVert}
+\newcommand{\trn}[1]{\lVert#1\rVert_1}
+\newcommand{\comm}[2]{[#1,#2]}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\Step}{Step}
+\DeclareMathOperator{\Init}{Init}
+\DeclareMathOperator{\TV}{TV}
+\newcommand{\thetaK}{\theta_K}
+\newcommand{\DD}{D_G}
+\newcommand{\bigO}{O}
+\title{The uncomputable price of precision}
+\author{Seth Douglas \and Nidhal Mghirbi}
+\date{Version 4.0.0, October 2026}
+\begin{document}
+\maketitle
+\input{sections/abstract}
+\clearpage
+{\small\setcounter{tocdepth}{1}\tableofcontents}
+\clearpage
+\input{sections/intro}
+\input{sections/prelim}
+\input{sections/compiler}
+\input{sections/clock}
+\input{sections/source}
+\input{sections/forcing}
+\input{sections/finite}
+\input{sections/count}
+\input{sections/lower}
+\input{sections/game}
+\input{sections/realization}
+\input{sections/usable}
+\input{sections/heat}
+\input{sections/limits}
+\input{sections/gate}
+\clearpage
+\input{sections/classification}
+\clearpage
+\part*{Power-scale exponents}\addcontentsline{toc}{part}{Power-scale exponents}
+\setcounter{section}{0}
+\renewcommand{\thesection}{P\arabic{section}}
+\renewcommand{\theHsection}{power.\arabic{section}}
+\input{sections/power-overview}
+\input{sections/power-moments}
+\input{sections/power-clock}
+\input{sections/power-machine}
+\input{sections/power-calibration}
+\input{sections/power-ceilings}
+\input{sections/power-ceiling-extensions}
+\input{sections/power-unbounded}
+\input{sections/power-hash-frontier}
+\clearpage
+\part*{Precision profiles and exponent pairs}\addcontentsline{toc}{part}{Precision profiles and exponent pairs}
+\setcounter{section}{0}
+\renewcommand{\thesection}{Q\arabic{section}}
+\renewcommand{\theHsection}{profiles.\arabic{section}}
+\input{sections/profile-clock}
+\input{sections/profile-stream}
+\input{sections/profile-pairs}
+\input{sections/profile-power}
+\input{sections/profile-time}
+\input{sections/group-profiles}
+\input{sections/weak-rounding}
+\clearpage
+\setcounter{section}{16}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\theHsection}{\arabic{section}}
+\input{sections/problems}
+\input{sections/methods}
+\appendix
+\input{sections/obstructions}
+\input{sections/checks}
+\begingroup
+\input{sections/reader-appendix}
+\endgroup
+\begingroup
+\input{sections/gate-appendix}
+\endgroup
+\IfFileExists{refs.bib}{\bibliographystyle{plainurl}\bibliography{refs}}{\input{main.bbl}}
+\end{document}

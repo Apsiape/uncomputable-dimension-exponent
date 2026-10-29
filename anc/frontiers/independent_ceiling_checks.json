@@ -1,0 +1,39 @@
+{
+  "affine_collisions": {
+    "parameter_cases": 41,
+    "lamp_pairs": 1827,
+    "exact_formula_and_bound_1_over_K": true
+  },
+  "common_bad_set_parameters": {
+    "cases": 120,
+    "all_fraction_bounds": true,
+    "max_dimension_ratio_fixed_grid": 33565520.29505621
+  },
+  "invariance_repair": {
+    "cases": 4,
+    "actual_support_conjugacy": true,
+    "negative_control_padded_bad_set_has_no_failure_witness": true
+  },
+  "noncommuting_complete_columns_m_ge_n": {
+    "cases": 288,
+    "max_completeness_error": 3.1510933450251724e-15,
+    "max_positive_bound_violation": 0.0
+  },
+  "weighted_sequential_POVM_rounding": {
+    "cases": 105,
+    "max_normalization_error": 3.861242001184791e-15,
+    "max_negative_eigenvalue": 3.5150160804597837e-16,
+    "max_effect_error_over_input_precision": 0.9632046355927696,
+    "max_effect_commutator_over_input_precision": 0.003431503265489545
+  },
+  "junk_and_classical_flags": {
+    "max_anticommutator_floor_error": 0.0,
+    "negative_control_reflection_square_error_is_zero": true,
+    "mixed_hash_flag_marginal_error": 6.798699777552591e-17,
+    "mixed_hash_flag_log_negativity": 0.9999999999999993,
+    "hash_flag_count": 3,
+    "register_qubits": 1
+  },
+  "elapsed_seconds": 0.24331539997365326,
+  "peak_working_set_bytes": 34136064
+}

@@ -1,4 +1,4 @@
-"""Adversarial hill-climb against the internal inequalities of Steps B-D (m = 2 and 3 ternary stages).
+"""Adversarial hill-climb against the extraction inequalities (m = 2 and 3 ternary stages).
 Starting from the exact flagged model, we search over perturbation generators (Bob PVMs, Bob controls,
 Alice PVMs, Alice controls, state) at fixed small size and maximise each normalized ratio:
   r_D   = Dvec / sum_j[p_j+(u_j+c_j)/sqrt2]        (telescoping with (12.4); must be <= 1)
@@ -15,7 +15,8 @@ import protocol_check as pc
 SQ2 = np.sqrt(2.0)
 
 
-def evaluate(base, gens, lam, types):
+def evaluate(base, gens, lam, types, target=None):
+    """Return every ratio, or only the requested search objective."""
     PA, UA, PB, UB, Psi = base
     m = len(types)
     d = PB[0][0].shape[0]
@@ -26,24 +27,25 @@ def evaluate(base, gens, lam, types):
     Psi2 = Psi + lam * gens['S']
     Psi2 = Psi2 / pc.nrm(Psi2)
     eta = pc.hypotheses_eta(PA2, UA2, PB2, UB2, Psi2, types)
-    res = pc.run_protocol(PA2, UA2, PB2, UB2, Psi2, types)
-    hist = pc.history_aggregates(PA2, UA2, PB2, UB2, Psi2, types)
-    sumF = pc.trace_F(PB2, Psi2, types)
+    history_targets = ('r_D', 'r_p', 'r_u', 'r_c', 'r_Delta')
+    hist = pc.history_aggregates(PA2, UA2, PB2, UB2, Psi2, types) if target is None or target in history_targets else []
+    if target not in ('r_p', 'r_u', 'r_c', 'r_Delta'):
+        res = pc.run_protocol(PA2, UA2, PB2, UB2, Psi2, types, information=target is None or target in ('r_Dst', 'r_1'))
+    sumF = pc.trace_F(PB2, Psi2, types) if target is None or target in ('r_C', 'r_1') else 0.0
     hb = sum(p + (u + c) / SQ2 for (p, u, c, D) in hist)
-    t = res['Dvec']
     tau = 20 * m ** 3 * eta
-    r = {
-        'r_D': res['Dvec'] / hb,
-        'r_B': res['Dvec'] / (7 * m ** 3 * eta),
-        'r_p': max(p / ((3 * j * j + 1) * eta) for j, (p, u, c, D) in enumerate(hist)),
-        'r_u': max(u / ((2 * j * j + 1) * eta) for j, (p, u, c, D) in enumerate(hist)),
-        'r_c': max(c / ((1 + 2 * SQ2 * j) * eta) for j, (p, u, c, D) in enumerate(hist)),
-        'r_Delta': max((D / (j * eta) if j > 0 else 0.0) for j, (p, u, c, D) in enumerate(hist)),
-        'r_C': (sumF - res['EN']) / (m * (m - 1) * eta) if m > 1 else 0.0,
-        'r_Dst': (res['EN'] - res['I_omega']) / (6 * m * t + 2 * pc.g(min(t, 1.0))),
-        'r_1': (sumF - res['I_omega']) / (m * (m - 1) * eta + 6 * m * tau + 2 * pc.g(min(tau, 1.0))),
+    ratios = {
+        'r_D': lambda: res['Dvec'] / hb,
+        'r_B': lambda: res['Dvec'] / (7 * m ** 3 * eta),
+        'r_p': lambda: max(p / ((3 * j * j + 1) * eta) for j, (p, u, c, D) in enumerate(hist)),
+        'r_u': lambda: max(u / ((2 * j * j + 1) * eta) for j, (p, u, c, D) in enumerate(hist)),
+        'r_c': lambda: max(c / ((1 + 2 * SQ2 * j) * eta) for j, (p, u, c, D) in enumerate(hist)),
+        'r_Delta': lambda: max((D / (j * eta) if j > 0 else 0.0) for j, (p, u, c, D) in enumerate(hist)),
+        'r_C': lambda: (sumF - res['EN']) / (m * (m - 1) * eta) if m > 1 else 0.0,
+        'r_Dst': lambda: (res['EN'] - res['I_omega']) / (6 * m * res['Dvec'] + 2 * pc.g(min(res['Dvec'], 1.0))),
+        'r_1': lambda: (sumF - res['I_omega']) / (m * (m - 1) * eta + 6 * m * tau + 2 * pc.g(min(tau, 1.0))),
     }
-    return r
+    return {k: ratios[k]() for k in ([target] if target is not None else ratios)}
 
 
 def random_gens(d, m, dE):
@@ -87,11 +89,11 @@ def main():
             for mask in ({}, {'PA': 0, 'UA': 0, 'S': 0}, {'PB': 0, 'UB': 0, 'PA': 0, 'UA': 0}, {'PB': 0, 'PA': 0, 'UA': 0, 'S': 0}):
                 for lam in (1e-3, 3e-2):
                     gens = scale_mask(random_gens(d, m, dE), mask)
-                    best = evaluate(base, gens, lam, types)[target]
+                    best = evaluate(base, gens, lam, types, target=target)[target]
                     step = 0.5
                     for it in range(iters):
                         cand = scale_mask(mix(gens, random_gens(d, m, dE), step), mask)
-                        val = evaluate(base, cand, lam, types)[target]
+                        val = evaluate(base, cand, lam, types, target=target)[target]
                         if val > best:
                             gens, best = cand, val
                         else:

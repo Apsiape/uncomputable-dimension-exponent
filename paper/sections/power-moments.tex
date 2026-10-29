@@ -1,0 +1,149 @@
+\section{Finite-moment models for the lamp source}\label{sec:power-moments}
+We use the six source unitaries $p,q,t,d,x,z$ and the $27$ words of~\cite[Definition~7.1]{DM-game}. Set $s=[p,q]$, $B=psp^{-1}$, $t_i=p^{i-1}tp^{1-i}$, $J=(xz)^2$, and normalize the residuals by $R_w=(w-I)/2$, together with $R_J=(J+I)/2$. Every residual has norm at most one on unitary assignments.
+
+\begin{theorem}[All fixed finite moments]\label{thm:power-moments}
+For every fixed real $\nu>0$ and every sufficiently large integer $N$ there are flat unitary assignments of this same source with $x^2=z^2=I$, $J=-I$,
+\[
+ \max_w\tau_{D_N}(|R_w|^{2\nu})\le C_\nu N^{-\nu},\qquad
+ \log D_N=3N+O_\nu(\sqrt N),\qquad R_J=0.
+\]
+The presentation does not depend on $\nu$. No uniform estimate as $\nu\to\infty$ is claimed.
+\end{theorem}
+
+\subsection{Character moments and Clifford lamps}
+Fix $\nu\ge1$, $k=\lceil\nu\rceil$, $m=\lceil\log N\rceil$ and $F=\mathbb F_{2^m}$. Choose distinct $\alpha_1,\ldots,\alpha_N\in F$ and a binary basis, and put
+\[
+ \zeta_j=(1,\alpha_j,\ldots,\alpha_j^{2k-1})\in\mathbb F_2\oplus F^{2k-1}\cong\mathbb F_2^{n_0},
+ \quad n_0=1+(2k-1)m.
+\]
+Pad into $W=\mathbb F_2^n$ for any $n\ge n_0$. Define
+\[
+ v_u=N^{-1/2}\bigl((-1)^{\langle\zeta_j,u\rangle}\bigr)_{j=1}^N,
+ \qquad c(u)=N^{-1}\sum_{j=1}^N(-1)^{\langle\zeta_j,u\rangle}.
+\]
+Then $\langle v_u,v_w\rangle=c(u+w)$ and, with $b_k=(2k-1)!!$,
+\begin{equation}\label{eq:power-character}
+ \frac1{2^n-1}\sum_{u\ne0}|c(u)|^{2\nu}\le b_k^{\nu/k}N^{-\nu}.
+\end{equation}
+To prove this, any binary dependence of at most $2k$ distinct columns has even length, by its first coordinate. For the dependent column set $S$, its field power sums of orders $0,\ldots,|S|-1$, with $|S|\le2k$, then vanish. The Vandermonde matrix on the distinct $\alpha_j$ would annihilate the all-ones vector, a contradiction. Thus the signs are $2k$-wise independent and unbiased for uniform $u$. In their $2k$-th moment only even multiplicities survive; pairing positions bounds their number by $b_kN^k$. Divide by $N^{2k}$. Removing $u=0$ decreases the average since $c(0)=1$ and $|c|\le1$, and concavity of the power $\nu/k$ proves \eqref{eq:power-character}.
+
+Use full exterior Fock space $\mathcal H_0=\Lambda(\C^{3N})$, of dimension $2^{3N}$, with Majoranas satisfying $\{\gamma(f),\gamma(g)\}=2\langle f,g\rangle I$ on real vectors. In three orthogonal copies set
+\[
+ A_u=\gamma(v_u\otimes e_1),\quad B_u=\gamma(v_u\otimes e_2),\quad C_u=\gamma(v_u\otimes e_3),
+ \qquad X_u=iA_uB_u,\quad Z_u=iA_uC_u.
+\]
+These are reflections, $X_uZ_u=B_uC_u=-Z_uX_u$ and $(X_uZ_u)^2=-I$.
+The Clifford construction of overlapping qubits is due to Chao, Reichardt, Sutherland and Vidick~\cite[Theorem~3.1]{CRSV17}. We use its three-family Clifford construction; the fixed finite moments and simultaneous affine covariance needed here are established below. For $c=c(u+w)$, CAR expansion gives
+\[
+ X_uZ_w-Z_wX_u=2cB_uC_w,\qquad
+ X_uX_w-X_wX_u=-2c(A_wA_u+B_wB_u-2cI).
+\]
+Since $B_uC_w$ is unitary, the absolute normalized mixed group residual is exactly $|c|I$. For the Majorana reflections $A_u,A_w$ (and likewise $B_u,B_w$), the identity $UV+VU=2cI$ gives $(UV-cI)^*(UV-cI)=(1-c^2)I$. Put $P=A_uA_w$ and $Q=B_uB_w$. They commute, $X_uX_w=PQ$, and the same-type group commutator is $(PQ)^2$. Since $P+P^*=Q+Q^*=2cI$, write $P=cI+i\sqrt{1-c^2}R$ and $Q=cI+i\sqrt{1-c^2}S$ for commuting reflections when $|c|<1$. The scalar joint-spectrum values give $\|(PQ)^2-I\|/2\le2|c|\sqrt{1-c^2}\le2|c|$. The endpoint cases follow directly, and the identical calculation applies to $Z$.
+
+Let $D_u=\operatorname{diag}((-1)^{\langle\zeta_j,u\rangle})$ and $U_u=\Lambda(D_u\otimes I_3)$. Full second quantization is a genuine representation, so $U_uU_w=U_{u+w}$ and $U_uX_wU_u^*=X_{u+w}$, likewise for $Z$; there is no projective sign ambiguity.
+On $\ell^2(G)\otimes\mathcal H_0$, $G=\operatorname{GL}(n,2)$, put
+\[
+ L_h(\delta_g\otimes\psi)=\delta_{hg}\otimes\psi,\qquad
+ T_u(\delta_g\otimes\psi)=\delta_g\otimes U_{g^{-1}u}\psi,
+ \qquad \widetilde X_w|_g=X_{g^{-1}w},\quad\widetilde Z_w|_g=Z_{g^{-1}w}.
+\]
+Direct substitution proves $L_hT_uL_h^*=T_{hu}$, $T_uT_w=T_{u+w}$ and
+$L_h\widetilde X_wL_h^*=\widetilde X_{hw}$, $T_u\widetilde X_wT_u^*=\widetilde X_{u+w}$, with the same identities for $Z$.
+Thus this is an exact affine representation. Every linear action commutes with the zero lamps. Its logarithmic dimension is at most $n^2+3N$.
+
+Finite-field independence and small-bias spaces have established precedents in Naor--Naor~\cite{NN93} and Alon--Goldreich--H\aa stad--Peralta~\cite{AGHP92}. The Vandermonde argument and even-moment pairing are standard tools; the additional requirements here are simultaneous affine covariance, the literal source certificate and the collective clock. The finite exhaustive search in the small-bias side bound below is not claimed to be a new efficient derandomization.
+
+\subsection{The collective clock in the affine representation}
+Here we give the geometric lift explicitly. Its permutation regions and spreading method are those of~\cite[Propositions~6.1 and~6.5, Lemma~6.4]{DM-H3} and~\cite[Proposition~13.9]{DM-precision}.
+Take $M\ge48$, $n=4M+4$, $\ell=2M+2$ and right-coordinate cycles $c_r=(1\ r\ r-1\ \cdots\ 2)$. At $0\le i,j<M$ use
+\[
+ A_{i,j}=c_{\ell-i-j},\quad B_{i,j}=c_{2\ell-j}\ (j<M-1),\quad B_{i,M-1}=D_i,
+\]
+\[
+ D_0=c_{2\ell-M+1},\qquad D_{i+1}=c_{\ell-i-(M-1)}^{-1}(1\ 2)D_ic_{\ell-i}.
+\]
+Make the preliminary exact moves $(1\ M+4)$ at the $a$-link $(M-1,M-1)$ and $(5\ M+5)$ at the $b$-link $(0,M-2)$, multiplying on the right-action left. The only exceptional plaquettes have labels
+\[
+ P_B(q_B)=\prod_{r=5}^{M+3}(r\ r+M),\quad P_T(q_T)=(5\ M+5),\quad
+ q_B=(M-1,M-1),\ q_T=(0,M-2).
+\]
+The bulk region contains $q_B$, the column $(M-1,j)$ for $1\le j\le M-2$, and $0\le i\le M-3$, $0\le j\le M-2$, $i+j\le M-3$.
+The top region contains $q_T$ and $i,j\ge0$, $i+j\le M-3$. Their areas are
+\[
+ A_B=M(M-1)/2,\qquad A_T=1+(M-1)(M-2)/2.
+\]
+The $r$th transported bulk transposition at a vertex $(i,j)$ has endpoints
+\[
+ \{r+M-1-i-j,r+2M-1-j\}\ (i\le M-2),\qquad
+ \{r+M-1-j,r+2M-1-j\}\ (i=M-1).
+\]
+Take their product for $P_B(i,j)$; the top label is $\{M+3-i-j,2M+3-j\}$. The cited covariance identities restrict to this bulk region: labels are disjoint, base labels avoid $1,2$, and initial labels of active interior edges avoid $2,3,4$. Only those edges carry potentials; the source is attached by its bottom edge. These are finite permutation identities, so they can be checked directly from the displayed cycles and labels.
+
+Use the inverse coordinate map to pass from right coordinates to left linear actions, and represent through $L$ above, denoting the representation by $\Pi$. Set $Q_R(v)=(I-\Pi(P_R(v)))/2$. Then $Q_R$ is a projection, $e^{i\pi Q_R}=\Pi(P_R)$, covariance survives and commuting labels give commuting projections. A label fixing $2,3,4$ commutes with translations on those coordinates and the transvection $E_{3\leftarrow2}$; its represented projection and all its exponentials do too. Every linear action fixes configuration zero, so all these corrections also commute with both zero lamps. This verifies the protected-affine operations rather than assuming that an arbitrary representation acts on named qubit factors.
+
+Solve $\operatorname{curl}\varphi_R=\pi/A_R-\pi1_{q_R}$ with zero boundary potentials. The required curls sum to zero; eliminating leaves of the connected dual spanning tree assigns each parent edge to meet its leaf curl, and leaves the root equation automatically. Use the corrected links
+$F_a(v)=\prod_R e^{i\varphi_R(a\text{-edge})Q_R(v)}\Pi(A_v)$ and similarly $F_b$. Define
+\[
+ p|c,\psi\rangle=|c-e_1,F_a(c-e_1)\psi\rangle,\qquad
+ q|c,\psi\rangle=|c-e_2,F_b(c-e_2)\psi\rangle.
+\]
+Covariance brings each correction in a plaquette to its base. Commuting projections add their angles; at a source $e^{i\pi Q_R}$ cancels the original defect. The remaining holonomy is
+\[
+ e^{i1_B\pi Q_B/A_B}e^{i1_T\pi Q_T/A_T},\qquad
+ \|[p,q]-s_0\|\le h_M:=\pi/A_B+\pi/A_T\le8\pi/M^2,
+\]
+where $s_0=\Pi((1\ 2))$. Put $t=T_{e_1}$, $d=L_{E_{2\leftarrow1}}$, $x=\widetilde X_0$, $z=\widetilde Z_0$.
+The protected identities give
+\[
+ ptp^*=qtq^*=T_{e_2},\quad pT_{e_2}p^*=T_{e_3},\quad
+ pdp^*=qdq^*=L_{E_{3\leftarrow2}}.
+\]
+Also $ps_0p^*=qs_0q^*=B_0=\Pi((2\ 3))$ and $p^2s_0p^{-2}=\Pi((3\ 4))$, so the independent-$s_0$ Houghton words are exact. The point swaps give $B_0s_0(pdp^*)s_0B_0=d$, and similarly with $q$, while $s_0p,s_0q$ commute with $t$.
+The genuine affine identities give $t^2=I$, commuting coordinate translations,
+$dT_{e_1}d^{-1}=T_{e_1}T_{e_2}$ and $[d,T_{e_2}]=[d,T_{e_3}]=I$. Every base/correction and $d$ commute with $x,z$; their onsite relations and $J=-I$ are exact.
+
+For completeness, the entire $27$-word certificate has the following normalized bounds, with $h=h_M$, $K=\max_{u\ne0}|c(u)|$. Rows containing $s$ use its actual value $[p,q]$.
+\begin{center}\small\setlength{\tabcolsep}{3pt}
+\begin{tabular}{rll@{\qquad}rll}
+\toprule
+row & word & bound & row & word & bound\\\midrule
+1 &$s^2$ &$h$& 2 &$(spsp^{-1})^3$ &$3h$\\
+3 &$[s,p^2sp^{-2}]$ &$2h$&4 &$psp^{-1}qs^{-1}q^{-1}$ &$h$\\
+5 &$t^2$ &$0$&6 &$[t,sp]$ &$h$\\
+7 &$[t,sq]$ &$h$&8 &$[d,Bsp]$ &$2h$\\
+9 &$[d,Bsq]$ &$2h$&10 &$[t_1,t_2]$ &$0$\\
+11 &$dt_1d^{-1}(t_1t_2)^{-1}$ &$0$&12 &$[d,t_2]$ &$0$\\
+13 &$[d,t_3]$ &$0$&14--19 &$[p,x],[p,z],[q,x],[q,z],[d,x],[d,z]$ &$0$\\
+20--22 &$x^2,z^2,(xz)^4$ &$0$&23 &$[x,txt^{-1}]$ &$\le\min(1,2K)$\\
+24 &$[x,tzt^{-1}]$ &$K$&25 &$[z,txt^{-1}]$ &$K$\\
+26 &$[z,tzt^{-1}]$ &$\le\min(1,2K)$&27 &$[J,t]$ &$0$\\\bottomrule
+\end{tabular}
+\end{center}
+The first four words have $2,6,4,2$ occurrences of $s^{\pm1}$; rows $6,7,8,9$ have $2,2,4,4$, after expanding $B$. Replace each by $s_0^{\pm1}$ and telescope, then divide by two. This proves every host bound. The zero rows follow from the displayed exact affine and onsite identities. For the four lamp rows, $t$ sends zero to $e_1$ and the $g$-block labels are $0,g^{-1}e_1$. Uniform $g$ makes the latter uniform on $W\setminus\{0\}$, with equal stabilizer multiplicities. Thus rows $24,25$ have exactly the moment in \eqref{eq:power-character}; rows $23,26$ have at most $4^\nu$ times it. Their clock factor is an identical multiplicity, as these words contain only $t,x,z$.
+
+\begin{proof}[Proof of \cref{thm:power-moments}]
+Choose
+\[
+ M=\max\{48,\lceil N^{1/4}\rceil,\lceil(n_0-4)/4\rceil\},\qquad n=4M+4.
+\]
+The complete space has dimension $D_N=M^2|\operatorname{GL}(n,2)|2^{3N}$, hence
+$\log D_N=3N+O_\nu(\sqrt N)$, since $n_0=O_\nu(\log N)$ and $\log|\operatorname{GL}(n,2)|\le n^2$. Every nonzero host residual is at most $3h_M\le24\pi M^{-2}$, whose $2\nu$-moment is $O_\nu(N^{-\nu})$. The character calculation gives the same order for all lamp rows; the marker residual is zero. This proves the theorem for $\nu\ge1$. For $0<\nu<1$, use the $\nu=1$ assignments and scalar concavity:
+$\tau((|R|^2)^\nu)\le\tau(|R|^2)^\nu$.
+\end{proof}
+
+\begin{corollary}[Explicit rational powers]\label{cor:power-rational}
+For integers $1\le a\le b$, one fixed rational BCS game has
+\[
+ c\eps^{-a/b}2^{-C(\log\log(1/\eps))^2}\le d_G^\to(\eps)
+ \le\log D_G(\eps)\le C'\eps^{-a/b}.
+\]
+\end{corollary}
+\begin{proof}
+For each normalized source residual replace its zero equation by $R=VS^a$, $S^b=0$, with $V$ unitary and $S$ a positive contraction. At weighted precision $\delta$, the spectral measure $\Tr(\rho1_B(S))$ gives $|S^a|_\rho\le|S^b|_\rho^{a/b}$, without requiring $[S,\rho]=0$. Thus $|R|_\rho\le2\delta^{a/b}$. The compiler's original decoded words have actual mirrors, inverse mirrors and state commutators $O(\sqrt\eps)$, within $e=O(\eps^{a/(2b)})$. The marker gives fixed visibility, so the explicit budget behind \eqref{eq:power-extraction} proves the lower bound on every original mixed state.
+For the upper bound take moment order $\nu=b/a$, extend each square-matrix polar partial isometry to a unitary $R=V|R|$, and set $S=|R|^{1/a}$. The first equation is exact and $\|S^b\|_{2,D_N}^2\le C N^{-b/a}$. Flat commutators vanish. Compiler completeness gives loss $O(N^{-b/a})$ with only a constant dimension multiplier and a maximally entangled original state. An integer $N\asymp\eps^{-a/b}$ covers all small losses. Upper losses tend to zero, and the divergent lower bound excludes finite perfection.
+\end{proof}
+
+These are finite-moment models, not an operator-norm endpoint theorem: for $u_*=(1,0,\ldots,0)$ all character signs are $-1$, so $X_{u_*}=X_0$, $Z_{u_*}=Z_0$ and the mixed residual has norm one on an exceptional affine block. In contrast its higher finite moments decay. Choosing a uniformly small-bias list gives a separate operator-norm upper estimate $\log D_\eta=O(\eta^{-5/2})$: independent characters obey $\Pr(|c(u)|>\kappa)\le2e^{-N\kappa^2/2}$ by $\cosh t\le e^{t^2/2}$. A union bound gives a list for $N\ge2\kappa^{-2}\ln(4(2^n-1))$, selectable by finite exact search. Take $M\asymp\eta^{-1/2}$, $n=4M+4$, $\kappa=\eta/2$ in the table. This neither proves nor refutes a quadratic operator-norm cost.
+
+
+The distinction between fixed-word moments and operator-norm control matters in the surrounding approximation literature. Ozawa--R\o rdam--Sato~\cite{ORS14} prove qualitative quasidiagonality for elementary amenable groups, without the dimension rate needed here. Gowers--Hatami~\cite{GH17} study normalized Schatten approximation, and uniform pair-defect stability, while Fournier-Facio--Rangarajan~\cite{FFR23} establish uniform Ulam stability for lamplighters and related groups. Becker--Lubotzky~\cite{BL18} and Arzhantseva--P\u aunescu~\cite{AP14} address stability in their specified Hilbert--Schmidt or Hamming metrics. None of these hypotheses turns a small exceptional fixed-relator block into a small operator norm. No quadratic general filling estimate is assumed from the Houghton literature~\cite{Lee12}; the proof uses the explicit clock regions and their checked affine lift.

@@ -1,0 +1,56 @@
+\section{Every tracial limit pays for halting}\label{sec:forcing}
+\begin{lemma}[Forced finite initialization]\label{lem:initialization}
+In an exact model of $\mathcal P_K$,
+\begin{equation}\label{eq:forced-decoding}
+ B_eL=B_e,\quad B_eR=2^{-e}B_e,\qquad C_kZ=C_kD_k.
+\end{equation}
+The zero-test equation forces $z_i v=v$ when $r_i v=v$, and $z_i v=0$ when $r_i v=2^{-n}v$ for an integer $n>0$.
+\end{lemma}
+\begin{proof}
+By Lemma~\ref{lem:exact-clock}, every digit is a spectral function of its clock coordinate. The required commutations imply that $L,R,Z$ commute with the relevant digits. Expand~\eqref{eq:decode-L} and~\eqref{eq:decode-R} along the $e$ successive $E_{00}$ factors of $B_e$. The nonrecursive terms vanish there. At the first $E_1$ factor, the nonrecursive term is $I$. The coefficient accumulated in the second expansion is $2^{-e}$. These finite expansions prove the first two identities.
+
+In~\eqref{eq:reset}, on $C_k$ the first $k$ fuel bits force the recursive branch. Each supplies the next factor $I-P_{t,j}$. At the next fuel bit the constant branch is forced. Thus $C_kZ=C_kD_k$. In particular the $k=0$ identity forces reset on $I-P_f$, so $Z=0$ cannot be a tracial solution.
+
+For the zero-test, $z_i$ commutes with $s_i$. On its range $r_i=I$; on its kernel $0\le r_i\le I/2$. If $r_iv=v$, the latter component of $v$ must vanish; if $r_iv=2^{-n}v$ with $n>0$, the former component must vanish. The argument applies to every vector in a given subspace, including after unitary conjugation. Although $r_i=0$ is permitted, no finite sequence of the prescribed updates starting at an ordinary encoded integer reaches it.
+\end{proof}
+
+\begin{theorem}[Flag density]\label{thm:flag}
+Every exact tracial model of $\mathcal P_K$ satisfies $\tau(F)\ge\thetaK$. There is a function $\omega(\delta)\to0$ such that every weighted precision-$\delta$ model satisfies
+\begin{equation}\label{eq:flag-density}
+ \Tr(\rho F)\ge\thetaK-\omega(\delta).
+\end{equation}
+No effective modulus is asserted.
+\end{theorem}
+\begin{proof}
+Work first in the faithful tracial representation. The clock variables satisfy Lemma~\ref{lem:exact-clock}. By Proposition~\ref{prop:increment}, $U$ increments each finite time prefix; it commutes with fuel and address variables. Fix $e\in K$ with halting time $h$ and choose $k$ with $2^k>h$. The operator
+\[
+ Q_0=B_eC_kD_k(I-F)
+\]
+is a projection. Lemma~\ref{lem:initialization} and~\eqref{eq:initialize} set all counters and controls on its range to the initialized values. Input counter one has value $r_1=2^{-e}$, while other counters encode zero.
+
+Write $W_l=U^{-l}WU^l$ and $Z_l=U^{-l}ZU^l$. On $Q_0$, the first $k$ time bits are initially zero. Increment does not return them to zero before step $2^k$, so
+\begin{equation}\label{eq:no-reset}
+ Z_0Q_0=Q_0,\qquad Z_lQ_0=0\quad(1\le l\le h).
+\end{equation}
+We prove by induction that every counter and control at time $l\le h$ has its classical scalar right action on $Q_0$. The assertion holds at zero by initialization. Given these right actions, the zero-test part of Lemma~\ref{lem:initialization}, applied to the conjugated workspace, forces the correct zero-test right actions as well. Every branch selector and every update polynomial therefore has its prescribed scalar right action. If $AQ_0=aQ_0$ and $BQ_0=bQ_0$, then $ABQ_0=abQ_0$; no inter-time commutation is needed.
+
+Conjugate~\eqref{eq:transition} by $U^{-l}$ and multiply by $Q_0$ on the right. The initialized polynomials are functions of $L,R$ and constants, so retain their scalar actions. By~\eqref{eq:no-reset} the reset term vanishes and the step term yields exactly the next configuration. This proves the induction. At time $h$,
+\[
+ U^{-h}q_{\mathrm{halt}}U^hQ_0=Q_0.
+\]
+Since $q_{\mathrm{halt}}\le F$ and $[F,U]=0$, the left side is killed by $I-F$. Thus $Q_0=0$.
+
+It remains to remove the auxiliary conditions, which must not be assumed to have uniform conditional mass. The operator $B_e(I-F)$ commutes with all fuel and time flips. Conjugate $B_e(I-F)C_kD_k=0$ by the flip of the earliest specified fuel digit. It preserves every later specified digit. Adding the two equations removes that digit. Repeat in increasing order to remove all fuel conditions, then do the same for time. The result is $B_e(I-F)=0$. The address cylinders $B_e$ are orthogonal and have trace $4^{-(e+1)}$ by~\eqref{eq:fair-cylinders}. Taking finite sums over halting inputs and then their supremum proves $\tau(F)\ge\thetaK$.
+
+For the uniform approximate statement, suppose instead that a sequence of models has $\delta_j\to0$ but $\Tr(\rho_jF)\le\thetaK-\gamma$ for some $\gamma>0$. Form their states on the universal $C^*$-algebra of the finitely many bounded-domain variables before imposing equations. A weak-* limit of moment states exists. It is tracial, since
+\[
+ \trn{[\rho_j,s]}\le2\hs{[\sqrt{\rho_j},s]}\longrightarrow0
+\]
+for each generator and hence each fixed word. Here $\|\cdot\|_1$ denotes trace norm; the inequality follows by expanding $[\xi^2,s]$ and applying Hilbert--Schmidt Cauchy--Schwarz. For every relation $r$, the limit has $\tau(r^*r)=0$. Traciality gives, for bounded $a$,
+\[
+ \tau(a^*r^*ra)=\tau(r^*raa^*)\le\opn a^2\tau(r^*r)=0.
+\]
+Thus all relations are zero operators in the tracial GNS representation. This exact model has $\tau(F)\le\thetaK-\gamma$, contradicting the first part. Taking the supremum of the positive shortfall over precision-$\delta$ models defines a function $\omega(\delta)\to0$ and proves~\eqref{eq:flag-density}.
+\end{proof}
+
+The proof treats only finite computations before taking compactness. It never tries to quantify how far a given finite precision sees into the halting set. This compactness argument supplies no effective modulus for the uniform flag-density estimate.

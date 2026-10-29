@@ -1,0 +1,55 @@
+\section{Counting measurements on the actual state}\label{sec:count}
+The count must tolerate measurements that commute only approximately and a density matrix that is not flat. Its proof keeps the measurement branches together. Its last step is the usual random-access-code argument~\cite{Nay99}, using Holevo's information bound~\cite{Hol73}.
+
+\begin{theorem}[Triangular measurement count]\label{thm:count}
+Let $m$ PVMs on $\C^d$ have two or three outcomes. Let $\rho$ be a density matrix and $\xi=\sqrt\rho$. Assume each outcome has state commutator at most $\eta$, and outcomes of different measurements have weighted commutator at most $\eta$. For each measurement $i$, assume a unitary $U_i$ has state commutator at most $\eta$, exchanges its own two binary outcomes, or its two active ternary outcomes while fixing the inactive one, and preserves every later measurement. Each of these intertwining equations is required in weighted norm with error at most $\eta$.
+
+If $b$ measurements are binary and $F_i$ is the active projection of a ternary measurement, then for an absolute constant $C$, with $e=Cm^4\eta^2\le1/2$,
+\begin{equation}\label{eq:count}
+ \log d\ge b+\sum_{i\text{ ternary}}\Tr(\rho F_i)
+ -Cm^3\eta-m\bigl[h_2(e)+e\bigr].
+\end{equation}
+Here $h_2$ is binary entropy, with $h_2(0)=0$.
+\end{theorem}
+
+\begin{proof}
+For a PVM $(P_a)$ define left and right Hilbert--Schmidt isometries
+\[
+ L_P(Z)=(P_aZ)_a,\qquad R_P(Z)=(ZP_a)_a.
+\]
+They differ on $\xi$ by at most $\sqrt3\eta$. Every left multiplication commutes with every right multiplication. Moving a product of $s$ left recording maps through $\xi$ to right maps in reverse order therefore changes the recording vector by at most $s\sqrt3\eta$, by telescoping isometries.
+
+Suppose a column of left operators $D=(D_c)_c$ has column operator norm at most $L$ and $\hs{D\xi}\le\alpha$. It commutes with all right recording maps. After any prefix of $s$ measurements, the preceding comparison gives
+\begin{equation}\label{eq:branch}
+ \left(\sum_{\mathbf a,c}\hs{D_cP_{s,a_s}\cdots P_{1,a_1}\xi}^2\right)^{1/2}
+ \le\alpha+Ls\sqrt3\eta.
+\end{equation}
+This estimates all branches together. In particular, no inverse of a small branch probability appears.
+
+Measure in reverse index order. For the suffix starting at $i$, move $U_i$ through its recorded measurements. It exchanges its own two labels and preserves later ones. A single intertwining column is a difference of two isometries, has column operator norm at most two and weighted norm $O(\eta)$ on $\xi$. Equation~\eqref{eq:branch} bounds it after any preceding measurements by $O(m\eta)$. At most $m$ intertwiners, followed by the initial state-invariance error, give total vector error $O(m^2\eta)$. Distances of purifications bound total variation of the classical records. Thus the suffix distribution differs from its own $i$-th outcome swap by at most $Cm^2\eta$.
+
+For a binary outcome with conditional law $(p,1-p)$, concavity gives $h_2(p)\ge1-|2p-1|$. The suffix swap variation is exactly the average of $|2p-1|$ over the later record. Hence its conditional entropy is at least one minus that variation. For ternary probabilities,
+\[
+ H(p_0,p_1,p_2)\ge(p_1+p_2)-|p_1-p_2|.
+\]
+Indeed split off the active event and apply the binary inequality within it. The ternary swap variation is the corresponding average of $|p_1-p_2|$. The chain rule now bounds the full record entropy below by $b$ plus recorded active probabilities minus $Cm^3\eta$.
+
+Those recorded active probabilities can be replaced by their values on $\rho$. For one PVM, $(P_a\xi)_a$ and $(\xi P_a)_a$ purify, respectively, its nonselectively measured state and $\rho$ on the original system. Their distance is at most $\sqrt3\eta$, so those states differ by trace norm at most $C\eta$. If $\Phi_j$ are the nonselective measurement channels, expand
+\[
+ \Phi_s\cdots\Phi_1(\rho)-\rho
+ =\sum_{j=1}^s\Phi_s\cdots\Phi_{j+1}\bigl(\Phi_j(\rho)-\rho\bigr).
+\]
+Trace-norm contractivity gives an $O(m\eta)$ bound for every prefix. Thus all active expectations change by at most $Cm^2\eta$ in total, already covered by the preceding error term.
+
+We next bound record entropy above by dimension. Fix one recorded variable. Move its measurement to the end of the actual sequence by adjacent swaps. An elementary swap column has components $[P_a,Q_b]$, weighted norm $O(\eta)$ and column operator norm at most two: it is the difference of the two recording isometries, with record factors reordered. Equation~\eqref{eq:branch} bounds its norm after a prefix by $O(m\eta)$. After at most $m$ swaps the total recording vectors differ by $O(m^2\eta)$.
+
+In the reordered process this PVM is last. Remeasuring it on the final system recovers its recorded value with zero error, since equal projective measurements are adjacent. In the original process, apply the same failure projection to the difference of recording vectors. Its squared norm bounds the decoding error by $e=Cm^4\eta^2$.
+
+Let $Z$ be the classical record and $Q_{\mathrm{fin}}$ the final system, of dimension $d$. The decoder just described acts only on this system, not on the purification reference. Holevo's bound, conditional entropy subadditivity and the error-indicator bound for at most three outcomes give
+\begin{align*}
+ H(Z)&=I(Z:Q_{\mathrm{fin}})+H(Z\mid Q_{\mathrm{fin}})\\
+ &\le\log d+\sum_iH(Z_i\mid Q_{\mathrm{fin}})\\
+ &\le\log d+m[h_2(e)+e].
+\end{align*}
+For the last line, measuring the proposed decoder can only increase conditional entropy; the classical conditional entropy is at most $h_2(e)+e\log(3-1)$. Combining the upper and lower record bounds proves~\eqref{eq:count}.
+\end{proof}

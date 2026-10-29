@@ -1,0 +1,83 @@
+\section{Exponent pairs and the witness-free classification proof}\label{sec:profile-pairs}
+Use the real-number hierarchy convention of Zheng and Weihrauch~\cite{ZW01}: finite liminfs of computable rational sequences form $\Sigma^0_2$, finite limsups form $\Pi^0_2$, and their common limit class is $\Delta^0_2$. The following elementary naming fact will be useful.
+
+\begin{lemma}[Simultaneous endpoint names]\label{lem:profile-names}
+If $0<L\le U<\infty$, $L\in\Sigma^0_2$ and $U\in\Pi^0_2$, there is a total computable bounded rational sequence with lower limit $L$ and upper limit $U$. If both endpoints lie in $(0,1]$, the sequence may be chosen in $[c_0,1]$ for any fixed rational $0<c_0<L$.
+\end{lemma}
+\begin{proof}
+For $L<U$, choose a rational separator $r$ strictly between them, a computable liminf name $(u_s)$ for $L$, and a computable limsup name $(v_s)$ for $U$. Fix rational bounds $a<L<U<b$. Interleave
+\[
+ \min(r,\max(a,u_s)),\qquad \max(r,\min(b,v_s)).
+\]
+The first subsequence has liminf $L$ and is at most $r$; the second has limsup $U$ and is at least $r$. Their interleaving has the required endpoints. If $L=U$, membership in both classes gives a convergent computable name. For endpoints in $(0,1]$, apply $x\mapsto\min(1,\max(c_0,x))$. Continuity and monotonicity preserve both endpoints. Upper clipping may change infinitely many terms when $U=1$, which does not affect this conclusion.
+\end{proof}
+
+\begin{theorem}[The logarithmic exponent pairs]\label{thm:profile-pairs}
+The positive finite lower/upper logarithmic dimension-exponent pairs of finite rational value-one BCS games are exactly
+\begin{equation}\label{eq:profile-pair-class}
+ \{(L,U):0<L\le U<\infty,\ L\in\Sigma^0_2,\ U\in\Pi^0_2\}.
+\end{equation}
+Every such pair is realized by one fixed game with no finite-dimensional perfect strategy and with the same pair for $d_G^\to(2^{-n})/n$. Separately, the positive finite lower dimension exponents are exactly the positive $\Sigma^0_2$ reals, and the positive finite upper ones exactly the positive $\Pi^0_2$ reals.
+\end{theorem}
+\begin{proof}
+By \cref{lem:computability}, $D_G(2^{-n})$ is a total computable integer sequence under the value-one promise. Approximate its logarithm by rationals to error at most $1/n$. The normalized sequence has the same finite lower and upper limits, giving the two necessary hierarchy classes. This necessity concerns dimension, not an algorithm for distillable entanglement.
+
+For sufficiency choose integers
+\[
+ q=\lfloor1/(2L)\rfloor+1,\qquad m=\lceil4qU-2\rceil,
+ \quad L'=\frac{4qL-2}{m},\quad U'=\frac{4qU-2}{m}.
+\]
+Then $m\ge1$ and $0<L'\le U'\le1$. Positive rational affine maps preserve the respective arithmetic classes. Use \cref{lem:profile-names} and \cref{lem:profile-hold} for a rational $c_0<L'$. By \cref{thm:profile-law},
+\[
+ \frac{\log_2D_G(2^{-n})}{n}
+ =\frac1{2q}+\frac m{4q}\frac{k(\Lambda)}\Lambda+O(\log n/n),
+\]
+and the same formula holds for usable demand. Every integer $\Lambda$ occurs at $2q$ consecutive precision indices, giving lower limit $L$ and upper limit $U$. These parameter and separator choices are existential; no uniform procedure extracting them from arbitrary endpoint names is asserted. To realize an arbitrary positive $\Sigma^0_2$ lower endpoint alone, pair it with a larger rational upper endpoint. For a positive $\Pi^0_2$ upper endpoint choose a smaller positive rational lower endpoint. The separate necessity arguments also apply when the other endpoint is infinite.
+\end{proof}
+
+\begin{corollary}[Local-heat pairs for the constructed games]\label{cor:profile-heat}
+In the reset model of \cref{sec:heat}, the polynomial-delay games above satisfy
+\[
+ w_{{\rm local},G}(2^{-n})=2\Lambda+mk(\Lambda)+O(\log n).
+\]
+Their local-heat coefficient pairs are $(2L,2U)$, and joint-reset heat is bounded. This is an inclusion in the full heat-pair spectrum.
+\end{corollary}
+\begin{proof}
+Apply the cited thermodynamic sandwich \eqref{eq:heat-sandwich}, namely
+$2d_G^\to\le w_{{\rm local},G}\le2\log_2D_G+2\log_2K_{\rm ans}$, to the matched profiles. The answer alphabet is fixed. The joint-reset bound is the same input from~\cite[Theorem~2.1]{DM-heat}; no new thermodynamic inequality is used.
+\end{proof}
+
+\begin{corollary}[Classification without a game witness]\label{cor:profile-no-witness}
+Every positive $\Delta^0_2$ logarithmic dimension coefficient has a matched original-state usable realization using no $\mathrm{MIP}^*=\mathrm{RE}$ witness. Together with \cref{lem:computability}, this proves \cref{thm:realization}. For each polynomial-delay profile construction, the explicit function $\Lambda+(m/2)k(\Lambda)$ is computable in polynomial time in $n$ and approximates both demands to additive error $O(\log n)$.
+\end{corollary}
+\begin{proof}
+Take $L=U=\alpha$ in \cref{thm:profile-pairs}; a convergent pulse name suffices. Its presentation uses only the polynomial compiler, Cantor clocks, carry, finite counter simulation, count and extraction already specified, with no call to the witness construction of \cref{sec:classification}. The converse is the computable-dimension limit argument. Dyadic losses imply the full $\varepsilon\downarrow0$ law: monotonicity sandwiches a loss between adjacent dyadic losses, whose linear targets differ by $O(1)$.
+For the algorithmic assertion, run the fixed counter program through $\Lambda$ pulses and evaluate its one-count. Polynomial delay makes this polynomial time. The error statement follows from \cref{thm:profile-law}; it is an approximation to optimized demands, not an exact polynomial-time evaluation of either one.
+\end{proof}
+
+The exact-trace obstruction of \cref{sec:limits} is compatible with these results. It concerns a fixed rational polynomial whose exact-trace minimum is the target coefficient. Here the initialized cylinder, history columns, multipliers and counted measurement family change with precision. In an exact trace \eqref{eq:profile-calibration-bound} forces every calibrated input to vanish, since positive lower density dominates the subexponential horizon; that zero is independent of the target endpoints. No stationary expectation of the output control is identified with $k(J)/J$. The witness-based proof in \cref{sec:classification} retains its separate projection-minimum and exact-trace conclusions.
+
+\section{Profiles computable in small space}\label{sec:profile-space}
+\begin{corollary}[Space-bounded target profiles]\label{cor:profile-space}
+Let $A:\N\to\N$ be computable on input $n$ in work space $O(\log n)$, respectively $o(n)$. Suppose fixed rationals $0<\alpha\le\beta$ and $c\ge0$ satisfy, for every $n'\ge n$,
+\begin{equation}\label{eq:profile-slope}
+ \alpha(n'-n)-c\le A(n')-A(n)\le\beta(n'-n)+c.
+\end{equation}
+Some fixed finite rational value-one BCS game has both $\log_2D_G(2^{-n})$ and $d_G^\to(2^{-n})$ equal to $A(n)+O(\log n)$, respectively $A(n)+o(n)$.
+\end{corollary}
+\begin{proof}
+Choose integer $q\ge1/\alpha$ and integer $m\ge\max(1,2(2q\beta-1))$, and put $\tau(J)=(2/m)(A(2qJ)-J)$. For $J'\ge J$ its increments lie between $(2/m)(J'-J)-2c/m$ and $(J'-J)+2c/m$. Set $k(0)=0$ and
+\[
+ k(J+1)=k(J)+1_{k(J)<\tau(J+1)}.
+\]
+The discrepancy is bounded by $1+2c/m+|\tau(0)|$. For its upper side, take the last increment before $J$ and use the lower interval-slope bound after that point. For its lower side, take the last non-increment and use the upper interval-slope bound; if either point is absent, the initial value gives the same bound. Thus the word of unit increments has positive lower one-density and $\Lambda+(m/2)k(\Lambda)=A(2q\Lambda)+O(1)$.
+
+Let $s(n)$ be the target computation's space use and set
+\begin{equation}\label{eq:profile-space-envelope}
+ S(n)=\max_{j\le n}s(j)+O(\log(n+2)).
+\end{equation}
+This includes input-head positions, loop bookkeeping and the $O(\log n)$ output bits, since the slope bound gives $A(n)=O(n)$. A halting deterministic computation cannot revisit a complete configuration. Its configuration count, including these data, is $2^{O(S(n))}$. Store tapes as counter stacks and simulate each elementary step by bounded copying and counter operations; stack sizes and the total sequential time through all inputs $j\le n$ remain $2^{O(S(n))}$. Computing the greedy word sequentially is therefore a finite counter program with that delay bound.
+
+If $s(n)=O(\log n)$ the delay is polynomial. If $s(n)=o(n)$, its prefix maximum is also $o(n)$ and the delay is subexponential. Apply \cref{thm:profile-law}, with fixed rescaling $n=2qJ$, to obtain respectively $O(\log n)$ and $o(n)$ error. Finally \eqref{eq:profile-slope} makes $A(n)-A(2q\Lambda)=O(1)$.
+\end{proof}
+Conversely a fixed counter program run for $T(J)$ steps has all counters at most $T(J)$ and its pulse word is computable in space $O(\log T(J))$. This describes small-space representatives produced by this architecture. It does not characterize the exact optimized finite-scale values of every game.

@@ -1,0 +1,98 @@
+{
+  "random_counter_programs": {
+    "programs": 16,
+    "fuel_time_points": 21824,
+    "trace_equalities": 400,
+    "all_exact": true
+  },
+  "single_visit_kernel": {
+    "times_checked": 1025,
+    "formula": "(2/3)*4^(-bit_length(h))",
+    "all_exact": true
+  },
+  "literal_marker_machine": {
+    "registers": 5,
+    "states": 17,
+    "visits": [
+      {
+        "tick": 4,
+        "L": 4,
+        "physical_time_fair_interleave": 9,
+        "k": 4
+      },
+      {
+        "tick": 194,
+        "L": 16,
+        "physical_time_fair_interleave": 389,
+        "k": 9
+      },
+      {
+        "tick": 2664,
+        "L": 256,
+        "physical_time_fair_interleave": 5329,
+        "k": 13
+      },
+      {
+        "tick": 595054,
+        "L": 65536,
+        "physical_time_fair_interleave": 1190109,
+        "k": 21
+      }
+    ],
+    "stage_cost": "9*L^2+10*L+6",
+    "elementary_instructions": 595050
+  },
+  "matrix_trace_normalization": [
+    {
+      "N": 1,
+      "corner_unit_trace": "1",
+      "rank_one_trace": "1"
+    },
+    {
+      "N": 2,
+      "corner_unit_trace": "1/2",
+      "rank_one_trace": "1/4"
+    },
+    {
+      "N": 3,
+      "corner_unit_trace": "1/3",
+      "rank_one_trace": "1/9"
+    },
+    {
+      "N": 4,
+      "corner_unit_trace": "1/4",
+      "rank_one_trace": "1/16"
+    },
+    {
+      "N": 5,
+      "corner_unit_trace": "1/5",
+      "rank_one_trace": "1/25"
+    },
+    {
+      "N": 6,
+      "corner_unit_trace": "1/6",
+      "rank_one_trace": "1/36"
+    },
+    {
+      "N": 7,
+      "corner_unit_trace": "1/7",
+      "rank_one_trace": "1/49"
+    },
+    {
+      "N": 8,
+      "corner_unit_trace": "1/8",
+      "rank_one_trace": "1/64"
+    },
+    {
+      "N": 9,
+      "corner_unit_trace": "1/9",
+      "rank_one_trace": "1/81"
+    },
+    {
+      "N": 10,
+      "corner_unit_trace": "1/10",
+      "rank_one_trace": "1/100"
+    }
+  ]
+}
+ALL INDEPENDENT GROUP CHECKS PASS

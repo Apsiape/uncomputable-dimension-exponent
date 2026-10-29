@@ -1,0 +1,36 @@
+\section{Power spectra and the realization theorem}\label{sec:power}
+The logarithmic laws above concern $\log D_G(\eps)$ and $d_G^\to(\eps)$ of order $\log(1/\eps)$. We now classify a second scale. Write
+\[
+ p_G(\eps)=\inf_{\substack{\text{pure original strategies}\\\text{loss}\le\eps}}S(\rho_B),\qquad
+ f_G(\eps)=\inf_{\text{loss}\le\eps}E_F(\rho_{AB}).
+\]
+Here $E_F$ is the single-copy convex roof. A resource $r_G$ has power exponent $\beta$ when
+$r_G(\eps)=\eps^{-\beta+o(1)}$, equivalently $\log(1+r_G(\eps))/\log(1/\eps)\to\beta>0$.
+For the dimension resource take $r_G=\log D_G$, rather than $D_G$. All strategies have finite local spaces; the lower bounds concern their original states.
+
+\begin{theorem}[Power-scale realization and classification]\label{thm:power-realization}
+Given a program for a total computable rational sequence $a_s\to\beta\in(0,1]$, one can effectively construct one fixed finite rational BCS game $G$ of quantum value one, with no finite-dimensional perfect strategy, such that
+\[
+ d_G^\to(\eps)=\eps^{-\beta+o(1)},\qquad \log D_G(\eps)=\eps^{-\beta+o(1)}.
+\]
+The game uses neither $\beta$ as a coefficient nor a modulus of convergence.
+For each of the resources $\log D_G$, $p_G$ and $f_G$, the set of existing power exponents in $(0,1]$ is exactly
+\[
+ \Delta^0_2\cap(0,1].
+\]
+The usable-entanglement spectrum contains this class. Its reverse inclusion remains open. If a fixed game has a finite positive usable exponent outside $\Delta^0_2$, its efficient original states have a polynomial formation/distillation gap along a sequence, as quantified in \cref{prop:power-gap}.
+\end{theorem}
+
+The proof occupies \cref{sec:power-moments,sec:power-clock,sec:power-machine,sec:power-calibration,sec:power-ceilings}.
+First, a finite-moment source has logarithmic dimension $3N+O(\sqrt N)$ and every fixed residual moment of order $N^{-\nu}$. Second, a polynomial-cost clock localizes a growing interval of physical instructions on the same state. Third, bounded scaled counters run a fixed program while an old rational continues to generate pulses. The density of one pulses tends to $\beta$ with polynomial delay in pulse count. A stopped normalized product converts that density into a residual calibration exponent. Moment models give simultaneous flat upper assignments, and the original-state lamp extraction gives the lower bound. No witness Hilbert space is added by the computation.
+
+We use the original-state and flat-completeness clauses of \cref{thm:compiler}. For source extraction we use the written source-level proof of~\cite[Theorem~12.4]{DM-precision}, based on its signed regular extraction theorem~\cite[Theorem~6.4]{DM-precision}. At source error $e$, including actual mirrors, inverse mirrors, state commutators and fixed marker visibility, it gives
+\begin{equation}\label{eq:power-extraction}
+ E_D^{A\to B}(\rho_{AB})\ge e^{-2+o(1)}.
+\end{equation}
+Indeed, with $M=2^q$ lamps and $\Lambda_q\le2^{(\log q+23)^2}$, its budget is $M\Lambda_q^4e^2\le c$. Taking
+$q=2\log(1/e)-O((\log\log(1/e))^2)$ gives a rate at least $c'2^q$. The constant-probability Alice filter is a physical one-way operation and its probability is charged to that rate. Thus \eqref{eq:power-extraction} concerns the original mixed state, not its entropy or a selected pure component.
+
+\begin{remark}[The exact-trace barrier has a different hypothesis]\label{rem:power-trace-barrier}
+Proposition~\ref{prop:exact-barrier} concerns the matched minimum expectation of one fixed rational self-adjoint polynomial in exact traces. The exponent here is $\lim_J k(J)/J$, where $k(J)$ counts one pulses among the first $J$ outputs of a program. The initialized cylinder, history columns and normalized products change with $J$, and $J$ grows with precision. No fixed polynomial is asserted to have minimum trace $\beta$; in every exact trace the pulse projection has the computable value $c_{\rm one}$ of Lemma~\ref{lem:control-traces} (the unguarded clock has the same exact digit action), which is unrelated to $\beta$. Consequently the fixed-observable barrier does not apply. Early rational blocks have finite lengths and disappear in the limiting density. Slow or oscillating convergence changes an ineffective threshold in the estimates, not the finite coefficients of the game.
+\end{remark}

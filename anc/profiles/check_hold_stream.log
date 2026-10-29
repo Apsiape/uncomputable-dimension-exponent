@@ -1,0 +1,38 @@
+stages:
+{'s': 0, 'rational': 0.5, 'j_install': 0, 'j_end': 1064, 'k_over_j_at_end': 0.5, 'allowed_error': 0.3370927318295739}
+{'s': 1, 'rational': 0.34375, 'j_install': 1064, 'j_end': 8424, 'k_over_j_at_end': 0.3634852801519468, 'allowed_error': 0.25759734093067427}
+{'s': 2, 'rational': 0.7125, 'j_install': 8424, 'j_end': 42184, 'k_over_j_at_end': 0.6428029584676654, 'allowed_error': 0.20379290726341742}
+{'s': 3, 'rational': 0.34375, 'j_install': 42184, 'j_end': 253128, 'k_over_j_at_end': 0.3935874340254733, 'allowed_error': 0.16691950317625864}
+{'s': 4, 'rational': 0.74375, 'j_install': 253128, 'j_end': 1772008, 'k_over_j_at_end': 0.6937299380138239, 'allowed_error': 0.14303772894930497}
+worst t_J/(J+1)^2 = 3.5
+density range on [J_MAX/100, J_MAX]: 0.3935874340254733 0.6937459896262177
+calibrator: {'t': '0', 'stop_age': None, 'S': '0', 'max_new_residual': '0', 'transitions_checked': 8191}
+calibrator: {'t': '1', 'stop_age': 0, 'S': '1/2', 'max_new_residual': '0', 'transitions_checked': 8191}
+calibrator: {'t': '1/2', 'stop_age': 7, 'S': '1/4', 'max_new_residual': '0', 'transitions_checked': 8191}
+calibrator: {'t': '2^-53*4503599627370497', 'stop_age': 0, 'S': '1/2', 'max_new_residual': '0', 'transitions_checked': 8191}
+calibrator: {'t': '2^-54*9007199254740991', 'stop_age': 7, 'S': '1/4', 'max_new_residual': '0', 'transitions_checked': 8191}
+calibrator: {'t': '3/256', 'stop_age': 117, 'S': '1/4096', 'max_new_residual': '0', 'transitions_checked': 8191}
+calibrator: {'t': '2^-100*1', 'stop_age': 2185, 'S': '2^-200', 'max_new_residual': '0', 'transitions_checked': 8191}
+calibrator: {'t': '3/4', 'stop_age': 0, 'S': '1/2', 'max_new_residual': '0', 'transitions_checked': 8191}
+calibrator: {'t': '3/16', 'stop_age': 29, 'S': '1/16', 'max_new_residual': '0', 'transitions_checked': 8191}
+calibrator: {'t': '3/64', 'stop_age': 73, 'S': '1/256', 'max_new_residual': '0', 'transitions_checked': 8191}
+calibrator: {'t': '3/256', 'stop_age': 117, 'S': '1/4096', 'max_new_residual': '0', 'transitions_checked': 8191}
+calibrator: {'t': '3/1024', 'stop_age': 161, 'S': '1/65536', 'max_new_residual': '0', 'transitions_checked': 8191}
+calibrator: {'t': '3/4096', 'stop_age': 205, 'S': '1/1048576', 'max_new_residual': '0', 'transitions_checked': 8191}
+profile: worst (upper-lower)/log2 n for n > 1e5 = 94.99515650644184
+profile: A(n)/n range over sampled n > 1e5: 0.6968224901567991 0.8468674528112864
+  n=     1197 upper=      907 lower=      347 A(n)=       897.5 A/n=0.7498
+  n=  2000182 upper=  1655305 lower=  1653335 A(n)=   1655294.0 A/n=0.8276
+  n=  3999167 upper=  3308899 lower=  3307179 A(n)=   3308888.5 A/n=0.8274
+  n=  5998152 upper=  4659797 lower=  4657997 A(n)=   4659786.0 A/n=0.7769
+  n=  7997137 upper=  6010649 lower=  6008843 A(n)=   6010638.5 A/n=0.7516
+  n=  9996122 upper=  7361547 lower=  7359701 A(n)=   7361536.0 A/n=0.7364
+  n= 11995107 upper=  8712409 lower=  8710541 A(n)=   8712397.5 A/n=0.7263
+  n= 13994092 upper= 10063297 lower= 10061419 A(n)=  10063286.0 A/n=0.7191
+  n= 15993077 upper= 11414167 lower= 11412259 A(n)=  11414156.5 A/n=0.7137
+  n= 17992062 upper= 12765047 lower= 12763145 A(n)=  12765036.0 A/n=0.7095
+  n= 19991047 upper= 14115927 lower= 14113987 A(n)=  14115915.5 A/n=0.7061
+  n= 21990032 upper= 15466797 lower= 15464877 A(n)=  15466786.0 A/n=0.7034
+  n= 23989017 upper= 16817685 lower= 16815719 A(n)=  16817674.5 A/n=0.7011
+power summation: worst excess/sqrt(kappa) = 0.257950362999093
+ALL HOLD-STREAM ASSERTIONS PASSED; wrote hold_stream.json

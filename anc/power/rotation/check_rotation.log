@@ -1,0 +1,5 @@
+PASS (finite examples only)
+sqrt(2)/2 max new residual 8.548717289613705e-15 schedule ratio 0.7071
+golden_conjugate max new residual 8.881784197001252e-15 schedule ratio 0.61803
+cube_root(1/2) max new residual 7.549516567451064e-15 schedule ratio 0.7937
+noncommuting completeness error 7.771561172376096e-16

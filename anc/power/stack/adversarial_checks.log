@@ -1,0 +1,7 @@
+PASS (finite/local stress tests only)
+Bad carry slopes: [{'h': 0, 'log_bad_vs_log_delta_slope': 1.0000252650038377}, {'h': 1, 'log_bad_vs_log_delta_slope': 1.0000252650038377}, {'h': 5, 'log_bad_vs_log_delta_slope': 1.0000252650038377}, {'h': 12, 'log_bad_vs_log_delta_slope': 1.0000252650038377}]
+Boundary history max residual: 1.942890293094024e-16
+Float-log misclassifications (diagnostic only): 18
+Prefix amplitude max difference/delta: 0.7071067811634654
+Multistep slope: 1.0007014003928987
+Peak bytes: 34959360

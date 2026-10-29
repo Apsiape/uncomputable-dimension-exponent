@@ -1,0 +1,86 @@
+\subsection{A ceiling for quantitatively local lamp extensions}\label{sec:local-lamp-ceiling}
+The upper endpoint one has a model-theoretic explanation for the lamp constructions, stronger than the binary-pulse restriction. It is a statement about a specified extension class. A finite list of equations containing the lamp letters need not belong to that class.
+
+\begin{definition}[Block-sharp models and locality]\label{def:lamp-locality}
+Let $\Sigma$ be the six source letters of \cref{sec:power-moments}, $J$ its marker, and $W$ a finite set of source-trivial words. A $(W,\nu)$-block-sharp model is a unitary assignment on $H=\bigoplus_{b\in B}H_b$, with equal-dimensional blocks, whose generators permute the blocks, whose marker is $-I$, and for which every $w\in W$ fixes every block outside one common set $B_{\rm bad}$ pointwise, with $|B_{\rm bad}|\le\nu|B|$. Write $\Pi$ for its bad-block projection.
+
+Let $W_L$ comprise the source-trivial words of length at most a fixed $L$. A finite bounded rational extension $\mathcal P$ is \emph{$L$-local} if there are fixed $K,c\ge1$ such that every $(W_L,\nu)$ model extends on $H\otimes H_{\rm aux}$, retaining the source letters and exact variable domains, with
+\[
+ \log_2\dim H_{\rm aux}\le c(1+\log_2(1/\nu)),\quad
+ Q_j=Q_j(\Pi\otimes I)+E_j,\quad
+ \|Q_j\|\le K,\quad \|E_j\|_{2,\tau}\le K\sqrt\nu
+\]
+for every defining residual $Q_j$, including commutators. Here $\tau$ is the flat state. The constants and $L$ are fixed before precision tends to zero. This is a quantitative extension hypothesis.
+\end{definition}
+
+\begin{lemma}[Simultaneous sharp source models]\label{lem:lamp-sharp-models}
+For each finite $W$ there are $(W,\nu)$-block-sharp models with
+\[
+ \log_2\dim H\le C_W\nu^{-1}\log_2(2/\nu).
+\]
+No connectivity or irreducibility is required.
+\end{lemma}
+\begin{proof}
+Use the block construction in~\cite[Proposition~9.4]{DM-game}, whose hash-register mechanism builds on the overlapping-qubit construction~\cite{CRSV17}. Let $\ell$ be the largest word length, increased to one if necessary. At an interior clock position take the union of the lit sites of all words in $W$; its size is at most $\ell|W|$. Set
+\[
+ M=\lceil4\ell/\nu\rceil,\qquad
+ k=\left\lceil\log_2\frac{4\ell^2\max(1,|W|)^2}{\nu}\right\rceil.
+\]
+The clock-boundary fraction is at most $2\ell/M\le\nu/2$, and pairwise independence bounds collision on that common lit set by $(\ell|W|)^22^{-k-1}\le\nu/8$. Outside their union each word fixes the entire block, simultaneously. The source's displayed dimension formula gives
+\[
+ \log_2\dim H=1+2\log_2(2M+1)+k(6M+10)+2^k
+             =O_W(\nu^{-1}\log(2/\nu)).
+\]
+Generators permute equal-sized blocks and $J=-I$. Their action may preserve distinct rank sectors of the hash label; the proof uses only pointwise identity on good blocks.
+\end{proof}
+
+\begin{theorem}[Local lamp ceiling]\label{thm:local-lamp-ceiling}
+For the rational BCS game compiled from an $L$-local extension,
+\[
+ \log_2D_G(\eps)\le C_{\mathcal P}\eps^{-1}\log(1/\eps)
+\]
+at all sufficiently small losses. The same upper bound holds for $d_G^\to,p_G,f_G$. The game has quantum value one, and all of these upper power exponents are at most one.
+\end{theorem}
+\begin{proof}
+In the flat state, $\tau(\Pi\otimes I)\le\nu$, so every residual in \cref{def:lamp-locality} has norm at most $2K\sqrt\nu$. Square-root-state commutators vanish. The compiler \cref{thm:compiler} gives loss at most $C_0\nu$ and local dimension at most a fixed multiple of $\dim H\dim H_{\rm aux}$. Take $\nu=\eps/C_0$ and apply \cref{lem:lamp-sharp-models}. The upper state is maximally entangled, so its pure entropy, formation and directional distillable rate are the same logarithm. Its losses tend to zero.
+\end{proof}
+
+\begin{lemma}[Membership of the displayed calibrators]\label{lem:local-calibrators}
+The stopped and programmed lamp calibrators used in this part, their admitted static phase variants, and their finite mixing and chaining satisfy \cref{def:lamp-locality}. This includes the oscillating power-pair construction of \cref{thm:profile-power-pairs}.
+\end{lemma}
+\begin{proof}
+For every normalized source residual $R_i=(\varphi(r_i)-I)/2$, its relator unitary fixes the good space pointwise and hence preserves its orthogonal complement. Thus $R_i=\Pi R_i\Pi$ and $T_i=|R_i|\le\Pi$; choose a unitary polar extension. Use separate finite fuel/time clocks, and assign the controller, reciprocal age, counters, zero tests and positive witnesses their exact scalar histories through cyclic resets, as in \cref{prop:power-counter-models}.
+
+In each calibrator set $C=D=S=0$, $H_{\rm run}=I$ and $P_{\rm stop}=0$. Running, stopping, multiplier updates and domains are then exact; only the initialization of $C$ and the reset term of its update can fail. Those failures are $-ZT_i$ and $-Z_+T_i$, up to sign and order, and are supported on $\Pi$. The controller need not reach a nonzero-input stopping time. The declared current commutations hold: the source polar factor and original source letters are absent from that list, and different residual workspaces are not required to commute.
+
+For a finite chain set every intermediate input and penalty to zero. Only its first link to the original modulus has a bad-supported failure. Mixing changes bounded scalar coefficients or controller histories. Static algebraic phase parameters act as scalar roots in the admitted phase interface. The unguarded increment defect is $\sqrt2\,2^{-N_c/2}$ and the Cantor defects are $O(4^{-N_c})$; $N_c=\lceil\log_2(1/\nu)\rceil+O(1)$ makes them $O(\sqrt\nu)$. Finitely many clock factors have the required logarithmic auxiliary cost. Powering a bounded residual preserves this estimate, since $\|h_q(Q)\|_{2,\tau}\le\|Q\|^{q-1}\|Q\|_{2,\tau}$.
+
+The hold stream changes none of these assignments. The separate logarithmic profile construction has Cantor sources and a carry increment, rather than this lamp source; its $O(n)$ log dimension at loss $2^{-n}$ already has power exponent zero. It is not being identified with the unguarded lamp construction.
+\end{proof}
+
+\begin{lemma}[A local invariance majorant]\label{lem:local-invariance}
+Adjoining positive contractions $K,Y$ with $K-T-Y=0$, tests $[K,s]=0$ for source generators, and penalty $K=0$, to an $L$-local extension remains $\max(L,34)$-local for a source-relator modulus $T$.
+\end{lemma}
+\begin{proof}
+Let $A$ be the blocks on which an actual source-certificate relator fails, and $N_j(A)$ their radius-$j$ neighborhood in the undirected generator graph. Set $K=\Pi_{N_1(A)}$ and $Y=K-T$. Since $0\le T\le\Pi_A\le K$, their domains and $K-T-Y=0$ hold exactly. The commutator $[K,\varphi(s)]$ is supported on $N_2(A)$. For a block there, a path $p$ of length at most two reaches an actual failure of some relator $r$ of length at most thirty. Consequently $p^{-1}rp$ fails on that block and has length at most thirty-four. Thus $N_2(A)$ lies in the common declared bad set for $W_{\max(L,34)}$, as does the support of $K$. All residuals are bounded and bad-supported, with no auxiliary factor. A padded declared bad set cannot replace the actual failure set in this argument.
+\end{proof}
+
+\begin{corollary}[Saturation and the class spectrum]\label{cor:lamp-class-spectrum}
+For the stopped lamp checker with fixed multipliers $a>b\ge2$, all four resource power exponents equal one. Among games compiled from the local class of \cref{def:lamp-locality}, the positive existing spectra for $\log D_G,p_G,f_G$ are exactly $\Delta^0_2\cap(0,1]$. The directional usable spectrum contains this set and has upper exponents at most one; its general arithmetic ceiling is not established here.
+\end{corollary}
+\begin{proof}
+The complete stopping columns $L_j$ and terminal column $K_J$ of the stopped-product proof remain valid when $a\ge b$. With $\phi$ the initialized column and $r$ its error allowance, they give
+\[
+ \|L_jT\phi\|\le b(b/a)^j(\|L_jS\phi\|+r)+r
+                 \le b\|L_jS\phi\|+(b+1)r,
+ \qquad \|K_JT\phi\|\le a^{-J}+r.
+\]
+Exact column completeness and the Euclidean triangle inequality imply
+\[
+ \|T\phi\|\le a^{-J}+b\|S\phi\|+
+                   ((b+1)\sqrt J+1)r.
+\]
+Choose $J=\lfloor\log_b(1/\delta)-B\log_b(1+\log(1/\delta))\rfloor$ with fixed large $B$. Since $a^{-J}\le b^{-J}$, localization, the tested penalty and charge back give $|T|_\rho\le C\delta(1+\log(1/\delta))^c$. At loss $\eps$, the original-state lamp extraction used in \cref{thm:power-realization} therefore has scale $e=O(\sqrt\eps\operatorname{polylog}(1/\eps))$, including mirrors and state commutators, and yields $E_D^{A\to B}\ge e^{-2+o(1)}=\eps^{-1+o(1)}$. The local upper bound matches it. This lower bound also bounds pure entropy, formation and log dimension. The nominal smooth-model exponent $\log a/\log b>1$ is not a minimum over strategies.
+
+For the class spectrum use the effective ceilings of \cref{prop:power-ceilings}, the local upper bound and the realizations of \cref{thm:power-realization}, whose membership was proved above. This proves equality for the three stated existing spectra, and only realization inclusion for the usable one.
+\end{proof}

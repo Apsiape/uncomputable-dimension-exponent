@@ -1,0 +1,6 @@
+PASS independent tests
+Scalar blocks/equations: 4368 209664 exact maximum: 0
+Slope range: 0.9995218313572952 1.0001172713453468
+Max normalized age/counter: 0.37652187549876154 0.20791858583907716
+Max history completeness: 3.158228403422809e-14
+Peak working set: 36954112

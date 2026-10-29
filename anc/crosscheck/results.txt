@@ -7,5 +7,5 @@ EFS-ESE: 7.425751256286265e-16  ESE-(1/L)sumW E: 0.0
 identity (1) defect: 5.940601005029012e-15
 max ||F-F'||^2/(2||EF||^2) over random: 1.000000000000001
 
-$ python anc/crosscheck/r1.py
-max ||[F',X_i]|| (should be O(1) if R1 is real): 1.9989363391090018  last ||EF||: 0.0014735938271143083
+$ python anc/crosscheck/orthogonality_context.py
+max ||[F',X_i]|| (orthogonality-context negative control): 1.9989363391090018  last ||EF||: 0.0014735938271143083

@@ -1,0 +1,200 @@
+{
+  "clocks": [
+    {
+      "clock_bits": 2,
+      "unguarded_flat_defect": 0.7071067811865476,
+      "formula": 0.7071067811865476
+    },
+    {
+      "clock_bits": 3,
+      "unguarded_flat_defect": 0.5,
+      "formula": 0.5
+    },
+    {
+      "clock_bits": 4,
+      "unguarded_flat_defect": 0.3535533905932738,
+      "formula": 0.3535533905932738
+    },
+    {
+      "clock_bits": 5,
+      "unguarded_flat_defect": 0.25,
+      "formula": 0.25
+    }
+  ],
+  "finite_models": [
+    {
+      "m": 2,
+      "q": 3,
+      "beta": 0.6309297535714574,
+      "clock_bits": 3,
+      "input_eigenvalues": [
+        0.0,
+        0.00390625,
+        0.007,
+        0.03,
+        0.1,
+        0.27,
+        0.5,
+        1.0
+      ],
+      "max_new_equation_error": 5.551115123125783e-17
+    },
+    {
+      "m": 2,
+      "q": 3,
+      "beta": 0.6309297535714574,
+      "clock_bits": 4,
+      "input_eigenvalues": [
+        0.0,
+        0.00390625,
+        0.007,
+        0.03,
+        0.1,
+        0.27,
+        0.5,
+        1.0
+      ],
+      "max_new_equation_error": 5.551115123125783e-17
+    },
+    {
+      "m": 2,
+      "q": 5,
+      "beta": 0.43067655807339306,
+      "clock_bits": 3,
+      "input_eigenvalues": [
+        0.0,
+        0.00390625,
+        0.007,
+        0.03,
+        0.1,
+        0.27,
+        0.5,
+        1.0
+      ],
+      "max_new_equation_error": 2.7755575615628914e-17
+    },
+    {
+      "m": 2,
+      "q": 5,
+      "beta": 0.43067655807339306,
+      "clock_bits": 4,
+      "input_eigenvalues": [
+        0.0,
+        0.00390625,
+        0.007,
+        0.03,
+        0.1,
+        0.27,
+        0.5,
+        1.0
+      ],
+      "max_new_equation_error": 2.7755575615628914e-17
+    },
+    {
+      "m": 3,
+      "q": 5,
+      "beta": 0.6826061944859854,
+      "clock_bits": 3,
+      "input_eigenvalues": [
+        0.0,
+        0.00015241579027587258,
+        0.007,
+        0.03,
+        0.1,
+        0.27,
+        0.5,
+        1.0
+      ],
+      "max_new_equation_error": 1.1102230246251565e-16
+    },
+    {
+      "m": 3,
+      "q": 5,
+      "beta": 0.6826061944859854,
+      "clock_bits": 4,
+      "input_eigenvalues": [
+        0.0,
+        0.00015241579027587258,
+        0.007,
+        0.03,
+        0.1,
+        0.27,
+        0.5,
+        1.0
+      ],
+      "max_new_equation_error": 1.1102230246251565e-16
+    }
+  ],
+  "noncommuting_states": [
+    {
+      "m": 2,
+      "q": 3,
+      "T_weighted_norm": 0.5325837875515176,
+      "S_weighted_norm": 0.17030722457192168,
+      "Holder_bound": 0.6546242161739285,
+      "state_input_commutator": 0.31394868003175974
+    },
+    {
+      "m": 2,
+      "q": 5,
+      "T_weighted_norm": 0.523195504323937,
+      "S_weighted_norm": 0.09136539568536378,
+      "Holder_bound": 0.7136134913900394,
+      "state_input_commutator": 0.2054161946575344
+    },
+    {
+      "m": 3,
+      "q": 5,
+      "T_weighted_norm": 0.4461087689308545,
+      "S_weighted_norm": 0.13532364280973302,
+      "Holder_bound": 0.7659343522067927,
+      "state_input_commutator": 0.21273024940858723
+    },
+    {
+      "m": 3,
+      "q": 7,
+      "T_weighted_norm": 0.5187349668713667,
+      "S_weighted_norm": 0.08004744629062413,
+      "Holder_bound": 0.7210719832805234,
+      "state_input_commutator": 0.2211357244102184
+    }
+  ],
+  "binary_time_zero_stop": [
+    {
+      "n": 2,
+      "time_zero_stop_residual": 0.0
+    },
+    {
+      "n": 3,
+      "time_zero_stop_residual": 0.16666666666666669
+    },
+    {
+      "n": 4,
+      "time_zero_stop_residual": 0.25
+    },
+    {
+      "n": 8,
+      "time_zero_stop_residual": 0.375
+    }
+  ],
+  "greater_than_one_obstruction": [
+    {
+      "mass": 0.01,
+      "T_norm": 0.1,
+      "S_norm": 0.05,
+      "ratio_to_S_power_1_5": 8.944271909999157
+    },
+    {
+      "mass": 0.0001,
+      "T_norm": 0.01,
+      "S_norm": 0.005,
+      "ratio_to_S_power_1_5": 28.284271247461902
+    },
+    {
+      "mass": 1e-06,
+      "T_norm": 0.001,
+      "S_norm": 0.0005,
+      "ratio_to_S_power_1_5": 89.44271909999159
+    }
+  ]
+}

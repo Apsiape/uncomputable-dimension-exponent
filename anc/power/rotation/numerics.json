@@ -1,0 +1,458 @@
+{
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "noncommuting_history_completeness_error": 7.771561172376096e-16,
+  "examples": [
+    {
+      "name": "sqrt(2)/2",
+      "alpha": 0.7071067811865476,
+      "finite_models": [
+        {
+          "clock_bits": 2,
+          "diagonal_dimension": 144,
+          "max_new_residual": 2.220446049250313e-16,
+          "residuals": {
+            "reset": 0.0,
+            "phase_init": 0.0,
+            "phase_transition": 0.0,
+            "C_init": 0.0,
+            "D_init": 0.0,
+            "H_init": 0.0,
+            "H_transition": 0.0,
+            "C_transition": 0.0,
+            "D_transition": 0.0,
+            "stop": 0.0,
+            "root": 2.220446049250313e-16
+          },
+          "clock_affine_norm": 0.1875,
+          "clock_flip_norm": 0.1875,
+          "increment_flat_norm": 0.7071067811865476,
+          "increment_bad_columns": 1,
+          "penalty_flat_norm": 0.1318660748732363,
+          "stop_indices": [
+            1000000,
+            1,
+            1,
+            2,
+            2,
+            5,
+            8,
+            29,
+            142
+          ]
+        },
+        {
+          "clock_bits": 3,
+          "diagonal_dimension": 576,
+          "max_new_residual": 5.551115123125783e-16,
+          "residuals": {
+            "reset": 0.0,
+            "phase_init": 0.0,
+            "phase_transition": 5.551115123125783e-16,
+            "C_init": 0.0,
+            "D_init": 0.0,
+            "H_init": 0.0,
+            "H_transition": 0.0,
+            "C_transition": 0.0,
+            "D_transition": 0.0,
+            "stop": 0.0,
+            "root": 2.220446049250313e-16
+          },
+          "clock_affine_norm": 0.046875,
+          "clock_flip_norm": 0.046875,
+          "increment_flat_norm": 0.5,
+          "increment_bad_columns": 1,
+          "penalty_flat_norm": 0.1318660748732363,
+          "stop_indices": [
+            1000000,
+            1,
+            1,
+            2,
+            2,
+            5,
+            8,
+            29,
+            142
+          ]
+        },
+        {
+          "clock_bits": 5,
+          "diagonal_dimension": 9216,
+          "max_new_residual": 2.220446049250313e-15,
+          "residuals": {
+            "reset": 0.0,
+            "phase_init": 0.0,
+            "phase_transition": 2.220446049250313e-15,
+            "C_init": 0.0,
+            "D_init": 0.0,
+            "H_init": 0.0,
+            "H_transition": 0.0,
+            "C_transition": 0.0,
+            "D_transition": 0.0,
+            "stop": 0.0,
+            "root": 2.220446049250313e-16
+          },
+          "clock_affine_norm": 0.0029296875,
+          "clock_flip_norm": 0.0029296875,
+          "increment_flat_norm": 0.25,
+          "increment_bad_columns": 1,
+          "penalty_flat_norm": 0.1318660748732363,
+          "stop_indices": [
+            1000000,
+            1,
+            1,
+            2,
+            2,
+            5,
+            8,
+            29,
+            142
+          ]
+        },
+        {
+          "clock_bits": 7,
+          "diagonal_dimension": 147456,
+          "max_new_residual": 8.548717289613705e-15,
+          "residuals": {
+            "reset": 0.0,
+            "phase_init": 0.0,
+            "phase_transition": 8.548717289613705e-15,
+            "C_init": 0.0,
+            "D_init": 0.0,
+            "H_init": 0.0,
+            "H_transition": 0.0,
+            "C_transition": 0.0,
+            "D_transition": 0.0,
+            "stop": 0.0,
+            "root": 2.220446049250313e-16
+          },
+          "clock_affine_norm": 0.00018310546875,
+          "clock_flip_norm": 0.00018310546875,
+          "increment_flat_norm": 0.125,
+          "increment_bad_columns": 1,
+          "penalty_flat_norm": 0.1318660748732363,
+          "stop_indices": [
+            1000000,
+            1,
+            1,
+            2,
+            2,
+            5,
+            8,
+            29,
+            142
+          ]
+        }
+      ],
+      "schedule": {
+        "depth": 100000,
+        "min_wrap_gap": 7.4713825597427785e-06,
+        "min_Liouville_scaled_gap": 0.2928932188134524,
+        "max_log_product_discrepancy": 0.9999925286174403,
+        "ratio_at_final_depth": 0.7071
+      }
+    },
+    {
+      "name": "golden_conjugate",
+      "alpha": 0.6180339887498949,
+      "finite_models": [
+        {
+          "clock_bits": 2,
+          "diagonal_dimension": 144,
+          "max_new_residual": 0.0,
+          "residuals": {
+            "reset": 0.0,
+            "phase_init": 0.0,
+            "phase_transition": 0.0,
+            "C_init": 0.0,
+            "D_init": 0.0,
+            "H_init": 0.0,
+            "H_transition": 0.0,
+            "C_transition": 0.0,
+            "D_transition": 0.0,
+            "stop": 0.0,
+            "root": 0.0
+          },
+          "clock_affine_norm": 0.1875,
+          "clock_flip_norm": 0.1875,
+          "increment_flat_norm": 0.7071067811865476,
+          "increment_bad_columns": 1,
+          "penalty_flat_norm": 0.12150651049341,
+          "stop_indices": [
+            1000000,
+            1,
+            1,
+            3,
+            3,
+            6,
+            9,
+            33,
+            163
+          ]
+        },
+        {
+          "clock_bits": 3,
+          "diagonal_dimension": 576,
+          "max_new_residual": 0.0,
+          "residuals": {
+            "reset": 0.0,
+            "phase_init": 0.0,
+            "phase_transition": 0.0,
+            "C_init": 0.0,
+            "D_init": 0.0,
+            "H_init": 0.0,
+            "H_transition": 0.0,
+            "C_transition": 0.0,
+            "D_transition": 0.0,
+            "stop": 0.0,
+            "root": 0.0
+          },
+          "clock_affine_norm": 0.046875,
+          "clock_flip_norm": 0.046875,
+          "increment_flat_norm": 0.5,
+          "increment_bad_columns": 1,
+          "penalty_flat_norm": 0.12150651049341,
+          "stop_indices": [
+            1000000,
+            1,
+            1,
+            3,
+            3,
+            6,
+            9,
+            33,
+            163
+          ]
+        },
+        {
+          "clock_bits": 5,
+          "diagonal_dimension": 9216,
+          "max_new_residual": 1.7763568394002505e-15,
+          "residuals": {
+            "reset": 0.0,
+            "phase_init": 0.0,
+            "phase_transition": 1.7763568394002505e-15,
+            "C_init": 0.0,
+            "D_init": 0.0,
+            "H_init": 0.0,
+            "H_transition": 0.0,
+            "C_transition": 0.0,
+            "D_transition": 0.0,
+            "stop": 0.0,
+            "root": 0.0
+          },
+          "clock_affine_norm": 0.0029296875,
+          "clock_flip_norm": 0.0029296875,
+          "increment_flat_norm": 0.25,
+          "increment_bad_columns": 1,
+          "penalty_flat_norm": 0.12150651049341,
+          "stop_indices": [
+            1000000,
+            1,
+            1,
+            3,
+            3,
+            6,
+            9,
+            33,
+            163
+          ]
+        },
+        {
+          "clock_bits": 7,
+          "diagonal_dimension": 147456,
+          "max_new_residual": 8.881784197001252e-15,
+          "residuals": {
+            "reset": 0.0,
+            "phase_init": 0.0,
+            "phase_transition": 8.881784197001252e-15,
+            "C_init": 0.0,
+            "D_init": 0.0,
+            "H_init": 0.0,
+            "H_transition": 0.0,
+            "C_transition": 0.0,
+            "D_transition": 0.0,
+            "stop": 0.0,
+            "root": 0.0
+          },
+          "clock_affine_norm": 0.00018310546875,
+          "clock_flip_norm": 0.00018310546875,
+          "increment_flat_norm": 0.125,
+          "increment_bad_columns": 1,
+          "penalty_flat_norm": 0.12150651049341,
+          "stop_indices": [
+            1000000,
+            1,
+            1,
+            3,
+            3,
+            6,
+            9,
+            33,
+            163
+          ]
+        }
+      ],
+      "schedule": {
+        "depth": 100000,
+        "min_wrap_gap": 5.960864655207843e-06,
+        "min_Liouville_scaled_gap": 0.3819660112501051,
+        "max_log_product_discrepancy": 0.9999903551251919,
+        "ratio_at_final_depth": 0.61803
+      }
+    },
+    {
+      "name": "cube_root(1/2)",
+      "alpha": 0.7937005259840998,
+      "finite_models": [
+        {
+          "clock_bits": 2,
+          "diagonal_dimension": 144,
+          "max_new_residual": 2.220446049250313e-16,
+          "residuals": {
+            "reset": 0.0,
+            "phase_init": 0.0,
+            "phase_transition": 0.0,
+            "C_init": 0.0,
+            "D_init": 0.0,
+            "H_init": 0.0,
+            "H_transition": 0.0,
+            "C_transition": 0.0,
+            "D_transition": 0.0,
+            "stop": 0.0,
+            "root": 2.220446049250313e-16
+          },
+          "clock_affine_norm": 0.1875,
+          "clock_flip_norm": 0.1875,
+          "increment_flat_norm": 0.7071067811865476,
+          "increment_bad_columns": 1,
+          "penalty_flat_norm": 0.13187089621379378,
+          "stop_indices": [
+            1000000,
+            1,
+            1,
+            2,
+            2,
+            5,
+            7,
+            26,
+            127
+          ]
+        },
+        {
+          "clock_bits": 3,
+          "diagonal_dimension": 576,
+          "max_new_residual": 4.440892098500626e-16,
+          "residuals": {
+            "reset": 0.0,
+            "phase_init": 0.0,
+            "phase_transition": 4.440892098500626e-16,
+            "C_init": 0.0,
+            "D_init": 0.0,
+            "H_init": 0.0,
+            "H_transition": 0.0,
+            "C_transition": 0.0,
+            "D_transition": 0.0,
+            "stop": 0.0,
+            "root": 2.220446049250313e-16
+          },
+          "clock_affine_norm": 0.046875,
+          "clock_flip_norm": 0.046875,
+          "increment_flat_norm": 0.5,
+          "increment_bad_columns": 1,
+          "penalty_flat_norm": 0.13187089621379378,
+          "stop_indices": [
+            1000000,
+            1,
+            1,
+            2,
+            2,
+            5,
+            7,
+            26,
+            127
+          ]
+        },
+        {
+          "clock_bits": 5,
+          "diagonal_dimension": 9216,
+          "max_new_residual": 3.1086244689504383e-15,
+          "residuals": {
+            "reset": 0.0,
+            "phase_init": 0.0,
+            "phase_transition": 3.1086244689504383e-15,
+            "C_init": 0.0,
+            "D_init": 0.0,
+            "H_init": 0.0,
+            "H_transition": 0.0,
+            "C_transition": 0.0,
+            "D_transition": 0.0,
+            "stop": 0.0,
+            "root": 2.220446049250313e-16
+          },
+          "clock_affine_norm": 0.0029296875,
+          "clock_flip_norm": 0.0029296875,
+          "increment_flat_norm": 0.25,
+          "increment_bad_columns": 1,
+          "penalty_flat_norm": 0.13187089621379378,
+          "stop_indices": [
+            1000000,
+            1,
+            1,
+            2,
+            2,
+            5,
+            7,
+            26,
+            127
+          ]
+        },
+        {
+          "clock_bits": 7,
+          "diagonal_dimension": 147456,
+          "max_new_residual": 7.549516567451064e-15,
+          "residuals": {
+            "reset": 0.0,
+            "phase_init": 0.0,
+            "phase_transition": 7.549516567451064e-15,
+            "C_init": 0.0,
+            "D_init": 0.0,
+            "H_init": 0.0,
+            "H_transition": 0.0,
+            "C_transition": 0.0,
+            "D_transition": 0.0,
+            "stop": 0.0,
+            "root": 2.220446049250313e-16
+          },
+          "clock_affine_norm": 0.00018310546875,
+          "clock_flip_norm": 0.00018310546875,
+          "increment_flat_norm": 0.125,
+          "increment_bad_columns": 1,
+          "penalty_flat_norm": 0.13187089621379378,
+          "stop_indices": [
+            1000000,
+            1,
+            1,
+            2,
+            2,
+            5,
+            7,
+            26,
+            127
+          ]
+        }
+      ],
+      "schedule": {
+        "depth": 100000,
+        "min_wrap_gap": 9.186042007058859e-07,
+        "min_Liouville_scaled_gap": 0.2062994740159002,
+        "max_log_product_discrepancy": 0.9999990813957993,
+        "ratio_at_final_depth": 0.7937
+      }
+    }
+  ],
+  "status": "PASS (finite examples only)"
+}

@@ -25,4 +25,4 @@ for t in range(20):
     M_=(np.eye(L*d)-E)@F; U,s,Vt=np.linalg.svd(M_); rk=(s>1e-10).sum(); Fp=U[:,:rk]@U[:,:rk].T
     worst=max(worst,max(np.linalg.norm(Fp@X-X@Fp) for X in Xs))
     ef=np.linalg.norm(E@F)
-print("max ||[F',X_i]|| (should be O(1) if R1 is real):",worst," last ||EF||:",ef)
+print("max ||[F',X_i]|| (orthogonality-context negative control):",worst," last ||EF||:",ef)

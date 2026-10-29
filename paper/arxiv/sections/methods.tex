@@ -1,0 +1,14 @@
+\section*{How this work was done}\label{sec:methods}
+\addcontentsline{toc}{section}{How this work was done}
+
+The authors selected the questions and proof standards, directed the research, and take responsibility for every claim. AI systems from more than one developer assisted with exploration, derivation, programming and drafting.
+
+The mathematical evidence consists of the proofs in this paper and the explicitly cited external theorems. The ancillary programs provide reproducible finite checks. They test the compiler gadgets, finite clock and reader models, extraction protocols, gate and stop-or-continue histories, finite-moment lamps, the affine clock lift, stopped calibrators and scaled counters. The independent engine in \texttt{verify/} checks the finite models at $N=4,6,8$. The ancillary README gives the commands, outputs, dependencies and limitations of each suite.
+
+The power checks include finite CAR and affine calculations, exact scalar histories, ordered noncommutative identities and small weighted perturbations. They do not implement a complete universal counter compiler, instantiate the full compiled game, establish a uniform stability theorem by sampling, or certify a noncomputable density. The asymptotic conclusions rest on the written proofs.
+
+The profile suites check exact carry-clock and reset equations, initialized cylinders, the hold scheduler, finite calibration histories and profile accounting. An independent suite tests overflow-state deletion, noncommuting shared calibration inputs, greedy tracking, endpoint rescaling, hold accounting and the diagonal decoder. These finite tests do not establish the operator estimates, asymptotic endpoints or non-realizability theorem. The proofs in the profile part give those conclusions.
+
+The ceiling and group suites additionally check simultaneous bad-block bounds, exact scalar calibrator histories, stopped-column saturation, affine hash collisions, weighted sequential POVMs, finite exact counter histories and the literal elementary irrational-marker program. They test the matrix normalization of the canonical group trace. The hierarchy argument, universal pairwise restriction, positive-GNS trace rigidity and optimized weak-rounding criterion are written proofs, not consequences of numerical sampling. The effect-only example is a cited subspace theorem with its explicit entropy comparison; it is not presented as a fixed-game counterexample.
+
+A Lean formalization of Sections 2--10 is in progress and incomplete. Sections 11--17, the power-scale part and the profile part are not yet formalized. This preprint has not been peer reviewed.

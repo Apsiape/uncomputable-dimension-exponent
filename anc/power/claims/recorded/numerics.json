@@ -1,0 +1,240 @@
+{
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "finite_scaled_counter_models": [
+    {
+      "clock_bits": 2,
+      "clock_block_dimension": 16,
+      "max_new_residual": 0.0,
+      "checked_equations": 63,
+      "note": "Inherited clock defects excluded from this maximum."
+    },
+    {
+      "clock_bits": 3,
+      "clock_block_dimension": 64,
+      "max_new_residual": 2.7755575615628914e-17,
+      "checked_equations": 63,
+      "note": "Inherited clock defects excluded from this maximum."
+    },
+    {
+      "clock_bits": 5,
+      "clock_block_dimension": 1024,
+      "max_new_residual": 2.7755575615628914e-17,
+      "checked_equations": 63,
+      "note": "Inherited clock defects excluded from this maximum."
+    }
+  ],
+  "noncommuting_identity_error": 4.440892098500626e-16,
+  "weighted_bad_branches": [
+    {
+      "age": 0,
+      "log_log_slope": 1.0000043647304686,
+      "rows": [
+        {
+          "theta": 0.01,
+          "local_delta": 0.00999933334666654,
+          "bad_zero": 0.008366460822700216,
+          "bad_nonzero": 0.005477134288415178,
+          "bad_input": 0.006693168658160173,
+          "bad_over_delta": 0.836701861278515
+        },
+        {
+          "theta": 0.001,
+          "local_delta": 0.0009999993333334666,
+          "bad_zero": 0.0008366598870907447,
+          "bad_nonzero": 0.0005477224662180778,
+          "bad_input": 0.0006693279096725958,
+          "bad_over_delta": 0.8366604448642632
+        },
+        {
+          "theta": 0.0001,
+          "local_delta": 9.999999933333336e-05,
+          "bad_zero": 8.366600251396424e-05,
+          "bad_nonzero": 5.477225565922952e-05,
+          "bad_input": 6.693280201117138e-05,
+          "bad_over_delta": 0.8366600307173757
+        },
+        {
+          "theta": 1e-05,
+          "local_delta": 9.999999999333333e-06,
+          "bad_zero": 8.366600265201314e-06,
+          "bad_nonzero": 5.477225574960374e-06,
+          "bad_input": 6.69328021216105e-06,
+          "bad_over_delta": 0.8366600265759087
+        },
+        {
+          "theta": 1e-06,
+          "local_delta": 9.999999999993333e-07,
+          "bad_zero": 8.366600265339362e-07,
+          "bad_nonzero": 5.477225575050749e-07,
+          "bad_input": 6.69328021227149e-07,
+          "bad_over_delta": 0.836660026534494
+        }
+      ]
+    },
+    {
+      "age": 7,
+      "log_log_slope": 1.0000043647304688,
+      "rows": [
+        {
+          "theta": 0.01,
+          "local_delta": 0.005999600007999924,
+          "bad_zero": 0.008366460822700216,
+          "bad_nonzero": 0.005477134288415178,
+          "bad_input": 0.006693168658160173,
+          "bad_over_delta": 1.3945031021308583
+        },
+        {
+          "theta": 0.001,
+          "local_delta": 0.0005999996000000802,
+          "bad_zero": 0.0008366598870907447,
+          "bad_nonzero": 0.0005477224662180778,
+          "bad_input": 0.0006693279096725958,
+          "bad_over_delta": 1.3944340747737716
+        },
+        {
+          "theta": 0.0001,
+          "local_delta": 5.9999999600000015e-05,
+          "bad_zero": 8.366600251396424e-05,
+          "bad_nonzero": 5.477225565922952e-05,
+          "bad_input": 6.693280201117138e-05,
+          "bad_over_delta": 1.3944333845289596
+        },
+        {
+          "theta": 1e-05,
+          "local_delta": 5.999999999600001e-06,
+          "bad_zero": 8.366600265201314e-06,
+          "bad_nonzero": 5.477225574960374e-06,
+          "bad_input": 6.69328021216105e-06,
+          "bad_over_delta": 1.3944333776265143
+        },
+        {
+          "theta": 1e-06,
+          "local_delta": 5.999999999996e-07,
+          "bad_zero": 8.366600265339362e-07,
+          "bad_nonzero": 5.477225575050749e-07,
+          "bad_input": 6.69328021227149e-07,
+          "bad_over_delta": 1.3944333775574902
+        }
+      ]
+    },
+    {
+      "age": 63,
+      "log_log_slope": 1.0000043647304688,
+      "rows": [
+        {
+          "theta": 0.01,
+          "local_delta": 0.005999600007999924,
+          "bad_zero": 0.008366460822700216,
+          "bad_nonzero": 0.005477134288415178,
+          "bad_input": 0.006693168658160173,
+          "bad_over_delta": 1.3945031021308583
+        },
+        {
+          "theta": 0.001,
+          "local_delta": 0.0005999996000000802,
+          "bad_zero": 0.0008366598870907447,
+          "bad_nonzero": 0.0005477224662180778,
+          "bad_input": 0.0006693279096725958,
+          "bad_over_delta": 1.3944340747737716
+        },
+        {
+          "theta": 0.0001,
+          "local_delta": 5.9999999600000015e-05,
+          "bad_zero": 8.366600251396424e-05,
+          "bad_nonzero": 5.477225565922952e-05,
+          "bad_input": 6.693280201117138e-05,
+          "bad_over_delta": 1.3944333845289596
+        },
+        {
+          "theta": 1e-05,
+          "local_delta": 5.999999999600001e-06,
+          "bad_zero": 8.366600265201314e-06,
+          "bad_nonzero": 5.477225574960374e-06,
+          "bad_input": 6.69328021216105e-06,
+          "bad_over_delta": 1.3944333776265143
+        },
+        {
+          "theta": 1e-06,
+          "local_delta": 5.999999999996e-07,
+          "bad_zero": 8.366600265339362e-07,
+          "bad_nonzero": 5.477225575050749e-07,
+          "bad_input": 6.69328021227149e-07,
+          "bad_over_delta": 1.3944333775574902
+        }
+      ]
+    }
+  ],
+  "scheduler": {
+    "pulses": 40000,
+    "observed_density": 0.401075,
+    "limit_for_this_example": 0.4,
+    "stage_switches": [
+      {
+        "pulse": 42,
+        "stage": 1,
+        "p": 1,
+        "q": 5
+      },
+      {
+        "pulse": 1082,
+        "stage": 2,
+        "p": 17,
+        "q": 30
+      },
+      {
+        "pulse": 2792,
+        "stage": 3,
+        "p": 9,
+        "q": 35
+      },
+      {
+        "pulse": 5487,
+        "stage": 4,
+        "p": 21,
+        "q": 40
+      },
+      {
+        "pulse": 9647,
+        "stage": 5,
+        "p": 13,
+        "q": 45
+      },
+      {
+        "pulse": 13337,
+        "stage": 6,
+        "p": 1,
+        "q": 2
+      },
+      {
+        "pulse": 22193,
+        "stage": 7,
+        "p": 17,
+        "q": 55
+      },
+      {
+        "pulse": 34513,
+        "stage": 8,
+        "p": 29,
+        "q": 60
+      }
+    ],
+    "max_period_discrepancy": 14.983333324227715,
+    "conservative_microstep_cost": 15478910,
+    "quadratic_cost_bound": 160008000100,
+    "scope": "Abstract scheduler arithmetic; not a compiled universal-machine implementation."
+  },
+  "cheap_closures": {
+    "mixed_beta": 0.3000557336572602,
+    "subset_max_multiplier": 6,
+    "denominator_multiplier": 5,
+    "max_mixed_history_residual": 2.7755575615628914e-17,
+    "max_mixed_penalty_power_ratio": 0.1510895549139597,
+    "product_beta": 0.43701602444882115,
+    "max_chained_penalty_power_ratio": 0.25621649380829226
+  },
+  "status": "PASS (finite and local checks; uniform proofs are in RESULT.md)"
+}

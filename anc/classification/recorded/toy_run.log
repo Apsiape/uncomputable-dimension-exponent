@@ -334,4 +334,4 @@ WINDOW BUDGET
 cfg1 log2 d_N - (4-b)N = log2(ell_b) + window excess (constant in N): [(8, 15.0), (10, 15.75), (12, 15.5), (14, 15.25), (16, 15.0), (18, 15.75), (20, 15.5)] log2 ell_b = 14.0
 cfg2 log2 d_N - (4-b)N = log2(ell_b) + window excess (constant in N): [(8, 59.5), (10, 59.375), (12, 59.25), (14, 59.125), (16, 59.0), (18, 59.875), (20, 59.75)] log2 ell_b = 58.0
 
-wrote toy_results.json elapsed 78.6 s
+wrote toy_results.json elapsed 112.7 s

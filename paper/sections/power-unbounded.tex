@@ -1,0 +1,57 @@
+\subsection{Unbounded upper exponents for fixed games}\label{sec:unbounded-power}
+The ceiling in \cref{thm:local-lamp-ceiling} is specific to its quantitative locality hypothesis. The arithmetic hierarchy gives a different conclusion for general games, and even for Boolean constraint-system games.
+
+\begin{theorem}[No computable eventual envelope]\label{thm:unbounded-power}
+For each total computable $F:\N^2\to\N$ there is a finite rational two-player value-one game $G$ such that, for every integer $C$, 
+\[
+ D_G(2^{-n})>F(C,n)\quad\hbox{for infinitely many }n.
+\]
+The game can be chosen to be a BCS game. In particular, one such fixed game has infinite upper power exponent for $\log D_G,p_G,f_G$.
+\end{theorem}
+\begin{proof}
+For fixed local dimension $d$, the assertion $R(G,d,n)$ that a strategy wins with probability at least $1-2^{-n}$ is a decidable real semialgebraic feasibility problem, uniformly in the rational game, $d,n$. Mixed states and POVMs are included; compactness makes the weak threshold exact. Suppose the first assertion fails for $F$. Every value-one game would then have $C,n_0$ such that $R(G,F(C,n),n)$ holds for all $n\ge n_0$. Conversely, this condition implies value one. Thus the set of value-one games would have the definition
+\[
+ \exists C\,\exists n_0\,\forall n\ge n_0\ R(G,F(C,n),n),
+\]
+placing it in $\Sigma^0_2$. Mousavi--Nezhadi--Yuen prove that this set is $\Pi^0_2$-complete~\cite[Theorem~1.1]{MNY22}. Closure under computable preimages would collapse these two levels, contrary to the strict arithmetic hierarchy. The Boolean version follows from \cref{lem:synchronous-bcs-value} below, which proves the same hardness within that class.
+
+Take $F(C,n)=2^{2^{Cn}}$. The conclusion for every $C$ says exactly that the upper power exponent of $\log D_G$ is infinite. To transfer it to pure entropy, let a loss-$\eps$ pure strategy have entropy $S$. Its Schmidt tail past rank $R$ is at most $S/\log_2R$: each ordered Schmidt probability beyond $R$ is at most $1/R$. Set $R=2^{\lceil(S+1)/\eps^2\rceil}$. Normalized Schmidt truncation changes the state by half trace distance at most $\eps$, so compression to its Schmidt supports gives
+\[
+ \log_2D_G(2\eps)\le (p_G(\eps)+1)\eps^{-2}+1.
+\]
+Infima are handled by arbitrarily near minimizing strategies. A finite upper power exponent for $p_G$ would give a finite one for $\log D_G$, a contradiction. The two-support equal-loss ensemble and coherent-flag argument used in \cref{prop:power-ceilings} gives $f_G\le p_G\le f_G+1$, proving the formation assertion too.
+\end{proof}
+
+\begin{lemma}[Synchronous value one and Boolean value one]\label{lem:synchronous-bcs-value}
+There is an effective map from finite rational synchronous games $G$ whose question distribution gives every diagonal pair $(x,x)$ positive probability to finite rational BCS games $H_G$ such that $\omega_q(G)=1$ if and only if $\omega_q(H_G)=1$. Completeness has loss $O_G(\zeta)$ and soundness loss $O_G(\sqrt\eta)$, where $\zeta,\eta$ are the respective input losses.
+\end{lemma}
+\begin{proof}
+This is the constraint-variable (SynchBCS) construction of Paddock~\cite[Section~4.3 and Proposition~4.22]{Pad22}, whose BCS algebra is $*$-isomorphic to the synchronous algebra. We record the value-one transfer with the explicit loss exponents used here.
+For each question $x$ and answer $a$, introduce a projection $P_{x,a}$. Impose the sum-to-one equations, pairwise orthogonality within a question, and $P_{x,a}P_{y,b}=0$ for each losing pair on a supported question pair. This is a bounded rational presentation of the allowed kind in \cref{thm:compiler}; compile it to $H_G$.
+
+For games with positive weight on every diagonal question pair, Mousavi--Nezhadi--Yuen show that value one admits finite-dimensional synchronous strategies approaching one~\cite[Theorem~1.6]{MNY22}. Such strategies are tracial PVM strategies. Split the finite tracial algebra into matrix blocks and choose a block whose loss is at most the average. For losing projections $P,Q$ in that block, $\|PQ\|_{2,\tau}^2=\tau(PQ)$. The minimum positive question probability is fixed. A loss-$\zeta$ strategy therefore supplies a flat model of precision $O_G(\sqrt\zeta)$, with the PVM equations exact. Flat completeness of the compiler gives loss $O_G(\zeta)$ for $H_G$.
+
+Conversely, a loss-$\eta$ strategy for $H_G$ gives exact projection variables in a weighted model with $\xi=\sqrt\rho$, defining errors at most $\delta=O_G(\sqrt\eta)$ and $\|[P_{x,a},\xi]\|_2\le\delta$. We construct valid POVMs directly. For one question suppress $x$, order its $k$ answers, put $V_0=I$, $V_j=(I-P_j)V_{j-1}$, and set
+\[
+ E_a=V_{a-1}^*P_aV_{a-1}\ (a<k),\qquad E_k=V_{k-1}^*V_{k-1}.
+\]
+These effects are positive, and their sum is exactly $I$ by telescoping $V_{j-1}^*V_{j-1}-V_j^*V_j$.
+
+Here are weighted estimates requiring no inverse and no tracial approximation. Telescoping gives $V_j-I=-\sum_{l\le j}P_lV_{l-1}$. For $a>l$, the residual $P_aP_l$ has weighted norm at most $\delta$. Moving $\xi$ past the following contraction word costs at most $k\delta$, by its factor commutators. Hence $\|P_a(V_{a-1}-I)\xi\|_2=O_k(\delta)$. For any fixed polynomial $A$,
+\[
+ \|A^*\xi\|_2\le\|A\xi\|_2+\|[A^*,\xi]\|_2,
+\]
+since $\|\xi A^*\|_2=\|A\xi\|_2$. Applying this to the preceding polynomial gives the adjoint bound. Expand $V_{a-1}^*P_aV_{a-1}-P_a$ into its two differences and transport the remaining factors; the result is
+\[
+ \|(E_a-P_a)\xi\|_2=O_k(\delta),\qquad
+ \|[E_a,\xi]\|_2=O_k(\delta).
+\]
+The sum equation gives the first bound for the last answer as well, and the second follows from the product commutator rule.
+
+Share the canonical purification $\operatorname{vec}\xi$ and measure $E_{x,a}^{\mathsf T}$ on Alice and $E_{y,b}$ on Bob, with the matching vectorization convention. Their correlation is $\Tr(\xi E_{x,a}\xi E_{y,b})$. Cauchy--Schwarz and the two estimates replace this by $\Tr(\rho P_{x,a}P_{y,b})$ with error $O_G(\delta)$. On a losing pair its absolute value is at most $\|P_{x,a}P_{y,b}\xi\|_2\le\delta$. The actual correlations are nonnegative and there are finitely many pairs, so total loss is $O_G(\delta)$. This is a strategy in the same local dimension. Value one is therefore preserved in both directions. The $\Pi^0_2$-hard synchronous instances in the proof of~\cite[Lemma~6.7]{MNY22} use the uniform distribution on all question pairs. They satisfy the diagonal-support hypothesis, so the lemma transfers that hardness to BCS games and proves the Boolean clause of \cref{thm:unbounded-power}.
+\end{proof}
+
+\paragraph{Why diagonal support is needed.}
+Take questions and answers $\{0,1\}$, uniform weight on $(0,1),(1,0)$ and zero weight on the diagonal. On $(0,1)$ require $a=b=0$; on $(1,0)$ require $a=b=1$, with the synchronous rule on the unasked diagonal. Alice's answers $f(0)=0,f(1)=1$ and Bob's answers $g(0)=1,g(1)=0$ win perfectly. But the losing-pair relations force $P_{0,1}=0$ and hence $P_{0,0}=I$; they then force both $P_{1,0}=P_{1,1}=0$, contradicting their sum equation. The same finite sum/product identities rule out a sequence of vanishing-defect normalized models, so compiler soundness makes the Boolean game's value strictly below one.
+
+The game in \cref{thm:unbounded-power} depends on $F$. For each fixed value-one game its finite-precision dimension is computable by the same feasibility search; no one game defeats every computable function. Nor does this theorem assert an infinite usable exponent or any existing power limit above one. It establishes an infinite upper exponent.

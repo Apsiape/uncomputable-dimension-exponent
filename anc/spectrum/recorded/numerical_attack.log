@@ -1,0 +1,5 @@
+honest models: 24 passed: True
+window/grid tests: True
+compression words: 32400 violations: 0
+Jensen cases: 3000 violations: 0
+elapsed seconds: 6.656926199910231 memory: {'rss': 64167936, 'vms': 110948352, 'num_page_faults': 17546, 'peak_wset': 64167936, 'wset': 64167936, 'peak_paged_pool': 282224, 'paged_pool': 282048, 'peak_nonpaged_pool': 24672, 'nonpaged_pool': 24336, 'pagefile': 110948352, 'peak_pagefile': 110948352, 'private': 110948352}

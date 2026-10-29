@@ -1,0 +1,135 @@
+\section{Group profiles and the trace obstruction}\label{sec:group-profiles}
+There is an effective upper classification for group profiles, but transferring the realizations requires additional structure. A trace obstruction explains why the particular counter presentations here cannot be transferred by fixed polynomial decoders into algebraic group rings.
+
+\subsection{Effective bounds for group profiles}
+Fix a finite presentation $\Gamma=\langle S\mid R\rangle$ with distinguished central involution $J$. Let $W_\Gamma(e)$ be the minimum $d$ admitting unitaries $U_s$ on $\C^d$ and a positive $\xi$ with $\Tr\xi^2=1$ such that
+\[
+ \|(U_r-I)\xi\|_2\le e,\quad
+ \|[U_s,\xi]\|_2\le e,\quad
+ \|(U_J+I)\xi\|_2\le e.
+\]
+Let $h_\Gamma(e)$ instead require $U_J=-I$ and normalized Frobenius relator errors at most $e$. These definitions use words in the free group, not a word-problem oracle. Clearly $W_\Gamma(e)\le h_\Gamma(e)$.
+
+\begin{theorem}[Group arithmetic and time ceilings]\label{thm:group-ceilings}
+Under finiteness at every positive precision, $W_\Gamma,h_\Gamma$ are computable on positive rationals. Their finite lower logarithmic exponents belong to $\Sigma^0_2$, their finite upper exponents to $\Pi^0_2$, and existing finite exponents to $\Delta^0_2$. If either profile has finite upper exponent, both integer dimensions at precision $2^{-n}$ are computable in time $2^{2^{O_\Gamma(n)}}$, and their logarithms to additive error one in the same time.
+
+For every admissible distinct pair $0<L<U<\infty$, $L\in\Sigma^0_2$, $U\in\Pi^0_2$, there is a total computable bounded-increment profile $A$ with these endpoints such that neither $\log_2W_\Gamma(2^{-n})$ nor $\log_2h_\Gamma(2^{-n})$ can equal $A(n)+o(n)$ for any finitely presented group.
+\end{theorem}
+\begin{proof}
+In dimension $d$, use real and imaginary matrix coordinates for the unitaries and write $\xi=BB^*$, $\Tr\xi^2=1$. Squared defects and unitarity give rational polynomial equalities and inequalities of fixed degree in $O_\Gamma(d^2)$ variables. In the flat case impose $\|U_r-I\|_F^2\le de^2$ and $U_J=-I$, avoiding an irrational scalar $1/\sqrt d$. Existential real decision and increasing search in $d$ compute the minima under the finiteness promise. Rational approximations to $\log_2W(2^{-n})/n$, or to the flat analogue, form a computable sequence with vanishing error. The normal forms used in \cref{lem:profile-names,thm:profile-pairs} give the arithmetic inclusions. Monotonicity between adjacent dyadics gives the same finite endpoints over all real precisions.
+
+We justify the dimension cap needed for the time assertion even when only the weighted upper exponent is known. For a weighted $\eta$-model put $P_t=1_{[\sqrt t,\infty)}(\xi)$. Spectral integration gives
+\[
+ \int_0^\infty\Tr P_t\,dt=1,\qquad
+ \int_0^\infty\|(U_r-I)P_t\|_F^2dt\le\eta^2.
+\]
+The same identity holds for the negative-$J$ defect. Spectral coarea~\cite[Lemma~5.5]{SV18} gives
+\[
+ \int_0^\infty\|[U_s,P_t]\|_F^2dt
+ \le2\|[U_s,\xi]\|_F\le2\eta.
+\]
+Sum the finitely many errors. Some nonzero $P_t$ has total squared error at most $C\eta\rank P_t$. For completeness, the coarea inequality follows by diagonalizing two positive matrices: the spectral overlap weights give a measure on pairs $(x,y)$, and the integral of the squared difference of their threshold indicators is $|x^2-y^2|$. Cauchy--Schwarz bounds its integral by the product of the Frobenius norms of the difference and sum. Apply this to $\xi$ and $U_s\xi U_s^*$, whose sum norm is at most two.
+
+Compress each generator to $P_tH$ and round its singular values to one. If $s_i\le1$ are those values, $\sum(1-s_i)^2\le\sum(1-s_i^2)$, the latter being the off-block squared mass. Thus normalized rounding costs $O_\Gamma(\sqrt\eta)$. Telescoping every fixed relator, using the off-block bounds at its intermediate factors, has the same order. The negative defect permits replacing the rounded $J$ by $-I$. Consequently
+\[
+ h_\Gamma(K\sqrt\eta)\le W_\Gamma(\eta)
+\]
+for a fixed $K$. A finite upper exponent for either profile therefore bounds both dimensions at $2^{-n}$ by $2^{Cn}$, after changing $C$. For the fixed-degree real system, singly exponential existential decision costs at most $2^{O_\Gamma(d^2\log(d+1))}\operatorname{poly}(n)$~\cite{Basu14}. Sum this over $d\le2^{Cn}$ to obtain the doubly exponential bound. The constants depend on the presentation and promise; no uniform test of that promise is claimed.
+
+Here is the whole-profile diagonal explicitly. Choose rationals $0<a<L<c_1<c_2<U<b<C$, with integer $C$, and a computable rational sequence $q_r\in[a,b]$ with endpoints $L,U$. Put $i_r=2^{2^r}$, $N_r=4^{i_r}$ and $T(r)=2^{2^{8^{i_r}}}$. Enumerate machine indices with every index repeated infinitely often. On input $r$ simulate the assigned machine for $T(r)$ steps and choose the opposite bit if it returns a bit, and one otherwise. This total computable bit sequence $b_r$ has no eventual $T(r)$-time algorithm, by its repeated-index diagonal.
+
+On $[N_r,2N_r]$ define $A(n)=A(N_r)+\lfloor c_{1+b_r}(n-N_r)\rfloor$. In each following gap use
+\[
+ A(n+1)=\min\{A(n)+C,\ \max\{A(n),\lfloor q_{r+1}(n+1)\rfloor\}\}.
+\]
+Start from a bounded-increment nonnegative prefix. From above a target line of slope at least $a$ catches a constant value after a fixed multiple of the gap's initial index; from below speed $C>b$ catches it in a fixed multiple as well. Since $N_{r+1}/N_r\to\infty$, every late gap reaches and then tracks its target. Thus $A(N_r)/N_r=q_r+O(1/N_r)$. Within a gap the normalized ratio stays in the hull of its initial ratio and its target, and within a bit block in the hull of its initial ratio and $c_1$ or $c_2$, up to vanishing floor error. The endpoints are exactly $L,U$, and increments lie in $[0,C]$.
+
+An $o(n)$ approximation by either group profile would recover $b_r$ eventually by comparing its increment from $N_r$ to $2N_r$ with $((c_1+c_2)/2)N_r$. The time bound already proved makes this a decoder of time $2^{2^{O_\Gamma(4^{i_r})}}<T(r)$ eventually, a contradiction. This treats both profiles separately without a convergence modulus.
+\end{proof}
+
+These are necessary group classes, not group realizations. Constant precision rescaling shifts a dyadic index by $O(1)$; a square-root game interface divides the corresponding exponent by two. The linear-system comparison~\cite[Corollary~5.5]{DM-game} respects these conventions but does not supply the missing realization inclusion.
+
+\subsection{Traces forced by the counter presentation}
+Let $\mathcal A(\mathcal P_\pi)$ be the algebraic unitary-domain presentation of the counter construction for a program $\pi$. Encode a projection as $(1-s)/2$ for a self-adjoint involution $s$, and a positive contraction as $(2+u+u^*)/4$ for a unitary $u$. We use the carry-clock presentation of \cref{sec:profile-clock}; the unguarded presentation has the same exact digit action. Powered residuals are understood in positive representations. In particular, $(p^*p)^q=0$ implies $p=0$ in the positive GNS representation, not as an abstract rule about nilpotents in an arbitrary algebra.
+
+\begin{lemma}[Trace rigidity of initialized controls]\label{lem:control-traces}
+Every tracial state of this bounded presentation assigns to the control projection $Q_\sigma$ the value
+\[
+ c_\sigma=\sum_{r\ge0}2^{-2r-1}N_\sigma(2^r),
+\]
+where $N_\sigma(M)$ counts the visits to $\sigma$ at physical times $0\le h<M$ of the initialized classical program. A single visit at time $h$ contributes $(2/3)4^{-\operatorname{bitlength}(h)}$, with $\operatorname{bitlength}(0)=0$.
+\end{lemma}
+\begin{proof}
+Pass to the finite von Neumann GNS algebra, with faithful normal trace. The positive clock relation separates the low and high intervals, so its digit projection is the high spectral digit of its Cantor coordinate. Iteration gives all later digits as spectral functions. The flip fixes the tail and interchanges the first digit; trace invariance therefore makes that digit fair independently of the tail. Iterating the shift proves the fair Bernoulli law. Commutation of the two clock copies, together with their separate flips and shifts, proves joint independence of all fuel and time digits.
+
+Let $\Gamma_r$ be the fuel cylinder with exactly $r$ initial ones. Its trace is $2^{-r-1}$. The carry recursion has remainder norm at most $4^{-n}$ and implements addition by one on time digits. On $\Gamma_r$, reset is the indicator of time residue zero modulo $2^r$. The commuting cylinder projections
+\[
+ C_h=\Gamma_r1_{\{\text{time}\equiv h\bmod2^r\}},\quad 0\le h<2^r,
+\]
+have traces $2^{-2r-1}$ and are cyclically permuted by $U$. Every instantaneous variable commutes with them. Initialization fixes age one, zero counters and initial control on $C_0$.
+
+Induct on $h$. The age and counter equations force the scalar values $A C_h=(h+1)^{-1}C_h$, $Y_iC_h=n_i(h)(h+1)^{-1}C_h$. If $n_i(h)>0$, $Y_iE_i=0$ forces $E_iC_h=0$. If $n_i(h)=0$, put $R=(I-E_i)C_h$. The positive witness equation gives $RW_iR=-(h+1)^{-1}R$; positivity forces $R=0$. Thus the zero test, the next control and the next counter are exactly the deterministic ones, including cyclic reset. In particular $Q_\sigma C_h=1_{\sigma(h)=\sigma}C_h$; multiplicity spaces carry no alternative history.
+
+The fuel-all-ones projection has trace at most $2^{-R}$ for every $R$, hence zero. Normality now sums the cylinder identities and gives the formula. Its total over all controls is $\sum_r2^{-r-1}=1$. A visit at $h$ occurs in precisely the terms $2^r>h$, whose geometric sum is $(2/3)4^{-\operatorname{bitlength}(h)}$, including $h=0$ and powers of two.
+\end{proof}
+
+\begin{lemma}[An elementary irrational marker]\label{lem:irrational-marker}
+Any of the polynomial-delay pulse programs can be combined with an elementary counter program so that a finite sum of its orthogonal control projections has irrational trace in every tracial state. The pulse word and all profile and exponent conclusions are preserved.
+\end{lemma}
+\begin{proof}
+Use counters $L,O,T,I,A$, initially zero, and four increments to initialize $L=4$. The following loop uses seventeen controls. Write $+X;v$ for increment and jump, $-X;v_0,v_1$ for decrement-or-zero-test, and $0;v$ for a NOP.
+\begin{center}\small
+\begin{tabular}{ll@{\qquad}ll}
+\toprule
+Control & Instruction & Control & Instruction\\
+\midrule
+MARK &$0;\mathrm{CO}$&CO &$-L;\mathrm{RO},\mathrm{CO1}$\\
+CO1 &$+O;\mathrm{CO2}$&CO2 &$+T;\mathrm{CO}$\\
+RO &$-T;\mathrm{OUTER},\mathrm{RL}$&RL &$+L;\mathrm{RO}$\\
+OUTER &$-O;\mathrm{CLEAR},\mathrm{CI}$&CI &$-L;\mathrm{RI},\mathrm{CI1}$\\
+CI1 &$+I;\mathrm{CI2}$&CI2 &$+T;\mathrm{CI}$\\
+RI &$-T;\mathrm{INNER},\mathrm{RL2}$&RL2 &$+L;\mathrm{RI}$\\
+INNER &$-I;\mathrm{OUTER},\mathrm{AI}$&AI &$+A;\mathrm{INNER}$\\
+CLEAR &$-L;\mathrm{MOV},\mathrm{CLEAR}$&MOV &$-A;\mathrm{MARK},\mathrm{ML}$\\
+ML &$+L;\mathrm{MOV}$&&\\
+\bottomrule
+\end{tabular}
+\end{center}
+The copy through $T$ preserves $L$ while putting it in $O$. Each of the $L$ outer iterations copies $L$ into $I$ and transfers $I$ into $A$. Clearing $L$ and moving $A$ back squares $L$ and leaves all scratch counters zero. Initial copy and restoration cost $5L+2$. Each outer iteration costs $7L+3$ internally, and the outer tests cost $L+1$, giving $7L^2+4L+1$. Clearing costs $L+1$, moving costs $2L^2+1$, and MARK costs one. Thus there are exactly $9L^2+10L+6$ instructions between MARK visits. All counters are at most elapsed elementary time.
+
+The first visit times are $v_i=4,194,2664,595054$, with $L_i=4,16,256,65536$. In general $L_i=4^{2^i}$ and $v_i=9L_i+O(L_{i-1})$. Alternate one main instruction with one marker instruction, using finite product controls. Marker visits then occur at $t_i=2v_i+1$; their bit lengths satisfy $k_i=2^{i+1}+O(1)$, initially $4,9,13,21$. They are eventually distinct with unbounded gaps. By \cref{lem:control-traces}, the projection for marker visits, a finite orthogonal sum of product controls, has trace $(2/3)\sum_i4^{-k_i}$. A finite prefix only changes a rational number. After multiplication by $3/2$, its base-four digits have infinitely many isolated ones with unbounded zero gaps, and are not eventually periodic. Its trace is irrational. At least one constituent control has irrational trace; no effective identification of that constituent is required.
+
+Allowing finite sets of output controls gives exactly doubled main delays. To retain the literal convention of two output NOP controls, store the finite return tag in extra counters, pass through the unique appropriate output control and dispatch through a finite decision tree. This takes a bounded number of primitive instructions; pad to a fixed constant slowdown. The marker gap argument survives this change. Pulse labels and their order are unchanged, polynomial pulse delay is preserved, and constant physical slowdown changes the logarithmic profile accounting by only $O(\log n)$. Thus every admissible matched pair still has a realizing presentation with this obstruction.
+\end{proof}
+
+\subsection{Canonical group-ring traces}
+\begin{lemma}[Rational matrix idempotent traces]\label{lem:rational-group-trace}
+For every group $\Gamma$ and idempotent $E\in M_N(\C[\Gamma])$, $(\Tr\otimes\tau_0)(E)$ is rational, where $\tau_0$ is coefficient at the identity. Every nonzero projection has strictly positive canonical matrix trace.
+\end{lemma}
+\begin{proof}
+Corollary~1.2 of Burger--Valette already gives rationality on $K_0$, hence for matrix idempotents. The following optional normalization also derives it directly from Zalesskii's scalar theorem for arbitrary idempotents in $\C[\Gamma]$; see Burger--Valette~\cite[Theorem~1.3 and Corollary~1.2]{BV98}. To see the matrix normalization directly, take the order-$N^3$ finite Heisenberg group. Its primitive central-character corner is $M_N(\C)$: the shift and clock matrices give its irreducible $N$-dimensional representation, and their $N^2$ products span the corner. The central-character idempotent has identity coefficient $1/N$. On this simple block the canonical trace is therefore $N^{-2}\Tr$. Embed $E$ as an idempotent in $\C[H_N\times\Gamma]$. Scalar rationality there gives $N^{-2}(\Tr\otimes\tau_0)(E)\in\mathbb Q$, proving the claim. For projections, positivity and faithfulness follow in the regular representation; equivalently the canonical trace of $X^*X$ is the sum of squared coefficients, also for matrices. Kaplansky's positivity and endpoint result is a separate classical input~\cite[Theorem~2.1]{BV98}.
+\end{proof}
+
+\begin{theorem}[The counter presentation has no algebraic group-ring decoder]\label{thm:group-trace-obstruction}
+For the marker-augmented counter presentation above, there is no nonzero $*$-homomorphism into $M_N(\C[\Gamma])$, for any $N$ and any group $\Gamma$, including nonunital homomorphisms. The same holds for its compiled Boolean algebra and for targets that are negative-$J$ corners of solution-group rings, or finite central-character corners with rational trace normalization.
+\end{theorem}
+\begin{proof}
+Suppose $\alpha$ is such a map, and put $p=\alpha(1)$. This is a nonzero projection. With $t=\Tr\otimes\tau_0$, \cref{lem:rational-group-trace} gives rational $t(p)>0$. Hence $t\alpha/t(p)$ is a tracial state of the source presentation. Domain encodings are positive in this representation, so \cref{lem:control-traces,lem:irrational-marker} apply. The marker projection and its image are projections; the latter has rational trace, contradicting its forced irrational normalized trace.
+
+The compiler proof gives a unital map $\iota:\mathcal A(\mathcal P)\to\mathcal A(\mathcal B)$, not merely a statement about approximate models: each reconstructed source generator is a fixed polynomial in Boolean generators, and every source equation is a finite ideal consequence of Boolean relations. The explicit reconstruction identities in \cref{sec:compiler}, including its orthogonality identity and gadget converses, give precisely these consequences. Thus a hypothetical nonzero map $\beta$ from the Boolean algebra composes with $\iota$ to a nonzero map, since $\beta\iota(1)=\beta(1)\ne0$. Injectivity of $\iota$ is unnecessary.
+
+The negative-$J$ quotient of a solution-group ring is the corner by $(1-J)/2$, with normalized canonical trace $2\tau_0$. Finite central-character corners likewise have rational normalization, so the same argument applies. This does not conflict with Slofstra's group embedding theorem~\cite{Slo20}, which is a theorem about groups and does not embed every Boolean algebra into a solution-group ring.
+\end{proof}
+
+\begin{corollary}[An approximate version with a canonical limit]\label{cor:group-approx-obstruction}
+Suppose a group with central $J$ has a hyperlinear trace $\tau$ with $\tau(J)=-1$. Put $H=\{g:|\tau(g)|=1\}$ and $\chi=\tau|_H$, and assume $\chi$ has finite image. There cannot be fixed unital polynomial decoders for the preceding counter presentation that are $O(e)$-sound in \emph{every} flat $e$-model of that group.
+\end{corollary}
+\begin{proof}
+Equality in GNS Cauchy--Schwarz makes every $h\in H$ act on the cyclic vector by $\chi(h)$; the trace property gives a normal subgroup and conjugation-invariant character. The tensor traces $\tau|\tau|^{2m}$ are hyperlinear and negative on $J$, and converge to the trace $\tau_\infty$ equal to $\chi$ on $H$ and zero elsewhere. A diagonal choice of their microstates proves hyperlinearity of the limit. Their negative-$J$ defect tends to zero, so replacing $J$ by $-I$ gives flat negative models with vanishing fixed-relator defects. Universal soundness forces each decoded relation-square trace to vanish in this limit.
+
+The quotient is the twisted group ring of $\Gamma/H$. Its different coset basis vectors are orthogonal in the canonical GNS trace, which is faithful on finite sums. Consequently the decoded relations hold as algebraic identities there. Let $K=\ker\chi$. Then $K$ is normal and $H/K$ is finite central in $\Gamma/K$. The twisted ring is the corresponding character corner of $\C[\Gamma/K]$, with rationally normalized canonical trace. This supplies the forbidden unital homomorphism in \cref{thm:group-trace-obstruction}. Soundness on a selected microstate sequence would not justify this argument, and finite image is essential to the stated reduction.
+\end{proof}
+
+The obstruction uses rationality of idempotent traces in algebraic group rings. Projections in group von Neumann algebras behave differently: Grabowski embeds Turing machines into integral group rings and obtains kernel projections of irrational and transcendental trace~\cite{Gra14}, following Austin's irrational example~\cite{Aus13}; see also Pichot--Schick--\.{Z}uk~\cite{PSZ15}. These kernel projections are analytic spectral functions of group-ring elements, rather than polynomial functions, which is why \cref{thm:group-trace-obstruction} excludes only fixed polynomial decoders.
+
+This obstruction concerns these presentations and algebraic polynomial decoders. Precision-dependent analytic truncations are one possible route around it. A fixed infinite analytic decoder lies outside the algebraic group ring, and another presentation realizing the same profile can have different control traces. No conclusion that all group realizations require precision dependence follows from this theorem; the group realization problem remains open.

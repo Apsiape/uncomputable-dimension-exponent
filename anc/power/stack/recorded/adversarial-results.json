@@ -1,0 +1,543 @@
+{
+  "weighted_carry_stop": {
+    "records": [
+      {
+        "h": 0,
+        "theta": 0.01,
+        "delta": 0.026986879913054786,
+        "bad_norm": 0.016479255551264147,
+        "bad_over_delta": 0.6106395257382969,
+        "bad_over_sqrt_delta": 0.10031393120770483,
+        "gap": 0.2928932188134524,
+        "coercivity_ratio": 0.999467600524532,
+        "weighted_stop_residual": 0.005135823034410211,
+        "carry_stop_commutator": 0.03816521157917613,
+        "state_carry_commutator": 0.018337911210051107,
+        "completeness_error": 1.110494042089129e-16
+      },
+      {
+        "h": 0,
+        "theta": 0.001,
+        "delta": 0.002699986878019131,
+        "bad_norm": 0.0016480581258365204,
+        "bad_over_delta": 0.6103948649726894,
+        "bad_over_sqrt_delta": 0.03171697049194841,
+        "gap": 0.2928932188134524,
+        "coercivity_ratio": 0.9999946716172393,
+        "weighted_stop_residual": 0.0005137000852586982,
+        "carry_stop_commutator": 0.0038183580611240472,
+        "state_carry_commutator": 0.0018507641032327168,
+        "completeness_error": 2.2204481668316715e-16
+      },
+      {
+        "h": 0,
+        "theta": 0.0001,
+        "delta": 0.0002699999868780002,
+        "bad_norm": 0.00016480594515554762,
+        "bad_over_delta": 0.6103924191300623,
+        "bad_over_sqrt_delta": 0.010029770662907058,
+        "gap": 0.2928932188134524,
+        "coercivity_ratio": 0.9999999467157331,
+        "weighted_stop_residual": 5.137012631636455e-05,
+        "carry_stop_commutator": 0.0003818376432834256,
+        "state_carry_commutator": 0.00018524344742758996,
+        "completeness_error": 2.220446049250313e-16
+      },
+      {
+        "h": 0,
+        "theta": 1e-05,
+        "delta": 2.6999999986878e-05,
+        "bad_norm": 1.6480594648126666e-05,
+        "bad_over_delta": 0.6103923946717125,
+        "bad_over_sqrt_delta": 0.0031716919196044004,
+        "gap": 0.2928932188134524,
+        "coercivity_ratio": 0.9999999994671573,
+        "weighted_stop_residual": 5.1370127494270356e-06,
+        "carry_stop_commutator": 3.818376616551626e-05,
+        "state_carry_commutator": 1.8526012402065064e-05,
+        "completeness_error": 1.1102230246251565e-16
+      },
+      {
+        "h": 0,
+        "theta": 1e-06,
+        "delta": 2.699999999986878e-06,
+        "bad_norm": 1.6480594649452382e-06,
+        "bad_over_delta": 0.6103923944271288,
+        "bad_over_sqrt_delta": 0.00100297705006955,
+        "gap": 0.2928932188134524,
+        "coercivity_ratio": 0.9999999999946715,
+        "weighted_stop_residual": 5.137012750604942e-07,
+        "carry_stop_commutator": 3.818376618388799e-06,
+        "state_carry_commutator": 1.8526179140859417e-06,
+        "completeness_error": 2.220446049250313e-16
+      },
+      {
+        "h": 0,
+        "theta": 1e-07,
+        "delta": 2.699999999999869e-07,
+        "bad_norm": 1.6480594649465646e-07,
+        "bad_over_delta": 0.6103923944246832,
+        "bad_over_sqrt_delta": 0.00031716919190914424,
+        "gap": 0.2928932188134524,
+        "coercivity_ratio": 0.9999999999999467,
+        "weighted_stop_residual": 5.1370127506167216e-08,
+        "carry_stop_commutator": 3.8183766184071707e-07,
+        "state_carry_commutator": 1.8526195814467478e-07,
+        "completeness_error": 1.871696065287322e-23
+      },
+      {
+        "h": 1,
+        "theta": 0.01,
+        "delta": 0.026986879913054786,
+        "bad_norm": 0.016479255551264147,
+        "bad_over_delta": 0.6106395257382969,
+        "bad_over_sqrt_delta": 0.10031393120770483,
+        "gap": 0.41421356237309515,
+        "coercivity_ratio": 0.9997586740764534,
+        "weighted_stop_residual": 0.005135823034410211,
+        "carry_stop_commutator": 0.03816521157917613,
+        "state_carry_commutator": 0.018337911210051107,
+        "completeness_error": 1.110494042089129e-16
+      },
+      {
+        "h": 1,
+        "theta": 0.001,
+        "delta": 0.002699986878019131,
+        "bad_norm": 0.0016480581258365204,
+        "bad_over_delta": 0.6103948649726894,
+        "bad_over_sqrt_delta": 0.03171697049194841,
+        "gap": 0.41421356237309515,
+        "coercivity_ratio": 0.9999975857959849,
+        "weighted_stop_residual": 0.0005137000852586982,
+        "carry_stop_commutator": 0.0038183580611240472,
+        "state_carry_commutator": 0.0018507641032327168,
+        "completeness_error": 2.2204481668316715e-16
+      },
+      {
+        "h": 1,
+        "theta": 0.0001,
+        "delta": 0.0002699999868780002,
+        "bad_norm": 0.00016480594515554762,
+        "bad_over_delta": 0.6103924191300623,
+        "bad_over_sqrt_delta": 0.010029770662907058,
+        "gap": 0.41421356237309515,
+        "coercivity_ratio": 0.9999999758578653,
+        "weighted_stop_residual": 5.137012631636455e-05,
+        "carry_stop_commutator": 0.0003818376432834256,
+        "state_carry_commutator": 0.00018524344742758996,
+        "completeness_error": 2.220446049250313e-16
+      },
+      {
+        "h": 1,
+        "theta": 1e-05,
+        "delta": 2.6999999986878e-05,
+        "bad_norm": 1.6480594648126666e-05,
+        "bad_over_delta": 0.6103923946717125,
+        "bad_over_sqrt_delta": 0.0031716919196044004,
+        "gap": 0.41421356237309515,
+        "coercivity_ratio": 0.9999999997585787,
+        "weighted_stop_residual": 5.1370127494270356e-06,
+        "carry_stop_commutator": 3.818376616551626e-05,
+        "state_carry_commutator": 1.8526012402065064e-05,
+        "completeness_error": 1.1102230246251565e-16
+      },
+      {
+        "h": 1,
+        "theta": 1e-06,
+        "delta": 2.6999999999868773e-06,
+        "bad_norm": 1.6480594649452382e-06,
+        "bad_over_delta": 0.610392394427129,
+        "bad_over_sqrt_delta": 0.0010029770500695502,
+        "gap": 0.41421356237309515,
+        "coercivity_ratio": 0.9999999999975856,
+        "weighted_stop_residual": 5.137012750604942e-07,
+        "carry_stop_commutator": 3.818376618388799e-06,
+        "state_carry_commutator": 1.852617914085942e-06,
+        "completeness_error": 2.220446049250313e-16
+      },
+      {
+        "h": 1,
+        "theta": 1e-07,
+        "delta": 2.699999999999869e-07,
+        "bad_norm": 1.6480594649465646e-07,
+        "bad_over_delta": 0.6103923944246832,
+        "bad_over_sqrt_delta": 0.00031716919190914424,
+        "gap": 0.41421356237309515,
+        "coercivity_ratio": 0.9999999999999759,
+        "weighted_stop_residual": 5.1370127506167216e-08,
+        "carry_stop_commutator": 3.8183766184071707e-07,
+        "state_carry_commutator": 1.8526195814467478e-07,
+        "completeness_error": 1.871696065287322e-23
+      },
+      {
+        "h": 5,
+        "theta": 0.01,
+        "delta": 0.026986879913054786,
+        "bad_norm": 0.016479255551264147,
+        "bad_over_delta": 0.6106395257382969,
+        "bad_over_sqrt_delta": 0.10031393120770483,
+        "gap": 0.24264068711928566,
+        "coercivity_ratio": 0.9992017194692067,
+        "weighted_stop_residual": 0.005135823034410211,
+        "carry_stop_commutator": 0.03816521157917613,
+        "state_carry_commutator": 0.018337911210051107,
+        "completeness_error": 1.110494042089129e-16
+      },
+      {
+        "h": 5,
+        "theta": 0.001,
+        "delta": 0.002699986878019131,
+        "bad_norm": 0.0016480581258365204,
+        "bad_over_delta": 0.6103948649726894,
+        "bad_over_sqrt_delta": 0.03171697049194841,
+        "gap": 0.24264068711928566,
+        "coercivity_ratio": 0.999992007457801,
+        "weighted_stop_residual": 0.0005137000852586982,
+        "carry_stop_commutator": 0.0038183580611240472,
+        "state_carry_commutator": 0.0018507641032327168,
+        "completeness_error": 2.2204481668316715e-16
+      },
+      {
+        "h": 5,
+        "theta": 0.0001,
+        "delta": 0.0002699999868780002,
+        "bad_norm": 0.00016480594515554762,
+        "bad_over_delta": 0.6103924191300623,
+        "bad_over_sqrt_delta": 0.010029770662907058,
+        "gap": 0.24264068711928566,
+        "coercivity_ratio": 0.9999999200736049,
+        "weighted_stop_residual": 5.137012631636455e-05,
+        "carry_stop_commutator": 0.0003818376432834256,
+        "state_carry_commutator": 0.00018524344742758996,
+        "completeness_error": 2.220446049250313e-16
+      },
+      {
+        "h": 5,
+        "theta": 1e-05,
+        "delta": 2.6999999986878e-05,
+        "bad_norm": 1.6480594648126666e-05,
+        "bad_over_delta": 0.6103923946717125,
+        "bad_over_sqrt_delta": 0.0031716919196044004,
+        "gap": 0.24264068711928566,
+        "coercivity_ratio": 0.9999999992007378,
+        "weighted_stop_residual": 5.1370127494270356e-06,
+        "carry_stop_commutator": 3.818376616551626e-05,
+        "state_carry_commutator": 1.8526012402065064e-05,
+        "completeness_error": 1.1102230246251565e-16
+      },
+      {
+        "h": 5,
+        "theta": 1e-06,
+        "delta": 2.6999999999868773e-06,
+        "bad_norm": 1.6480594649452382e-06,
+        "bad_over_delta": 0.610392394427129,
+        "bad_over_sqrt_delta": 0.0010029770500695502,
+        "gap": 0.24264068711928566,
+        "coercivity_ratio": 0.9999999999920091,
+        "weighted_stop_residual": 5.137012750604942e-07,
+        "carry_stop_commutator": 3.818376618388799e-06,
+        "state_carry_commutator": 1.852617914085942e-06,
+        "completeness_error": 2.220446049250313e-16
+      },
+      {
+        "h": 5,
+        "theta": 1e-07,
+        "delta": 2.699999999999869e-07,
+        "bad_norm": 1.6480594649465646e-07,
+        "bad_over_delta": 0.6103923944246832,
+        "bad_over_sqrt_delta": 0.00031716919190914424,
+        "gap": 0.24264068711928566,
+        "coercivity_ratio": 0.9999999999999221,
+        "weighted_stop_residual": 5.1370127506167216e-08,
+        "carry_stop_commutator": 3.8183766184071707e-07,
+        "state_carry_commutator": 1.8526195814467478e-07,
+        "completeness_error": 1.871696065287322e-23
+      },
+      {
+        "h": 12,
+        "theta": 0.01,
+        "delta": 0.026986879913054786,
+        "bad_norm": 0.016479255551264147,
+        "bad_over_delta": 0.6106395257382969,
+        "bad_over_sqrt_delta": 0.10031393120770483,
+        "gap": 0.19238815542511922,
+        "coercivity_ratio": 0.998701706759704,
+        "weighted_stop_residual": 0.005135823034410211,
+        "carry_stop_commutator": 0.03816521157917613,
+        "state_carry_commutator": 0.018337911210051107,
+        "completeness_error": 1.110494042089129e-16
+      },
+      {
+        "h": 12,
+        "theta": 0.001,
+        "delta": 0.002699986878019131,
+        "bad_norm": 0.0016480581258365204,
+        "bad_over_delta": 0.6103948649726894,
+        "bad_over_sqrt_delta": 0.03171697049194841,
+        "gap": 0.19238815542511922,
+        "coercivity_ratio": 0.9999869915648334,
+        "weighted_stop_residual": 0.0005137000852586982,
+        "carry_stop_commutator": 0.0038183580611240472,
+        "state_carry_commutator": 0.0018507641032327168,
+        "completeness_error": 2.2204481668316715e-16
+      },
+      {
+        "h": 12,
+        "theta": 0.0001,
+        "delta": 0.0002699999868780002,
+        "bad_norm": 0.00016480594515554762,
+        "bad_over_delta": 0.6103924191300623,
+        "bad_over_sqrt_delta": 0.010029770662907058,
+        "gap": 0.19238815542511922,
+        "coercivity_ratio": 0.999999869913095,
+        "weighted_stop_residual": 5.137012631636455e-05,
+        "carry_stop_commutator": 0.0003818376432834256,
+        "state_carry_commutator": 0.00018524344742758996,
+        "completeness_error": 2.220446049250313e-16
+      },
+      {
+        "h": 12,
+        "theta": 1e-05,
+        "delta": 2.6999999986878e-05,
+        "bad_norm": 1.6480594648126666e-05,
+        "bad_over_delta": 0.6103923946717125,
+        "bad_over_sqrt_delta": 0.0031716919196044004,
+        "gap": 0.19238815542511922,
+        "coercivity_ratio": 0.999999998699133,
+        "weighted_stop_residual": 5.1370127494270356e-06,
+        "carry_stop_commutator": 3.818376616551626e-05,
+        "state_carry_commutator": 1.8526012402065064e-05,
+        "completeness_error": 1.1102230246251565e-16
+      },
+      {
+        "h": 12,
+        "theta": 1e-06,
+        "delta": 2.6999999999868773e-06,
+        "bad_norm": 1.6480594649452382e-06,
+        "bad_over_delta": 0.610392394427129,
+        "bad_over_sqrt_delta": 0.0010029770500695502,
+        "gap": 0.19238815542511922,
+        "coercivity_ratio": 0.9999999999869936,
+        "weighted_stop_residual": 5.137012750604942e-07,
+        "carry_stop_commutator": 3.818376618388799e-06,
+        "state_carry_commutator": 1.852617914085942e-06,
+        "completeness_error": 2.220446049250313e-16
+      },
+      {
+        "h": 12,
+        "theta": 1e-07,
+        "delta": 2.699999999999869e-07,
+        "bad_norm": 1.6480594649465646e-07,
+        "bad_over_delta": 0.6103923944246832,
+        "bad_over_sqrt_delta": 0.00031716919190914424,
+        "gap": 0.19238815542511922,
+        "coercivity_ratio": 0.9999999999998724,
+        "weighted_stop_residual": 5.1370127506167216e-08,
+        "carry_stop_commutator": 3.8183766184071707e-07,
+        "state_carry_commutator": 1.8526195814467478e-07,
+        "completeness_error": 1.871696065287322e-23
+      }
+    ],
+    "fits": [
+      {
+        "h": 0,
+        "log_bad_vs_log_delta_slope": 1.0000252650038377
+      },
+      {
+        "h": 1,
+        "log_bad_vs_log_delta_slope": 1.0000252650038377
+      },
+      {
+        "h": 5,
+        "log_bad_vs_log_delta_slope": 1.0000252650038377
+      },
+      {
+        "h": 12,
+        "log_bad_vs_log_delta_slope": 1.0000252650038377
+      }
+    ],
+    "scope": "Local weighted carry/stop tests, not a full approximate clock model."
+  },
+  "root_register": [
+    {
+      "theta": 0.01,
+      "lhs": 0.00307466346375996,
+      "bound": 0.0030950740838170724,
+      "state_parameter_commutator": 5.119731954340343e-05
+    },
+    {
+      "theta": 0.0001,
+      "lhs": 3.612473072377771e-05,
+      "bound": 3.630667892193734e-05,
+      "state_parameter_commutator": 2.357106571513375e-05
+    },
+    {
+      "theta": 1e-06,
+      "lhs": 3.481379927314025e-07,
+      "bound": 3.4989628259074337e-07,
+      "state_parameter_commutator": 8.223669581130731e-08
+    }
+  ],
+  "boundary_histories": [
+    {
+      "polynomial": "x^3+x-1",
+      "beta": "0.6823278038280193273694837397110482568911885818979985778037286066398966786869980210817320437862051282955933188",
+      "clock_bits": 2,
+      "eigenvalues_tested": 17,
+      "scalar_blocks_tested": 272,
+      "max_new_residual": 1.1102230246251565e-16,
+      "float_log_boundary_misclassifications": 3
+    },
+    {
+      "polynomial": "x^3+x-1",
+      "beta": "0.6823278038280193273694837397110482568911885818979985778037286066398966786869980210817320437862051282955933188",
+      "clock_bits": 3,
+      "eigenvalues_tested": 17,
+      "scalar_blocks_tested": 1088,
+      "max_new_residual": 1.1102230246251565e-16,
+      "float_log_boundary_misclassifications": 3
+    },
+    {
+      "polynomial": "x^3+x-1",
+      "beta": "0.6823278038280193273694837397110482568911885818979985778037286066398966786869980210817320437862051282955933188",
+      "clock_bits": 5,
+      "eigenvalues_tested": 17,
+      "scalar_blocks_tested": 17408,
+      "max_new_residual": 1.942890293094024e-16,
+      "float_log_boundary_misclassifications": 3
+    },
+    {
+      "polynomial": "x^4+x-1",
+      "beta": "0.7244919590005156115883722821870365657864944813500110172703980284374529064751243679175832811454400193148846070",
+      "clock_bits": 2,
+      "eigenvalues_tested": 17,
+      "scalar_blocks_tested": 272,
+      "max_new_residual": 1.1102230246251565e-16,
+      "float_log_boundary_misclassifications": 3
+    },
+    {
+      "polynomial": "x^4+x-1",
+      "beta": "0.7244919590005156115883722821870365657864944813500110172703980284374529064751243679175832811454400193148846070",
+      "clock_bits": 3,
+      "eigenvalues_tested": 17,
+      "scalar_blocks_tested": 1088,
+      "max_new_residual": 1.249000902703301e-16,
+      "float_log_boundary_misclassifications": 3
+    },
+    {
+      "polynomial": "x^4+x-1",
+      "beta": "0.7244919590005156115883722821870365657864944813500110172703980284374529064751243679175832811454400193148846070",
+      "clock_bits": 5,
+      "eigenvalues_tested": 17,
+      "scalar_blocks_tested": 17408,
+      "max_new_residual": 1.6653345369377348e-16,
+      "float_log_boundary_misclassifications": 3
+    }
+  ],
+  "prefix_amplitudes": [
+    {
+      "theta": 0.01,
+      "delta": 0.016161374738533792,
+      "max_amplitude_difference": 0.011427611798457415,
+      "difference_over_delta": 0.7070940426379941,
+      "noncommuting_bit_norm": 0.013810649874139259
+    },
+    {
+      "theta": 0.001,
+      "delta": 0.0016162430068722001,
+      "max_amplitude_difference": 0.0011428561840012286,
+      "difference_over_delta": 0.7071066536045942,
+      "noncommuting_bit_norm": 0.0013778898087954438
+    },
+    {
+      "theta": 0.0001,
+      "delta": 0.00016162440606414,
+      "max_amplitude_difference": 0.00011428571332694482,
+      "difference_over_delta": 0.7071067799103992,
+      "noncommuting_bit_norm": 0.00013775646725305423
+    },
+    {
+      "theta": 1e-05,
+      "delta": 1.6162440711764177e-05,
+      "max_amplitude_difference": 1.1428571427440914e-05,
+      "difference_over_delta": 0.7071067811634654,
+      "noncommuting_bit_norm": 1.3775320831212103e-05
+    },
+    {
+      "theta": 1e-06,
+      "delta": 1.6162440712967e-06,
+      "max_amplitude_difference": 1.1428571428107048e-06,
+      "difference_over_delta": 0.7071067811520567,
+      "noncommuting_bit_norm": 1.3775288234228545e-06
+    }
+  ],
+  "multistep_carries": {
+    "depth": 17,
+    "dimension": 4,
+    "records": [
+      {
+        "theta": 0.01,
+        "delta": 0.011638805427444244,
+        "bad_total": 0.0261405097152313,
+        "bad_total_over_delta": 2.2459787542793794,
+        "max_phase_error_over_delta": 0.9510112181755326,
+        "completeness_error": 1.6654656741374266e-15,
+        "max_carry_stop_commutator": 0.01857282015099464
+      },
+      {
+        "theta": 0.001,
+        "delta": 0.001174702259769989,
+        "bad_total": 0.002613159208900627,
+        "bad_total_over_delta": 2.2245289707813223,
+        "max_phase_error_over_delta": 0.9423284899372008,
+        "completeness_error": 1.723530555422944e-15,
+        "max_carry_stop_commutator": 0.0018574672737950797
+      },
+      {
+        "theta": 0.0001,
+        "delta": 0.00011757629460705539,
+        "bad_total": 0.000261303214929328,
+        "bad_total_over_delta": 2.222414099735101,
+        "max_phase_error_over_delta": 0.941482890596907,
+        "completeness_error": 1.464484762554417e-15,
+        "max_carry_stop_commutator": 0.00018574649357114127
+      },
+      {
+        "theta": 1e-05,
+        "delta": 1.1758687992646694e-05,
+        "bad_total": 2.6130190656842008e-05,
+        "bad_total_over_delta": 2.222202908452248,
+        "max_phase_error_over_delta": 0.9413985538191539,
+        "completeness_error": 9.550499577639988e-16,
+        "max_carry_stop_commutator": 1.8574644932675937e-05
+      },
+      {
+        "theta": 1e-06,
+        "delta": 1.1758793824291384e-06,
+        "bad_total": 2.6130177535480546e-06,
+        "bad_total_over_delta": 2.222181792277085,
+        "max_phase_error_over_delta": 0.9413901223694421,
+        "completeness_error": 1.0706603116302963e-15,
+        "max_carry_stop_commutator": 1.8574644469368741e-06
+      },
+      {
+        "theta": 1e-07,
+        "delta": 1.1758804407240356e-07,
+        "bad_total": 2.613017622296689e-07,
+        "bad_total_over_delta": 2.222179680689094,
+        "max_phase_error_over_delta": 0.9413892792467478,
+        "completeness_error": 5.438959822042165e-16,
+        "max_carry_stop_commutator": 1.857464442282938e-07
+      }
+    ],
+    "log_bad_vs_log_delta_slope": 1.0007014003928987
+  },
+  "thread_limits": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "peak_working_set_bytes": 35262464,
+  "status": "PASS (finite/local stress tests only)"
+}

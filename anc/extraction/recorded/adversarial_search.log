@@ -11,3 +11,18 @@ m=3 r_D: running max = 0.3847
 m=3 r_B: running max = 0.0232
 m=3 r_p: running max = 0.9483
 m=3 r_u: running max = 1.0000
+m=3 r_c: running max = 1.0000
+m=3 r_Delta: running max = 0.9341
+m=3 r_C: running max = 0.0080
+m=3 r_Dst: running max = 0.2283
+m=3 r_1: running max = 0.0018
+FINAL maxima (each must be <= 1):
+  r_D: 0.3847
+  r_B: 0.0232
+  r_p: 0.9483
+  r_u: 1.0000
+  r_c: 1.0000
+  r_Delta: 0.9341
+  r_C: 0.0080
+  r_Dst: 0.2283
+  r_1: 0.0018

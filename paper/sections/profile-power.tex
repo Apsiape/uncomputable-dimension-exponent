@@ -1,0 +1,50 @@
+\section{Power-scale exponent pairs}\label{sec:profile-power}
+\begin{theorem}[Power pairs in the unit interval]\label{thm:profile-power-pairs}
+For every $0<L\le U\le1$ with $L\in\Sigma^0_2$ and $U\in\Pi^0_2$, one fixed finite rational value-one BCS game has lower/upper pair $(L,U)$ for both
+\[
+ \frac{\log_2\log_2D_G(2^{-n})}{n},\qquad
+ \frac{\log_2d_G^\to(2^{-n})}{n}.
+\]
+The same pair is realized for pure entropy and formation demands. More precisely, the constructed game's two logarithmic profiles equal
+\begin{equation}\label{eq:profile-power-law}
+ 2k(\lfloor n/2\rfloor)+O(\sqrt n\log n).
+\end{equation}
+Conversely finite lower and upper power exponents of $\log D_G$ belong respectively to $\Sigma^0_2$ and $\Pi^0_2$. Thus dimension pairs in $(0,1]$ are classified by these endpoint conditions. No upper ceiling of one for arbitrary games, or arithmetic ceiling for arbitrary usable pairs, is asserted.
+\end{theorem}
+\begin{proof}
+Use the finite-moment source and full programmed source construction of \cref{sec:power-moments,sec:power-calibration}. Replace its convergent stream by the hold stream from \cref{lem:profile-names,lem:profile-hold}, with endpoints $L,U$ and a fixed rational $c_0<L$. This retains the original unguarded checker interface: at this scale its $O(n)$ logarithmic dimension is negligible compared with the source cost. No source-moment or extraction input is replaced by a logarithmic clock count.
+
+The complete-column calibration proof gives
+\[
+ e\le\operatorname{poly}(n)2^{-k(\lfloor n/2\rfloor-O(\log n))}
+       +O(2^{-n/2}).
+\]
+The source mirrors have error $O(2^{-n/2})$, which fits this envelope because $k(J)\le J$. The original-state source extraction in \cref{thm:power-realization} then yields
+\[
+ \log_2d_G^\to(2^{-n})\ge2k(\lfloor n/2\rfloor)-O(\log^2n).
+\]
+This is the source-level operational estimate already proved in the power part, on every original mixed state.
+
+For the upper model fix one integer moment order $v>1/c_0+1$. The source model of size $N$ has $\tau(|R_i|^{2v})\le C_vN^{-v}$. Put $l_0=\lfloor\tfrac12\log_2N\rfloor-1$. For the spectral measure of $|R_i|$, the dyadic band $(2^{-l-1},2^{-l}]$ has mass at most $\min(1,C_v2^{-2v(l_0-l)})$. Its calibrated penalty is $s=2^{-\kappa(l)-1}$; zero eigenvalues contribute zero. Apply the window lower-density bound between the $l$-th and $l_0$-th ones to obtain
+\[
+ \kappa(l_0)-\kappa(l)\le\frac{l_0-l}{c_0}
+       +O\bigl(\sqrt{\kappa(l_0)}\log(\kappa(l_0)+2)\bigr).
+\]
+The fixed factor $1/c_0$ multiplying the window error is absorbed in the constant. For $l<l_0$, multiply the band mass by its squared penalty and sum the convergent geometric series with ratio $2^{2/c_0-2v}<1$. For $l\ge l_0$, monotonicity of $\kappa$ and the total mass bound suffice. Thus
+\begin{equation}\label{eq:profile-band-sum}
+ \|S_i\|_2^2\le C2^{-2\kappa(l_0)
+       +O(\sqrt{\kappa(l_0)}\log(\kappa(l_0)+2))}.
+\end{equation}
+Choose a sufficiently large fixed $B$ and set explicitly
+\[
+ J_* =\left\lceil n/2+B\sqrt{n+2}\log_2(n+2)\right\rceil,
+ \qquad \log_2N=2k(J_*)+4.
+\]
+Then $l_0=k(J_*)+1$ and $\kappa(l_0)>J_*$ exactly, including plateaux. Positive lower density gives $\kappa(l_0)=O(n)$. Increasing $B$ or the fixed additive constant absorbs compiler constants in \eqref{eq:profile-band-sum}, so all penalties reach the required loss. Size the unguarded checker registers at $n+O(1)$ bits to control their overflow defects. The simultaneous source upper bound is
+\[
+ \log_2D_G(2^{-n})\le3N+O(\sqrt N)+O(n),
+\]
+hence $\log_2\log_2D_G(2^{-n})\le2k(\lfloor n/2\rfloor)+O(\sqrt n\log n)$. Unit increments of $k$ control the shift from $J_*$, and the maximally entangled upper states match the usable lower bound. Pure entropy and formation are squeezed by the same two bounds. Dividing by $n$ proves the endpoint realization. Finally $D_G(2^{-n})$ is computable, so rational approximations to its double logarithm give the stated necessary liminf/limsup classes.
+\end{proof}
+
+The window condition is needed in the power upper bound because the source spectrum is controlled by moments. The logarithmic construction has only one nonzero calibrated source eigenvalue and needs no such spectral summation.

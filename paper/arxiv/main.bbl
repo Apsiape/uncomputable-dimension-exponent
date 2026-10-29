@@ -1,0 +1,592 @@
+\begin{thebibliography}{10}
+
+\bibitem{AGHP92}
+Noga Alon, Oded Goldreich, Johan Håstad, and René Peralta.
+\newblock Simple constructions of almost k-wise independent random variables.
+\newblock {\em Random Structures \& Algorithms}, 3(3):289--304, 1992.
+\newblock \href {https://doi.org/10.1002/rsa.3240030308}
+  {\path{doi:10.1002/rsa.3240030308}}.
+
+\bibitem{AP14}
+Goulnara Arzhantseva and Liviu P{\u a}unescu.
+\newblock Almost commuting permutations are near commuting permutations.
+\newblock {\em Journal of Functional Analysis}, 269(3):745--757, 2015.
+\newblock \href {https://arxiv.org/abs/1410.2626} {\path{arXiv:1410.2626}},
+  \href {https://doi.org/10.1016/j.jfa.2015.02.013}
+  {\path{doi:10.1016/j.jfa.2015.02.013}}.
+
+\bibitem{Aus13}
+Tim Austin.
+\newblock Rational group ring elements with kernels having irrational
+  dimension.
+\newblock {\em Proceedings of the London Mathematical Society},
+  107(6):1424--1448, 2013.
+\newblock \href {https://doi.org/10.1112/plms/pdt029}
+  {\path{doi:10.1112/plms/pdt029}}.
+
+\bibitem{Bak66}
+A.~Baker.
+\newblock Linear forms in the logarithms of algebraic numbers.
+\newblock {\em Mathematika}, 13(2):204--216, 1966.
+\newblock \href {https://doi.org/10.1112/S0025579300003971}
+  {\path{doi:10.1112/S0025579300003971}}.
+
+\bibitem{Basu14}
+Saugata Basu.
+\newblock Algorithms in real algebraic geometry: A survey, 2014.
+\newblock Sections 2.2 and 2.5 discuss singly exponential algorithms and bit
+  complexity.
+\newblock URL: \url{https://arxiv.org/abs/1409.1534v1}, \href
+  {https://arxiv.org/abs/1409.1534v1} {\path{arXiv:1409.1534v1}}.
+
+\bibitem{BCW21}
+Johannes Bausch, Toby~S. Cubitt, and James~D. Watson.
+\newblock Uncomputability of phase diagrams.
+\newblock {\em Nature Communications}, 12:452, 2021.
+\newblock \href {https://arxiv.org/abs/1910.01631} {\path{arXiv:1910.01631}},
+  \href {https://doi.org/10.1038/s41467-020-20504-6}
+  {\path{doi:10.1038/s41467-020-20504-6}}.
+
+\bibitem{BL18}
+Oren Becker and Alexander Lubotzky.
+\newblock Group stability and {Property (T)}.
+\newblock {\em Journal of Functional Analysis}, 278(1):108298, 2020.
+\newblock \href {https://arxiv.org/abs/1809.00632} {\path{arXiv:1809.00632}},
+  \href {https://doi.org/10.1016/j.jfa.2019.108298}
+  {\path{doi:10.1016/j.jfa.2019.108298}}.
+
+\bibitem{BBPS96}
+Charles~H. Bennett, Herbert~J. Bernstein, Sandu Popescu, and Benjamin
+  Schumacher.
+\newblock Concentrating partial entanglement by local operations.
+\newblock {\em Phys. Rev. A}, 53:2046--2052, 1996.
+\newblock \href {https://arxiv.org/abs/quant-ph/9511030}
+  {\path{arXiv:quant-ph/9511030}}, \href
+  {https://doi.org/10.1103/PhysRevA.53.2046}
+  {\path{doi:10.1103/PhysRevA.53.2046}}.
+
+\bibitem{BDSW96}
+Charles~H. Bennett, David~P. DiVincenzo, John~A. Smolin, and William~K.
+  Wootters.
+\newblock Mixed-state entanglement and quantum error correction.
+\newblock {\em Phys. Rev. A}, 54(5):3824--3851, 1996.
+\newblock \href {https://arxiv.org/abs/quant-ph/9604024}
+  {\path{arXiv:quant-ph/9604024}}, \href
+  {https://doi.org/10.1103/PhysRevA.54.3824}
+  {\path{doi:10.1103/PhysRevA.54.3824}}.
+
+\bibitem{BB00}
+N.~Brady and M.R. Bridson.
+\newblock There is only one gap in the isoperimetric spectrum.
+\newblock {\em Geometric and Functional Analysis}, 10(5):1053--1070, 2000.
+\newblock \href {https://doi.org/10.1007/PL00001646}
+  {\path{doi:10.1007/PL00001646}}.
+
+\bibitem{BBFS09}
+Noel Brady, Martin~R Bridson, Max Forester, and Krishnan Shankar.
+\newblock Snowflake groups, {Perron--Frobenius} eigenvalues and isoperimetric
+  spectra.
+\newblock {\em Geometry \& Topology}, 13(1):141--187, 2009.
+\newblock \href {https://doi.org/10.2140/gt.2009.13.141}
+  {\path{doi:10.2140/gt.2009.13.141}}.
+
+\bibitem{BK12}
+Sabine Burgdorf and Igor Klep.
+\newblock The truncated tracial moment problem.
+\newblock {\em Journal of Operator Theory}, 68(1):141--163, 2012.
+\newblock \href {https://arxiv.org/abs/1001.3679} {\path{arXiv:1001.3679}}.
+
+\bibitem{BV98}
+Marc Burger and Alain Valette.
+\newblock Idempotents in complex group rings: theorems of {Zalesskii} and
+  {Bass} revisited.
+\newblock {\em Journal of Lie Theory}, 8:219--228, 1998.
+\newblock Author scan:
+  \url{https://people.math.ethz.ch/~burger/pub/1998_Idempotents.pdf}.
+\newblock URL:
+  \url{https://ftp.gwdg.de/pub/misc/EMIS/journals/JLT/vol.8_no.2/3.html}.
+
+\bibitem{CRSV17}
+Rui Chao, Ben~W. Reichardt, Chris Sutherland, and Thomas Vidick.
+\newblock Overlapping qubits.
+\newblock In {\em 8th Innovations in Theoretical Computer Science Conference
+  (ITCS 2017)}, volume~67 of {\em Leibniz International Proceedings in
+  Informatics (LIPIcs)}, pages 48:1--48:21, 2017.
+\newblock \href {https://arxiv.org/abs/1701.01062} {\path{arXiv:1701.01062}},
+  \href {https://doi.org/10.4230/LIPIcs.ITCS.2017.48}
+  {\path{doi:10.4230/LIPIcs.ITCS.2017.48}}.
+
+\bibitem{CRSV18}
+Rui Chao, Ben~W. Reichardt, Chris Sutherland, and Thomas Vidick.
+\newblock Test for a large amount of entanglement, using few measurements.
+\newblock {\em Quantum}, 2:92, 2018.
+\newblock \href {https://arxiv.org/abs/1610.00771} {\path{arXiv:1610.00771}},
+  \href {https://doi.org/10.22331/q-2018-09-03-92}
+  {\path{doi:10.22331/q-2018-09-03-92}}.
+
+\bibitem{CGHU12}
+Jean-Ren\'e Chazottes, Jean-Marc Gambaudo, Michael Hochman, and Edgardo Ugalde.
+\newblock On the finite-dimensional marginals of shift-invariant measures.
+\newblock {\em Ergodic Theory and Dynamical Systems}, 32(5):1485--1500, 2012.
+\newblock \href {https://arxiv.org/abs/1011.2442} {\path{arXiv:1011.2442}},
+  \href {https://doi.org/10.1017/S0143385711000526}
+  {\path{doi:10.1017/S0143385711000526}}.
+
+\bibitem{CLS17}
+Richard Cleve, Li~Liu, and William Slofstra.
+\newblock Perfect commuting-operator strategies for linear system games.
+\newblock {\em J. Math. Phys.}, 58(1):012202, 2017.
+\newblock \href {https://arxiv.org/abs/1606.02278} {\path{arXiv:1606.02278}},
+  \href {https://doi.org/10.1063/1.4973422} {\path{doi:10.1063/1.4973422}}.
+
+\bibitem{CM14}
+Richard Cleve and Rajat Mittal.
+\newblock Characterization of binary constraint system games.
+\newblock In {\em Automata, Languages, and Programming (ICALP 2014)}, volume
+  8572 of {\em Lecture Notes in Comput. Sci.}, pages 320--331. Springer, 2014.
+\newblock \href {https://arxiv.org/abs/1209.2729} {\path{arXiv:1209.2729}},
+  \href {https://doi.org/10.1007/978-3-662-43948-7_27}
+  {\path{doi:10.1007/978-3-662-43948-7_27}}.
+
+\bibitem{Col20}
+Andrea Coladangelo.
+\newblock A two-player dimension witness based on embezzlement, and an
+  elementary proof of the non-closure of the set of quantum correlations.
+\newblock {\em Quantum}, 4:282, 2020.
+\newblock \href {https://arxiv.org/abs/1904.02350} {\path{arXiv:1904.02350}},
+  \href {https://doi.org/10.22331/q-2020-06-18-282}
+  {\path{doi:10.22331/q-2020-06-18-282}}.
+
+\bibitem{Con76}
+Alain Connes.
+\newblock Classification of injective factors. {Cases $II_1$, $II_\infty$,
+  $III_\lambda$, $\lambda\ne1$}.
+\newblock {\em Ann. of Math. (2)}, 104(1):73--115, 1976.
+\newblock \href {https://doi.org/10.2307/1971057} {\path{doi:10.2307/1971057}}.
+
+\bibitem{CPGW22}
+Toby~S. Cubitt, David Perez-Garcia, and Michael~M. Wolf.
+\newblock Undecidability of the spectral gap.
+\newblock {\em Forum of Mathematics, Pi}, 10:e14, 2022.
+\newblock \href {https://arxiv.org/abs/1502.04573} {\path{arXiv:1502.04573}},
+  \href {https://doi.org/10.1017/fmp.2021.15} {\path{doi:10.1017/fmp.2021.15}}.
+
+\bibitem{Salle24}
+Mikael de~la Salle.
+\newblock Spectral gap and stability for groups and non-local games.
+\newblock {\em Journal de l\'Ecole polytechnique --- Math\'ematiques},
+  12:1417--1444, 2025.
+\newblock Result numbers refer to arXiv version~2.
+\newblock \href {https://arxiv.org/abs/2204.07084v2}
+  {\path{arXiv:2204.07084v2}}, \href {https://doi.org/10.5802/jep.314}
+  {\path{doi:10.5802/jep.314}}.
+
+\bibitem{DW05}
+Igor Devetak and Andreas Winter.
+\newblock Distillation of secret key and entanglement from quantum states.
+\newblock {\em Proceedings of the Royal Society A}, 461(2053):207--235, 2005.
+\newblock The hashing inequality is Theorem 10 of the arXiv version.
+\newblock \href {https://arxiv.org/abs/quant-ph/0306078}
+  {\path{arXiv:quant-ph/0306078}}, \href
+  {https://doi.org/10.1098/rspa.2004.1372} {\path{doi:10.1098/rspa.2004.1372}}.
+
+\bibitem{DM-heat}
+Seth Douglas and Nidhal Mghirbi.
+\newblock The heat price of precision, 2026.
+\newblock Version 1.0.0. Unrefereed preprint; theorem numbers refer to this
+  version.
+\newblock \href {https://doi.org/10.5281/zenodo.23701732}
+  {\path{doi:10.5281/zenodo.23701732}}.
+
+\bibitem{DM-H3}
+Seth Douglas and Nidhal Mghirbi.
+\newblock Houghton's group {$H_3$} has superpolynomial sofic profile, 2026.
+\newblock Version 1.1.2, Zenodo. Result numbers refer to that version.
+\newblock \href {https://doi.org/10.5281/zenodo.23070869}
+  {\path{doi:10.5281/zenodo.23070869}}.
+
+\bibitem{DM-precision}
+Seth Douglas and Nidhal Mghirbi.
+\newblock The price of precision: usable entanglement in nonlocal games and the
+  geometry of groups, 2026.
+\newblock Version 1.0.0. Unrefereed preprint; theorem numbers refer to this
+  version.
+\newblock \href {https://doi.org/10.5281/zenodo.23697346}
+  {\path{doi:10.5281/zenodo.23697346}}.
+
+\bibitem{DJS13}
+Rodney~G. Downey, Carl~G. Jockusch, Jr., and Paul~E. Schupp.
+\newblock Asymptotic density and computably enumerable sets.
+\newblock {\em Journal of Mathematical Logic}, 13(2):1350005, 2013.
+\newblock Theorem 5.1 refers to the arXiv version.
+\newblock \href {https://arxiv.org/abs/1307.0040} {\path{arXiv:1307.0040}},
+  \href {https://doi.org/10.1142/S0219061313500050}
+  {\path{doi:10.1142/S0219061313500050}}.
+
+\bibitem{FKMPRSZ25}
+Marco Fanizza, Larissa Kroell, Arthur Mehta, Connor Paddock, Denis Rochette,
+  William Slofstra, and Yuming Zhao.
+\newblock The {NPA} hierarchy does not always attain the commuting operator
+  value, 2025.
+\newblock Result numbers refer to arXiv version~4.
+\newblock \href {https://arxiv.org/abs/2510.04943} {\path{arXiv:2510.04943}}.
+
+\bibitem{FFR23}
+Francesco Fournier-Facio and Bharatram Rangarajan.
+\newblock {Ulam} stability of lamplighters and {Thompson} groups.
+\newblock {\em Mathematische Annalen}, 389(3):2469--2497, 2024.
+\newblock \href {https://arxiv.org/abs/2301.03970} {\path{arXiv:2301.03970}},
+  \href {https://doi.org/10.1007/s00208-023-02708-5}
+  {\path{doi:10.1007/s00208-023-02708-5}}.
+
+\bibitem{FMS21}
+Honghao Fu, Carl~A. Miller, and William Slofstra.
+\newblock The membership problem for constant-sized quantum correlations is
+  undecidable.
+\newblock {\em Communications in Mathematical Physics}, 406(5):96, 2025.
+\newblock \href {https://arxiv.org/abs/2101.11087v5}
+  {\path{arXiv:2101.11087v5}}, \href
+  {https://doi.org/10.1007/s00220-024-05229-7}
+  {\path{doi:10.1007/s00220-024-05229-7}}.
+
+\bibitem{Gel34}
+A.~Gelfond.
+\newblock Sur le septi{\`e}me probl{\`e}me de {H}ilbert.
+\newblock {\em Bull. Acad. Sci. URSS, Cl. Sci. Math. Nat. (VII s{\'e}r.),
+  no.~4}, pages 623--634, 1934.
+
+\bibitem{GH17}
+W.~T. Gowers and O.~Hatami.
+\newblock Inverse and stability theorems for approximate representations of
+  finite groups.
+\newblock {\em Sb. Math.}, 208(12):1784--1817, 2017.
+\newblock \href {https://arxiv.org/abs/1510.04085} {\path{arXiv:1510.04085}},
+  \href {https://doi.org/10.1070/SM8872} {\path{doi:10.1070/SM8872}}.
+
+\bibitem{Gra14}
+{\L}ukasz Grabowski.
+\newblock On {Turing} dynamical systems and the {Atiyah} problem.
+\newblock {\em Invent. Math.}, 198(1):27--69, 2014.
+\newblock \href {https://doi.org/10.1007/s00222-013-0497-5}
+  {\path{doi:10.1007/s00222-013-0497-5}}.
+
+\bibitem{HSWZ13}
+Andrew Hawkins, Adam Skalski, Stuart White, and Joachim Zacharias.
+\newblock On spectral triples on crossed products arising from equicontinuous
+  actions.
+\newblock {\em Mathematica Scandinavica}, 113(2):262--291, 2013.
+\newblock \href {https://arxiv.org/abs/1103.6199} {\path{arXiv:1103.6199}},
+  \href {https://doi.org/10.7146/math.scand.a-15572}
+  {\path{doi:10.7146/math.scand.a-15572}}.
+
+\bibitem{HLW06}
+Patrick Hayden, Debbie~W. Leung, and Andreas Winter.
+\newblock Aspects of generic entanglement.
+\newblock {\em Communications in Mathematical Physics}, 265(1):95--117, 2006.
+\newblock Theorem numbering refers to arXiv version~2.
+\newblock \href {https://arxiv.org/abs/quant-ph/0407049}
+  {\path{arXiv:quant-ph/0407049}}, \href
+  {https://doi.org/10.1007/s00220-006-1535-6}
+  {\path{doi:10.1007/s00220-006-1535-6}}.
+
+\bibitem{HM10}
+Michael Hochman and Tom Meyerovitch.
+\newblock A characterization of the entropies of multidimensional shifts of
+  finite type.
+\newblock {\em Ann. of Math. (2)}, 171(3):2011--2038, 2010.
+\newblock \href {https://doi.org/10.4007/annals.2010.171.2011}
+  {\path{doi:10.4007/annals.2010.171.2011}}.
+
+\bibitem{Hol73}
+Alexander~S. Holevo.
+\newblock Bounds for the quantity of information transmitted by a quantum
+  communication channel.
+\newblock {\em Probl. Inf. Transm.}, 9(3):177--183, 1973.
+\newblock Translated from Problemy Peredachi Informatsii 9(3), 3--11.
+
+\bibitem{JLV20}
+Zhengfeng Ji, Debbie Leung, and Thomas Vidick.
+\newblock A three-player coherent state embezzlement game.
+\newblock {\em Quantum}, 4:349, 2020.
+\newblock \href {https://arxiv.org/abs/1802.04926} {\path{arXiv:1802.04926}},
+  \href {https://doi.org/10.22331/q-2020-10-26-349}
+  {\path{doi:10.22331/q-2020-10-26-349}}.
+
+\bibitem{JNVWY}
+Zhengfeng Ji, Anand Natarajan, Thomas Vidick, John Wright, and Henry Yuen.
+\newblock {MIP}*={RE}, 2026.
+\newblock arXiv version 4, accepted to Annals of Mathematics. Result and page
+  numbers refer to this version.
+\newblock URL: \url{https://arxiv.org/abs/2001.04383v4}, \href
+  {https://arxiv.org/abs/2001.04383} {\path{arXiv:2001.04383}}.
+
+\bibitem{JS12}
+Carl~G. Jockusch, Jr. and Paul~E. Schupp.
+\newblock Generic computability, {T}uring degrees, and asymptotic density.
+\newblock {\em Journal of the London Mathematical Society}, 85(2):472--490,
+  2012.
+\newblock Theorem 2.21 refers to the arXiv version.
+\newblock \href {https://arxiv.org/abs/1010.5212} {\path{arXiv:1010.5212}},
+  \href {https://doi.org/10.1112/jlms/jdr051} {\path{doi:10.1112/jlms/jdr051}}.
+
+\bibitem{KPS18}
+Se-Jin Kim, Vern~I. Paulsen, and Christopher Schafhauser.
+\newblock A synchronous game for binary constraint systems.
+\newblock {\em Journal of Mathematical Physics}, 59(3):032201, 2018.
+\newblock \href {https://arxiv.org/abs/1707.01016} {\path{arXiv:1707.01016}},
+  \href {https://doi.org/10.1063/1.4996867} {\path{doi:10.1063/1.4996867}}.
+
+\bibitem{KMV22}
+Igor Klep, Victor Magron, and Jurij Vol{\v c}i{\v c}.
+\newblock Optimization over trace polynomials.
+\newblock {\em Annales Henri Poincar\'e}, 23:67--100, 2022.
+\newblock \href {https://arxiv.org/abs/2006.12510} {\path{arXiv:2006.12510}},
+  \href {https://doi.org/10.1007/s00023-021-01095-4}
+  {\path{doi:10.1007/s00023-021-01095-4}}.
+
+\bibitem{KW20}
+Artemy Kolchinsky and David~H. Wolpert.
+\newblock Thermodynamic costs of {T}uring machines.
+\newblock {\em Physical Review Research}, 2:033312, 2020.
+\newblock \href {https://arxiv.org/abs/1912.04685} {\path{arXiv:1912.04685}},
+  \href {https://doi.org/10.1103/PhysRevResearch.2.033312}
+  {\path{doi:10.1103/PhysRevResearch.2.033312}}.
+
+\bibitem{Lee12}
+Sang~Rae Lee.
+\newblock Geometry of {H}oughton's groups, 2012.
+\newblock \href {https://arxiv.org/abs/1212.0257} {\path{arXiv:1212.0257}}.
+
+\bibitem{Lin25}
+Junqiao Lin.
+\newblock {MIP}$^{\rm co}$={coRE}, 2025.
+\newblock Commuting-operator interactive proofs; arXiv version 1.
+\newblock URL: \url{https://arxiv.org/abs/2510.07162}, \href
+  {https://arxiv.org/abs/2510.07162} {\path{arXiv:2510.07162}}.
+
+\bibitem{MV15}
+Laura Man\v{c}inska and Thomas Vidick.
+\newblock Unbounded entanglement in nonlocal games.
+\newblock {\em Quantum Inf. Comput.}, 15(15--16):1317--1332, 2015.
+\newblock \href {https://arxiv.org/abs/1402.4145} {\path{arXiv:1402.4145}},
+  \href {https://doi.org/10.26421/QIC15.15-16-4}
+  {\path{doi:10.26421/QIC15.15-16-4}}.
+
+\bibitem{MMG09}
+Matthew McKague, Michele Mosca, and Nicolas Gisin.
+\newblock Simulating quantum systems using real {H}ilbert spaces.
+\newblock {\em Physical Review Letters}, 102(2):020505, 2009.
+\newblock \href {https://arxiv.org/abs/0810.1923} {\path{arXiv:0810.1923}},
+  \href {https://doi.org/10.1103/PhysRevLett.102.020505}
+  {\path{doi:10.1103/PhysRevLett.102.020505}}.
+
+\bibitem{MSZ23}
+Arthur Mehta, William Slofstra, and Yuming Zhao.
+\newblock Positivity is undecidable in tensor products of free algebras.
+\newblock {\em J. Eur. Math. Soc. (JEMS)}, 2026.
+\newblock Published online. Result numbers refer to arXiv version~2.
+\newblock \href {https://arxiv.org/abs/2312.05617} {\path{arXiv:2312.05617}},
+  \href {https://doi.org/10.4171/JEMS/1786} {\path{doi:10.4171/JEMS/1786}}.
+
+\bibitem{Mey11}
+Tom Meyerovitch.
+\newblock Growth-type invariants for {$\mathbb Z^d$} subshifts of finite type
+  and arithmetical classes of real numbers.
+\newblock {\em Inventiones Mathematicae}, 184(3):567--589, 2011.
+\newblock Theorem 5.1 refers to the arXiv version.
+\newblock \href {https://arxiv.org/abs/0902.0223} {\path{arXiv:0902.0223}},
+  \href {https://doi.org/10.1007/s00222-010-0296-1}
+  {\path{doi:10.1007/s00222-010-0296-1}}.
+
+\bibitem{DM-game}
+Nidhal Mghirbi and Seth Douglas.
+\newblock An explicit nonlocal game of quantum value one that needs exponential
+  entanglement, 2026.
+\newblock Version 1.0.0, Zenodo. Unrefereed preprint.
+\newblock \href {https://doi.org/10.5281/zenodo.23697255}
+  {\path{doi:10.5281/zenodo.23697255}}.
+
+\bibitem{Min61}
+Marvin~L. Minsky.
+\newblock Recursive unsolvability of {Post}'s problem of "tag" and other topics
+  in theory of {Turing} machines.
+\newblock {\em The Annals of Mathematics}, 74(3):437--455, 1961.
+\newblock \href {https://doi.org/10.2307/1970290} {\path{doi:10.2307/1970290}}.
+
+\bibitem{MH40}
+Marston Morse and Gustav~A. Hedlund.
+\newblock Symbolic dynamics {II}. {Sturmian} trajectories.
+\newblock {\em American Journal of Mathematics}, 62(1):1--42, 1940.
+\newblock \href {https://doi.org/10.2307/2371431} {\path{doi:10.2307/2371431}}.
+
+\bibitem{MNY20}
+Hamoon Mousavi, Seyed~Sajjad Nezhadi, and Henry Yuen.
+\newblock On the complexity of zero gap {MIP}*.
+\newblock In {\em 47th International Colloquium on Automata, Languages, and
+  Programming (ICALP 2020)}, volume 168 of {\em Leibniz International
+  Proceedings in Informatics (LIPIcs)}, pages 87:1--87:12, 2020.
+\newblock URL: \url{https://arxiv.org/abs/2002.10490}, \href
+  {https://arxiv.org/abs/2002.10490} {\path{arXiv:2002.10490}}, \href
+  {https://doi.org/10.4230/LIPIcs.ICALP.2020.87}
+  {\path{doi:10.4230/LIPIcs.ICALP.2020.87}}.
+
+\bibitem{MNY22}
+Hamoon Mousavi, Seyed~Sajjad Nezhadi, and Henry Yuen.
+\newblock Nonlocal games, compression theorems, and the arithmetical hierarchy.
+\newblock In {\em Proceedings of the 54th Annual ACM SIGACT Symposium on Theory
+  of Computing (STOC 2022)}, pages 1--11. ACM, 2022.
+\newblock Result numbers refer to arXiv version~2.
+\newblock \href {https://arxiv.org/abs/2110.04651} {\path{arXiv:2110.04651}},
+  \href {https://doi.org/10.1145/3519935.3519949}
+  {\path{doi:10.1145/3519935.3519949}}.
+
+\bibitem{NN93}
+Joseph Naor and Moni Naor.
+\newblock Small-bias probability spaces: Efficient constructions and
+  applications.
+\newblock {\em SIAM Journal on Computing}, 22(4):838--856, 1993.
+\newblock \href {https://doi.org/10.1137/0222053} {\path{doi:10.1137/0222053}}.
+
+\bibitem{NPA08}
+Miguel Navascu\'es, Stefano Pironio, and Antonio Ac\'in.
+\newblock A convergent hierarchy of semidefinite programs characterizing the
+  set of quantum correlations.
+\newblock {\em New Journal of Physics}, 10:073013, 2008.
+\newblock \href {https://arxiv.org/abs/0803.4290} {\path{arXiv:0803.4290}},
+  \href {https://doi.org/10.1088/1367-2630/10/7/073013}
+  {\path{doi:10.1088/1367-2630/10/7/073013}}.
+
+\bibitem{Nay99}
+Ashwin Nayak.
+\newblock Optimal lower bounds for quantum automata and random access codes.
+\newblock In {\em Proceedings of the 40th Annual Symposium on Foundations of
+  Computer Science}, pages 369--376. IEEE, 1999.
+\newblock \href {https://arxiv.org/abs/quant-ph/9904093}
+  {\path{arXiv:quant-ph/9904093}}, \href
+  {https://doi.org/10.1109/SFFCS.1999.814608}
+  {\path{doi:10.1109/SFFCS.1999.814608}}.
+
+\bibitem{ORS14}
+Narutaka Ozawa, Mikael R{\o}rdam, and Yasuhiko Sato.
+\newblock Elementary amenable groups are quasidiagonal.
+\newblock {\em Geometric and Functional Analysis}, 25(1):307--316, 2015.
+\newblock \href {https://arxiv.org/abs/1404.3462} {\path{arXiv:1404.3462}},
+  \href {https://doi.org/10.1007/s00039-015-0315-x}
+  {\path{doi:10.1007/s00039-015-0315-x}}.
+
+\bibitem{Pad22}
+Connor Paddock.
+\newblock Rounding near-optimal quantum strategies for nonlocal games to
+  strategies using maximally entangled states, 2025.
+\newblock Result numbers refer to arXiv version~5.
+\newblock URL: \url{https://arxiv.org/abs/2203.02525v5}, \href
+  {https://arxiv.org/abs/2203.02525v5} {\path{arXiv:2203.02525v5}}.
+
+\bibitem{PSSSTW16}
+Vern~I. Paulsen, Simone Severini, Daniel Stahlke, Ivan~G. Todorov, and Andreas
+  Winter.
+\newblock Estimating quantum chromatic numbers.
+\newblock {\em Journal of Functional Analysis}, 270(6):2188--2222, 2016.
+\newblock \href {https://arxiv.org/abs/1407.6918} {\path{arXiv:1407.6918}},
+  \href {https://doi.org/10.1016/j.jfa.2016.01.010}
+  {\path{doi:10.1016/j.jfa.2016.01.010}}.
+
+\bibitem{PSZ15}
+Mika{\"e}l Pichot, Thomas Schick, and Andrzej {\.{Z}}uk.
+\newblock Closed manifolds with transcendental {$L^2$}-betti numbers.
+\newblock {\em Journal of the London Mathematical Society}, 92(2):371--392,
+  2015.
+\newblock \href {https://arxiv.org/abs/1005.1147} {\path{arXiv:1005.1147}},
+  \href {https://doi.org/10.1112/jlms/jdv026} {\path{doi:10.1112/jlms/jdv026}}.
+
+\bibitem{SBR02}
+Mark~V. Sapir, Jean-Camille Birget, and Eliyahu Rips.
+\newblock Isoperimetric and isodiametric functions of groups.
+\newblock {\em Annals of Mathematics}, 156(2):345--466, 2002.
+\newblock \href {https://arxiv.org/abs/math/9811105}
+  {\path{arXiv:math/9811105}}, \href {https://doi.org/10.2307/3597195}
+  {\path{doi:10.2307/3597195}}.
+
+\bibitem{SS63}
+J.~C. Shepherdson and H.~E. Sturgis.
+\newblock Computability of recursive functions.
+\newblock {\em Journal of the ACM}, 10(2):217--255, 1963.
+\newblock \href {https://doi.org/10.1145/321160.321170}
+  {\path{doi:10.1145/321160.321170}}.
+
+\bibitem{Sho59}
+Joseph~R. Shoenfield.
+\newblock On degrees of unsolvability.
+\newblock {\em Annals of Mathematics}, 69(3):644--653, 1959.
+\newblock \href {https://doi.org/10.2307/1970028} {\path{doi:10.2307/1970028}}.
+
+\bibitem{Slo18}
+William Slofstra.
+\newblock A group with at least subexponential hyperlinear profile, 2018.
+\newblock \href {https://arxiv.org/abs/1806.05267} {\path{arXiv:1806.05267}}.
+
+\bibitem{Slo19}
+William Slofstra.
+\newblock The set of quantum correlations is not closed.
+\newblock {\em Forum Math. Pi}, 7:e1, 2019.
+\newblock Result numbers refer to arXiv version~2.
+\newblock \href {https://arxiv.org/abs/1703.08618} {\path{arXiv:1703.08618}},
+  \href {https://doi.org/10.1017/fmp.2018.3} {\path{doi:10.1017/fmp.2018.3}}.
+
+\bibitem{Slo20}
+William Slofstra.
+\newblock Tsirelson's problem and an embedding theorem for groups arising from
+  non-local games.
+\newblock {\em J. Amer. Math. Soc.}, 33(1):1--56, 2020.
+\newblock \href {https://arxiv.org/abs/1606.03140} {\path{arXiv:1606.03140}},
+  \href {https://doi.org/10.1090/jams/929} {\path{doi:10.1090/jams/929}}.
+
+\bibitem{SV18}
+William Slofstra and Thomas Vidick.
+\newblock Entanglement in non-local games and the hyperlinear profile of
+  groups.
+\newblock {\em Ann. Henri Poincar\'e}, 19(10):2979--3005, 2018.
+\newblock Result numbers refer to arXiv version~2.
+\newblock \href {https://arxiv.org/abs/1711.10676} {\path{arXiv:1711.10676}},
+  \href {https://doi.org/10.1007/s00023-018-0718-y}
+  {\path{doi:10.1007/s00023-018-0718-y}}.
+
+\bibitem{Spe49}
+Ernst Specker.
+\newblock Nicht konstruktiv beweisbare {S}\"atze der {A}nalysis.
+\newblock {\em Journal of Symbolic Logic}, 14(3):145--158, 1949.
+\newblock \href {https://doi.org/10.2307/2267043} {\path{doi:10.2307/2267043}}.
+
+\bibitem{vdC35}
+Johannes~G. {van der Corput}.
+\newblock Verteilungsfunktionen. {I}.
+\newblock {\em Proceedings of the Koninklijke Nederlandse Akademie van
+  Wetenschappen}, 38:813--821, 1935.
+\newblock Binary radical-inverse construction; the window estimate used here is
+  proved in the text.
+
+\bibitem{VP98}
+Vlatko Vedral and Martin~B. Plenio.
+\newblock Entanglement measures and purification procedures.
+\newblock {\em Physical Review A}, 57:1619--1633, 1998.
+\newblock \href {https://arxiv.org/abs/quant-ph/9707035}
+  {\path{arXiv:quant-ph/9707035}}, \href
+  {https://doi.org/10.1103/PhysRevA.57.1619}
+  {\path{doi:10.1103/PhysRevA.57.1619}}.
+
+\bibitem{Vid22}
+Thomas Vidick.
+\newblock Almost synchronous quantum correlations.
+\newblock {\em Journal of Mathematical Physics}, 63(2):022201, 2022.
+\newblock \href {https://arxiv.org/abs/2103.02468} {\path{arXiv:2103.02468}},
+  \href {https://doi.org/10.1063/5.0056512} {\path{doi:10.1063/5.0056512}}.
+
+\bibitem{ZW01}
+Xizhong Zheng and Klaus Weihrauch.
+\newblock The arithmetical hierarchy of real numbers.
+\newblock {\em Mathematical Logic Quarterly}, 47(1):51--65, 2001.
+\newblock \href
+  {https://doi.org/10.1002/1521-3870(200101)47:1<51::AID-MALQ51>3.0.CO;2-W}
+  {\path{doi:10.1002/1521-3870(200101)47:1<51::AID-MALQ51>3.0.CO;2-W}}.
+
+\end{thebibliography}

@@ -1,0 +1,175 @@
+{
+  "overflow_point_removal_attack": [
+    {
+      "N": 2,
+      "flip_state_error": 0.8164965809277261,
+      "target_precision": 0.0625
+    },
+    {
+      "N": 3,
+      "flip_state_error": 0.5345224838248487,
+      "target_precision": 0.015625
+    },
+    {
+      "N": 4,
+      "flip_state_error": 0.3651483716701107,
+      "target_precision": 0.00390625
+    },
+    {
+      "N": 5,
+      "flip_state_error": 0.254000254000381,
+      "target_precision": 0.0009765625
+    },
+    {
+      "N": 6,
+      "flip_state_error": 0.17817416127494956,
+      "target_precision": 0.000244140625
+    },
+    {
+      "N": 7,
+      "flip_state_error": 0.12549116102763172,
+      "target_precision": 6.103515625e-05
+    },
+    {
+      "N": 8,
+      "flip_state_error": 0.08856148855400954,
+      "target_precision": 1.52587890625e-05
+    },
+    {
+      "N": 9,
+      "flip_state_error": 0.06256112470898545,
+      "target_precision": 3.814697265625e-06
+    },
+    {
+      "N": 10,
+      "flip_state_error": 0.044215768828538185,
+      "target_precision": 9.5367431640625e-07
+    },
+    {
+      "N": 11,
+      "flip_state_error": 0.03125763218963633,
+      "target_precision": 2.384185791015625e-07
+    },
+    {
+      "N": 12,
+      "flip_state_error": 0.02209978480439319,
+      "target_precision": 5.960464477539063e-08
+    }
+  ],
+  "noncommuting_shared_calibrators": {
+    "checker_labels": 64,
+    "source_block_dimension": 2,
+    "calibrators": 2,
+    "equations_checked": 5420,
+    "max_residual": 0.0,
+    "max_cross_calibrator_C_commutator": 0.397747564417433,
+    "domain_min": 0.0,
+    "domain_max": 1.0
+  },
+  "greedy_tracking": {
+    "target_words": 6561,
+    "steps_per_word": 8,
+    "max_error": "2",
+    "bound": 3
+  },
+  "affine_parameters": [
+    {
+      "L": "1/1000",
+      "U": "1/500",
+      "q": 501,
+      "m": 3,
+      "normalized": [
+        "1/750",
+        "251/375"
+      ]
+    },
+    {
+      "L": "1/4",
+      "U": "1/4",
+      "q": 3,
+      "m": 1,
+      "normalized": [
+        "1",
+        "1"
+      ]
+    },
+    {
+      "L": "2/3",
+      "U": "20",
+      "q": 1,
+      "m": 78,
+      "normalized": [
+        "1/117",
+        "1"
+      ]
+    },
+    {
+      "L": "100",
+      "U": "101",
+      "q": 1,
+      "m": 402,
+      "normalized": [
+        "199/201",
+        "1"
+      ]
+    }
+  ],
+  "independent_hold_schedule": {
+    "stages": [
+      {
+        "s": 1,
+        "J_start": 1,
+        "J_end": 68,
+        "active": "1",
+        "density": "1"
+      },
+      {
+        "s": 2,
+        "J_start": 68,
+        "J_end": 343,
+        "active": "1/5",
+        "density": "123/343"
+      },
+      {
+        "s": 3,
+        "J_start": 343,
+        "J_end": 2058,
+        "active": "4/5",
+        "density": "1495/2058"
+      },
+      {
+        "s": 4,
+        "J_start": 2058,
+        "J_end": 14406,
+        "active": "1/4",
+        "density": "2291/7203"
+      },
+      {
+        "s": 5,
+        "J_start": 14406,
+        "J_end": 115250,
+        "active": "3/4",
+        "density": "16043/23050"
+      },
+      {
+        "s": 6,
+        "J_start": 115250,
+        "J_end": 1037255,
+        "active": "2/7",
+        "density": "68729/207451"
+      },
+      {
+        "s": 7,
+        "J_start": 1037255,
+        "J_end": 10372553,
+        "active": "5/7",
+        "density": "7011715/10372553"
+      }
+    ],
+    "max_time_over_J_squared": 1.0
+  },
+  "diagonal_decoder_margin": {
+    "cases": 224,
+    "max_endpoint_error_fraction": "1/100"
+  }
+}

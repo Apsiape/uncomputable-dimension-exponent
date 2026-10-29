@@ -1,0 +1,38 @@
+\section{Open spectra and sharper resource laws}\label{sec:problems}
+The dimension classification concerns a positive finite limit and a fixed rational finite game. It leaves the following questions, including the distinction between dimension and operational entanglement.
+
+\begin{problem}[Zero without perfection]\label{prob:zero}
+Can a finite rational value-one BCS game with no finite-dimensional perfect strategy have dimension exponent zero? Can its logarithmic usable coefficient be zero with diverging sublogarithmic usable demand?
+\end{problem}
+Finite-dimensional perfection forces a zero dimension exponent, but this does not settle the converse. The positive lower bounds in our constructions exclude that case without addressing subpolynomial dimension growth in other games. The witness-based architecture forces coefficient at least $3/(4q)$ for every fixed residual power $q$, from its three compulsory clocks alone. The carry-checker architecture of Section~\ref{sec:profile-clock} forces at least $1/(2q)$ from its two compulsory checker clocks. A zero example needs a verifier cheaper than its compulsory clocks or a different mechanism; changing flags or taking one larger fixed power cannot produce zero.
+
+\begin{problem}[Weak pure rounding and the usable spectrum]\label{prob:usable-spectrum}
+\textbf{Weak pure rounding conjecture.} For every fixed finite rational value-one game and every fixed $0<a<1$, does
+\[
+ p_G(\eps^a)\le d_G^\to(\eps)+o(\log_2(1/\eps))
+\]
+hold for the original mixed-state demand, with the purifying environment inaccessible? The finite-logarithmic regime $d_G^\to(\eps)=O(\log(1/\eps))$ is the remaining case relevant to positive usable coefficients.
+\end{problem}
+Paddock's maximally entangled rounding~\cite[Corollary~1.3]{Pad22} is a close precedent, but does not bound the rounded entropy by the original state's distillable rate. Every positive $\Delta^0_2$ coefficient is already realized by \cref{thm:realization}; the opposite inclusion remains open because finite-dimensional feasibility does not compute a regularized distillation rate. A sufficient theorem is the one-way instrument criterion of \cref{prop:weak-rounding-criterion}: on a selected $o(L)$-near-minimizer, Bob-flagged actual game-strategy branches should have mean loss at most $\eps^a$ and mean joint entropy $o(L)$, allowing arbitrary garbage erasure and nonflat states. After fine Kraus refinement the latter is exactly $S(E)-\chi(J_A,J_B:E)=o(L)$, including Bob's private outcomes and all discarded registers. This operational condition is sufficient, not claimed necessary. By \cref{cor:weak-rounding-spectrum}, weak rounding would identify the usable and pure coefficients and conditionally the doubled heat coefficient. The single effect-only obstruction in \cref{prop:effect-only-obstruction} shows why arbitrary bipartite effects cannot establish it.
+
+A refutation must give one fixed $G$, fixed $a\in(0,1)$, $\gamma>0$ and $\eps_i\to0$ with $p_G(\eps_i^a)\ge d_G^\to(\eps_i)+\gamma\log_2(1/\eps_i)$, using actual original-state rate upper bounds and universal pure-strategy lower bounds. Failure of a restricted instrument or a varying-effect example does not meet these quantifiers.
+
+\begin{problem}[Linear systems and groups]\label{prob:linear}
+Does the positive $\Delta^0_2$ realization theorem hold for linear-system games, with matched original-state usable laws? Which admissible group-profile endpoint pairs and whole profiles are realizable by finitely presented groups?
+\end{problem}
+\Cref{thm:group-ceilings} gives the necessary arithmetic classes, the doubly exponential time restriction and whole-profile exclusions, not group realizations. \Cref{thm:group-trace-obstruction} forbids fixed polynomial matrix group-ring decoders for the specified irrational-control-trace counter presentations. Precision-dependent analytic truncations are one possible way around that obstruction. Fixed infinite analytic decoders and different realizing presentations remain outside its scope; a blanket necessity of precision dependence is not established. Grabowski's Turing-machine encodings in group rings~\cite{Gra14}, following Austin~\cite{Aus13} and with related constructions of Pichot--Schick--\.{Z}uk~\cite{PSZ15}, are natural starting points for analytic decoders. Any proposed transfer must preserve simultaneous finite upper models and the original-state lower bound.
+
+\begin{problem}[Power-law usable demand]\label{prob:power-usable}
+Every $\Delta^0_2$ exponent in $(0,1]$ has matched original-state usable, log-dimension, pure and formation realizations. Is every existing positive usable exponent in this interval $\Delta^0_2$? Which existing finite power limits above one occur for a fixed finite rational game?
+\end{problem}
+The local lamp class has ceiling one and positive existing log-dimension, pure and formation spectra exactly $\Delta^0_2\cap(0,1]$ by \cref{cor:lamp-class-spectrum}. Its usable spectrum has the realization inclusion and the same upper bound; the arithmetic reverse inclusion remains open. The stopped checker with multipliers $a>b\ge2$ saturates one. Beyond this class, \cref{thm:unbounded-power} gives fixed rational BCS games with infinite upper exponents for log dimension, pure entropy and formation. These are upper exponents, not existing limits. Existing finite limits above one remain open. \Cref{thm:strong-source-transfer,prop:strong-source-necessary} state a conditional stronger-source route and necessary costs; \cref{prop:pairwise-junk} restricts universal global pairwise certificates. \Cref{thm:profile-power-pairs} realizes admissible endpoint pairs within $(0,1]$, while \cref{conj:profile-usable-ceiling} states the remaining general usable-pair ceiling.
+
+The endpoint classes are settled for dimension: by Theorem~\ref{thm:profile-pairs} the positive finite lower/upper logarithmic dimension pairs are exactly $0<L\le U$ with $L\in\Sigma^0_2$ and $U\in\Pi^0_2$, each with a matched original-state usable realization. Computability of finite-precision dimension separates the upper class from Meyerovitch's upper entropy-dimension class $\Pi_3$~\cite[Theorem~5.1]{Mey11}.
+\setcounter{theorem}{5}
+
+\begin{problem}[The full local-heat spectrum]\label{prob:heat-spectrum}
+Which positive finite local-reset heat coefficients occur in the block thermodynamic model of Section~\ref{sec:heat}?
+\end{problem}
+Equation~\eqref{eq:heat-spectrum-inclusions} places this spectrum between the positive $\Delta^0_2$ reals and the positive reals left-c.e. in $0'$. Neither the dimension classification nor the arithmetic upper bound proves equality for heat.
+
+Corollary~\ref{cor:profile-heat} realizes every doubled admissible logarithmic endpoint pair in the local-reset model. It supplies the pair inclusion, while the full heat spectrum and a general heat-pair ceiling remain open. Problem~\ref{prob:profile-frontier} concerns whole profiles rather than their two endpoints.

@@ -188,7 +188,7 @@ def outcome_labels(types):
     return [list(range(3)) if t == 't' else [1, 2] for t in types]  # 0=perp, 1->bit 0, 2->bit 1
 
 
-def run_protocol(PA, UA, PB, UB, Psi, types):
+def run_protocol(PA, UA, PB, UB, Psi, types, information=True):
     m = len(PB)
     d = PB[0][0].shape[0]
     Id = np.eye(d)
@@ -199,6 +199,13 @@ def run_protocol(PA, UA, PB, UB, Psi, types):
     flagsA = np.array([tuple(1 if x > 0 else 0 for x in r) for r in rstrings])
     # same flag pattern matrix for dephasing
     same_flag = np.all(flagsA[:, None, :] == flagsA[None, :, :], axis=2)
+    # Flag dephasing keeps exactly these principal matrix blocks.
+    groups = {}
+    for r in range(nR):
+        for o in range(nR):
+            key = (tuple(flagsA[r]), tuple(flagsA[o]))
+            groups.setdefault(key, []).append(r * nR + o)
+    flag_blocks = [np.array(g, dtype=int) for g in groups.values()]
     omega = np.zeros((nR * nR, nR * nR), dtype=complex)
     Dsq = 0.0
     EN = 0.0
@@ -243,9 +250,15 @@ def run_protocol(PA, UA, PB, UB, Psi, types):
             pr = (scale ** 2) * nrm(ideal_v) ** 2
             nact = sum(1 for x in r if x > 0)
             EN += pr * nact
+        if not information:
+            continue
         V = vecs.reshape(nR * nR, -1) * scale
-        G = V.conj() @ V.T  # G[(r,o),(r',o')] = <v_{r'o'}, v_{ro}> ... conj ordering
-        omega += G.T  # omega[(r,o),(r',o')] = <v_{r',o'}|v_{r,o}> as matrix rho = sum |v><v| reduced
+        # Discarded off-flag entries never enter the state or its partial trace.
+        for rows in flag_blocks:
+            block = V[rows]
+            omega[np.ix_(rows, rows)] += (block.conj() @ block.T).T
+    if not information:
+        return dict(Dvec=np.sqrt(Dsq), EN=EN, I_omega=None, trace=None, nR=nR)
     # dephase flags on both sides
     mask = np.einsum('ac,bd->abcd', same_flag, same_flag).reshape(nR * nR, nR * nR)
     omega = omega * mask
@@ -253,7 +266,8 @@ def run_protocol(PA, UA, PB, UB, Psi, types):
     tr = np.trace(omega).real
     omega_AB = omega / tr
     omega_B = np.einsum('abad->bd', omega_AB.reshape(nR, nR, nR, nR))
-    I_omega = vn_entropy(omega_B) - vn_entropy(omega_AB)
+    entropy_AB = sum(vn_entropy(omega_AB[np.ix_(rows, rows)]) for rows in flag_blocks)
+    I_omega = vn_entropy(omega_B) - entropy_AB
     return dict(Dvec=np.sqrt(Dsq), EN=EN, I_omega=I_omega, trace=tr, nR=nR)
 
 

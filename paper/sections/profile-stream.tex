@@ -1,0 +1,126 @@
+\section{Hold streams and profile calibration}\label{sec:profile-stream}
+\begin{lemma}[A stream with prescribed density endpoints]\label{lem:profile-hold}
+Let $(a_s)$ be a total computable sequence of rationals in $[c_0,1]$, where $c_0>0$ is rational. A finite counter program can emit an infinite binary word whose pulse times and one-count satisfy
+\begin{gather*}
+ t_J\le C(J+1)^2,\qquad
+ \liminf_J\frac{k(J)}J=\liminf_sa_s,\quad
+ \limsup_J\frac{k(J)}J=\limsup_sa_s.
+\end{gather*}
+Every window of length $\ell$ in the first $j$ pulses contains at least
+\[
+ c_0\ell-C(\sqrt j+2)\log_2(j+4)
+\]
+ones.
+\end{lemma}
+\begin{proof}
+Use the generator/background coroutine in \cref{lem:power-stream}: the current rational $p/q$ emits periods of $p$ ones and $q-p$ zeros, one elementary background instruction is executed per pulse, the next denominator is padded by $q_{\rm new}^2$ background instructions before READY, and switching occurs only at a period boundary. Start with rational $1$. Add a pulse counter $P$, stage counter $\sigma$ and hold countdown $D$. Each pulse increments $P$ and decrements positive $D$. Install a READY rational only at a period boundary with $D=0$; increment $\sigma$ and set $D=(\sigma+2)P$ by $\sigma+2$ non-destructive copies using a scratch counter. These operations have finite INC/DECJZ implementations. Copying the active generator uses $O(q_{\rm old}+q_{\rm new}+1)$ instructions; arbitrary background scratch remains in the background.
+
+Let $j_s$ be the installation position of stage $s$, carrying $b_s=a_{s-1}$ for $s\ge1$. The hold implies $j_{s+1}\ge(s+3)j_s$, and there are $O(\log J)$ installations before pulse $J$. The added work per pulse is bounded. Completed installation costs are bounded by $C\sum_{s<s^*}(s+3)j_s\le C\sum j_{s+1}=O(J)$; an installation occurring between adjacent pulses costs at most $O(J\log(J+2))$. The generator's denominator padding gives its existing $O(J^{3/2})$ instruction bound. Together these give $t_J\le C(J+1)^2$.
+
+Every background stage finishes by totality, every finite hold expires, and the continuing generator reaches another period boundary. Thus every stage is installed. Complete periods have exact density $b_s$, with at most one incomplete period. Padding gives $q\le\sqrt j+O(1)$, so for $j_s\le j\le j_{s+1}$,
+\begin{equation}\label{eq:profile-hold-density}
+ \frac{k(j)}j=\frac{j_s}j\frac{k(j_s)}{j_s}
+  +\left(1-\frac{j_s}j\right)b_s+O(j^{-1/2}).
+\end{equation}
+At stage end the first coefficient is at most $1/(s+3)$, and $|k(j_{s+1})/j_{s+1}-b_s|\le1/(s+3)+O(j_{s+1}^{-1/2})$. These subsequences attain both endpoint limits. Every intermediate ratio lies within vanishing error of the segment between the starting ratio and $b_s$, proving the reverse bounds. A window meets at most $\log_2j+4$ stages and loses at most one partial period of length $\sqrt j+2$ per stage. Since all active rationals are at least $c_0$, the window estimate follows.
+\end{proof}
+
+\begin{lemma}[Calibration at a prescribed pulse depth]\label{lem:profile-calibration}
+For the presentation of \cref{sec:profile-clock} there are fixed $C,a_1$ such that, in every weighted precision-$\delta$ model,
+\begin{equation}\label{eq:profile-calibration-bound}
+ 2^J(t_J+2)^{a_1}\delta\le1
+ \quad\Longrightarrow\quad
+ |\Theta_{i\nu}|_\rho\le C(t_J+2)^{a_1}2^{-k(J)}.
+\end{equation}
+This assertion does not require convergence of the pulse density.
+\end{lemma}
+\begin{proof}
+Fix one calibrator and put $H=t_J$, $\phi=Q\xi$. The five conclusions of \cref{thm:profile-interface} supply initialization, absence of resets through $H$, current-workspace localization and the two static-input estimates. The proof of \cref{prop:power-counter-stability}, the normalized identities \eqref{eq:power-normalized} and the complete-column stopped-product argument therefore apply with precisely this interface. With $r_H=C(H+1)^b\delta$ they give
+\[
+ \|\Theta\phi\|_2\le2^{-k(J)}+
+ 2^{J-k(J)+1}\bigl(\|S\phi\|_2+\sqrt H\,r_H\bigr)
+ +C\sqrt{H+1}\,r_H.
+\]
+The integer pulse count minus one-count is nondecreasing, so the maximum stopped multiplier is $2^{J-k(J)+1}$ even for oscillating streams. The test $S=0$ and the last interface estimate bound $\|S\phi\|_2$ by a fixed polynomial in $H$ times $\delta$. Charge back by $|\Theta|_\rho\le C(H+1)\|\Theta\phi\|_2+C(H+1)^a\delta$. Choose $a_1\ge a+b+3$, enlarging it to absorb all fixed degrees. Under the displayed condition every term is bounded by $C(H+2)^{a_1}2^{-k(J)}$, since $\delta\le2^{-J}\le2^{-k(J)}$.
+
+Each application uses only that calibrator's equations and the common controller. No step reorders different calibrator workspaces. In upper models the controller is scalar on each checker-age block and each calibrator is a spectral function of its own input and age. Thus the shared checker introduces no additional tensor factor or commutation assumption.
+\end{proof}
+
+\section{The matched logarithmic profile}\label{sec:profile-law}
+\begin{theorem}[Precision profile on the original state]\label{thm:profile-law}
+Let $\pi$ emit an infinite pulse word with positive lower one-density. Suppose $t_J\le T(J)$, where $T$ is nondecreasing and $\log T(J)=o(J)$. For every fixed $m,q\ge1$, $G=G[\pi,m,q]$ has quantum value one and no finite-dimensional perfect strategy. Set $\Lambda=\lfloor n/(2q)\rfloor$. Then
+\begin{align}
+ \log_2D_G(2^{-n})&=\Lambda+\tfrac m2k(\Lambda)
+   +O\bigl(\log T(\Lambda)+\log n\bigr),\label{eq:profile-dimension}\\
+ d_G^\to(2^{-n})&=\Lambda+\tfrac m2k(\Lambda)
+   +O\bigl(\log T(\Lambda)+\log n\bigr).\label{eq:profile-usable}
+\end{align}
+The common upper bound has additive error $O(1)$. For polynomial delay the two-sided error is $O(\log n)$, and the lower bound holds on every original mixed strategy state of the indicated loss.
+\end{theorem}
+\begin{proof}
+\par\smallskip\noindent\textit{Simultaneous upper histories.}\quad
+Use two checker registers of $N_c$ bits and $m$ source registers of $N_s$ bits. Each carries the finite clock of \cref{thm:clock-profile}. Set $U$ to cyclic addition on the time register, use the carry $H_t$ of \cref{rem:profile-overflow}, and let $Z(f,t)=1_{t\equiv0\pmod{2^{r(f)}}}$, with $r(f)=N_c$ on all-ones fuel. The carry recursion and reset hold exactly; clock and increment defects are bounded by $3\cdot4^{-N_c}$.
+
+For a source register put $\tau=3\cdot4^{-N_s}$. Its affine and tail-flip residuals are respectively $\tau P_{i,0}$ and $\tau(I-2P_{i,0})X_i$. The latter polar factor is unitary. Thus set $\Theta_{i1}=\tau P_{i,0}$, $V_{i1}=I$, $\Theta_{i2}=\tau I$ and $V_{i2}=(I-2P_{i,0})X_i$; \eqref{eq:profile-source} is exact.
+
+On a static input eigenvalue $t>0$ put $l=\lfloor\log_2(1/t)\rfloor$ and stop at the first pulse with one-count $l$, using age zero when $l=0$. Set
+\begin{equation}\label{eq:profile-penalty}
+ s(t)=2^{-\kappa(l)-1},\qquad s(0)=0.
+\end{equation}
+At physical age $h$ after reset, use the exact scalar counter history of \cref{prop:power-counter-models}. If $h_*$ is the stop age, set
+\[
+ C_h=2^{k(j(\min(h,h_*)))}t,\qquad
+ D_h=2^{j(\min(h,h_*))}s(t),\qquad
+ H_h=1_{h\le h_*},\quad P_h=1_{h=h_*},
+\]
+where $j(h)$ counts pulses before physical age $h$. These histories are bounded, initialize correctly, and satisfy every non-penalty equation exactly, including reset before a programmed stop and the cyclic boundary. This is the direct substitution used in \cref{prop:power-upper-histories}; it uses the finite count $k$, not a limiting density. All workspaces are diagonal in the existing checker and source-digit basis, and impose no new matrix factor. Every declared commutation is exact.
+
+After powering, residual norms are at most $\max(3\cdot4^{-N_c},s(\tau))^q$. The compiler gives loss at most $C_0$ times its square and local dimension at most $c\,2^{2N_c+mN_s}$. Write $x=(n+\log_2C_0)/(2q)$ and choose
+\[
+ N_c=\left\lceil\frac{x+\log_23}{2}\right\rceil,\qquad
+ N_s=\left\lceil\frac{k(\lceil x\rceil-2)+3}{2}\right\rceil.
+\]
+Finite initial indices can be absorbed by increasing these sizes. Indeed $\lfloor\log_2(1/\tau)\rfloor=2N_s-2$, and for integers $y\ge1$,
+\[
+ \kappa(l)\ge y\quad\Longleftrightarrow\quad l\ge k(y-1)+1.
+\]
+This identity includes all plateaux of $k$. The choices give loss at most $2^{-n}$ and, since $k$ has unit increments, $2N_c+mN_s=\Lambda+(m/2)k(\Lambda)+O(1)$. The upper states are maximally entangled, giving the same usable upper bound and quantum value one.
+
+\par\smallskip\noindent\textit{One joint measurement family.}\quad
+On an arbitrary original loss-$\varepsilon$ strategy in local dimension $d$, the compiler transfer and residual powering give an unpowered weighted model in dimension at most $cd$, at precision
+\[
+ \delta=(C\sqrt\varepsilon)^{1/q},\qquad
+ \lambda=\log_2(1/\delta)=n/(2q)-O(1).
+\]
+Enlarge the fixed compiler constant so that $\lambda\le\Lambda$. Take an admissible $J$ in \eqref{eq:profile-calibration-bound} with
+\[
+ J\ge\lambda-a_1\log_2(T(\lambda)+2)-O(1).
+\]
+Monotonicity of $T$ makes this choice admissible, after a fixed shift. The calibrated source clocks have a safe precision $\delta_s\ge\delta$, chosen as the maximum of $\delta$ and their explicit calibration bound. Since $k$ has unit increments,
+\begin{equation}\label{eq:profile-source-precision}
+ \log_2(1/\delta_s)\ge k(\Lambda)-O\bigl(\log T(\Lambda)+\log n\bigr).
+\end{equation}
+Positive lower density and subexponential delay imply $t_s=\log_4(1/\delta_s)\ge c\lambda$ eventually. Use checker depth
+\[
+ M=\lfloor\lambda/2-30\log_4(2+\lambda/2)\rfloor
+\]
+and source depth $M_s=\lfloor t_s-30\log_4(2+t_s)\rfloor$. The within-clock errors are
+\[
+ C(M+1)^34^M\delta=O(\lambda^{-27}),\qquad
+ C(M_s+1)^34^{M_s}\delta_s=O(\lambda^{-27}).
+\]
+Every cross-clock commutator and flip-preservation error is a fixed polynomial in the depths times the original $\delta$, because the complete clock-generator sets commute at that precision. These errors are exponentially small in $\lambda$. Thus a single $\eta=O(\lambda^{-26})$ controls the joint family of $b=2M+mM_s=O(\lambda)$ binary measurements. Order the families fuel, time, then sources, each with increasing digits. Each flip preserves later measurements. By \cref{thm:count}, $\log_2(cd)\ge b-o(1)$: its terms $Cb^3\eta+b[h_2(e)+e]$ tend to zero for $e=Cb^4\eta^2$. Combining this with \eqref{eq:profile-source-precision} proves the dimension lower bound.
+
+\par\smallskip\noindent\textit{Extraction from the original mixed state.}\quad
+Use the proof of \cref{prop:actual-state-bridge}, rather than restricting its literal statement to the earlier source family. Every raw digit here is a projection conjugated by a unitary word; Alice's opposite word is again an exact projection, and her opposite flip is a unitary. On a purification of the actual mixed input, including its inaccessible environment, their mirror errors obey
+\begin{equation}\label{eq:profile-mirror-budget}
+ C\ell\sqrt\varepsilon\le C\ell\delta^q\le C\ell\delta,
+ \qquad \ell=O(\max(M,M_s))=O(\lambda).
+\end{equation}
+Alice's square-root-state commutators have the same polynomial word-length overhead. All these quantities are exponentially small and hence bounded by the common $\eta$ above, also when $q=1$. Bob's swap, triangular and preservation estimates are exactly those already proved for the joint count. Reverse its measurement order to put the preserved measurements before the current stage, as required by \cref{lem:inactive-extraction}. All $b$ stages are compulsory binary stages, with no inactive outcomes or inclusion operation. That lemma gives
+\[
+ E_D^{A\to B}(\rho_{AB})\ge b-o(1)
+ \ge\Lambda+\tfrac m2k(\Lambda)-O(\log T(\Lambda)+\log n).
+\]
+Pure local dilation ancillas do not change the rate. This argument neither selects a pure component nor normalizes a favored clock branch. Taking the infimum over every original strategy proves \eqref{eq:profile-usable}. The compulsory contribution diverges, excluding a finite-dimensional perfect strategy.
+\end{proof}

@@ -1,0 +1,279 @@
+\section{Every positive limit-computable exponent}\label{sec:classification}
+The reader of Section~\ref{sec:realization} keeps every accepted address. That monotone rule realizes left-c.e. flag densities. We now allow a model to choose when to stop reading, while checking every later rational approximation. Finite quantum witnesses certify each decision to continue. A scalar computation verifies the tail after a finite stop. Together these two tests handle an arbitrary computable convergent approximation, including one of unbounded total variation.
+
+\begin{theorem}[A flag for a computable limit]\label{thm:limit-flag}
+Let $(a_s)_{s\ge0}$ be a total computable sequence of rationals in $[0,1]$, with limit $\theta$. There is a finite bounded rational presentation $\mathcal P[a]$, retaining the three compulsory clocks and the conditional clock, such that
+\begin{equation}\label{eq:limit-minimum}
+ \min_{\tau\in\mathcal T_{\rm mat}(\mathcal P[a])}\tau(F)=1-\theta.
+\end{equation}
+For every sufficiently large even $N$ it has flat models whose defining operator-norm residuals are at most $3\cdot4^{-N}$ and whose dimensions satisfy
+\begin{equation}\label{eq:limit-upper-dimension}
+ \log_2d_N=(4-\theta)N+o(N).
+\end{equation}
+Every new defining equation is exact in these models.
+\end{theorem}
+The presentation is specified by the finite program computing $(a_s)$; its real limit is not a coefficient of any relation. We give the presentation and both sides of~\eqref{eq:limit-minimum} before deriving the game laws.
+
+\subsection{A finite program with two different tests}\label{sec:stop-program}
+For a binary word $w$ of length $j$, with integer binary value $p(w)$ in reader order, put
+\[
+ \ell(w)=2^{-j}p(w),\qquad u(w)=2^{-j}(p(w)+1).
+\]
+The radical-inverse value of every extending address lies between these endpoints. At the empty word they are zero and one. The continuation predicate is the c.e. statement
+\begin{equation}\label{eq:continue-predicate}
+ C(j,w)\quad\Longleftrightarrow\quad
+ \exists s\ge j\quad a_s>\ell(w).
+\end{equation}
+Apply Lemma~\ref{lem:gate-witnesses} to the search machine for this predicate. Its projection presentation $\mathcal A_{j,w}$ has separate Alice and Bob families. A true predicate has an exact finite matrix witness; a false one admits no sequence of flat matrix models with defects tending to zero. Lemma~\ref{lem:gate-packing} packs its complete relation list into $D,E,W$. Computing that list always terminates: it applies the finite game reduction to a machine description, rather than waiting for the search machine to halt.
+
+A stop at $(j,w)$ instead starts an ordinary counter computation of $a_j,a_{j+1},\ldots$. It enters an absorbing REJECT control when it finds
+\begin{equation}\label{eq:stop-reject-test}
+ a_s\le u(w),\qquad s\ge j.
+\end{equation}
+Impose $q_{\rm REJECT}\le F$. Absence of rejection is an infinite tail condition, not a finite quantum certificate.
+
+Start with Section~\ref{sec:realization}'s reader presentation: delete the old recognition program and its halt-flag equation, retain the reader domains and READ updates, and retain all clock, carry, reset, flag and conditional-clock relations. Thus the decoder $L,R$ of Section~\ref{sec:source} is absent, and no decoded-region restriction~\eqref{eq:gate-region} is imposed.
+
+For clarity, the inherited scalar workspace consists of all counter coordinates, their zero-test projections and positive-contraction witnesses, the mutually orthogonal control projections summing to $I$, and $A_{\rm r},C_{\rm r},P_{\rm r}$. They commute pairwise and with $Z,A_a,A_f,A_t,F$. Retain their domains, zero tests~\eqref{eq:zero-test} and reader equation~\eqref{eq:reader-domain}. For every ordinary counter, control and the reader impose the initialization and transition forms~\eqref{eq:initialize}--\eqref{eq:transition}, using the new finite instruction table; in particular $ZA_{\rm r}=ZA_a$. Zero-test and reader witnesses satisfy their domain equations at every time and need no separate updates. The flag still commutes with $A_a$ and the complete fuel/time sets, including $U$. Add two projection data generators $D,E$ and a unitary $W$, and represent $M,\Sigma$ by the four unitaries of~\eqref{eq:gate-register}. LOAD maps $M$ to $I$ and $\Sigma$ to zero without reading data on its outgoing edge; other scalar instructions hold them unless an operator instruction updates them.
+
+Add a positive contraction $R_*$ and a counter $c$ initialized by
+\begin{equation}\label{eq:stop-counter-init}
+ Zc=ZR_*,\qquad
+ U^*cU=Z_+R_*+(I-Z_+)\Step(c),\qquad Z_+=U^*ZU.
+\end{equation}
+All ordinary counters are initialized at $I$, the start control at $I$, the other controls at zero, and the reader at $A_a$. Counters retain the zero-test relation~\eqref{eq:zero-test}. Counter value zero has encoding $c=1$; a nonzero decrement doubles $c$. The choice $R_*=2^{-m}$ therefore means stop at depth $m$, while $R_*=0$ continues at every finite depth.
+
+At depth $j$ the program first zero-tests $c$. Its zero branch starts the scalar verifier~\eqref{eq:stop-reject-test}. Its nonzero branch computes the packed list for~\eqref{eq:continue-predicate}, executes one LOAD, tests that entire list, reads the next address bit, increments $j$ and decrements $c$. A CHECK never branches on a matrix value. Every gate has \emph{exactly one LOAD, before any data-using instruction}; there is no LOAD between its monomials or relations. After LOAD, initialize the monomial and accumulator registers, then use the signed right-multiplication program of Section~\ref{sec:gate}. All classical arithmetic is ordinary counter computation. This algorithm has a fixed finite instruction table, although its computed relation lists and runtimes are unbounded.
+
+\paragraph{The precise new commutations.}
+Require $R_*$ to commute with $A_a,F,Z$, every fuel and time clock generator including $U$, every instantaneous variable of the commutative workspace, the data $D,E,W$, and the four register-representing unitaries. Each data generator commutes with
+\[
+ A_a,A_f,A_t,F,Z,R_*\quad\hbox{and every instantaneous workspace variable}.
+\]
+The four unitaries representing $M,\Sigma$ by~\eqref{eq:gate-register} have that same coordinate/workspace commutation list. They need not commute with the data or with one another. These are the complete additional lists: in particular, the new data do not inherit Section~\ref{sec:gate}'s commutations with $U$, fuel/time rotations or fuel/time flips. No address-shift or address-flip commutation is imposed on the new data or registers. Their required square-root-state commutators in approximate models are those of Definition~\ref{def:model}, as for every declared generator.
+
+Instead of time invariance, for $X\in\{D,E,W\}$ impose
+\begin{equation}\label{eq:loaded-data-hold}
+ (U^*XU-X)(I-Z_+)(I-q_{\rm LOAD})=0.
+\end{equation}
+The tuple at the next time can change only after a current LOAD or at a next-time reset. Use the register domains, initialization and transition formulas~\eqref{eq:gate-register} and~\eqref{eq:gate-transition}, with the new finite branch selectors, and impose
+\begin{equation}\label{eq:limit-check-reject}
+ q_{\rm CHECK}\Sigma(I-F)=0,\qquad q_{\rm REJECT}\le F.
+\end{equation}
+The normalization of signed monomials bounds every partial accumulator by one, even on flagged addresses. All displayed abbreviations have finite rational polynomial definitions. These equations and commutations complete $\mathcal P[a]$.
+
+\subsection{Why every completed gate tests one tuple}\label{sec:loaded-tuple}
+Write $Y_h=U^{-h}YU^h$. For a finite address word $w$, choose $k$ and the initialized unflagged projection
+\begin{equation}\label{eq:limit-initial-corner}
+ Q_0=B_wC_kD_k(I-F).
+\end{equation}
+The reader follows the specified address bits while it has read at most $|w|$ of them. We consider a prescribed finite computation shorter than $2^k$; Lemma~\ref{lem:initialization} gives reset at time zero, and Proposition~\ref{prop:increment} gives no later reset during this interval, as in~\eqref{eq:no-reset}.
+
+\begin{lemma}[A fixed tuple between loads]\label{lem:loaded-tuple}
+Suppose the scalar control flow on $Q_0$ reaches one continuation gate. From immediately after that gate's LOAD through all its CHECKs, every data generator has the same restriction to $Q_0$. Every CHECK for a packed polynomial $\pi$ forces $\pi(d_{\rm load})Q_0=0$. If $\tau\in\mathcal T_{\rm mat}(\mathcal P[a])$ and $\tau(Q_0)>0$, the corresponding continuation predicate is true.
+\end{lemma}
+\begin{proof}
+\emph{Shifted variables reduce the initialized corner.} Let $Y$ be any data generator, register unitary or instantaneous workspace variable. It commutes with $A_a,A_f,A_t,F$. The time increment commutes with the address and fuel sets and with $F$. Proposition~\ref{prop:increment} says that $U^hD_kU^{-h}$ is a sum of finite time-prefix cylinders, hence a spectral function of $A_t$. The other factors of $U^hQ_0U^{-h}$ are unchanged. Consequently
+\begin{equation}\label{eq:shifted-corner-commute}
+ [Y_h,Q_0]=0.
+\end{equation}
+This proves reduction for every shifted variable needed below without assuming $[Y,U]=0$.
+
+Conjugate~\eqref{eq:loaded-data-hold}. Off a programmed LOAD and before the next reset, its right guard acts as $I$ on $Q_0$, giving
+\begin{equation}\label{eq:one-loaded-tuple}
+ X_{h+1}Q_0=X_hQ_0.
+\end{equation}
+If LOAD occurs at $h_L$, put $d_{\rm load}=(D_{h_L+1},E_{h_L+1},W_{h_L+1})$. Its restrictions stay fixed throughout the gate. They have their exact domains on the reducing $Q_0$ corner. In particular the restricted unitary has the same fixed adjoint.
+
+\emph{Register induction.} Each register is cleared after LOAD. Suppose $S_hQ_0=P(d_{\rm load})Q_0$. Every polynomial in shifted data commutes with $Q_0$ by~\eqref{eq:shifted-corner-commute}. For a current data letter $d_h$ and a shifted scalar selector $q_{\sigma,h}$ with scalar action $\sigma Q_0$, the required identities are
+\begin{align*}
+ S_hd_hQ_0&=S_hQ_0d_{\rm load}
+             =P(d_{\rm load})d_{\rm load}Q_0,\\
+ q_{\sigma,h}P'Q_0&=q_{\sigma,h}Q_0P'=\sigma P'Q_0,\\
+ Z_{h+1}P'Q_0&=Z_{h+1}Q_0P'=0,
+ \qquad [P',Q_0]=0.
+\end{align*}
+They handle multiplication, branch selection and the absent reset term in the register transition. The scalar dyadic coefficient acts by its programmed value on the same corner. We have not commuted a selector through a data word at a different time. Non-self-adjoint initialization is justified by $[S,Z]=0$: $SQ_0=SZQ_0=ZS Q_0=Z\Init(S)Q_0$. Induction therefore gives at each CHECK
+\begin{equation}\label{eq:loaded-register-evaluation}
+ \Sigma_hQ_0=2^{-b}\pi(d_{\rm load})Q_0.
+\end{equation}
+The CHECK selector equals $I$ there, and $F$ is time invariant. Equation~\eqref{eq:limit-check-reject} forces this polynomial to vanish.
+
+\emph{Positive corners.} If the packed presentation has $m$ projection generators, the packing relation and traciality give
+\[
+ \tau(Q_0E_{h_L+1})=\tau(Q_0)/m.
+\]
+The projection $Q_0E_{h_L+1}$ is a fixed polynomial in the full generators, including the finite time and fuel cylinders. If its trace is positive, it carries the recovered Alice and Bob projections of $\mathcal A_{j,w}$.
+
+It also inherits matrix approximation. In flat approximants, self-adjointize its polynomial and round at $1/2$. The pointwise inequality $|1_{[1/2,\infty)}(t)-t|\le2|t^2-t|$ makes the normalized Hilbert--Schmidt correction vanish; its rank fraction tends to the positive trace above. Compress and round the recovered projection generators, not the packed unitary itself, into that corner. Bounded-product telescoping preserves all their fixed relations. Renormalizing trace costs a factor tending to the inverse square root of that positive trace. This yields flat approximate models of $\mathcal A_{j,w}$. Lemma~\ref{lem:gate-witnesses} excludes them when the predicate is false. We keep $C_kD_k$ in this corner; no commutation of the new data with fuel/time flips is used.
+\end{proof}
+
+\subsection{The stopping parameter cannot escape to infinity}\label{sec:stop-forcing}
+\begin{lemma}[Commutative right actions and stop sectors]\label{lem:stop-sectors}
+On a fixed finite address itinerary in $Q_0$, the counter and control actions used by the program are Borel functions of $R_*$ times $Q_0$. If $Q_0\,1_{\{2^{-i}\}}(R_*)=0$ for every $i<j$, so that all of $Q_0$ has continued through the depths below $j$, then the depth-$j$ zero test at time $h_j$ satisfies
+\begin{equation}\label{eq:stop-sector}
+ c_{h_j}Q_0=2^jR_*Q_0,\qquad
+ Q_0z_{c,h_j}=Q_0\,1_{\{2^{-j}\}}(R_*).
+\end{equation}
+The right-hand projection is the polynomial projection on the left. Every shifted program or data variable reduces it.
+\end{lemma}
+\begin{proof}
+The reader action is $s^i(A_a)Q_0$ after $i$ reads, as in~\eqref{eq:reader-induction}; its next-bit action is scalar on the specified itinerary. Ordinary counter initialization and updates are unchanged. The exception is $c$: using $[c,Z]=0$, $ZQ_0=Q_0$ and $[R_*,Q_0]=0$, its initialization gives $cQ_0=R_*Q_0$.
+
+The scalar induction must now take place in the commutative algebra of functions of $R_*$ on $Q_0$. If $AQ_0=f(R_*)Q_0$ and $BQ_0=g(R_*)Q_0$, then
+\begin{equation}\label{eq:stop-functional-product}
+ ABQ_0=AQ_0g(R_*)=f(R_*)g(R_*)Q_0.
+\end{equation}
+Thus the polynomial transition maps preserve these right actions. For a counter with such a self-adjoint right action, taking adjoints shows that $Q_0$ reduces it. The zero-test relation forces $z=1_{\{1\}}(c)$, since $c=1$ on $z$ and $0\le c\le1/2$ on $I-z$. Functional calculus on $Q_0$ supplies the next zero-test projection as a Borel function of $R_*$. Only $(I-z)s$ of the auxiliary witness is used; the unconstrained block $zs$ is never read by the program. All right actions entering the induction are therefore functions of $R_*$. Control projections may be such functions while different stop choices coexist; they are not assumed scalar at that point.
+
+Conjugating the transition of $c$ in~\eqref{eq:stop-counter-init} kills its reset term on the no-reset interval. On a surviving nonzero branch, $c$ is held fixed until its decrement and then doubled. After $j$ such decrements it acts as $2^jR_*$. The spectral zero-test formula gives~\eqref{eq:stop-sector}.
+
+Every shifted variable reduces $Q_0$ by~\eqref{eq:shifted-corner-commute}. It commutes with $R_*$ because its instantaneous variable does and $[U,R_*]=0$. It therefore reduces each stop sector. On the depth-$j$ sector the stop counter has value one, and the subsequent verifier is the ordinary scalar computation prescribed by that prefix.
+
+No discrete spectrum was assumed for $R_*$. On a continuing sector the zero-test domain itself forces $R_*$ into $[0,2^{-(j+1)}]$ after the depth-$j$ atom has been removed. The value zero always continues. These conclusions follow at every finite depth and cover any continuous spectral part as well.
+\end{proof}
+
+\begin{proposition}[The approximable lower bound]\label{prop:limit-flag-lower}
+Every $\tau\in\mathcal T_{\rm mat}(\mathcal P[a])$ satisfies $\tau(F)\ge1-\theta$.
+\end{proposition}
+\begin{proof}
+Call a word $w$ of length $J$ bad when
+\begin{equation}\label{eq:bad-prefix}
+ \ell(w)>\theta,\qquad a_s<\ell(w)\quad(s\ge J).
+\end{equation}
+Every address with $v(x)>\theta$ has a bad prefix: choose a gap between its value and the limit, then take $J$ large enough both for the prefix lower endpoint to lie inside that gap and for the sequence's entire remaining tail to lie below it.
+
+Fix a bad word. Each possible stop at an ancestor of depth $j\le J$ has $u(w|j)\ge\ell(w)>\theta$, so its verifier eventually finds a rejection. There are finitely many such stop depths. Their first rejecting runtimes, including preceding continuation work, are finite. Computing each gate list and its instruction stream through depth $J$ also has a fixed finite runtime independent of the data and of $R_*$. Choose one $k$ with $2^k$ above all these runtimes.
+
+If $\tau(B_w(I-F))>0$, the retained fair fuel/time cylinders give
+\begin{equation}\label{eq:positive-initial-corner}
+ \tau(Q_0)=2^{-(2k+1)}\tau(B_w(I-F))>0.
+\end{equation}
+Only $B_w(I-F)$, not the new data, must commute with the fuel/time flips for this equality.
+
+Eliminate the stop sectors in increasing order $j=0,\ldots,J$. Once the sectors of smaller depth are known to vanish, Lemma~\ref{lem:stop-sectors} identifies the next one as $Q_j=Q_0z_{c,h_j}$. On that reducing projection the scalar verifier reaches REJECT before reset. Since $q_{\rm REJECT}\le F$ and $Q_j\le I-F$, it follows that $Q_j=0$. The continue branch is then forced on the entire remaining $Q_0$. At the next depth the same argument applies. Intermediate continuation CHECKs do not branch, so their finite control schedule is fixed. After all these stop sectors vanish, the computation must execute the gate for $C(J,w)$.
+
+Condition~\eqref{eq:bad-prefix} makes that predicate false. Lemma~\ref{lem:loaded-tuple} contradicts~\eqref{eq:positive-initial-corner}. Thus $\tau(B_w(I-F))=0$ for every bad word, including on a never-stopping sector $R_*=0$.
+
+For a finite measure argument, fix $\zeta>0$. The compact set $\{v\ge\theta+\zeta\}$ is covered by finitely many bad cylinders. Refine them to a common address depth. Their orthogonal sum has zero unflagged trace, and fairness bounds the trace of the remaining cylinders by $\theta+\zeta$ plus an arbitrarily small dyadic endpoint error. Let that error and then $\zeta$ decrease to zero. We obtain $\tau(I-F)\le\theta$. The possibly enormous runtime chosen above is used only for exact tracial forcing, not in the quantitative measurement depth.
+\end{proof}
+
+\subsection{Matched finite models with a fixed witness budget}\label{sec:stop-models}
+\begin{lemma}[Finite threshold models]\label{lem:limit-finite}
+For each dyadic $0<b<\theta$ there are integers $m$ and $\ell_b\ge1$, independent of $N$, such that for every even $N\ge m$ the presentation has flat models with all new equations exact, old residuals at most $3\cdot4^{-N}$ in operator norm, and
+\begin{equation}\label{eq:fixed-threshold-dimension}
+ \Tr(F)/d_{N,b}=1-b,\qquad
+ d_{N,b}=2^{3N+k_N}\ell_b,\qquad
+ k_N=(1-b)N+O(\log(N+2)).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Choose $m$ with $2^mb$ integral and $a_s>b$ for every $s\ge m$. Convergence guarantees this fixed choice. On the $N$-bit address cycle set
+\[
+ I-F=1_{\{v_N(x)<b\}},\qquad R_*=2^{-m}I.
+\]
+Every unflagged address stops after $m$ reads. Its final prefix has $u(w_m)\le b<a_s$ for all $s\ge m$, so its scalar verifier never rejects. At every preceding depth $j<m$, $\ell(w_j)\le v_N(x)<b<\theta$, so the continuation predicate is true.
+
+Only finitely many prefix nodes occur on these paths. Choose an exact matrix witness at each, pack both players' families, and tensor their spaces. The resulting common data factor has some finite dimension $\ell_b$ depending on $b,m$, not on $N$. Use the three compulsory $N$-qubit registers and the optional-slot construction of Theorem~\ref{thm:finite} for this Boolean mask.
+
+For fuel with $k$ initial ones use the actual initialized history at time $t\bmod2^k$; all-ones fuel uses $k=N$. On each address/fuel/time block assign the commutative workspace its scalar history. On unflagged blocks, after a gate's single LOAD assign that gate's packed tuple on its tensor factor and identities on the others, holding it fixed until the next LOAD or reset. From a reset until the first LOAD after it, use the default tuple $(0,I,I)$. On flagged addresses take one default tuple $(D,E,W)=(0,I,I)$ \emph{constant in time}, even at LOAD. CHECK is vacuous there and scalar rejection is permitted.
+
+Assign $M,\Sigma$ their actual bounded operator histories. Within each block choose their average-of-two-unitary representations as in Section~\ref{sec:gate}; this adds no tensor factor. All declared coordinate/workspace commutations hold because these assignments are block diagonal in the existing address, fuel and time registers. The scalar $R_*$ has every required commutation. We impose no new commutation with a fuel/time rotation or flip.
+
+At an ordinary non-LOAD transition the data are unchanged, so~\eqref{eq:loaded-data-hold} is exact. At LOAD its final guard vanishes. At the next-time reset its reset guard vanishes. Since every fuel period divides $2^N$, the cyclic boundary is also a reset. Register transitions follow the assigned history, including resets that cut a gate before completion. Each completed unflagged CHECK uses its one exact witness tuple; every unflagged tail comparison passes. Hence all new equations hold exactly at every block and boundary. Address dressing acts only on address and optional slots and commutes with these added assignments. The old residual bounds are therefore unchanged.
+
+In an aligned block of $2^h$ consecutive address integers, the radical-inverse grid count below $b$ differs from $2^hb$ by at most one. Decompose a length-$N$ interval into at most two aligned blocks of each relevant size. Uniformly over starts, including cyclic intervals,
+\[
+ \sum_{i=1}^NF(x-i)=(1-b)N+O(\log(N+2)).
+\]
+Taking one more optional slot than the largest such count gives~\eqref{eq:fixed-threshold-dimension}. The finite grid has exactly a fraction $b$ of unflagged addresses because $N\ge m$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:limit-flag}]
+Choose dyadics $b_i\uparrow\theta$ and associated $m_i,\ell_i$ from Lemma~\ref{lem:limit-finite}. Choose strictly increasing even thresholds $N_i$ with
+\[
+ N_i\ge m_i,\qquad
+ N_i\ge i^2\max\{1,\log_2\ell_i\}.
+\]
+For $N_i\le N<N_{i+1}$ use the $b_i$ model. Its witness overhead divided by $N$ is at most $i^{-2}$; the uniform discrepancy bound and $b_i\to\theta$ give~\eqref{eq:limit-upper-dimension}. Its flag trace tends to $1-\theta$. A moment limit attains that value in $\mathcal T_{\rm mat}$, and Proposition~\ref{prop:limit-flag-lower} gives the reverse inequality. When $\theta=0$, use $F=I$, $R_*=I$ and constant default data directly. The case $\theta=1$ uses the same thresholds below one. The diagonal choices are existential: the finite presentation is still specified by the program for $(a_s)$, and no effective convergence modulus or uniform witness bound is claimed.
+\end{proof}
+
+\subsection{The game laws and the positive classification}\label{sec:classification-laws}
+\begin{theorem}[Matching dimension and usable entanglement]\label{thm:limit-resources}
+For every total computable rational sequence $a_s\to\theta\in[0,1]$, integers $r\ge0$ and $q\ge1$, there is a fixed finite rational BCS game $G^{\rm stop}_{a,r,q}$ of quantum value one, without a finite-dimensional perfect strategy, such that, with $L_\eps=\log_2(1/\eps)$ and $\beta=(4+r-\theta)/(4q)$,
+\begin{equation}\label{eq:limit-resource-laws}
+\begin{aligned}
+ \log_2D_{G^{\rm stop}_{a,r,q}}(\eps)&=\beta L_\eps+o(L_\eps),\\
+ d^\to_{G^{\rm stop}_{a,r,q}}(\eps)&=\beta L_\eps+o(L_\eps).
+\end{aligned}
+\end{equation}
+\end{theorem}
+\begin{proof}
+By Corollary~\ref{cor:weighted-limits} and Theorem~\ref{thm:limit-flag}, uniformly on every original weighted precision-$\delta$ model,
+\begin{equation}\label{eq:limit-weighted-flag}
+ \Tr(\rho F)\ge1-\theta-\omega(\delta),\qquad \omega(\delta)\longrightarrow0.
+\end{equation}
+Otherwise a moment limit with a fixed positive shortfall would contradict~\eqref{eq:limit-minimum}. Append $r$ compulsory clocks and power every defining residual, including all new equations and cross-commutators, as in Proposition~\ref{prop:realization-parameters}. Retain the exact domains and square-root-state requirements. Jensen gives unpowered precision $\delta=(C_{\mathcal P,r,q}\sqrt\eps)^{1/q}$ from a loss-$\eps$ strategy.
+
+Set $t=\log_4(1/\delta)$ and $M=\lfloor t-30\log_4(2+t)\rfloor$. The retained raw clock measurements have error
+\[
+ \eta=C_{\mathcal P,r,q}(M+1)^64^M\delta=O(t^{-24}).
+\]
+The new data, the stopping parameter $R_*$, the stop counter and the registers occur in none of those measurements or controls. The same count as in Theorem~\ref{thm:count}, with the extra clocks, gives
+\begin{align*}
+ \log_2d&\ge(3+r)M+\sum_{i<M}\Tr(\rho F_i)-o(M)\\
+ &\ge(4+r-\theta-\omega(\delta))M-O(M^2\delta)-o(M).
+\end{align*}
+The second line uses~\eqref{eq:limit-weighted-flag} on this same marginal and $|\Tr(\rho F_i)-\Tr(\rho F)|\le2i\delta$. Since $M=L_\eps/(4q)-O(\log L_\eps)$, this proves the dimension lower coefficient.
+
+For the other direction, the flat models of Theorem~\ref{thm:limit-flag} gain exactly $rN$ logarithmic dimension from the extra clocks. Every powered operator residual is at most $3^q4^{-qN}$. The compiler gives loss at most $C'16^{-qN}$ and constant dimension overhead. Neighboring even depths change logarithmic precision by a bounded amount. Their dimension law is $(4+r-\theta)N+o(N)$, proving the matching upper coefficient at every sufficiently small loss. The upper losses tend to zero and the positive lower bound diverges, so the game has value one and no finite perfect strategy.
+
+For usable entanglement, Proposition~\ref{prop:actual-state-bridge} applies on the original mixed strategy state and its original purifying environment. Its Boolean reconstruction is generic in the finite presentation; time invariance of the additional data is not a hypothesis. Opposite words, independent local inclusion repairs and reverse count order supply Lemma~\ref{lem:inactive-extraction} with $m=(4+r)M$ and the same $\eta$. Only $Q_i$ is repaired, leaving the actual activation flags. The vector, mean and entropy-continuity errors vanish at this depth. The one-way protocol and hashing yield on every original state
+\[
+ E_D^{A\to B}(\rho_{AB})\ge(3+r)M+
+ \sum_{i<M}\Tr(\rho_BF_i)-o(1)
+ \ge(4+r-\theta)M-o(M).
+\]
+Take the infimum, and use $d^\to_G(\eps)\le\log_2D_G(\eps)$ for the upper bound. Compression in~\eqref{eq:limit-weighted-flag} identifies limiting traces; it is not a replacement of the strategy used for extraction.
+\end{proof}
+
+\begin{corollary}[Complete positive dimension spectrum]\label{cor:complete-spectrum}
+\begin{equation}\label{eq:complete-spectrum}
+ \mathcal B_{\rm BCS}=\{\alpha>0:\alpha\text{ is }\Delta^0_2\}.
+\end{equation}
+Every real on the right is also the original-state usable-entanglement coefficient of a game in this class. In particular all positive right-c.e. and all positive d.c.e. reals occur.
+\end{corollary}
+\begin{proof}
+For $\alpha>0$ computable in $0'$, choose a fixed $q$ with $4q\alpha\ge4$ and put
+\[
+ m=\lceil4q\alpha\rceil,\qquad r=m-4,\qquad
+ \theta=m-4q\alpha\in[0,1).
+\]
+Shoenfield's limit lemma~\cite{Sho59} supplies a total computable rational sequence converging to $\theta$; clipping it to $[0,1]$ preserves convergence. Theorem~\ref{thm:limit-resources} realizes $(4+r-\theta)/(4q)=\alpha$, for both resources. These fixed integer choices need not be uniform in a limit name for $\alpha$.
+
+Conversely, Lemma~\ref{lem:computability} makes $D_G(2^{-n})$ computable for a rational finite value-one game. Approximate $\log_2D_G(2^{-n})/n$ by computable rationals with error tending to zero. If its finite exponent exists, that sequence converges. A $0'$ oracle can find a term with no later deviation larger than a given rational tolerance; convergence guarantees one. Its distance from the limit has that bound. Thus the limit is $\Delta^0_2$. This proves Theorem~\ref{thm:realization}.
+\end{proof}
+
+\paragraph{Real strategies and question weights.}
+The distributed real simulation of McKague--Mosca--Gisin~\cite[Section~II.C]{MMG09} adds one rebit per party and preserves all measurement probabilities. Real strategies are also complex strategies, so
+\[
+ D_{\mathbb C,G}(\eps)\le D_{\mathbb R,G}(\eps)
+ \le2D_{\mathbb C,G}(\eps).
+\]
+The two logarithms differ by at most one. Their exponents therefore coincide whenever either exists, and the dimension classification holds verbatim for real quantum strategies. By the reweighting lemma~\cite[Lemma~11.12, Section~11.6]{DM-precision}, exponents and logarithmic resource coefficients are unchanged by any strictly positive reweighting on the same finite support; the dimension classification thus also covers real, even noncomputable, positive question weights.
+
+\subsection{Why this passes the earlier barriers}\label{sec:classification-barriers}
+Each continuation gate still tests a c.e. predicate. What changes is the choice of a finite stopping depth followed by a universal scalar tail condition:
+\[
+ \exists j\ \forall s\ge j\quad a_s>u(w_j).
+\]
+The arbitrary-length finite histories verify that condition without a finite quantum certificate of the whole tail. An infinite continuation cannot evade a false gate above the limit, by Proposition~\ref{prop:limit-flag-lower}. This is the additional mechanism missing from the fixed finite-witness rule of Section~\ref{sec:gate}.
+
+The exact-trace barrier remains intact. If $1-\theta$ is not left-c.e., Propositions~\ref{prop:exact-barrier} and~\ref{prop:approximable-arithmetic} give
+\[
+ \min_{\mathcal T(\mathcal P[a])}\tau(F)
+ <\min_{\mathcal T_{\rm mat}(\mathcal P[a])}\tau(F)=1-\theta.
+\]
+Exact traces can contain tracial models of false continuation gates; matrix approximation excludes precisely those positive corners. Thus even when the quantum and commuting values of the compiled game both equal one, the failure of Connes' embedding conjecture changes the attainable computability class in this construction: its non-left-c.e. coefficients require different exact and matrix-approximable flag minima. The carry-checker proof of Corollary~\ref{cor:profile-no-witness} reaches the same class with no exact-versus-approximable gap, so this gap belongs to the flag mechanism and is not necessary for the classification.
+
+Convergence is the matching hypothesis. For a bounded nonconvergent sequence, the same bad-prefix argument gives a flag lower bound $1-\limsup_s a_s$, whereas safe finite-stop models approach $1-\liminf_s a_s$. These bounds need not agree, and no equality or exponent realization for an arbitrary oscillating sequence follows from this argument. The unequal-limit problem is stated separately below. Appendix~\ref{app:checks} and the ancillary README describe finite checks of the new matrix algebra and histories on known-answer toy games.

@@ -1,0 +1,136 @@
+\section{The matched lower bound}\label{sec:lower}
+\begin{theorem}\label{thm:lower}
+Every weighted precision-$\delta$ model of $\mathcal P_K$ on $\C^d$ satisfies
+\begin{equation}\label{eq:lower}
+ \log d\ge(3+\thetaK)\log_4(1/\delta)-o(\log(1/\delta)).
+\end{equation}
+The error is uniform over all states and dimensions.
+\end{theorem}
+
+\subsection{The carry estimate}
+Identify $\K$ with binary sequences viewed as $2$-adic integers, and let $g_i$ add the nonnegative integer $i$. If two sequences first differ at digit $j$, their Cantor coordinates differ by between $\tfrac12 4^{-j}$ and $4^{-j}$. Addition preserves that first differing digit. Consequently every $g_i$ is $2$-Lipschitz on $\K$, uniformly in $i$.
+
+Let $h(a)=4^{-k}$ if the sequence starts with exactly $k$ ones followed by a zero, and put $h(1)=0$. It is also $2$-Lipschitz: equal first-zero positions give equal values; otherwise the smaller first-zero position $j$ is the first differing digit, and the value difference is at most $4^{-j}$. Its identities are
+\begin{equation}\label{eq:carry-functions}
+ h=1-p+\tfrac14p(h\circ s),\qquad
+ g_1(a)=a-1+\tfrac74h(a).
+\end{equation}
+The latter follows by summing the coordinate change when $k$ initial ones become zero and the next zero becomes one. The all-ones case follows by the limit $k\to\infty$. Lipschitz functions on $\K$ can be extended linearly across its gaps with the same constant.
+
+\begin{lemma}[Translations with polynomial cost]\label{lem:carry}
+For an absolute constant $C$, every model of the address relations satisfies
+\begin{align}
+ |H-h(\widehat A_a)|_\rho&\le C\delta,\label{eq:carry-repair}\\
+ |V^{-i}\widehat A_aV^i-g_i(\widehat A_a)|_\rho&\le C(i+1)\delta,\label{eq:translate}\\
+ |[V^iJV^{-i},P_{a,j}]|_\rho&\le C(i+1)4^j\delta
+ \quad(J\in\{F,Q,Y\}).\label{eq:joint-address}
+\end{align}
+\end{lemma}
+\begin{proof}
+Let $p=p(\widehat A_a)$ and $E=H-h(\widehat A_a)$. Subtract the first identity of~\eqref{eq:carry-functions} from~\eqref{eq:carry-rec}, retaining its error $r$. The exact subtraction is
+\begin{align*}
+ E={}&-(P_a-p)+\tfrac14P_aT_aET_a^*\\
+ &+\tfrac14P_a\bigl(T_ah(\widehat A_a)T_a^*-h(s(\widehat A_a))\bigr)\\
+ &+\tfrac14(P_a-p)h(s(\widehat A_a))+r.
+\end{align*}
+The first, third, fourth and last terms have weighted size $O(\delta)$ by Lemmas~\ref{lem:fc} and~\ref{lem:clock-repair}. In the fourth term, moving the bounded right factor past $\xi$ costs $O(\delta)$, since $h\circ s$ is Lipschitz with fixed constant. The second term is bounded by $\tfrac14|E|_\rho+O(\delta)$ using $\opn E\le1$. Absorb it to prove~\eqref{eq:carry-repair}. The last equation of~\eqref{eq:carry-step}, together with spectral repair and unitary transport, gives
+\[
+ |V^*\widehat A_aV-g_1(\widehat A_a)|_\rho\le C_1\delta.
+\]
+Put $e_i=|V^{-i}\widehat A_aV^i-g_i(\widehat A_a)|_\rho$, so $e_0=0$. Since $g_i=g_{i-1}\circ g_1$ on $\K$ and functional calculus commutes with unitary conjugation, for $i\ge1$
+\begin{align*}
+ V^{-i}\widehat A_aV^i-g_i(\widehat A_a)
+ ={}&V^*\bigl(V^{-(i-1)}\widehat A_aV^{i-1}-g_{i-1}(\widehat A_a)\bigr)V\\
+ &+\bigl(g_{i-1}(V^*\widehat A_aV)-g_{i-1}(g_1(\widehat A_a))\bigr).
+\end{align*}
+The bracket in the first term is a difference of positive contractions, so it has norm at most one, and Lemma~\ref{lem:transport} bounds the first term by $e_{i-1}+\hs{[V,\xi]}\le e_{i-1}+\delta$. Both $V^*\widehat A_aV$ and $g_1(\widehat A_a)$ have spectrum in $\K$, where $g_{i-1}$ is $2$-Lipschitz. Hence~\eqref{eq:fc-diff}, the bound $\hs{[g_1(\widehat A_a),\xi]}\le2\hs{[\widehat A_a,\xi]}$ and~\eqref{eq:linear-repair} bound the second term by $2(C_1+4C)\delta$. Thus $e_i\le e_{i-1}+C_2\delta$ with $C_2$ independent of $i$, and induction gives $e_i\le C_2i\delta$. This proves~\eqref{eq:translate}. Each step pays one transport of the accumulated error and one functional-calculus loss with the uniform constant $2$; no iterated factor four occurs.
+
+Put $f_j=p\circ s^j$. Replace $P_{a,j}$ by $f_j(\widehat A_a)$, at cost $C4^j\delta$ by~\eqref{eq:digit-repair}, and conjugate by $V^{-i}$, at transport cost $i\delta$. Then apply~\eqref{eq:fc-diff} to~\eqref{eq:translate}, with the Lipschitz constant $2\cdot4^j$ of $f_j$. The result is
+\[
+ |V^{-i}P_{a,j}V^i-f_j(g_i(\widehat A_a))|_\rho
+ \le C(i+1)4^j\delta.
+\]
+The composition $f_j\circ g_i$ has Lipschitz constant at most $4\cdot4^j$ on $\K$. Each $J\in\{F,Q,Y\}$ commutes with $A_a$ to precision $\delta$, and hence with $\widehat A_a$ to precision $C\delta$. Equation~\eqref{eq:fc-comm} bounds its commutator with this composition by $C4^j\delta$. Replace back at cost $C(i+1)4^j\delta$: for the self-adjoint difference $\Delta$ just estimated, $|[J,\Delta]|_\rho\le2|\Delta|_\rho+\opn\Delta\hs{[J,\xi]}$. Conjugate by $V^i$, at transport cost $2i\delta$. This gives~\eqref{eq:joint-address}.
+\end{proof}
+
+\subsection{Joint digits and conditional measurements}
+\begin{lemma}\label{lem:joint}
+Fix $M\ge1$. The $3M$ compulsory binary measurements are the raw digit PVMs $(P_{c,j},I-P_{c,j})$, where $P_{c,j}=T_c^jP_cT_c^{-j}$ for $c\in\{a,f,t\}$ and $j<M$, with flips $X_{c,j}=T_c^jX_cT_c^{-j}$. The $M$ conditional ternary measurements are $(I-F_i,F_i-Q_i',Q_i')$ for $i<M$, with flips $Y_i$, where $Q_i'$ is the repaired data projection constructed in the proof. Index the conditional measurements first, then the address, fuel and time digits, each family in increasing digit order. All commutations between outcomes of different measurements, all flip equations required in this order, and all state commutations have error at most
+\begin{equation}\label{eq:eta}
+ \eta=C(M+1)^6 4^M\delta.
+\end{equation}
+Each $Q_i'$ differs from $Q_i$ by weighted size at most $C\eta$, and the conditional measurements are exact PVMs on the same state.
+\end{lemma}
+\begin{proof}
+Two elementary rules are used throughout. First, if $D$ is self-adjoint and $Y$ is a contraction, then $DY\xi=D\xi Y+D[Y,\xi]$ gives
+\begin{equation}\label{eq:comm-replace}
+ |[D,Y]|_\rho\le2|D|_\rho+\opn D\,\hs{[Y,\xi]}.
+\end{equation}
+Hence, if $X=X_0+D_X$ and $Y=Y_0+D_Y$ with self-adjoint corrections, the identity
+\[
+ [X,Y]=[D_X,Y]+[X_0,D_Y]+[X_0,Y_0]
+\]
+shows that replacing both sides of a commutator by nearby operators adds the two replacement errors; it never multiplies them. Second, suppose every letter of a word $w$ commutes to precision $\delta$ with every letter of a word $w'$, adjoint letters included. Moving letters one at a time and applying Lemma~\ref{lem:transport} to each interchange gives $|[w,w']|_\rho\le C|w|\,|w'|(|w|+|w'|+1)\delta$. We call this the word-interchange bound.
+
+The required estimates are the following.
+\begin{enumerate}[label=(\roman*),leftmargin=*,itemsep=2pt]
+\item \emph{One compulsory clock.} Lemma~\ref{lem:clock-repair} gives the digit commutations, own-bit flips, later-digit preservation and state commutators within each clock, with error $C(M+1)^34^M\delta$. Its raw digit commutators already replace both digits by commuting spectral digits, at additive cost.
+\item \emph{Different compulsory clocks.} For $c\ne c'$, $P_{c,j}$ and $P_{c',k}$ are words of lengths $2j+1$ and $2k+1$ in two complete clock sets, which commute by hypothesis. The word-interchange bound gives $|[P_{c,j},P_{c',k}]|_\rho\le C(M+1)^3\delta$. The same bound shows that $X_{c,j}$ preserves every $P_{c',k}$. These estimates must go through the raw conjugated digits. Comparing the spectral digits $p(s^j(\widehat A_c))$ and $p(s^k(\widehat A_{c'}))$ by two applications of~\eqref{eq:fc-comm} would multiply their Lipschitz constants. That costs order $4^{j+k}\delta$, which for $j,k$ near $M$ exceeds~\eqref{eq:eta} by a factor of order $4^M/(M+1)^6$ and would defeat the choice~\eqref{eq:depth} below. If spectral digits were measured instead, put $D_{c,j}=p(s^j(\widehat A_c))-P_{c,j}$. It is self-adjoint, with norm at most one and $|D_{c,j}|_\rho\le C4^j\delta$ by~\eqref{eq:digit-repair}. Then
+\[
+ [p(s^j(\widehat A_c)),p(s^k(\widehat A_{c'}))]
+ =[D_{c,j},p(s^k(\widehat A_{c'}))]+[P_{c,j},D_{c',k}]+[P_{c,j},P_{c',k}].
+\]
+By~\eqref{eq:comm-replace}, with $\hs{[p(s^k(\widehat A_{c'})),\xi]}\le C4^k\delta$ from Lemma~\ref{lem:fc} and $\hs{[P_{c,j},\xi]}\le(2j+1)\delta$, its weighted norm is at most $C4^M\delta+C(M+1)^3\delta$. Thus either choice satisfies~\eqref{eq:eta}; we fix the raw digits.
+\item \emph{Conditional against conditional.} Use the affine-only part of the spectral repair on $(B,Q,V)$ and $(C,F,V)$. If $i\le j$,
+\[
+ [Q_i,F_j]=V^i[Q,F_{j-i}]V^{-i}.
+\]
+Recover $F_{j-i}$ from the rounded flag coordinate and apply~\eqref{eq:fc-comm} with $[Q,C]=0$. The error is $O(4^{j-i}\delta)$ plus polynomial transport. If $i>j$, use $[F,B]=0$ instead. The same argument with $[Q,B]=0$ controls $[Q_i,Q_j]$, and with $[F,C]=0$ controls $[F_i,F_j]$. Only one side is replaced by a coordinate function here, so there is a single depth loss.
+\item \emph{Conditional against address digits.} By~\eqref{eq:joint-address} with $J\in\{F,Q\}$, the commutators of $F_i$ and $Q_i$ with $P_{a,j}$ are at most $C(M+1)4^M\delta$. With $J=Y$, the same bound shows that $Y_i$ preserves every address digit.
+\item \emph{Conditional against fuel and time digits.} The operators $F_i$, $Q_i$ and $Y_i$ are words of length $2i+1$ in $V$, $V^*$ and one of $F,Q,Y$. Each of these letters commutes with every fuel and time clock variable by hypothesis. The digits $P_{f,k}$ and $P_{t,k}$ are words of length $2k+1$ in the fuel and time sets. The word-interchange bound gives commutators at most $C(M+1)^3\delta$, and shows that $Y_i$ preserves every fuel and time digit. These bounds are again taken through the raw conjugated words. Writing $F_i$ or $Q_i$ as a digit of a conditional coordinate, and a fuel or time digit as a spectral digit, would stack two depth losses.
+\item \emph{Flips.} The own conditional flip is the $V^i$-translate of~\eqref{eq:conditional-flip}. For later flags, $[Y,C]=0$ and digit recovery imply preservation by $Y_i$. For later data, use $[Y,VBV^*]=0$ and digit recovery on the tail coordinate, with depth $j-i-1$ when $j>i$. This again costs at most one factor $4^{j-i}$. Conditional flips preserve all compulsory digits by~(iv) and~(v). A compulsory flip $X_{c,j}$ exchanges $P_{c,j}$ and preserves later digits of its own clock by~(i), and every digit of a later clock family by~(ii).
+\item \emph{State commutators.} State commutators of translated raw variables are at most $C(M+1)\delta$.
+\end{enumerate}
+All the estimates just listed fit~\eqref{eq:eta}: cubic word-interchange costs and linear address costs are dominated by its sixth power. No factor $4^{i+j}$ is used.
+
+We finally repair inclusion. For projections $F,Q$ with $|(I-F)Q|_\rho\le\eta$ and state commutators at most $\eta$, put
+\[
+ A_0=FQF,\quad L_0=(I-F)QF,\quad Q'=1_{[1/2,1]}(A_0)\le F.
+\]
+The weighted error rule and adjoints give $|Q-A_0|_\rho\le4\eta$ and $|L_0|_\rho\le2\eta$. Since $A_0-A_0^2=L_0^*L_0$ and
+\[
+ |1_{[1/2,1]}(t)-t|^2\le t(1-t)\quad(0\le t\le1),
+\]
+we get $|Q'-A_0|_\rho\le2\eta$ and thus $|Q'-Q|_\rho\le6\eta$. This difference is self-adjoint, so its state commutator is at most twice its weighted norm. Replacing $Q$ by $Q'$ in a commutator or a flip equation therefore costs only $C\eta$, by Lemma~\ref{lem:transport}. Apply this independently to the raw pairs $F_i,Q_i$, after absorbing their polynomial transport constants into~\eqref{eq:eta}. The outcomes $(I-F_i,F_i-Q_i',Q_i')$ are now exact PVMs. All previous estimates survive with a fixed factor.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:lower}]
+Index the optional measurements first, then the three compulsory clock families, in increasing digit order within each family. Optional flips preserve all compulsory measurements. A compulsory flip needs to preserve only later compulsory measurements, not the earlier optional family. Thus this ordering meets the hypotheses of Theorem~\ref{thm:count}, with $m=4M$ and $b=3M$.
+
+Put $t=\log_4(1/\delta)$ and, for sufficiently small $\delta$, choose
+\begin{equation}\label{eq:depth}
+ M=\left\lfloor t-30\log_4(2+t)\right\rfloor.
+\end{equation}
+Then $4^M\delta\le(2+t)^{-30}$, so~\eqref{eq:eta} gives $\eta\le C(1+t)^{-24}$. The error terms of~\eqref{eq:count} are $o(1)$. Consequently
+\[
+ \log d\ge3M+\sum_{i<M}\Tr(\rho F_i)-o(1).
+\]
+Unitary state transport gives
+\[
+ |\Tr(\rho F_i)-\Tr(\rho F)|
+ \le\trn{V^{-i}\rho V^i-\rho}\le2i\delta.
+\]
+Apply Theorem~\ref{thm:flag} to the same $\rho$. The result is
+\[
+ \log d\ge(3+\thetaK-\omega(\delta))M-o(M).
+\]
+Since $M=t-O(\log(t+2))$ and $\omega(\delta)\to0$, this is~\eqref{eq:lower}. Every estimate used the actual model state.
+\end{proof}
+
+\begin{remark}[Where the guards are used]\label{rem:guards}
+Two structural facts about the proof follow from tracing where each relation enters.
+\begin{enumerate}[label=(\alph*),leftmargin=*,itemsep=2pt]
+\item The guarded relations~\eqref{eq:guard} are used only in the exact tracial limit. In the proof of Theorem~\ref{thm:main} they enter only through Proposition~\ref{prop:increment}, in the exact part of Theorem~\ref{thm:flag}, and the approximate part of that theorem reaches the exact case by compactness, not by a quantitative estimate. The quantitative lower bound of this section uses instead the unguarded carry equation, the last relation of~\eqref{eq:carry-step}, whose defect in the finite models is $4^{-N}$ (Theorem~\ref{thm:finite}). Consequently Proposition~\ref{prop:guard-mass} is not used in the proof of Theorem~\ref{thm:main}, and its guard-removal loss, of order $\delta^{1/6}$ up to logarithms, is never paid.
+\item The guarded increment~\eqref{eq:guard} for the address increment $V$ is used by no proof. Section~\ref{sec:forcing} applies Proposition~\ref{prop:increment} only to $U$, and $V$ acts on the address digits only through the carry relations~\eqref{eq:carry-rec}--\eqref{eq:carry-step}, in Lemma~\ref{lem:carry}. That relation is therefore redundant. It is harmless: the finite models satisfy it with operator defect $\sqrt2\,4^{-N}$ (Theorem~\ref{thm:finite}).
+\end{enumerate}
+\end{remark}

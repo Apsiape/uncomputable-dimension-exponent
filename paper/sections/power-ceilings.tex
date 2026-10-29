@@ -1,0 +1,94 @@
+\section{Ceilings, explicit exponents and the remaining gap}\label{sec:power-ceilings}
+\subsection{The three exact spectra}
+\begin{proposition}[Effective ceilings]\label{prop:power-ceilings}
+Every existing finite power exponent of $\log D_G$, pure original-state demand $p_G$, or formation demand $f_G$ is $\Delta^0_2$, for a fixed finite rational game of quantum value one. At every feasible error,
+\[
+ f_G(\eps)\le p_G(\eps)\le f_G(\eps)+1.
+\]
+The ceiling also holds for arbitrary positive question probabilities on a fixed finite support, by constant reweighting.
+\end{proposition}
+\begin{proof}
+Fixed-dimensional strategy feasibility at rational loss is compact rational semialgebraic and decidable by real quantifier elimination, as in \cref{lem:computability}. Under the value-one promise, dimension search terminates, so $D_G(2^{-n})$ is computable. Computable rational approximations to $\log(1+\log D_G(2^{-n}))/n$ converge to an existing power exponent; Shoenfield's limit lemma gives the asserted class.
+
+For pure demand set $e_n=2^{-n}$ and compute $D_G(e_n/4)$. Let $U_n$ be its integer bit length plus two. A pure purification on Alice of any strategy at that dimension has Bob entropy at most its logarithm, so $p_G(e_n/2)+1\le U_n$. Set $t_n=(e_n/8)^2$ and $R_n=2^{\lceil U_n/t_n\rceil}$.
+For decreasing Schmidt probabilities, $\lambda_i\le1/i$. If entropy $S\le U_n$, its mass beyond rank $R_n$ is at most $S/\log R_n\le t_n$. Truncation and normalization change half trace distance by at most $\sqrt{t_n}$ and give entropy at most $S/(1-t_n)$: discard the positive tail entropy in the normalization formula. Compressing measurements to the Schmidt supports preserves valid POVMs and increases game loss by at most $\sqrt{t_n}$.
+Let $q_n$ be the minimum entropy over pure rank-at-most-$R_n$ strategies of loss at most $e_n$. It is computable on a compact rational semialgebraic domain: quantifier elimination decides box intersection and entropy is computable uniformly continuously in this fixed dimension (equivalently approximate $-x\log x$ by rational polynomials to dimension-adjusted error). The logarithm itself is not assumed semialgebraic. The feasible set is nonempty by the truncation argument, and near-minimizers at loss $e_n/2$ give
+\[
+ p_G(e_n)\le q_n\le p_G(e_n/2)/(1-t_n).
+\]
+Thus computable rational approximations to $\log(1+q_n)/n$ converge to an existing pure power exponent. There is no assumption about an effectively bounded rank before truncation or an effective convergence modulus.
+
+For formation, take a finite pure decomposition of any low-loss mixed strategy and record each component's loss and pure entropy. Minimize its average entropy over the finite simplex with mean loss at most $\eps$. An optimal extreme point has at most two components, because there are only total-weight and mean-loss constraints. Coherently superpose those two states with common local orthogonal labels, and use block-diagonal original measurements. This is a pure strategy of the same mean loss and entropy
+$h_2(w)+wS_1+(1-w)S_2$, at most one plus the selected average. Taking infima over decompositions and original strategies proves $f_G\le p_G\le f_G+1$, hence the same positive power exponents. This uses the single-copy convex roof~\cite{BDSW96}, not regularized entanglement cost; the pure-state rate is its entropy~\cite{BBPS96}.
+
+Finally replace any positive finite question law by uniform weights on its support. The two losses bound each other at fixed positive multiplicative constants. Their resource demands bracket at constant rescalings of $\eps$, which preserve an existing exponent. This proves the extension.
+\end{proof}
+
+\begin{proof}[Classification clause of \cref{thm:power-realization}]
+The ceilings above supply necessity for each of the three resources. For each game constructed in \cref{sec:power-calibration}, the all-original-state directional-rate lower bound also lower-bounds formation and pure entropy, while the maximally entangled upper strategies match it. Thus every $\Delta^0_2$ exponent in $(0,1]$ occurs for all three resources. For $d_G^\to$ this proves only inclusion. Neither existence of limits for all games nor exclusion of exponents above one is asserted.
+\end{proof}
+
+\begin{proposition}[A non-limit-computable usable exponent forces irreversibility]\label{prop:power-gap}
+If a fixed game has $d_G^\to(\eps)=\eps^{-\beta+o(1)}$, $0<\beta<\infty$, with $\beta\notin\Delta^0_2$, there are $\gamma>0$ and $\eps_i\downarrow0$ such that every efficient original strategy sequence, meaning $E_D^{A\to B}(\rho_i)\le\eps_i^{-\beta+o(1)}$ at losses at most $\eps_i$, satisfies
+\begin{gather*}
+ E_F(\rho_i)\ge\eps_i^{-\beta-\gamma+o(1)},\qquad
+ \frac{E_F(\rho_i)}{E_D^{A\to B}(\rho_i)}\ge\eps_i^{-\gamma+o(1)},\\
+ S(\rho_i)\ge\eps_i^{-\beta-\gamma+o(1)},\qquad
+ \rank\rho_i\ge2^{\eps_i^{-\beta-\gamma+o(1)}}.
+\end{gather*}
+The justified general arithmetic ceiling for $\beta$ is left-c.e. relative to $0''$; this is weaker than $\Delta^0_2$.
+\end{proposition}
+\begin{proof}
+Suppose for every fixed $a<1$ the limsup of
+\[
+ \frac{\log(1+p_G(\eps^a))-\log(1+d_G^\to(\eps))}{\log(1/\eps)}
+\]
+were nonpositive. Rescaling $\delta=\eps^a$ gives pure limsup at most $\beta/a$, and $d_G^\to\le p_G$ gives pure liminf at least $\beta$. Let $a\uparrow1$. Its exponent would exist and equal $\beta$, contradicting \cref{prop:power-ceilings}. Therefore some fixed slack has a positive gap; choose $\gamma$ below that gap and a subsequence with
+$1+p_G(\eps_i^a)\ge(1+d_G^\to(\eps_i))\eps_i^{-\gamma}$.
+For every low-loss mixed state, $E_F\ge f_G(\eps_i)\ge p_G(\eps_i)-1\ge p_G(\eps_i^a)-1$. This proves the formation lower bound and its ratio for efficient states. Entropy concavity gives $E_F\le S(\rho_B)$; hashing~\cite{DW05} gives $E_D^{A\to B}\ge S(\rho_B)-S(\rho_{AB})$. Hence $S(\rho_{AB})\ge E_F-E_D$, of the same larger polynomial order, and $S(\rho)\le\log\rank\rho$ proves the last bound.
+
+For the general ceiling use the regularized-instrument formula and compact finite-dimensional optimization~\cite[Theorem~11.14]{DM-precision}: $d_G^\to(2^{-n})$ is uniformly right-c.e. relative to $0'$. The increasing computable transformation $x_n=\log(1+d_G^\to(2^{-n}))/n$ has the same property. If $x_n\to\beta$, then $\beta=\sup_m\inf_{n\ge m}x_n$. Each inner infimum is right-c.e. in $0'$. For rational $r$, the assertion $r<\beta$ is equivalent to existence of $m$ and rational $r'>r$ with $\inf_{n\ge m}x_n\ge r'$, a $\Sigma^0_3$ condition. Its lower cut is therefore c.e. in $0''$, as claimed. This does not compute the mixed-state infimum or rule out the gap.
+\end{proof}
+
+\subsection{Explicit examples, closures and strict extension}
+\begin{corollary}[Computable families]\label{cor:power-examples}
+Every algebraic $\beta\in(0,1]$, every $\log m/\log n\in(0,1]$ for integers $m,n\ge2$, and every admissible finite algebraic mixing
+\[
+ \beta=\frac{\sum_i\alpha_i\log m_i}{\log n}\in(0,1],\qquad
+ \alpha_i\in[0,1]\text{ real algebraic},\quad m_i,n\ge2,
+\]
+has matching usable and log-dimension exponents. Finite products of such exponents are also realized.
+\end{corollary}
+\begin{proof}
+Root isolation, logarithms of positive integers and the indicated finite arithmetic are uniformly computable. Each expression has a total computable convergent rational name, so \cref{thm:power-realization} applies. Only the averaged displayed admissibility condition is required; neither $\prod_i m_i\le n$ nor $\sum_i\alpha_i\le1$ is assumed.
+For example use rational root-isolating approximations to the root $\sqrt2/2$ of $2x^2-1$ in $(7/10,3/4)$. These approximations, not an irrational coefficient, are computed by its finite program.
+\end{proof}
+
+The rotation description of the algebraic examples uses $b_h=\lfloor(h+1)\beta\rfloor-\lfloor h\beta\rfloor$, whose prefix sum is $\lfloor j\beta\rfloor$; this is the classical irrational-rotation coding of Morse--Hedlund~\cite{MH40}. For an algebraic irrational, the elementary estimate $\operatorname{dist}(r\beta,\Z)\ge c r^{1-d}$ follows from a degree-$d$ integer polynomial: its nonzero value at $p/r$ is at least $r^{-d}$, and a bounded derivative gives the separation. A rational isolated-root register has $|B-\beta I|_\rho\le C|f(B)|_\rho$ by the bounded inverse of $f(x)/(x-\beta)$. Such a rotation can select the multipliers with polynomially charged discarded carries. The general program proof above replaces the need for this particular root and gap interface; it handles computable rotations with gaps too small for that estimate as well.
+
+For instance set $n_1=2$, $n_{k+1}=2^{2n_k}$ and $\beta_*=\sum_{k\ge1}2^{-n_k}$. Its effective tail makes it computable; with $q_k=2^{n_k}$,
+$0<\operatorname{dist}(q_k\beta_*,\Z)\le2^{n_k+1-q_k^2}$. It is irrational, since its difference from a dyadic partial sum would otherwise be at least $1/(q q_k)$ for a fixed rational denominator $q$. Thus a uniform subexponential inverse-gap estimate fails at $J=q_k$, while \cref{thm:power-realization} still realizes $\beta_*$. This limits that carry estimate, not realizability.
+
+The scalar interfaces themselves admit composition, more specifically than the existence corollary. If checker $i$ has inhomogeneous exponent $\beta_i$, remove the first penalty test and identify $S_1=T_2$. Then
+$|S_1|_\rho\le|T_2|_\rho+\delta\le\delta^{\beta_2-o(1)}$, and applying the first inhomogeneous estimate at $\eta=\delta+|S_1|_\rho$ gives exponent $\beta_1\beta_2$. The upper assignment uses the composed spectral penalty $s_2(s_1(T_1))$. For fixed $v_i<1/\beta_i$ it is at most $CT_1^{v_1v_2}$. The moment theorem applies at that order; size \emph{both} clock pairs at the final precision, $N_c\ge v_1v_2\log N+O(1)$. The extra logarithmic dimension remains $O(\log N)$. Taking $v_i$ to their endpoints proves the product law for these specified checker interfaces, not an unrestricted assertion about products of arbitrary games.
+
+No algebraic irrational equals $\log m/\log n$: otherwise $n^\beta=m$ contradicts Gelfond--Schneider~\cite{Gel34}. The qualification ``irrational'' is essential. Baker's algebraic-coefficient linear independence for rationally independent logarithms~\cite{Bak66} also makes $(\sqrt2/2)\log2/\log3$ transcendental. It does not show that this particular number is outside every log-ratio class: cross-multiplication would introduce products of logarithms, beyond that linear theorem. The following strict extension needs no such unproved independence.
+
+\begin{proposition}[Strictly beyond finite explicit expression families]\label{prop:power-strict}
+The realized exponents include a noncomputable real and a computable real outside all finite algebraic mixing and product expressions just described.
+\end{proposition}
+\begin{proof}
+For a fixed noncomputable c.e. halting set $K$, take its finite stage approximations $K_s$ and
+\[
+ a_s=\frac14+\frac14\sum_{\substack{e\in K_s\\e\le s}}4^{-e-1},\qquad \beta_K=\lim_s a_s\in[1/4,1/3].
+\]
+This is a total computable rational name. If $\beta_K$ were computable, so would be $x=4\beta_K-1$, whose base-four digits are zero or one according to $K$. The first-digit cases lie in the separated intervals $[0,1/12]$ and $[1/4,1/3]$, since the later tail is at most one third of the current place. A sufficiently accurate approximation decides the digit; replace $x$ by $4x$ minus that digit and repeat. This would decide $K$. All the finite algebraic/logarithmic expressions are computable, so this already strictly extends their class. Replacing the plus sign by a minus sign and starting at $1/2$ gives a noncomputable right-c.e., hence non-left-c.e., example too, consistently with \cref{rem:power-trace-barrier}.
+
+There is also a computable strict extension. Enumerate all candidate finite expressions from effectively isolated algebraic numbers, logarithms of integers at least two, finite sums/products and division only by known nonzero rational constants or such logarithms. This is a uniformly computable sequence $x_0,x_1,\ldots$ containing the indicated families and closures. No test of nonzeroness for arbitrary expressions or membership in $(0,1]$ is needed.
+Start at $I_0=[1/4,1/2]$. If $I_e$ has length $l$ and midpoint $m$, approximate $x_e$ by a rational $v$ to error below $l/16$. For $v\le m$ choose the rightmost closed quarter, otherwise the leftmost. The chosen child excludes $x_e$ by at least $3l/16$. The intervals are nested and have lengths $|I_0|4^{-e}$, so their unique common point $\beta_d$ is computable, differs from every $x_e$, and has the rational midpoints as a total computable name. Apply \cref{thm:power-realization} to both names. No halting oracle or noncomputable coefficient enters either game.
+\end{proof}
+
+\subsection{What the architecture does not imply}
+Binary pulses force $0\le k(J)\le J$, so this construction has $\beta\le1$. A dimension-uniform weighted calibration $|T_0|_\rho\le C|S_0|_\rho^\alpha$ with $\alpha>1$ cannot hold for this interface. Put rational weight $w$ on the binary history $T_0=1$, $S_0=1/2$ stopped at age zero, and the remaining weight on $T_0=S_0=0$, never stopped. The two norms are $\sqrt w$ and $\sqrt w/2$, so their ratio is $2^\alpha w^{(1-\alpha)/2}$, which diverges as $w$ decreases to zero. Choose the finite clock large enough that its boundary error is smaller than the penalty. This restricts the calibration mechanism, not all games.
+
+Fixed positive mixing of finitely many resource laws $\eps^{-\beta_i+o(1)}$ has exponent $\max_i\beta_i$: a maximal term bounds the sum below, and finitely many upper bounds at any fixed exponent margin bound it above. Thus fixed density mixing does not select a new power exponent. Likewise a qualitative error $e(\delta)\le C\delta^\beta+\omega(\delta)$, $\omega\to0$, does not imply the power estimate: $\omega(\delta)=1/\log(\mathrm e/\delta)$ has exponent zero. These observations explain the need for the polynomial same-state bounds above rather than a qualitative compactness modulus. The full usable arithmetic ceiling and existing finite exponents beyond one remain open. The quantitative local ceiling and the contrasting unbounded upper exponents are proved below.

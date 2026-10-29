@@ -1,0 +1,83 @@
+\section{Simultaneous finite models}\label{sec:finite}
+\begin{theorem}\label{thm:finite}
+Let $h(e)$ be the recognizer's halting time, or $\infty$ if it does not halt. For every even integer $N\ge2$, define
+\[
+ K_N=\{e<N/2:h(e)<2^N\},
+ \qquad\theta_N=\sum_{e\in K_N}4^{-(e+1)}.
+\]
+There is a flat model of $\mathcal P_K$ on dimension
+\begin{equation}\label{eq:finite-dimension}
+ d_N=2^{3N+k_N},\qquad k_N=\theta_NN+O(\log(N+2)),
+\end{equation}
+with every defining defect at most $3\cdot4^{-N}$ in operator norm. The coefficients $\theta_N$ increase to $\thetaK$.
+\end{theorem}
+\begin{proof}
+Take $N$-bit address, fuel and time registers, with the finite coordinate~\eqref{eq:finite-clock}. Their bit zero is least significant. Let the address integer be $x\in\Z/2^N\Z$ and put
+\begin{equation}\label{eq:mask}
+ f_N(x)=\sum_{e\in K_N}1_{\{x\equiv4^e\pmod{4^{e+1}}\}}.
+\end{equation}
+The residue classes are disjoint and their periods divide $2^N$, so this is a Boolean function of mean $\theta_N$.
+
+Every interval of $N$ consecutive addresses has
+\begin{equation}\label{eq:window}
+ \sum_{j=1}^N f_N(x-j)=N\theta_N+O(\log(N+2))
+\end{equation}
+uniformly in $x$, including cyclic intervals. To prove it, put $m=\lfloor\log_4N\rfloor$. For each $e\le m$, one residue class has a count differing from its mean by at most one. Every flagged address from $e>m$ is a multiple of $4^{m+1}$, so the whole remaining family contributes at most one address to such an interval. Its expected count is at most $N/(3\cdot4^{m+1})$. Summing proves~\eqref{eq:window}.
+
+Set
+\begin{equation}\label{eq:slots}
+ k_N=1+\max_x\sum_{j=1}^N f_N(x-j)
+\end{equation}
+and add $k_N$ optional qubits. Let $R_0$ rotate their contents from slot $i$ to slot $i+1$ cyclically. Define
+\begin{equation}\label{eq:finite-V}
+ V|x,y\rangle=|x+1,R_0^{f_N(x)}y\rangle,
+ \qquad F=f_N(x),\quad Q=F P_{\mathrm{slot}\,0},\quad
+ Y=(I-F)+FX_{\mathrm{slot}\,0}.
+\end{equation}
+Define the translates $F_j,Q_j$ by~\eqref{eq:optional-translates} and set
+\begin{equation}\label{eq:series}
+ B=\sum_{j\ge0}3\cdot4^{-j-1}Q_j,\qquad
+ C=\sum_{j\ge0}3\cdot4^{-j-1}F_j.
+\end{equation}
+These are explicit finite diagonal matrices. Indeed $V$ is a permutation of a finite basis, so the series are periodic geometric sums. They are positive contractions. Their terms commute, so~\eqref{eq:conditional-comm} is exact. Shifting the sums proves~\eqref{eq:conditional-affine} exactly; the controlled flip gives~\eqref{eq:conditional-flip} exactly.
+
+At an active $Q_j$ and a fixed current address $x$, its occupied slot is
+\[
+ \sum_{r=x-j}^{x-1}f_N(r)\pmod{k_N}.
+\]
+If $1\le j\le N$, this sum is positive because $f_N(x-j)=1$, and is at most $k_N-1$ by~\eqref{eq:slots}. Thus $Y$ preserves $Q_j$ for those $j$. It always commutes with $C$, and the uncontrolled remainder satisfies
+\begin{equation}\label{eq:tail-bound}
+ \opn{[Y,VBV^*]}\le2\sum_{j>N}3\cdot4^{-j}=2\cdot4^{-N}.
+\end{equation}
+This verifies~\eqref{eq:conditional-tail}.
+
+To couple $V$ to the address clock, let $T_0,X_0$ be its ordinary cyclic rotation and first-bit flip and put
+\begin{equation}\label{eq:dressing}
+ h_N(x)=\sum_{0\le r<x}f_N(r),\quad
+ D=\bigoplus_xR_0^{h_N(x)},\quad
+ T_a=D(T_0\otimes I)D^*,\quad X_a=D(X_0\otimes I)D^*.
+\end{equation}
+The coordinate $A_a$ and digit $P_a$ commute with $D$, so all address clock defect bounds from Theorem~\ref{thm:clock-profile} are unchanged. In the $D^*$ gauge, $V$ is ordinary increment except at the all-ones address, where it carries a fixed optional-register permutation. The recursive increment agrees away from that address. At all ones its two output addresses are distinct, with the same optional permutation. The guard is $4^{-N}$ there. Hence its operator defect is $\sqrt2\,4^{-N}$ and its flat defect is $\sqrt2\,4^{-N}2^{-N/2}$.
+
+For $H(x)$ use $4^{-k}$ when the address has $k<N$ initial ones and then a zero, and use zero at all ones. Rotation removes one initial one, so~\eqref{eq:carry-rec} is exact, including its all-ones case. All commutations in~\eqref{eq:carry-step} are exact, and off all ones
+\[
+ A_a(x+1)-A_a(x)=-1+\tfrac74\,4^{-k}.
+\]
+At all ones the defect of the last equation is $4^{-N}$. Its flat norm is $4^{-N}2^{-N/2}$. Let $U$ be ordinary cyclic time increment and use ordinary clocks on fuel and time. Their defects have the same bounds as before.
+
+It remains to verify the whole program on these same registers. For a nonzero address let $e$ be the position of its first nonzero base-four digit. Set $R(x)=2^{-e}$ and $L(x)=1$ precisely when that digit is one. At the all-zero address set $R=L=0$. Since $N$ is even, rotation by two bits removes one whole base-four digit. Thus~\eqref{eq:decode-L}--\eqref{eq:decode-R} hold exactly, including at the all-zero address.
+
+For fuel with $k$ initial ones then a zero, put
+\[
+ Z(q,t)=1_{\{t\equiv0\pmod{2^k}\}}.
+\]
+On all-ones fuel use $k=N$. When the first fuel bit is zero, $Z=1$. Otherwise the factor $I-P_t$ in~\eqref{eq:reset} requires the first time bit to be zero and the rotated equation tests the remaining $k-1$ bits. On all-ones fuel, the recursive test is true precisely at the all-zero time word. This proves~\eqref{eq:reset} in every case.
+
+At a basis point $(x,q,t)$ assign every workspace counter and control the deterministic configuration
+\begin{equation}\label{eq:history}
+ \Step^{t\bmod 2^k}\bigl(\Init(x)\bigr).
+\end{equation}
+These are diagonal entries on existing registers; they add no quantum tensor factor. For ordinary counter entries set $z_i=1,s_i=0$ when $r_i=1$ and $z_i=0,s_i=2r_i$ otherwise; the idle $r_i=0$ case uses $z_i=s_i=0$. These are contractions and give~\eqref{eq:zero-test} exactly. The next time point is initialized if its residue modulo $2^k$ is zero, and is otherwise one step of the old configuration. This is exactly~\eqref{eq:initialize}--\eqref{eq:transition}, also at the cyclic time boundary. A displayed halt occurs in fewer than $2^N$ steps on an input $e<N/2$, so its address is flagged in~\eqref{eq:mask}. Hence~\eqref{eq:halt-flag} is exact.
+
+All workspace and reset variables are diagonal in $(x,q,t)$, and the optional register carries no workspace labels. Every specified remaining commutation therefore holds. The only nonzero defining defects are the clock affine and tail-flip defects, the guarded increments, the carry step and~\eqref{eq:tail-bound}. Their operator norms are bounded by the theorem's constant. The three compulsory registers and the optional register have dimension $2^{3N+k_N}$, and~\eqref{eq:window} gives~\eqref{eq:finite-dimension}. Finally each halting input eventually meets both cutoffs in $K_N$, while the address weights have a summable geometric tail. This proves $\theta_N\uparrow\thetaK$.
+\end{proof}

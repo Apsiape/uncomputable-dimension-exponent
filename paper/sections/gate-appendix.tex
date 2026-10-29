@@ -1,0 +1,170 @@
+\section{Complementary flag estimates and resource laws}\label{app:gate-estimates}
+The presentation and testing program are defined in Section~\ref{sec:gate}. Here we prove their approximable flag minimum, finite models, resource laws and trace gap. Results and equations use the prefix 15, consistently with their applications in that section.
+\renewcommand{\thetheorem}{15.\arabic{theorem}}
+\renewcommand{\thelemma}{\thetheorem}
+\renewcommand{\theproposition}{\thetheorem}
+\renewcommand{\thecorollary}{\thetheorem}
+\renewcommand{\theequation}{15.\arabic{equation}}
+\setcounter{theorem}{3}
+\setcounter{equation}{6}
+\subsection{The approximable flag minimum}
+\begin{proposition}\label{prop:gate-flag}
+Every $\tau\in\mathcal T_{\rm mat}(\widehat{\mathcal P}_A)$ satisfies $\tau(F)\ge\lambda_A$.
+\end{proposition}
+\begin{proof}
+Let $Q_e=B_e(I-F)$. It commutes with the data and, by Lemma~\ref{lem:gate-testing}, its corner satisfies $\mathcal R_e$. Tracing the first packed equation gives $\tau(Q_eE)=\tau(Q_e)/m_e$. If $\tau(Q_e)>0$, the $Q_eE$ corner carries $\mathcal A_{A,e}$, with generators given by fixed bounded polynomials $Q_eEW^{-j}DW^jE$.
+
+This positive-trace corner inherits flat approximation. In the flat approximants, self-adjointize the polynomial for $Q_eE$ and round at $1/2$. Its projection defect tends to zero, and for every real $t$,
+\[
+ |1_{[1/2,\infty)}(t)-t|\le2|t^2-t|.
+\]
+The correction tends to zero in normalized Hilbert--Schmidt norm, and the rounded projection's rank fraction tends to $\tau(Q_eE)>0$. Compress and self-adjointize the finitely many corner generators, and round them by the same estimate. Fixed polynomial relations survive by bounded-product telescoping. Normalizing the corner trace multiplies norms by a bounded factor tending to $\tau(Q_eE)^{-1/2}$. These are flat approximate models of $\mathcal A_{A,e}$. Lemma~\ref{lem:gate-witnesses} therefore gives $\tau(B_e(I-F))=0$ for $e\notin A$.
+
+The decoder exhausts $L$ in trace. Iterating~\eqref{eq:decode-L} yields
+\[
+ L=\sum_{e<s}B_e+R_s,\qquad
+ 0\le R_s\le\prod_{j<s}T_a^{2j}E_{00}T_a^{-2j},\qquad \tau(R_s)\le4^{-s}.
+\]
+Indeed $L-\sum_{e<s}B_e$ is a projection whose range lies in the all-00 prefix; no commutation between rotated $L$ and all earlier digits is assumed. Since $I-F\le L$, the disjoint cylinders of trace $4^{-(e+1)}$ give
+\[
+ \tau(I-F)=\sum_e\tau(B_e(I-F))
+ \le\sum_{e\in A}4^{-(e+1)}=\theta_A.
+\]
+Only the passage excluding nonmember corners uses matrix approximability. The testing identity holds for every exact trace.
+\end{proof}
+
+\subsection{Slow admission and simultaneous finite models}
+\begin{lemma}[Elementary witness scheduling]\label{lem:gate-schedule}
+Suppose finite witnesses with positive integer costs $a_j$ arrive in a computable stream without repeated indices. At even depth $N$ admit its longest prefix arrived by stage $N$, with every index $e_j<N/2$ and total cost at most $\lfloor\sqrt N\rfloor$. These prefixes are nested and eventually contain every fixed witness. Their total cost is $o(N)$.
+\end{lemma}
+\begin{proof}
+For a fixed prefix its arrival time, largest index and total cost are finite constants. All three cutoffs eventually exceed them, and none decreases with $N$. The cost bound is $\sqrt N=o(N)$. An enormous early witness may cause an enormous finite delay; no convergence rate is claimed. More generally any nondecreasing computable unbounded budget $o(N)$ has the same property.
+\end{proof}
+
+Apply this lemma to the certificates $(e_j,d_j,\text{model}_j)$ of Lemma~\ref{lem:gate-witnesses}, with $a_j=\lceil\log_2\max(2,m_{e_j}d_j)\rceil$. Use a dovetailing with finitely many outputs per stage. Let $S_N$ be the admitted indices. Then $S_N\uparrow A$, and the common data factor
+\[
+ \mathcal H_{{\rm data},N}=\bigotimes_{e_j\in S_N}(\C^{m_{e_j}}\otimes\C^{d_j}),
+ \qquad \ell_N=\dim\mathcal H_{{\rm data},N}
+\]
+has $\log \ell_N\le\sqrt N$; the empty product has dimension one.
+
+\begin{lemma}[Complementary finite models]\label{lem:gate-finite}
+For even $N\ge2$, $\widehat{\mathcal P}_A$ has flat models with all defining residuals at most $3\cdot4^{-N}$ in operator norm and
+\begin{equation}\label{eq:gate-dimension}
+ d_N=2^{3N+k_N}\ell_N,\qquad
+ k_N=\lambda_NN+O(\log(N+2)),\qquad
+ \lambda_N=1-\sum_{e\in S_N}4^{-(e+1)}\downarrow\lambda_A.
+\end{equation}
+Every new defining equation is exact, and $\operatorname{tr}_{d_N}(F)=\lambda_N$.
+\end{lemma}
+\begin{proof}
+On the $N$-bit address cycle set
+\begin{equation}\label{eq:gate-mask}
+ f_N(x)=1-\sum_{e\in S_N}1_{\{x\equiv4^e\!\!\pmod{4^{e+1}}\}},\qquad
+ k_N=1+\max_x\sum_{j=1}^Nf_N(x-j).
+\end{equation}
+The classes are disjoint, and their periods divide $2^N$. Bit zero is least significant for increment, so these are precisely the cylinders $B_e$. The mask is Boolean, has mean $\lambda_N$, and satisfies~\eqref{eq:gate-region}. For $s=\lfloor\log_4N\rfloor$, each selected class with $e\le s$ has interval-count error at most one. The disjoint union of the remaining classes lies in the multiples of $4^{s+1}$ and has at most one point in an interval of length $N<4^{s+1}$; its expected count is at most $N/(3\cdot4^{s+1})$. Hence, uniformly in the subset and starting point,
+\begin{equation}\label{eq:gate-window}
+ \left|\sum_{j=1}^Nf_N(x-j)-N\lambda_N\right|
+ \le s+2+\frac{N}{3\cdot4^{s+1}}.
+\end{equation}
+Cyclic intervals lift to integer intervals because all periods divide the cycle.
+
+Use the three compulsory $N$-qubit registers, the $k_N$ optional qubits, and the common data factor. Theorem~\ref{thm:finite}'s conditional permutation, series and dressing require only a Boolean mask and that $k_N$ exceed every $N$-window count. They therefore apply to~\eqref{eq:gate-mask}. On address $x\in B_{e_j}$ for an admitted index, assign the packed witness to factor $j$ and tensor identities on the others. On other addresses take $(D,E,W)=(0,I,I)$. These address-block data are independent of fuel, time and optional slots. They commute with $A_a,L,R,F,Z$ and all scalar workspace, and with the complete fuel/time sets. Address dressing acts on address and optional slots and leaves these commutations intact. The data need not commute with the dressed address shift or flip.
+
+For fuel with $k$ initial ones, use the actual initialized scalar and operator history at time $t\bmod2^k$; all-ones fuel uses $k=N$. On each $(x,q,t)$ block the scalar workspace is a scalar multiple of the data identity. Every $M,\Sigma$ is a contraction by the signed-term bound. Choose their two representing unitaries within each block and take direct sums. All required representing-unitary commutators hold; naming these matrices adds no tensor factor.
+
+When the next time residue is zero, the transition prescribes initialization; otherwise it prescribes the next instruction. Since $2^k\mid2^N$, the cyclic transition from $2^N-1$ to zero is also a reset. Thus~\eqref{eq:gate-transition} holds exactly at every ordinary and reset boundary. On an unflagged block every completed CHECK tests the packed witness belonging to that address, so it is zero. An unfinished CHECK imposes no test there; on flagged blocks $I-F=0$. Therefore~\eqref{eq:gate-check} is exact regardless of program speed.
+
+The address wraparound is handled as in Theorem~\ref{thm:finite}. In the gauge of the dressing~\eqref{eq:dressing}, $V$ is ordinary increment except at the all-ones address, where it also applies the fixed optional permutation $R_0^{\sum_xf_N(x)}$. There its output address differs from that of the recursive increment, so the guarded defect is $\sqrt2\,4^{-N}$ in operator norm, as before.
+
+All new equations are exact simultaneously. The remaining clock, guarded-increment, carry and conditional-tail residuals have their old bounds, at most $3\cdot4^{-N}$. Counting the registers gives~\eqref{eq:gate-dimension}, and
+\[
+ \log d_N=(3+\lambda_N)N+O(\log(N+2))+O(\sqrt N)
+          =(3+\lambda_A)N+o(N).
+\]
+A fixed increase of even depth absorbs the constant three. Bounded gaps between even depths suffice for every small precision. Computing a certificate or its admission stage is classical model-description work; it consumes neither simulated fuel nor an extra quantum register.
+\end{proof}
+
+\subsection{Dimension, usable entanglement and heat}
+\begin{theorem}\label{thm:gate-resources}
+For every c.e. set $A$, integer $r\ge0$ and integer $q\ge1$, there is a fixed finite rational BCS game $\widehat G_{A,r,q}$ of quantum value one and with no finite-dimensional perfect strategy. With
+\[
+ \beta_{A,r,q}=\frac{4+r-\theta_A}{4q},\qquad L_\eps=\log_2(1/\eps),
+\]
+its resource laws are
+\begin{align}
+ \log_2D_{\widehat G_{A,r,q}}(\eps)&=\beta_{A,r,q}L_\eps+o(L_\eps),\label{eq:gate-game-law}\\
+ d^\to_{\widehat G_{A,r,q}}(\eps)&=\beta_{A,r,q}L_\eps+o(L_\eps),\label{eq:gate-usable-law}\\
+ w_{{\rm local},\widehat G_{A,r,q}}(\eps)&=2\beta_{A,r,q}L_\eps+o(L_\eps),\qquad
+ 0\le w_{{\rm joint},\widehat G_{A,r,q}}(\eps)\le2\log_2K_{\rm ans}.\label{eq:gate-heat-law}
+\end{align}
+The heat statement uses exactly the model and units of Section~\ref{sec:heat}.
+\end{theorem}
+\begin{proof}
+\emph{The actual-state flag bound.} Moment compactness of Lemma~\ref{lem:gate-finite}'s flat models supplies a matrix-approximable trace of flag expectation $\lambda_A$. Proposition~\ref{prop:gate-flag} gives the reverse inequality, so
+\begin{equation}\label{eq:gate-minimum}
+ \min_{\mathcal T_{\rm mat}(\widehat{\mathcal P}_A)}\tau(F)=\lambda_A.
+\end{equation}
+Corollary~\ref{cor:weighted-limits} now proves, uniformly on every original weighted precision-$\delta$ model,
+\begin{equation}\label{eq:gate-weighted}
+ \Tr(\rho F)\ge\lambda_A-\omega_A(\delta),\qquad \omega_A(\delta)\longrightarrow0.
+\end{equation}
+Indeed a fixed positive shortfall along $\delta\to0$ would have a weighted moment limit in $\mathcal T_{\rm mat}$ below~\eqref{eq:gate-minimum}. The bound holds on the original state $\rho$; compression only identifies the limit class.
+
+\emph{Dimension.} Every relation used by Lemma~\ref{lem:joint} remains in the presentation. For $t=\log_4(1/\delta)$ and $M=\lfloor t-30\log_4(2+t)\rfloor$, its joint errors are at most $C(M+1)^64^M\delta$. Theorem~\ref{thm:count} and state transport give
+\[
+ \log d\ge3M+\sum_{i<M}\Tr(\rho F_i)-o(M)
+ \ge(3+\lambda_A-\omega_A(\delta))M-O(M^2\delta)-o(M),
+\]
+since $|\Tr(\rho F_i)-\Tr(\rho F)|\le2i\delta$. This is $(3+\lambda_A)\log_4(1/\delta)-o(\log(1/\delta))$. The compiler sends game loss $\eps$ to source precision $C\sqrt\eps$, with constant dimension overhead. Lemma~\ref{lem:gate-finite} gives the converse upper loss $C'16^{-N}$. Choose an even depth $N\ge\log_{16}(C'/\eps)$ within a fixed additive constant to match the bound through all small losses. This proves~\eqref{eq:gate-game-law} for $r=0,q=1$.
+
+Append $r$ compulsory clocks with the cross-commutations of Proposition~\ref{prop:realization-parameters}. Their upper cost is exactly $rN$, and their digit families add $rM$ to the lower count. Power \emph{every} defining residual, including the new tests and cross-commutators, by~\eqref{eq:power-polynomial}; keep domains and state-commutator requirements. Equation~\eqref{eq:power-jensen} turns powered precision $\eta$ into unpowered precision $\eta^{1/q}$, whereas the explicit operator-norm residuals become at most $3^q4^{-qN}$. Thus the game lower precision is $\delta=(C\sqrt\eps)^{1/q}$, upper loss is $C'16^{-qN}$, and the coefficient is $(3+r+\lambda_A)/(4q)$. The upper losses tend to zero and this positive lower bound diverges, excluding a finite-dimensional perfect strategy.
+
+\emph{Usable entanglement on the original mixed state.} Proposition~\ref{prop:actual-state-bridge} applies. On a purification of an arbitrary mixed loss-$\eps$ strategy, keep the original environment, relabel illegal answers, and dilate locally with pure ancillas. The finite Boolean certificates reconstruct this presentation on the actual Bob marginal with powered precision $C\sqrt\eps$; their constants depend on the fixed transducer but not on $M$ or $\eps$. Jensen then gives the same unpowered $\delta$. New data/register variables enlarge a fixed certificate list only. None occurs in the raw translated clock measurements or their controls.
+
+Consequently the same opposite-word construction on Alice, independent local inclusion repairs on both sides, and reverse count order supply the hypotheses of Lemma~\ref{lem:inactive-extraction}, with
+\[
+ m=(4+r)M,\qquad \eta=C_{A,r,q}(M+1)^64^M\delta.
+\]
+As in Proposition~\ref{prop:actual-state-bridge}, only $Q_i$ is repaired, so the activation flags are the raw $F_i$ on the actual marginal.
+
+At the chosen depth $\eta=O(t^{-24})$, and the vector, activation and entropy-continuity errors of Lemma~\ref{lem:inactive-extraction} tend to zero. Its one-way protocol and hashing therefore give on \emph{every original strategy state}
+\begin{align*}
+ E_D^{A\to B}(\rho_{AB})
+ &\ge(3+r)M+\sum_{i<M}\Tr(\rho_BF_i)-o(1)\\
+ &\ge(3+r+\lambda_A-\omega_A(\delta))M-O(M^2\delta)-o(1).
+\end{align*}
+Here~\eqref{eq:gate-weighted}, rather than an all-exact-trace bound, supplies the activation estimate. Since $M=L_\eps/(4q)-O(\log L_\eps)$, the infimum gives the lower side of~\eqref{eq:gate-usable-law}. The general inequality $d^\to_G(\eps)\le\log D_G(\eps)$ and the proved dimension upper bound give the other side.
+
+\emph{Heat.} Substitute the two matching laws into~\eqref{eq:heat-sandwich}. Its fixed answer term is $O(1)$, so both endpoints have coefficient $2\beta_{A,r,q}$. The joint bound is the same cited heat theorem. This proves~\eqref{eq:gate-heat-law}.
+\end{proof}
+
+\begin{corollary}[Beyond the left-c.e. reals]\label{cor:gate-strict}
+The game $\widehat G_K:=\widehat G_{K,0,1}$ has dimension and usable-entanglement coefficient $(4-\theta_K)/4$, and local-heat coefficient $(4-\theta_K)/2$. These are noncomputable right-c.e. reals, not left-c.e., and have the Turing degree of $K$. Recall the positive dimension spectrum $\mathcal B_{\rm BCS}$ from Section~\ref{sec:intro}. This escape establishes
+\begin{equation}\label{eq:strict-spectrum}
+ \{\text{positive left-c.e. reals}\}\ \subsetneq\ \mathcal B_{\rm BCS}
+ \ \subseteq\ \{\text{positive }\Delta^0_2\text{ reals}\}.
+\end{equation}
+Both $\mathcal A_{\log}$ and $\mathcal A_{\dim}$ also strictly contain the positive left-c.e. reals. The new non-left-c.e. examples accumulate at zero by taking $q\to\infty$.
+\end{corollary}
+\begin{proof}
+The weights $w_e=4^{-(e+1)}$ have tail at most $w_e/3$ after position $e$. Given earlier membership bits, absence leaves residual at most $w_e/3$, whereas presence leaves at least $w_e$. Approximating $\theta_K$ within $w_e/6$ distinguishes them at threshold $2w_e/3$. Thus $K\le_T\theta_K$. Conversely $K$ computes the summable series, so $\theta_K\equiv_TK$. Its complement and the displayed positive rational affine images are noncomputable right-c.e.; if also left-c.e., the two rational approximations would compute them. Theorem~\ref{thm:gate-resources} supplies these coefficients, giving an intermediate case of Theorem~\ref{thm:realization}. The left-c.e. reader gives the first inclusion, and Lemma~\ref{lem:computability}, with the limit argument of Corollary~\ref{cor:complete-spectrum}, the dimension outer class. No $\Delta^0_2$ upper bound for the entire usable-entanglement class is inferred here.
+\end{proof}
+
+\subsection{Why the trace gap is consistent}
+\begin{proposition}\label{prop:gate-gap}
+For $\widehat{\mathcal P}_K$ the exact and approximable minima differ strictly:
+\[
+ \min_{\mathcal T}\tau(F)<\min_{\mathcal T_{\rm mat}}\tau(F)=1-\theta_K.
+\]
+An exact minimizing trace has a positive-trace nonhalting unflagged corner carrying $\mathcal A_{K,e}$. Such a trace is not matrix approximable.
+\end{proposition}
+\begin{proof}
+The bounded exact-trace hierarchy of Proposition~\ref{prop:exact-barrier} makes the exact minimum left-c.e.; compactness supplies a minimizer. It is at most the approximable minimum and cannot equal its non-left-c.e. value. At the minimizer, $\tau(I-F)>\theta_K$. Decoder exhaustion and the total capacity of halting cylinders force $\tau(B_e(I-F))>0$ for some $e\notin K$. Testing and packing give its unital tracial model. Left and right multiplication in the tracial GNS representation yield a perfect commuting-operator strategy for $H_{K,e}$, using its two projection families; this is the usual tracial representation construction~\cite{PSSSTW16,KPS18}. Soundness concerns finite-dimensional value, so there is no contradiction.
+\end{proof}
+
+This is the matrix-versus-commuting distinction behind the negative solution of Connes' embedding problem in~\cite{JNVWY}, made quantitative in the resource coefficient. Slofstra's nonclosure and undecidability results~\cite{Slo19} are essential context for distinguishing finite exact perfection from limiting perfection; the finite exact witnesses used above are the stronger specified input, not a consequence of nonclosure.
+
+There is also an independent consistency argument. The index set $C_{\rm tr}=\{e:\mathcal A_{K,e}\text{ has a unital tracial model}\}$ is $\Pi^0_1$. Each bounded tracial moment level, including domain localizers and all visible relation insertions, is a rational semialgebraic feasibility problem decidable by real quantifier elimination. Infeasibility of some level enumerates the complement; feasibility at every level gives a tracial state by bounded-moment compactness and GNS. Since $K\subseteq C_{\rm tr}$, equality would make $K$ co-c.e. Hence some nonhalting indices, in fact infinitely many, already admit perfect tracial strategies independently of the clock construction. This argument uses the tracial presentation, rather than assuming arbitrary perfect commuting strategies are tracial. Lin's $\mathrm{MIP}^{\rm co}=\mathrm{coRE}$~\cite{Lin25} supplies the commuting-complexity context; no equality of commuting and finite-dimensional values is used.
+

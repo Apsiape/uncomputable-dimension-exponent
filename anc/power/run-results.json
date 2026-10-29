@@ -1,0 +1,37 @@
+[
+  {
+    "script": "moments/attack_clock.py",
+    "exit_code": 0,
+    "seconds": 0.694
+  },
+  {
+    "script": "moments/attack_moments_lamps.py",
+    "exit_code": 0,
+    "seconds": 6.692
+  },
+  {
+    "script": "stopped/check_stopped_calibrator.py",
+    "exit_code": 0,
+    "seconds": 0.294
+  },
+  {
+    "script": "rotation/check_rotation.py",
+    "exit_code": 0,
+    "seconds": 0.328
+  },
+  {
+    "script": "stack/adversarial_checks.py",
+    "exit_code": 0,
+    "seconds": 0.352
+  },
+  {
+    "script": "claims/check_scaled_machine.py",
+    "exit_code": 0,
+    "seconds": 0.437
+  },
+  {
+    "script": "validation/independent_checks.py",
+    "exit_code": 0,
+    "seconds": 6.884
+  }
+]

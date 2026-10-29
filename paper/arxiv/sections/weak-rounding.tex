@@ -1,0 +1,81 @@
+\section{Weak pure rounding of original strategies}\label{sec:weak-rounding}
+The remaining usable-spectrum question is an optimized fixed-game problem. All distillation below is Alice-to-Bob on the original mixed state, whose purifying environment is inaccessible. Pure comparison strategies may use different measurements and dimensions.
+
+Paddock~\cite[Corollary~1.3]{Pad22} rounds near-perfect BCS and synchronous strategies to near-perfect strategies with maximally entangled states. Weak pure rounding asks instead for pure strategies whose entropy is bounded by the original state's one-way distillable rate.
+
+\begin{proposition}[A sufficient one-way purification criterion]\label{prop:weak-rounding-criterion}
+Let a finite one-way local instrument on an original strategy state $\rho$ produce Bob-flagged actual game-strategy branches $\tau_j$, with probabilities $p_j$, losses $\ell_j$, mean loss $b=\sum_jp_j\ell_j$ and mean joint entropy $s=\sum_jp_jS(\tau_j)$. Arbitrary local garbage erasure and nonflat branches are allowed. Then
+\[
+ p_G(b)\le E_D^{A\to B}(\rho)+s+1.
+\]
+Consequently, for every fixed $0<a<1$, selecting at each small $\eps$ an $o(L)$-near-minimizer for $d_G^\to(\eps)$ and such an instrument with $b\le\eps^a$, $s=o(L)$, $L=\log_2(1/\eps)$, implies weak pure rounding
+\[
+ p_G(\eps^a)\le d_G^\to(\eps)+o(L).
+\]
+This criterion is sufficient; its necessity is not asserted.
+\end{proposition}
+\begin{proof}
+The output state is $\omega=\sum_jp_j\tau_j\otimes|j\rangle\langle j|_B$. One-way monotonicity and hashing~\cite{DW05} give
+\[
+ E_D^{A\to B}(\rho)\ge S(\omega_B)-S(\omega)
+   =\sum_jp_j\bigl(S(\tau_{j,B})-S(\tau_j)\bigr).
+\]
+The Shannon flag entropies cancel. Bob's flag may include his private outcome; Alice need not learn it.
+
+For each branch fix its game measurements and losing effect $\Lambda_j$. Put $\ell_j=\Tr\tau_j\Lambda_j$ and restrict to its support. The Hermitian matrix $T=\sqrt{\tau_j}(\Lambda_j-\ell_jI)\sqrt{\tau_j}$ is traceless. Fourier-transform an eigenbasis of $T$ to obtain an orthonormal basis $u_i$ with $\langle u_i,Tu_i\rangle=0$. The vectors $\sqrt{\tau_j}u_i$ decompose $\tau_j$; every nonzero normalized vector has loss exactly $\ell_j$. Entropy concavity on Bob's marginal selects one of entropy at most $S(\tau_{j,B})$. Denote this pure strategy's entropy by $e_j$. The preceding inequality gives $\sum_jp_je_j\le E_D^{A\to B}(\rho)+s$.
+
+Minimize the mean of the fixed numbers $e_j$ over weights $q_j\ge0$ with $\sum q_j=1$ and $\sum q_j\ell_j\le b$. The weights $p_j$ are feasible. A vertex optimum has at most two positive entries, since there are just normalization and at most one active loss constraint. Coherently superpose those at most two pure strategies with orthogonal local flags and block-diagonal measurements. The resulting pure strategy has loss at most $b$ and entropy $H(q)+\sum q_je_j\le1+E_D^{A\to B}(\rho)+s$. This proves the bound. These branchwise pure witnesses are an existence argument; they need not form a protocol implemented by Alice while ignorant of Bob's private flag. Finally apply the bound to the selected near-minimizer and use monotonicity of $p_G$.
+\end{proof}
+
+After refining all local discarded registers into fine Kraus outcomes, let $J_A$ be Alice's communicated outcome and $J_B$ Bob's private outcome. Each conditional retained-$AB$ plus environment-$E$ state is pure. The exact identity
+\[
+ s=\sum_{j_A,j_B}p_jS(E|j)=S(E)-\chi(J_A,J_B:E)
+\]
+expresses the residual joint entropy. All erased registers must be included in this refinement. The instrument criterion concerns a selected near-minimizing family, not all states or all inefficient strategies.
+
+\begin{corollary}[What weak rounding would classify]\label{cor:weak-rounding-spectrum}
+For a fixed game satisfying weak rounding for every $a\in(0,1)$, if either $d_G^\to(\eps)/L$ or $p_G(\eps)/L$ has a finite limit, both do and their limits agree. A positive common coefficient belongs to $\Delta^0_2$. In the reset model the corresponding local-heat coefficient is twice it.
+\end{corollary}
+\begin{proof}
+Always $d_G^\to\le p_G$. If $d_G^\to/L\to\alpha$, substitute $\delta=\eps^a$ into weak rounding to bound the upper pure coefficient by $\alpha/a$; its lower coefficient is at least $\alpha$. Let $a$ increase to one. If instead $p_G/L\to\alpha$, weak rounding gives lower usable coefficient at least $a\alpha$, while $d_G^\to\le p_G$ gives upper coefficient at most $\alpha$. Again let $a$ increase to one. For the arithmetic claim apply the effective truncation argument of \cref{prop:power-ceilings}: its computable rank-restricted entropy minima $q_n$ satisfy $p_G(2^{-n})\le q_n\le p_G(2^{-n-1})/(1-t_n)$, with $t_n\to0$. Thus $q_n/n\to\alpha$, so the coefficient is limit-computable. The heat sandwich in \cref{sec:heat} gives twice this coefficient in the reset model.
+\end{proof}
+
+\subsection{One obstruction to effect-only purification}
+The next example fixes an effect and the underlying space. It explains why a general proof must use structure specific to games; it is not a separation for optimized strategies of one fixed game.
+
+\begin{proposition}[A high-entanglement subspace obstruction]\label{prop:effect-only-obstruction}
+For arbitrarily large $d$ there are a projection $P$ on $\C^d\otimes\C^d$, effect $\Lambda=I-P$ and zero-loss state $\rho=P/r$, $r=\rank P$, such that
+\[
+ E_D^{A\to B}(\rho)\le k_d=\log_2(d^2/r)=O(\log\log d),
+\]
+while every pure vector of effect loss $\ell$ has entropy at least
+\[
+ (1-\sqrt\ell)\log_2d-c_0-1,\qquad c_0=1+1/\ln2.
+\]
+For any one-way channel on $\rho$ and comparison pure vectors in this same space with this same effect, let their mean loss be $b$, the mean joint branch entropy $s$, and their mean entropy allowance above branch Bob entropy $c$. Then
+\[
+ s+c\ge(1-\sqrt b)\log_2d-c_0-1-k_d.
+\]
+\end{proposition}
+\begin{proof}
+Hayden--Leung--Winter~\cite[Theorem~IV.1]{HLW06}, with $d_A=d_B=d$, $\alpha=1$ and $\Gamma=1/1753$, provide a subspace $\mathcal S$ of dimension
+\[
+ r\ge\frac{\Gamma d^2}{2(\log_2d)^{5/2}}
+\]
+for sufficiently large $d$, in which every pure vector has entropy at least $\log_2d-c_0$. The factor two absorbs the floor in their formula. Take $P$ to be its projection. The separable state $I/d^2$ and the relative-entropy bound on distillation~\cite{VP98} give
+\[
+ E_D^{A\to B}(\rho)\le E_R(\rho)
+ \le D(\rho\Vert I/d^2)=k_d
+ \le\tfrac52\log_2\log_2d+\log_2(2/\Gamma).
+\]
+If a pure vector has loss $\ell<1$, its normalized projection into $\mathcal S$ is at half trace distance $\sqrt\ell$. Partial trace contracts that distance, and entropy continuity loses at most $\sqrt\ell\log_2d+1$. This proves the pure lower bound. For $\ell=1$ the displayed lower bound is negative and automatic.
+
+For channel branches $\tau_j$ and same-effect pure comparison vectors of loss $\ell_j$ and entropy at most $S(\tau_{j,B})+c_j$, flagged hashing as in \cref{prop:weak-rounding-criterion} gives
+\[
+ E_D^{A\to B}(\rho)+s+c\ge\sum_jp_jE(\psi_j)
+ \ge(1-\sum_jp_j\sqrt{\ell_j})\log_2d-c_0-1.
+\]
+Use concavity of the square root and $E_D^{A\to B}(\rho)\le k_d$. No enlargement by coherent flags is used in this fixed-effect comparison.
+\end{proof}
+
+Thus $b=o(1)$ forces residual entropy plus allowance $(1-o(1))\log d-O(\log\log d)$. A universal effect-only purification theorem cannot supply the required small residual. Actual game effects have finitely many positive product summands tied to common POVM constraints, and the game optimization permits changing those measurements. The dimension-dependent generic subspace supplies neither a fixed game nor a universal lower bound under that optimization. It therefore does not refute weak pure rounding.

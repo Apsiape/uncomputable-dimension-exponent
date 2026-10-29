@@ -1,0 +1,28 @@
+{
+ "p5_K2_U5": {
+  "dim": 80,
+  "max_exact_relation_error": 0.0,
+  "max_|HS^2 - 4Pr(collision)|": 0.0
+ },
+ "p5_K3_U5": {
+  "dim": 160,
+  "max_exact_relation_error": 0.0,
+  "max_|HS^2 - 4Pr(collision)|": 1.1102230246251565e-16
+ },
+ "p7_K2_U4": {
+  "dim": 168,
+  "max_exact_relation_error": 0.0,
+  "max_|HS^2 - 4Pr(collision)|": 2.220446049250313e-16
+ }
+}
+{'K': 4, 'p': 131, 'lamps': 131, 'kappa^2': 0.9770992366412213, '8/kappa^2': 8.1875, 'log2D': 18.055790814565903, 'barrier_holds(log2D<=8/k^2+2log2p+1)': True, 'signed_regular_certifies_at_most': 0.02046875}
+{'K': 4, 'p': 1031, 'lamps': 1031, 'kappa^2': 0.997090203685742, '8/kappa^2': 8.023346303501945, 'log2D': 24.01825723943869, 'barrier_holds(log2D<=8/k^2+2log2p+1)': True, 'signed_regular_certifies_at_most': 0.020058365758754863}
+{'K': 8, 'p': 131, 'lamps': 131, 'kappa^2': 0.4735173223722842, '8/kappa^2': 16.89484126984127, 'log2D': 22.055790814565903, 'barrier_holds(log2D<=8/k^2+2log2p+1)': True, 'signed_regular_certifies_at_most': 0.04223710317460317}
+{'K': 8, 'p': 1031, 'lamps': 1031, 'kappa^2': 0.49660523763336567, '8/kappa^2': 16.109375, 'log2D': 28.01825723943869, 'barrier_holds(log2D<=8/k^2+2log2p+1)': True, 'signed_regular_certifies_at_most': 0.040273437499999995}
+{'K': 16, 'p': 131, 'lamps': 131, 'kappa^2': 0.2217263652378156, '8/kappa^2': 36.08050847457627, 'log2D': 30.055790814565903, 'barrier_holds(log2D<=8/k^2+2log2p+1)': True, 'signed_regular_certifies_at_most': 0.0902012711864407}
+{'K': 16, 'p': 1031, 'lamps': 1031, 'kappa^2': 0.2463740547870387, '8/kappa^2': 32.47095156555773, 'log2D': 36.01825723943869, 'barrier_holds(log2D<=8/k^2+2log2p+1)': True, 'signed_regular_certifies_at_most': 0.08117737891389433}
+{'K': 32, 'p': 131, 'lamps': 131, 'kappa^2': 0.09583088667058133, '8/kappa^2': 83.48039215686275, 'log2D': 46.0557908145659, 'barrier_holds(log2D<=8/k^2+2log2p+1)': True, 'signed_regular_certifies_at_most': 0.20870098039215684}
+{'K': 32, 'p': 1031, 'lamps': 1031, 'kappa^2': 0.1212584633638752, '8/kappa^2': 65.97477634194831, 'log2D': 52.01825723943869, 'barrier_holds(log2D<=8/k^2+2log2p+1)': True, 'signed_regular_certifies_at_most': 0.1649369408548708}
+{'K': 64, 'p': 131, 'lamps': 131, 'kappa^2': 0.03288314738696418, '8/kappa^2': 243.2857142857143, 'log2D': 78.05579081456591, 'barrier_holds(log2D<=8/k^2+2log2p+1)': True, 'signed_regular_certifies_at_most': 0.6082142857142858}
+{'K': 64, 'p': 1031, 'lamps': 1031, 'kappa^2': 0.05870066765229347, '8/kappa^2': 136.28465092402465, 'log2D': 84.0182572394387, 'barrier_holds(log2D<=8/k^2+2log2p+1)': True, 'signed_regular_certifies_at_most': 0.34071162731006155}
+ALL CHECKS PASSED

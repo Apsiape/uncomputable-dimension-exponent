@@ -1,0 +1,117 @@
+\section{A carry checker for logarithmic profiles}\label{sec:profile-clock}
+The finite presentation in this part converts a programmed pulse count into a precision profile. It uses the compiler, clocks, weighted transport, triangular count and original-state extraction of \cref{sec:compiler,sec:clock,sec:count,sec:usable}, and the counter and stopped-product arguments of \cref{sec:power-machine,sec:power-calibration}. Its controller has no game-witness register. Throughout, $\xi=\sqrt\rho$ and $|R|_\rho=\|R\xi\|_2$; logarithms are base two. All constants depend only on a fixed finite presentation. The precision convention is that of \cref{sec:power-clock}, including square-root-state commutators.
+
+\subsection{The cost of a checker increment}
+\begin{remark}[Standard-model overflow]\label{rem:profile-overflow}
+On the standard $N_c$-bit cyclic time register, the unguarded increment in \cref{sec:power-clock} has residual
+\[
+ (|0^{N_c}\rangle-|10^{N_c-1}\rangle)\langle1^{N_c}|,
+ \qquad \|R\|_f=\sqrt2\,2^{-N_c/2}.
+\]
+At unpowered precision $\delta=2^{-n/2}$ it therefore needs $N_c\ge n+1$, whereas the clock count resolves $\log_4(1/\delta)=n/4$ digits per checker. Two such registers leave a linear difference between these upper-model costs and that count. The carry model below has overflow amplitude $4^{-N_c}$, so $N_c=n/4+O(1)$ suffices. This comparison concerns the displayed models and makes no lower-bound claim about all models of the unguarded relation.
+\end{remark}
+The rank-one residual follows by evaluating the increment on the all-ones input; all other input columns agree. Its two output basis vectors are orthogonal, giving the stated flat norm. The carry recursion of \cref{sec:source,sec:finite} instead assigns $H(x)=4^{-r(x)}$ when $r(x)<N_c$ initial bits are one, and zero on the all-ones point. Its recursion is exact and its increment residual is $4^{-N_c}$ on that point. The clock's affine and tail-flip residuals are $3\cdot4^{-N_c}$ times a projection or commutator, and set the common precision scale. This is the vanishing-amplitude alternative to the fixed-rejection-gap obstruction of Appendix~\ref{sec:obstructions}.
+
+\subsection{The complete presentation}
+Fix a finite deterministic INC/DECJZ/NOP program $\pi$, initially in its zero-counter start configuration, with two output NOP controls. Let $w\in\{0,1\}^{\N}$ be its pulse word, $k(J)$ its one-count among the first $J$ pulses, and $t_J$ the physical time just after pulse $J$. Set $k(0)=0$, $t_0=0$ and $\kappa(l)=\min\{J:k(J)=l\}$, with $\kappa(0)=0$. Take fixed integers $m,q\ge1$.
+
+The \emph{checker} has two Cantor-clock copies, fuel and time, satisfying \eqref{eq:clock}. Add a positive time carry $H_t$ and a unitary time increment $U$ with
+\begin{equation}\label{eq:profile-carry}
+\begin{gathered}
+ H_t=(I-P_t)+\tfrac14P_tT_tH_tT_t^*,\qquad
+ [P_t,T_tH_tT_t^*]=[H_t,A_t]=0,\\
+ U^*A_tU=A_t-I+\tfrac74H_t.
+\end{gathered}
+\end{equation}
+The complete fuel set commutes with the complete time set, including $H_t$, and with $U$. The reset projection $Z$ commutes with $A_f,A_t$ and satisfies \eqref{eq:power-reset} for $W=T_fT_t$.
+The controller uses exactly the domains and rational equations \eqref{eq:power-counter-domains}--\eqref{eq:power-counter-update}, with $Y_+=U^*YU$. In particular $F=Q_{\mathrm{zero}}+Q_{\mathrm{one}}$ and $G=Q_{\mathrm{one}}$.
+
+For each $i\le m$ introduce a source clock $\mathcal S_i=(A_i,P_i,T_i,X_i)$. Its relations $[A_i,P_i]=0$ and $X_iP_iX_i=I-P_i$ are retained. The two other clock relations are replaced by
+\begin{equation}\label{eq:profile-source}
+ T_iA_iT_i^*-4A_i+3P_i=V_{i1}\Theta_{i1},\qquad
+ [X_i,T_iA_iT_i^*]=V_{i2}\Theta_{i2},
+\end{equation}
+where the $V_{i\nu}$ are unitaries and the $\Theta_{i\nu}$ positive contractions. Complete source-clock sets commute with one another and with both complete checker-clock sets. There are no other source commutations.
+
+For every $(i,\nu)$ use a calibrator \eqref{eq:power-calibrator}, with input $T_0=\Theta_{i\nu}$, its own $S,C,D,H_{\rm run},P_{\rm stop}$, and the shared controller and reset. Thus its equations are
+\begin{equation}\label{eq:profile-calibrator}
+\begin{gathered}
+ (I-H_{\rm run})P_{\rm stop}=0,\quad Z(C-\Theta)=Z(D-S)=Z(H_{\rm run}-I)=0,\\
+ (H_{\rm run})_+=Z_++(I-Z_+)(H_{\rm run}-P_{\rm stop}),\\
+ C_+=Z_+\Theta+(I-Z_+)C[I+G(H_{\rm run}-P_{\rm stop})],\\
+ D_+=Z_+S+(I-Z_+)D[I+F(H_{\rm run}-P_{\rm stop})],\\
+ (D-I/2)P_{\rm stop}=0,\qquad S=0.
+\end{gathered}
+\end{equation}
+For a calibrator its instantaneous list consists of $Z$, all controller variables and $\Theta,S,C,D$, together with $H_{\rm run},P_{\rm stop}$. Require pairwise commutation in that list and commutation with $A_f,A_t$. Static $\Theta,S$ commute with every checker generator and $U$. Distinct calibrator workspaces need not commute; no additional commutation is imposed on $V_{i\nu}$. The domains are those in the counter and calibrator constructions. This is a finite rational bounded $*$-polynomial presentation. Power every defining residual, commutators included, by the polynomial construction \eqref{eq:power-polynomial}, retaining domains and state-commutator tests, and apply \cref{thm:compiler}. Denote the resulting rational BCS game by $G[\pi,m,q]$.
+
+\subsection{Polynomial localization with the carry coordinate}
+\begin{theorem}[Carry-checker interface]\label{thm:profile-interface}
+For every weighted precision-$\delta$ model of this presentation and horizon $H\ge2$, choose $H<2^k\le2(H+1)$ and put
+\[
+ \Gamma_k=\left(\prod_{j<k}P_{f,j}\right)(I-P_{f,k}),\quad
+ D_k=\prod_{j<k}(I-P_{t,j}),\quad Q=\Gamma_kD_k,
+\]
+with raw digits $P_{c,j}=T_c^jP_cT_c^{-j}$ and products in the displayed order. For $Y$ an instantaneous self-adjoint contraction and $\Theta$ a static input there are fixed $C,a$ such that, writing $Y_h=U^{-h}YU^h$ and $r=C(H+1)^a\delta$,
+\begin{align*}
+ |(I-Z)Q|_\rho&\le r,&|Z_hQ|_\rho&\le r\quad(1\le h\le H),\\
+ |[Y_h,Q]|_\rho&\le r\quad(0\le h\le H),&
+ |\Theta|_\rho&\le C(H+1)\|\Theta Q\xi\|_2+r,\\
+ \|\Theta Q\xi\|_2&\le|\Theta|_\rho+r.
+\end{align*}
+\end{theorem}
+\begin{proof}
+Use \cref{lem:transport,lem:fc,lem:clock-repair,lem:carry} and the word-interchange argument in \cref{lem:joint}. For self-adjoint $B$ and a contraction $Y$, moving the right factor across $\xi$ gives
+\[
+ |[B,Y]|_\rho\le2|B|_\rho+\|B\|\|[Y,\xi]\|_2.
+\]
+The clock repair $\widehat A_c$ has spectrum in the Cantor set $\K$, differs from $A_c$ by $O(\delta)$ in weighted norm, and has square-root-state commutator $O(\delta)$. Its raw digits differ from $f_j(\widehat A_c)$ by $C4^j\delta$. Own-bit flips and preservation of later digits have errors at most $C(M+1)^34^M\delta$ through depth $M$.
+
+Identify $\K$ with $\Z_2$ by $x=\sum_{j\ge0}3b_j4^{-j-1}$ and let $g_h$ be addition by $h$. Addition preserves the first differing binary digit, so every $g_h$ is 2-Lipschitz on $\K$. The functions $f_j$ have Lipschitz constant $2\cdot4^j$, while $f_j\circ g_{-h}$ has constant at most $4^{j+1}$ on $\K$. Such functions extend linearly across Cantor gaps without increasing their constants. The carry translation estimate gives
+\[
+ |U^{-h}\widehat A_tU^h-g_h(\widehat A_t)|_\rho\le C(h+1)\delta.
+\]
+Conjugating by $U^h$ costs $O(h\delta)$ by right transport. Apply the 2-Lipschitz map $g_{-h}$, using functional calculus on operators with Cantor spectrum, to obtain also
+\begin{equation}\label{eq:profile-inverse-translation}
+ |U^h\widehat A_tU^{-h}-g_{-h}(\widehat A_t)|_\rho\le C(h+1)\delta.
+\end{equation}
+The needed state-commutator term is $O(\delta)$. Thus neither direction incurs an iterated Lipschitz factor.
+
+\par\smallskip\noindent\textit{Time cylinders.}\quad
+Let $B_c\subset\K$ be the residue class $c\bmod2^k$ and $E_c=1_{B_c}(\widehat A_t)$. Its indicator is $2\cdot4^k$-Lipschitz on $\K$. Replace the raw factors of $D_k$ from the right. Each replacement costs its digit error plus the state commutator of the remaining spectral product, at most $C4^k\delta$. Consequently
+\begin{equation}\label{eq:profile-time-cylinders}
+ |D_k-E_0|_\rho\le Ck4^k\delta,\qquad
+ |U^hD_kU^{-h}-E_h|_\rho\le C(h+1)k4^k\delta.
+\end{equation}
+The second bound uses \eqref{eq:profile-inverse-translation} and $1_{B_0}\circ g_{-h}=1_{B_h}$. Also $E_0E_h=0$ for $1\le h<2^k$.
+
+\par\smallskip\noindent\textit{Fuel and reset.}\quad
+The weighted commutators of $Z,\Theta,E_c$ with $\Gamma_k$ are bounded by $C(k+2)^44^k\delta$. For $Z$, pass from its commutator with $A_f$ to $\widehat A_f$, then to its spectral digits, and back to raw digits using the preceding commutator inequality. For $E_c$ use commutation of fuel generators with $A_t$ and functional calculus. For static $\Theta$ use its generator commutations. Expand product commutators with their right-factor state terms. Word interchange similarly gives
+\[
+ |U^h\Gamma_kU^{-h}-\Gamma_k|_\rho\le C(h+1)^2(k+2)^6\delta.
+\]
+Translate the reset equation by $W^j$. Interchanging fuel/time words has polynomial cost in $j$, giving
+\[
+ Z^{(j)}=(I-P_{f,j})+P_{f,j}(I-P_{t,j})Z^{(j+1)}+e_j,
+ \quad |e_j|_\rho\le C(j+1)^3\delta,\quad\|e_j\|\le8.
+\]
+For $G_j=\prod_{i<j}P_{f,i}(I-P_{t,i})$, ordered substitution through $k$ yields
+\[
+ Z=\sum_{j\le k}G_j(I-P_{f,j})+G_{k+1}Z^{(k+1)}+\sum_{j\le k}G_je_j.
+\]
+On left multiplication by $\Gamma_k$, the $j<k$ terms vanish up to digit/interchange errors by $P_{f,j}(I-P_{f,j})=0$. In the $j=k$ term, move $P_{f,k}$ against $I-P_{f,k}$ and drop the repeated earlier fuel digits. The remainder is $\Gamma_kD_k$. The final term has the same contradictory $P_{f,k}$ factor; transport of its remaining right factor costs $O(k)\delta$. Hence
+\begin{equation}\label{eq:profile-reset-local}
+ |\Gamma_kZ-\Gamma_kD_k|_\rho\le C(k+2)^64^k\delta.
+\end{equation}
+Move $Z$ past $\Gamma_k$ and use $D_k^2\approx E_0^2=E_0\approx D_k$ to get $ZQ\approx Q$. For $h\ge1$, right transport and \eqref{eq:profile-time-cylinders} give $ZU^hQU^{-h}\approx Z\Gamma_kE_h\approx\Gamma_kD_kE_h\approx\Gamma_kE_0E_h=0$. This proves the first two interface bounds, including all right-factor state commutators.
+
+\par\smallskip\noindent\textit{Transported workspaces.}\quad
+Conjugate $[Y,\widehat A_t]$ and replace the translated clock by $g_h(\widehat A_t)$. The commutator inequality gives $|[Y_h,g_h(\widehat A_t)]|_\rho\le C(h+1)\delta$. Apply functional calculus to $f_j\circ g_{-h}$, then return to raw digits, obtaining $|[Y_h,P_{t,j}]|_\rho\le C4^j(h+1)\delta$. Here $\|[Y_h,\xi]\|_2\le(2h+1)\delta$. Fuel digits use commutation of $U$ with the fuel generators and the same spectral argument for $Y$. Product expansion over the $2k+1$ factors proves the third interface bound.
+
+\par\smallskip\noindent\textit{Amplitude charge.}\quad
+Take the ordered measurement columns of these $2k+1$ projection factors. Exact completeness holds even when different factors fail to commute. Static $\Theta$ moves through their words with the displayed polynomial error. The flip at a factor exchanges its two outcomes and preserves the suffix: use later-digit preservation within a clock and generator commutation between clocks. It also approximately commutes with $\Theta$ and $\xi$. Put $\epsilon_k=C(k+2)^44^k\delta$. Moving $\Theta$ to the right, applying exact two-column completeness, and moving it back gives $|\sqrt{a_0^2+a_1^2}-a|\le C\epsilon_k$ for the two outcome amplitudes and their preceding amplitude. The flip gives $|a_0-a_1|\le C\epsilon_k$. These are amplitude estimates, so no square root of an error is taken. Writing $\alpha_i$ for the successive chosen-branch amplitudes, they imply
+\[
+ \alpha_i\ge2^{-1/2}\alpha_{i+1}-C\epsilon_k.
+\]
+Iterate over all $2k+1$ bits. The additive errors form a geometric sum, so $\|\Theta Q\xi\|_2\ge2^{-(2k+1)/2}|\Theta|_\rho-C\epsilon_k$. Since $2^{(2k+1)/2}=O(H+1)$, this proves the amplitude charge. Finally $\Theta Q\xi=Q\Theta\xi+[\Theta,Q]\xi$ gives the last estimate. Every remaining error is a fixed polynomial in $H$ times $\delta$, because $k=O(\log H)$.
+\end{proof}

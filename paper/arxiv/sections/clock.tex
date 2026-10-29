@@ -1,0 +1,122 @@
+\section{A finite Cantor clock}\label{sec:clock}
+The clock has a positive contraction $A$, a projection $P$, a unitary $T$ and a self-adjoint unitary $X$, with relations
+\begin{equation}\label{eq:clock}
+ [A,P]=0,\quad TAT^*=4A-3P,\quad XPX=I-P,\quad [X,TAT^*]=0.
+\end{equation}
+For $j\in\N$ put $P_j=T^jPT^{-j}$ and $X_j=T^jXT^{-j}$. The Cantor set used here is
+\[
+ \K=\left\{\sum_{j\ge0}3b_j4^{-j-1}:b_j\in\{0,1\}\right\}.
+\]
+Let $p$ be its first-digit function, extended to $[0,1]$ by
+\[
+ p(a)=\begin{cases}0&a\le1/4,\\2a-1/2&1/4\le a\le3/4,\\1&a\ge3/4,\end{cases}
+ \qquad s(a)=4a-3p(a).
+\]
+These functions are respectively $2$- and $4$-Lipschitz and map $[0,1]$ into itself.
+
+\begin{lemma}[Exact digits]\label{lem:exact-clock}
+In an exact model, $A$ has spectrum in $\K$, all $P_j$ are commuting spectral functions of $A$, and
+\begin{equation}\label{eq:clock-expand}
+ A=\sum_{j<M}3\cdot4^{-j-1}P_j+4^{-M}T^MAT^{-M}.
+\end{equation}
+The flip $X_j$ exchanges $P_j$ and $I-P_j$ and preserves all $P_l$ with $l>j$. In every tracial state,
+\begin{equation}\label{eq:fair-cylinders}
+ \tau\left(\prod_{j<M}P_j^{b_j}(I-P_j)^{1-b_j}\right)=2^{-M}.
+\end{equation}
+The spectral projection of $A$ at $1$ is zero in the faithful tracial representation.
+\end{lemma}
+\begin{proof}
+Since $A,P$ commute and $0\le4A-3P\le I$, the $I-P$ block of $A$ has spectrum in $[0,1/4]$ and the $P$ block in $[3/4,1]$. Hence $P=p(A)$ and $TAT^*=s(A)$. Conjugating this statement repeatedly proves $P_j=p(s^j(A))$ and~\eqref{eq:clock-expand}. Its remainder has norm at most $4^{-M}$, which places the spectrum in $\K$. The tail coordinate $TAT^*$ determines every later digit. Its commutation with $X$, and $XPX=I-P$, give the flip assertions, then their translates. A trace assigns equal mass to a cylinder and its earliest-bit flip. Add the two and repeat on the remaining suffix to obtain~\eqref{eq:fair-cylinders}. The spectral projection at $1$ lies under every all-ones cylinder and has trace at most $2^{-M}$ for every $M$. Faithfulness makes it zero.
+\end{proof}
+
+\begin{lemma}[Linear spectral repair]\label{lem:clock-repair}
+There is an absolute constant $C$ such that any weighted precision-$\delta$ clock has a self-adjoint $\widehat A$ with spectrum in $\K$ satisfying
+\begin{align}
+ |\widehat A-A|_\rho+\hs{[\widehat A,\xi]}&\le C\delta,\label{eq:linear-repair}\\
+ |P_j-p(s^j(\widehat A))|_\rho&\le C4^j\delta.\label{eq:digit-repair}
+\end{align}
+The first $M$ raw digit projections and triangular flips satisfy digit--digit commutations, own-bit flips, later-digit preservation and state commutations with error at most $C(M+1)^3 4^M\delta$. The spectral digit projections $p(s^j(\widehat A))$ commute exactly and differ from the raw ones by~\eqref{eq:digit-repair}.
+\end{lemma}
+\begin{proof}
+Set $B_0=TAT^*$, $D_0=PB_0P+(I-P)B_0(I-P)$ and $C_0=(D_0+3P)/4$. The affine relation and $[A,P]$ give $|[B_0,P]|_\rho=O(\delta)$ by Lemma~\ref{lem:transport}. Since $B_0-D_0=(2P-I)[P,B_0]$, it follows that $|D_0-B_0|_\rho=O(\delta)$ and $|C_0-A|_\rho=O(\delta)$. Their state commutators are $O(\delta)$ from their fixed polynomial definitions. All are positive contractions, and $D_0$ commutes with $P$.
+
+Let $d_\K$ be distance to $\K$, a $1$-Lipschitz function. Cantor self-similarity on the two $P$ blocks gives $d_\K(C_0)=d_\K(D_0)/4$. Lemma~\ref{lem:fc} and unitary transport give
+\[
+ |d_\K(A)|_\rho\le\tfrac14|d_\K(A)|_\rho+O(\delta).
+\]
+Thus $|d_\K(A)|_\rho=O(\delta)$. Round each spectral value of $A$ to a nearest point of $\K$. The resulting $\widehat A$ has $|\widehat A-A|_\rho=O(\delta)$. For any self-adjoint $E$, $\hs{[E,\xi]}\le2|E|_\rho$; apply this to $E=\widehat A-A$ to prove~\eqref{eq:linear-repair}. No continuity of the nearest-point map is needed.
+
+Since $p(C_0)=P$, functional calculus gives $|P-p(\widehat A)|_\rho=O(\delta)$, and then the affine relation gives $|T\widehat AT^*-s(\widehat A)|_\rho=O(\delta)$. For $g=p\circ s^r$, the one-step error
+\[
+ |Tg(\widehat A)T^*-g(s(\widehat A))|_\rho\le C4^r\delta
+\]
+follows from~\eqref{eq:fc-diff}. Telescope these identities to depth $j$. The sum is $O(4^j\delta)$. Every digit function has norm at most one, so transporting the errors through the outer powers of $T$ adds only $O(j^2\delta)$, absorbed by $O(4^j\delta)$. This proves~\eqref{eq:digit-repair}.
+
+For the flips, translate $XPX=I-P$ and replace each $P_j$ using~\eqref{eq:digit-repair}. For $l>j$, use the tail coordinate $T^{j+1}AT^{-(j+1)}$. The translated last relation of~\eqref{eq:clock} makes its commutator with $X_j$ at most $C(j+1)\delta$ in weighted norm. Its digit at position $l-j-1$ is a function with Lipschitz constant at most $2\cdot4^{l-j-1}$. Apply~\eqref{eq:fc-comm}, replace the digit back, and use Lemma~\ref{lem:transport}. The error is at most $C(M+1)^3 4^M\delta$. Raw digit commutators follow by replacing both with commuting functions of $\widehat A$; the two replacement costs add. Finally $\hs{[P_j,\xi]},\hs{[X_j,\xi]}\le(2j+1)\delta$. This proves all assertions.
+\end{proof}
+
+\begin{remark}\label{rem:affine-only}
+The spectral repair and digit estimate use only positivity, the affine equation, $[A,P]=0$, and state commutators. They apply without a flip. This will be used for the conditional coordinates.
+\end{remark}
+
+\begin{theorem}[Clock profile]\label{thm:clock-profile}
+For the presentation~\eqref{eq:clock},
+\[
+ \log W(2^{-n})=\frac n2+O(\log(n+2)),\qquad
+ \log H(2^{-n})=\frac n2+O(\log(n+2)).
+\]
+There are flat models on $N$ qubits of precision $3\cdot4^{-N}$.
+\end{theorem}
+\begin{proof}
+On $N$ qubits let $P_j$ read bit $j$, let $T$ rotate contents from slot $j$ to slot $j+1$ cyclically, and let $X$ flip bit zero. Put
+\begin{equation}\label{eq:finite-clock}
+ A_N=\sum_{j=0}^{N-1}3\cdot4^{-j-1}P_j.
+\end{equation}
+Then $[A_N,P_0]=0$, $XP_0X=I-P_0$, and
+\[
+ TA_NT^*-4A_N+3P_0=3\cdot4^{-N}P_0,\qquad
+ [X,TA_NT^*]=3\cdot4^{-N}[X,P_0].
+\]
+All state commutators vanish in the flat state, proving the upper bound. For the lower bound, use $M$ digits and flips from Lemma~\ref{lem:clock-repair} in the binary case of the counting lemma, Theorem~\ref{thm:count}, proved below. Choose $M=\lfloor\log_4(1/\delta)-20\log_4(2+\log_4(1/\delta))\rfloor$. Its error terms tend to zero, so $\log d\ge M-o(1)$. At $\delta=2^{-n}$ this is $n/2-O(\log(n+2))$. Since $W\le H$, both conclusions follow. This forward reference uses no property of the program constructed later.
+\end{proof}
+
+\subsection{Guarded increment}
+Add a unitary $V$ and the relation
+\begin{equation}\label{eq:guard}
+ \bigl(V-X[(I-P)+(TVT^*)P]\bigr)(I-A)=0.
+\end{equation}
+\begin{proposition}\label{prop:increment}
+The finite clocks have increment models of dimension $2^N$ whose guarded defect has operator norm $\sqrt2\,4^{-N}$ and flat norm $\sqrt2\,4^{-N}2^{-N/2}$. In an exact faithful tracial model, $V$ increments every finite binary digit prefix.
+\end{proposition}
+\begin{proof}
+Let $V_N$ add one modulo $2^N$, with bit zero least significant. If that bit is zero, the right-hand side before the guard is the correct first-bit flip. If it is one and some later bit is zero, $TV_NT^*$ carries through slots $1,2,\ldots$ to the first zero and $X$ then clears slot zero. Only the all-ones input fails:
+\[
+ R_N:=V_N-X[(I-P_0)+(TV_NT^*)P_0]
+   =(|0^N\rangle-|10^{N-1}\rangle)\langle1^N|.
+\]
+The guard equals $4^{-N}$ there. The two norm statements follow from the rank-one formula. For exact tracial models, Lemma~\ref{lem:exact-clock} makes $I-A$ have dense range, so its bounded left factor in~\eqref{eq:guard} vanishes. Put $C=TVT^*$ and $D=(I-P)+CP$. Since $V=XD$, $D$ is unitary. It fixes $\ker P$ pointwise, so unitarity forces $\ran P$ onto itself; there $D$ is $C$. Hence $[C,P]=0$. The recursion now reads binary increment on the first bit followed by increment on the tail on its carry branch. Induction on prefix length proves the assertion.
+\end{proof}
+
+\begin{proposition}[Mass near the vanishing guard]\label{prop:guard-mass}
+There is an absolute constant $C$ such that every weighted precision-$\delta$ clock and every integer $M\ge1$ satisfy
+\begin{equation}\label{eq:guard-mass}
+ \Tr\bigl(\rho\,1_{[1-4^{-M},1]}(A)\bigr)
+ \le2^{-M}+C(M+1)^5 4^M\delta.
+\end{equation}
+If $\opn R\le L$ and $|R(I-A)|_\rho\le\delta$, then
+\begin{equation}\label{eq:guard-remove}
+ |R|_\rho\le4^M(1+L)\delta
+ +L\sqrt{2^{-M}+C(M+1)^5 4^M\delta}.
+\end{equation}
+In particular $|R|_\rho=O((1+\log(1/\delta))^{5/2}\delta^{1/6})$ for fixed $L$.
+\end{proposition}
+\begin{proof}
+Here it is useful to avoid rounding $A$ first. From the proof of Lemma~\ref{lem:clock-repair}, $|P-p(A)|_\rho=O(\delta)$ and $|TAT^*-s(A)|_\rho=O(\delta)$. The same telescoping gives
+$|P_j-p(s^j(A))|_\rho\le C4^j\delta$. Threshold $p(s^j(A))$ at $1/2$ to commuting projections $R_j$. Against an exact projection the cross-spectrum Lipschitz bound for this threshold is two: for $b\in\{0,1\}$ and $a\in[0,1]$, $|1_{[1/2,1]}(a)-b|\le2|a-b|$. The eigenbasis proof of Lemma~\ref{lem:fc}, followed by its state-commutator insertion, therefore gives $|R_j-P_j|_\rho\le C(j+1)4^j\delta$. Their commutators with $\xi$ and the triangular flip defects are at most $\eta=C(M+1)^3 4^M\delta$.
+
+For completeness, an approximately invariant suffix law differs from its earliest-bit swap by at most $CM^2\eta$. Pinch $\xi$ in the commuting $R_j$ to $\zeta$; each pinching costs at most $\eta$, so $\hs{\xi-\zeta}\le M\eta$. Intertwining a flip with one recorded digit has error $O((M+1)\eta)$ on $\zeta$. Inserting previous joint spectral projections does not enlarge the sum of squared branch errors, since they commute with $\zeta$. Telescoping at most $M$ digits and returning to $\xi$ costs $CM^2\eta$. The initial state changes by trace norm at most $2\eta$ under its flip. Purification distance now bounds the claimed total variation.
+
+Let $q_i$ be the probability that $R_i,\ldots,R_{M-1}$ are all one, with $q_M=1$. The swap bound gives $|2q_i-q_{i+1}|\le CM^2\eta$, hence $q_0\le2^{-M}+CM^2\eta$. If $a\ge1-4^{-M}$, then $s^j(a)=1-4^j(1-a)\ge3/4$ for $j<M$. Thus all $R_j$ are one on that spectral interval. This proves~\eqref{eq:guard-mass}.
+
+Put $G=I-A$ and $E=1_{[0,4^{-M}]}(G)$. Since $R\xi G=RG\xi+R[\xi,G]$, its norm is at most $(1+L)\delta$. On $I-E$ the inverse of $G$ has norm at most $4^M$, while $\hs{R\xi E}\le L\sqrt{\Tr(\rho E)}$. Add the two column bounds and use~\eqref{eq:guard-mass}. Finally choose $M=\lfloor\frac13\log_2(1/\delta)\rfloor$. Both $2^{-M}$ and $4^M\delta$ are of order $\delta^{1/3}$, proving the last assertion. The relaxed polynomial factor here is harmless; only exact guard cancellation is needed in the flag proof.
+\end{proof}

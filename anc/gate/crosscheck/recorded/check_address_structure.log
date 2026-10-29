@@ -27,7 +27,7 @@ N=4: S=[0, 1], mean flag lambda_N=0.687500, max window=3, k_N=4, data factor L_N
   [C, A]                                                         0.000e+00
   [Q, A]                                                         0.000e+00
   [Y, A]                                                         0.000e+00
-  Equation (15.2): (I-L)(I-F)                                            0.000e+00
+  Equation (15.2): (I-L)(I-F)                                    0.000e+00
   NEW data domain: D^2-D, E^2-E, W*W-I                           0.000e+00
   NEW [D, A_a],[D,L],[D,R],[D,F]                                 0.000e+00
   NEW [E, A_a],[E,L],[E,R],[E,F]                                 0.000e+00
@@ -64,7 +64,7 @@ N=6: S=[0, 2], mean flag lambda_N=0.734375, max window=5, k_N=6, data factor L_N
   [C, A]                                                         0.000e+00
   [Q, A]                                                         0.000e+00
   [Y, A]                                                         0.000e+00
-  Equation (15.2): (I-L)(I-F)                                            0.000e+00
+  Equation (15.2): (I-L)(I-F)                                    0.000e+00
   NEW data domain: D^2-D, E^2-E, W*W-I                           0.000e+00
   NEW [D, A_a],[D,L],[D,R],[D,F]                                 0.000e+00
   NEW [E, A_a],[E,L],[E,R],[E,F]                                 0.000e+00
@@ -101,7 +101,7 @@ N=6: S=[], mean flag lambda_N=1.000000, max window=6, k_N=7, data factor L_N=1 (
   [C, A]                                                         0.000e+00
   [Q, A]                                                         0.000e+00
   [Y, A]                                                         0.000e+00
-  Equation (15.2): (I-L)(I-F)                                            0.000e+00
+  Equation (15.2): (I-L)(I-F)                                    0.000e+00
   NEW data domain: D^2-D, E^2-E, W*W-I                           0.000e+00
   NEW [D, A_a],[D,L],[D,R],[D,F]                                 0.000e+00
   NEW [E, A_a],[E,L],[E,R],[E,F]                                 0.000e+00

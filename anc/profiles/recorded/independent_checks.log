@@ -1,0 +1,26 @@
+{
+  "overflow_point_removal_attack": "PASS; details in JSON",
+  "noncommuting_shared_calibrators": {
+    "checker_labels": 64,
+    "source_block_dimension": 2,
+    "calibrators": 2,
+    "equations_checked": 5420,
+    "max_residual": 0.0,
+    "max_cross_calibrator_C_commutator": 0.397747564417433,
+    "domain_min": 0.0,
+    "domain_max": 1.0
+  },
+  "greedy_tracking": {
+    "target_words": 6561,
+    "steps_per_word": 8,
+    "max_error": "2",
+    "bound": 3
+  },
+  "affine_parameters": "PASS; details in JSON",
+  "independent_hold_schedule": "PASS; details in JSON",
+  "diagonal_decoder_margin": {
+    "cases": 224,
+    "max_endpoint_error_fraction": "1/100"
+  }
+}
+ALL INDEPENDENT CHECKS PASSED

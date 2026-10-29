@@ -98,8 +98,8 @@ UPPER PASS 1/2 4
   },
   "dyadic_history_equalities": "exact bitwise equality; no nonzero residuals",
   "two_unitary_extensions": "floating-point check, tolerance 1e-12; exact existence given by polar formula",
-  "memory_peak_bytes": 65605632,
-  "seconds": 22.363586199935526,
+  "memory_peak_bytes": 65900544,
+  "seconds": 25.910676199942827,
   "scope": "semantic scalar arithmetic and finite block histories; no universal-counter compilation, actual MIP* game, infinite trace or asymptotic lower bound executed",
   "passed": true
 }

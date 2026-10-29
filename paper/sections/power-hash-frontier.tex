@@ -1,0 +1,74 @@
+\subsection{What a global pairwise certificate can establish}\label{sec:hash-frontier}
+The following obstruction concerns a certificate using only global pair errors, mirrors and square-root-state commutators. It places no upper bound on the actual resource demand of a game with additional relations.
+
+\begin{proposition}[Pairwise hash models]\label{prop:pairwise-hash}
+For $N$ labelled qubits and $0<\kappa\le1$, there are reflections with exact squares, exact on-site anticommutation, exact mirrors and zero square-root-state commutators, whose distinct-site signed pair errors are at most $\kappa$, with a pure flat model satisfying
+\[
+ \log_2D\le8\kappa^{-2}+2\log_2\max(N,8\kappa^{-2})+2.
+\]
+For $N\ge2$ another such model satisfies
+\[
+ \log_2D\le12\kappa^{-2}+3\log_2(C\kappa^{-2}\log_2N)
+\]
+for an absolute constant $C$. There are mixed models with the first model's pair errors and both directional distillable entanglements and formation exactly $K=\lfloor8\kappa^{-2}\rfloor$, independently of $N$.
+\end{proposition}
+\begin{proof}
+Let $K\ge1$ and take a prime $p\ge\max(N,K)$. Label items by distinct elements of $\mathbb F_p$, and average uniformly over $h_{a,b}(u)=((au+b)\bmod p)\bmod K$, $a\ne0$. On the block for $h$, use Pauli $X,Z$ on qubit $h(u)$ in a $K$-qubit register. Squares and on-site anticommutation are exact; equal-type Paulis always commute. For distinct items a cross commutator is zero off collisions and has norm two on a collision.
+
+Write $p=qK+r$, $0\le r<K$. A distinct ordered pair of field elements is uniform under $(a,b)$, and the residue classes have sizes $q$ or $q+1$. Thus
+\[
+ \Pr[h(u)=h(v)]=\frac{Kq(q-1)+2rq}{p(p-1)}\le\frac1K.
+\]
+Indeed, after multiplying by $K$, the difference between the denominator and numerator is $Kq(K-1)+r(r-1)\ge0$. The squared cross error is four times this probability. Take $K=\lfloor8\kappa^{-2}\rfloor\ge4\kappa^{-2}$ and, by Bertrand's theorem, $p<2\max(N,K)$; the endpoint two is harmless. The direct-sum Hilbert space has dimension $2^Kp(p-1)$, proving the first bound. Its maximally entangled state supplies exact transposed mirrors and a scalar square-root marginal.
+
+For the refinement put $d=\lceil\log_2N\rceil$, $K=\lfloor12\kappa^{-2}\rfloor$, and take a prime $dK\le q<2dK$. There are at least $N$ polynomials over $\mathbb F_q$ of degree at most $d$; assign distinct ones $P_u$. Choose a uniform evaluation point $z$ and an independent affine hash of $\mathbb F_q$ into $K$ residues. Distinct polynomials agree at $z$ with probability at most $d/q\le1/K$, and, conditional on distinct values, the preceding exact count bounds their hash collision by $1/K$. Thus collision is at most $2/K$ and squared pair error at most $8/K\le\kappa^2$. The family has fewer than $q^3$ members, giving the second dimension bound. For one item one qubit suffices.
+
+Finally replace the coherent flat hash register by shared classical flags:
+\[
+ \rho=\frac1{|\mathcal H|}\sum_h|h,h\rangle\langle h,h|\otimes\Phi_{2^K}.
+\]
+The controlled reflections have the same weighted errors, flat local marginals and exact mirrors. Discarding the flags distils $K$ ebits in either direction, while the displayed ensemble has formation at most $K$. Since distillation is bounded by formation, all three equal $K$.
+\end{proof}
+
+\begin{proposition}[Junk sectors and the restricted barrier]\label{prop:pairwise-junk}
+Suppose a lower-bound certificate applies a universal pairwise lamp theorem to global weighted errors valid for every loss-$\eps$ strategy, with word decoders respecting direct sums and giving scalar reflections on a deterministic classical sector. Its common pair tolerance must allow $\kappa=\Omega(\sqrt\eps)$. Such a certificate can conclude at most $O(\eps^{-1})$ for original-state distillation or formation, and at most $O(\eps^{-1}+\log(L+1))$ for a pure or dimension bound when all lamp words have length at most $L$ over a fixed finite alphabet.
+\end{proposition}
+\begin{proof}
+Take a strategy $S$ of loss at most $\eps/2$ and a deterministic classical strategy $S_0$. The flagged direct sum $(1-w)S\oplus wS_0$, with $w=\eps/2$, has loss at most $\eps$, dimension $\dim S+1$, and
+\[
+ |q|_\rho^2=(1-w)|q|_S^2+w|q|_{S_0}^2
+\]
+for every decoded polynomial residual. In the scalar sector the on-site anticommutator of two reflected lamps has modulus two. Its weighted error is therefore at least $2\sqrt w$. This forces the common tolerance. Squares, mirrors and cross commutators can be exactly zero there; the lower floor is not a statement about every residual.
+
+A universal bound using only the pairwise data must also hold for \cref{prop:pairwise-hash}. Its mixed flags bound the distillation and formation conclusion by $\lfloor8\kappa^{-2}\rfloor$. Its polynomial hash model bounds a pure or dimension conclusion by $O(\kappa^{-2}+\log(\kappa^{-1}\log(N+1)))$. Word counting gives $\log\log(N+1)\le\log(L+1)+O(1)$, not equality. Substitute the forced tolerance. Selecting sectors, using additional higher-order relations or exploiting more of the game is outside this certificate hypothesis.
+\end{proof}
+
+\subsection{A conditional route above one}\label{sec:stronger-source}
+\begin{definition}[A stronger source interface]\label{def:strong-source}
+A finite marked source has strength $\gamma>0$ if the following hold. Its lower interface, with fixed marker visibility, bounds the directional distillable entanglement of the \emph{original} mixed strategy state by $e^{-2\gamma+o(1)}$ whenever its decoded residuals, mirrors, inverse mirrors and square-root-state commutators are at most $e$. The marker residual is among the tested residuals. Its upper interface supplies flat models with marker $-I$, 
+\[
+ \log_2D_N\le N^{\gamma+o(1)},\qquad
+ \tau(|R_i|^{2v})\le C_vN^{-v}\quad(v\ge1)
+\]
+for every fixed $v$ and every large $N$, simultaneously for its finitely many normalized residuals. The finite upper models must admit the same clock and calibrator extensions used in \cref{thm:power-realization}, at logarithmic auxiliary cost.
+\end{definition}
+
+\begin{theorem}[Transfer from a stronger source]\label{thm:strong-source-transfer}
+If \cref{def:strong-source} holds with positive $\gamma\in\Delta^0_2$, every $\beta\in\Delta^0_2\cap(0,\gamma]$ has one fixed rational value-one BCS game with matched existing power exponent $\beta$ for $\log D_G,d_G^\to,p_G,f_G$.
+\end{theorem}
+\begin{proof}
+Use the stream and calibrator of \cref{thm:power-realization} with pulse density $\beta'=\beta/\gamma\in\Delta^0_2\cap(0,1]$. Limit-computable reals form a field. Include a calibrator and residual test for the marker, retaining its fixed lower-interface visibility.
+
+The same-state calibration gives source error $e=\eps^{\beta'/2-o(1)}$ at loss $\eps$. Mirror and state commutator errors are $O(\sqrt\eps)$, hence no larger asymptotically because $\beta'\le1$. The lower interface gives $E_D^{A\to B}\ge\eps^{-\beta+o(1)}$ on the original state.
+
+For upper models fix $0<v<1/\beta'$. If $v<1$, concavity gives $\tau(|R_i|^{2v})\le\tau(|R_i|^2)^v\le C_1^vN^{-v}$; otherwise use the stated moment bound. The scalar calibrator envelope, its spectral integration and the finite residual sum give penalty at most $C_v|\mathcal R|^vN^{-v}$. Its fixed constants do not depend on $N$. The complete model has loss $O_v(N^{-v})$ and log dimension $N^{\gamma+o(1)}+O_v(\log N)=N^{\gamma+o(1)}$. Thus the upper power exponent is at most $\gamma/v$. Let $v$ increase to $1/\beta'$. The upper states are maximally entangled, so the same upper bound holds for all four resources, matching the lower bound.
+\end{proof}
+
+\begin{proposition}[Necessary costs of such a source]\label{prop:strong-source-necessary}
+Under \cref{def:strong-source}, sharp models admitting the required auxiliary extension of negligible logarithmic cost must have $\log_2\dim H\ge\nu^{-\gamma+o(1)}$ at bad fraction $\nu$. A universal lower interface derived only from the pairwise data of \cref{prop:pairwise-hash} cannot have $\gamma>1$.
+\end{proposition}
+\begin{proof}
+A sharp model has normalized residual errors at most $O(\sqrt\nu)$, exact marker, and exact mirrors in its flat purification. Compile its admissible extension. The lower interface gives original-state distillation at least $\nu^{-\gamma+o(1)}$, bounded by its log dimension. Removing a negligible auxiliary logarithm proves the first claim. For the second, the mixed hash models have all the stipulated errors at most $e$ with distillation and formation $O(e^{-2})$, irrespective of the number of labels. A universal conclusion $e^{-2\gamma+o(1)}$ would contradict them when $\gamma>1$.
+\end{proof}
+
+The lamp source has $\gamma=1$. No stronger source is supplied here. These necessary conditions concern the stated interface and universal pairwise conclusions; they do not exclude sector selection or richer relations. Existing finite power limits above one remain open, alongside the infinite upper exponents of \cref{thm:unbounded-power}.

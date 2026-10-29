@@ -1,5 +1,6 @@
 % Build: pdflatex main; bibtex main; pdflatex main; pdflatex main; pdflatex main; repeat until no label warnings remain.
 \documentclass[11pt,a4paper]{article}
+\newcommand{\DoNotLoadEpstopdf}{}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -13,8 +14,14 @@
 \usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
 \usepackage[capitalise,nameinlink]{cleveref}
 \hypersetup{pdftitle={The uncomputable price of precision},pdfauthor={Seth Douglas and Nidhal Mghirbi},pdfkeywords={nonlocal games, dimension, Boolean constraint systems, computability, approximate representations}}
+\makeatletter
+\renewcommand{\@pnumwidth}{2.4em}
+\renewcommand{\@tocrmarg}{3.4em}
+\renewcommand*\l@section[2]{\@dottedtocline{1}{0pt}{2.4em}{\bfseries #1}{\bfseries #2}}
+\makeatother
 \theoremstyle{plain}
 \newtheorem{theorem}{Theorem}[section]
+\newtheorem*{fronttheorem}{Theorem}
 \newcommand{\sharedtheorem}[2]{\newaliascnt{#1}{theorem}\newtheorem{#1}[#1]{#2}\aliascntresetthe{#1}}
 \sharedtheorem{lemma}{Lemma}
 \sharedtheorem{proposition}{Proposition}
@@ -51,7 +58,7 @@
 \newcommand{\bigO}{O}
 \title{The uncomputable price of precision}
 \author{Seth Douglas \and Nidhal Mghirbi}
-\date{Version 3.0.0, October 2026}
+\date{Version 4.0.0, October 2026}
 \begin{document}
 \maketitle
 \input{sections/abstract}
@@ -75,11 +82,46 @@
 \input{sections/gate}
 \clearpage
 \input{sections/classification}
+\clearpage
+\part*{Power-scale exponents}\addcontentsline{toc}{part}{Power-scale exponents}
+\setcounter{section}{0}
+\renewcommand{\thesection}{P\arabic{section}}
+\renewcommand{\theHsection}{power.\arabic{section}}
+\input{sections/power-overview}
+\input{sections/power-moments}
+\input{sections/power-clock}
+\input{sections/power-machine}
+\input{sections/power-calibration}
+\input{sections/power-ceilings}
+\input{sections/power-ceiling-extensions}
+\input{sections/power-unbounded}
+\input{sections/power-hash-frontier}
+\clearpage
+\part*{Precision profiles and exponent pairs}\addcontentsline{toc}{part}{Precision profiles and exponent pairs}
+\setcounter{section}{0}
+\renewcommand{\thesection}{Q\arabic{section}}
+\renewcommand{\theHsection}{profiles.\arabic{section}}
+\input{sections/profile-clock}
+\input{sections/profile-stream}
+\input{sections/profile-pairs}
+\input{sections/profile-power}
+\input{sections/profile-time}
+\input{sections/group-profiles}
+\input{sections/weak-rounding}
+\clearpage
+\setcounter{section}{16}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\theHsection}{\arabic{section}}
 \input{sections/problems}
 \input{sections/methods}
 \appendix
 \input{sections/obstructions}
 \input{sections/checks}
-\bibliographystyle{plainurl}
-\bibliography{refs}
+\begingroup
+\input{sections/reader-appendix}
+\endgroup
+\begingroup
+\input{sections/gate-appendix}
+\endgroup
+\IfFileExists{refs.bib}{\bibliographystyle{plainurl}\bibliography{refs}}{\input{main.bbl}}
 \end{document}

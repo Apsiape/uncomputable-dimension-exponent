@@ -17,11 +17,11 @@ for target in keys:
     best_all = -np.inf
     for mask in ({}, {'PA': 0, 'UA': 0, 'S': 0}):
         gens = ad.scale_mask(ad.random_gens(d, 3, dE), mask)
-        best = ad.evaluate(base, gens, 1e-3, types)[target]
+        best = ad.evaluate(base, gens, 1e-3, types, target=target)[target]
         step = 0.5
         for it in range(20):
             cand = ad.scale_mask(ad.mix(gens, ad.random_gens(d, 3, dE), step), mask)
-            val = ad.evaluate(base, cand, 1e-3, types)[target]
+            val = ad.evaluate(base, cand, 1e-3, types, target=target)[target]
             if val > best:
                 gens, best = cand, val
             else:
