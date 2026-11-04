@@ -1,6 +1,6 @@
 # Ancillary checks
 
-These files support the written proofs. **The arbitrary-state lower bound rests on the written proof, not on computation.** A Lean formalization of Sections 2--10 is in progress and not complete; no completed formal verification is included.
+These files support the written proofs. **The arbitrary-state lower bound rests on the written proof, not on computation.** Theorem 1.2 (the halting game, label thm:main, eq. (1.4)) is Lean-checked conditional on the explicit hypothesis TarskiDecision (Basu-Pollack-Roy, Theorem 13.13); see `../lean/`. Theorem 1.1, the power-scale and profile results, five side results, and version 2-3 extensions are outside this check.
 
 The compiler uses a Boolean variable for the projection `E` in its orthogonality context (Section 3), the joint commutation list of Lemma 9.3 and the linear translation bound (9.4). The numerical checks in `crosscheck/` test the gadgets and the orthogonality context. The independently implemented engine in `verify/` evaluates the finite models at N = 4, 6, 8; its scope is described below.
 

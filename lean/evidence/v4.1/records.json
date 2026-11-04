@@ -1,0 +1,383 @@
+[
+  {
+    "label": "build-E2.RealArithmetic",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/E2/RealArithmetic.olean",
+      "E2/RealArithmetic.lean"
+    ],
+    "exit": 0,
+    "seconds": 12.5
+  },
+  {
+    "label": "build-Statement",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/Statement.olean",
+      "Statement.lean"
+    ],
+    "exit": 0,
+    "seconds": 14.006
+  },
+  {
+    "label": "build-Challenge",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/Challenge.olean",
+      "Challenge.lean"
+    ],
+    "exit": 0,
+    "seconds": 12.702
+  },
+  {
+    "label": "build-E2.RealArithmeticComplex",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/E2/RealArithmeticComplex.olean",
+      "E2/RealArithmeticComplex.lean"
+    ],
+    "exit": 0,
+    "seconds": 14.306
+  },
+  {
+    "label": "build-E2.RealArithmeticMatrix",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/E2/RealArithmeticMatrix.olean",
+      "E2/RealArithmeticMatrix.lean"
+    ],
+    "exit": 0,
+    "seconds": 14.614
+  },
+  {
+    "label": "build-E2.FeasibilitySentence",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/E2/FeasibilitySentence.olean",
+      "E2/FeasibilitySentence.lean"
+    ],
+    "exit": 0,
+    "seconds": 16.361
+  },
+  {
+    "label": "build-E2.FeasibilityRaw",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/E2/FeasibilityRaw.olean",
+      "E2/FeasibilityRaw.lean"
+    ],
+    "exit": 0,
+    "seconds": 14.394
+  },
+  {
+    "label": "build-E2.FeasibilityComputation",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/E2/FeasibilityComputation.olean",
+      "E2/FeasibilityComputation.lean"
+    ],
+    "exit": 0,
+    "seconds": 25.361
+  },
+  {
+    "label": "build-E2.EffectiveDyadic",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/E2/EffectiveDyadic.olean",
+      "E2/EffectiveDyadic.lean"
+    ],
+    "exit": 0,
+    "seconds": 17.179
+  },
+  {
+    "label": "build-E2.Effective",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/E2/Effective.olean",
+      "E2/Effective.lean"
+    ],
+    "exit": 0,
+    "seconds": 16.773
+  },
+  {
+    "label": "build-Solution",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/Solution.olean",
+      "Solution.lean"
+    ],
+    "exit": 0,
+    "seconds": 16.273
+  },
+  {
+    "label": "build-Blueprint",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/Blueprint.olean",
+      "Blueprint.lean"
+    ],
+    "exit": 0,
+    "seconds": 15.456
+  },
+  {
+    "label": "build-E2.FeasibilityUniform",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/E2/FeasibilityUniform.olean",
+      "E2/FeasibilityUniform.lean"
+    ],
+    "exit": 0,
+    "seconds": 34.612
+  },
+  {
+    "label": "build-E2.RealArithmeticFinite",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/E2/RealArithmeticFinite.olean",
+      "E2/RealArithmeticFinite.lean"
+    ],
+    "exit": 0,
+    "seconds": 13.288
+  },
+  {
+    "label": "build-Audit",
+    "command": [
+      "lean.EXE",
+      "-j1",
+      "-M6144",
+      "-DmaxRecDepth=100000",
+      "-DmaxHeartbeats=4000000",
+      "-DautoImplicit=false",
+      "-o",
+      ".replay/cache/build/lib/lean/Audit.olean",
+      "Audit.lean"
+    ],
+    "exit": 0,
+    "seconds": 15.923
+  },
+  {
+    "label": "export-challenge",
+    "command": [
+      "leanexport.EXE",
+      "Challenge",
+      "--",
+      "E2.challenge",
+      "Quot",
+      "Quot.mk",
+      "Quot.lift",
+      "Quot.ind",
+      "propext",
+      "Classical.choice",
+      "Quot.sound",
+      "Nat.add",
+      "Nat.sub",
+      "Nat.mul",
+      "Nat.pow",
+      "Nat.gcd",
+      "Nat.div",
+      "Nat.mod",
+      "Nat.beq",
+      "Nat.ble",
+      "Nat.land",
+      "Nat.lor",
+      "Nat.xor",
+      "Nat.shiftLeft",
+      "Nat.shiftRight",
+      "String.ofList",
+      "Char.ofNat",
+      "List",
+      "eagerReduce",
+      "Nat",
+      "String",
+      "String.mk",
+      "Char",
+      "optParam",
+      "autoParam",
+      "semiOutParam",
+      "outParam"
+    ],
+    "exit": 0,
+    "seconds": 8.654,
+    "bytes": 71279270,
+    "sha256": "7f53b1c7363a2d4a4fc4c586df6890e4b9940b780be9ed598ee216bc84ba261c"
+  },
+  {
+    "label": "export-solution",
+    "command": [
+      "leanexport.EXE",
+      "Audit",
+      "--",
+      "E2.challenge",
+      "E2.blueprint",
+      "E2.contextGame_value_one",
+      "E2.contextGame_no_perfect",
+      "E2.contextGame_dimension_exponent",
+      "E2.exponent_halting_degree",
+      "E2.exponent_not_computable",
+      "E2.fixed_precision_computable",
+      "E2.dyadic_slope_computable",
+      "E2.no_certified_rate",
+      "E2.FeasibilitySentence.truth_iff_feasible",
+      "E2.FeasibilityUniform.sentence_primrec",
+      "E2.FeasibilityUniform.truth_iff_feasible",
+      "E2.RealArithmetic.ordered_truth_finite",
+      "Quot",
+      "Quot.mk",
+      "Quot.lift",
+      "Quot.ind",
+      "propext",
+      "Classical.choice",
+      "Quot.sound",
+      "Nat.add",
+      "Nat.sub",
+      "Nat.mul",
+      "Nat.pow",
+      "Nat.gcd",
+      "Nat.div",
+      "Nat.mod",
+      "Nat.beq",
+      "Nat.ble",
+      "Nat.land",
+      "Nat.lor",
+      "Nat.xor",
+      "Nat.shiftLeft",
+      "Nat.shiftRight",
+      "String.ofList",
+      "Char.ofNat",
+      "List",
+      "eagerReduce",
+      "Nat",
+      "String",
+      "String.mk",
+      "Char",
+      "optParam",
+      "autoParam",
+      "semiOutParam",
+      "outParam"
+    ],
+    "exit": 0,
+    "seconds": 40.761,
+    "bytes": 569395278,
+    "sha256": "dd97c3a17ac971c80d63ea72dd36d76f5dfa56b9c7a657634b7d80fc92cca83c"
+  },
+  {
+    "label": "comparator",
+    "command": [
+      "lake.EXE",
+      "comparator",
+      "--config",
+      "comparator.json",
+      "--challenge-from-export",
+      ".replay/challenge.ndjson",
+      "--solution-from-export",
+      ".replay/solution.ndjson",
+      "--inadvisably-no-sandbox"
+    ],
+    "exit": 0,
+    "seconds": 238.017
+  },
+  {
+    "label": "leanchecker",
+    "command": [
+      "leanchecker.EXE",
+      "--silent",
+      "--from-export",
+      ".replay/solution.ndjson"
+    ],
+    "exit": 0,
+    "seconds": 218.2
+  },
+  {
+    "label": "nanoda",
+    "command": [
+      ".replay/nanoda-stack128.exe",
+      ".replay/nanoda.json"
+    ],
+    "exit": 0,
+    "seconds": 125.617
+  }
+]

@@ -39,6 +39,14 @@ Saugata Basu.
 \newblock URL: \url{https://arxiv.org/abs/1409.1534v1}, \href
   {https://arxiv.org/abs/1409.1534v1} {\path{arXiv:1409.1534v1}}.
 
+\bibitem{BPR06}
+Saugata Basu, Richard Pollack, and Marie-Fran\c{c}oise Roy.
+\newblock {\em Algorithms in Real Algebraic Geometry}.
+\newblock Springer, 2 edition, 2006.
+\newblock Theorem 13.13, printed page 516.
+\newblock \href {https://doi.org/10.1007/3-540-33099-2}
+  {\path{doi:10.1007/3-540-33099-2}}.
+
 \bibitem{BCW21}
 Johannes Bausch, Toby~S. Cubitt, and James~D. Watson.
 \newblock Uncomputability of phase diagrams.

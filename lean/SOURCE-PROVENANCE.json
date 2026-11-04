@@ -1,0 +1,2537 @@
+[
+  {
+    "module": "Companion.Kernel",
+    "file": "Companion/Kernel.lean",
+    "original_sha256": "cbb0f756f13f499b705c1d4bd180fa2d2177609b90e2ac53ef8ec5639f6b2dfc",
+    "release_sha256": "cbb0f756f13f499b705c1d4bd180fa2d2177609b90e2ac53ef8ec5639f6b2dfc"
+  },
+  {
+    "module": "Companion.Analytic",
+    "file": "Companion/Analytic.lean",
+    "original_sha256": "20d80890f2b2910afd81047e43aca1f9558ba9f74c0c134769ba551abda1758e",
+    "release_sha256": "20d80890f2b2910afd81047e43aca1f9558ba9f74c0c134769ba551abda1758e"
+  },
+  {
+    "module": "Companion.HilbertSchmidt",
+    "file": "Companion/HilbertSchmidt.lean",
+    "original_sha256": "35481407abdf8eea3436ecbde105e1bb0f09d99386336d4b967f53dcd3ffec55",
+    "release_sha256": "35481407abdf8eea3436ecbde105e1bb0f09d99386336d4b967f53dcd3ffec55"
+  },
+  {
+    "module": "E2.Game",
+    "file": "E2/Game.lean",
+    "original_sha256": "0680a230d7578a27b547615018ca5fb721c9b1224fdfc144bab5ff53a009c32e",
+    "release_sha256": "0680a230d7578a27b547615018ca5fb721c9b1224fdfc144bab5ff53a009c32e"
+  },
+  {
+    "module": "E2.Presentation",
+    "file": "E2/Presentation.lean",
+    "original_sha256": "32dbd1255767acc3b74138af28ea776365bfe4c5f059aae9d5ac81946702b59a",
+    "release_sha256": "32dbd1255767acc3b74138af28ea776365bfe4c5f059aae9d5ac81946702b59a"
+  },
+  {
+    "module": "E2.Weighted",
+    "file": "E2/Weighted.lean",
+    "original_sha256": "24c5c77c610f92eb56bc1de2d6147c8e7d4f27a7bcda97b86ff24e6d81128639",
+    "release_sha256": "24c5c77c610f92eb56bc1de2d6147c8e7d4f27a7bcda97b86ff24e6d81128639"
+  },
+  {
+    "module": "E2.RawWords",
+    "file": "E2/RawWords.lean",
+    "original_sha256": "5ec8fd38f380f3d3971a77466a65710865c1e908f38041672724fa5bd520e28c",
+    "release_sha256": "5ec8fd38f380f3d3971a77466a65710865c1e908f38041672724fa5bd520e28c"
+  },
+  {
+    "module": "E2.CompilerCertificates",
+    "file": "E2/CompilerCertificates.lean",
+    "original_sha256": "587ef50b72ee0b747f33f79d252661f4e95303ca6ec16f7cd607f617afd0c175",
+    "release_sha256": "30c500665d2fe872e5938ad82a90b5daa76de47c1aec0551d25215db2bf8e3c4"
+  },
+  {
+    "module": "E2.CompilerGadgets",
+    "file": "E2/CompilerGadgets.lean",
+    "original_sha256": "eadbcfde0f871c0e4b1b59713d2640bfab7bdc482102468cb1bf3273da32dc06",
+    "release_sha256": "4822f79f360c34dfc0595d94928bd15be9614c2d7a4f14c827e8465ba590a932"
+  },
+  {
+    "module": "E2.CompilerBlocks",
+    "file": "E2/CompilerBlocks.lean",
+    "original_sha256": "60675d90c43fab1e452cbfa4bc9b7512ae961adbe2fbf7fbd7489014451d3dc9",
+    "release_sha256": "17a6525c557dcc9469ce380b04cf418cccc0bdda191449a4fd8119270a6ee8ef"
+  },
+  {
+    "module": "E2.CompilerExtensions",
+    "file": "E2/CompilerExtensions.lean",
+    "original_sha256": "362fac7d9dd62cfe6a294e160c965753f97409ee7971e6b0caf5fc2de1bc06b3",
+    "release_sha256": "61828b1da35b5d42949c5c8a9ac05ba5fbbaaafc93e34f8d54bbff4100acb2ec"
+  },
+  {
+    "module": "E2.FiniteMatrixTools",
+    "file": "E2/FiniteMatrixTools.lean",
+    "original_sha256": "bbac54a618d1105c5b821313f2619a5d3c56a87fe37674191fb4f7e15d35a1c5",
+    "release_sha256": "1ed63f07e8c730dbc748dbf4db6a329bbf0f66b2193241bc8bc9a74a3c5351b6"
+  },
+  {
+    "module": "E2.FiniteMatrixTransport",
+    "file": "E2/FiniteMatrixTransport.lean",
+    "original_sha256": "7eabee2732dae663ed6cd39ff490dc2be3456be9fc50c4cac5d5e854373cf4ab",
+    "release_sha256": "7eabee2732dae663ed6cd39ff490dc2be3456be9fc50c4cac5d5e854373cf4ab"
+  },
+  {
+    "module": "E2.CompilerFlatten",
+    "file": "E2/CompilerFlatten.lean",
+    "original_sha256": "2445760c6b04ca48ed037e54bffc63db4a2aec3d98c4680b26008910689a5a0e",
+    "release_sha256": "6371b1f63b6ece719d7e672730dd1be1729303edb0529f69a038d8cb760c87f5"
+  },
+  {
+    "module": "E2.CompilerRealification",
+    "file": "E2/CompilerRealification.lean",
+    "original_sha256": "70277e89d07829bd094ce21f74ab42c9ae6637c670afdaffdb7d632c5c01a881",
+    "release_sha256": "579cc591d60b6b747e39fed6fe568ad4ca70c4efb1140707fde7cc4db0fbe246"
+  },
+  {
+    "module": "E2.Computability",
+    "file": "E2/Computability.lean",
+    "original_sha256": "a06954702e599e9a6bfa74f1aa9bbfb26cb4824090aa067b8a62297ed520aa9c",
+    "release_sha256": "a06954702e599e9a6bfa74f1aa9bbfb26cb4824090aa067b8a62297ed520aa9c"
+  },
+  {
+    "module": "E2.ProgramCore",
+    "file": "E2/ProgramCore.lean",
+    "original_sha256": "f2fc9ac7da420bd101dcac389fc2749fb747f0b204390c8059261f4f39ecdef4",
+    "release_sha256": "52b165a99161f783c12871d24b6eb938b1b210ba62e29de3e8a116a6fe25939a"
+  },
+  {
+    "module": "E2.CounterFlow",
+    "file": "E2/CounterFlow.lean",
+    "original_sha256": "2e68e8a708b14d629c485fcf16fad3f44a131363d253d8ac8a30d01d6b1c5e40",
+    "release_sha256": "2e68e8a708b14d629c485fcf16fad3f44a131363d253d8ac8a30d01d6b1c5e40"
+  },
+  {
+    "module": "E2.CounterStack",
+    "file": "E2/CounterStack.lean",
+    "original_sha256": "5f6131f9775452001e2e354a1dac836396e4043da15f13fce74df7e8df24c66e",
+    "release_sha256": "5f6131f9775452001e2e354a1dac836396e4043da15f13fce74df7e8df24c66e"
+  },
+  {
+    "module": "E2.CounterStackPop",
+    "file": "E2/CounterStackPop.lean",
+    "original_sha256": "96d765688ccfb3f0f95bdc61e384163ec54764fe33e88e3635d4363900444deb",
+    "release_sha256": "96d765688ccfb3f0f95bdc61e384163ec54764fe33e88e3635d4363900444deb"
+  },
+  {
+    "module": "E2.CounterTermination",
+    "file": "E2/CounterTermination.lean",
+    "original_sha256": "ff8e48f3c590d1a5fdfdee8f14ec580d3a986cd303021f52faa6977016b30035",
+    "release_sha256": "ff8e48f3c590d1a5fdfdee8f14ec580d3a986cd303021f52faa6977016b30035"
+  },
+  {
+    "module": "E2.CounterMacro",
+    "file": "E2/CounterMacro.lean",
+    "original_sha256": "7844e1f50baa9cf07c5ecbc38373a4b7564276b4bb2999a7382adcb88ea48d69",
+    "release_sha256": "7844e1f50baa9cf07c5ecbc38373a4b7564276b4bb2999a7382adcb88ea48d69"
+  },
+  {
+    "module": "E2.RecognizerEncoding",
+    "file": "E2/RecognizerEncoding.lean",
+    "original_sha256": "f3b2588a3625fea70ced9522c5da05896fb25791765c356111b9e7615a81df8d",
+    "release_sha256": "f3b2588a3625fea70ced9522c5da05896fb25791765c356111b9e7615a81df8d"
+  },
+  {
+    "module": "E2.RecognizerTM2",
+    "file": "E2/RecognizerTM2.lean",
+    "original_sha256": "2a099fb8439cb0f19d3f17f80db123b275d1f2f6d46d33ee69131587e30b07b4",
+    "release_sha256": "2a099fb8439cb0f19d3f17f80db123b275d1f2f6d46d33ee69131587e30b07b4"
+  },
+  {
+    "module": "E2.RecognizerTM2Simulation",
+    "file": "E2/RecognizerTM2Simulation.lean",
+    "original_sha256": "02fd83fa9e06c008b9f624bf935bc84698f47e89e61c8131f9995fc6ecbb2632",
+    "release_sha256": "02fd83fa9e06c008b9f624bf935bc84698f47e89e61c8131f9995fc6ecbb2632"
+  },
+  {
+    "module": "E2.RecognizerInput",
+    "file": "E2/RecognizerInput.lean",
+    "original_sha256": "2ab0c607d091ad8b8a22b43c65026b212eb1b007cbc293d940564fa008ff235f",
+    "release_sha256": "2ab0c607d091ad8b8a22b43c65026b212eb1b007cbc293d940564fa008ff235f"
+  },
+  {
+    "module": "E2.RecognizerUniversal",
+    "file": "E2/RecognizerUniversal.lean",
+    "original_sha256": "dc8ffd1a2fa664b25846729536c69f64aeb212686a9dab9286ae0991deecc05a",
+    "release_sha256": "dc8ffd1a2fa664b25846729536c69f64aeb212686a9dab9286ae0991deecc05a"
+  },
+  {
+    "module": "E2.RecognizerImplementation",
+    "file": "E2/RecognizerImplementation.lean",
+    "original_sha256": "e25c1248a6a3dcecda64e3fc6e87ce55fc71de8c42a4995d5df588e493f74ee6",
+    "release_sha256": "e25c1248a6a3dcecda64e3fc6e87ce55fc71de8c42a4995d5df588e493f74ee6"
+  },
+  {
+    "module": "E2.Program",
+    "file": "E2/Program.lean",
+    "original_sha256": "f0afc0ae2f9ba79d84d9221b1a38176e2d107565c81f21deea7a4cd2eb66d412",
+    "release_sha256": "ed8c23f1f09ad72dd96b414ea48bed82feadee29017841fc9a61b2978b997a50"
+  },
+  {
+    "module": "E2.Source",
+    "file": "E2/Source.lean",
+    "original_sha256": "382234aaf019ff4edc34b707d11eb0cc42cd96c8c72dc1ce7b4ebb1901d79eb4",
+    "release_sha256": "382234aaf019ff4edc34b707d11eb0cc42cd96c8c72dc1ce7b4ebb1901d79eb4"
+  },
+  {
+    "module": "E2.ClockData",
+    "file": "E2/ClockData.lean",
+    "original_sha256": "656604f73b0d5547faabd5ecd0c37909815665349de79acd3fa2d0cc7e5252e5",
+    "release_sha256": "7768730eaa42133143b362b0df302cbcf792318cc36a6a6233ef4bd15ffd4726"
+  },
+  {
+    "module": "E2.HSFunctionalCalculus",
+    "file": "E2/HSFunctionalCalculus.lean",
+    "original_sha256": "0522cb8cf13cc2acdf33b883735949045b5c2dbe3bbb66cb843fff36a0c39ee9",
+    "release_sha256": "0522cb8cf13cc2acdf33b883735949045b5c2dbe3bbb66cb843fff36a0c39ee9"
+  },
+  {
+    "module": "E2.MatrixFunctions",
+    "file": "E2/MatrixFunctions.lean",
+    "original_sha256": "58eae7bdf02e02832aa9006c7516fc688f81c753f4be694e24e300808cbd6f37",
+    "release_sha256": "58eae7bdf02e02832aa9006c7516fc688f81c753f4be694e24e300808cbd6f37"
+  },
+  {
+    "module": "E2.CompilerUnitaryDiagonal",
+    "file": "E2/CompilerUnitaryDiagonal.lean",
+    "original_sha256": "8614ad5c7ba7f2bbef2447742757b2ac4f02643c6d6ef07ea114d4bfa24e7b43",
+    "release_sha256": "0caa6544fe31bf6ec48b45d4301b13fd00fd4ebaa3fa59a7c4775d0ce3385c53"
+  },
+  {
+    "module": "E2.CompilerBoolean",
+    "file": "E2/CompilerBoolean.lean",
+    "original_sha256": "018dad2c307d1f58655d30f2e4ad96caca8aee94b0ce61e5c126b6b4f755462c",
+    "release_sha256": "975602993846e0a6bd958b8b699649a3c5aa650bc5636733d19a0a235f0e860c"
+  },
+  {
+    "module": "E2.CompilerAnd",
+    "file": "E2/CompilerAnd.lean",
+    "original_sha256": "6275730c5024b48cea3f483c0bf0f85b7d66ab4b6f3d1b6b739ed78a003581f2",
+    "release_sha256": "0452ba4c239eaf254fec3d1df4580d1ae9dd7d530943bfaabc6d57982791676f"
+  },
+  {
+    "module": "E2.CompilerDomains",
+    "file": "E2/CompilerDomains.lean",
+    "original_sha256": "9b706e5a20b9b68c1e1f7bdbecfb057f725e09244841f74ba10c1a0e5086a9da",
+    "release_sha256": "06b334c4abcdcac17280da4f5645a5ba60b375af1110512c320fb8152d56dee2"
+  },
+  {
+    "module": "E2.PolyEval",
+    "file": "E2/PolyEval.lean",
+    "original_sha256": "9c77d635c069c0bbb01cf97fe7d753227e33daaa8e4469253ebdc109a07ef614",
+    "release_sha256": "9c77d635c069c0bbb01cf97fe7d753227e33daaa8e4469253ebdc109a07ef614"
+  },
+  {
+    "module": "E2.CompilerPolynomial",
+    "file": "E2/CompilerPolynomial.lean",
+    "original_sha256": "5e1976abcb1f4da12dd0adff5e63806a9e5eee0c7c538eb391cad9cb69094b5f",
+    "release_sha256": "a6d8ab66258de3af5e88448f9d56fc7004e8b33aeb9250204de8efe15abcf27f"
+  },
+  {
+    "module": "E2.CompilerFrontend",
+    "file": "E2/CompilerFrontend.lean",
+    "original_sha256": "b78a294a8dd6a188f9d7a9623b7fa5943c90394dc72aa85ee05355f64918714b",
+    "release_sha256": "0f053a4d9c100a77fa2ec3e8192c97a8bf9144db5c5b6ed2b0ddfd22ef0f2aa7"
+  },
+  {
+    "module": "E2.CompilerPositiveLift",
+    "file": "E2/CompilerPositiveLift.lean",
+    "original_sha256": "22951eb76578096b8d2e98d2c5ed2e8813eec38d6d7404ff9a5444f0fa028cd2",
+    "release_sha256": "b2527c45de6a7e5c0b93cd966b37f6c805683ede554c3792445ec25bb659f163"
+  },
+  {
+    "module": "E2.ProjectionRepair",
+    "file": "E2/ProjectionRepair.lean",
+    "original_sha256": "e35e15ddb9dec7fae12777bd05c316ceb2d78f600fe8aa09601c742cb7161788",
+    "release_sha256": "e35e15ddb9dec7fae12777bd05c316ceb2d78f600fe8aa09601c742cb7161788"
+  },
+  {
+    "module": "E2.CompilerOrthogonality",
+    "file": "E2/CompilerOrthogonality.lean",
+    "original_sha256": "eef690cc4c36664736830ff522bd4c16d2c0f81ac21d4af0f70bfe665f2e8c89",
+    "release_sha256": "aa3399b7079558be4aa95b5dfe4a146ec31c9a7e47cd619453c863b9e7a671e5"
+  },
+  {
+    "module": "E2.CompilerFlat",
+    "file": "E2/CompilerFlat.lean",
+    "original_sha256": "e665ce8e50e00127265ffb6d655638f04f39027ec5608dc9265eac3e26f24ea9",
+    "release_sha256": "a94a2d67ce5acfa5f558cd29016c062c69879a80931865824247d51468abb7a9"
+  },
+  {
+    "module": "E2.CompilerFlatExtension",
+    "file": "E2/CompilerFlatExtension.lean",
+    "original_sha256": "b5728603a566916b583c52055389283d3926f1506c0b14acbdd778a8da6ddfe5",
+    "release_sha256": "2eaf25fe0ee21a925a35e1307efbd73af4de9199ec77d671e765b30fc16591f7"
+  },
+  {
+    "module": "E2.CompilerReflectionLift",
+    "file": "E2/CompilerReflectionLift.lean",
+    "original_sha256": "def78f1cfc5a6d2c52468049ff5ba7c2a287bf08b3f778850c044cb428f70d58",
+    "release_sha256": "5a0fb6c73b233c43e40130c11b256bad768afc1ed4b333df5caadd1733ce2f39"
+  },
+  {
+    "module": "E2.CompilerSourceExtension",
+    "file": "E2/CompilerSourceExtension.lean",
+    "original_sha256": "719d483ef7bff2c6adb312d882291f0c7da8a835e0d125d61b62ccadc55ee73e",
+    "release_sha256": "8e2d5d342f075b02411408f4f0599eeb627c195a2ebc28b4bd7996a4049ec9fb"
+  },
+  {
+    "module": "E2.CompilerDuplication",
+    "file": "E2/CompilerDuplication.lean",
+    "original_sha256": "212225310e01092bb8ae695b40309791ce597ad9933fcd924de443350890f294",
+    "release_sha256": "372c146f6f0d25fca9535a51f50ef97ce1f1117eec27d86f3aa3c8a251b5b520"
+  },
+  {
+    "module": "E2.CompilerTensorSource",
+    "file": "E2/CompilerTensorSource.lean",
+    "original_sha256": "a90dc1c1898ff7b4603ce59902cd0d3daba7fa809c2e097a9bc5e0f7880cb6c2",
+    "release_sha256": "5c47ad3a75048ba45e168762b8c73d19b2ccea6d61d1863448621bde74087106"
+  },
+  {
+    "module": "E2.CompilerPauliExtension",
+    "file": "E2/CompilerPauliExtension.lean",
+    "original_sha256": "37d3ae983b8d8af7199798dc673e4f1b3427ee49fd39243eee11f2c09220ad2c",
+    "release_sha256": "85d988a765763260ade26f8a21268e78d11ebd4957b053c2e264543b0ee075bf"
+  },
+  {
+    "module": "E2.CompilerUniversal",
+    "file": "E2/CompilerUniversal.lean",
+    "original_sha256": "3065367d909d906c75029110953dc35c46253243b2ea16354b7cbfca6dffc3cf",
+    "release_sha256": "914b9c1af6c5d2b68523360e1e321457c0cc9442edfab77b2b725b689db67a56"
+  },
+  {
+    "module": "E2.CompilerSelector",
+    "file": "E2/CompilerSelector.lean",
+    "original_sha256": "55957a4cb26889fc2515e7ea02795bfd6c6d750c69041b87f663ec749804aae6",
+    "release_sha256": "33b7a7bebe1c2368f17ceefd76c9ebbad2bf998c20308fc718371c1a300dfdea"
+  },
+  {
+    "module": "E2.CompilerMultiSelector",
+    "file": "E2/CompilerMultiSelector.lean",
+    "original_sha256": "b0363e3f2b934e03ae21d7bb5ca10c8c649daa28bfc631d1db777e4db58a0db8",
+    "release_sha256": "30ac510b9a8c475c280d00ded1c762bc2b3714f67946582604898609ec70ae1a"
+  },
+  {
+    "module": "E2.CompilerUpperProjection",
+    "file": "E2/CompilerUpperProjection.lean",
+    "original_sha256": "9087f83777ed1790f54abe98d21d960ec2cfc901e35720f4f3767867ff8147c8",
+    "release_sha256": "7cadf76cb477cfa27f28bb115446cea90c6b90de26e16441254d461c315fee44"
+  },
+  {
+    "module": "E2.CompilerDefinitions",
+    "file": "E2/CompilerDefinitions.lean",
+    "original_sha256": "0d6061ff4c3e2c918e28854bc911ef75c7ff31de46b45e6123d261159c8c6c29",
+    "release_sha256": "65d2136e07f37496fb01568527dd793e1626fbf239c2d4fea6bbfc0b9472f8c3"
+  },
+  {
+    "module": "E2.CompilerGame",
+    "file": "E2/CompilerGame.lean",
+    "original_sha256": "9258b3e5cc9f168b1cae4262a6c3cfad1c5a42871fcfa3cf776e3d2cb38d5e9f",
+    "release_sha256": "0fcbd6a0a78c9993bdb8c50eda638e99217c2666ffb072dae17daa80b74fe452"
+  },
+  {
+    "module": "E2.CompilerControlled",
+    "file": "E2/CompilerControlled.lean",
+    "original_sha256": "fd6b14d79732e8c789d94e3bac4b5727f1981a6f3f8fc42aed5c39cecec6762c",
+    "release_sha256": "3510fd27b3e2d534b3ab6c8571e154d6adcd5c33177be41617df7616d7c08ca7"
+  },
+  {
+    "module": "E2.CompilerRealize",
+    "file": "E2/CompilerRealize.lean",
+    "original_sha256": "e8848440a31fdbec05933df8c395dff4e21fbfcadd389d3a723ce5450a602392",
+    "release_sha256": "fab954909c5bccb92b8b293a610214410abc33020ca0e12a04c972776dbebd74"
+  },
+  {
+    "module": "E2.CompilerWords",
+    "file": "E2/CompilerWords.lean",
+    "original_sha256": "dfb13a6fdf3c1bd355f194478cb113ea7ae2503d17acc11eabe11d92b51ae922",
+    "release_sha256": "73f034f64276cb7875be7fe0b69b1351b55a474a1d2bade71f01605a66cef268"
+  },
+  {
+    "module": "E2.CompilerNetwork",
+    "file": "E2/CompilerNetwork.lean",
+    "original_sha256": "3b6a76c5212d05da3eaf42a2aab8c75979f84d76635c00740641456256420493",
+    "release_sha256": "806e6c0589cfcb9582bb23c9f5fd99a8dc5e7f2df6cb7096e3a3e73575ba5a15"
+  },
+  {
+    "module": "E2.CompilerUpperBase",
+    "file": "E2/CompilerUpperBase.lean",
+    "original_sha256": "6f30e89d9f91144829dd185ee504ea5ee4ebcb892e1749e481f0dc82436b9d86",
+    "release_sha256": "7244e5ec66cd1551d4ee0526e56aab281d30b63d01587b2caf153759f366d392"
+  },
+  {
+    "module": "E2.CompilerPrimitives",
+    "file": "E2/CompilerPrimitives.lean",
+    "original_sha256": "6d72ac6a7686c58f7cf6e764b42e5e0ec3585880649043b980f48fffc0856038",
+    "release_sha256": "3eb912726f7b6c35b44f61b13c04e6b9de3c470407cdf85ffc2ea0b95b3aced8"
+  },
+  {
+    "module": "E2.CompilerCorner",
+    "file": "E2/CompilerCorner.lean",
+    "original_sha256": "ef780d13410cc1498c61417277ffe7cad8d4f7263d0cc3fb71d176cd011ee498",
+    "release_sha256": "887a2fb69a52c793b12f5099c8bf07b8623126ff83f2e2061680c280664fa834"
+  },
+  {
+    "module": "E2.CompilerRouting",
+    "file": "E2/CompilerRouting.lean",
+    "original_sha256": "87dbe20ab2ad20faaac6b55b29cc36127aa45390f5b57d9d6a37ac599ffd0308",
+    "release_sha256": "df4f012746f16fe268fea7ace2929b225200460bbf2027ce229e7f6fd70c6794"
+  },
+  {
+    "module": "E2.CompilerControlRealize",
+    "file": "E2/CompilerControlRealize.lean",
+    "original_sha256": "6eb1630db9051007c9e03f4c255129b93e6fc5baacba3b545f69087424d358e2",
+    "release_sha256": "d15fb24f8dadf036eaa065dba20f1f453229be62a1d258a83b429019a38dc743"
+  },
+  {
+    "module": "E2.CompilerSourceRealize",
+    "file": "E2/CompilerSourceRealize.lean",
+    "original_sha256": "d5d0f8ec88186ef28e88864c3b3f34f90bde835a6e9e4a5a72514f80a675341a",
+    "release_sha256": "e76a5f7ac853d7641c5119d2bbeb3e3ff4b482d9fa96feb09c578fabd461417f"
+  },
+  {
+    "module": "E2.CompilerFrameRealize",
+    "file": "E2/CompilerFrameRealize.lean",
+    "original_sha256": "549a0058b7b9fb1dc788944bfbc69f2625504d011d562ae352df83189cf5f44a",
+    "release_sha256": "4825b877713167d12105291ccb3896f40730f1ca4fb2b44dbf970354f54997ca"
+  },
+  {
+    "module": "E2.CompilerPackingRealize",
+    "file": "E2/CompilerPackingRealize.lean",
+    "original_sha256": "4954b039a3f73acac0a3e834de44ede856954c30912ea1f34e004c54a5e1fafc",
+    "release_sha256": "c8ddcc5c401f033f734d63146896595114727b796051894cefc69a55e2684170"
+  },
+  {
+    "module": "E2.CompilerNormalizedRealize",
+    "file": "E2/CompilerNormalizedRealize.lean",
+    "original_sha256": "ddcc0e4109bf95038cdfddaaf244ff744760c5be99a92b1327da7c953ea73ad7",
+    "release_sha256": "9e331e206c7fafcd6af8d0c47a8696fdf44068bd6f1f97d1a5ddade84410804a"
+  },
+  {
+    "module": "E2.CompilerWordNormalization",
+    "file": "E2/CompilerWordNormalization.lean",
+    "original_sha256": "f6928615882f8ab62b41dfb8b076268da601394a38bffaa46fd63c1863faa8e4",
+    "release_sha256": "4e65099b7200678fe53656d35427c0b157a3e50eb52dded072b405612282414a"
+  },
+  {
+    "module": "E2.CompilerNormalizedCorner",
+    "file": "E2/CompilerNormalizedCorner.lean",
+    "original_sha256": "5e961d2a12e9e1079269bc58acac583d90a4e3d4ef13f39b13f2ed7acbf97417",
+    "release_sha256": "7cdcbbfeacfd356418bc4a07a13148464b2e90c9e50a49b86ae0a30a809586b9"
+  },
+  {
+    "module": "E2.CompilerUpperCorner",
+    "file": "E2/CompilerUpperCorner.lean",
+    "original_sha256": "e1f0ea62de83be928f12b58a3f6da7aa648f83ad48f2e37bc7990e9ed7145c9c",
+    "release_sha256": "d63ac53d250b1e90d214ee636be72f8af50670d18498c776282023195c920ff8"
+  },
+  {
+    "module": "E2.CompilerCommonGadgets",
+    "file": "E2/CompilerCommonGadgets.lean",
+    "original_sha256": "5cb941fe4d16556fa6a41340bf4a6bb274e788e5135030ceb5da507bac13fe0b",
+    "release_sha256": "0b5d941eac902a373e638d3a48b1569e4396c9d6b8d3168b93cf1b6697a4cc8a"
+  },
+  {
+    "module": "E2.CompilerUpperWires",
+    "file": "E2/CompilerUpperWires.lean",
+    "original_sha256": "19684f6961e32b9cdec29304cad6da058f31cb6c61a3bc1e2e5ca584aaa2664b",
+    "release_sha256": "53f748b58952e3d98b4fe2c3db7f556aa03ef9f26cd185b0ec9fc8aa17d1aa29"
+  },
+  {
+    "module": "E2.CompilerFlatUpperWires",
+    "file": "E2/CompilerFlatUpperWires.lean",
+    "original_sha256": "1a4525585fdcb8f3a5b4a87d482d038764fe483791bf3e5b82bf9ff97c8066ac",
+    "release_sha256": "b5bb4b7a19c28fcd02b5832705d567cfafd7788619d74faa83f5f49f115cfd21"
+  },
+  {
+    "module": "E2.CompilerUpperOverlap",
+    "file": "E2/CompilerUpperOverlap.lean",
+    "original_sha256": "532485ef6f0820eb89a0d5bc12708b3559998b30fd844a70d5003ace3b1c7393",
+    "release_sha256": "968c4346ab35e8f5ba21467ba219dfc67211a2a0463f9b9d65f2d41f1540f9eb"
+  },
+  {
+    "module": "E2.CompilerUpperRepair",
+    "file": "E2/CompilerUpperRepair.lean",
+    "original_sha256": "df291cf01ed955b2facda6be882f06e6487cb95072237f5230bbc1d0fe25b297",
+    "release_sha256": "0379f299560930aa3b8c4712f9772002b8149912b552fad2a4927797d5ac4dc7"
+  },
+  {
+    "module": "E2.CompilerStrategy",
+    "file": "E2/CompilerStrategy.lean",
+    "original_sha256": "eb529fefff753339990c9d9c36a69e214849cd515569d119714c2911db7d0535",
+    "release_sha256": "983b740912257fd6d83d000dd8d8ed663d554096ac1acff06a53ce80a596dbbd"
+  },
+  {
+    "module": "E2.CompilerUpperMeasurements",
+    "file": "E2/CompilerUpperMeasurements.lean",
+    "original_sha256": "a94d63303a965ec193299ff0ab13f1609a7befd53756f54327c3756bf524bb8e",
+    "release_sha256": "40689dae45cb7cde4650c64f31024090cae3eb188457d86fbc3be8389f1cfab3"
+  },
+  {
+    "module": "E2.CompilerUpperContextAssembly",
+    "file": "E2/CompilerUpperContextAssembly.lean",
+    "original_sha256": "f30adc789218ba7aab36c18d35b5a46ecff1fbddac2b5e9f4355d15171946819",
+    "release_sha256": "3ba78841ea6c5685884cfcdc61c3cd0f87b8d0ea121c2a3f2d4d5ad1cc31c1a7"
+  },
+  {
+    "module": "E2.CompilerUpperExactTables",
+    "file": "E2/CompilerUpperExactTables.lean",
+    "original_sha256": "c4283cb7e89acec3ff20b01206417f4edfae62dd818269781ad5aa6571a58e9f",
+    "release_sha256": "93b7c0995c978cf207339ba898db64d672040cd8eea87c0681b1e12ca7083362"
+  },
+  {
+    "module": "E2.CompilerUpperFunctionalTables",
+    "file": "E2/CompilerUpperFunctionalTables.lean",
+    "original_sha256": "ada7d3a42fd03bbfbfe76d9270e13c762bd3201dfbaa01ea7a27449e03291942",
+    "release_sha256": "931bf22f594335250d4743e460ab934346225fc097f63cbc8098673905b979db"
+  },
+  {
+    "module": "E2.CompilerUpperActualTables",
+    "file": "E2/CompilerUpperActualTables.lean",
+    "original_sha256": "761f2c78dc5795d179b561379de717fb6ae173b8148a5999e8c8ec45983dc07f",
+    "release_sha256": "c83a4a4f96a50b91e20409f7bed697847f8e725f92adc904d58c60a8cbdb8a82"
+  },
+  {
+    "module": "E2.CompilerUpperParityTables",
+    "file": "E2/CompilerUpperParityTables.lean",
+    "original_sha256": "d35aeb3b55711f81ee45ba40e9fc48993b26b9ef357ea0501600141d4a7f688d",
+    "release_sha256": "c6c8392dd8b05e301b1d41544268a5c11da2b8aa898503b86f145cac1238a8e6"
+  },
+  {
+    "module": "E2.CompilerUpperTableBounds",
+    "file": "E2/CompilerUpperTableBounds.lean",
+    "original_sha256": "9998533c23104bb0be7513229d12edba94e0e039cfe8c6e027ceccfec70ecaeb",
+    "release_sha256": "ce3c22e8cc5ce7707e1bad9fe6aae999f97115a5f2e420dd93b3deafb3903b7b"
+  },
+  {
+    "module": "E2.CompilerUpperCompleteness",
+    "file": "E2/CompilerUpperCompleteness.lean",
+    "original_sha256": "748df9f6f362a11be89ae46571377d72b07a861d494f2adbc95b79c29142d905",
+    "release_sha256": "073a92ee01cf7f18de55fb839be38fd92f899ff1791d8c568f72009c0f19bb9f"
+  },
+  {
+    "module": "E2.CompilerSoundnessRealize",
+    "file": "E2/CompilerSoundnessRealize.lean",
+    "original_sha256": "b512434cc122a6eefcbe11fd2dfc69de8ff798f717954de280d1c30753e093ad",
+    "release_sha256": "7368dafe6e1252a79a27ceb753a6a07b077e56b7fe6d67639d2b740ca4e8283a"
+  },
+  {
+    "module": "E2.Compiler",
+    "file": "E2/Compiler.lean",
+    "original_sha256": "b83544370836fdd027fac7f133de1c3b90727cefa757f9b11e52a6530d87d90f",
+    "release_sha256": "94e9050b2e05a7f5db433b31071e9f82a125b5e2a3a5337f8adca550a5075574"
+  },
+  {
+    "module": "E2.FunctionalCalculus",
+    "file": "E2/FunctionalCalculus.lean",
+    "original_sha256": "bdf62da4f8d91490cce4a1078a03725c51aa3f2b1eb20e7d102af28a41b9f374",
+    "release_sha256": "abfd8f43b6f086cc376c15dc3810c49014c23fba23edb6ee4b0bef9f87ab06f4"
+  },
+  {
+    "module": "E2.CantorDefinitions",
+    "file": "E2/CantorDefinitions.lean",
+    "original_sha256": "b50e4ea222fbed77a366ff6f2cb7760078f709618c2cf72f90becd36d4a9fae7",
+    "release_sha256": "b50e4ea222fbed77a366ff6f2cb7760078f709618c2cf72f90becd36d4a9fae7"
+  },
+  {
+    "module": "E2.CantorScalar",
+    "file": "E2/CantorScalar.lean",
+    "original_sha256": "2e0400dc3182c4880b3c9db2a310aba1ff6d2c8a004a0953e17c70d06ba004d9",
+    "release_sha256": "2e0400dc3182c4880b3c9db2a310aba1ff6d2c8a004a0953e17c70d06ba004d9"
+  },
+  {
+    "module": "E2.CantorBits",
+    "file": "E2/CantorBits.lean",
+    "original_sha256": "02e5de43c30350133a79dae04cab47908364a8599807184456a06409157d9f47",
+    "release_sha256": "02e5de43c30350133a79dae04cab47908364a8599807184456a06409157d9f47"
+  },
+  {
+    "module": "E2.CantorCarryScalar",
+    "file": "E2/CantorCarryScalar.lean",
+    "original_sha256": "99a248753a0901ae6ee1dac8777425feaf40343ae0306d2d51b860b6315346da",
+    "release_sha256": "99a248753a0901ae6ee1dac8777425feaf40343ae0306d2d51b860b6315346da"
+  },
+  {
+    "module": "E2.WeightedTransport",
+    "file": "E2/WeightedTransport.lean",
+    "original_sha256": "d97b953608deb5262b31e437a414a51865e05c828df35cf72daf86de2c4798e6",
+    "release_sha256": "d97b953608deb5262b31e437a414a51865e05c828df35cf72daf86de2c4798e6"
+  },
+  {
+    "module": "E2.CarryTools",
+    "file": "E2/CarryTools.lean",
+    "original_sha256": "551b8dcaaf966e966756878e2bde8adece0888aa04b70eba9092a9a6601224d7",
+    "release_sha256": "551b8dcaaf966e966756878e2bde8adece0888aa04b70eba9092a9a6601224d7"
+  },
+  {
+    "module": "E2.CantorRounding",
+    "file": "E2/CantorRounding.lean",
+    "original_sha256": "f8877277cd3b61da8381a2b280f44048a9e3da72fe6ee45d47721f637aab2dc6",
+    "release_sha256": "f8877277cd3b61da8381a2b280f44048a9e3da72fe6ee45d47721f637aab2dc6"
+  },
+  {
+    "module": "E2.CantorDistance",
+    "file": "E2/CantorDistance.lean",
+    "original_sha256": "2fc46fa99fddffacac1cb61c53626daecab0511147e6d897061bff1e3657ca52",
+    "release_sha256": "2fc46fa99fddffacac1cb61c53626daecab0511147e6d897061bff1e3657ca52"
+  },
+  {
+    "module": "E2.SpectralBlocks",
+    "file": "E2/SpectralBlocks.lean",
+    "original_sha256": "80e304ce0bf3eafcd908e2be16ed336b5e3fcfd96e662e20b79c446f9531e3b0",
+    "release_sha256": "80e304ce0bf3eafcd908e2be16ed336b5e3fcfd96e662e20b79c446f9531e3b0"
+  },
+  {
+    "module": "E2.CarryRoutingTools",
+    "file": "E2/CarryRoutingTools.lean",
+    "original_sha256": "be5e04724c4e8f78521842e3a551aaf0176f87bc5e63540a7c0a13ff31e768b0",
+    "release_sha256": "be5e04724c4e8f78521842e3a551aaf0176f87bc5e63540a7c0a13ff31e768b0"
+  },
+  {
+    "module": "E2.AffineCompression",
+    "file": "E2/AffineCompression.lean",
+    "original_sha256": "aadbccf3977c0f235d4b6cd16efba175ce314a8545f3d70b965bfcce05d3d8d9",
+    "release_sha256": "aadbccf3977c0f235d4b6cd16efba175ce314a8545f3d70b965bfcce05d3d8d9"
+  },
+  {
+    "module": "E2.AffineRounding",
+    "file": "E2/AffineRounding.lean",
+    "original_sha256": "15e8f8a6091e04d57923b92f52710ce23a103e8375b0d285139a3b8f3ec5a903",
+    "release_sha256": "15e8f8a6091e04d57923b92f52710ce23a103e8375b0d285139a3b8f3ec5a903"
+  },
+  {
+    "module": "E2.AffineDigits",
+    "file": "E2/AffineDigits.lean",
+    "original_sha256": "4bee5a7064ad0003f48bb245ef3b0fdb54fe22e2a2473e925cac7ad2008abfe4",
+    "release_sha256": "4bee5a7064ad0003f48bb245ef3b0fdb54fe22e2a2473e925cac7ad2008abfe4"
+  },
+  {
+    "module": "E2.AffineRepair",
+    "file": "E2/AffineRepair.lean",
+    "original_sha256": "dea427b9640e35262eefde1593d154a8311416b8c0b146cd628497b151e14f1d",
+    "release_sha256": "dea427b9640e35262eefde1593d154a8311416b8c0b146cd628497b151e14f1d"
+  },
+  {
+    "module": "E2.RawClockTools",
+    "file": "E2/RawClockTools.lean",
+    "original_sha256": "aed392e81ffcb80fd2b0057a81236a095ac4b028630932fdf44013d70306511f",
+    "release_sha256": "aed392e81ffcb80fd2b0057a81236a095ac4b028630932fdf44013d70306511f"
+  },
+  {
+    "module": "E2.RawClockCommutations",
+    "file": "E2/RawClockCommutations.lean",
+    "original_sha256": "4e328678262690f9aea28f3b7f508d279b5e310a5fce0d16a96a0fc14b4cfa2a",
+    "release_sha256": "4e328678262690f9aea28f3b7f508d279b5e310a5fce0d16a96a0fc14b4cfa2a"
+  },
+  {
+    "module": "E2.RawClockTail",
+    "file": "E2/RawClockTail.lean",
+    "original_sha256": "a1e71e522e33effad3a167bb89741da863d13a2f715869c9934a3bdede84343b",
+    "release_sha256": "a1e71e522e33effad3a167bb89741da863d13a2f715869c9934a3bdede84343b"
+  },
+  {
+    "module": "E2.RawClockRepair",
+    "file": "E2/RawClockRepair.lean",
+    "original_sha256": "5a18b97a185f41028a04fd73491bd520d44d7fa6b21e8f91277bae48bbf356f1",
+    "release_sha256": "5a18b97a185f41028a04fd73491bd520d44d7fa6b21e8f91277bae48bbf356f1"
+  },
+  {
+    "module": "E2.FiniteBitClock",
+    "file": "E2/FiniteBitClock.lean",
+    "original_sha256": "79c2fba65d8010418b9f1cd0b5cdf386450c1195dda9d27c5745ca3f4c43983f",
+    "release_sha256": "a05eea7b66fdaba5fcebf96d24a698dc877efc72c7f84f4edc79803004591977"
+  },
+  {
+    "module": "E2.FiniteClockMatrices",
+    "file": "E2/FiniteClockMatrices.lean",
+    "original_sha256": "b56d484ca76de8af5000cffab5222b00667d350ccf4becb0880e1f7da4df529d",
+    "release_sha256": "02b9d92bb86fd05131c09e9067b7f11180125068f2b73fdaf44cce83a39be3f0"
+  },
+  {
+    "module": "E2.FiniteClockModel",
+    "file": "E2/FiniteClockModel.lean",
+    "original_sha256": "0b02ddb56f774b9b0b6e95fed841e2abf26be602c93bdf8789fc6c191fc6e92b",
+    "release_sha256": "77f53ad816a790b8cef5ebe20c47314bfb2af26fd7062756e879e3ffd5b069c0"
+  },
+  {
+    "module": "E2.Clock",
+    "file": "E2/Clock.lean",
+    "original_sha256": "f852feef1c069d780227654172716cb02f8f00e8a7da6a803683ad7fee8af37f",
+    "release_sha256": "b3d0aea2737743082fa63dc498eadc21e53ba19acbf0d8131d74a63c7cfa9b7f"
+  },
+  {
+    "module": "E2.RecordingNorms",
+    "file": "E2/RecordingNorms.lean",
+    "original_sha256": "b3e55ccffcdebd74dc0ce63c437a36fc400489e0eb0c0d5d9e715d5a554c8ff6",
+    "release_sha256": "b3e55ccffcdebd74dc0ce63c437a36fc400489e0eb0c0d5d9e715d5a554c8ff6"
+  },
+  {
+    "module": "E2.RecordingWords",
+    "file": "E2/RecordingWords.lean",
+    "original_sha256": "ab7857a74498953b66087abc075ae380d6fa32886cbd77720ff2ddceb0617906",
+    "release_sha256": "ab7857a74498953b66087abc075ae380d6fa32886cbd77720ff2ddceb0617906"
+  },
+  {
+    "module": "E2.RecordingBounds",
+    "file": "E2/RecordingBounds.lean",
+    "original_sha256": "776f61f386c59d93a8b43b1645ce259355b4f118e28b00d4477d286ecb089f0e",
+    "release_sha256": "776f61f386c59d93a8b43b1645ce259355b4f118e28b00d4477d286ecb089f0e"
+  },
+  {
+    "module": "E2.MeasurementDefs",
+    "file": "E2/MeasurementDefs.lean",
+    "original_sha256": "26a16d6e3135e022e08eed77f619abfc9fe5a9a21044e73b911240caf5bf4a6e",
+    "release_sha256": "aa9c2f48441475c484a79a889b74f5ff756f4393a6a0a54c6a0d1b2787144bd3"
+  },
+  {
+    "module": "E2.Turn9.CountStatements",
+    "file": "E2/Turn9/CountStatements.lean",
+    "original_sha256": "fd4c0c003edb7e08636e1513bd5ea201daa8b339dfd776598af0d154b301111d",
+    "release_sha256": "036d03ea0e21689119259f8f56f265dc1dbbfe74d7cfb74c0901bf70dede84da"
+  },
+  {
+    "module": "E2.Turn9.CountClassicalStatements",
+    "file": "E2/Turn9/CountClassicalStatements.lean",
+    "original_sha256": "5dd7d7f35f045190e3c42e6a3f1523adf8ba3a67fa460cdcfa4775c85d1c8c49",
+    "release_sha256": "e210c38ff626c9a3cc516530ede2e25696a76b15c29bcfca4a124a0a5706cd31"
+  },
+  {
+    "module": "E2.CarryEstimates",
+    "file": "E2/CarryEstimates.lean",
+    "original_sha256": "a1bcf0d3b354593707c734c87802218f81c8adf208e20ee88b933a5568b23689",
+    "release_sha256": "a1bcf0d3b354593707c734c87802218f81c8adf208e20ee88b933a5568b23689"
+  },
+  {
+    "module": "E2.CarryTranslations",
+    "file": "E2/CarryTranslations.lean",
+    "original_sha256": "e52f9bcfa391654dcf50c981d8daa8d668463efd63f87b561987413fca8dc172",
+    "release_sha256": "e52f9bcfa391654dcf50c981d8daa8d668463efd63f87b561987413fca8dc172"
+  },
+  {
+    "module": "E2.CarryRouting",
+    "file": "E2/CarryRouting.lean",
+    "original_sha256": "cb3fff7231f9a105a32dee0732dda3c253b745ea117e5e1c46ccc93e74aebb81",
+    "release_sha256": "cb3fff7231f9a105a32dee0732dda3c253b745ea117e5e1c46ccc93e74aebb81"
+  },
+  {
+    "module": "E2.Carry",
+    "file": "E2/Carry.lean",
+    "original_sha256": "9d77d8778a2d87ecd8b09a6bc518d79bb96c25a6ed1984f3e63fc278d5845612",
+    "release_sha256": "2d2bd10e6d36b839a8bd77b43d863c7bfe62fc3111ed954629f4a4eb433defe0"
+  },
+  {
+    "module": "E2.ProjectionState",
+    "file": "E2/ProjectionState.lean",
+    "original_sha256": "822ac957675d6e8e5425339d9d2ee1736eeb8ad0ce989d7b82c8bcd0ac5995f9",
+    "release_sha256": "822ac957675d6e8e5425339d9d2ee1736eeb8ad0ce989d7b82c8bcd0ac5995f9"
+  },
+  {
+    "module": "E2.TernaryRepair",
+    "file": "E2/TernaryRepair.lean",
+    "original_sha256": "ce075df2e1252052a7e4759419626df6cef4a7f0d350477f3dacc6b8c8ef6fbb",
+    "release_sha256": "007d94ee7011153f239d7d8c73cf7750cee200519a8af3918f76645e7c87528c"
+  },
+  {
+    "module": "E2.TranslatedWords",
+    "file": "E2/TranslatedWords.lean",
+    "original_sha256": "e53fb3c841f47ab03552821130591fbaf29fd4fcf45ea7e5acb5717fbf853f54",
+    "release_sha256": "e53fb3c841f47ab03552821130591fbaf29fd4fcf45ea7e5acb5717fbf853f54"
+  },
+  {
+    "module": "E2.SourceClock",
+    "file": "E2/SourceClock.lean",
+    "original_sha256": "65def0aedb11d55a704f5c8e51fdf1581dff008812ab58a210002d171f9de1a0",
+    "release_sha256": "65def0aedb11d55a704f5c8e51fdf1581dff008812ab58a210002d171f9de1a0"
+  },
+  {
+    "module": "E2.ExactZeroTest",
+    "file": "E2/ExactZeroTest.lean",
+    "original_sha256": "e1d5bd19dc0e01607877e797b2d30ad264c0e456c4e7bb3fe1e3d076b4700fda",
+    "release_sha256": "ba977ce83bde36145cf163262543b731bbaf08cfa7643b833aacd581af1327c2"
+  },
+  {
+    "module": "E2.ExactModelDefs",
+    "file": "E2/ExactModelDefs.lean",
+    "original_sha256": "acc5edee397bfb95a9b8463b98cb2a98f311b0790b5d9df97f8eba320766db68",
+    "release_sha256": "893d9a53f692a235f92f5a3ce4a0dc25acf22113e7e6cc1d2243ff6d8ddc2faa"
+  },
+  {
+    "module": "E2.ExactClockBase",
+    "file": "E2/ExactClockBase.lean",
+    "original_sha256": "eca0467625266c80d4c8df9ab64fc9d0adc3a5e940e98137dde04124e3fe0515",
+    "release_sha256": "1b8d1401a330bf5ad0053895d6363c6184280dd9efbd0d3602525e56ee69387a"
+  },
+  {
+    "module": "E2.ExactClockSpectral",
+    "file": "E2/ExactClockSpectral.lean",
+    "original_sha256": "87e0fbd2061444a854f29eb2a3eaba884d1a6a31d99ee7eceb74f4eba59c9f72",
+    "release_sha256": "727b65d6045d773f10335b182d1e94a5d4d48b7282ca154ed436073b75ba874b"
+  },
+  {
+    "module": "E2.ExactClockDigits",
+    "file": "E2/ExactClockDigits.lean",
+    "original_sha256": "43d7a19fc21531b885399e6aec1f02f8dff280bd73936f67edff4d0498d1d7fb",
+    "release_sha256": "9cfc6a61e8bf4c8b355c99a271f735433795d5a33b0fcd7811dd39b4b52df9f7"
+  },
+  {
+    "module": "E2.ExactClockTrace",
+    "file": "E2/ExactClockTrace.lean",
+    "original_sha256": "c529d333600b727b48ef697ab1d7337a474bcdcaf2ebe48aca9f93bed2d3e37b",
+    "release_sha256": "c7d0cd7ca66bc7a7fde11e6e6ad8e10d286802cca62db01129c7c45dbe555612"
+  },
+  {
+    "module": "E2.ExactClockTheorem",
+    "file": "E2/ExactClockTheorem.lean",
+    "original_sha256": "adfca7f1c13e523d9792365f8df0de29d158575e40830417f38d18fbdfc4ce30",
+    "release_sha256": "6335412a7959f598734284117a89b853b9845df020dddbae437babdb1618a5e8"
+  },
+  {
+    "module": "E2.ExactTraceReal",
+    "file": "E2/ExactTraceReal.lean",
+    "original_sha256": "d668b5a2bb321b5aede6fdaf9c3bca8635bbe4313027a8db32ded724a32a452d",
+    "release_sha256": "4a001ea71ee973488f41d89aa36f3ab0486059d4bfe828e628484073a9b4d522"
+  },
+  {
+    "module": "E2.ExactClockMoments",
+    "file": "E2/ExactClockMoments.lean",
+    "original_sha256": "2de204f798d5cbf8c0c18e1b58f8c164ee79c0f755f6da5f926a692f659a04e0",
+    "release_sha256": "9e09827410eaccd8b336e8164644726e3a2d71583bca98a2bbbeb51554535fe3"
+  },
+  {
+    "module": "E2.ExactTraceHermitian",
+    "file": "E2/ExactTraceHermitian.lean",
+    "original_sha256": "2969f430336c4cde423b13eb5f5f96020fdeeeaa06ec93dda4fa2757d922d10a",
+    "release_sha256": "d53f5c1f792615a46bb426a12887a05d87aaaf61f1e705c978de6559a7c3b254"
+  },
+  {
+    "module": "E2.ExactPolyEval",
+    "file": "E2/ExactPolyEval.lean",
+    "original_sha256": "f76894036c6ade29a1388fef8fb63cd69585f473692919d7b091b580aefe8c1c",
+    "release_sha256": "cd031e0c823fdbe90d8245bc32ca3546386cff90051574fcf01c8f73ecf870f5"
+  },
+  {
+    "module": "E2.ExactClockModel",
+    "file": "E2/ExactClockModel.lean",
+    "original_sha256": "39ec7693a5e8a72aff35866c766e8f1f3a1058d081b49920c02c71309ad71c85",
+    "release_sha256": "e2643ec6cac679dfd8fc55ea59d2d3d04e8ee69e8b8e41a81e43342d80bd1b6a"
+  },
+  {
+    "module": "E2.ExactTraceCommutators",
+    "file": "E2/ExactTraceCommutators.lean",
+    "original_sha256": "2a711d646508b76ac6c80fec592dd4d5f1d85c0c44469349795baf0a529c82bb",
+    "release_sha256": "50395aefde55fdac3cfc0be2b1ebc6c8bfdc70e96a5b0dae982ab62ea027e865"
+  },
+  {
+    "module": "E2.ExactClockNoTop",
+    "file": "E2/ExactClockNoTop.lean",
+    "original_sha256": "35f7053abf8ac0426e8bae3578e9db7a81ae5ea021499e122c8d3cbb94f93c00",
+    "release_sha256": "07ea62824d7a03ac718933be070df5632e6bbde81d1ca204b8c80d24935b5aff"
+  },
+  {
+    "module": "E2.ExactTraceSquareCommutators",
+    "file": "E2/ExactTraceSquareCommutators.lean",
+    "original_sha256": "84a70482443e045383160baa157343f3695e0e2a5356e4a9cc2888eef2d78dfa",
+    "release_sha256": "ff55f596c442e957f57261edda95da46249d2eab059946d6876a60511a127608"
+  },
+  {
+    "module": "E2.ExactClockGuard",
+    "file": "E2/ExactClockGuard.lean",
+    "original_sha256": "643d4e7a5a58f63f3b779d0242c32bb52426d855d4b491772377d2b7dca825a3",
+    "release_sha256": "6e5d7e8f8c772ef33f11695119c1e9946058d91ac1f586c8cb27a4308c4a6418"
+  },
+  {
+    "module": "E2.ExactIncrementAlgebra",
+    "file": "E2/ExactIncrementAlgebra.lean",
+    "original_sha256": "28490d0ec671766b8a211356d98adac5226133956f987dde7d6f3263dbdcb273",
+    "release_sha256": "ed6b89860ef7784fc79fc1a4e37244ce67b081a483a8e85f3780c34c10ae632f"
+  },
+  {
+    "module": "E2.ExactIncrementBits",
+    "file": "E2/ExactIncrementBits.lean",
+    "original_sha256": "67d4170c56af9f46ff6f4bbab334bce5dc96b4ff20f4fed962d588792cf2fd53",
+    "release_sha256": "f2b30b8b935b6ed2b064e59a4123e395485f0640abe8aac1a7a032a376898095"
+  },
+  {
+    "module": "E2.ExactIncrementPrefix",
+    "file": "E2/ExactIncrementPrefix.lean",
+    "original_sha256": "7242e39effbbc7bc754b35749a843371c614511d5f8217da039a8d637d598d77",
+    "release_sha256": "c076d74b14753b800ae00fe91205c3a9ce4c7b99b465cec46b51d4b4f23a4322"
+  },
+  {
+    "module": "E2.ExactIncrementModel",
+    "file": "E2/ExactIncrementModel.lean",
+    "original_sha256": "bbc2604a604708d84a9447674b41d658125cba9713428835af098376e58334ca",
+    "release_sha256": "208ec97dcbc378b1eaf742dc06b3d8970a310f6af5bbc111768b7a7afac6bdd9"
+  },
+  {
+    "module": "E2.ExactSourceDefs",
+    "file": "E2/ExactSourceDefs.lean",
+    "original_sha256": "498b6b85add064ee902a35101dde27d45240acdf4d2f3363108a8a75ce35cfdb",
+    "release_sha256": "27c3ee11fbf81b2ce9651d6d8dac8648a30c149800521ecaedb7e45fa338b4af"
+  },
+  {
+    "module": "E2.ExactSourceModel",
+    "file": "E2/ExactSourceModel.lean",
+    "original_sha256": "f50ab5762e30e4a873a82f21a44b6a5ee8de3295093fbd16c0bff45cab86c444",
+    "release_sha256": "29c89335dc2a86f151fa8a9254a93050f66bc5779dc4ffe81e1a5b568d743150"
+  },
+  {
+    "module": "E2.ExactInitializationAlgebra",
+    "file": "E2/ExactInitializationAlgebra.lean",
+    "original_sha256": "ad0c75438d6b0dd2fe4d74a5047dceec285408f9fb8f48fe55d17bc5d5e50525",
+    "release_sha256": "c1f2a0da0b6357946a52082621f214d250a5f8ff83becad7d698bd32c0e8a925"
+  },
+  {
+    "module": "E2.ExactInitializationModel",
+    "file": "E2/ExactInitializationModel.lean",
+    "original_sha256": "7c237b26353c54f03005fe26b038fd9644ae2ea9ec5086c20d02dfdeb82d670f",
+    "release_sha256": "5b395319bf5c31ca0c322c28531afe7c29db70c9b1908035bd88e571ddc0b1c7"
+  },
+  {
+    "module": "E2.ExactResetModel",
+    "file": "E2/ExactResetModel.lean",
+    "original_sha256": "2bb084f10a15d809c607902d613a9aa0c76541311482f219706b65a48ec6da33",
+    "release_sha256": "c21ec3681c5128fccdd2c4655cc37c727d5a40e4866fc843aa237fae498bacaf"
+  },
+  {
+    "module": "E2.ExactProgramActions",
+    "file": "E2/ExactProgramActions.lean",
+    "original_sha256": "33360214507fd987ec1cff67d72a2b45b594f44dec67ba0019e4100afd13ea8e",
+    "release_sha256": "2205a91f5db7185b57472860871266c06b959813e6f2fbea4562e280ba23a2ad"
+  },
+  {
+    "module": "E2.ExactTracialGNS",
+    "file": "E2/ExactTracialGNS.lean",
+    "original_sha256": "4ec9edbe4ff1b4c56acf3fab4916f91974aa74463561ec20e5250d55c9b193d8",
+    "release_sha256": "1d26ff1dad3329eaccce9565a09d97906cad949abfc92705404a48e2a65cfe35"
+  },
+  {
+    "module": "E2.ExactGNSModel",
+    "file": "E2/ExactGNSModel.lean",
+    "original_sha256": "477bd38094fcb8e71963160d84289dc96dbe70e3204e7f424309a39ca099a86c",
+    "release_sha256": "94dfb7ddd1bbad8cc772fbb448ae87dc1f4090a5530fb10a0d49f84d3ff3200b"
+  },
+  {
+    "module": "E2.ExactProgramModel",
+    "file": "E2/ExactProgramModel.lean",
+    "original_sha256": "b4a29b853ebe0e019eb7c649c10280cf019dfa5d5a8b47dd5d53f61ba1941a31",
+    "release_sha256": "5ec33aaf78a70a466bc30e34abc1ec741c2c443a5e539bce878b08d99f564732"
+  },
+  {
+    "module": "E2.ExactProgramIteration",
+    "file": "E2/ExactProgramIteration.lean",
+    "original_sha256": "8802671fafe8078b77345aa185e491a9b66b7c4772a4d55ed71ccc5ed478cc13",
+    "release_sha256": "d47a900a40ae69c1c73d816e553aaddf39c53de273e7b1efdbe717f1a34736d6"
+  },
+  {
+    "module": "E2.ExactCylinderAlgebra",
+    "file": "E2/ExactCylinderAlgebra.lean",
+    "original_sha256": "317fabbf41cf2b70eb3c28af8ab9eef531ed1965258158c9aab81766f71b8688",
+    "release_sha256": "0cd55c03edf76fde9d39ddeb2f9ab30bc464670993802d5102c7fdd4fdc6f3ec"
+  },
+  {
+    "module": "E2.ExactTimePrefix",
+    "file": "E2/ExactTimePrefix.lean",
+    "original_sha256": "5b3ff4515bf4f2d12d1dc296bd9b2e3bf9c113a4998d0d95edcda15f94ea525f",
+    "release_sha256": "a75e19c009cf209540fc3158899183ce6d5d31be92d6e4707f9f5b8495a11900"
+  },
+  {
+    "module": "E2.ExactSourceCommutation",
+    "file": "E2/ExactSourceCommutation.lean",
+    "original_sha256": "fa4b7d9d0f41c4a75004c0bf9f491e160d7d7f3361c923ee22cfc21749dc2526",
+    "release_sha256": "63426a86ae5eb9e85778201aaba02a58702b764f345ef2b95e896de17f5e9bc9"
+  },
+  {
+    "module": "E2.ExactComputationCorner",
+    "file": "E2/ExactComputationCorner.lean",
+    "original_sha256": "f809aa47e5e26291e005e48aadb03ae676b8648a5f0babfb803066f4dd92b43a",
+    "release_sha256": "bc5cf58fe0142a2c64cb2a6c061ab0bef25595f402e0e0dc49b3ff5d882e9553"
+  },
+  {
+    "module": "E2.ExactCylinderRemoval",
+    "file": "E2/ExactCylinderRemoval.lean",
+    "original_sha256": "fadd21a2752c1d8abf4d83b9e20f7f595ebdd17ae640accba91ce62c759de8bf",
+    "release_sha256": "ad5af22711ca86993f36cda3975e84ac05b2ecb63d6d4e2723375482afa7753b"
+  },
+  {
+    "module": "E2.ExactHaltingCorner",
+    "file": "E2/ExactHaltingCorner.lean",
+    "original_sha256": "5e0538bfa16ba3f0bd54032aa741e479a0bb6907d9befad54a8d1d33db42a784",
+    "release_sha256": "1b24c5c4f8df44981c1df8162e62de9938faa5cf05b9b1e8eb5731a2f2836546"
+  },
+  {
+    "module": "E2.ExactAddressMass",
+    "file": "E2/ExactAddressMass.lean",
+    "original_sha256": "d36f882ae62ce6d33b6b001a20c5a80c2e71a1181c9c31ec36525c7b3ce8f2d3",
+    "release_sha256": "729bcfe5eb4c1457e997ff5e235a2e96ea73d8dfd8ea32ebc23117e6f18e801a"
+  },
+  {
+    "module": "E2.ExactFlagDensity",
+    "file": "E2/ExactFlagDensity.lean",
+    "original_sha256": "1f33940041d35092e465f6a13800287f6e6f91a70b2772221266f5087f93cd2d",
+    "release_sha256": "14522c2299684da4c87ab6ef675fdd3b78e935a31fad03facd4cd4e19cf3d5e9"
+  },
+  {
+    "module": "E2.MomentProduct",
+    "file": "E2/MomentProduct.lean",
+    "original_sha256": "184ca8266a0c3908b075e7814f05bdf4eaa6a267072c86fa4210cff7ab2817c2",
+    "release_sha256": "f226549d860967653a964264af2d9e6c5d60d1c478fa9a0fbeb925719407ae29"
+  },
+  {
+    "module": "E2.MomentCentralizer",
+    "file": "E2/MomentCentralizer.lean",
+    "original_sha256": "89a14544c12a7aafd5147b4ccda2ec9dd77d38f7afec8ca9a23fc9a7605fb7f5",
+    "release_sha256": "6197aabb33ca1d39af5d5ddfedee3aa1ffbc4a1e629bf5602e2bbcf55dc0343d"
+  },
+  {
+    "module": "E2.MomentUltralimit",
+    "file": "E2/MomentUltralimit.lean",
+    "original_sha256": "a282defb763b80c1d9a82590667ff0f5deb1a1b1fd3d0467b8ef522abacfa61c",
+    "release_sha256": "0134ad5063a281a89b070fb51a803bfeaf172fe233ff85e5af3107c712aa13de"
+  },
+  {
+    "module": "E2.MomentGNS",
+    "file": "E2/MomentGNS.lean",
+    "original_sha256": "430db788eda967814c85e3b4ccfcb5b584e51a569eedbe96a85d03ba2b53f9c0",
+    "release_sha256": "8b8f1a697b141e72a042791a7592094a3d1a8c1a0400597fa0e4cb26951b4cb2"
+  },
+  {
+    "module": "E2.MomentLimitModel",
+    "file": "E2/MomentLimitModel.lean",
+    "original_sha256": "afd854e4056ee4060f6a892f1d1faf095a8c37c0b7631d656334dfd8b969a57a",
+    "release_sha256": "fff8803013026be28b9384d7e8298e19dc1551cad2a1d28686d6f6f2b1630832"
+  },
+  {
+    "module": "E2.MomentMatrixStates",
+    "file": "E2/MomentMatrixStates.lean",
+    "original_sha256": "f19b09fa4dc9e7efe93163e4ab1df1eb6b522ee5f715b68634b85b5c8f7736f4",
+    "release_sha256": "c4f1d889822aaaacf6ebffad2b7d0edbb7771dd897842ed164fc62b34322b7f7"
+  },
+  {
+    "module": "E2.MomentFiniteSequence",
+    "file": "E2/MomentFiniteSequence.lean",
+    "original_sha256": "1e8ddba67f8dbe49f3fc454b4c9b7d494da68c9794df4e149abde25a879c138b",
+    "release_sha256": "df0bfbfd07347024e081aba97e07df4a1b6f0034657c036316c24a3c54111dfa"
+  },
+  {
+    "module": "E2.UniformFlagDensity",
+    "file": "E2/UniformFlagDensity.lean",
+    "original_sha256": "d08283275b7299c1a701fbe8b808e74e245cf4b1a00eb5c51241351cf737cb41",
+    "release_sha256": "df93ce7615acb57d006e2c7eab0203f25455625483e39c800ef4e0ebd74cdffa"
+  },
+  {
+    "module": "E2.Tracial",
+    "file": "E2/Tracial.lean",
+    "original_sha256": "d9403067e95b00bca9525a17c50d0c922b081e0456e8b4061207c5437768dee4",
+    "release_sha256": "d6118a048b7531e982a08cab03f6d2d9efd9d6fe6d5a6d50484e5cb95cb9cd1c"
+  },
+  {
+    "module": "E2.ClockExtras",
+    "file": "E2/ClockExtras.lean",
+    "original_sha256": "3b4bdb97e23f77abb3fa926d48d0e414aa00143ac42b34196ef795899a7e6660",
+    "release_sha256": "a24eeb733d2252b3bf30246b9adde5c6b5ab8b7528daf100fb23e52536831226"
+  },
+  {
+    "module": "E2.ConditionalCommutations",
+    "file": "E2/ConditionalCommutations.lean",
+    "original_sha256": "fba02963ee6b402d70c15c8467d7173c726857318094e60d1c5c2757c3424ffb",
+    "release_sha256": "fba02963ee6b402d70c15c8467d7173c726857318094e60d1c5c2757c3424ffb"
+  },
+  {
+    "module": "E2.ConditionalTail",
+    "file": "E2/ConditionalTail.lean",
+    "original_sha256": "9d6d2cae37168bdadbe6e1b56c4b10224894e6855e3d5bb00e79e03ac848f197",
+    "release_sha256": "9d6d2cae37168bdadbe6e1b56c4b10224894e6855e3d5bb00e79e03ac848f197"
+  },
+  {
+    "module": "E2.ConditionalSource",
+    "file": "E2/ConditionalSource.lean",
+    "original_sha256": "e351d0c8619e46b1ced0f37718e9361a674e2f7048de534cc5fbc01e563ee6db",
+    "release_sha256": "e351d0c8619e46b1ced0f37718e9361a674e2f7048de534cc5fbc01e563ee6db"
+  },
+  {
+    "module": "E2.SourceCross",
+    "file": "E2/SourceCross.lean",
+    "original_sha256": "8f4b68f9c8e92a99db54f60997c5f36ed0457fca9cbd7b6bea8de9fa41da0702",
+    "release_sha256": "8f4b68f9c8e92a99db54f60997c5f36ed0457fca9cbd7b6bea8de9fa41da0702"
+  },
+  {
+    "module": "E2.JointReplacement",
+    "file": "E2/JointReplacement.lean",
+    "original_sha256": "5de1e9dd5bf84712844341151b979eea0caaf000103650223a3d77a58679b451",
+    "release_sha256": "5de1e9dd5bf84712844341151b979eea0caaf000103650223a3d77a58679b451"
+  },
+  {
+    "module": "E2.JointEffects",
+    "file": "E2/JointEffects.lean",
+    "original_sha256": "51a1de7161130877e9738086352bf84a1275fa84855844ec0e29aa2c6f1e2c83",
+    "release_sha256": "51a1de7161130877e9738086352bf84a1275fa84855844ec0e29aa2c6f1e2c83"
+  },
+  {
+    "module": "E2.JointSlots",
+    "file": "E2/JointSlots.lean",
+    "original_sha256": "1ca4da597e8fa4dd840669abe9df9764fe518b828fab65ed8a0471a41f6dee59",
+    "release_sha256": "7c44d16d6f891d401772e2ca02d3cd50f4421931e382452fcd67adaf7772878f"
+  },
+  {
+    "module": "E2.SourceJointSlots",
+    "file": "E2/SourceJointSlots.lean",
+    "original_sha256": "9f2af301420f9ada8141c4bfdb6e92c475e9540c82bd83c70da8cc49e0f35e5e",
+    "release_sha256": "84dd58ba9ddbed1747f6fb165cff8611b86cddb5da252020e74712331cd7705b"
+  },
+  {
+    "module": "E2.SourceJointConditional",
+    "file": "E2/SourceJointConditional.lean",
+    "original_sha256": "da0bec2ee8c16abbc17d4f6075d94d094803377ae35551be4522c82a70230f93",
+    "release_sha256": "57b93f9b7c7f9559e72cdb4961a06864bb7d3a3a2d1f82d1cbf4e1e875ff3406"
+  },
+  {
+    "module": "E2.JointScale",
+    "file": "E2/JointScale.lean",
+    "original_sha256": "c85e3bf0c5fac85d32e4a0701062a8ca0d0ca062e759255efd1dbdbb909f2dc2",
+    "release_sha256": "e79265cbd2187bcab31c855748490b0c59328da739b66acffff8851f67bf7577"
+  },
+  {
+    "module": "E2.SourceJointBinary",
+    "file": "E2/SourceJointBinary.lean",
+    "original_sha256": "498b6b1ae050d100db54abc2de76d8752b0133a183942351a989d0e5bca2ba48",
+    "release_sha256": "343af9e605700c9739055be4d73fc1649924022bd2f6b2d09793fe85ab3c33fc"
+  },
+  {
+    "module": "E2.SourceJointCross",
+    "file": "E2/SourceJointCross.lean",
+    "original_sha256": "374e0e615a9e68f363892ae87d6c356e4092f01f5b87b5cb39c66bb3cd88e3ac",
+    "release_sha256": "9f65b1a837421b52ea9ed18c236146519dbcef0901b2bf8fa480f6dacec978b1"
+  },
+  {
+    "module": "E2.SourceJoint",
+    "file": "E2/SourceJoint.lean",
+    "original_sha256": "e78632dce26e53f2869f6320f9a52b3ff9516af6f6a77cb87cb5b1b7012c9c99",
+    "release_sha256": "df059b4fd1cf75da7dc9dd355a81175bbfe6eb84537ac1d88c0c4505efd2374d"
+  },
+  {
+    "module": "E2.JointAssemblyTools",
+    "file": "E2/JointAssemblyTools.lean",
+    "original_sha256": "f282e79451e782d34e7646b3e70bef7e0ccc8b659ae319f9751f6d6d1af15e16",
+    "release_sha256": "208add4c9d37cb5faf0032d785aeedb94bfc40ba3b5747904396afdda45de9da"
+  },
+  {
+    "module": "E2.Joint",
+    "file": "E2/Joint.lean",
+    "original_sha256": "fbf535244a60dad1e8b61bf2a87859512ad6f0b016af006c048f8b84f5db2113",
+    "release_sha256": "d11e1e8bf8214d1b964c03d1ac85b3cb4bbb6ea8f76076922fbee3ecb7960ec0"
+  },
+  {
+    "module": "E2.JointAccounting",
+    "file": "E2/JointAccounting.lean",
+    "original_sha256": "3e11eb28f3b02fcc6db32265ae57d2a2f3bfdad2fce5371505777e1ab3b91d8f",
+    "release_sha256": "3e11eb28f3b02fcc6db32265ae57d2a2f3bfdad2fce5371505777e1ab3b91d8f"
+  },
+  {
+    "module": "E2.LowerTransport",
+    "file": "E2/LowerTransport.lean",
+    "original_sha256": "6935ab71452b367ed6bce1f2a4b2423ccd74018285c633de492d6d3839d561a3",
+    "release_sha256": "c260c684c0facbe5111e0076c7f7a2dcac3b4e78689bbc14581246e580605476"
+  },
+  {
+    "module": "E2.CountNormalization",
+    "file": "E2/CountNormalization.lean",
+    "original_sha256": "04e16ef387c46136969d29bcad06427f04e8c3a0968a975efb715c99cc412a0b",
+    "release_sha256": "2aaf7401f31c5b3bf774b5a5a70a2a0caade173d3380537701086fd66b02a361"
+  },
+  {
+    "module": "E2.Turn9.CountInformationStatements",
+    "file": "E2/Turn9/CountInformationStatements.lean",
+    "original_sha256": "73cf1fde16bffaa55c0befefba953bc39de5aa70790f080bab17fd5e5d6a92ac",
+    "release_sha256": "9b0269c63625739691c27c4d96e8d23506ff69bd649606cfbf753f331932e9a6"
+  },
+  {
+    "module": "E2.CountHolevo",
+    "file": "E2/CountHolevo.lean",
+    "original_sha256": "09b4394f27dfac4bba590da833a8a92f6605899715bfd975e59d7bb2f67bf2da",
+    "release_sha256": "2ddfd7e3b84b7e8c282cde3c0451d16049029334fc48e1dbef9cada8660a097c"
+  },
+  {
+    "module": "E2.CountCQ",
+    "file": "E2/CountCQ.lean",
+    "original_sha256": "34b2ab6a9c9ebdcd8d1d45036ad569bd7fb9e9fe460625978d92b0bc68bdc1c2",
+    "release_sha256": "06b3760bbf3501edd58e07e6210c737cde1f9850cbe00e3f77a09e0e658cef64"
+  },
+  {
+    "module": "E2.CountConditional",
+    "file": "E2/CountConditional.lean",
+    "original_sha256": "6c3c68c3f69316aa5fa948e73f185838888a2d1ff24286edc1719f6abe696f9f",
+    "release_sha256": "8517f123b3696db64082f59ac10af42642f565d21ffe33e23184b5952835b104"
+  },
+  {
+    "module": "E2.CountDataProcessing",
+    "file": "E2/CountDataProcessing.lean",
+    "original_sha256": "f6d6cf1ff837ab511d9a3571d887aaa49b36354aed2af583639bf4d9123d45d6",
+    "release_sha256": "864f7f0537d262768e56dc9e3840652604d36bc043a12e8aa4c0ae0c83f56159"
+  },
+  {
+    "module": "E2.CountEntropyScalar",
+    "file": "E2/CountEntropyScalar.lean",
+    "original_sha256": "6576f96acf0681f87fe5d5606602cf9cf16c5509e5f92f47847a723bcc033234",
+    "release_sha256": "18137654e9f371bad923f0e3ac80a367c8b702a0bf760a5355929fd7ef61e33a"
+  },
+  {
+    "module": "E2.CountFanoScalar",
+    "file": "E2/CountFanoScalar.lean",
+    "original_sha256": "1f3d5905f747d6fab469c216a86a913288d40f51f7e427ab639a40bf5bb3de45",
+    "release_sha256": "4dfff97bcbbc04963181b593cfbd7857d2859e38fdc6ca2720492f2211ecbadb"
+  },
+  {
+    "module": "E2.CountFanoMeasurement",
+    "file": "E2/CountFanoMeasurement.lean",
+    "original_sha256": "64d0a9855a2d18f6bb39d37dd83f051a7687f1700d8fa2217b82180a4329ccce",
+    "release_sha256": "f1cb8a4e0c42e97f399384f9207ee474400eeda1b50c5aa85e9db4ac31103154"
+  },
+  {
+    "module": "E2.CountFano",
+    "file": "E2/CountFano.lean",
+    "original_sha256": "228ea84a267681c88deda8376d8ccbcffabfa9269bb1e194f50533d75716238e",
+    "release_sha256": "128a3f6a34f5469c5d460e76fedda62805ea2b915eccd223394ec1266e15620b"
+  },
+  {
+    "module": "E2.CountColumns",
+    "file": "E2/CountColumns.lean",
+    "original_sha256": "a838dd02d3360d17684f92d0b6d1e5426182fe4d07488627d57e7bc66cdbd5b7",
+    "release_sha256": "8969c1f5c5826e1ecc33e2080d567eacc4b11924c366174450d446e2993b9661"
+  },
+  {
+    "module": "E2.CountIntertwining",
+    "file": "E2/CountIntertwining.lean",
+    "original_sha256": "6ddc196d47118d48f7985a95ec74497419256af990bd611998fd51d9c6b3fb3c",
+    "release_sha256": "e04f0e720c528f1955be9238c38a5afc437e0351e0b67e7c109cce2fdb5dcc48"
+  },
+  {
+    "module": "E2.CountPathIntertwining",
+    "file": "E2/CountPathIntertwining.lean",
+    "original_sha256": "6c1eea08ddf908470bf853f0f1b53e0da07d901bee9d820beddea6f8f48783c1",
+    "release_sha256": "cdd94d6a13c1f20648d1134af2017e232ffb1849250f94e551403fd17715f865"
+  },
+  {
+    "module": "E2.Turn9.CountPathsStatements",
+    "file": "E2/Turn9/CountPathsStatements.lean",
+    "original_sha256": "2d901233d4b276013e6e63044dd6c00213541bf130e20840e521825dcaa8c8c5",
+    "release_sha256": "22f0183cc3209ed50288d18a8ec0d5cfb12eb3e4f0aded46c26215a885ee9e92"
+  },
+  {
+    "module": "E2.CountDecoder",
+    "file": "E2/CountDecoder.lean",
+    "original_sha256": "4a17026fdee5f31c1910c8386af9753196acbbd1a96583a6c0a4b3d01604fb8f",
+    "release_sha256": "e817cb90df6c29f77e28c6685acbc52696afc69ba34938e15e8c8be1bfd386d5"
+  },
+  {
+    "module": "E2.CountMoveHelpers",
+    "file": "E2/CountMoveHelpers.lean",
+    "original_sha256": "094ebc2d5b7737e1ece5a1a56ff38531aa225d82781d46f86b47232e57188aa2",
+    "release_sha256": "a5d4d0d57047b540cf30ff781c816309db16d9e0f33a780c10cf764cd062aa17"
+  },
+  {
+    "module": "E2.CountMove",
+    "file": "E2/CountMove.lean",
+    "original_sha256": "14efb8835cdf3483c6747d869d3bdbe4aab61a416fcdd9bc6f051e3a2db4f9a0",
+    "release_sha256": "d35fe67353db71384f3d1492f38f8c565c6f27a5434cea3d886e1196dd6d1cf2"
+  },
+  {
+    "module": "E2.CountSuffix",
+    "file": "E2/CountSuffix.lean",
+    "original_sha256": "6b2b14db16e95a8104394904fe0b31c932a9693cdf2429b8bbd998af3fefc29e",
+    "release_sha256": "813689c20cba613d94c8b265584b211c667262d077c8f630c2abb0357d94568a"
+  },
+  {
+    "module": "E2.CountVariation",
+    "file": "E2/CountVariation.lean",
+    "original_sha256": "cce19aadd0ca756ab5f4645f64048965ec18e014c7197e3f8f2a04f147742911",
+    "release_sha256": "b4c5a0e8af57cfced041e6f6550b7bd703a6f20c82670954c8c561851898035c"
+  },
+  {
+    "module": "E2.CountActivation",
+    "file": "E2/CountActivation.lean",
+    "original_sha256": "2ec420a58441e7af040fd45d569babd9729ef0c78e4278309830021611fa425b",
+    "release_sha256": "6480070bf0d04a3cb42ffcb141a70d8962a8553fb769fd6422fc08f5cd2ffb0f"
+  },
+  {
+    "module": "E2.CountClassicalChain",
+    "file": "E2/CountClassicalChain.lean",
+    "original_sha256": "72b98444c56e33019d533e2df3187aff85d73df7886d76363d0a058f5c8d77ec",
+    "release_sha256": "944c94acddde928477a03ab1a4758b92e3ce592632957abdd9b281edfd3946f4"
+  },
+  {
+    "module": "E2.CountClassical",
+    "file": "E2/CountClassical.lean",
+    "original_sha256": "602cf5b491287841420fabf8f29611219b7c881703a86249e76cffd502bbfa95",
+    "release_sha256": "f4d9cc43336787029c04d6c432204093cfb8630bda7529bcc3c1e0a47686edc1"
+  },
+  {
+    "module": "E2.CountEntropyLower",
+    "file": "E2/CountEntropyLower.lean",
+    "original_sha256": "62f447b402998148690741d3881c41c68d480a322bf8b5bd12a36f728e0fded4",
+    "release_sha256": "5d124d48fb09394786298b44e210d1bdc3acbf4399a8120cfa4a554e26629fd0"
+  },
+  {
+    "module": "E2.CountInformation",
+    "file": "E2/CountInformation.lean",
+    "original_sha256": "eaba119d7dac74d11ed01ffd599d0f1b6c621f21df11ad9cd6219c4a049f6174",
+    "release_sha256": "6a3813907ce532107841125096870f4a3d938a3609a72c4671d4ae01e8214742"
+  },
+  {
+    "module": "E2.Measurements",
+    "file": "E2/Measurements.lean",
+    "original_sha256": "81bd5fd57117d0705d4be8cb936081c5f9e959dbf81bd6a6db69a89ef3f35740",
+    "release_sha256": "aa4e17e5f7965632ebb20e59f96d0b5d074abd5912065636c8820ae99f8d0b64"
+  },
+  {
+    "module": "E2.Turn9.LowerStatements",
+    "file": "E2/Turn9/LowerStatements.lean",
+    "original_sha256": "726c44eff493643c2d7e2fa06f58026ccec4530c5833b5feeacdbc3a6dbcb760",
+    "release_sha256": "b436e488ac7acaea0b796e90305e26201a03acd20cea3b7063a0c0c4c94772de"
+  },
+  {
+    "module": "E2.LowerDepth",
+    "file": "E2/LowerDepth.lean",
+    "original_sha256": "07e27cc13cc2e2f76023a77ad14792f7bebe861aa9020a76505d81d370aa73af",
+    "release_sha256": "f4ae475cd89b54ab7475e385446386aacbb4925ff9d7d70102792046a15534e9"
+  },
+  {
+    "module": "E2.LowerEntropyModulus",
+    "file": "E2/LowerEntropyModulus.lean",
+    "original_sha256": "89b00ef65a0c5bd0743a7ed9cc5a6792cf56ce8a5b7f00b134cde32d1bd768ec",
+    "release_sha256": "c3646d9425774ea225c735691965c92fe2429ab05dbe4089b175db5ee934c048"
+  },
+  {
+    "module": "E2.LowerBudget",
+    "file": "E2/LowerBudget.lean",
+    "original_sha256": "b09e7307433bda7b8367b596376b9130036ef0e0329d2353a32af13a8cab19f6",
+    "release_sha256": "f64965377c60ef4e7b15348e7d5fe8364daae51615f912086b21ef681d74087b"
+  },
+  {
+    "module": "E2.LowerFinite",
+    "file": "E2/LowerFinite.lean",
+    "original_sha256": "e66b32edf11e63f220a17b5f4e837a921aca66755b2672530b44e81745727e0b",
+    "release_sha256": "25dc3efc2ec5f218adeb58d527e09de1bfbd3232376dd65f19c75fc04920a644"
+  },
+  {
+    "module": "E2.LowerAnalytic",
+    "file": "E2/LowerAnalytic.lean",
+    "original_sha256": "99053d86e2d7dd0ecb3070a5a1c294f47492d71951c2821c97bc80799e76c1bb",
+    "release_sha256": "8574288414fde083d401e945c562fb954e5cafff7199c209ee75c0656f90f7d5"
+  },
+  {
+    "module": "E2.Lower",
+    "file": "E2/Lower.lean",
+    "original_sha256": "d11cd310ebdc8c40d43ea44ffb80a25b21a5853ae4a269d01344bc4488026a82",
+    "release_sha256": "efd3ef2847b9c699552d82eb4ac0bf21e2fd50e08c92c8e6b059d5512a5c4ecc"
+  },
+  {
+    "module": "E2.FiniteCutoff",
+    "file": "E2/FiniteCutoff.lean",
+    "original_sha256": "0b0862f820141e2732864252b1dc5f76ea067fc8aa910c6a668b5483b6e4f197",
+    "release_sha256": "1f99f6e2786c9f23d6b30e2b5de2ce1901d6fd040243b40d15d7609a8fb4c530"
+  },
+  {
+    "module": "E2.FiniteCarryFunctions",
+    "file": "E2/FiniteCarryFunctions.lean",
+    "original_sha256": "d4bb4d3835f42729877578079ade12ff9ffbab34c10439fd5cf436574196277c",
+    "release_sha256": "d4bb4d3835f42729877578079ade12ff9ffbab34c10439fd5cf436574196277c"
+  },
+  {
+    "module": "E2.FiniteGuardedIncrement",
+    "file": "E2/FiniteGuardedIncrement.lean",
+    "original_sha256": "81d8338e3fa40768af7e6b1eb55749735dd42ff34e1948da5c7581505a3728fd",
+    "release_sha256": "81d8338e3fa40768af7e6b1eb55749735dd42ff34e1948da5c7581505a3728fd"
+  },
+  {
+    "module": "E2.FiniteSlotAllocation",
+    "file": "E2/FiniteSlotAllocation.lean",
+    "original_sha256": "df2fdc4e8fee458eae7a2f5a77543a93be541feb87826a2c2ecf15e6978d07fd",
+    "release_sha256": "df2fdc4e8fee458eae7a2f5a77543a93be541feb87826a2c2ecf15e6978d07fd"
+  },
+  {
+    "module": "E2.FiniteDressedShift",
+    "file": "E2/FiniteDressedShift.lean",
+    "original_sha256": "d0f01467b2e8342d4a6c3449afbee8cea8befb2321a6728fb81b59b18c86f007",
+    "release_sha256": "d0f01467b2e8342d4a6c3449afbee8cea8befb2321a6728fb81b59b18c86f007"
+  },
+  {
+    "module": "E2.FiniteGuardMatrices",
+    "file": "E2/FiniteGuardMatrices.lean",
+    "original_sha256": "874bd4bbbe4db54274d6362aa64ce0fce0504a5e2a165a14e0e45dc5cc6923d8",
+    "release_sha256": "874bd4bbbe4db54274d6362aa64ce0fce0504a5e2a165a14e0e45dc5cc6923d8"
+  },
+  {
+    "module": "E2.FiniteWindowDiscrepancy",
+    "file": "E2/FiniteWindowDiscrepancy.lean",
+    "original_sha256": "4305bbb58bebd75111cece0575c42fb908d042a87b538684b572d764a3555669",
+    "release_sha256": "4305bbb58bebd75111cece0575c42fb908d042a87b538684b572d764a3555669"
+  },
+  {
+    "module": "E2.FiniteAddressMask",
+    "file": "E2/FiniteAddressMask.lean",
+    "original_sha256": "caf6102d6d91a4b31e98866b68cb50dd06c09d55c55af8db509dfb346a1aabef",
+    "release_sha256": "caf6102d6d91a4b31e98866b68cb50dd06c09d55c55af8db509dfb346a1aabef"
+  },
+  {
+    "module": "E2.FiniteWindowBound",
+    "file": "E2/FiniteWindowBound.lean",
+    "original_sha256": "816e77cf49335a0f63cd69eb1b5d48f34f18a55301a158193712d02ade661958",
+    "release_sha256": "816e77cf49335a0f63cd69eb1b5d48f34f18a55301a158193712d02ade661958"
+  },
+  {
+    "module": "E2.FiniteCyclicMask",
+    "file": "E2/FiniteCyclicMask.lean",
+    "original_sha256": "7ea47a3aa01911a19be5425c7bbc4c3e35b8d3aa3a27e7d0ca9aaff951634351",
+    "release_sha256": "7ea47a3aa01911a19be5425c7bbc4c3e35b8d3aa3a27e7d0ca9aaff951634351"
+  },
+  {
+    "module": "E2.FiniteWordNumber",
+    "file": "E2/FiniteWordNumber.lean",
+    "original_sha256": "84459fee4250eac9e1f9c93a75dc08c5ce1c4c012ecbd2a0669cc84435601fcc",
+    "release_sha256": "84459fee4250eac9e1f9c93a75dc08c5ce1c4c012ecbd2a0669cc84435601fcc"
+  },
+  {
+    "module": "E2.FiniteSlotBound",
+    "file": "E2/FiniteSlotBound.lean",
+    "original_sha256": "57412c371e56841a56562f1ebdf56f26d654112acc6a992173122481ce25a6b9",
+    "release_sha256": "57412c371e56841a56562f1ebdf56f26d654112acc6a992173122481ce25a6b9"
+  },
+  {
+    "module": "E2.FiniteConditionalSeries",
+    "file": "E2/FiniteConditionalSeries.lean",
+    "original_sha256": "c267390742aa259434091e9ec87b483202a26f2f9c6a55eee2afcc80b7f848a0",
+    "release_sha256": "c267390742aa259434091e9ec87b483202a26f2f9c6a55eee2afcc80b7f848a0"
+  },
+  {
+    "module": "E2.FiniteOptionalSlots",
+    "file": "E2/FiniteOptionalSlots.lean",
+    "original_sha256": "205c8791e7468c4d4b6204f5ebbcf6c366eac67af0ab8c69facfe4a8715e467d",
+    "release_sha256": "205c8791e7468c4d4b6204f5ebbcf6c366eac67af0ab8c69facfe4a8715e467d"
+  },
+  {
+    "module": "E2.FiniteOptionalMatrices",
+    "file": "E2/FiniteOptionalMatrices.lean",
+    "original_sha256": "d092dff3da4def2b96a0a0bc74e7039c5cdfcc01e099fd81325c85534a569c24",
+    "release_sha256": "d092dff3da4def2b96a0a0bc74e7039c5cdfcc01e099fd81325c85534a569c24"
+  },
+  {
+    "module": "E2.FiniteDecodeResetFunctions",
+    "file": "E2/FiniteDecodeResetFunctions.lean",
+    "original_sha256": "90b77cf65151da17ebc05bca11f2eb57047935e2dcae9d1ed16d5cf574311327",
+    "release_sha256": "90b77cf65151da17ebc05bca11f2eb57047935e2dcae9d1ed16d5cf574311327"
+  },
+  {
+    "module": "E2.FiniteHistoryFunctions",
+    "file": "E2/FiniteHistoryFunctions.lean",
+    "original_sha256": "0b86b168369e2487b8d43d946fa239932ec18eb22ce789fa2c67c57b3b64635e",
+    "release_sha256": "0b86b168369e2487b8d43d946fa239932ec18eb22ce789fa2c67c57b3b64635e"
+  },
+  {
+    "module": "E2.FiniteSourceTuple",
+    "file": "E2/FiniteSourceTuple.lean",
+    "original_sha256": "31f5736d927b48f1963d916bc42f3d8582a46f579142a269ff6b7e6b7cb2e55b",
+    "release_sha256": "31f5736d927b48f1963d916bc42f3d8582a46f579142a269ff6b7e6b7cb2e55b"
+  },
+  {
+    "module": "E2.FiniteSourceDomains",
+    "file": "E2/FiniteSourceDomains.lean",
+    "original_sha256": "38c57e460c509474c396633296853b3a0876e96066d44cb906d77f10c3c0b79e",
+    "release_sha256": "38c57e460c509474c396633296853b3a0876e96066d44cb906d77f10c3c0b79e"
+  },
+  {
+    "module": "E2.FiniteSourceCoordinates",
+    "file": "E2/FiniteSourceCoordinates.lean",
+    "original_sha256": "8b93124c4de1e32ce3b2ac003c9703b257b2c5fadf389820ef13c6c853790b3c",
+    "release_sha256": "8b93124c4de1e32ce3b2ac003c9703b257b2c5fadf389820ef13c6c853790b3c"
+  },
+  {
+    "module": "E2.FiniteSourceDiagonal",
+    "file": "E2/FiniteSourceDiagonal.lean",
+    "original_sha256": "16a8f9865e9cf8dad05ffc8db76e0f3c11ee4de71043c5252281215027054d5a",
+    "release_sha256": "16a8f9865e9cf8dad05ffc8db76e0f3c11ee4de71043c5252281215027054d5a"
+  },
+  {
+    "module": "E2.FiniteSourceHistories",
+    "file": "E2/FiniteSourceHistories.lean",
+    "original_sha256": "1d81cbb1e4a3597661adcd12b8ba006da94e061f5cdbe589190758524cadb802",
+    "release_sha256": "1d81cbb1e4a3597661adcd12b8ba006da94e061f5cdbe589190758524cadb802"
+  },
+  {
+    "module": "E2.FiniteSourceHalting",
+    "file": "E2/FiniteSourceHalting.lean",
+    "original_sha256": "d91611d5bfdee9116d8bbb54c9f90d97ab9115e8944a5993196aa016d440b670",
+    "release_sha256": "d91611d5bfdee9116d8bbb54c9f90d97ab9115e8944a5993196aa016d440b670"
+  },
+  {
+    "module": "E2.FiniteSourceWorkspace",
+    "file": "E2/FiniteSourceWorkspace.lean",
+    "original_sha256": "68027e614b1bc655889ecd40340da6ed16522de22c9acaf9c82c2eec2f3a3d1d",
+    "release_sha256": "68027e614b1bc655889ecd40340da6ed16522de22c9acaf9c82c2eec2f3a3d1d"
+  },
+  {
+    "module": "E2.FinitePermutationTransport",
+    "file": "E2/FinitePermutationTransport.lean",
+    "original_sha256": "8665727f9a0507bb67abb8f72194a9ab5eabe4885d22b4624ac0adce6c713b40",
+    "release_sha256": "8665727f9a0507bb67abb8f72194a9ab5eabe4885d22b4624ac0adce6c713b40"
+  },
+  {
+    "module": "E2.FiniteSourceOptional",
+    "file": "E2/FiniteSourceOptional.lean",
+    "original_sha256": "8b11cd0957da6ebdbfbb72f66851d688ebc3ea62e2151886ccae60f5584f7dcf",
+    "release_sha256": "8b11cd0957da6ebdbfbb72f66851d688ebc3ea62e2151886ccae60f5584f7dcf"
+  },
+  {
+    "module": "E2.FiniteSourceCommutation",
+    "file": "E2/FiniteSourceCommutation.lean",
+    "original_sha256": "9a34bddac4d1854c8ceb07ad8ccd01d8f83b2bbf8768ee3e763268961c8fa63c",
+    "release_sha256": "cb6810f6e6f2c107f6ca770c4cea04fc21a806fc721e676d3c3af2546ea37ad3"
+  },
+  {
+    "module": "E2.FiniteListClocks",
+    "file": "E2/FiniteListClocks.lean",
+    "original_sha256": "25d488257bd104d1d0fa7f6c2c7406700042c448258d0b43c167d8839f3d1e4e",
+    "release_sha256": "25d488257bd104d1d0fa7f6c2c7406700042c448258d0b43c167d8839f3d1e4e"
+  },
+  {
+    "module": "E2.FiniteSourceClockPolynomials",
+    "file": "E2/FiniteSourceClockPolynomials.lean",
+    "original_sha256": "318a3149eb4791d34d2e5de09509c03cc95b3c96705eecadc7591940234d6d0d",
+    "release_sha256": "318a3149eb4791d34d2e5de09509c03cc95b3c96705eecadc7591940234d6d0d"
+  },
+  {
+    "module": "E2.FiniteBinaryDecoding",
+    "file": "E2/FiniteBinaryDecoding.lean",
+    "original_sha256": "b7416ff7bf948469cefae22fc8f0bdd2b0a625b5bc551d79f187afff89c51c79",
+    "release_sha256": "b7416ff7bf948469cefae22fc8f0bdd2b0a625b5bc551d79f187afff89c51c79"
+  },
+  {
+    "module": "E2.FiniteSourceDecoding",
+    "file": "E2/FiniteSourceDecoding.lean",
+    "original_sha256": "7d09f1352daafaa58f73f401d9c4df426f9afff0f8092cec32e7efae817b8a51",
+    "release_sha256": "7d09f1352daafaa58f73f401d9c4df426f9afff0f8092cec32e7efae817b8a51"
+  },
+  {
+    "module": "E2.FiniteSourceResetCarry",
+    "file": "E2/FiniteSourceResetCarry.lean",
+    "original_sha256": "7c3feabbca740077ae2d234cbf2090526f5edd07ef2fc3118dae5317922db9a7",
+    "release_sha256": "7c3feabbca740077ae2d234cbf2090526f5edd07ef2fc3118dae5317922db9a7"
+  },
+  {
+    "module": "E2.FiniteSourceExactClocks",
+    "file": "E2/FiniteSourceExactClocks.lean",
+    "original_sha256": "88d5d40a16f3140e2c9bf5792b83b0aa4a05bbb1607788812c07974d439c454e",
+    "release_sha256": "4e4de42c4776f5a377c485fa75ce01653d81274e7963a9a85f80588d65e08981"
+  },
+  {
+    "module": "E2.FiniteSourceConditions",
+    "file": "E2/FiniteSourceConditions.lean",
+    "original_sha256": "9b1e2f5707cacd4988840dd0eea62a44cfbd87a4669f280d0a7298486e584da6",
+    "release_sha256": "fcda8f68593dc6f9f83ceb62e32161b1b62211a68e484b97970a7553ac6d4e8d"
+  },
+  {
+    "module": "E2.FiniteSourceInitialization",
+    "file": "E2/FiniteSourceInitialization.lean",
+    "original_sha256": "8ff100c0144639a3ea52478d8037f82cbde5c717661eec61abf17d2ec49d1098",
+    "release_sha256": "2cc583526d43ae5b70d14c2ec1381f37bc66477654e5212dfca9d03352ef6f05"
+  },
+  {
+    "module": "E2.FiniteProgramEvaluation",
+    "file": "E2/FiniteProgramEvaluation.lean",
+    "original_sha256": "24d8715649895ab7da128deda5545b9e0fe04bfb74e96ff3b1cf56c72e84b8b1",
+    "release_sha256": "9ee94c16842ebf7405ef9af42a582b7bc4197f5836eb187a507176f98b7351e9"
+  },
+  {
+    "module": "E2.FiniteSourceTransitions",
+    "file": "E2/FiniteSourceTransitions.lean",
+    "original_sha256": "ef0456f275d4aa8ea72e4d9f7d990217e1e4da2d797b3fff6da97fbc78c7f375",
+    "release_sha256": "520df06aef1242606a602f72b54d091bf95658bb29fcfff0a96a10c08307177c"
+  },
+  {
+    "module": "E2.FiniteSourceUpdates",
+    "file": "E2/FiniteSourceUpdates.lean",
+    "original_sha256": "82e8f23a1e309f63e819b99ad90daa049966aa797cc3e9160285a7afd4a3a6a9",
+    "release_sha256": "14d292ac0d2e135b7b927c9bc2bcc032722ca9c70ad63a5fb0fcde7e419402bf"
+  },
+  {
+    "module": "E2.FiniteGuardRecursion",
+    "file": "E2/FiniteGuardRecursion.lean",
+    "original_sha256": "100b21099e34941da15f94411266dab452de12f7144bf47d2402dadd06f3def0",
+    "release_sha256": "100b21099e34941da15f94411266dab452de12f7144bf47d2402dadd06f3def0"
+  },
+  {
+    "module": "E2.FiniteGuardTransport",
+    "file": "E2/FiniteGuardTransport.lean",
+    "original_sha256": "6626b9e845d9782af8897c43416e77a435f32aa34c6990e48a4a089a46660fd1",
+    "release_sha256": "6626b9e845d9782af8897c43416e77a435f32aa34c6990e48a4a089a46660fd1"
+  },
+  {
+    "module": "E2.FiniteSourceTimeGuard",
+    "file": "E2/FiniteSourceTimeGuard.lean",
+    "original_sha256": "10955662bed9b788f811641003bfa8a6406677b124f5f25c3c30fe867451d904",
+    "release_sha256": "10955662bed9b788f811641003bfa8a6406677b124f5f25c3c30fe867451d904"
+  },
+  {
+    "module": "E2.FiniteSourceDressing",
+    "file": "E2/FiniteSourceDressing.lean",
+    "original_sha256": "8cf819e53626add2029293dfe4687da8f69e6d6b7362516554bf4d0c2b66dcde",
+    "release_sha256": "8cf819e53626add2029293dfe4687da8f69e6d6b7362516554bf4d0c2b66dcde"
+  },
+  {
+    "module": "E2.FiniteSourceAddressGuard",
+    "file": "E2/FiniteSourceAddressGuard.lean",
+    "original_sha256": "bfd89b25738ef5d316adfad4524c51c1e4e00cf3142edad8171fcb5a29b614bd",
+    "release_sha256": "bfd89b25738ef5d316adfad4524c51c1e4e00cf3142edad8171fcb5a29b614bd"
+  },
+  {
+    "module": "E2.FiniteSourceRelationLists",
+    "file": "E2/FiniteSourceRelationLists.lean",
+    "original_sha256": "b9c49cdc42eab51a477bd8086ab160ad8b5ea67e32cf349731ccdd27ea4368d4",
+    "release_sha256": "87860618415e91a449857ada662d3266a87f9fc5fbf52dc127563d5f20321b1e"
+  },
+  {
+    "module": "E2.FiniteSourceRelations",
+    "file": "E2/FiniteSourceRelations.lean",
+    "original_sha256": "bf661c1b488678a71d2ad5ee8603992826c26dbe4cf75d187c7b73b7e3986589",
+    "release_sha256": "aa5de54d04b8aa42baa0752affe04a430223d1ed8b2d46ef7bc1202a31bd1ebd"
+  },
+  {
+    "module": "E2.FiniteSourceModel",
+    "file": "E2/FiniteSourceModel.lean",
+    "original_sha256": "1983ef2de36b0d7af5d95836e43b2d202d9bfb4438b465ba740fc9fc67de3a54",
+    "release_sha256": "fa8efbc2916bed40608bb3f463b4f3ee38b2af5fbd6c823ab06a55baf3bfd248"
+  },
+  {
+    "module": "E2.Finite",
+    "file": "E2/Finite.lean",
+    "original_sha256": "1d4e872d2ef96902169010ce1c0ff4356bb9d14c34bddaafad650c492b389e4c",
+    "release_sha256": "09c1345486d56bb247ac59de0c06146119083dbd48bc63826bbef20cd8c9624a"
+  },
+  {
+    "module": "E2.StateConsistencySquare",
+    "file": "E2/StateConsistencySquare.lean",
+    "original_sha256": "c59630b55f4a01fdf3b54e3adcc224a79a69f87293435ecf0fa65a0df6ef356a",
+    "release_sha256": "b52c9e4912c32f7f1cc5d3800db4f5462bec786048dd2dd123e9c42aae46b2d9"
+  },
+  {
+    "module": "E2.StateConsistencyRectangular",
+    "file": "E2/StateConsistencyRectangular.lean",
+    "original_sha256": "e193951d18fb60bd4151338aecf05427bd8df62a3c539282cd0ed4ee7c58a180",
+    "release_sha256": "cd8599cac10ed638f3fa04559983343ccaa967d77ba1b49c2019519a923beda1"
+  },
+  {
+    "module": "E2.BooleanExtraction",
+    "file": "E2/BooleanExtraction.lean",
+    "original_sha256": "05ab5203cc8dc8a86f2f575bf404fe703811c4fcfb15354b1cab0845cd10f75a",
+    "release_sha256": "1a182b52196b2e1d1edb90f15a5a581ef8f54983299e6aed1082fc7605b1fb14"
+  },
+  {
+    "module": "E2.BooleanExtractionPVM",
+    "file": "E2/BooleanExtractionPVM.lean",
+    "original_sha256": "7f509e952eec22d57843b2cbddde4c6f286be57c0269af210943ee3509e030ba",
+    "release_sha256": "bc86443fb62c37886226e85aecfe80cdd681ae9455801db8556ef5b0a587775d"
+  },
+  {
+    "module": "E2.FiniteNaimark",
+    "file": "E2/FiniteNaimark.lean",
+    "original_sha256": "28fa1f998deb541e43d48d6658c8a8015ec3a3272129b790de996d3f52f387bc",
+    "release_sha256": "20781b9b7ae4264a539f1008a76b7c840db317c52966b642ad3494e80f02fe5c"
+  },
+  {
+    "module": "E2.BooleanStrategyDilation",
+    "file": "E2/BooleanStrategyDilation.lean",
+    "original_sha256": "69fe9348c160dbca700355e251df2386aafe12be292eec291476d1ed9d7e54a2",
+    "release_sha256": "e78ad3f4f1e9068e94bee2153cd83db19500f375955558e17a24ea1e14790cd2"
+  },
+  {
+    "module": "E2.BooleanGameLoss",
+    "file": "E2/BooleanGameLoss.lean",
+    "original_sha256": "4a96485c954263310000fac0ddfcebb61f65ecdb548688d159ecd460b2c0cd0b",
+    "release_sha256": "f6c052484c539b56d75fca0873a884d9fec46f5afd994cd407fc7c6d93f816c0"
+  },
+  {
+    "module": "E2.BooleanMixedAmplitude",
+    "file": "E2/BooleanMixedAmplitude.lean",
+    "original_sha256": "246848986d1000e186e5b06e1d4b663a28de3819f39a642e5dabe351e626d52c",
+    "release_sha256": "a43933c452b8af0ce024365756accaeaa1fe882462efe0d98373e472338f65d2"
+  },
+  {
+    "module": "E2.BooleanExtractionBridge",
+    "file": "E2/BooleanExtractionBridge.lean",
+    "original_sha256": "2621d1746103f5fcfedc853ccb706529fe97b50379562785c2b573f322598370",
+    "release_sha256": "55ccd112ee01407dea41d43b67e56793f2bbf40d94fcbf72c1a620faebf834f3"
+  },
+  {
+    "module": "E2.BooleanRealignment",
+    "file": "E2/BooleanRealignment.lean",
+    "original_sha256": "843702ef52bd37767882d061d4db99b1c47039389e4383fcfde5620a6c19b9ec",
+    "release_sha256": "a50680b2013c5948caf2b2cc3a2b4d0cad16a2d5b962da8db4cbc86aecb1b696"
+  },
+  {
+    "module": "E2.BooleanBridgeData",
+    "file": "E2/BooleanBridgeData.lean",
+    "original_sha256": "c17051072cc467c576cf40847da3edb3d53eb9018929f1e81e28cb8904f956c2",
+    "release_sha256": "a82e209145542fb1d17f3455880ec8c6a91828aa7c32e7f873c7f791a250ed47"
+  },
+  {
+    "module": "E2.BooleanReferencePVM",
+    "file": "E2/BooleanReferencePVM.lean",
+    "original_sha256": "23e4a5f8bef4e15e7208bf8a24b38c65e9caa0efaa6a361886834695e0c37077",
+    "release_sha256": "eb4aa12a39160a8cede44d9eef1b16da761a7d63b5107de53c6026f09060ad18"
+  },
+  {
+    "module": "E2.BooleanConsistencyEstimate",
+    "file": "E2/BooleanConsistencyEstimate.lean",
+    "original_sha256": "26af5ce2c1f48d1889f1592dcae5d5d21e1e9cc7587d0f3e5327242ebf690fe9",
+    "release_sha256": "368e7b2e3b4dc8bebe15de448047774e94df619d247cb7d739d55db3c4e4ce09"
+  },
+  {
+    "module": "E2.BooleanStrategyBridge",
+    "file": "E2/BooleanStrategyBridge.lean",
+    "original_sha256": "e046b892e988a1b25784e089e07b8580a2abed9334f130e4c781f7f6d442e4ac",
+    "release_sha256": "e6b8c3bacd50abc3481767e0d3e5be8d64ab396922c14cbc25aec12de383019f"
+  },
+  {
+    "module": "E2.ProfileTools",
+    "file": "E2/ProfileTools.lean",
+    "original_sha256": "be3e80dfe85a82285769b76780c6ad889ebcd5ac507713a16a5afcb58a435cfb",
+    "release_sha256": "7323bbbbdae7000cb5b698f3d343498a3eebe98a51e48cf080c8bc46af265157"
+  },
+  {
+    "module": "E2.SourceProfiles",
+    "file": "E2/SourceProfiles.lean",
+    "original_sha256": "1ca4ac4cd274319a5189fd9dbbb1e7d6b8c878753d4097e8571850ef6f557e9e",
+    "release_sha256": "71f8ebc95d762db6a87f26de10660023d02b60a45330b7c14cfa94b96efb6b9f"
+  },
+  {
+    "module": "E2.GameProfileTools",
+    "file": "E2/GameProfileTools.lean",
+    "original_sha256": "27db11ae54011d2a766b5318e6fb648ed4338c4bdc6409e5e0458ca8ad815322",
+    "release_sha256": "5782c55e8c686502ea9a40138911395181f7b42aae65a9f4ecf9743a0028c6d9"
+  },
+  {
+    "module": "E2.GameExponent",
+    "file": "E2/GameExponent.lean",
+    "original_sha256": "c09f982c3ee5dc6e06f08b8bf0e3991a8a8bb983fb036f0a611ea3f10f12d81a",
+    "release_sha256": "57d2c5fdf87cc4c8bdafb9138fb13738e80f5e288004bc4a676c297a19928557"
+  },
+  {
+    "module": "E2.Transfer",
+    "file": "E2/Transfer.lean",
+    "original_sha256": "59feaf46b986861e0ade92f7d0b7c7d6a7b254256cc790b16bfa6d2fdb0f7222",
+    "release_sha256": "412c1880a594015bb7254aed2ca9dbc7545943a613bd3afc5b7ac62e33d86eb7"
+  },
+  {
+    "module": "E2.EffectiveCoding",
+    "file": "E2/EffectiveCoding.lean",
+    "original_sha256": "2c2cc61a4d971cfff0c1d886a84e7722912a57805c019b77a020329411041983",
+    "release_sha256": "c6798f3484f216db5ba479b3e03b7aa29ed7360f50b00ada8c27a50d81a94ca6"
+  },
+  {
+    "module": "E2.RealArithmetic",
+    "file": "E2/RealArithmetic.lean",
+    "original_sha256": "142bfae4ecfbd25222e9d1b01ed617eb489f00e7d5629e62c8b81dd814c8c667",
+    "release_sha256": "b27235c4d448773da4892bc915800314d86ae948598053a14d45970af7e7567e"
+  },
+  {
+    "module": "E2.RealArithmeticComplex",
+    "file": "E2/RealArithmeticComplex.lean",
+    "original_sha256": "23145ae0842db37f033cff801e471434f356a95f4811990957bf8f46b71c435f",
+    "release_sha256": "2631c742cf9da4f1778ffff05fb673b0bc2b07652a0593d47a8a38c10a719295"
+  },
+  {
+    "module": "E2.RealArithmeticMatrix",
+    "file": "E2/RealArithmeticMatrix.lean",
+    "original_sha256": "4d2782596265095f9bce8c55464340133daa59c154d4e058ff0afd2b97c320af",
+    "release_sha256": "a4dcfed9c06d4638635dc14068253fcf37a45ed42eda045234dc1d3407435e38"
+  },
+  {
+    "module": "E2.FeasibilitySentence",
+    "file": "E2/FeasibilitySentence.lean",
+    "original_sha256": "f2a5e11d9fd4629f12c199a611e50fac2988c2a9f6c52c2d95f46b448cd46a50",
+    "release_sha256": "044408b10f09942dbe4c003baed1f1cee983c36ff0be06a4194e25708668829e"
+  },
+  {
+    "module": "E2.FeasibilityRaw",
+    "file": "E2/FeasibilityRaw.lean",
+    "original_sha256": "0e8aededc9f96492fc47ec79ea430a827bbd2aa4b3ad82b28201396b21a44c29",
+    "release_sha256": "32a7b56ee2aaf899e60bfb2b4dd1482375a075a5d15cad7b8a18fbe8e732e5f0"
+  },
+  {
+    "module": "E2.PositivePrecision",
+    "file": "E2/PositivePrecision.lean",
+    "original_sha256": "f2793774cd748f98efe2349174fa61798b8979c18b9ae06b98d2c15cb937a5be",
+    "release_sha256": "6f51d4926bf26e06f7008b37d045e4c9a4581c97e400ef70cb6d46ad20177845"
+  },
+  {
+    "module": "E2.EffectiveSearch",
+    "file": "E2/EffectiveSearch.lean",
+    "original_sha256": "9e43298439e90cacd7a9925003bf582d5d2ede557c0bd84abb2ee9b70d04dbfa",
+    "release_sha256": "c6bfbc54cb57f17c8429209a7c5946c065a4a0b8a59ffaf009e5bb7790feef77"
+  },
+  {
+    "module": "E2.FeasibilityComputation",
+    "file": "E2/FeasibilityComputation.lean",
+    "original_sha256": "dff174fb89b8df50940df003e1d3b82aaa458ec5c49109c3d15b5e5c9d91c0c9",
+    "release_sha256": "90b8bfa13adc9329265b34793691eba9c44228c0cc0c8503d5e7300212ab2e33"
+  },
+  {
+    "module": "E2.RationalLogarithm",
+    "file": "E2/RationalLogarithm.lean",
+    "original_sha256": "c62f0171e64f58a2a14c6982ff180fd71c005983afe82b65c93a39cb2ac47b45",
+    "release_sha256": "320f65be4b87b192e5a110c3454167885d85495cb5c0d83987c6e6b0ba80fe7b"
+  },
+  {
+    "module": "E2.EffectiveDyadic",
+    "file": "E2/EffectiveDyadic.lean",
+    "original_sha256": "fa14958eee0343337ed33aee6ad0dcaa2d56a2fca81073677ce723b1f805497a",
+    "release_sha256": "16008c8e5fb4f8e349bad547f0e378ec76490cc728fc76af89a665d2fe432f09"
+  },
+  {
+    "module": "E2.EffectiveApproximation",
+    "file": "E2/EffectiveApproximation.lean",
+    "original_sha256": "2cee6a65361f359b34159a35b1c11362bd0dbfbf5071eb90cc243c7985a5efe5",
+    "release_sha256": "05790d75f9bcff0e6591917d9a2c564c5d6a96dc7c937b9c511dcafb2a318571"
+  },
+  {
+    "module": "E2.SeparatedDigits",
+    "file": "E2/SeparatedDigits.lean",
+    "original_sha256": "f61304e29743dc55e5727342c82e5030549fafb535e899559876ea100faccd46",
+    "release_sha256": "43b22f1938d00cdb9f16eb9ea549ef25ee027a684e6b1851b64a00c0e279b31e"
+  },
+  {
+    "module": "E2.EffectiveNoncomputable",
+    "file": "E2/EffectiveNoncomputable.lean",
+    "original_sha256": "423092ab16d838310def0d4021afa555675d12cef26d23461447022668e7eb2b",
+    "release_sha256": "1483975f8ae30c88d2dfa724e51bad28b4c8c0ea253bb161021c7866e3aa861d"
+  },
+  {
+    "module": "E2.EffectiveOracle",
+    "file": "E2/EffectiveOracle.lean",
+    "original_sha256": "61f32e8dbb63ac3ef8c318136a10cb0b43bb28a98629ea0793984bb26565188a",
+    "release_sha256": "8301dd1f40cd1f666d1835a97dea7b179bf0d6cab776ebea29468857ec9c6593"
+  },
+  {
+    "module": "E2.HaltingApproximation",
+    "file": "E2/HaltingApproximation.lean",
+    "original_sha256": "b3dcf4c64fc1366d8fe3d2162e1763419cc667dfd0760a06314468fbf5ce9eb3",
+    "release_sha256": "a8fc2dce21a28b37d910fbed9588031b79c31d8c8bda38305a554a0a35a8c73b"
+  },
+  {
+    "module": "E2.HaltingReduction",
+    "file": "E2/HaltingReduction.lean",
+    "original_sha256": "996216de094db3abb039c74e08a327aa2fcbb677b3fbb487a2ad1b54046ffc55",
+    "release_sha256": "990b17591e1af3f3fdaa934b2033629e6cd90ea22285380879f8533aab55b486"
+  },
+  {
+    "module": "E2.HaltingDegree",
+    "file": "E2/HaltingDegree.lean",
+    "original_sha256": "6d3829c2149c52de069b0e72023281edaab732f193038feba0ad5caca20a522a",
+    "release_sha256": "07aad66af580bb7dcb193aead6326e495b75e35939e6940d3fe91bd3361ce705"
+  },
+  {
+    "module": "E2.Effective",
+    "file": "E2/Effective.lean",
+    "original_sha256": "a207b8196c166049bf0eab88494abbd009d9be74cb29c414dd5724df9544e995",
+    "release_sha256": "635910e154dc2f7ede803f07b55086549c48b1ee299404e6794928757acacee7"
+  },
+  {
+    "module": "E2.GameConsequences",
+    "file": "E2/GameConsequences.lean",
+    "original_sha256": "bfffd53fa847efb0fc2ea7feee0c5f2968a78891e7852e7fcb60731795f35f4a",
+    "release_sha256": "ef5defba7536135a77c1161a2458087543c016a368581e29f4c028ee9faa5741"
+  },
+  {
+    "module": "Challenge",
+    "file": "Challenge.lean",
+    "original_sha256": "82901bb319a755c9a627799848e869511313525764d07120ef898165bc9fefac",
+    "release_sha256": "a333e9f3f31162ad2b6a48fa44f8b087949fa802d8f9531abec9978b82cb74ef"
+  },
+  {
+    "module": "E2.ClockProfile",
+    "file": "E2/ClockProfile.lean",
+    "original_sha256": "5f3bb07a1c8e2125bd07835000ad79a04ffd2860ef9cbf76b71ceae3336edf71",
+    "release_sha256": "bb4634e618e2b1dfae54554b065d36517b57bd639774bcbae82cc438d0c4746b"
+  },
+  {
+    "module": "E2.Ideal",
+    "file": "E2/Ideal.lean",
+    "original_sha256": "136a3bdf6d2050b8c179e13210b28e351ae8bc845185fad7f15d150b82d617e9",
+    "release_sha256": "0925666bfa4f554c83c335e44f46e8738ca16b75f7cdc4c944a5568d88e4264c"
+  },
+  {
+    "module": "Blueprint",
+    "file": "Blueprint.lean",
+    "original_sha256": "3cebf83a7c3d028019aa92ebdaba506fae9355ed5aa0e4af28612d155f0a19d3",
+    "release_sha256": "d122bb9aa33e5c59f3349fcac4f7b2737f096a3efbf08658f3a6b2374dde5de8"
+  },
+  {
+    "module": "E2.RealArithmeticFinite",
+    "file": "E2/RealArithmeticFinite.lean",
+    "original_sha256": "2452cfae6a3b3071d6c857a0d5b127bd06fc678981a34d1e2ce8abaf3c69952e",
+    "release_sha256": "a31b361f0d94606c2adfffdf21e1031002d7be06b27a8cc7c7f580009c361092"
+  },
+  {
+    "module": "E2.FeasibilityUniform",
+    "file": "E2/FeasibilityUniform.lean",
+    "original_sha256": "3f75803e909724ffa75fb8c4896a4715a79d4d02878b5b3202f987d882fcd8c1",
+    "release_sha256": "f34eb63d128ec6cafbd4551a1d3039ae42bfbf8c506774a80b3f7a6fd10315b1"
+  },
+  {
+    "module": "QIT.Init",
+    "file": "QIT/Init.lean",
+    "original_sha256": "bfbcc1fff2184bad35dabd843c6b352cdcddfe74138cd356b994b67d3b01818d",
+    "release_sha256": "bfbcc1fff2184bad35dabd843c6b352cdcddfe74138cd356b994b67d3b01818d",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Util.Matrix",
+    "file": "QIT/Util/Matrix.lean",
+    "original_sha256": "1c574b9ee8355b7981223a57dd04e80a3f1b5c66626c4eb89f82a87a9125b273",
+    "release_sha256": "1c574b9ee8355b7981223a57dd04e80a3f1b5c66626c4eb89f82a87a9125b273",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Util.Matrix.PosSqrt",
+    "file": "QIT/Util/Matrix/PosSqrt.lean",
+    "original_sha256": "63f5e8a3a17152d7dbcc8f502ce4d78556bc69f9fbec09884c1f5c0d4965b5ab",
+    "release_sha256": "63f5e8a3a17152d7dbcc8f502ce4d78556bc69f9fbec09884c1f5c0d4965b5ab",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Core.System",
+    "file": "QIT/Core/System.lean",
+    "original_sha256": "d6d42e034da8bb385d402f215fd69ac47f2781f3ba9546e1c2b7eaeff7499e09",
+    "release_sha256": "d6d42e034da8bb385d402f215fd69ac47f2781f3ba9546e1c2b7eaeff7499e09",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Core.State",
+    "file": "QIT/Core/State.lean",
+    "original_sha256": "a2564bad9657f86ec3ac0ef6bea6473adb29bf109d2fa7abe5f0fd61e8310a98",
+    "release_sha256": "a2564bad9657f86ec3ac0ef6bea6473adb29bf109d2fa7abe5f0fd61e8310a98",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Classical.Ensemble",
+    "file": "QIT/Classical/Ensemble.lean",
+    "original_sha256": "37cbb4f58c341326be46d432f877564c5df8960f978881ad9dfc3acc90f2967f",
+    "release_sha256": "37cbb4f58c341326be46d432f877564c5df8960f978881ad9dfc3acc90f2967f",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.PosSqrt",
+    "file": "QIT/States/PosSqrt.lean",
+    "original_sha256": "e86458a03e99ba02635b6598283806240bab06afce5de83c5df7636d32a948d6",
+    "release_sha256": "e86458a03e99ba02635b6598283806240bab06afce5de83c5df7636d32a948d6",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.TraceNorm.Distance",
+    "file": "QIT/States/TraceNorm/Distance.lean",
+    "original_sha256": "6dca1f66ff9dabf41012a2967fdbb469f67bfa0bdf9164931ac0cc22cbc04c21",
+    "release_sha256": "6dca1f66ff9dabf41012a2967fdbb469f67bfa0bdf9164931ac0cc22cbc04c21",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Classical.CQState",
+    "file": "QIT/Classical/CQState.lean",
+    "original_sha256": "7fc604af2c85a148fc777bad29567924b3a74aeed1577cf594ebce4c7dc0fc3c",
+    "release_sha256": "7fc604af2c85a148fc777bad29567924b3a74aeed1577cf594ebce4c7dc0fc3c",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Core.Pure",
+    "file": "QIT/Core/Pure.lean",
+    "original_sha256": "17927eac1b8ccd1ef01a1ead3d3834bf25f65db34b7479c26a738c996147de83",
+    "release_sha256": "17927eac1b8ccd1ef01a1ead3d3834bf25f65db34b7479c26a738c996147de83",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Purification.Predicate",
+    "file": "QIT/States/Purification/Predicate.lean",
+    "original_sha256": "1bb3c93d521f9d59d4754ddb50081074800e754de518e992f2e7a05426d9fe68",
+    "release_sha256": "1bb3c93d521f9d59d4754ddb50081074800e754de518e992f2e7a05426d9fe68",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Purification.Gram",
+    "file": "QIT/States/Purification/Gram.lean",
+    "original_sha256": "edcb4c6c928792927d82e42ef2407c97ccad51cee8ca709cb4f59456afaff872",
+    "release_sha256": "edcb4c6c928792927d82e42ef2407c97ccad51cee8ca709cb4f59456afaff872",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Core.Map",
+    "file": "QIT/Core/Map.lean",
+    "original_sha256": "4570011e1d9a3938a059a29227c22a8380af01eb2555e78badbeb24970d1a568",
+    "release_sha256": "4570011e1d9a3938a059a29227c22a8380af01eb2555e78badbeb24970d1a568",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Core.Measurement",
+    "file": "QIT/Core/Measurement.lean",
+    "original_sha256": "1ea42e9e924b1d7d979e3539ce44b8a713c18b5725bc9550bc9fc1d3e3e19747",
+    "release_sha256": "1ea42e9e924b1d7d979e3539ce44b8a713c18b5725bc9550bc9fc1d3e3e19747",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Core.Channel",
+    "file": "QIT/Core/Channel.lean",
+    "original_sha256": "2ea1678459067e5abe0a3f3093b633635f9ed09fb21af69e36337936eaec416e",
+    "release_sha256": "2ea1678459067e5abe0a3f3093b633635f9ed09fb21af69e36337936eaec416e",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Core.Map.ChoiCharacterization",
+    "file": "QIT/Core/Map/ChoiCharacterization.lean",
+    "original_sha256": "0f76d88f1ea79a4f6c91606f23c7ead4679ca53263f353b12f7b9bd450d109ed",
+    "release_sha256": "0f76d88f1ea79a4f6c91606f23c7ead4679ca53263f353b12f7b9bd450d109ed",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Util.SDP.PSDCone",
+    "file": "QIT/Util/SDP/PSDCone.lean",
+    "original_sha256": "2f3bda1ab3bae819ea46c512c12f9fdf8b55977ada3778a0430bda92475a9dbf",
+    "release_sha256": "2f3bda1ab3bae819ea46c512c12f9fdf8b55977ada3778a0430bda92475a9dbf",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Util.SDP.HermitianPSDTraceDuality",
+    "file": "QIT/Util/SDP/HermitianPSDTraceDuality.lean",
+    "original_sha256": "332b897be5186bf71b55f045a531990e0ad486e5609515852e90e337889155ae",
+    "release_sha256": "332b897be5186bf71b55f045a531990e0ad486e5609515852e90e337889155ae",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Core.Map.QuantumOperation",
+    "file": "QIT/Core/Map/QuantumOperation.lean",
+    "original_sha256": "05783d4cf2c9e4446afa4d2c74b54711f10df8bed640b35e8fcb877674a3ec16",
+    "release_sha256": "05783d4cf2c9e4446afa4d2c74b54711f10df8bed640b35e8fcb877674a3ec16",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Core.POVMProbability",
+    "file": "QIT/Core/POVMProbability.lean",
+    "original_sha256": "b4a5167769482717866e38b7532feb8f8596169adf71840a3d4857c7190eca1e",
+    "release_sha256": "b4a5167769482717866e38b7532feb8f8596169adf71840a3d4857c7190eca1e",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Classical.Bridge",
+    "file": "QIT/Classical/Bridge.lean",
+    "original_sha256": "0db86fcbdb2b0cc24ed457fd93ac2ac21818b225961ee8413d82711d69fd923e",
+    "release_sha256": "0db86fcbdb2b0cc24ed457fd93ac2ac21818b225961ee8413d82711d69fd923e",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.TraceNorm.Spectral",
+    "file": "QIT/States/TraceNorm/Spectral.lean",
+    "original_sha256": "d0d7ad218904f4c0d4801a23d1458cd6c86e4ad638f5222de08b44b079dd5c7c",
+    "release_sha256": "d0d7ad218904f4c0d4801a23d1458cd6c86e4ad638f5222de08b44b079dd5c7c",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.TraceNorm.PositivePart",
+    "file": "QIT/States/TraceNorm/PositivePart.lean",
+    "original_sha256": "aab4ddd36f02e2f58557816877f4f930aba98dcd00de0f483ed1bb8c2cba1a65",
+    "release_sha256": "aab4ddd36f02e2f58557816877f4f930aba98dcd00de0f483ed1bb8c2cba1a65",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Purification.GramFacts",
+    "file": "QIT/States/Purification/GramFacts.lean",
+    "original_sha256": "f945c795d94845af2e1d216d5c515019bad0225318b41caa96c2cb0e98b3a6b4",
+    "release_sha256": "f945c795d94845af2e1d216d5c515019bad0225318b41caa96c2cb0e98b3a6b4",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Purification.PartialIsometry",
+    "file": "QIT/States/Purification/PartialIsometry.lean",
+    "original_sha256": "adc69ddc283cb7be3fd5f5c653836e69b3935adc5cbaa1f396d2141b1368d059",
+    "release_sha256": "adc69ddc283cb7be3fd5f5c653836e69b3935adc5cbaa1f396d2141b1368d059",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Purification.ReferenceExtension",
+    "file": "QIT/States/Purification/ReferenceExtension.lean",
+    "original_sha256": "f61747ff2f13f4054b9530e7a7fc5094d8d44fd1e9313af47dc8d152f34b023d",
+    "release_sha256": "f61747ff2f13f4054b9530e7a7fc5094d8d44fd1e9313af47dc8d152f34b023d",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Purification.ReferenceIsometry",
+    "file": "QIT/States/Purification/ReferenceIsometry.lean",
+    "original_sha256": "66b78948cff99e08da4502749ad0c0e822b0b6e6c2c535eecc10f2ef03f2a139",
+    "release_sha256": "66b78948cff99e08da4502749ad0c0e822b0b6e6c2c535eecc10f2ef03f2a139",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Purification.GramFactorization",
+    "file": "QIT/States/Purification/GramFactorization.lean",
+    "original_sha256": "1397565b1782f67a8566de92ee2590b72d793b50c53a5b226b882e6ce510e4bb",
+    "release_sha256": "1397565b1782f67a8566de92ee2590b72d793b50c53a5b226b882e6ce510e4bb",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Purification.ReferenceUnitary",
+    "file": "QIT/States/Purification/ReferenceUnitary.lean",
+    "original_sha256": "18594777b7078a7c2f945f2ebed085e95888b4515a00043170c0f3f81d5712c9",
+    "release_sha256": "18594777b7078a7c2f945f2ebed085e95888b4515a00043170c0f3f81d5712c9",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Util.BlockMatrix",
+    "file": "QIT/Util/BlockMatrix.lean",
+    "original_sha256": "809f18a49e641e15582efd636778041810b8df73ba746f1c6fa5834cf172af47",
+    "release_sha256": "809f18a49e641e15582efd636778041810b8df73ba746f1c6fa5834cf172af47",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.TraceNorm.BlockMatrix",
+    "file": "QIT/States/TraceNorm/BlockMatrix.lean",
+    "original_sha256": "4ada7a30513f124f7ef516d5ec64a1ea3d81ebe1f3c796cfa27cd8600f3be2d0",
+    "release_sha256": "4ada7a30513f124f7ef516d5ec64a1ea3d81ebe1f3c796cfa27cd8600f3be2d0",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.TraceNorm.Variational",
+    "file": "QIT/States/TraceNorm/Variational.lean",
+    "original_sha256": "fd0b95c57e56269014616d49647049e645e42cb818fa127eb17afc043f05dded",
+    "release_sha256": "fd0b95c57e56269014616d49647049e645e42cb818fa127eb17afc043f05dded",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Channels.Diamond",
+    "file": "QIT/Channels/Diamond.lean",
+    "original_sha256": "277a6f666e6437c8fdec1224ff120c5bff1814e03ac00c70056e012618f1d542",
+    "release_sha256": "277a6f666e6437c8fdec1224ff120c5bff1814e03ac00c70056e012618f1d542",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Geometry.Fidelity",
+    "file": "QIT/States/Geometry/Fidelity.lean",
+    "original_sha256": "d22aacea83b889729888999c960fc70d6fa8829a8569feb3b75dc98808d8c039",
+    "release_sha256": "d22aacea83b889729888999c960fc70d6fa8829a8569feb3b75dc98808d8c039",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Subnormalized",
+    "file": "QIT/States/Subnormalized.lean",
+    "original_sha256": "844206188866a2a1f6a16065b4346b35b1824e515edf1a683a77b2d07a00a925",
+    "release_sha256": "844206188866a2a1f6a16065b4346b35b1824e515edf1a683a77b2d07a00a925",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.SubnormalizedTopology",
+    "file": "QIT/States/SubnormalizedTopology.lean",
+    "original_sha256": "d4c16e3f6703db4b7ebd7f05ad79dea1d5d195bcbc9e70c42ef7ccdb173e49c3",
+    "release_sha256": "d4c16e3f6703db4b7ebd7f05ad79dea1d5d195bcbc9e70c42ef7ccdb173e49c3",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Purification.PureGeometry",
+    "file": "QIT/States/Purification/PureGeometry.lean",
+    "original_sha256": "939f455d69890db85ea53502a5f41743fec92b2febefd79fa11c29cd7430679d",
+    "release_sha256": "939f455d69890db85ea53502a5f41743fec92b2febefd79fa11c29cd7430679d",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Schatten",
+    "file": "QIT/States/Schatten.lean",
+    "original_sha256": "5bf720625893dc9750735c2f8574b64549412705d2df16ae80f32d2273f15731",
+    "release_sha256": "5bf720625893dc9750735c2f8574b64549412705d2df16ae80f32d2273f15731",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.MaximallyMixed",
+    "file": "QIT/States/MaximallyMixed.lean",
+    "original_sha256": "e81cd35da110ac365a2110407cbe45089d3d1afae8c11ca0588b86717a0fafad",
+    "release_sha256": "e81cd35da110ac365a2110407cbe45089d3d1afae8c11ca0588b86717a0fafad",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.MaximallyEntangled",
+    "file": "QIT/States/MaximallyEntangled.lean",
+    "original_sha256": "e0fd80c804258ab38e21d6335e6ef39bb0ce0984bb487aedd3f39784dcbc93c3",
+    "release_sha256": "e0fd80c804258ab38e21d6335e6ef39bb0ce0984bb487aedd3f39784dcbc93c3",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Purification.Equivalence",
+    "file": "QIT/States/Purification/Equivalence.lean",
+    "original_sha256": "47da2ed05cb06f312a25ee67cf8b15bfd4cf4d4450d16674387535bc0a7fe3cb",
+    "release_sha256": "47da2ed05cb06f312a25ee67cf8b15bfd4cf4d4450d16674387535bc0a7fe3cb",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Purification.Canonical",
+    "file": "QIT/States/Purification/Canonical.lean",
+    "original_sha256": "5136a62841b7f09daef963b38e86240cfc560ce1bea0b8c01f1e4013a26db96a",
+    "release_sha256": "5136a62841b7f09daef963b38e86240cfc560ce1bea0b8c01f1e4013a26db96a",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Purification.Uhlmann",
+    "file": "QIT/States/Purification/Uhlmann.lean",
+    "original_sha256": "c86e8b37a30e0857b4b572f55f330dc7e9c3d45c31f8e0dd3b3193fac1d4bc70",
+    "release_sha256": "c86e8b37a30e0857b4b572f55f330dc7e9c3d45c31f8e0dd3b3193fac1d4bc70",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Geometry.PurifiedDistance",
+    "file": "QIT/States/Geometry/PurifiedDistance.lean",
+    "original_sha256": "1d581036ddcb123f1d53335ba6c574172ab93c06454abae65397783f51b21641",
+    "release_sha256": "1d581036ddcb123f1d53335ba6c574172ab93c06454abae65397783f51b21641",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Topology",
+    "file": "QIT/States/Topology.lean",
+    "original_sha256": "ea56ea3404b70bcf6635645bd939e679137d6a9972401115ed18b914f3570963",
+    "release_sha256": "ea56ea3404b70bcf6635645bd939e679137d6a9972401115ed18b914f3570963",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Entropy.Entropy",
+    "file": "QIT/Information/Entropy/Entropy.lean",
+    "original_sha256": "e5b9e87f2e1e5731fad4a7cc44a9d4bdf142e33b133463e1981a551fdb4cce98",
+    "release_sha256": "e5b9e87f2e1e5731fad4a7cc44a9d4bdf142e33b133463e1981a551fdb4cce98",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Entropy.EntropyTensorPower",
+    "file": "QIT/Information/Entropy/EntropyTensorPower.lean",
+    "original_sha256": "8ed87303a7b4ee40d8a2c499b28411101b3b58ef1a243216c64578bd87d1323e",
+    "release_sha256": "8ed87303a7b4ee40d8a2c499b28411101b3b58ef1a243216c64578bd87d1323e",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Entropy.RelativeEntropyTraceLog",
+    "file": "QIT/Information/Entropy/RelativeEntropyTraceLog.lean",
+    "original_sha256": "a61444db65a7eef785eee991043beb1b462c1d981165bb96c5e3e3c0f49fa232",
+    "release_sha256": "a61444db65a7eef785eee991043beb1b462c1d981165bb96c5e3e3c0f49fa232",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Entropy.Log2Lemmas",
+    "file": "QIT/Information/Entropy/Log2Lemmas.lean",
+    "original_sha256": "231f2f463a1ddf4ce554d951b3a5c00b40640984f84d597f6dd509d4e23f703b",
+    "release_sha256": "231f2f463a1ddf4ce554d951b3a5c00b40640984f84d597f6dd509d4e23f703b",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Renyi.Renyi",
+    "file": "QIT/Information/Renyi/Renyi.lean",
+    "original_sha256": "d82bd05ebb3fc701d63ad2f6f4a2c0487940fc47882c0425ad4f387e81e6c1d2",
+    "release_sha256": "d82bd05ebb3fc701d63ad2f6f4a2c0487940fc47882c0425ad4f387e81e6c1d2",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Renyi.ConditionalRenyi",
+    "file": "QIT/Information/Renyi/ConditionalRenyi.lean",
+    "original_sha256": "f2fc761eb6f34fdb798995f8e1c2e06160c17fd6a6cd20030c6ffce9f3e57424",
+    "release_sha256": "f2fc761eb6f34fdb798995f8e1c2e06160c17fd6a6cd20030c6ffce9f3e57424",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Renyi.RenyiDPIStatement",
+    "file": "QIT/Information/Renyi/RenyiDPIStatement.lean",
+    "original_sha256": "05f70ad1fb4592e01750ed5cf8de9d70246cdfde1bd95d7b7824504bdb1f45a3",
+    "release_sha256": "05f70ad1fb4592e01750ed5cf8de9d70246cdfde1bd95d7b7824504bdb1f45a3",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Measurements.Map",
+    "file": "QIT/Measurements/Map.lean",
+    "original_sha256": "9c02a3d0cb6a53abff52516ec21f1927573813b8e31654939eeb0a9cb1f8fd78",
+    "release_sha256": "9c02a3d0cb6a53abff52516ec21f1927573813b8e31654939eeb0a9cb1f8fd78",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Measurements.Projective",
+    "file": "QIT/Measurements/Projective.lean",
+    "original_sha256": "7bb3f016dc66e294e4e1dd63167427219e21041ca0b460a5594a30bd95582a21",
+    "release_sha256": "7bb3f016dc66e294e4e1dd63167427219e21041ca0b460a5594a30bd95582a21",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Renyi.RenyiDPI.Domain",
+    "file": "QIT/Information/Renyi/RenyiDPI/Domain.lean",
+    "original_sha256": "9ce12e9fb5e80c1126230d03badb53c7012da823a1bb95cc0e248b0745e03204",
+    "release_sha256": "9ce12e9fb5e80c1126230d03badb53c7012da823a1bb95cc0e248b0745e03204",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.TraceNorm.PositivePartBlock",
+    "file": "QIT/States/TraceNorm/PositivePartBlock.lean",
+    "original_sha256": "5de6b864911ee18b525a67be8644cf4c9d763d5b7d8892a5c4f9b67045dba884",
+    "release_sha256": "5de6b864911ee18b525a67be8644cf4c9d763d5b7d8892a5c4f9b67045dba884",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.TraceNorm.Audenaert",
+    "file": "QIT/States/TraceNorm/Audenaert.lean",
+    "original_sha256": "e14347af2f72cf6c301fa85f13c412a94f317224045ad4a7b4446beeb1a21f24",
+    "release_sha256": "e14347af2f72cf6c301fa85f13c412a94f317224045ad4a7b4446beeb1a21f24",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Util.CMatrixCLM",
+    "file": "QIT/Util/CMatrixCLM.lean",
+    "original_sha256": "a8ff438742a95dd286b9ac1ee4f94c059562780a6ee4224067965428c5e74542",
+    "release_sha256": "a8ff438742a95dd286b9ac1ee4f94c059562780a6ee4224067965428c5e74542",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Renyi.FrankLieb.ScalarOperator",
+    "file": "QIT/Information/Renyi/FrankLieb/ScalarOperator.lean",
+    "original_sha256": "32e4bb0b2370d6f2eb2ee0f211d25f3ee046f2a1906c80ef348d9fbcdc52b42e",
+    "release_sha256": "32e4bb0b2370d6f2eb2ee0f211d25f3ee046f2a1906c80ef348d9fbcdc52b42e",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Renyi.FrankLieb.Variational",
+    "file": "QIT/Information/Renyi/FrankLieb/Variational.lean",
+    "original_sha256": "e63eaac6a8e6a3f067fb9b2fd861c1830794f07b68ffbb0d4f7364f27227f483",
+    "release_sha256": "e63eaac6a8e6a3f067fb9b2fd861c1830794f07b68ffbb0d4f7364f27227f483",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Renyi.FrankLieb.Concavity",
+    "file": "QIT/Information/Renyi/FrankLieb/Concavity.lean",
+    "original_sha256": "027d1efd17838db248d5ba7acb7b6b839ccc192144a0012a8294e99f83ee8356",
+    "release_sha256": "027d1efd17838db248d5ba7acb7b6b839ccc192144a0012a8294e99f83ee8356",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Renyi.RenyiDPI.HighAlpha",
+    "file": "QIT/Information/Renyi/RenyiDPI/HighAlpha.lean",
+    "original_sha256": "62d9c11fc2b9e434702e00c69ed480e59e1ca6e29010b0748ecc7ab871695583",
+    "release_sha256": "62d9c11fc2b9e434702e00c69ed480e59e1ca6e29010b0748ecc7ab871695583",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Renyi.RenyiDPI.LowAlpha",
+    "file": "QIT/Information/Renyi/RenyiDPI/LowAlpha.lean",
+    "original_sha256": "9d7774e7e53b09ff2473176b996185104770e96decbe07a4f267f550263dac60",
+    "release_sha256": "9d7774e7e53b09ff2473176b996185104770e96decbe07a4f267f550263dac60",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Renyi.FrankLieb.DPI",
+    "file": "QIT/Information/Renyi/FrankLieb/DPI.lean",
+    "original_sha256": "950291538f79492cce8e4e1615b305fdc57bb61118a7d0073f7b9c894d936b3c",
+    "release_sha256": "950291538f79492cce8e4e1615b305fdc57bb61118a7d0073f7b9c894d936b3c",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Renyi.RenyiDPI.TraceLogBridge",
+    "file": "QIT/Information/Renyi/RenyiDPI/TraceLogBridge.lean",
+    "original_sha256": "6b18f5b715bab5b3073b7e8dfd8789f9226590bc2e5ffb4add586431e4ee7011",
+    "release_sha256": "6b18f5b715bab5b3073b7e8dfd8789f9226590bc2e5ffb4add586431e4ee7011",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Renyi.RenyiDPI.AlphaToOne",
+    "file": "QIT/Information/Renyi/RenyiDPI/AlphaToOne.lean",
+    "original_sha256": "4abdbb6080817166b3ff0962057dddf7bf04977a0eb2014e11b793644b38fb6a",
+    "release_sha256": "4abdbb6080817166b3ff0962057dddf7bf04977a0eb2014e11b793644b38fb6a",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Entropy.RelativeEntropyDPI",
+    "file": "QIT/Information/Entropy/RelativeEntropyDPI.lean",
+    "original_sha256": "cf658d2bb17ff81567dc2565e36eb5a367384736983a68615aeec66bb455ae33",
+    "release_sha256": "cf658d2bb17ff81567dc2565e36eb5a367384736983a68615aeec66bb455ae33",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.PosSqrtOrder",
+    "file": "QIT/States/PosSqrtOrder.lean",
+    "original_sha256": "14dbf6d22d6bc64d85e0aa87945cde107a2f8a8cb2ed61eb8d8932eefd8e3620",
+    "release_sha256": "14dbf6d22d6bc64d85e0aa87945cde107a2f8a8cb2ed61eb8d8932eefd8e3620",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Product",
+    "file": "QIT/States/Product.lean",
+    "original_sha256": "ab80a4e06295b1e87853bdf74bcce7f96b62f5135b29177d3a6994cbd8d2132c",
+    "release_sha256": "ab80a4e06295b1e87853bdf74bcce7f96b62f5135b29177d3a6994cbd8d2132c",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Geometry.FidelityConcavity",
+    "file": "QIT/States/Geometry/FidelityConcavity.lean",
+    "original_sha256": "91404cfa1aed76a6f31de1fc2e232fb70570a5a03b17b1eb22c3ad712d8b2d57",
+    "release_sha256": "91404cfa1aed76a6f31de1fc2e232fb70570a5a03b17b1eb22c3ad712d8b2d57",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.SubnormalizedConvexity",
+    "file": "QIT/States/SubnormalizedConvexity.lean",
+    "original_sha256": "377be957af614df7682c26356bd7405d5b740d29281018db1c0f0d770aa5d576",
+    "release_sha256": "377be957af614df7682c26356bd7405d5b740d29281018db1c0f0d770aa5d576",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Purification.Conditioning",
+    "file": "QIT/States/Purification/Conditioning.lean",
+    "original_sha256": "95a19850afbb6f0d89cf36772a8a432b6c1d6afa051621f7777f3fc650cd6a0a",
+    "release_sha256": "95a19850afbb6f0d89cf36772a8a432b6c1d6afa051621f7777f3fc650cd6a0a",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Purification.Schatten",
+    "file": "QIT/States/Purification/Schatten.lean",
+    "original_sha256": "142f79ae2fac0751ca8c7b7955482ac0bd35305161c1ca14cff4b8c0b8d802cf",
+    "release_sha256": "142f79ae2fac0751ca8c7b7955482ac0bd35305161c1ca14cff4b8c0b8d802cf",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Geometry.PureTargetFidelity",
+    "file": "QIT/States/Geometry/PureTargetFidelity.lean",
+    "original_sha256": "8ddc3c6da3c166b9b2ef66876d6c361ae4cb306768dffb2250f3651aa6d5c2cb",
+    "release_sha256": "8ddc3c6da3c166b9b2ef66876d6c361ae4cb306768dffb2250f3651aa6d5c2cb",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Geometry.FuchsVdG",
+    "file": "QIT/States/Geometry/FuchsVdG.lean",
+    "original_sha256": "5166f006eaa80bcd41c3c26d415200ccb796460bef11625d25c7aa3db6e34a24",
+    "release_sha256": "5166f006eaa80bcd41c3c26d415200ccb796460bef11625d25c7aa3db6e34a24",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Geometry.PurifiedDistanceAngle",
+    "file": "QIT/States/Geometry/PurifiedDistanceAngle.lean",
+    "original_sha256": "a36ea44c2b6ec0c1907fbcb241180f2035895dae574d5916fc3348a1cb24380f",
+    "release_sha256": "a36ea44c2b6ec0c1907fbcb241180f2035895dae574d5916fc3348a1cb24380f",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States.Geometry",
+    "file": "QIT/States/Geometry.lean",
+    "original_sha256": "b8af6481dfa696bd1840c2e35665bcc197fcef43627917f3680964e04007945e",
+    "release_sha256": "b8af6481dfa696bd1840c2e35665bcc197fcef43627917f3680964e04007945e",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.States",
+    "file": "QIT/States.lean",
+    "original_sha256": "ba0eb07263ce8dc3d1b36e10dc11dfed5ce5b65a611a2df68e4928326b33542f",
+    "release_sha256": "ba0eb07263ce8dc3d1b36e10dc11dfed5ce5b65a611a2df68e4928326b33542f",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.BinaryHypothesisTest.Basic",
+    "file": "QIT/Information/BinaryHypothesisTest/Basic.lean",
+    "original_sha256": "f7da1a60d5d590ebd9b654a06d6cf7b5ed9c402464ad42a37be528355760228f",
+    "release_sha256": "f7da1a60d5d590ebd9b654a06d6cf7b5ed9c402464ad42a37be528355760228f",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Util.Wires",
+    "file": "QIT/Util/Wires.lean",
+    "original_sha256": "8f833855327e3f49cf4a7aeb2d8e5b2e6fc48236224c772d4a9b923ff99eb241",
+    "release_sha256": "8f833855327e3f49cf4a7aeb2d8e5b2e6fc48236224c772d4a9b923ff99eb241",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Util.Wires.Contraction",
+    "file": "QIT/Util/Wires/Contraction.lean",
+    "original_sha256": "8946456bc3399dbb274b374eb6135979e4ae8be385f8b8f98efe1a8f8adaf8be",
+    "release_sha256": "8946456bc3399dbb274b374eb6135979e4ae8be385f8b8f98efe1a8f8adaf8be",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Util.Wires.LinkProduct",
+    "file": "QIT/Util/Wires/LinkProduct.lean",
+    "original_sha256": "92ab3ebc59515547b6087a0375a8cb250dca3867a66934a9a0b92eea8cfb15db",
+    "release_sha256": "92ab3ebc59515547b6087a0375a8cb250dca3867a66934a9a0b92eea8cfb15db",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Core.Map.ChoiComposition",
+    "file": "QIT/Core/Map/ChoiComposition.lean",
+    "original_sha256": "d3960335fbc4b6e38e80c6f36b52422ec5864562be767fa55da38961a25e1c32",
+    "release_sha256": "d3960335fbc4b6e38e80c6f36b52422ec5864562be767fa55da38961a25e1c32",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Core.Map.LinkProductPositivity",
+    "file": "QIT/Core/Map/LinkProductPositivity.lean",
+    "original_sha256": "d2948219dfd20382fb5680e87bec01f1ec4899dd397db2cb6bb551b1bed8b26f",
+    "release_sha256": "d2948219dfd20382fb5680e87bec01f1ec4899dd397db2cb6bb551b1bed8b26f",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Core.Map.MatchedWireAssociativity",
+    "file": "QIT/Core/Map/MatchedWireAssociativity.lean",
+    "original_sha256": "e05688831d68fc3b97208cef797b6dab8be1fd2075266d0051f979b66b14f7e3",
+    "release_sha256": "e05688831d68fc3b97208cef797b6dab8be1fd2075266d0051f979b66b14f7e3",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Core.Components",
+    "file": "QIT/Core/Components.lean",
+    "original_sha256": "dbabb9a3fff36213851c1269176b9c80a327d57bb6af5db20e2e1b23cc196b74",
+    "release_sha256": "dbabb9a3fff36213851c1269176b9c80a327d57bb6af5db20e2e1b23cc196b74",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Core",
+    "file": "QIT/Core.lean",
+    "original_sha256": "8d1f5f50f30b5ebf740d64c1a6563a103fff54bbd8039812e37085b8e57dd45a",
+    "release_sha256": "8d1f5f50f30b5ebf740d64c1a6563a103fff54bbd8039812e37085b8e57dd45a",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.BinaryHypothesisTest.Classical",
+    "file": "QIT/Information/BinaryHypothesisTest/Classical.lean",
+    "original_sha256": "10e40f5d27ea2f0fb09e94d2397fe725a5a97143b3be6fe51dc67394eb9606fc",
+    "release_sha256": "10e40f5d27ea2f0fb09e94d2397fe725a5a97143b3be6fe51dc67394eb9606fc",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.BinaryHypothesisTest.Spectral",
+    "file": "QIT/Information/BinaryHypothesisTest/Spectral.lean",
+    "original_sha256": "fa19456e578e3e1d0621fee3840a49c64e8cdb9906710fb98b9796ab6a7904c4",
+    "release_sha256": "fa19456e578e3e1d0621fee3840a49c64e8cdb9906710fb98b9796ab6a7904c4",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.BinaryHypothesisTest",
+    "file": "QIT/Information/BinaryHypothesisTest.lean",
+    "original_sha256": "7d80ae304eb038627c22e7060968eacbcf05a416216b69b578564420d6db7153",
+    "release_sha256": "7d80ae304eb038627c22e7060968eacbcf05a416216b69b578564420d6db7153",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Entropy.MutualInformationDPI",
+    "file": "QIT/Information/Entropy/MutualInformationDPI.lean",
+    "original_sha256": "558554099a8eb538069a82c9d796b77c037d5c57715dfdf2c4ab1fada8d212c1",
+    "release_sha256": "558554099a8eb538069a82c9d796b77c037d5c57715dfdf2c4ab1fada8d212c1",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.Entropy.StrongSubadditivity",
+    "file": "QIT/Information/Entropy/StrongSubadditivity.lean",
+    "original_sha256": "5abeabe56b5551b6ec1e9042cf8b55fe75d9653316f3c833dc5f9b47c9a10fb6",
+    "release_sha256": "5abeabe56b5551b6ec1e9042cf8b55fe75d9653316f3c833dc5f9b47c9a10fb6",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  },
+  {
+    "module": "QIT.Information.CQChannel",
+    "file": "QIT/Information/CQChannel.lean",
+    "original_sha256": "b27ba412da73f64bee961ea4b0868bc4271065987563bd3e29cfea8bff583f4d",
+    "release_sha256": "b27ba412da73f64bee961ea4b0868bc4271065987563bd3e29cfea8bff583f4d",
+    "upstream": "QuAIR/Lean-QIT@8a931d4bda61ba503cfc0728704cfef5dedf2cff"
+  }
+]

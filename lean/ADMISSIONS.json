@@ -1,0 +1,254 @@
+[
+  {
+    "name": "E2.finite_increment",
+    "file": "E2/Clock.lean",
+    "line": 72,
+    "shipped": true
+  },
+  {
+    "name": "E2.guard_mass",
+    "file": "E2/Clock.lean",
+    "line": 79,
+    "shipped": true
+  },
+  {
+    "name": "E2.guard_remove",
+    "file": "E2/Clock.lean",
+    "line": 85,
+    "shipped": true
+  },
+  {
+    "name": "E2.clock_profile",
+    "file": "E2/ClockProfile.lean",
+    "line": 12,
+    "shipped": true
+  },
+  {
+    "name": "E2.matched_comparison",
+    "file": "E2/Transfer.lean",
+    "line": 108,
+    "shipped": true
+  },
+  {
+    "name": "E2.V2.gate_packing",
+    "file": "E2/V2/Gate.lean",
+    "line": 26,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.gate_testing",
+    "file": "E2/V2/Gate.lean",
+    "line": 56,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.gate_flag",
+    "file": "E2/V2/Gate.lean",
+    "line": 62,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.gate_finite",
+    "file": "E2/V2/Gate.lean",
+    "line": 76,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.gate_resources",
+    "file": "E2/V2/Gate.lean",
+    "line": 80,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.bcs_exponent_arithmetic",
+    "file": "E2/V2/Gate.lean",
+    "line": 85,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.rational_exponent_arithmetic",
+    "file": "E2/V2/Gate.lean",
+    "line": 88,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.beyond_left_ce",
+    "file": "E2/V2/Gate.lean",
+    "line": 98,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.gate_trace_gap",
+    "file": "E2/V2/Gate.lean",
+    "line": 110,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.gate_witnesses",
+    "file": "E2/V2/GateSource.lean",
+    "line": 106,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.testing_program_exists",
+    "file": "E2/V2/GateSource.lean",
+    "line": 195,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.exact_trace_barrier",
+    "file": "E2/V2/Limits.lean",
+    "line": 15,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.moment_compression",
+    "file": "E2/V2/Limits.lean",
+    "line": 25,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.weighted_limits",
+    "file": "E2/V2/Limits.lean",
+    "line": 34,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.approximable_arithmetic",
+    "file": "E2/V2/Limits.lean",
+    "line": 42,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.reader_program_exists",
+    "file": "E2/V2/ReaderSource.lean",
+    "line": 73,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.reader_forcing",
+    "file": "E2/V2/Realization.lean",
+    "line": 10,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.reader_finite",
+    "file": "E2/V2/Realization.lean",
+    "line": 20,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.realization_parameters",
+    "file": "E2/V2/Realization.lean",
+    "line": 26,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.accumulation",
+    "file": "E2/V2/Realization.lean",
+    "line": 30,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.positive_parameter_choice",
+    "file": "E2/V2/Realization.lean",
+    "line": 35,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.inactive_extraction",
+    "file": "E2/V2/Usable.lean",
+    "line": 15,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.actual_state_bridge",
+    "file": "E2/V2/Usable.lean",
+    "line": 36,
+    "shipped": false
+  },
+  {
+    "name": "E2.V2.usable_parameters",
+    "file": "E2/V2/Usable.lean",
+    "line": 43,
+    "shipped": false
+  },
+  {
+    "name": "E2.V3.semicomputable_delta",
+    "file": "E2/V3/Arithmetic.lean",
+    "line": 44,
+    "shipped": false
+  },
+  {
+    "name": "E2.V3.limit_flag_16_1",
+    "file": "E2/V3/Classification.lean",
+    "line": 24,
+    "shipped": false
+  },
+  {
+    "name": "E2.V3.limit_flag_lower_16_4",
+    "file": "E2/V3/Classification.lean",
+    "line": 30,
+    "shipped": false
+  },
+  {
+    "name": "E2.V3.limit_finite_16_5",
+    "file": "E2/V3/Classification.lean",
+    "line": 46,
+    "shipped": false
+  },
+  {
+    "name": "E2.V3.limit_resources_16_6",
+    "file": "E2/V3/Classification.lean",
+    "line": 51,
+    "shipped": false
+  },
+  {
+    "name": "E2.V3.positive_parameters",
+    "file": "E2/V3/Classification.lean",
+    "line": 58,
+    "shipped": false
+  },
+  {
+    "name": "E2.V3.rational_dyadic_computable",
+    "file": "E2/V3/Classification.lean",
+    "line": 66,
+    "shipped": false
+  },
+  {
+    "name": "E2.V3.loaded_tuple_16_2",
+    "file": "E2/V3/CornerStatements.lean",
+    "line": 63,
+    "shipped": false
+  },
+  {
+    "name": "E2.V3.stop_sectors_16_3",
+    "file": "E2/V3/CornerStatements.lean",
+    "line": 105,
+    "shipped": false
+  },
+  {
+    "name": "E2.V3.continuation_ce",
+    "file": "E2/V3/DynamicSource.lean",
+    "line": 22,
+    "shipped": false
+  },
+  {
+    "name": "E2.V3.machine_exists",
+    "file": "E2/V3/Program.lean",
+    "line": 73,
+    "shipped": false
+  },
+  {
+    "name": "E2.V3.trace_range_14_5",
+    "file": "E2/V3/TraceRange.lean",
+    "line": 11,
+    "shipped": false
+  },
+  {
+    "name": "E2.V3.budget_obstruction_14_6",
+    "file": "E2/V3/TraceRange.lean",
+    "line": 16,
+    "shipped": false
+  }
+]

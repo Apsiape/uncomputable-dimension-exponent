@@ -1,0 +1,21 @@
+{
+  "total_modules": 410,
+  "rebuilt": [
+    "E2.RealArithmetic",
+    "Statement",
+    "Challenge",
+    "E2.RealArithmeticComplex",
+    "E2.RealArithmeticMatrix",
+    "E2.FeasibilitySentence",
+    "E2.FeasibilityRaw",
+    "E2.FeasibilityComputation",
+    "E2.EffectiveDyadic",
+    "E2.Effective",
+    "Solution",
+    "Blueprint",
+    "E2.FeasibilityUniform",
+    "E2.RealArithmeticFinite",
+    "Audit"
+  ],
+  "retained": 395
+}

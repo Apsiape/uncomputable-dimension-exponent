@@ -1,0 +1,25 @@
+{
+  "lean": "4.35.0",
+  "lean_commit": "eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+  "nanoda_adjustment": {
+    "original_sha256": "de57d9dd7f647eb57398bc3dab4dcaa1d64f961f3f49964d5455fbddc73b35a8",
+    "copy_sha256": "82c9dcf4f8df8ef2b9849bfc8198d0edd01e910913bd221f0c960c3332ab5e51",
+    "changed_field": "PE32+ SizeOfStackReserve",
+    "file_offset": 336,
+    "original_reserve_bytes": 1048576,
+    "new_reserve_bytes": 134217728,
+    "stack_commit_bytes": 4096,
+    "all_other_bytes_identical": true,
+    "documentation": "https://learn.microsoft.com/en-us/windows/win32/debug/pe-format"
+  },
+  "binary_hashes": {
+    "lean.exe": "ec7a472d1c12a09b0c0c718f7427c2be527b3f5f07810fdbe076c2507c7a91ea",
+    "lake.exe": "023feb24d3e7244fe671dba79f1cd1affc6c7a7cacfe497bf3675febb506578c",
+    "leanexport.exe": "bda24bb3fafaf299ba472f944942d6293294b76559fafc9f166badd7c0f981b3",
+    "leanchecker.exe": "9ef6baeb28d5e28897d5ed6dddd60ff81e511d97374013ece435dff38e9e0137",
+    "nanoda_bin.exe": "de57d9dd7f647eb57398bc3dab4dcaa1d64f961f3f49964d5455fbddc73b35a8"
+  },
+  "nanoda_source_revision": "3a2407216ee84a75f9e1aead6803d0578be06ae7",
+  "nanoda_source_pin": "https://github.com/leanprover/lean4/blob/v4.35.0/src/CMakeLists.txt#L987",
+  "export_format": "3.1.0"
+}

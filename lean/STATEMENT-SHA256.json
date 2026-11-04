@@ -1,0 +1,7 @@
+{
+  "Statement.lean": "696c5337780c8507c77b21c46d93e63bd7100f74b82070bb216ab6c8c8f069bb",
+  "E2/Game.lean": "0680a230d7578a27b547615018ca5fb721c9b1224fdfc144bab5ff53a009c32e",
+  "E2/Computability.lean": "a06954702e599e9a6bfa74f1aa9bbfb26cb4824090aa067b8a62297ed520aa9c",
+  "E2/RealArithmetic.lean": "b27235c4d448773da4892bc915800314d86ae948598053a14d45970af7e7567e",
+  "E2/EffectiveCoding.lean": "c6798f3484f216db5ba479b3e03b7aa29ed7360f50b00ada8c27a50d81a94ca6"
+}

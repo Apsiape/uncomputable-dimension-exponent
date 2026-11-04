@@ -35,6 +35,8 @@ There is a fixed finite two-player Boolean constraint-system game $G_K$, with ra
 \end{equation}
 The exponent is Turing-equivalent to $K$. The sequence $\log D_{G_K}(2^{-n})/n$ has no computable certified rate of convergence.
 \end{theorem}
+Theorem~\ref{thm:main} is Lean-checked conditional on the explicit hypothesis \texttt{TarskiDecision} of Basu--Pollack--Roy, Theorem~13.13; Appendix~\ref{sec:lean} gives the scope and checks.
+
 
 The existence of increasing computable rational sequences with uncomputable limits is classical, beginning with Specker~\cite{Spe49}; this construction places such a limit inside the resource law of one fixed game. Sections~\ref{sec:prelim}--\ref{sec:game} prove its clock, compiler, finite-model and arbitrary-state estimates. Sections~\ref{sec:realization}--\ref{sec:heat} give the left-c.e. reader, operational extraction, heat and recovery laws. Section~\ref{sec:limits} proves the exact-trace obstruction and classifies matrix-approximable projection minima. Section~\ref{sec:gate} gives a complementary non-left-c.e. example, and Section~\ref{sec:classification} proves the full logarithmic classification.
 

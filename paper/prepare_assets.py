@@ -49,7 +49,7 @@ authors = [{'family-names':'Douglas','given-names':'Seth'},
 cff = '\n'.join([
     'cff-version: 1.2.0',
     'message: "Please cite the paper; this repository supplies its source and ancillary checks."',
-    'type: software', 'title: '+json.dumps(TITLE), 'version: 4.0.0', 'doi: 10.5281/zenodo.23701733',
+    'type: software', 'title: '+json.dumps(TITLE), 'version: 4.1.0', 'doi: 10.5281/zenodo.23701733',
     'repository-code: "https://github.com/Apsiape/uncomputable-dimension-exponent"',
     'abstract: '+json.dumps(ABSTRACT),
     'license:', '  - CC-BY-4.0', '  - MIT', '  - Apache-2.0',
@@ -61,19 +61,19 @@ cff = '\n'.join([
     'preferred-citation:', '  type: generic', '  title: '+json.dumps(TITLE),
     '  authors:', '    - family-names: Douglas', '      given-names: Seth',
     '    - family-names: Mghirbi', '      given-names: Nidhal',
-    '  year: 2026', '  version: 4.0.0',
+    '  year: 2026', '  version: 4.1.0',
     '  doi: 10.5281/zenodo.23701733',
-    '  notes: "Preprint. Lean formalization of Sections 2--10 is in progress and not complete; the remaining sections, power-scale part and profile part are not yet formalized. Concept DOI: 10.5281/zenodo.23701733. Text CC BY 4.0; scripts MIT or Apache 2.0; see RIGHTS.md."', ''
+    '  notes: "Preprint. Theorem 1.2 (the halting game, label thm:main, eq. (1.4)) is Lean-checked conditional on the explicit hypothesis TarskiDecision (Basu-Pollack-Roy, Theorem 13.13, printed p. 516). Theorem 1.1, power-scale and profile results, five side results, and version 2-3 extensions are outside this check. Concept DOI: 10.5281/zenodo.23701733. Text CC BY 4.0; scripts MIT or Apache 2.0; see RIGHTS.md."', ''
 ])
 (ROOT / 'CITATION.cff').write_text(cff, encoding='utf-8', newline='\n')
 zenodo = {
     'title':TITLE, 'upload_type':'publication', 'publication_type':'preprint',
-    'version':'4.0.0',
+    'version':'4.1.0',
     'creators':[{'name':'Douglas, Seth'},{'name':'Mghirbi, Nidhal'}],
     'description':'<p>'+ABSTRACT+'</p>',
     'keywords':['nonlocal games','dimension exponent','Boolean constraint systems','computability'],
     'access_right':'open','license':'cc-by-4.0','language':'eng',
-    'notes':'Preprint. It has not been peer reviewed. Text and documentation: CC BY 4.0. Scripts: MIT or Apache 2.0. A Lean formalization of Sections 2--10 is in progress and not complete; the remaining sections, power-scale part and profile part are not yet formalized. Concept DOI: 10.5281/zenodo.23701733.'
+    'notes':'Preprint. It has not been peer reviewed. Text and documentation: CC BY 4.0. Scripts: MIT or Apache 2.0. Theorem 1.2 (the halting game, label thm:main, eq. (1.4)) is Lean-checked conditional on the explicit hypothesis TarskiDecision (Basu-Pollack-Roy, Theorem 13.13, printed p. 516). Theorem 1.1, power-scale and profile results, five side results, and version 2-3 extensions are outside this check. Concept DOI: 10.5281/zenodo.23701733.'
 }
 zenodo['related_identifiers'] = [{'identifier':'10.5281/zenodo.23701733','scheme':'doi','relation':'isVersionOf'}]
 (ROOT / '.zenodo.json').write_text(json.dumps(zenodo, indent=2)+'\n', encoding='utf-8', newline='\n')

@@ -1,0 +1,77 @@
+[
+  {
+    "module": "E2.RealArithmetic",
+    "source_sha256": "b27235c4d448773da4892bc915800314d86ae948598053a14d45970af7e7567e",
+    "olean_sha256": "315f0c04430e84687502afae9f0949ab2eddb2b4d1484b0c20efb9b14f49ec35"
+  },
+  {
+    "module": "Statement",
+    "source_sha256": "696c5337780c8507c77b21c46d93e63bd7100f74b82070bb216ab6c8c8f069bb",
+    "olean_sha256": "db60ddcc239c7947900883119b36e4fbd78dfa51fe0d71c8590ef61aba87d286"
+  },
+  {
+    "module": "Challenge",
+    "source_sha256": "a333e9f3f31162ad2b6a48fa44f8b087949fa802d8f9531abec9978b82cb74ef",
+    "olean_sha256": "53247f98db51703f74704c4986291660ffb07abed193f2d1cdf5a082a9de8c54"
+  },
+  {
+    "module": "E2.RealArithmeticComplex",
+    "source_sha256": "2631c742cf9da4f1778ffff05fb673b0bc2b07652a0593d47a8a38c10a719295",
+    "olean_sha256": "0443f44b2fe47cf41b8626d5d4abc6cbe1c13e4f560b1b1d39b075cb0e244480"
+  },
+  {
+    "module": "E2.RealArithmeticMatrix",
+    "source_sha256": "a4dcfed9c06d4638635dc14068253fcf37a45ed42eda045234dc1d3407435e38",
+    "olean_sha256": "26d05d0b73a0a5626ef204745d1f65bbdfe9342a55ad32d47126bab345f315b3"
+  },
+  {
+    "module": "E2.FeasibilitySentence",
+    "source_sha256": "044408b10f09942dbe4c003baed1f1cee983c36ff0be06a4194e25708668829e",
+    "olean_sha256": "645823e8b15eef9b768a4a4bc81ad7e9c093ad272971a58086664f79a617b027"
+  },
+  {
+    "module": "E2.FeasibilityRaw",
+    "source_sha256": "32a7b56ee2aaf899e60bfb2b4dd1482375a075a5d15cad7b8a18fbe8e732e5f0",
+    "olean_sha256": "5c4e2c0118cd1827303f9b4db8fd233cf3a50c1930cd1173fadd9e4bf7c06264"
+  },
+  {
+    "module": "E2.FeasibilityComputation",
+    "source_sha256": "90b8bfa13adc9329265b34793691eba9c44228c0cc0c8503d5e7300212ab2e33",
+    "olean_sha256": "dd2614a9b05933ef9b4bfd2057d4c817d8e502d6864206eda0a663b8a6209e70"
+  },
+  {
+    "module": "E2.EffectiveDyadic",
+    "source_sha256": "16008c8e5fb4f8e349bad547f0e378ec76490cc728fc76af89a665d2fe432f09",
+    "olean_sha256": "d4561727dfd19bdd6c3aed66b06a4b6f8789be7c2fb4d4208cbc7d1deb2007f6"
+  },
+  {
+    "module": "E2.Effective",
+    "source_sha256": "635910e154dc2f7ede803f07b55086549c48b1ee299404e6794928757acacee7",
+    "olean_sha256": "2ab95ad737d765543644c95306b8e534f68395718ac2695ffdab60f46debd7d8"
+  },
+  {
+    "module": "Solution",
+    "source_sha256": "8c529c066def09866846cae212a85f60a5a31b89ab71336714f6e9af7510c3c1",
+    "olean_sha256": "abc4cb4b0d7e697450268b4af3626de7ad643f1d95dc993a3a29163e642c17fd"
+  },
+  {
+    "module": "Blueprint",
+    "source_sha256": "d122bb9aa33e5c59f3349fcac4f7b2737f096a3efbf08658f3a6b2374dde5de8",
+    "olean_sha256": "e31a1c15342c6c94f8f2686ede2fec19810a18b90673345e1d41c6ef3a4cf822"
+  },
+  {
+    "module": "E2.FeasibilityUniform",
+    "source_sha256": "f34eb63d128ec6cafbd4551a1d3039ae42bfbf8c506774a80b3f7a6fd10315b1",
+    "olean_sha256": "1db2259615948903d369d0a8365ce4cd0a73bf40c6ebe08a617aafba224d5c66"
+  },
+  {
+    "module": "E2.RealArithmeticFinite",
+    "source_sha256": "a31b361f0d94606c2adfffdf21e1031002d7be06b27a8cc7c7f580009c361092",
+    "olean_sha256": "45bc64d02638916f309493dcf409c142892623bf767c520bb540fac92ddc986f"
+  },
+  {
+    "module": "Audit",
+    "source_sha256": "48856c9ffcbb841dba324d9f5018622af12973c060a183550d3986bc11c68df1",
+    "olean_sha256": "4f96506b227cd09e29c18b37a568059e9b9a5a0bf25183602eb5f800810b14fe"
+  }
+]

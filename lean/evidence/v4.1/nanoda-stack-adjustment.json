@@ -1,0 +1,8 @@
+{
+  "original_sha256": "de57d9dd7f647eb57398bc3dab4dcaa1d64f961f3f49964d5455fbddc73b35a8",
+  "copy_sha256": "82c9dcf4f8df8ef2b9849bfc8198d0edd01e910913bd221f0c960c3332ab5e51",
+  "file_offset": 336,
+  "original_reserve": 1048576,
+  "new_reserve": 134217728,
+  "only_changed_field": "PE32+ SizeOfStackReserve"
+}

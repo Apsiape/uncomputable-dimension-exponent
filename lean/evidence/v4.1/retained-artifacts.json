@@ -1,0 +1,1977 @@
+[
+  {
+    "module": "E2.Game",
+    "source_sha256": "0680a230d7578a27b547615018ca5fb721c9b1224fdfc144bab5ff53a009c32e",
+    "olean_sha256": "b622a21fdddbf45be6a3343f6b64d23775035cab36626eb6ace81f7d311701fe"
+  },
+  {
+    "module": "E2.Computability",
+    "source_sha256": "a06954702e599e9a6bfa74f1aa9bbfb26cb4824090aa067b8a62297ed520aa9c",
+    "olean_sha256": "7395a7a70fbc1c067768ec06c7b160628473b984e06b9be38c622bfb5ae43d1d"
+  },
+  {
+    "module": "E2.EffectiveCoding",
+    "source_sha256": "c6798f3484f216db5ba479b3e03b7aa29ed7360f50b00ada8c27a50d81a94ca6",
+    "olean_sha256": "522115c09c9ba9a85b71bd877bd5f07cc26f43e166a03e1d8a74e2dbd64abf3d"
+  },
+  {
+    "module": "Companion.Kernel",
+    "source_sha256": "cbb0f756f13f499b705c1d4bd180fa2d2177609b90e2ac53ef8ec5639f6b2dfc",
+    "olean_sha256": "d114c48677ae027b336cf350c3fa8a1e2083bfff5e3270f3557a705451fa09fa"
+  },
+  {
+    "module": "Companion.Analytic",
+    "source_sha256": "20d80890f2b2910afd81047e43aca1f9558ba9f74c0c134769ba551abda1758e",
+    "olean_sha256": "d0fb99c045282ff4bd86f30ef667fb48e450fa5ae7844e8b7f10b6188b458447"
+  },
+  {
+    "module": "Companion.HilbertSchmidt",
+    "source_sha256": "35481407abdf8eea3436ecbde105e1bb0f09d99386336d4b967f53dcd3ffec55",
+    "olean_sha256": "234e02ba423edc26b9c5e8a514b176a11fa1f39b355dd2be2e1c19466f20da79"
+  },
+  {
+    "module": "E2.Presentation",
+    "source_sha256": "32dbd1255767acc3b74138af28ea776365bfe4c5f059aae9d5ac81946702b59a",
+    "olean_sha256": "f388f8c80077881616885a5b9a5b492b983fb5ee0baba321d4af58246b016cd7"
+  },
+  {
+    "module": "E2.Weighted",
+    "source_sha256": "24c5c77c610f92eb56bc1de2d6147c8e7d4f27a7bcda97b86ff24e6d81128639",
+    "olean_sha256": "8fbbdfa6d28bcaffe467d5700847f33c621ff519de899a24f00b6ab43ca09cab"
+  },
+  {
+    "module": "E2.RawWords",
+    "source_sha256": "5ec8fd38f380f3d3971a77466a65710865c1e908f38041672724fa5bd520e28c",
+    "olean_sha256": "c05a3ef3e1c4bc014c8e4f7b2c1febd43abd57827dbbad2fa1c4e23381060086"
+  },
+  {
+    "module": "E2.CompilerCertificates",
+    "source_sha256": "30c500665d2fe872e5938ad82a90b5daa76de47c1aec0551d25215db2bf8e3c4",
+    "olean_sha256": "f25f3715346b8e7689077e55f5dce09fc653623862d3c0b737c05376629a5a31"
+  },
+  {
+    "module": "E2.CompilerGadgets",
+    "source_sha256": "4822f79f360c34dfc0595d94928bd15be9614c2d7a4f14c827e8465ba590a932",
+    "olean_sha256": "8414b0a6ef667b2afb3819eb0bf02948394265a7c9b3d0fcb971beff0e0c3260"
+  },
+  {
+    "module": "E2.CompilerBlocks",
+    "source_sha256": "17a6525c557dcc9469ce380b04cf418cccc0bdda191449a4fd8119270a6ee8ef",
+    "olean_sha256": "25a2f2bccb78dfcebe3df07a6ee5716c9bfe5c48487b131af986ad8ae927a7e9"
+  },
+  {
+    "module": "E2.CompilerExtensions",
+    "source_sha256": "61828b1da35b5d42949c5c8a9ac05ba5fbbaaafc93e34f8d54bbff4100acb2ec",
+    "olean_sha256": "f036408fec298bc37cac34a0fed447210608050581ed8eff3ba5436b8291d579"
+  },
+  {
+    "module": "E2.FiniteMatrixTools",
+    "source_sha256": "1ed63f07e8c730dbc748dbf4db6a329bbf0f66b2193241bc8bc9a74a3c5351b6",
+    "olean_sha256": "3b1a73cdc603c5a709764cbe88abdfeb32af020f8167f67b563001e42cf30992"
+  },
+  {
+    "module": "E2.FiniteMatrixTransport",
+    "source_sha256": "7eabee2732dae663ed6cd39ff490dc2be3456be9fc50c4cac5d5e854373cf4ab",
+    "olean_sha256": "78c56b29d7b5afaf558e10b6e7aeb59e4787506431d5f3f2bbb0d2af82dadee0"
+  },
+  {
+    "module": "E2.CompilerFlatten",
+    "source_sha256": "6371b1f63b6ece719d7e672730dd1be1729303edb0529f69a038d8cb760c87f5",
+    "olean_sha256": "34994e9fd9f6268d0978e79eb211563d87b2f03c68ba2c8012f645a452c6f664"
+  },
+  {
+    "module": "QIT.Init",
+    "source_sha256": "bfbcc1fff2184bad35dabd843c6b352cdcddfe74138cd356b994b67d3b01818d",
+    "olean_sha256": "f192d4de9e5e7adab3b1faed101b7c08c30fc5daa8183d2dfb3a3278df170bf7"
+  },
+  {
+    "module": "QIT.Util.Matrix",
+    "source_sha256": "1c574b9ee8355b7981223a57dd04e80a3f1b5c66626c4eb89f82a87a9125b273",
+    "olean_sha256": "a51aed754bc541c0e6584e015ba0eddad8dddd6ed0dc7ebe4d52891e07e33ab0"
+  },
+  {
+    "module": "QIT.Util.Matrix.PosSqrt",
+    "source_sha256": "63f5e8a3a17152d7dbcc8f502ce4d78556bc69f9fbec09884c1f5c0d4965b5ab",
+    "olean_sha256": "0442e92749b25374f330f46366e575ac53e50045b26f61f56532bea672ab7f62"
+  },
+  {
+    "module": "E2.CompilerRealification",
+    "source_sha256": "579cc591d60b6b747e39fed6fe568ad4ca70c4efb1140707fde7cc4db0fbe246",
+    "olean_sha256": "3945d6fcebebfe73241218181180c2de495b3c0ca080fe14822e7ed125dad930"
+  },
+  {
+    "module": "E2.ProgramCore",
+    "source_sha256": "52b165a99161f783c12871d24b6eb938b1b210ba62e29de3e8a116a6fe25939a",
+    "olean_sha256": "4d0fbbf486b87f71bf41726b4cf3c07b0151f3b2d43deb6e9450fb96d3cf60d8"
+  },
+  {
+    "module": "E2.CounterFlow",
+    "source_sha256": "2e68e8a708b14d629c485fcf16fad3f44a131363d253d8ac8a30d01d6b1c5e40",
+    "olean_sha256": "8552da0a0ef949fe3808df9d0a2090c37f485557bbde252d9297d11444abb96f"
+  },
+  {
+    "module": "E2.CounterStack",
+    "source_sha256": "5f6131f9775452001e2e354a1dac836396e4043da15f13fce74df7e8df24c66e",
+    "olean_sha256": "0bc15c982e5750e5fd3acd9cec40b26ef8e3318ba5d582d58d9df796ca9904d6"
+  },
+  {
+    "module": "E2.CounterStackPop",
+    "source_sha256": "96d765688ccfb3f0f95bdc61e384163ec54764fe33e88e3635d4363900444deb",
+    "olean_sha256": "e22019db9a6434073af09b48400e4621054e9d37512c3ec41dab12d340adf544"
+  },
+  {
+    "module": "E2.CounterTermination",
+    "source_sha256": "ff8e48f3c590d1a5fdfdee8f14ec580d3a986cd303021f52faa6977016b30035",
+    "olean_sha256": "03fbf3718d55387c4a5703937b9579d1c8909b9fdc02dbdd1fa699ac38cc23a1"
+  },
+  {
+    "module": "E2.CounterMacro",
+    "source_sha256": "7844e1f50baa9cf07c5ecbc38373a4b7564276b4bb2999a7382adcb88ea48d69",
+    "olean_sha256": "d6ba52a506820c4dbd52455338b163ade60c3d3e7bf0127e1b7163653816761b"
+  },
+  {
+    "module": "E2.RecognizerEncoding",
+    "source_sha256": "f3b2588a3625fea70ced9522c5da05896fb25791765c356111b9e7615a81df8d",
+    "olean_sha256": "80d42850c0e4282b6c4ea0c97890b1e488bee8bfc0b07d266aac5015c9d21431"
+  },
+  {
+    "module": "E2.RecognizerTM2",
+    "source_sha256": "2a099fb8439cb0f19d3f17f80db123b275d1f2f6d46d33ee69131587e30b07b4",
+    "olean_sha256": "bd8da3d7eb41928d3d21ddba50687f3fe8772b9eeb4ff1cf7a1c224627578333"
+  },
+  {
+    "module": "E2.RecognizerTM2Simulation",
+    "source_sha256": "02fd83fa9e06c008b9f624bf935bc84698f47e89e61c8131f9995fc6ecbb2632",
+    "olean_sha256": "6e70320fc05659b99fb72981ffb818f4635cd521e2e0547205b5e991838b0be5"
+  },
+  {
+    "module": "E2.RecognizerInput",
+    "source_sha256": "2ab0c607d091ad8b8a22b43c65026b212eb1b007cbc293d940564fa008ff235f",
+    "olean_sha256": "7dea08c0e44ab0f37542f94fee7c53b1b313bd853977ce214b4cf0153d0250a2"
+  },
+  {
+    "module": "E2.RecognizerUniversal",
+    "source_sha256": "dc8ffd1a2fa664b25846729536c69f64aeb212686a9dab9286ae0991deecc05a",
+    "olean_sha256": "2d782902886ee3589243c6f03555a525edb01ac7f0f37f82832fbef5da4d6814"
+  },
+  {
+    "module": "E2.RecognizerImplementation",
+    "source_sha256": "e25c1248a6a3dcecda64e3fc6e87ce55fc71de8c42a4995d5df588e493f74ee6",
+    "olean_sha256": "5d3dbbeb9c4639a8ac1a8de7f74a805a66fbc487aa15de4e7b818f68e8c8cc76"
+  },
+  {
+    "module": "E2.Program",
+    "source_sha256": "ed8c23f1f09ad72dd96b414ea48bed82feadee29017841fc9a61b2978b997a50",
+    "olean_sha256": "b3d5d3e62029c187812ea380e635de6fe2b627bc65cfe1615fb82ace965abb15"
+  },
+  {
+    "module": "E2.Source",
+    "source_sha256": "382234aaf019ff4edc34b707d11eb0cc42cd96c8c72dc1ce7b4ebb1901d79eb4",
+    "olean_sha256": "9f5c4e507a416b76c3596a31b689a954e8570b7a0535a9e36c9e497904a65423"
+  },
+  {
+    "module": "E2.ClockData",
+    "source_sha256": "7768730eaa42133143b362b0df302cbcf792318cc36a6a6233ef4bd15ffd4726",
+    "olean_sha256": "58cf3422cb2b5de50d14198107d2326846c24e6dbb47c7a34dca676726b5e095"
+  },
+  {
+    "module": "E2.HSFunctionalCalculus",
+    "source_sha256": "0522cb8cf13cc2acdf33b883735949045b5c2dbe3bbb66cb843fff36a0c39ee9",
+    "olean_sha256": "c01c39c33f695199ddddf08c6b39fe857366b5335b7f5e7c135706db4803debd"
+  },
+  {
+    "module": "E2.MatrixFunctions",
+    "source_sha256": "58eae7bdf02e02832aa9006c7516fc688f81c753f4be694e24e300808cbd6f37",
+    "olean_sha256": "1da14f716b261cd6d3a198434fd3e22300aefc3895293436928291090a54ed49"
+  },
+  {
+    "module": "E2.CompilerUnitaryDiagonal",
+    "source_sha256": "0caa6544fe31bf6ec48b45d4301b13fd00fd4ebaa3fa59a7c4775d0ce3385c53",
+    "olean_sha256": "a6c77f23784580fc86439fa36c9a228b5c4e70beb416610801371450ddb5e057"
+  },
+  {
+    "module": "E2.CompilerBoolean",
+    "source_sha256": "975602993846e0a6bd958b8b699649a3c5aa650bc5636733d19a0a235f0e860c",
+    "olean_sha256": "7a10103c65b2074fa194bdfb0ca58ffefad1b66f33ec9753ca6ff873f8980d75"
+  },
+  {
+    "module": "E2.CompilerAnd",
+    "source_sha256": "0452ba4c239eaf254fec3d1df4580d1ae9dd7d530943bfaabc6d57982791676f",
+    "olean_sha256": "df6fadafd351dba6ed2f04519e4192d34141eaf41626b6343c1746335efe7f85"
+  },
+  {
+    "module": "E2.CompilerDomains",
+    "source_sha256": "06b334c4abcdcac17280da4f5645a5ba60b375af1110512c320fb8152d56dee2",
+    "olean_sha256": "a806317cc7ec010a21a84d2ada6bd17cb288eb616a50e3132ea46f23cbf1826a"
+  },
+  {
+    "module": "E2.PolyEval",
+    "source_sha256": "9c77d635c069c0bbb01cf97fe7d753227e33daaa8e4469253ebdc109a07ef614",
+    "olean_sha256": "2711241602a45765ecdf4b329dd95e2d44de05f8b4bc643fe9381c929b128d68"
+  },
+  {
+    "module": "E2.CompilerPolynomial",
+    "source_sha256": "a6d8ab66258de3af5e88448f9d56fc7004e8b33aeb9250204de8efe15abcf27f",
+    "olean_sha256": "92c10a2cd1066bc778380aa11509a4c4c5740de902705ade2faecad37021095f"
+  },
+  {
+    "module": "E2.CompilerFrontend",
+    "source_sha256": "0f053a4d9c100a77fa2ec3e8192c97a8bf9144db5c5b6ed2b0ddfd22ef0f2aa7",
+    "olean_sha256": "740df118df89e0f1c07e7c5c9540116174a23a2e217a5c823f8327693ed0282b"
+  },
+  {
+    "module": "E2.CompilerPositiveLift",
+    "source_sha256": "b2527c45de6a7e5c0b93cd966b37f6c805683ede554c3792445ec25bb659f163",
+    "olean_sha256": "58404973a1910155719cbe9776644f4b6527713192095c2aa857d58a5220d90c"
+  },
+  {
+    "module": "E2.ProjectionRepair",
+    "source_sha256": "e35e15ddb9dec7fae12777bd05c316ceb2d78f600fe8aa09601c742cb7161788",
+    "olean_sha256": "095b639d6df22c8327ad956ad644b5a82f46eb39ce36598cff92bc8808c7f6c7"
+  },
+  {
+    "module": "E2.CompilerOrthogonality",
+    "source_sha256": "aa3399b7079558be4aa95b5dfe4a146ec31c9a7e47cd619453c863b9e7a671e5",
+    "olean_sha256": "037a71f0c43166161df044994cc48467cfa656b341ccbc2411d59497914e1b94"
+  },
+  {
+    "module": "E2.CompilerFlat",
+    "source_sha256": "a94a2d67ce5acfa5f558cd29016c062c69879a80931865824247d51468abb7a9",
+    "olean_sha256": "2f2e94d6d82b5669c2e534a6f00e716481a6e6c6a705c02f06809b90e07c2736"
+  },
+  {
+    "module": "E2.CompilerFlatExtension",
+    "source_sha256": "2eaf25fe0ee21a925a35e1307efbd73af4de9199ec77d671e765b30fc16591f7",
+    "olean_sha256": "b0ae190d8b3e975d28d54ee65751217477ad4ec5e101f5ea37197c2bb481a801"
+  },
+  {
+    "module": "E2.CompilerReflectionLift",
+    "source_sha256": "5a0fb6c73b233c43e40130c11b256bad768afc1ed4b333df5caadd1733ce2f39",
+    "olean_sha256": "59c0106b06e3499f4711b06364e9abc47249fd9e7932f518ef3ee4c2cd03ec23"
+  },
+  {
+    "module": "E2.CompilerSourceExtension",
+    "source_sha256": "8e2d5d342f075b02411408f4f0599eeb627c195a2ebc28b4bd7996a4049ec9fb",
+    "olean_sha256": "53d4d805cc1f50de08cbbb6a02cd878be3137a5c52cc283e1c00bfc91b547dbe"
+  },
+  {
+    "module": "E2.CompilerDuplication",
+    "source_sha256": "372c146f6f0d25fca9535a51f50ef97ce1f1117eec27d86f3aa3c8a251b5b520",
+    "olean_sha256": "a453759c7c082b77b622cdabb1b8739b09e47d74845c5b97e19babe59711c4fb"
+  },
+  {
+    "module": "E2.CompilerTensorSource",
+    "source_sha256": "5c47ad3a75048ba45e168762b8c73d19b2ccea6d61d1863448621bde74087106",
+    "olean_sha256": "5b48620d3b288d2393c1b21c8e9c10b1fbe00e9185ba74f6230786d206d2ec6a"
+  },
+  {
+    "module": "E2.CompilerPauliExtension",
+    "source_sha256": "85d988a765763260ade26f8a21268e78d11ebd4957b053c2e264543b0ee075bf",
+    "olean_sha256": "995471d23b222129a33e928e21d7685d65e84bec04b3f52c5446f0b4772fb4b9"
+  },
+  {
+    "module": "E2.CompilerUniversal",
+    "source_sha256": "914b9c1af6c5d2b68523360e1e321457c0cc9442edfab77b2b725b689db67a56",
+    "olean_sha256": "45793cea15fe1666994a07027015fb546e8ce0025a1d9bc02f292d4fedad259a"
+  },
+  {
+    "module": "E2.CompilerSelector",
+    "source_sha256": "33b7a7bebe1c2368f17ceefd76c9ebbad2bf998c20308fc718371c1a300dfdea",
+    "olean_sha256": "2107b8250eb9776a41146e8fdde2b81c4eb606493f418c576d4d67d59bc2c828"
+  },
+  {
+    "module": "E2.CompilerMultiSelector",
+    "source_sha256": "30ac510b9a8c475c280d00ded1c762bc2b3714f67946582604898609ec70ae1a",
+    "olean_sha256": "d38f79beebeaab7fcf932c3a06a0f8f29f03500f051ebc98b30c6e3b95a1c57f"
+  },
+  {
+    "module": "E2.CompilerUpperProjection",
+    "source_sha256": "7cadf76cb477cfa27f28bb115446cea90c6b90de26e16441254d461c315fee44",
+    "olean_sha256": "0b2af689293ddef39428507a80cc1d671ba71cb90c405d6962ad382ed7d6b783"
+  },
+  {
+    "module": "E2.CompilerDefinitions",
+    "source_sha256": "65d2136e07f37496fb01568527dd793e1626fbf239c2d4fea6bbfc0b9472f8c3",
+    "olean_sha256": "0832774f2e33a15c8095ba80fe7becb62d7f09a93d2f258b6e83cd4c2df58ef1"
+  },
+  {
+    "module": "E2.CompilerGame",
+    "source_sha256": "0fcbd6a0a78c9993bdb8c50eda638e99217c2666ffb072dae17daa80b74fe452",
+    "olean_sha256": "df049c2a9bca65f28c9d942b09268ddca53cb0e46754f50e92f4371e49efd802"
+  },
+  {
+    "module": "E2.CompilerControlled",
+    "source_sha256": "3510fd27b3e2d534b3ab6c8571e154d6adcd5c33177be41617df7616d7c08ca7",
+    "olean_sha256": "e8013d35234b6a9f8a7b95b1328a9f40b19284ac047b6f04271312459bb577fe"
+  },
+  {
+    "module": "E2.CompilerRealize",
+    "source_sha256": "fab954909c5bccb92b8b293a610214410abc33020ca0e12a04c972776dbebd74",
+    "olean_sha256": "269dd0a4112ea3aac5eb90c2c49b27de5a0d81a246e1d63fa33ed45088c7c011"
+  },
+  {
+    "module": "E2.CompilerWords",
+    "source_sha256": "73f034f64276cb7875be7fe0b69b1351b55a474a1d2bade71f01605a66cef268",
+    "olean_sha256": "dd021a066ea0e4cbbc362cd4565465da062d2200685acfb490ae7f921ec478a0"
+  },
+  {
+    "module": "E2.CompilerNetwork",
+    "source_sha256": "806e6c0589cfcb9582bb23c9f5fd99a8dc5e7f2df6cb7096e3a3e73575ba5a15",
+    "olean_sha256": "c0b8577130352a4a750aa71dab0812ffe39a22dba02e6da75f36644c12f1a8e3"
+  },
+  {
+    "module": "E2.CompilerUpperBase",
+    "source_sha256": "7244e5ec66cd1551d4ee0526e56aab281d30b63d01587b2caf153759f366d392",
+    "olean_sha256": "e97a296d1fc56e483f7c49862db950a7ef2a1019fe7875f931f5343f8815b37e"
+  },
+  {
+    "module": "E2.CompilerPrimitives",
+    "source_sha256": "3eb912726f7b6c35b44f61b13c04e6b9de3c470407cdf85ffc2ea0b95b3aced8",
+    "olean_sha256": "a3850f386f03b20e6df11ae6740dadc823d7611d25e32b428901635d29e49516"
+  },
+  {
+    "module": "E2.CompilerCorner",
+    "source_sha256": "887a2fb69a52c793b12f5099c8bf07b8623126ff83f2e2061680c280664fa834",
+    "olean_sha256": "2aad889a360d4e7eee5544865d31e044e1ff7154af91ed7fbe14367d01f1e9a9"
+  },
+  {
+    "module": "E2.CompilerRouting",
+    "source_sha256": "df4f012746f16fe268fea7ace2929b225200460bbf2027ce229e7f6fd70c6794",
+    "olean_sha256": "4ec68349fa7c7a564719df2dcd870900b22290050632ce2b898582b00f950f54"
+  },
+  {
+    "module": "E2.CompilerControlRealize",
+    "source_sha256": "d15fb24f8dadf036eaa065dba20f1f453229be62a1d258a83b429019a38dc743",
+    "olean_sha256": "4ef706742d3a0223f643fdaeeb6b1b7af24ef9866481351ab4a1b88bd4551f8d"
+  },
+  {
+    "module": "E2.CompilerSourceRealize",
+    "source_sha256": "e76a5f7ac853d7641c5119d2bbeb3e3ff4b482d9fa96feb09c578fabd461417f",
+    "olean_sha256": "1b51083b09afec6f5451160b20ef202d6e9c443d4b5d1016e6077da3ad7f9c2f"
+  },
+  {
+    "module": "E2.CompilerFrameRealize",
+    "source_sha256": "4825b877713167d12105291ccb3896f40730f1ca4fb2b44dbf970354f54997ca",
+    "olean_sha256": "19d0feb9a0e3bd557dbc9e35a21df348aa1e3ef122c89e6f76ae5e9f58b41b40"
+  },
+  {
+    "module": "E2.CompilerPackingRealize",
+    "source_sha256": "c8ddcc5c401f033f734d63146896595114727b796051894cefc69a55e2684170",
+    "olean_sha256": "283cdd7088ea6440541ef8076a4c95d719dedb6347b0ed5983e01a863fadd3e3"
+  },
+  {
+    "module": "E2.CompilerNormalizedRealize",
+    "source_sha256": "9e331e206c7fafcd6af8d0c47a8696fdf44068bd6f1f97d1a5ddade84410804a",
+    "olean_sha256": "d63ea3e034214a5012ccc712152df14dc1ea74570a5456a1ad285793e33f4a0f"
+  },
+  {
+    "module": "E2.CompilerWordNormalization",
+    "source_sha256": "4e65099b7200678fe53656d35427c0b157a3e50eb52dded072b405612282414a",
+    "olean_sha256": "6c2ea66272d148ea87854e637e6b6b5ce4280cf0c80869860242e485b191058d"
+  },
+  {
+    "module": "E2.CompilerNormalizedCorner",
+    "source_sha256": "7cdcbbfeacfd356418bc4a07a13148464b2e90c9e50a49b86ae0a30a809586b9",
+    "olean_sha256": "43805c583aac0ebfe0dbd0a10cbf5e5569f028f7ffb54821e8899413936c9da7"
+  },
+  {
+    "module": "E2.CompilerUpperCorner",
+    "source_sha256": "d63ac53d250b1e90d214ee636be72f8af50670d18498c776282023195c920ff8",
+    "olean_sha256": "4d6c10acac25410b159c78157e6b601564923a79d02b8b3c6afbe76bb806be19"
+  },
+  {
+    "module": "E2.CompilerCommonGadgets",
+    "source_sha256": "0b5d941eac902a373e638d3a48b1569e4396c9d6b8d3168b93cf1b6697a4cc8a",
+    "olean_sha256": "5986c47eef462faafb7c9f561ff2152f8d26072c4a830a64f7b61eb8ef29c710"
+  },
+  {
+    "module": "E2.CompilerUpperWires",
+    "source_sha256": "53f748b58952e3d98b4fe2c3db7f556aa03ef9f26cd185b0ec9fc8aa17d1aa29",
+    "olean_sha256": "65ce08632b10621a47e65863bfd537d4824dd6689808c8b72aead83af0446267"
+  },
+  {
+    "module": "E2.CompilerFlatUpperWires",
+    "source_sha256": "b5bb4b7a19c28fcd02b5832705d567cfafd7788619d74faa83f5f49f115cfd21",
+    "olean_sha256": "e442280f503d02863be88319176810ae8af9ac4f40ec342c884e6f4271f92423"
+  },
+  {
+    "module": "E2.CompilerUpperOverlap",
+    "source_sha256": "968c4346ab35e8f5ba21467ba219dfc67211a2a0463f9b9d65f2d41f1540f9eb",
+    "olean_sha256": "9b64d4892f8464aed16f8c9fb078ac8e80dc5a299ea46a8aeda62d996b1fb752"
+  },
+  {
+    "module": "E2.CompilerUpperRepair",
+    "source_sha256": "0379f299560930aa3b8c4712f9772002b8149912b552fad2a4927797d5ac4dc7",
+    "olean_sha256": "30e5c88d6c1a3596029ac970a982ea70f92dcc422bfd6680f6a90415cc931569"
+  },
+  {
+    "module": "E2.CompilerStrategy",
+    "source_sha256": "983b740912257fd6d83d000dd8d8ed663d554096ac1acff06a53ce80a596dbbd",
+    "olean_sha256": "7e234349cdcce6258cd07ec84774ac78e39e8665a3520e2f56c01cd0fc064838"
+  },
+  {
+    "module": "E2.CompilerUpperMeasurements",
+    "source_sha256": "40689dae45cb7cde4650c64f31024090cae3eb188457d86fbc3be8389f1cfab3",
+    "olean_sha256": "2b939934e9a33974faad4e272c7be36ff85330a8896ff624ffc5a294497ae6de"
+  },
+  {
+    "module": "E2.CompilerUpperContextAssembly",
+    "source_sha256": "3ba78841ea6c5685884cfcdc61c3cd0f87b8d0ea121c2a3f2d4d5ad1cc31c1a7",
+    "olean_sha256": "43bfb60d769b86e5c4715cb7927266533b6872099785a41af43f78a244833755"
+  },
+  {
+    "module": "E2.CompilerUpperExactTables",
+    "source_sha256": "93b7c0995c978cf207339ba898db64d672040cd8eea87c0681b1e12ca7083362",
+    "olean_sha256": "f803fdaa3e7db2d2bfbe8a7e1aa07ceed6225db6b347cf0ec9d70d3b56cb66ff"
+  },
+  {
+    "module": "E2.CompilerUpperFunctionalTables",
+    "source_sha256": "931bf22f594335250d4743e460ab934346225fc097f63cbc8098673905b979db",
+    "olean_sha256": "a1862d11c8b677e2f215829dd63020ea1d431d3b29a4d3f5587f7a29797a0e59"
+  },
+  {
+    "module": "E2.CompilerUpperActualTables",
+    "source_sha256": "c83a4a4f96a50b91e20409f7bed697847f8e725f92adc904d58c60a8cbdb8a82",
+    "olean_sha256": "77510b3eeb63a9d0f1f0490a314c5fc4e7019a886e396fdc7dce17471d914bd0"
+  },
+  {
+    "module": "E2.CompilerUpperParityTables",
+    "source_sha256": "c6c8392dd8b05e301b1d41544268a5c11da2b8aa898503b86f145cac1238a8e6",
+    "olean_sha256": "f79ebc37c09bf170357a99ae141596f43345b8faa58fe50da33f88390ced8d7a"
+  },
+  {
+    "module": "E2.CompilerUpperTableBounds",
+    "source_sha256": "ce3c22e8cc5ce7707e1bad9fe6aae999f97115a5f2e420dd93b3deafb3903b7b",
+    "olean_sha256": "808ebb05671c0b708b6369c599811b0b48c4a9ff8f6be1c4c53b0ee5dfbd3eff"
+  },
+  {
+    "module": "E2.CompilerUpperCompleteness",
+    "source_sha256": "073a92ee01cf7f18de55fb839be38fd92f899ff1791d8c568f72009c0f19bb9f",
+    "olean_sha256": "55f3384d153e615fc7c7fd7bdf0529171273994f123d005ab0c5251ea0c6671a"
+  },
+  {
+    "module": "E2.CompilerSoundnessRealize",
+    "source_sha256": "7368dafe6e1252a79a27ceb753a6a07b077e56b7fe6d67639d2b740ca4e8283a",
+    "olean_sha256": "244223923ae55c13641ee30d0723bceba7a2a88167236c15a149caaa195fc624"
+  },
+  {
+    "module": "E2.Compiler",
+    "source_sha256": "94e9050b2e05a7f5db433b31071e9f82a125b5e2a3a5337f8adca550a5075574",
+    "olean_sha256": "bd16cce00a2a71f29e3a87b0c9454828368abeea4c9089ef47cef60240199afa"
+  },
+  {
+    "module": "E2.FunctionalCalculus",
+    "source_sha256": "abfd8f43b6f086cc376c15dc3810c49014c23fba23edb6ee4b0bef9f87ab06f4",
+    "olean_sha256": "f528d35cf4310d66d1ec3b75ffba80cd5c7f15e79baf477cc229d1562f2b2753"
+  },
+  {
+    "module": "E2.CantorDefinitions",
+    "source_sha256": "b50e4ea222fbed77a366ff6f2cb7760078f709618c2cf72f90becd36d4a9fae7",
+    "olean_sha256": "c3f3589088f379b0de097bb885d98661d5b5a9e0a0c6d808ca0a9b5fb0d1045f"
+  },
+  {
+    "module": "E2.CantorScalar",
+    "source_sha256": "2e0400dc3182c4880b3c9db2a310aba1ff6d2c8a004a0953e17c70d06ba004d9",
+    "olean_sha256": "3d615d5f42ecf62c6fa52a878d6c703512c697f690f24e4e4dffa64d10a75ba0"
+  },
+  {
+    "module": "E2.CantorBits",
+    "source_sha256": "02e5de43c30350133a79dae04cab47908364a8599807184456a06409157d9f47",
+    "olean_sha256": "20439a85dff1dcc65bb184e8b4d01d9ad3f6706f066c3c315a55495c5a75e094"
+  },
+  {
+    "module": "E2.CantorCarryScalar",
+    "source_sha256": "99a248753a0901ae6ee1dac8777425feaf40343ae0306d2d51b860b6315346da",
+    "olean_sha256": "cba5a67aa48707373d670eb0a4b3eaac3dde88b8749002d55cd5ae976a3a7fca"
+  },
+  {
+    "module": "E2.WeightedTransport",
+    "source_sha256": "d97b953608deb5262b31e437a414a51865e05c828df35cf72daf86de2c4798e6",
+    "olean_sha256": "be63d53e28199693a3c6dbd6b9b78f118f505c6eb060dc44d6e560c70626d12e"
+  },
+  {
+    "module": "E2.CarryTools",
+    "source_sha256": "551b8dcaaf966e966756878e2bde8adece0888aa04b70eba9092a9a6601224d7",
+    "olean_sha256": "f497fc48a1e9eaa82d05854a1740eeeeb5461036a40d651458cfc4c194e950a9"
+  },
+  {
+    "module": "E2.CantorRounding",
+    "source_sha256": "f8877277cd3b61da8381a2b280f44048a9e3da72fe6ee45d47721f637aab2dc6",
+    "olean_sha256": "184dfa8222dc05f0c3224c8a14803f7776afbf4b87ea61424d922ccb4998db58"
+  },
+  {
+    "module": "E2.CantorDistance",
+    "source_sha256": "2fc46fa99fddffacac1cb61c53626daecab0511147e6d897061bff1e3657ca52",
+    "olean_sha256": "202aadb2f1b115c1e22d2e4243d5196f313ded676c0fe8534b0dc60cb5fa82e2"
+  },
+  {
+    "module": "E2.SpectralBlocks",
+    "source_sha256": "80e304ce0bf3eafcd908e2be16ed336b5e3fcfd96e662e20b79c446f9531e3b0",
+    "olean_sha256": "3d57a4b9ab66a3f827d0626340a0f2a2cb3fe877601cc217ad040adfc463a2bb"
+  },
+  {
+    "module": "E2.CarryRoutingTools",
+    "source_sha256": "be5e04724c4e8f78521842e3a551aaf0176f87bc5e63540a7c0a13ff31e768b0",
+    "olean_sha256": "44378b4aa68cbb9aa34658ec0133ffbe75712d5e223293abc3185068b1fa7712"
+  },
+  {
+    "module": "E2.AffineCompression",
+    "source_sha256": "aadbccf3977c0f235d4b6cd16efba175ce314a8545f3d70b965bfcce05d3d8d9",
+    "olean_sha256": "755cf458f722596b252a4d95ae749e3ceb6cee365a068e60584e75c941ddfd3c"
+  },
+  {
+    "module": "E2.AffineRounding",
+    "source_sha256": "15e8f8a6091e04d57923b92f52710ce23a103e8375b0d285139a3b8f3ec5a903",
+    "olean_sha256": "5430c06d9fb5eebb6243d5cd9d90e9e40e17c02e02c10eee33404fdda2cbbbe6"
+  },
+  {
+    "module": "E2.AffineDigits",
+    "source_sha256": "4bee5a7064ad0003f48bb245ef3b0fdb54fe22e2a2473e925cac7ad2008abfe4",
+    "olean_sha256": "9630999a9a69e79a53c23d5a28afa00d51600dd19607ddfa6a0a140b363234e0"
+  },
+  {
+    "module": "E2.AffineRepair",
+    "source_sha256": "dea427b9640e35262eefde1593d154a8311416b8c0b146cd628497b151e14f1d",
+    "olean_sha256": "f93041dca228d5974e300c2c1d366dcc2981965b0bd976a9b82a434d60cb16d2"
+  },
+  {
+    "module": "E2.RawClockTools",
+    "source_sha256": "aed392e81ffcb80fd2b0057a81236a095ac4b028630932fdf44013d70306511f",
+    "olean_sha256": "650f35e41dc2fd0029f5cd9276e7d684a0958930691a9a37067e8f9ca620be96"
+  },
+  {
+    "module": "E2.RawClockCommutations",
+    "source_sha256": "4e328678262690f9aea28f3b7f508d279b5e310a5fce0d16a96a0fc14b4cfa2a",
+    "olean_sha256": "6c54a003e5826328643f6b628942dc9e7a54309e0b723043792185c2744326d0"
+  },
+  {
+    "module": "E2.RawClockTail",
+    "source_sha256": "a1e71e522e33effad3a167bb89741da863d13a2f715869c9934a3bdede84343b",
+    "olean_sha256": "473f5ce97c284590dfe6d1f1c81b321d3c293f1d92ce475ff421e6bde1bf44c2"
+  },
+  {
+    "module": "E2.RawClockRepair",
+    "source_sha256": "5a18b97a185f41028a04fd73491bd520d44d7fa6b21e8f91277bae48bbf356f1",
+    "olean_sha256": "e32fea4046c8d68910182dfd69b10d22ad982158866041bdceefe247d9e4997e"
+  },
+  {
+    "module": "E2.FiniteBitClock",
+    "source_sha256": "a05eea7b66fdaba5fcebf96d24a698dc877efc72c7f84f4edc79803004591977",
+    "olean_sha256": "dd61aa7a1fb70d3eb610dfb842364aa9db43b834b09eac05d795582dff635cec"
+  },
+  {
+    "module": "E2.FiniteClockMatrices",
+    "source_sha256": "02b9d92bb86fd05131c09e9067b7f11180125068f2b73fdaf44cce83a39be3f0",
+    "olean_sha256": "606ff34cd3046529c647e5e50fe2a25543d8d7673376c40c523e8a6c2de728aa"
+  },
+  {
+    "module": "E2.FiniteClockModel",
+    "source_sha256": "77f53ad816a790b8cef5ebe20c47314bfb2af26fd7062756e879e3ffd5b069c0",
+    "olean_sha256": "03e17ac9cb5dc9c3862fddf97952ad10816ebab10757348a740276cdbe9cd4a2"
+  },
+  {
+    "module": "E2.Clock",
+    "source_sha256": "b3d0aea2737743082fa63dc498eadc21e53ba19acbf0d8131d74a63c7cfa9b7f",
+    "olean_sha256": "6ec9663fd3778deb4266939638679ceec472f32a488f29aba1b5ab02f8fc371a"
+  },
+  {
+    "module": "E2.RecordingNorms",
+    "source_sha256": "b3e55ccffcdebd74dc0ce63c437a36fc400489e0eb0c0d5d9e715d5a554c8ff6",
+    "olean_sha256": "24e24adf0c83e5976e51458e26d22965295e958dab93c95f53574564608bb5a4"
+  },
+  {
+    "module": "E2.RecordingWords",
+    "source_sha256": "ab7857a74498953b66087abc075ae380d6fa32886cbd77720ff2ddceb0617906",
+    "olean_sha256": "e583ba989f16a8f217835120e8605642cefd1a86659790e1c21cfa5442576b4c"
+  },
+  {
+    "module": "E2.RecordingBounds",
+    "source_sha256": "776f61f386c59d93a8b43b1645ce259355b4f118e28b00d4477d286ecb089f0e",
+    "olean_sha256": "f6e251e9830dc71b42baf100001941838fca2f84d3beb563a0c11e78f6aa08d2"
+  },
+  {
+    "module": "E2.MeasurementDefs",
+    "source_sha256": "aa9c2f48441475c484a79a889b74f5ff756f4393a6a0a54c6a0d1b2787144bd3",
+    "olean_sha256": "3fd66c3fed78effc069eb8d2e13bb5d1690521bcdf77b59cc7a52763918fbfe8"
+  },
+  {
+    "module": "E2.Turn9.CountStatements",
+    "source_sha256": "036d03ea0e21689119259f8f56f265dc1dbbfe74d7cfb74c0901bf70dede84da",
+    "olean_sha256": "210cb5a23facba5e95dc340431d20eb160d0d5dbaf1648660be3c7abadd4e13d"
+  },
+  {
+    "module": "E2.Turn9.CountClassicalStatements",
+    "source_sha256": "e210c38ff626c9a3cc516530ede2e25696a76b15c29bcfca4a124a0a5706cd31",
+    "olean_sha256": "71018f318aa5c62864d3bc22cec77292d7e734a3d48720c8d50ee1a6ec8f1099"
+  },
+  {
+    "module": "E2.CarryEstimates",
+    "source_sha256": "a1bcf0d3b354593707c734c87802218f81c8adf208e20ee88b933a5568b23689",
+    "olean_sha256": "7b088cc28e0796ffbd2ca2f30362b5f0ddc5011acbb8a6dfbd2184bf7ae7b7a7"
+  },
+  {
+    "module": "E2.CarryTranslations",
+    "source_sha256": "e52f9bcfa391654dcf50c981d8daa8d668463efd63f87b561987413fca8dc172",
+    "olean_sha256": "e9ff90f82a68e350641a803921ebe100335e9ad8120b1099396f598b715ba32d"
+  },
+  {
+    "module": "E2.CarryRouting",
+    "source_sha256": "cb3fff7231f9a105a32dee0732dda3c253b745ea117e5e1c46ccc93e74aebb81",
+    "olean_sha256": "9835e984e030f68405ac59e48cc5cfc529c560e4e2a0fb551a3b38aeaa13cd28"
+  },
+  {
+    "module": "E2.Carry",
+    "source_sha256": "2d2bd10e6d36b839a8bd77b43d863c7bfe62fc3111ed954629f4a4eb433defe0",
+    "olean_sha256": "cafb94f44a34da40c72d9e2b5ec2aeff5de5af9d95b5749aa5faee4478159fc5"
+  },
+  {
+    "module": "E2.ProjectionState",
+    "source_sha256": "822ac957675d6e8e5425339d9d2ee1736eeb8ad0ce989d7b82c8bcd0ac5995f9",
+    "olean_sha256": "8b10ae20b4e3d29c9af808c8f55c7a7206ad867bdb8fad07a0489666ca7dbe58"
+  },
+  {
+    "module": "E2.TernaryRepair",
+    "source_sha256": "007d94ee7011153f239d7d8c73cf7750cee200519a8af3918f76645e7c87528c",
+    "olean_sha256": "f9ee667c77455d4c6535ee19be37c490eb142d648df0b38457080b2923f395fd"
+  },
+  {
+    "module": "E2.TranslatedWords",
+    "source_sha256": "e53fb3c841f47ab03552821130591fbaf29fd4fcf45ea7e5acb5717fbf853f54",
+    "olean_sha256": "dd02a166506bb208eae519d1c32f563e0f37ec72860737c957cc4d499b60f9b1"
+  },
+  {
+    "module": "E2.SourceClock",
+    "source_sha256": "65def0aedb11d55a704f5c8e51fdf1581dff008812ab58a210002d171f9de1a0",
+    "olean_sha256": "f238b5eb4a73649f8de6c8d19ed356062f09ef18c30d87496f8fab46b0de1a38"
+  },
+  {
+    "module": "E2.ExactZeroTest",
+    "source_sha256": "ba977ce83bde36145cf163262543b731bbaf08cfa7643b833aacd581af1327c2",
+    "olean_sha256": "004f0b8dbd242a4e4c64201ab7a407057d268a7ef3cfb90a99e6888471fb07bf"
+  },
+  {
+    "module": "E2.ExactModelDefs",
+    "source_sha256": "893d9a53f692a235f92f5a3ce4a0dc25acf22113e7e6cc1d2243ff6d8ddc2faa",
+    "olean_sha256": "82b8eace3b1f1bef9b685d116f3207dae9090e01db9919a1638e23de87f5de89"
+  },
+  {
+    "module": "E2.ExactClockBase",
+    "source_sha256": "1b8d1401a330bf5ad0053895d6363c6184280dd9efbd0d3602525e56ee69387a",
+    "olean_sha256": "ac9686ae7f1b12abfbb2e3c6b385be6a0c2532694c204f331744341cada4dcfc"
+  },
+  {
+    "module": "E2.ExactClockSpectral",
+    "source_sha256": "727b65d6045d773f10335b182d1e94a5d4d48b7282ca154ed436073b75ba874b",
+    "olean_sha256": "504f539a3874c85fe82365844e14450460047a765fa7b0dfef1071b03b4a8eea"
+  },
+  {
+    "module": "E2.ExactClockDigits",
+    "source_sha256": "9cfc6a61e8bf4c8b355c99a271f735433795d5a33b0fcd7811dd39b4b52df9f7",
+    "olean_sha256": "2dc283be4f0123bdb8611c26721b2b92b717961698373cf8768c0cb084838f9c"
+  },
+  {
+    "module": "E2.ExactClockTrace",
+    "source_sha256": "c7d0cd7ca66bc7a7fde11e6e6ad8e10d286802cca62db01129c7c45dbe555612",
+    "olean_sha256": "174af7b84480ec9edc4535c8b92fa12d3112fd3af30119b725bbc7a02c773399"
+  },
+  {
+    "module": "E2.ExactClockTheorem",
+    "source_sha256": "6335412a7959f598734284117a89b853b9845df020dddbae437babdb1618a5e8",
+    "olean_sha256": "cfce34fa04403ee054b6ad5a83263329e5fc4ccc57cd9a46cd538fb01a61ac57"
+  },
+  {
+    "module": "E2.ExactTraceReal",
+    "source_sha256": "4a001ea71ee973488f41d89aa36f3ab0486059d4bfe828e628484073a9b4d522",
+    "olean_sha256": "2b9a1643ee09b4d15f914c562eaf0ed050846a64442e423c95bdf5b7286b8835"
+  },
+  {
+    "module": "E2.ExactClockMoments",
+    "source_sha256": "9e09827410eaccd8b336e8164644726e3a2d71583bca98a2bbbeb51554535fe3",
+    "olean_sha256": "2134885a7ab53814ac5f2764096930c7d3a1e2945f8887de335f4283ce0222fa"
+  },
+  {
+    "module": "E2.ExactTraceHermitian",
+    "source_sha256": "d53f5c1f792615a46bb426a12887a05d87aaaf61f1e705c978de6559a7c3b254",
+    "olean_sha256": "e311141a377a5c15ea80fd9df6a861c56a63406a6592f20207bc23c0d0f3f6dd"
+  },
+  {
+    "module": "E2.ExactPolyEval",
+    "source_sha256": "cd031e0c823fdbe90d8245bc32ca3546386cff90051574fcf01c8f73ecf870f5",
+    "olean_sha256": "9eb32ff6316c531c58ce8c8e638aa7ca41b7eb3eedf7437f84e3059bc4fd18a2"
+  },
+  {
+    "module": "E2.ExactClockModel",
+    "source_sha256": "e2643ec6cac679dfd8fc55ea59d2d3d04e8ee69e8b8e41a81e43342d80bd1b6a",
+    "olean_sha256": "1d7221c713fd567009b0427a219d856da35067b40ee9209f5aea997f58896626"
+  },
+  {
+    "module": "E2.ExactTraceCommutators",
+    "source_sha256": "50395aefde55fdac3cfc0be2b1ebc6c8bfdc70e96a5b0dae982ab62ea027e865",
+    "olean_sha256": "bf9087c9354df6e9e30ada71378a2577197268ecb7789fe71995ad4798a4414a"
+  },
+  {
+    "module": "E2.ExactClockNoTop",
+    "source_sha256": "07ea62824d7a03ac718933be070df5632e6bbde81d1ca204b8c80d24935b5aff",
+    "olean_sha256": "cca34a94304914ea26d4fed0e71f39fbac5be4950d37800be52216f7903ff85e"
+  },
+  {
+    "module": "E2.ExactTraceSquareCommutators",
+    "source_sha256": "ff55f596c442e957f57261edda95da46249d2eab059946d6876a60511a127608",
+    "olean_sha256": "5cf22ad87a148e4862913f9b170ee92622ecb7586b9b46d2eb26dc2c7c6ccf9c"
+  },
+  {
+    "module": "E2.ExactClockGuard",
+    "source_sha256": "6e5d7e8f8c772ef33f11695119c1e9946058d91ac1f586c8cb27a4308c4a6418",
+    "olean_sha256": "618c4c31f70a671fd51496bd72187a81fe8866ac566f131fe3a24d868f4857bd"
+  },
+  {
+    "module": "E2.ExactIncrementAlgebra",
+    "source_sha256": "ed6b89860ef7784fc79fc1a4e37244ce67b081a483a8e85f3780c34c10ae632f",
+    "olean_sha256": "67a5acd6939a58fd722d599f2c64c129dc6208718f77db549a4715dceb7009f7"
+  },
+  {
+    "module": "E2.ExactIncrementBits",
+    "source_sha256": "f2b30b8b935b6ed2b064e59a4123e395485f0640abe8aac1a7a032a376898095",
+    "olean_sha256": "180c720a33f31741d6add1612f4646ed5a8825f7d2e243d690e6949ca36328c4"
+  },
+  {
+    "module": "E2.ExactIncrementPrefix",
+    "source_sha256": "c076d74b14753b800ae00fe91205c3a9ce4c7b99b465cec46b51d4b4f23a4322",
+    "olean_sha256": "c8e0e7c3fb0de7ceade3c84134c792d86e71651a49d6ec82bfd1b0ffe81ce611"
+  },
+  {
+    "module": "E2.ExactIncrementModel",
+    "source_sha256": "208ec97dcbc378b1eaf742dc06b3d8970a310f6af5bbc111768b7a7afac6bdd9",
+    "olean_sha256": "e1e7f3cdbe5b7ab8d1e4698c1e036f244f8b9ea0cb0011185f1045e30219f807"
+  },
+  {
+    "module": "E2.ExactSourceDefs",
+    "source_sha256": "27c3ee11fbf81b2ce9651d6d8dac8648a30c149800521ecaedb7e45fa338b4af",
+    "olean_sha256": "e04caa6d38cc0899a8c686e12a77ff2614ed52332a68b41cb4509076f9bf9039"
+  },
+  {
+    "module": "E2.ExactSourceModel",
+    "source_sha256": "29c89335dc2a86f151fa8a9254a93050f66bc5779dc4ffe81e1a5b568d743150",
+    "olean_sha256": "bec46daf0aac15737668f08d88af098d88cf5358bcfe764b67762b59e1a27da6"
+  },
+  {
+    "module": "E2.ExactInitializationAlgebra",
+    "source_sha256": "c1f2a0da0b6357946a52082621f214d250a5f8ff83becad7d698bd32c0e8a925",
+    "olean_sha256": "3aea0244e3457609bf74a9bb68039e356a172103afb4a471393e0ef65d6e2a6b"
+  },
+  {
+    "module": "E2.ExactInitializationModel",
+    "source_sha256": "5b395319bf5c31ca0c322c28531afe7c29db70c9b1908035bd88e571ddc0b1c7",
+    "olean_sha256": "e56fc8a00e9f9c9f8a700924aab4886e72a6ba4f165006a010195ef6e9059e7a"
+  },
+  {
+    "module": "E2.ExactResetModel",
+    "source_sha256": "c21ec3681c5128fccdd2c4655cc37c727d5a40e4866fc843aa237fae498bacaf",
+    "olean_sha256": "6a0153b6370e0af97df0bcee3503d026c7ed858c6e602d94e31f08cbb0ae6045"
+  },
+  {
+    "module": "E2.ExactProgramActions",
+    "source_sha256": "2205a91f5db7185b57472860871266c06b959813e6f2fbea4562e280ba23a2ad",
+    "olean_sha256": "e28f261d8dbc9d8d38ad7ccb3f6ebbc8edecbb89fb50eb7a167f89424ba5ed41"
+  },
+  {
+    "module": "E2.ExactTracialGNS",
+    "source_sha256": "1d26ff1dad3329eaccce9565a09d97906cad949abfc92705404a48e2a65cfe35",
+    "olean_sha256": "2d63ee1c2013e1efc9738ab8e49efa05db5c9ca2f93aedebe524919da30eca4b"
+  },
+  {
+    "module": "E2.ExactGNSModel",
+    "source_sha256": "94dfb7ddd1bbad8cc772fbb448ae87dc1f4090a5530fb10a0d49f84d3ff3200b",
+    "olean_sha256": "d0a2e3b149b7aaa7802c2944acaf723b917696e7f678ac588284e9a38707be4a"
+  },
+  {
+    "module": "E2.ExactProgramModel",
+    "source_sha256": "5ec33aaf78a70a466bc30e34abc1ec741c2c443a5e539bce878b08d99f564732",
+    "olean_sha256": "4d66ec6d82ea28a2a48cd7dc5adf37b5aa514dc63c0e5ac3eee54472ace04856"
+  },
+  {
+    "module": "E2.ExactProgramIteration",
+    "source_sha256": "d47a900a40ae69c1c73d816e553aaddf39c53de273e7b1efdbe717f1a34736d6",
+    "olean_sha256": "ee623632f6afbf994627872a976d6ff645aad94eed47479c1385d131e5968bc7"
+  },
+  {
+    "module": "E2.ExactCylinderAlgebra",
+    "source_sha256": "0cd55c03edf76fde9d39ddeb2f9ab30bc464670993802d5102c7fdd4fdc6f3ec",
+    "olean_sha256": "732097a8e62dd2607d8d86c30755a643662277f25b2ec67f9a04bde4a3656ec3"
+  },
+  {
+    "module": "E2.ExactTimePrefix",
+    "source_sha256": "a75e19c009cf209540fc3158899183ce6d5d31be92d6e4707f9f5b8495a11900",
+    "olean_sha256": "e08c2d31797a1b3c1c18e49ee85443cfa60db9f0f8343d888011b06c25d046ed"
+  },
+  {
+    "module": "E2.ExactSourceCommutation",
+    "source_sha256": "63426a86ae5eb9e85778201aaba02a58702b764f345ef2b95e896de17f5e9bc9",
+    "olean_sha256": "55cf4a543601afe0c375f5bb4213f1c577c7c63d1ee2a86a9ee9402ed617d242"
+  },
+  {
+    "module": "E2.ExactComputationCorner",
+    "source_sha256": "bc5cf58fe0142a2c64cb2a6c061ab0bef25595f402e0e0dc49b3ff5d882e9553",
+    "olean_sha256": "a24260a3a1ab7e1cb190dd597de11216bddebf8246b733d0c08ae23b85c176a7"
+  },
+  {
+    "module": "E2.ExactCylinderRemoval",
+    "source_sha256": "ad5af22711ca86993f36cda3975e84ac05b2ecb63d6d4e2723375482afa7753b",
+    "olean_sha256": "263366401e069a636cbe4efe300156c61f879aba0683362c9e809a01cbf5d6fb"
+  },
+  {
+    "module": "E2.ExactHaltingCorner",
+    "source_sha256": "1b24c5c4f8df44981c1df8162e62de9938faa5cf05b9b1e8eb5731a2f2836546",
+    "olean_sha256": "38aeb2ac96ec485dd6e7c72446a2507146ce1a16b81ee824b293cc08f5e16a4f"
+  },
+  {
+    "module": "E2.ExactAddressMass",
+    "source_sha256": "729bcfe5eb4c1457e997ff5e235a2e96ea73d8dfd8ea32ebc23117e6f18e801a",
+    "olean_sha256": "ed90f989465c3ab8f6bd080169bb9d622f825198de79babeebcf668fe12f05e0"
+  },
+  {
+    "module": "E2.ExactFlagDensity",
+    "source_sha256": "14522c2299684da4c87ab6ef675fdd3b78e935a31fad03facd4cd4e19cf3d5e9",
+    "olean_sha256": "9665ad73b52c971d5c94dd73ef5572b2418fceeca6c2da7e289c36574ed814ff"
+  },
+  {
+    "module": "E2.MomentProduct",
+    "source_sha256": "f226549d860967653a964264af2d9e6c5d60d1c478fa9a0fbeb925719407ae29",
+    "olean_sha256": "78f069a0ad6bf1639c26884179447d5e0d685cb5550bf4f982384216a959e025"
+  },
+  {
+    "module": "E2.MomentCentralizer",
+    "source_sha256": "6197aabb33ca1d39af5d5ddfedee3aa1ffbc4a1e629bf5602e2bbcf55dc0343d",
+    "olean_sha256": "fde53932e4da4b5450766b9f26f09cbd292f728a9e92edb2cd662c42c7f17841"
+  },
+  {
+    "module": "E2.MomentUltralimit",
+    "source_sha256": "0134ad5063a281a89b070fb51a803bfeaf172fe233ff85e5af3107c712aa13de",
+    "olean_sha256": "0cb0c304a0fa2bed02a12c2fc8b5d215e1337b0475bfe6e70c4330be77e97ee9"
+  },
+  {
+    "module": "E2.MomentGNS",
+    "source_sha256": "8b8f1a697b141e72a042791a7592094a3d1a8c1a0400597fa0e4cb26951b4cb2",
+    "olean_sha256": "6fe104db1553e419ec9d446a216de24a2fe1a3411d7b67dfabfbd7ad92499938"
+  },
+  {
+    "module": "E2.MomentLimitModel",
+    "source_sha256": "fff8803013026be28b9384d7e8298e19dc1551cad2a1d28686d6f6f2b1630832",
+    "olean_sha256": "fd51bbac912ad5f15a737c218eab840866cfe74574a17b623142000d5cb7a320"
+  },
+  {
+    "module": "E2.MomentMatrixStates",
+    "source_sha256": "c4f1d889822aaaacf6ebffad2b7d0edbb7771dd897842ed164fc62b34322b7f7",
+    "olean_sha256": "3843d8ac742f96e4839ee7499b6c6c04704451f23ac75ffcff2a93b94b0dc9e2"
+  },
+  {
+    "module": "E2.MomentFiniteSequence",
+    "source_sha256": "df0bfbfd07347024e081aba97e07df4a1b6f0034657c036316c24a3c54111dfa",
+    "olean_sha256": "a116d6c5d8007811c6d0a643885ef0797e9698490050589280943dc8264a6960"
+  },
+  {
+    "module": "E2.UniformFlagDensity",
+    "source_sha256": "df93ce7615acb57d006e2c7eab0203f25455625483e39c800ef4e0ebd74cdffa",
+    "olean_sha256": "44cc0a2076abff40d4bf2d3ca5e21714c7ef2d902a075495ced2f4b95dddf2dc"
+  },
+  {
+    "module": "E2.Tracial",
+    "source_sha256": "d6118a048b7531e982a08cab03f6d2d9efd9d6fe6d5a6d50484e5cb95cb9cd1c",
+    "olean_sha256": "be6bf007eaf8a3f5201d33ed6795217bc35da4d3168b2355e5dfa8fd1d4273a4"
+  },
+  {
+    "module": "E2.ClockExtras",
+    "source_sha256": "a24eeb733d2252b3bf30246b9adde5c6b5ab8b7528daf100fb23e52536831226",
+    "olean_sha256": "e0af531c3afd824b5fa6785804d3475d6891038fd4c80b033c2c068604ab2bab"
+  },
+  {
+    "module": "E2.ConditionalCommutations",
+    "source_sha256": "fba02963ee6b402d70c15c8467d7173c726857318094e60d1c5c2757c3424ffb",
+    "olean_sha256": "eb913eb26fc698037602034f4e42b94207ae4fbf4f5dd44aeb3de9f1e6a26a1a"
+  },
+  {
+    "module": "E2.ConditionalTail",
+    "source_sha256": "9d6d2cae37168bdadbe6e1b56c4b10224894e6855e3d5bb00e79e03ac848f197",
+    "olean_sha256": "833656ad826dbf12c6ae9365279bcd89e0c4a8be7307a6a1885f2c5dbf29e234"
+  },
+  {
+    "module": "E2.ConditionalSource",
+    "source_sha256": "e351d0c8619e46b1ced0f37718e9361a674e2f7048de534cc5fbc01e563ee6db",
+    "olean_sha256": "723ae277fd9463c465326feab00b8b5cc7910b41f5884eabf817638dcbe35f64"
+  },
+  {
+    "module": "E2.SourceCross",
+    "source_sha256": "8f4b68f9c8e92a99db54f60997c5f36ed0457fca9cbd7b6bea8de9fa41da0702",
+    "olean_sha256": "67eb0e7586020b512b0e42cbb1447a41d5d72425df8a4ddf8b1b11de2ca3e44e"
+  },
+  {
+    "module": "E2.JointReplacement",
+    "source_sha256": "5de1e9dd5bf84712844341151b979eea0caaf000103650223a3d77a58679b451",
+    "olean_sha256": "0dbaca53f95c32e766bef4105dba77fd97cdc1623560f6622822c26cc6c126e0"
+  },
+  {
+    "module": "E2.JointEffects",
+    "source_sha256": "51a1de7161130877e9738086352bf84a1275fa84855844ec0e29aa2c6f1e2c83",
+    "olean_sha256": "4931c7f6dac4737ba4d1fe0545793d24805d894ccd566d60ab03e2eda0a5bca5"
+  },
+  {
+    "module": "E2.JointSlots",
+    "source_sha256": "7c44d16d6f891d401772e2ca02d3cd50f4421931e382452fcd67adaf7772878f",
+    "olean_sha256": "6243301a8a539f3a69b2861db50ba96f4d48131c5dfc95bca121826611a8b137"
+  },
+  {
+    "module": "E2.SourceJointSlots",
+    "source_sha256": "84dd58ba9ddbed1747f6fb165cff8611b86cddb5da252020e74712331cd7705b",
+    "olean_sha256": "8ef1ac796197b901efb6ae363050a5eed33a83c040fdae2bac599b7c92baabcf"
+  },
+  {
+    "module": "E2.SourceJointConditional",
+    "source_sha256": "57b93f9b7c7f9559e72cdb4961a06864bb7d3a3a2d1f82d1cbf4e1e875ff3406",
+    "olean_sha256": "1e45a2a2081ef2d361bbf4bdc108af6eb0dd6c92143be50297c8bf9a2fcaa1e6"
+  },
+  {
+    "module": "E2.JointScale",
+    "source_sha256": "e79265cbd2187bcab31c855748490b0c59328da739b66acffff8851f67bf7577",
+    "olean_sha256": "5f8a5f51b096a65f9ed389a11fdaf7ac8c63862c814e416ec7815b3a76050353"
+  },
+  {
+    "module": "E2.SourceJointBinary",
+    "source_sha256": "343af9e605700c9739055be4d73fc1649924022bd2f6b2d09793fe85ab3c33fc",
+    "olean_sha256": "ec288275771ca189c0efe668185d429e4388bcbe4329c5774132911b66cb7be4"
+  },
+  {
+    "module": "E2.SourceJointCross",
+    "source_sha256": "9f65b1a837421b52ea9ed18c236146519dbcef0901b2bf8fa480f6dacec978b1",
+    "olean_sha256": "7cd9721b522761b8650c714a4dafa1cb1071b50b4a2459308a87e2e1c6e641e2"
+  },
+  {
+    "module": "E2.SourceJoint",
+    "source_sha256": "df059b4fd1cf75da7dc9dd355a81175bbfe6eb84537ac1d88c0c4505efd2374d",
+    "olean_sha256": "8f3ba9d63e409b3266da305c9681006ef6924e8930b57bb354f1b7e76de67e71"
+  },
+  {
+    "module": "E2.JointAssemblyTools",
+    "source_sha256": "208add4c9d37cb5faf0032d785aeedb94bfc40ba3b5747904396afdda45de9da",
+    "olean_sha256": "c2eaf071276aad68ab3868250aff2b0315d752ec3755eb4381c40ac4b929d0fa"
+  },
+  {
+    "module": "E2.Joint",
+    "source_sha256": "d11e1e8bf8214d1b964c03d1ac85b3cb4bbb6ea8f76076922fbee3ecb7960ec0",
+    "olean_sha256": "ae7b11027ab262a408858c4f71a68e8fed704716c972a7a036ae3a779e633aba"
+  },
+  {
+    "module": "E2.JointAccounting",
+    "source_sha256": "3e11eb28f3b02fcc6db32265ae57d2a2f3bfdad2fce5371505777e1ab3b91d8f",
+    "olean_sha256": "7af9c436de0c613068ede3e1b1a75260fab857d4438eb41e270edca9238e1fa3"
+  },
+  {
+    "module": "E2.LowerTransport",
+    "source_sha256": "c260c684c0facbe5111e0076c7f7a2dcac3b4e78689bbc14581246e580605476",
+    "olean_sha256": "bda036794f87c24802c6b11702eb35f63378efbd301d76f0e4ac154873241fad"
+  },
+  {
+    "module": "E2.CountNormalization",
+    "source_sha256": "2aaf7401f31c5b3bf774b5a5a70a2a0caade173d3380537701086fd66b02a361",
+    "olean_sha256": "126374c5bbb9077b1697c96a7268cdd2c5ac76a1aa527627797529d93f7f80da"
+  },
+  {
+    "module": "E2.Turn9.CountInformationStatements",
+    "source_sha256": "9b0269c63625739691c27c4d96e8d23506ff69bd649606cfbf753f331932e9a6",
+    "olean_sha256": "a6743b71e4d5af17b7dfb9800402e6698c43894969ae7690c05ade203b741696"
+  },
+  {
+    "module": "E2.CountHolevo",
+    "source_sha256": "2ddfd7e3b84b7e8c282cde3c0451d16049029334fc48e1dbef9cada8660a097c",
+    "olean_sha256": "917eb680f36a83b5ece93aeaab700582659fdfe954c7ddb42731d58362b0eb9e"
+  },
+  {
+    "module": "QIT.Core.System",
+    "source_sha256": "d6d42e034da8bb385d402f215fd69ac47f2781f3ba9546e1c2b7eaeff7499e09",
+    "olean_sha256": "39758a9cebd855ebe36c67f0732042983438255c89c3f1685ac3fb1a7b9376f5"
+  },
+  {
+    "module": "QIT.Core.State",
+    "source_sha256": "a2564bad9657f86ec3ac0ef6bea6473adb29bf109d2fa7abe5f0fd61e8310a98",
+    "olean_sha256": "9c73c654e22222172e849e80a689f1ad8157370441c5dc11395ffdabdf8d5bcb"
+  },
+  {
+    "module": "QIT.Classical.Ensemble",
+    "source_sha256": "37cbb4f58c341326be46d432f877564c5df8960f978881ad9dfc3acc90f2967f",
+    "olean_sha256": "1fca1df3ef04391adf89cf6826ecd93048e80cc9f30741d6883df87d8bff0eef"
+  },
+  {
+    "module": "QIT.States.PosSqrt",
+    "source_sha256": "e86458a03e99ba02635b6598283806240bab06afce5de83c5df7636d32a948d6",
+    "olean_sha256": "7df867cef8f179293bf66b239e4f7eacfed8613c15546c62f84b6e785859152b"
+  },
+  {
+    "module": "QIT.States.TraceNorm.Distance",
+    "source_sha256": "6dca1f66ff9dabf41012a2967fdbb469f67bfa0bdf9164931ac0cc22cbc04c21",
+    "olean_sha256": "50f4babe3b672259fb51c36b3bbbe7452f0254bce3fa0fce8c1a0e5cff4b43e5"
+  },
+  {
+    "module": "QIT.Classical.CQState",
+    "source_sha256": "7fc604af2c85a148fc777bad29567924b3a74aeed1577cf594ebce4c7dc0fc3c",
+    "olean_sha256": "367a6bd4f6c937a6f4d3861e1548bbfd1587ebb2ab55442421689cdf0faa3d7f"
+  },
+  {
+    "module": "QIT.Core.Pure",
+    "source_sha256": "17927eac1b8ccd1ef01a1ead3d3834bf25f65db34b7479c26a738c996147de83",
+    "olean_sha256": "b1252c4903ca37f7d320cdb738759cef66aed73f553756f3f41b09a6995c5006"
+  },
+  {
+    "module": "QIT.States.Purification.Predicate",
+    "source_sha256": "1bb3c93d521f9d59d4754ddb50081074800e754de518e992f2e7a05426d9fe68",
+    "olean_sha256": "64bcdb2f2bddb28708c6ef37146e369f570b1579969fecfa2df3a7eeefaec1c9"
+  },
+  {
+    "module": "QIT.States.Purification.Gram",
+    "source_sha256": "edcb4c6c928792927d82e42ef2407c97ccad51cee8ca709cb4f59456afaff872",
+    "olean_sha256": "d70bb1b9dae788c106cabb595695323258876445789712bd3bbf4c52de70080b"
+  },
+  {
+    "module": "QIT.Core.Map",
+    "source_sha256": "4570011e1d9a3938a059a29227c22a8380af01eb2555e78badbeb24970d1a568",
+    "olean_sha256": "15214658203ce494c77e3de13ce5a80d1931bfd1c73b32539b2a4734da2e4f71"
+  },
+  {
+    "module": "QIT.Core.Measurement",
+    "source_sha256": "1ea42e9e924b1d7d979e3539ce44b8a713c18b5725bc9550bc9fc1d3e3e19747",
+    "olean_sha256": "e9b829060001c603aa76bfa56827c6c2aea8b074da6c275fa4d2cbd3bfb274e4"
+  },
+  {
+    "module": "QIT.Core.Channel",
+    "source_sha256": "2ea1678459067e5abe0a3f3093b633635f9ed09fb21af69e36337936eaec416e",
+    "olean_sha256": "c05a6350f2cca801d677ef4b34b4fdbd459f3710e1599bcc8e1b47182592788d"
+  },
+  {
+    "module": "QIT.Core.Map.ChoiCharacterization",
+    "source_sha256": "0f76d88f1ea79a4f6c91606f23c7ead4679ca53263f353b12f7b9bd450d109ed",
+    "olean_sha256": "11a3cdd8c8728cf8f254fa0baea23d69631f27b8fc0887d68f281e55a70b4dc3"
+  },
+  {
+    "module": "QIT.Util.SDP.PSDCone",
+    "source_sha256": "2f3bda1ab3bae819ea46c512c12f9fdf8b55977ada3778a0430bda92475a9dbf",
+    "olean_sha256": "125f7ae751a72ad0bfe805a523fca6bf56f7f84da5a7792a82da057181fb7e5d"
+  },
+  {
+    "module": "QIT.Util.SDP.HermitianPSDTraceDuality",
+    "source_sha256": "332b897be5186bf71b55f045a531990e0ad486e5609515852e90e337889155ae",
+    "olean_sha256": "2bae3d9e3fe3779e6d9afac514d01fb76355c13756edf82d299f376a264eeadc"
+  },
+  {
+    "module": "QIT.Core.Map.QuantumOperation",
+    "source_sha256": "05783d4cf2c9e4446afa4d2c74b54711f10df8bed640b35e8fcb877674a3ec16",
+    "olean_sha256": "664108f501dca660a5e154665aee1ced57fffb17f6063367b554e85f7e707d8e"
+  },
+  {
+    "module": "QIT.Core.POVMProbability",
+    "source_sha256": "b4a5167769482717866e38b7532feb8f8596169adf71840a3d4857c7190eca1e",
+    "olean_sha256": "c317ced4d399b2d8bad9435a0287e54537cae9d213ff27bc0617e19779e726de"
+  },
+  {
+    "module": "QIT.Classical.Bridge",
+    "source_sha256": "0db86fcbdb2b0cc24ed457fd93ac2ac21818b225961ee8413d82711d69fd923e",
+    "olean_sha256": "fe9a703b15d71f600e4c3701012315f2f7ac24b892aaee034df9b902f15e0faf"
+  },
+  {
+    "module": "QIT.States.TraceNorm.Spectral",
+    "source_sha256": "d0d7ad218904f4c0d4801a23d1458cd6c86e4ad638f5222de08b44b079dd5c7c",
+    "olean_sha256": "6b0ae0f12634fede644f643b21d5a1db001ae2943c5c217bc54e04f928a47168"
+  },
+  {
+    "module": "QIT.States.TraceNorm.PositivePart",
+    "source_sha256": "aab4ddd36f02e2f58557816877f4f930aba98dcd00de0f483ed1bb8c2cba1a65",
+    "olean_sha256": "06a01d7d64db6dd62eff318294ede5f7f9188afca4884e591cd4df8ab34d8328"
+  },
+  {
+    "module": "QIT.States.Purification.GramFacts",
+    "source_sha256": "f945c795d94845af2e1d216d5c515019bad0225318b41caa96c2cb0e98b3a6b4",
+    "olean_sha256": "8d654b2d038dece572364d8f94ad19b5cc86dde7c518e0242f90b7c5712d5391"
+  },
+  {
+    "module": "QIT.States.Purification.PartialIsometry",
+    "source_sha256": "adc69ddc283cb7be3fd5f5c653836e69b3935adc5cbaa1f396d2141b1368d059",
+    "olean_sha256": "04891d8824e6625c5c938d4bd841725b5654b19020aa00aa4489588db0407d26"
+  },
+  {
+    "module": "QIT.States.Purification.ReferenceExtension",
+    "source_sha256": "f61747ff2f13f4054b9530e7a7fc5094d8d44fd1e9313af47dc8d152f34b023d",
+    "olean_sha256": "abc0d753e7af9373441602653098020ee3c088f610ef6a3d74540d39e08b3963"
+  },
+  {
+    "module": "QIT.States.Purification.ReferenceIsometry",
+    "source_sha256": "66b78948cff99e08da4502749ad0c0e822b0b6e6c2c535eecc10f2ef03f2a139",
+    "olean_sha256": "f36e1fbc9b1f785d32b92826688e503fc1f027d1f62ed520844929124fb5d8f6"
+  },
+  {
+    "module": "QIT.States.Purification.GramFactorization",
+    "source_sha256": "1397565b1782f67a8566de92ee2590b72d793b50c53a5b226b882e6ce510e4bb",
+    "olean_sha256": "877b200e031518d300bd173475910368ed8dd35ce60c16c682ae6ddee0bdd0a8"
+  },
+  {
+    "module": "QIT.States.Purification.ReferenceUnitary",
+    "source_sha256": "18594777b7078a7c2f945f2ebed085e95888b4515a00043170c0f3f81d5712c9",
+    "olean_sha256": "d67b620ce374765d56d5473eec97d98234f4da539f18501a8ff8fd34930aa3b2"
+  },
+  {
+    "module": "QIT.Util.BlockMatrix",
+    "source_sha256": "809f18a49e641e15582efd636778041810b8df73ba746f1c6fa5834cf172af47",
+    "olean_sha256": "9f763778139fe274fea0976b3a589e66b7088e13a95a611cc8ee381180e69fc2"
+  },
+  {
+    "module": "QIT.States.TraceNorm.BlockMatrix",
+    "source_sha256": "4ada7a30513f124f7ef516d5ec64a1ea3d81ebe1f3c796cfa27cd8600f3be2d0",
+    "olean_sha256": "25f729c403b9fa8a796ced34c472961eed53ec74d62ab0235939ca78973b6c56"
+  },
+  {
+    "module": "QIT.States.TraceNorm.Variational",
+    "source_sha256": "fd0b95c57e56269014616d49647049e645e42cb818fa127eb17afc043f05dded",
+    "olean_sha256": "7d25af4c9accd9851d573c1ad9d00c79140d1509f9df472ce280fb708b21fca3"
+  },
+  {
+    "module": "QIT.Channels.Diamond",
+    "source_sha256": "277a6f666e6437c8fdec1224ff120c5bff1814e03ac00c70056e012618f1d542",
+    "olean_sha256": "1521e4c3f6871592648df45b3cbd648fc52033310c50a4e577380f3d5a486aad"
+  },
+  {
+    "module": "QIT.States.Geometry.Fidelity",
+    "source_sha256": "d22aacea83b889729888999c960fc70d6fa8829a8569feb3b75dc98808d8c039",
+    "olean_sha256": "b9d60784434f6bea2117255593fffc3d5d41a7c77b618c8d04fb7746158e49a9"
+  },
+  {
+    "module": "QIT.States.Subnormalized",
+    "source_sha256": "844206188866a2a1f6a16065b4346b35b1824e515edf1a683a77b2d07a00a925",
+    "olean_sha256": "66d890bc2498ed2f4bf79345cf785db6a998cfb8656463fcc9dd54820f303269"
+  },
+  {
+    "module": "QIT.States.SubnormalizedTopology",
+    "source_sha256": "d4c16e3f6703db4b7ebd7f05ad79dea1d5d195bcbc9e70c42ef7ccdb173e49c3",
+    "olean_sha256": "3baabaf330bbbb08ed9b412fdf4d3847be5b2d772483389dc82948eec9d0a269"
+  },
+  {
+    "module": "QIT.States.Purification.PureGeometry",
+    "source_sha256": "939f455d69890db85ea53502a5f41743fec92b2febefd79fa11c29cd7430679d",
+    "olean_sha256": "c0ae05464272c299c3dea0865558026162f7f10223f00d1f41a004797c7b3097"
+  },
+  {
+    "module": "QIT.States.Schatten",
+    "source_sha256": "5bf720625893dc9750735c2f8574b64549412705d2df16ae80f32d2273f15731",
+    "olean_sha256": "ab19f8fff91a5fa7202249a0e96519001866ddc5b34ba19fb0217af66e558aaa"
+  },
+  {
+    "module": "QIT.States.MaximallyMixed",
+    "source_sha256": "e81cd35da110ac365a2110407cbe45089d3d1afae8c11ca0588b86717a0fafad",
+    "olean_sha256": "ec4ba1ea4bfbf8d79d6555155bb7e7cd3c5b9bfa80f6dfbea46f32116b002b45"
+  },
+  {
+    "module": "QIT.States.MaximallyEntangled",
+    "source_sha256": "e0fd80c804258ab38e21d6335e6ef39bb0ce0984bb487aedd3f39784dcbc93c3",
+    "olean_sha256": "58f39839308b5a926cc274919cf16c1b273df9c420477fdca1fd15335fbf6e34"
+  },
+  {
+    "module": "QIT.States.Purification.Equivalence",
+    "source_sha256": "47da2ed05cb06f312a25ee67cf8b15bfd4cf4d4450d16674387535bc0a7fe3cb",
+    "olean_sha256": "a47205c16679622f346c2542e027fd440064a77f572bf3b41f276bd17a8df73f"
+  },
+  {
+    "module": "QIT.States.Purification.Canonical",
+    "source_sha256": "5136a62841b7f09daef963b38e86240cfc560ce1bea0b8c01f1e4013a26db96a",
+    "olean_sha256": "98979a54f9d54f8e291ff398cc85efddc65ca7f46093e8344755348e22f5f3ed"
+  },
+  {
+    "module": "QIT.States.Purification.Uhlmann",
+    "source_sha256": "c86e8b37a30e0857b4b572f55f330dc7e9c3d45c31f8e0dd3b3193fac1d4bc70",
+    "olean_sha256": "6719034df9f821eb894227f6deac1a5f30d5aa2b6cbccb44bf57c84718faff1d"
+  },
+  {
+    "module": "QIT.States.Geometry.PurifiedDistance",
+    "source_sha256": "1d581036ddcb123f1d53335ba6c574172ab93c06454abae65397783f51b21641",
+    "olean_sha256": "b8b68e7e87f52959153fe1c1c20a432913c573eaa6178c84f172dee70c791608"
+  },
+  {
+    "module": "QIT.States.Topology",
+    "source_sha256": "ea56ea3404b70bcf6635645bd939e679137d6a9972401115ed18b914f3570963",
+    "olean_sha256": "391f52da7ec9a237203cf3a189ba70b931d31d3b440c90b1c3d10a2a627c149e"
+  },
+  {
+    "module": "QIT.Information.Entropy.Entropy",
+    "source_sha256": "e5b9e87f2e1e5731fad4a7cc44a9d4bdf142e33b133463e1981a551fdb4cce98",
+    "olean_sha256": "55692a0536c137862141578e71437ea663d2fea106dfd275545f03e26d6eb984"
+  },
+  {
+    "module": "QIT.Information.Entropy.EntropyTensorPower",
+    "source_sha256": "8ed87303a7b4ee40d8a2c499b28411101b3b58ef1a243216c64578bd87d1323e",
+    "olean_sha256": "bd79e64a2689a915bf9fb9d639a568d6b40b8a930e1cec5e6e43570b7770a7bb"
+  },
+  {
+    "module": "E2.CountCQ",
+    "source_sha256": "06b3760bbf3501edd58e07e6210c737cde1f9850cbe00e3f77a09e0e658cef64",
+    "olean_sha256": "df45c1ab7e406aa0c2d792f679ee2d568833c53539a30924cdd52e29306b5e32"
+  },
+  {
+    "module": "QIT.Information.Entropy.RelativeEntropyTraceLog",
+    "source_sha256": "a61444db65a7eef785eee991043beb1b462c1d981165bb96c5e3e3c0f49fa232",
+    "olean_sha256": "a47253bf94693442a918deaca05f70d028edfbbe7828f69f9feda8d6bd7e9759"
+  },
+  {
+    "module": "QIT.Information.Entropy.Log2Lemmas",
+    "source_sha256": "231f2f463a1ddf4ce554d951b3a5c00b40640984f84d597f6dd509d4e23f703b",
+    "olean_sha256": "53d8fb66a6ca6b408f4fc6f13b36500fb4ea2b090b1b27b1e1fc6caf6a88b3be"
+  },
+  {
+    "module": "QIT.Information.Renyi.Renyi",
+    "source_sha256": "d82bd05ebb3fc701d63ad2f6f4a2c0487940fc47882c0425ad4f387e81e6c1d2",
+    "olean_sha256": "e3e0bab1351fe01594d185bbd28b5707243f68c0cc4f4292d197d5d32ff79da8"
+  },
+  {
+    "module": "QIT.Information.Renyi.ConditionalRenyi",
+    "source_sha256": "f2fc761eb6f34fdb798995f8e1c2e06160c17fd6a6cd20030c6ffce9f3e57424",
+    "olean_sha256": "91a4215f41371da6b828c8aecc645bb4c315430efc8e9113a018d317e8515813"
+  },
+  {
+    "module": "QIT.Information.Renyi.RenyiDPIStatement",
+    "source_sha256": "05f70ad1fb4592e01750ed5cf8de9d70246cdfde1bd95d7b7824504bdb1f45a3",
+    "olean_sha256": "ff2857153b2f94dc69b81b9e931d1c11b3d8017d0efeb2d95ce43a71dd275e66"
+  },
+  {
+    "module": "QIT.Measurements.Map",
+    "source_sha256": "9c02a3d0cb6a53abff52516ec21f1927573813b8e31654939eeb0a9cb1f8fd78",
+    "olean_sha256": "4e01a15e7fefc5032ad165ffde6cd82cc06da1563efd2938ab8969ddbbeda892"
+  },
+  {
+    "module": "QIT.Measurements.Projective",
+    "source_sha256": "7bb3f016dc66e294e4e1dd63167427219e21041ca0b460a5594a30bd95582a21",
+    "olean_sha256": "47741ef9c409375defc3bf42a6c226fb02cf945d1af176fe7fdc481ae8e1b71b"
+  },
+  {
+    "module": "QIT.Information.Renyi.RenyiDPI.Domain",
+    "source_sha256": "9ce12e9fb5e80c1126230d03badb53c7012da823a1bb95cc0e248b0745e03204",
+    "olean_sha256": "0567fe1c3a422193e7fab15276f7f3fb001ee8d469063e9ad5631361d1f20c97"
+  },
+  {
+    "module": "QIT.States.TraceNorm.PositivePartBlock",
+    "source_sha256": "5de6b864911ee18b525a67be8644cf4c9d763d5b7d8892a5c4f9b67045dba884",
+    "olean_sha256": "01e2926da9309edf8ca0696d20a0783214e26cc3e35ff7e467323a95390469b8"
+  },
+  {
+    "module": "QIT.States.TraceNorm.Audenaert",
+    "source_sha256": "e14347af2f72cf6c301fa85f13c412a94f317224045ad4a7b4446beeb1a21f24",
+    "olean_sha256": "d1236c4f04b71b75b22c763930aa67cc1757b1d02d7e0e16670a8b4f12e9d6ef"
+  },
+  {
+    "module": "QIT.Util.CMatrixCLM",
+    "source_sha256": "a8ff438742a95dd286b9ac1ee4f94c059562780a6ee4224067965428c5e74542",
+    "olean_sha256": "b6d6d6570feca100350e09142d7eaa1a1a15c12683f0c8e5c0cacb30c2fda6df"
+  },
+  {
+    "module": "QIT.Information.Renyi.FrankLieb.ScalarOperator",
+    "source_sha256": "32e4bb0b2370d6f2eb2ee0f211d25f3ee046f2a1906c80ef348d9fbcdc52b42e",
+    "olean_sha256": "36bcfba07b4b7470988324137e6d9030718c2789399e89a7b4af86798ed591fe"
+  },
+  {
+    "module": "QIT.Information.Renyi.FrankLieb.Variational",
+    "source_sha256": "e63eaac6a8e6a3f067fb9b2fd861c1830794f07b68ffbb0d4f7364f27227f483",
+    "olean_sha256": "fd15698eb6843865e7c855c2ad88c28019a6ab43cfa4b3315716509d967de993"
+  },
+  {
+    "module": "QIT.Information.Renyi.FrankLieb.Concavity",
+    "source_sha256": "027d1efd17838db248d5ba7acb7b6b839ccc192144a0012a8294e99f83ee8356",
+    "olean_sha256": "a3c89550ab13a480336a9da79797036d9026a058f6f6f8ebe94359352df3fb1d"
+  },
+  {
+    "module": "QIT.Information.Renyi.RenyiDPI.HighAlpha",
+    "source_sha256": "62d9c11fc2b9e434702e00c69ed480e59e1ca6e29010b0748ecc7ab871695583",
+    "olean_sha256": "7118d459fd3241395c1aefd5740da80884edcb2477e937be6b8a94c589ea59c0"
+  },
+  {
+    "module": "QIT.Information.Renyi.RenyiDPI.LowAlpha",
+    "source_sha256": "9d7774e7e53b09ff2473176b996185104770e96decbe07a4f267f550263dac60",
+    "olean_sha256": "ae8ac5789030b45cc75532ce9612fee6caa5340bdcf966446eb82aa25a5220c0"
+  },
+  {
+    "module": "QIT.Information.Renyi.FrankLieb.DPI",
+    "source_sha256": "950291538f79492cce8e4e1615b305fdc57bb61118a7d0073f7b9c894d936b3c",
+    "olean_sha256": "793dac91121fb4d799cde623b5178cd5f848349424f4b46cdc8c5b844ce382bd"
+  },
+  {
+    "module": "QIT.Information.Renyi.RenyiDPI.TraceLogBridge",
+    "source_sha256": "6b18f5b715bab5b3073b7e8dfd8789f9226590bc2e5ffb4add586431e4ee7011",
+    "olean_sha256": "237e117794f33dd3588aee33f078c1bd3e469d302630fa5504637448bf82a683"
+  },
+  {
+    "module": "QIT.Information.Renyi.RenyiDPI.AlphaToOne",
+    "source_sha256": "4abdbb6080817166b3ff0962057dddf7bf04977a0eb2014e11b793644b38fb6a",
+    "olean_sha256": "981f13a747004bbb21e5e9d17d2e138156dd078c8a4fb0d663e004a852fcb144"
+  },
+  {
+    "module": "QIT.Information.Entropy.RelativeEntropyDPI",
+    "source_sha256": "cf658d2bb17ff81567dc2565e36eb5a367384736983a68615aeec66bb455ae33",
+    "olean_sha256": "003c643fe835ccf25486587091d47859045f36aada61e14e3dc2eb3a40736b36"
+  },
+  {
+    "module": "QIT.States.PosSqrtOrder",
+    "source_sha256": "14dbf6d22d6bc64d85e0aa87945cde107a2f8a8cb2ed61eb8d8932eefd8e3620",
+    "olean_sha256": "be1ed86740ec71c33f656cb9c828f44b59c5166ea03e758761f09f76bf21a1c6"
+  },
+  {
+    "module": "QIT.States.Product",
+    "source_sha256": "ab80a4e06295b1e87853bdf74bcce7f96b62f5135b29177d3a6994cbd8d2132c",
+    "olean_sha256": "9512a1db03dc7f30534ee0e91f2570e29ddf8e11bb53bfb7456463db39216b20"
+  },
+  {
+    "module": "QIT.States.Geometry.FidelityConcavity",
+    "source_sha256": "91404cfa1aed76a6f31de1fc2e232fb70570a5a03b17b1eb22c3ad712d8b2d57",
+    "olean_sha256": "3f99576bc9f0799dedbb5ea3ba4557e0fdc2edeaee3e5c049f8ec8c6c4a86ec7"
+  },
+  {
+    "module": "QIT.States.SubnormalizedConvexity",
+    "source_sha256": "377be957af614df7682c26356bd7405d5b740d29281018db1c0f0d770aa5d576",
+    "olean_sha256": "df260c904c5e41435504a22318a424f18a258f9166e079915318668646b499fc"
+  },
+  {
+    "module": "QIT.States.Purification.Conditioning",
+    "source_sha256": "95a19850afbb6f0d89cf36772a8a432b6c1d6afa051621f7777f3fc650cd6a0a",
+    "olean_sha256": "c6b0a83c1a792d03d88981acf0e0f0d969d2d2116dc578c45ba8ba765534399d"
+  },
+  {
+    "module": "QIT.States.Purification.Schatten",
+    "source_sha256": "142f79ae2fac0751ca8c7b7955482ac0bd35305161c1ca14cff4b8c0b8d802cf",
+    "olean_sha256": "3f63b7ab421280d60009bced111aabe74841fc67359f11440514d3ba69e0d1e3"
+  },
+  {
+    "module": "QIT.States.Geometry.PureTargetFidelity",
+    "source_sha256": "8ddc3c6da3c166b9b2ef66876d6c361ae4cb306768dffb2250f3651aa6d5c2cb",
+    "olean_sha256": "abf6daf0901239c4766b4ae02b1f6df326eb660069232d325cbedb984a0fe085"
+  },
+  {
+    "module": "QIT.States.Geometry.FuchsVdG",
+    "source_sha256": "5166f006eaa80bcd41c3c26d415200ccb796460bef11625d25c7aa3db6e34a24",
+    "olean_sha256": "1a62eb1c1786d731f68c3ceb596c51970235fdc65b3a0415f6f386d8969d68c2"
+  },
+  {
+    "module": "QIT.States.Geometry.PurifiedDistanceAngle",
+    "source_sha256": "a36ea44c2b6ec0c1907fbcb241180f2035895dae574d5916fc3348a1cb24380f",
+    "olean_sha256": "a0d12c14807139765f2ffc65000c1d2a6d8fe3022f5ccce0979a7e64f8ae02b0"
+  },
+  {
+    "module": "QIT.States.Geometry",
+    "source_sha256": "b8af6481dfa696bd1840c2e35665bcc197fcef43627917f3680964e04007945e",
+    "olean_sha256": "4f2df0af6eba1058173e043c6b10d43d04bc23d8b71ca2395eebba7a27028b78"
+  },
+  {
+    "module": "QIT.States",
+    "source_sha256": "ba0eb07263ce8dc3d1b36e10dc11dfed5ce5b65a611a2df68e4928326b33542f",
+    "olean_sha256": "deea2e0094b64ca3b9c8eabc7fbe1876cea6aa06c03f97762defafca278cc17a"
+  },
+  {
+    "module": "QIT.Information.BinaryHypothesisTest.Basic",
+    "source_sha256": "f7da1a60d5d590ebd9b654a06d6cf7b5ed9c402464ad42a37be528355760228f",
+    "olean_sha256": "88edc4fceb2c1dac3d8b17c236b2d5024961e6393534b618a401da568e7436e5"
+  },
+  {
+    "module": "QIT.Util.Wires",
+    "source_sha256": "8f833855327e3f49cf4a7aeb2d8e5b2e6fc48236224c772d4a9b923ff99eb241",
+    "olean_sha256": "e34f2ab857c4dd03fbc87dbb17f1eeb969adc309d997e2e0a05fac1c0decbd51"
+  },
+  {
+    "module": "QIT.Util.Wires.Contraction",
+    "source_sha256": "8946456bc3399dbb274b374eb6135979e4ae8be385f8b8f98efe1a8f8adaf8be",
+    "olean_sha256": "3b8976f074ce78a01eef2f834f6f123b67aebee6cbc938c51286aa703a6c35ad"
+  },
+  {
+    "module": "QIT.Util.Wires.LinkProduct",
+    "source_sha256": "92ab3ebc59515547b6087a0375a8cb250dca3867a66934a9a0b92eea8cfb15db",
+    "olean_sha256": "011f90e730b46ec74fd3ebaf3c72b13c2cff420067ac6b1781f358b75e4db80e"
+  },
+  {
+    "module": "QIT.Core.Map.ChoiComposition",
+    "source_sha256": "d3960335fbc4b6e38e80c6f36b52422ec5864562be767fa55da38961a25e1c32",
+    "olean_sha256": "8e1a60173fdd7ac9f2cf2ba6d6faadcb9ac42dd447b856b9104bda128fddf916"
+  },
+  {
+    "module": "QIT.Core.Map.LinkProductPositivity",
+    "source_sha256": "d2948219dfd20382fb5680e87bec01f1ec4899dd397db2cb6bb551b1bed8b26f",
+    "olean_sha256": "fb8cfa618c778cfaeb91a1d400a6574b63b4fcb627331cf62322c0be06b618ca"
+  },
+  {
+    "module": "QIT.Core.Map.MatchedWireAssociativity",
+    "source_sha256": "e05688831d68fc3b97208cef797b6dab8be1fd2075266d0051f979b66b14f7e3",
+    "olean_sha256": "863fa212474ffe5100783be12ee7c3a188dc1da45b1ae82ce149e707d21af2f8"
+  },
+  {
+    "module": "QIT.Core.Components",
+    "source_sha256": "dbabb9a3fff36213851c1269176b9c80a327d57bb6af5db20e2e1b23cc196b74",
+    "olean_sha256": "899d48336ae2732c40621a30809316f93d2ddcc457febf186a4c7ee248e2d698"
+  },
+  {
+    "module": "QIT.Core",
+    "source_sha256": "8d1f5f50f30b5ebf740d64c1a6563a103fff54bbd8039812e37085b8e57dd45a",
+    "olean_sha256": "645ba4cd5f175f6df49327cebb43a0b918b54849c0ea4bf44b5bd6cb80216608"
+  },
+  {
+    "module": "QIT.Information.BinaryHypothesisTest.Classical",
+    "source_sha256": "10e40f5d27ea2f0fb09e94d2397fe725a5a97143b3be6fe51dc67394eb9606fc",
+    "olean_sha256": "98cc43b207115fcf859746b47bf9aca8ca28d7b0fe192fb342d93b7add9b4c44"
+  },
+  {
+    "module": "QIT.Information.BinaryHypothesisTest.Spectral",
+    "source_sha256": "fa19456e578e3e1d0621fee3840a49c64e8cdb9906710fb98b9796ab6a7904c4",
+    "olean_sha256": "f8a7adbdfb8e852cf22d8515cdb771ee4566e2c582ad20755c581bd2616716fb"
+  },
+  {
+    "module": "QIT.Information.BinaryHypothesisTest",
+    "source_sha256": "7d80ae304eb038627c22e7060968eacbcf05a416216b69b578564420d6db7153",
+    "olean_sha256": "c8fa452fac428fce81eaf2ce65b9df43f0f3939ad96f83a500a4ea8fbd0e4ac9"
+  },
+  {
+    "module": "QIT.Information.Entropy.MutualInformationDPI",
+    "source_sha256": "558554099a8eb538069a82c9d796b77c037d5c57715dfdf2c4ab1fada8d212c1",
+    "olean_sha256": "3033319630ef2f1e8719ebc76f7dedfa32040806e76da14a038f5257dad29811"
+  },
+  {
+    "module": "QIT.Information.Entropy.StrongSubadditivity",
+    "source_sha256": "5abeabe56b5551b6ec1e9042cf8b55fe75d9653316f3c833dc5f9b47c9a10fb6",
+    "olean_sha256": "a445b0dfeb689f774bf860382d9353b06e349c7e0b264beb91f5b4a46ca48213"
+  },
+  {
+    "module": "E2.CountConditional",
+    "source_sha256": "8517f123b3696db64082f59ac10af42642f565d21ffe33e23184b5952835b104",
+    "olean_sha256": "f085f421206b8d922552543cc8ecbac03b23c17af0b09b64eab6a9dedaf5ecbe"
+  },
+  {
+    "module": "QIT.Information.CQChannel",
+    "source_sha256": "b27ba412da73f64bee961ea4b0868bc4271065987563bd3e29cfea8bff583f4d",
+    "olean_sha256": "14874115ac78bdab666378a49ba937d6cf44a316d7ee7d3d2f5cb0d6a161f036"
+  },
+  {
+    "module": "E2.CountDataProcessing",
+    "source_sha256": "864f7f0537d262768e56dc9e3840652604d36bc043a12e8aa4c0ae0c83f56159",
+    "olean_sha256": "d070f0f3673a753cd6e426828a02bcb6ae96c4fc79ecc67df5114c958865f649"
+  },
+  {
+    "module": "E2.CountEntropyScalar",
+    "source_sha256": "18137654e9f371bad923f0e3ac80a367c8b702a0bf760a5355929fd7ef61e33a",
+    "olean_sha256": "63c1be00055dbd8900cb848c24be9de94d1263af030bff0ba7fe30c2a300ba4d"
+  },
+  {
+    "module": "E2.CountFanoScalar",
+    "source_sha256": "4dfff97bcbbc04963181b593cfbd7857d2859e38fdc6ca2720492f2211ecbadb",
+    "olean_sha256": "f22d6d61e9ed7393174e026bc8247fc069824d2f81c1e8b1e625d51484c47060"
+  },
+  {
+    "module": "E2.CountFanoMeasurement",
+    "source_sha256": "f1cb8a4e0c42e97f399384f9207ee474400eeda1b50c5aa85e9db4ac31103154",
+    "olean_sha256": "caaba3c618886f87ddfc287318d2394eb55485b2e2d7d6aecc5d21c141dae1b2"
+  },
+  {
+    "module": "E2.CountFano",
+    "source_sha256": "128a3f6a34f5469c5d460e76fedda62805ea2b915eccd223394ec1266e15620b",
+    "olean_sha256": "bb9655b46b4347dc5e37b62870b114fb1ff0388d41731f11e97e44b8980cfd3b"
+  },
+  {
+    "module": "E2.CountColumns",
+    "source_sha256": "8969c1f5c5826e1ecc33e2080d567eacc4b11924c366174450d446e2993b9661",
+    "olean_sha256": "2e49819b51921393082df0e3fedf999db1ec2320faeeb3943585577227f3d30f"
+  },
+  {
+    "module": "E2.CountIntertwining",
+    "source_sha256": "e04f0e720c528f1955be9238c38a5afc437e0351e0b67e7c109cce2fdb5dcc48",
+    "olean_sha256": "f7d47d95353e32842be803f636af28168e3bf1c73296481169d8ecc8ec36a1f6"
+  },
+  {
+    "module": "E2.CountPathIntertwining",
+    "source_sha256": "cdd94d6a13c1f20648d1134af2017e232ffb1849250f94e551403fd17715f865",
+    "olean_sha256": "5ea8a1755df9516bc73d4853bedea9bbef0a7a936df396bfb0ce63506f9e732a"
+  },
+  {
+    "module": "E2.Turn9.CountPathsStatements",
+    "source_sha256": "22f0183cc3209ed50288d18a8ec0d5cfb12eb3e4f0aded46c26215a885ee9e92",
+    "olean_sha256": "7545d2ae7a8f7ddc652abd056e0fbe3950a28e2337702dea3a84a2c62aaeb432"
+  },
+  {
+    "module": "E2.CountDecoder",
+    "source_sha256": "e817cb90df6c29f77e28c6685acbc52696afc69ba34938e15e8c8be1bfd386d5",
+    "olean_sha256": "971e2a81f12ab854bcad307099174fce775517471a32bc45afca1a530b45499c"
+  },
+  {
+    "module": "E2.CountMoveHelpers",
+    "source_sha256": "a5d4d0d57047b540cf30ff781c816309db16d9e0f33a780c10cf764cd062aa17",
+    "olean_sha256": "c84d1e18e74f47028a44e29484af5567900ebe7f2fdd77ccfe097bbf340bbb30"
+  },
+  {
+    "module": "E2.CountMove",
+    "source_sha256": "d35fe67353db71384f3d1492f38f8c565c6f27a5434cea3d886e1196dd6d1cf2",
+    "olean_sha256": "fd6090bbb9946194093db6022988f4a9b5e073e3b2c6875e4c96999735c4bfb9"
+  },
+  {
+    "module": "E2.CountSuffix",
+    "source_sha256": "813689c20cba613d94c8b265584b211c667262d077c8f630c2abb0357d94568a",
+    "olean_sha256": "ecec697b8ac9a067876b96285667b9eb1538cb7fd4838c1bb0cdaec4a4261437"
+  },
+  {
+    "module": "E2.CountVariation",
+    "source_sha256": "b4c5a0e8af57cfced041e6f6550b7bd703a6f20c82670954c8c561851898035c",
+    "olean_sha256": "dd34e466f5fbf9c32c1f9dc731f16ef81250a53df88e902b99bea13edb548fc4"
+  },
+  {
+    "module": "E2.CountActivation",
+    "source_sha256": "6480070bf0d04a3cb42ffcb141a70d8962a8553fb769fd6422fc08f5cd2ffb0f",
+    "olean_sha256": "8a1ad6338e8ebbf2d7c3d408a229368182ab13f5e779f0d8a72e651a7ed718c0"
+  },
+  {
+    "module": "E2.CountClassicalChain",
+    "source_sha256": "944c94acddde928477a03ab1a4758b92e3ce592632957abdd9b281edfd3946f4",
+    "olean_sha256": "a76efdc4ef78e313a40c6ecd4f3d971cf940e4d48453c98d521ee4339e56e140"
+  },
+  {
+    "module": "E2.CountClassical",
+    "source_sha256": "f4d9cc43336787029c04d6c432204093cfb8630bda7529bcc3c1e0a47686edc1",
+    "olean_sha256": "fe2f8b8ba8f70828418fb6f397e8814f1e5834fb52b8276eb9e6db7dbdbb81a6"
+  },
+  {
+    "module": "E2.CountEntropyLower",
+    "source_sha256": "5d124d48fb09394786298b44e210d1bdc3acbf4399a8120cfa4a554e26629fd0",
+    "olean_sha256": "230476cc14fbf969c13b2830ab7273eb6e01dd20580e1e642cfa2169027d2efa"
+  },
+  {
+    "module": "E2.CountInformation",
+    "source_sha256": "6a3813907ce532107841125096870f4a3d938a3609a72c4671d4ae01e8214742",
+    "olean_sha256": "e5d1bdab2aed778c281649fed5052e86413ea977d322496fc53c9d21391769e6"
+  },
+  {
+    "module": "E2.Measurements",
+    "source_sha256": "aa4e17e5f7965632ebb20e59f96d0b5d074abd5912065636c8820ae99f8d0b64",
+    "olean_sha256": "b341b383c839a8b635e2550b75479c4c17a0f2ab63eebe8c2cb9b24349817860"
+  },
+  {
+    "module": "E2.Turn9.LowerStatements",
+    "source_sha256": "b436e488ac7acaea0b796e90305e26201a03acd20cea3b7063a0c0c4c94772de",
+    "olean_sha256": "64e4150903e6b93f0e832002f156c1df76897b78c0389af127076ae8340d31e4"
+  },
+  {
+    "module": "E2.LowerDepth",
+    "source_sha256": "f4ae475cd89b54ab7475e385446386aacbb4925ff9d7d70102792046a15534e9",
+    "olean_sha256": "174292a6c9ed5f8b8382e5f54ca08297c4b87fc67c95a5b75e048f3d29c1af59"
+  },
+  {
+    "module": "E2.LowerEntropyModulus",
+    "source_sha256": "c3646d9425774ea225c735691965c92fe2429ab05dbe4089b175db5ee934c048",
+    "olean_sha256": "7e384ba4d67ab28b23466c44c07ae0fd40669ed48e662ffe94b1e75ab8748b30"
+  },
+  {
+    "module": "E2.LowerBudget",
+    "source_sha256": "f64965377c60ef4e7b15348e7d5fe8364daae51615f912086b21ef681d74087b",
+    "olean_sha256": "c0559131c43d3c5aba1ed0ee71e24b24d6ee10ac2e609af81a36e41d4c0af113"
+  },
+  {
+    "module": "E2.LowerFinite",
+    "source_sha256": "25dc3efc2ec5f218adeb58d527e09de1bfbd3232376dd65f19c75fc04920a644",
+    "olean_sha256": "65fab41c4524f97a1f58a94c7a4ef66380916e16f8b8b1b64924a6b3d4ae01ff"
+  },
+  {
+    "module": "E2.LowerAnalytic",
+    "source_sha256": "8574288414fde083d401e945c562fb954e5cafff7199c209ee75c0656f90f7d5",
+    "olean_sha256": "40705087cdd9cf8fe371f19dec52e6c1a5fc9a88b367b8ce961cc966116cff95"
+  },
+  {
+    "module": "E2.Lower",
+    "source_sha256": "efd3ef2847b9c699552d82eb4ac0bf21e2fd50e08c92c8e6b059d5512a5c4ecc",
+    "olean_sha256": "96447767127e302abf0d13b2ec3c3944d2984a47023795f6d1a944bab2974829"
+  },
+  {
+    "module": "E2.FiniteCutoff",
+    "source_sha256": "1f99f6e2786c9f23d6b30e2b5de2ce1901d6fd040243b40d15d7609a8fb4c530",
+    "olean_sha256": "6cb4a182f4a7ed163537cef506a1e1685a88b8bc252e30a9493c55691ad0d4fd"
+  },
+  {
+    "module": "E2.FiniteCarryFunctions",
+    "source_sha256": "d4bb4d3835f42729877578079ade12ff9ffbab34c10439fd5cf436574196277c",
+    "olean_sha256": "0741429458369e0cdcce198d7fba416826bdec09610c7c9a03530f5f157c1cbc"
+  },
+  {
+    "module": "E2.FiniteGuardedIncrement",
+    "source_sha256": "81d8338e3fa40768af7e6b1eb55749735dd42ff34e1948da5c7581505a3728fd",
+    "olean_sha256": "11c91a0b5d552cba039ce17c6dacf6586b3dc16cfde43873ebda9d817e13c2d6"
+  },
+  {
+    "module": "E2.FiniteSlotAllocation",
+    "source_sha256": "df2fdc4e8fee458eae7a2f5a77543a93be541feb87826a2c2ecf15e6978d07fd",
+    "olean_sha256": "70cf2cb295e0f3b1b4208cb66bd7b060751ea39535584f27d23ca42f501db1b3"
+  },
+  {
+    "module": "E2.FiniteDressedShift",
+    "source_sha256": "d0f01467b2e8342d4a6c3449afbee8cea8befb2321a6728fb81b59b18c86f007",
+    "olean_sha256": "1b22d618263d5f7c7bfdbe6cd7c02cb5f663686dccbb1f793f92b0c51f6bd1d9"
+  },
+  {
+    "module": "E2.FiniteGuardMatrices",
+    "source_sha256": "874bd4bbbe4db54274d6362aa64ce0fce0504a5e2a165a14e0e45dc5cc6923d8",
+    "olean_sha256": "85749596a5e04a65ac5a7afacc4a9901ee95403b6efd16b1c0f42fc9ac192324"
+  },
+  {
+    "module": "E2.FiniteWindowDiscrepancy",
+    "source_sha256": "4305bbb58bebd75111cece0575c42fb908d042a87b538684b572d764a3555669",
+    "olean_sha256": "f6beadb9a00f73936f793c668cd354a961d3b643854231919a312b9a2e58bad5"
+  },
+  {
+    "module": "E2.FiniteAddressMask",
+    "source_sha256": "caf6102d6d91a4b31e98866b68cb50dd06c09d55c55af8db509dfb346a1aabef",
+    "olean_sha256": "3115e5b35818a729a9691558d2a1a16b0adebbce4e9a72f3f4feb1f4faa5c807"
+  },
+  {
+    "module": "E2.FiniteWindowBound",
+    "source_sha256": "816e77cf49335a0f63cd69eb1b5d48f34f18a55301a158193712d02ade661958",
+    "olean_sha256": "f3695c474f8341d408ffe707e0d0e47abdc0a3db17e47eb2fd2ec6ecf679a31d"
+  },
+  {
+    "module": "E2.FiniteCyclicMask",
+    "source_sha256": "7ea47a3aa01911a19be5425c7bbc4c3e35b8d3aa3a27e7d0ca9aaff951634351",
+    "olean_sha256": "20261a4f55743fb38b9333de21eb14e688349287291e36cea1969dcf7496f238"
+  },
+  {
+    "module": "E2.FiniteWordNumber",
+    "source_sha256": "84459fee4250eac9e1f9c93a75dc08c5ce1c4c012ecbd2a0669cc84435601fcc",
+    "olean_sha256": "9e2a30571425282257d03683ee52d757e95913ac4a1853d8dfcff3a3cec76208"
+  },
+  {
+    "module": "E2.FiniteSlotBound",
+    "source_sha256": "57412c371e56841a56562f1ebdf56f26d654112acc6a992173122481ce25a6b9",
+    "olean_sha256": "37d5a2d8cc6d6e58ea0fc43747ae1b1f57672cf85a0b59244c09f36371ad0dc4"
+  },
+  {
+    "module": "E2.FiniteConditionalSeries",
+    "source_sha256": "c267390742aa259434091e9ec87b483202a26f2f9c6a55eee2afcc80b7f848a0",
+    "olean_sha256": "d91e1e21378bc39663906e98796c5ab85e550aa8de12d2158b6c4f0740c9f884"
+  },
+  {
+    "module": "E2.FiniteOptionalSlots",
+    "source_sha256": "205c8791e7468c4d4b6204f5ebbcf6c366eac67af0ab8c69facfe4a8715e467d",
+    "olean_sha256": "fed9e1f36a117e2cf7490d22a2c161783d5a8fe917520fdb4d5d2d046f9466c1"
+  },
+  {
+    "module": "E2.FiniteOptionalMatrices",
+    "source_sha256": "d092dff3da4def2b96a0a0bc74e7039c5cdfcc01e099fd81325c85534a569c24",
+    "olean_sha256": "e9568b7614818f9a7e27419c887f5cc728ba6dec81fe29e572b5e37a9e9a6cf2"
+  },
+  {
+    "module": "E2.FiniteDecodeResetFunctions",
+    "source_sha256": "90b77cf65151da17ebc05bca11f2eb57047935e2dcae9d1ed16d5cf574311327",
+    "olean_sha256": "d95e49d01a18cf41a0965b8161211273543bbe9603d728432b987a5522e2ad15"
+  },
+  {
+    "module": "E2.FiniteHistoryFunctions",
+    "source_sha256": "0b86b168369e2487b8d43d946fa239932ec18eb22ce789fa2c67c57b3b64635e",
+    "olean_sha256": "61b3745427c61769f58e33c3054b1838ce3cda1e3bf8ee99334f5ac043fa1f0c"
+  },
+  {
+    "module": "E2.FiniteSourceTuple",
+    "source_sha256": "31f5736d927b48f1963d916bc42f3d8582a46f579142a269ff6b7e6b7cb2e55b",
+    "olean_sha256": "1167e766e02ecf0887cd369b9f2d502607fddf4b4b47a1cb4914977f03e5141e"
+  },
+  {
+    "module": "E2.FiniteSourceDomains",
+    "source_sha256": "38c57e460c509474c396633296853b3a0876e96066d44cb906d77f10c3c0b79e",
+    "olean_sha256": "e5f0379d303fff3d1d63b1131359f5739545f63c8d01198d8e63aa25806f6447"
+  },
+  {
+    "module": "E2.FiniteSourceCoordinates",
+    "source_sha256": "8b93124c4de1e32ce3b2ac003c9703b257b2c5fadf389820ef13c6c853790b3c",
+    "olean_sha256": "aa1de0f320fef8647237ac0a3cdd93f9adbea3c1a632a102ea7be884b048110c"
+  },
+  {
+    "module": "E2.FiniteSourceDiagonal",
+    "source_sha256": "16a8f9865e9cf8dad05ffc8db76e0f3c11ee4de71043c5252281215027054d5a",
+    "olean_sha256": "a12260d87a43c8f74d1f5e0a62b06bf5a8f1829ca9a1f14b940c5491ff7429e8"
+  },
+  {
+    "module": "E2.FiniteSourceHistories",
+    "source_sha256": "1d81cbb1e4a3597661adcd12b8ba006da94e061f5cdbe589190758524cadb802",
+    "olean_sha256": "aa37408abe0cb732256503bde1ed45b1367902e449c64acb061d5d2252f4ed1c"
+  },
+  {
+    "module": "E2.FiniteSourceHalting",
+    "source_sha256": "d91611d5bfdee9116d8bbb54c9f90d97ab9115e8944a5993196aa016d440b670",
+    "olean_sha256": "e5eeac5f4f322dc0d25742df18c3db4c30e4cdb650f51be94c6bda36f49f29e8"
+  },
+  {
+    "module": "E2.FiniteSourceWorkspace",
+    "source_sha256": "68027e614b1bc655889ecd40340da6ed16522de22c9acaf9c82c2eec2f3a3d1d",
+    "olean_sha256": "284cb42db1e3a99d7044365546c520db2e84c227dc158fda9b356fd785c13ebc"
+  },
+  {
+    "module": "E2.FinitePermutationTransport",
+    "source_sha256": "8665727f9a0507bb67abb8f72194a9ab5eabe4885d22b4624ac0adce6c713b40",
+    "olean_sha256": "17b819469a60714ed66d7167c969eaeda0ce3b3d938611bdda2d1782a57088c3"
+  },
+  {
+    "module": "E2.FiniteSourceOptional",
+    "source_sha256": "8b11cd0957da6ebdbfbb72f66851d688ebc3ea62e2151886ccae60f5584f7dcf",
+    "olean_sha256": "e4695c7311e14571cf8a21278be264639612b6fbcd5bd7b712639fd992530412"
+  },
+  {
+    "module": "E2.FiniteSourceCommutation",
+    "source_sha256": "cb6810f6e6f2c107f6ca770c4cea04fc21a806fc721e676d3c3af2546ea37ad3",
+    "olean_sha256": "a5659014eb22bef51f9b5687fb20f76a81132dad612b527d6b4ae2a88aa4c319"
+  },
+  {
+    "module": "E2.FiniteListClocks",
+    "source_sha256": "25d488257bd104d1d0fa7f6c2c7406700042c448258d0b43c167d8839f3d1e4e",
+    "olean_sha256": "178e722fd8a484d0b9a620f549a0cfd41d8ce540a60e8ccba868d9a0c96e685f"
+  },
+  {
+    "module": "E2.FiniteSourceClockPolynomials",
+    "source_sha256": "318a3149eb4791d34d2e5de09509c03cc95b3c96705eecadc7591940234d6d0d",
+    "olean_sha256": "d1205a8ef8ff98182ab555fbee80ded3125f375020101a30f29bb14247dcf236"
+  },
+  {
+    "module": "E2.FiniteBinaryDecoding",
+    "source_sha256": "b7416ff7bf948469cefae22fc8f0bdd2b0a625b5bc551d79f187afff89c51c79",
+    "olean_sha256": "eb65314e23ba823ca7f8c4469592a11f19e87412d69727bf69d741c1b3a57883"
+  },
+  {
+    "module": "E2.FiniteSourceDecoding",
+    "source_sha256": "7d09f1352daafaa58f73f401d9c4df426f9afff0f8092cec32e7efae817b8a51",
+    "olean_sha256": "637a86665730d6f93bb83917669551718b870b280d9af6f0b5995a5bc2b67155"
+  },
+  {
+    "module": "E2.FiniteSourceResetCarry",
+    "source_sha256": "7c3feabbca740077ae2d234cbf2090526f5edd07ef2fc3118dae5317922db9a7",
+    "olean_sha256": "bd0e11e5cfc3306c6daa03836d505d3cdd6362ad6189770ccb20d1fd68d8ed78"
+  },
+  {
+    "module": "E2.FiniteSourceExactClocks",
+    "source_sha256": "4e4de42c4776f5a377c485fa75ce01653d81274e7963a9a85f80588d65e08981",
+    "olean_sha256": "00739e3ada2321af13bc6afb449f153908b35b5dd4d47b13d8e96feb65c8539d"
+  },
+  {
+    "module": "E2.FiniteSourceConditions",
+    "source_sha256": "fcda8f68593dc6f9f83ceb62e32161b1b62211a68e484b97970a7553ac6d4e8d",
+    "olean_sha256": "247cf1e14fadd34414768c95fc0f1f910e8d027cfb71c92b8fa959db8c18a92f"
+  },
+  {
+    "module": "E2.FiniteSourceInitialization",
+    "source_sha256": "2cc583526d43ae5b70d14c2ec1381f37bc66477654e5212dfca9d03352ef6f05",
+    "olean_sha256": "7365c140fcf9302fe5c20f579e638ff21bf226bc91ad4da37947180c1e57a2ac"
+  },
+  {
+    "module": "E2.FiniteProgramEvaluation",
+    "source_sha256": "9ee94c16842ebf7405ef9af42a582b7bc4197f5836eb187a507176f98b7351e9",
+    "olean_sha256": "84b3f224214b32fb64156815e5366a5dd9a67910f3e1d89e7ad58ed35aba0231"
+  },
+  {
+    "module": "E2.FiniteSourceTransitions",
+    "source_sha256": "520df06aef1242606a602f72b54d091bf95658bb29fcfff0a96a10c08307177c",
+    "olean_sha256": "3b261c3b3cd5d5a8e47744b5b958d4ab4af999de386edfcb5054bcd4ba788047"
+  },
+  {
+    "module": "E2.FiniteSourceUpdates",
+    "source_sha256": "14d292ac0d2e135b7b927c9bc2bcc032722ca9c70ad63a5fb0fcde7e419402bf",
+    "olean_sha256": "acd7e705cb4a0baf1df15f4a2375b56306a6d091e3a42f1d17f03f07d5a7cbe0"
+  },
+  {
+    "module": "E2.FiniteGuardRecursion",
+    "source_sha256": "100b21099e34941da15f94411266dab452de12f7144bf47d2402dadd06f3def0",
+    "olean_sha256": "bfef0353e6efee14b789eb91256ee4afe91926a5ad6cd42d5966e0ac96cfa3d4"
+  },
+  {
+    "module": "E2.FiniteGuardTransport",
+    "source_sha256": "6626b9e845d9782af8897c43416e77a435f32aa34c6990e48a4a089a46660fd1",
+    "olean_sha256": "1ac006abe56d00aeb9566926bfcca9f9c96cf0ca48516f095f0ab7f701bac493"
+  },
+  {
+    "module": "E2.FiniteSourceTimeGuard",
+    "source_sha256": "10955662bed9b788f811641003bfa8a6406677b124f5f25c3c30fe867451d904",
+    "olean_sha256": "acffb88047f65786552632bf2320d8546425ddb7ce1cb20286491b0ebd50927d"
+  },
+  {
+    "module": "E2.FiniteSourceDressing",
+    "source_sha256": "8cf819e53626add2029293dfe4687da8f69e6d6b7362516554bf4d0c2b66dcde",
+    "olean_sha256": "32d061bb447d1db197ffb3073b2726d2a7af99c8f824f7d9ed6bf12e57033b47"
+  },
+  {
+    "module": "E2.FiniteSourceAddressGuard",
+    "source_sha256": "bfd89b25738ef5d316adfad4524c51c1e4e00cf3142edad8171fcb5a29b614bd",
+    "olean_sha256": "cc53f10577ec5eb01f9fb2258e3b17ae2ef6e0a2fd25b4a11c46ecac320ec87e"
+  },
+  {
+    "module": "E2.FiniteSourceRelationLists",
+    "source_sha256": "87860618415e91a449857ada662d3266a87f9fc5fbf52dc127563d5f20321b1e",
+    "olean_sha256": "7392652e41faedba7633d9d4574535d64c45152b71303680c7c3113ed9f26f37"
+  },
+  {
+    "module": "E2.FiniteSourceRelations",
+    "source_sha256": "aa5de54d04b8aa42baa0752affe04a430223d1ed8b2d46ef7bc1202a31bd1ebd",
+    "olean_sha256": "6f8b92427e55742f4d4c92d3643be6e00b2957d6bdf9f803a099eaf8b4a26d83"
+  },
+  {
+    "module": "E2.FiniteSourceModel",
+    "source_sha256": "fa8efbc2916bed40608bb3f463b4f3ee38b2af5fbd6c823ab06a55baf3bfd248",
+    "olean_sha256": "3e88f9c8de40bbe65917b6d2868c8162a56c0ca77981c3857d0bee2c9e97daf7"
+  },
+  {
+    "module": "E2.Finite",
+    "source_sha256": "09c1345486d56bb247ac59de0c06146119083dbd48bc63826bbef20cd8c9624a",
+    "olean_sha256": "160ec8a075fbc9f86365e0034fcb7c019d2319c3322b84b70ac3f5ffbf18defa"
+  },
+  {
+    "module": "E2.StateConsistencySquare",
+    "source_sha256": "b52c9e4912c32f7f1cc5d3800db4f5462bec786048dd2dd123e9c42aae46b2d9",
+    "olean_sha256": "6353b699d7f7edf18ee4568169c12a55b9c244afe275f4f3cf80927f5e7a7c1d"
+  },
+  {
+    "module": "E2.StateConsistencyRectangular",
+    "source_sha256": "cd8599cac10ed638f3fa04559983343ccaa967d77ba1b49c2019519a923beda1",
+    "olean_sha256": "d8e14b33946086e19818322d9f990276e7882049786955d9f773f4c5130db5c0"
+  },
+  {
+    "module": "E2.BooleanExtraction",
+    "source_sha256": "1a182b52196b2e1d1edb90f15a5a581ef8f54983299e6aed1082fc7605b1fb14",
+    "olean_sha256": "f418ee537636cd14410a390a72a4ed5a3894c7cdc41154b83bd42f55a769e711"
+  },
+  {
+    "module": "E2.BooleanExtractionPVM",
+    "source_sha256": "bc86443fb62c37886226e85aecfe80cdd681ae9455801db8556ef5b0a587775d",
+    "olean_sha256": "6ec40f0fae2ba8c0121affbe2e382e932df8fb3c9bbe32ace74d4ecc3d4e635e"
+  },
+  {
+    "module": "E2.FiniteNaimark",
+    "source_sha256": "20781b9b7ae4264a539f1008a76b7c840db317c52966b642ad3494e80f02fe5c",
+    "olean_sha256": "218578abe5e7f7ce1b1c77014b7a680529927173a07a2b85a6bc83b2f8eff08a"
+  },
+  {
+    "module": "E2.BooleanStrategyDilation",
+    "source_sha256": "e78ad3f4f1e9068e94bee2153cd83db19500f375955558e17a24ea1e14790cd2",
+    "olean_sha256": "c470b6efd38a843a4c41afac981d3c491c83bafe2202a545d2c134979f58dd40"
+  },
+  {
+    "module": "E2.BooleanGameLoss",
+    "source_sha256": "f6c052484c539b56d75fca0873a884d9fec46f5afd994cd407fc7c6d93f816c0",
+    "olean_sha256": "086492e2fc84aafe7092e82941d740d38ffb6565f1750ad8685f68772c217f75"
+  },
+  {
+    "module": "E2.BooleanMixedAmplitude",
+    "source_sha256": "a43933c452b8af0ce024365756accaeaa1fe882462efe0d98373e472338f65d2",
+    "olean_sha256": "47d242f63678dda67fb1f09f9edb64637434af29a18425b761a99f63ea9815df"
+  },
+  {
+    "module": "E2.BooleanExtractionBridge",
+    "source_sha256": "55ccd112ee01407dea41d43b67e56793f2bbf40d94fcbf72c1a620faebf834f3",
+    "olean_sha256": "9dca6dc03bacb8dfd73a2e53fe2b0ba63b1912b50e75337021e0738aaae2bb41"
+  },
+  {
+    "module": "E2.BooleanRealignment",
+    "source_sha256": "a50680b2013c5948caf2b2cc3a2b4d0cad16a2d5b962da8db4cbc86aecb1b696",
+    "olean_sha256": "d05f30bdd3333cb7888b8adeb3606595c0fef5a04e65e29355bdb67622db69b9"
+  },
+  {
+    "module": "E2.BooleanBridgeData",
+    "source_sha256": "a82e209145542fb1d17f3455880ec8c6a91828aa7c32e7f873c7f791a250ed47",
+    "olean_sha256": "948b26e861ec6c6b785867a70c025c60a9b85d95d5166f9c2255804b14000378"
+  },
+  {
+    "module": "E2.BooleanReferencePVM",
+    "source_sha256": "eb4aa12a39160a8cede44d9eef1b16da761a7d63b5107de53c6026f09060ad18",
+    "olean_sha256": "a1f17ad345663a846215066cd0dd9e370c5a6386ac07ca907028aa1d8bfcd273"
+  },
+  {
+    "module": "E2.BooleanConsistencyEstimate",
+    "source_sha256": "368e7b2e3b4dc8bebe15de448047774e94df619d247cb7d739d55db3c4e4ce09",
+    "olean_sha256": "3f173de60662f74e26bcea09d461d10128b39aae36cde4c04ba2795a02ccd5f0"
+  },
+  {
+    "module": "E2.BooleanStrategyBridge",
+    "source_sha256": "e6b8c3bacd50abc3481767e0d3e5be8d64ab396922c14cbc25aec12de383019f",
+    "olean_sha256": "5cfe05d8638598288ec185fcde81ea7ad8ed0ff7af350403f8fc75d99d211bf9"
+  },
+  {
+    "module": "E2.ProfileTools",
+    "source_sha256": "7323bbbbdae7000cb5b698f3d343498a3eebe98a51e48cf080c8bc46af265157",
+    "olean_sha256": "80e90bba99dface136baacf958a9a46cc7973e800b1ee93ef46be69d6d8880ed"
+  },
+  {
+    "module": "E2.SourceProfiles",
+    "source_sha256": "71f8ebc95d762db6a87f26de10660023d02b60a45330b7c14cfa94b96efb6b9f",
+    "olean_sha256": "2f77daff7477de451ed5cc58e4c5477ddfcba461bbe98ca4470e907739580429"
+  },
+  {
+    "module": "E2.GameProfileTools",
+    "source_sha256": "5782c55e8c686502ea9a40138911395181f7b42aae65a9f4ecf9743a0028c6d9",
+    "olean_sha256": "a74eaa8a23b7cc4b8abbd60f1602eee4550c44273752866953c0439bdff7a685"
+  },
+  {
+    "module": "E2.GameExponent",
+    "source_sha256": "57d2c5fdf87cc4c8bdafb9138fb13738e80f5e288004bc4a676c297a19928557",
+    "olean_sha256": "92129bd9fe3f7235d3f099fa99c2487acd99b6211cff8a547028ce94b2602214"
+  },
+  {
+    "module": "E2.Transfer",
+    "source_sha256": "412c1880a594015bb7254aed2ca9dbc7545943a613bd3afc5b7ac62e33d86eb7",
+    "olean_sha256": "aaa0eafaea3873f232cd69ef06b703b1a1a202ed3d72f82163ad5ea076bccdb9"
+  },
+  {
+    "module": "E2.PositivePrecision",
+    "source_sha256": "6f51d4926bf26e06f7008b37d045e4c9a4581c97e400ef70cb6d46ad20177845",
+    "olean_sha256": "5c800d8b96d81ac20453ed0612499577b143034b76faa1b7e253e94e2279bad1"
+  },
+  {
+    "module": "E2.EffectiveSearch",
+    "source_sha256": "c6bfbc54cb57f17c8429209a7c5946c065a4a0b8a59ffaf009e5bb7790feef77",
+    "olean_sha256": "dec586006e94d5b70a30c9780b6abfffaccb994cb30994e2b92a9a6a519524dc"
+  },
+  {
+    "module": "E2.RationalLogarithm",
+    "source_sha256": "320f65be4b87b192e5a110c3454167885d85495cb5c0d83987c6e6b0ba80fe7b",
+    "olean_sha256": "134ee53ad546f3162de033913169b1c49e06ca1623048f1048e86eac32af555b"
+  },
+  {
+    "module": "E2.EffectiveApproximation",
+    "source_sha256": "05790d75f9bcff0e6591917d9a2c564c5d6a96dc7c937b9c511dcafb2a318571",
+    "olean_sha256": "db8141408f3ea1c67a5eaabcd786f89e0eeaa0c91f65fbca2f0e739df66f65a8"
+  },
+  {
+    "module": "E2.SeparatedDigits",
+    "source_sha256": "43b22f1938d00cdb9f16eb9ea549ef25ee027a684e6b1851b64a00c0e279b31e",
+    "olean_sha256": "ac37ff5af490eea90361fbee5268ac3629327e7dd4ce992690a199ba0e7b7c0a"
+  },
+  {
+    "module": "E2.EffectiveNoncomputable",
+    "source_sha256": "1483975f8ae30c88d2dfa724e51bad28b4c8c0ea253bb161021c7866e3aa861d",
+    "olean_sha256": "fc358b644b13fa794082fcb55c272769ddedd45b9f2f73f57184291c5adba2e8"
+  },
+  {
+    "module": "E2.EffectiveOracle",
+    "source_sha256": "8301dd1f40cd1f666d1835a97dea7b179bf0d6cab776ebea29468857ec9c6593",
+    "olean_sha256": "d9e4c2ff09e8b35b999af342ff3ea0b207b24eb654eb85f96654efcf31bd67ac"
+  },
+  {
+    "module": "E2.HaltingApproximation",
+    "source_sha256": "a8fc2dce21a28b37d910fbed9588031b79c31d8c8bda38305a554a0a35a8c73b",
+    "olean_sha256": "7a08f20a45d1d4e9f16d8c4535717602499d91a31a0c3f86c000b6f659e4301c"
+  },
+  {
+    "module": "E2.HaltingReduction",
+    "source_sha256": "990b17591e1af3f3fdaa934b2033629e6cd90ea22285380879f8533aab55b486",
+    "olean_sha256": "1f782d93dc7634a84e8987445b140a451bb4dbbc8960e78962e4ef6b761fc01f"
+  },
+  {
+    "module": "E2.HaltingDegree",
+    "source_sha256": "07aad66af580bb7dcb193aead6326e495b75e35939e6940d3fe91bd3361ce705",
+    "olean_sha256": "6936be0843e39daab5796d59b850b9b9a0fe879907db2b11efcfeb44f9dfb5ae"
+  },
+  {
+    "module": "E2.GameConsequences",
+    "source_sha256": "ef5defba7536135a77c1161a2458087543c016a368581e29f4c028ee9faa5741",
+    "olean_sha256": "6a941e3247027c6d5df36ee1a5fdf2a57c9f9f670dba68baf70c857705e6618d"
+  },
+  {
+    "module": "E2.ClockProfile",
+    "source_sha256": "bb4634e618e2b1dfae54554b065d36517b57bd639774bcbae82cc438d0c4746b",
+    "olean_sha256": "6300a82f53732952e5e98095556c01dc517000a1a4c41f34910440075beefded"
+  },
+  {
+    "module": "E2.Ideal",
+    "source_sha256": "0925666bfa4f554c83c335e44f46e8738ca16b75f7cdc4c944a5568d88e4264c",
+    "olean_sha256": "26747ad6ce4f7df99bffcb10cf6547e5a04ea94087205c28aedb8206e61499b5"
+  }
+]

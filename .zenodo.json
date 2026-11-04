@@ -2,7 +2,7 @@
   "title": "The uncomputable price of precision",
   "upload_type": "publication",
   "publication_type": "preprint",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "creators": [
     {
       "name": "Douglas, Seth"
@@ -21,7 +21,7 @@
   "access_right": "open",
   "license": "cc-by-4.0",
   "language": "eng",
-  "notes": "Preprint. It has not been peer reviewed. Text and documentation: CC BY 4.0. Scripts: MIT or Apache 2.0. A Lean formalization of Sections 2--10 is in progress and not complete; the remaining sections, power-scale part and profile part are not yet formalized. Concept DOI: 10.5281/zenodo.23701733.",
+  "notes": "Preprint. It has not been peer reviewed. Text and documentation: CC BY 4.0. Scripts: MIT or Apache 2.0. Theorem 1.2 (the halting game, label thm:main, eq. (1.4)) is Lean-checked conditional on the explicit hypothesis TarskiDecision (Basu-Pollack-Roy, Theorem 13.13, printed p. 516). Theorem 1.1, power-scale and profile results, five side results, and version 2-3 extensions are outside this check. Concept DOI: 10.5281/zenodo.23701733.",
   "related_identifiers": [
     {
       "identifier": "10.5281/zenodo.23701733",

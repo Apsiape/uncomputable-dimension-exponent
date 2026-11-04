@@ -1,6 +1,10 @@
 # The uncomputable price of precision
 
-Seth Douglas and Nidhal Mghirbi. Version 4.0.0, October 2026. DOI: [10.5281/zenodo.23753741](https://doi.org/10.5281/zenodo.23753741). Concept DOI (all versions): [10.5281/zenodo.23701733](https://doi.org/10.5281/zenodo.23701733).
+Seth Douglas and Nidhal Mghirbi. Version 4.1.0, November 2026. Previous version 4.0.0 DOI: [10.5281/zenodo.23753741](https://doi.org/10.5281/zenodo.23753741). Concept DOI (all versions): [10.5281/zenodo.23701733](https://doi.org/10.5281/zenodo.23701733).
+
+## Changes in version 4.1.0
+
+No theorem statement has changed. Appendix E records the conditional Lean verification of Theorem 1.2; the repaired source package is in `lean/`.
 
 ## Abstract
 
@@ -25,6 +29,7 @@ The power-scale part proves matching log-dimension and original-state usable exp
 | `paper/main.tex`, `paper/sections/`, `paper/refs.bib` | LaTeX source and bibliography, with `plainurl` |
 | `paper/abstract-arxiv.txt` | Submission abstract, at most 1920 characters |
 | `anc/` | Finite-model checks plus finite reader, discrepancy, compression, Jensen, extraction, complementary-gate and stop-or-continue checks |
+| `lean/` | Conditional Lean verification of Theorem 1.2, frozen definitions and replay evidence |
 | `verify/` | Independent finite-model engine and recorded output |
 
 ## Build
@@ -41,7 +46,7 @@ The exact standalone upload sources are in `paper/arxiv/`; with no `refs.bib` pr
 
 ## Checks and status
 
-The lower bounds rest on written proofs. Finite computations and their limits are described in the paper and `anc/README.md`. A Lean formalization of Sections 2--10 is **in progress and not complete**. Sections 11--17, the power-scale part and the profile part are not yet formalized. No completed Lean verification is claimed. This preprint has not been peer reviewed.
+The lower bounds rest on written proofs. Finite computations and their limits are described in the paper and `anc/README.md`. Theorem 1.2 (the halting game, label thm:main, eq. (1.4)) is Lean-checked conditional on the explicit hypothesis TarskiDecision (Basu-Pollack-Roy, Theorem 13.13, printed p. 516). Theorem 1.1, power-scale and profile results, five side results, and version 2-3 extensions are outside this check. This preprint has not been peer reviewed.
 
 ## License
 

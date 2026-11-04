@@ -1,0 +1,51 @@
+\section{Lean verification of Theorem 1.2}\label{sec:lean}
+Theorem~\ref{thm:main} of version 4.0.0 (label \texttt{thm:main}, equation~\eqref{eq:main}) is Lean-checked, conditional on the explicit hypothesis \texttt{TarskiDecision} (Basu--Pollack--Roy, Theorem~13.13). The checked statement asserts that a finite rational BCS game has quantum value one, no finite-dimensional perfect strategy, dimension exponent $\beta_K=(3+\theta_K)/4$ at every positive real precision, an exponent of halting degree, and no eventual computable error envelope for its dyadic logarithmic slopes. Strategies use arbitrary mixed states and arbitrary POVMs on finite local spaces, padded equally. The source is \texttt{lean/} in this release.
+
+\paragraph{Frozen meanings.}
+The five frozen files are
+\begin{quote}\ttfamily
+\begin{tabular}{@{}l@{}}
+Statement.lean\\
+E2/Game.lean\\
+E2/Computability.lean\\
+E2/EffectiveCoding.lean\\
+E2/RealArithmetic.lean
+\end{tabular}
+\end{quote}
+Their hashes are in \texttt{STATEMENT-SHA256.json}. The file \texttt{FROZEN-STATEMENT.md} displays the statement definitions and rational coding. They fix the game, winning probability, least feasible dimension, full real-precision exponent, halting-degree claim and certified-rate predicate. Here $K$ is specifically the set of indices whose Mathlib partial-recursive code halts on input zero. Other acceptable numberings are not separately checked. Rational coding is Mathlib's standard encoding. The real oracle is the strict rational lower cut; a certified rate is a uniformly computable real-valued envelope tending to zero and bounding the slope error eventually, without a supplied convergence modulus.
+
+\paragraph{The one published hypothesis.}
+Basu, Pollack and Roy, \emph{Algorithms in Real Algebraic Geometry}, second edition, ISBN 978-3-540-33098-1, Theorem~13.13, ``Existential Theory of the Reals'', printed page~516, states the qualitative clause~\cite{BPR06}:
+\begin{quote}
+There exists an algorithm to decide the truth of the sentence
+\end{quote}
+The quantified input there is a finite existential sentence with a quantifier-free polynomial matrix over a real closed field. We use its true special case over $\R$ with rational coefficients, with no complexity bound. The exact Lean hypothesis is
+\begin{verbatim}
+def TarskiDecision : Prop := ComputablePred OrderedRingTruth
+\end{verbatim}
+Here \texttt{OrderedRingTruth} existentially quantifies a real assignment to a finite disjunction of finite conjunctions of literals built from rational polynomial equalities and nonnegativities. Literal negation supplies strict inequalities and disequalities. The proved lemma \texttt{ordered\_truth\_finite} reduces the natural-indexed assignment to the finitely many occurring coordinates. The assumption mentions no game or strategy. \begin{samepage}
+The checked theorem has the exact type
+\begin{verbatim}
+E2.challenge (hT : E2.RealArithmetic.TarskiDecision) : E2.MainStatement
+\end{verbatim}
+\end{samepage}
+The decision algorithm itself is not implemented or proved in this package. The exact reduction from mixed-state POVM feasibility to these sentences, its effective compiler, least-dimension search and rational slope approximations are proved inside Lean.
+
+\paragraph{Checks and replay boundary.}
+The package pins Lean~4.35.0 and Mathlib revision
+\begin{quote}\ttfamily
+56a005855ea17e0b0958f73ec801ae140b0a1679
+\end{quote}
+All transitive revisions are recorded in the manifest. The 14 headline roots in \texttt{Audit.lean}, including \texttt{E2.challenge}, report only \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound} under \texttt{\#print axioms}; none uses \texttt{sorryAx}. The named decision premise remains an explicit theorem parameter. After the documentation repairs, affected modules were rebuilt, and fresh exports of the selected reachable proof graph passed the bundled \texttt{leanchecker}, the independent Rust kernel \texttt{nanoda}, and the statement comparator. Dependency objects were retained by hash; this is not a fresh rebuild of Mathlib or every local source module. Unused declarations in imported files are outside the selected export.
+
+After installing the pinned dependency caches, \texttt{python verify.py} supplies a sequential local-source build and all three checks. The native comparator invocation is
+\begin{verbatim}
+lake comparator --config comparator.json
+  --challenge-from-export .replay/challenge.ndjson
+  --solution-from-export .replay/solution.ndjson
+  --inadvisably-no-sandbox
+\end{verbatim}
+The displayed lines form one command. This Windows replay uses trusted local exports; it establishes target-definition equality, permitted axioms and kernel acceptance, with no hostile-code isolation claim. The ordinary Linux command is \texttt{lake comparator --config comparator.json}; its namespace sandbox was not replayed here. \texttt{REPLAY.md} and the package's evidence directory record commands, hashes and limitations. Nanoda's Windows copy changes only its stack reserve to 128\,MiB, not executable code.
+
+\paragraph{Scope.}
+Theorem~1.1's classification, the power-scale and profile results, the five side results \texttt{finite\_increment}, \texttt{guard\_mass}, \texttt{guard\_remove}, \texttt{clock\_profile} and \texttt{matched\_comparison}, and the version 2--3 extensions are not formalized by this check. The five side admissions are not reachable dependencies of the audited proof terms; the later extensions are excluded from the package. The paper's other imported inputs---the DM-precision theorem, Holevo's theorem, counter-machine universality and Shoenfield's limit lemma---are not hypotheses or axioms of the Lean statement. This conditional verification does not change any mathematical claim of the paper.

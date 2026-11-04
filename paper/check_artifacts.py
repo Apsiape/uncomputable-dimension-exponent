@@ -57,10 +57,10 @@ assert zen['description']=='<p>'+abstract+'</p>'
 assert cff['doi']==cff['preferred-citation']['doi']=='10.5281/zenodo.23701733'
 assert 'doi' not in zen
 assert cff['title']==zen['title']=='The uncomputable price of precision'
-assert cff['version']==cff['preferred-citation']['version']==zen['version']=='4.0.0'
+assert cff['version']==cff['preferred-citation']['version']==zen['version']=='4.1.0'
 assert [a['family-names'] for a in cff['authors']]==['Douglas','Mghirbi']
 assert [a['name'] for a in zen['creators']]==['Douglas, Seth','Mghirbi, Nidhal']
-assert 'in progress and not complete' in zen['notes']
+assert 'Theorem 1.2' in zen['notes'] and 'conditional' in zen['notes']
 assert all((R/name).is_file() for name in ('NOTICE','RIGHTS.md','LICENSE-CC-BY-4.0.txt','LICENSE-MIT.txt','LICENSE-APACHE-2.0.txt'))
 log=(args.log_dir/'main.log').read_text(errors='replace')
 warnings=re.findall(r'(?m)^(?:pdfTeX warning|LaTeX(?: Font)? Warning|Package .* Warning|Overfull|Underfull|!|.*ignored error).*$',log)

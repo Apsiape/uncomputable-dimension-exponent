@@ -1,0 +1,21 @@
+{
+  "repository": "https://github.com/QuAIR/Lean-QIT",
+  "commit": "8a931d4bda61ba503cfc0728704cfef5dedf2cff",
+  "license": "Apache-2.0",
+  "upstream_lean": "4.34.0",
+  "compiled_lean": "4.35.0",
+  "inherited_source_patch": {
+    "path": "QIT/States/TraceNorm/Audenaert.lean",
+    "before": "SeminormedAddGroup.toContinuousENorm",
+    "after": "SeminormedAddGroup.toESeminormedAddMonoid.toContinuousENorm",
+    "reason": "Mathlib 4.35 instance-parent rename; no theorem statement or proof argument changed"
+  },
+  "additional_compatibility_changes": [
+    {
+      "path": "QIT/Information/BinaryHypothesisTest/Classical.lean",
+      "before_sha256": "068463efe3ec722e35e5977485781ded06ceecdc91dd3c7ae85a7f82d7b83821",
+      "after_sha256": "10e40f5d27ea2f0fb09e94d2397fe725a5a97143b3be6fe51dc67394eb9606fc",
+      "change": "Add explicit import Mathlib.Analysis.Calculus.LocalExtr.Basic; theorem statements and proof bodies unchanged."
+    }
+  ]
+}

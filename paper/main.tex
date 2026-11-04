@@ -58,10 +58,15 @@
 \newcommand{\bigO}{O}
 \title{The uncomputable price of precision}
 \author{Seth Douglas \and Nidhal Mghirbi}
-\date{Version 4.0.0, October 2026}
+\date{Version 4.1.0, November 2026}
 \begin{document}
 \maketitle
 \input{sections/abstract}
+\begin{center}\small
+\begin{minipage}{0.92\linewidth}
+\textbf{Changes in version 4.1.0.} No theorem statement has changed. Appendix~\ref{sec:lean} records the Lean verification of Theorem~\ref{thm:main}, conditional on one named published real-arithmetic decision theorem. The repaired source package is included in \texttt{lean/}.
+\end{minipage}
+\end{center}
 \clearpage
 {\small\setcounter{tocdepth}{1}\tableofcontents}
 \clearpage
@@ -123,5 +128,6 @@
 \begingroup
 \input{sections/gate-appendix}
 \endgroup
+\input{sections/lean}
 \IfFileExists{refs.bib}{\bibliographystyle{plainurl}\bibliography{refs}}{\input{main.bbl}}
 \end{document}

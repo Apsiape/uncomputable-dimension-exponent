@@ -3,3 +3,5 @@ anc/** -text
 verify/** -text
 # Keep the halting-construction proof sources byte-exact too: paper/check_artifacts.py compares their SHA-256 digests.
 paper/sections/** -text
+# Every file byte-exact on every platform (the SHA-256 manifests and the Lean statement hashes compare raw bytes).
+* -text
